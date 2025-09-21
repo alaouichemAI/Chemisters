@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chemisters - Future Chemistry Solutions</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Chemisters - AI-Driven Chemistry Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,154 +12,304 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --primary-blue: #0066ff;
+            --secondary-blue: #0052cc;
+            --accent-cyan: #00d4ff;
+            --dark-bg: #0a0f1a;
+            --darker-bg: #050810;
+            --card-bg: rgba(15, 25, 40, 0.8);
+            --text-primary: #ffffff;
+            --text-secondary: #b8c5d6;
+            --text-muted: #7a8699;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --success-color: #00c896;
+            --warning-color: #ffa726;
+        }
+
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+            color: var(--text-primary);
             line-height: 1.6;
-            color: #e4e6ea;
-            background: linear-gradient(135deg, #0f1419 0%, #1a202c 100%);
-            min-height: 100vh;
+            overflow-x: hidden;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Header */
+        /* Header & Navigation */
         header {
-            background: rgba(15, 20, 25, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             position: fixed;
-            width: 100%;
             top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 15, 26, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
             z-index: 1000;
             transition: all 0.3s ease;
         }
 
         nav {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
             padding: 1rem 0;
         }
 
-        .logo-section {
+        .logo {
             display: flex;
             align-items: center;
-            gap: 1rem;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: #00d4ff;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
             text-decoration: none;
         }
 
-        .tagline {
-            font-size: 0.9rem;
-            color: #64748b;
-            max-width: 300px;
-        }
-
-        .nav-links {
+        .nav-menu {
             display: flex;
             list-style: none;
             gap: 2rem;
             align-items: center;
         }
 
-        .nav-links a {
+        .nav-menu a {
             text-decoration: none;
-            color: #e4e6ea;
+            color: var(--text-secondary);
             font-weight: 500;
-            transition: all 0.3s ease;
+            transition: color 0.3s ease;
             position: relative;
         }
 
-        .nav-links a:hover {
-            color: #00d4ff;
+        .nav-menu a:hover {
+            color: var(--accent-cyan);
         }
 
-        .contact-btn {
-            background: linear-gradient(135deg, #00d4ff 0%, #0891b2 100%);
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-cyan);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .cta-nav {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
             color: white !important;
-            padding: 0.8rem 1.5rem;
-            border-radius: 8px;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
         }
 
-        .contact-btn:hover {
+        .cta-nav:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
+            box-shadow: 0 8px 25px rgba(0, 102, 255, 0.4);
         }
 
         /* Hero Section */
         .hero {
-            padding: 8rem 0 4rem;
-            margin-top: 80px;
+            padding: 8rem 0 6rem;
+            text-align: center;
             position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(ellipse at top, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+            background: radial-gradient(ellipse at center top, rgba(0, 102, 255, 0.1) 0%, transparent 70%);
         }
 
         .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
+        .hero-badge {
+            display: inline-block;
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            color: var(--accent-cyan);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
+            font-weight: 800;
             margin-bottom: 1.5rem;
-            font-weight: 900;
-            line-height: 1.2;
-            background: linear-gradient(135deg, #00d4ff 0%, #ffffff 100%);
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-cyan) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            line-height: 1.2;
         }
 
-        .hero .subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 3rem;
-            color: #94a3b8;
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
             line-height: 1.6;
         }
 
-        /* Services Grid */
-        .services-section {
-            padding: 5rem 0;
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
-        .services-grid {
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 102, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            padding: 0.8rem 2rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+            transform: translateY(-2px);
+        }
+
+        /* Features Overview */
+        .features-overview {
+            padding: 4rem 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin: 3rem 0;
         }
 
-        .service-card {
-            background: linear-gradient(135deg, rgba(15, 20, 25, 0.8) 0%, rgba(26, 32, 44, 0.8) 100%);
+        .feature-card {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 212, 255, 0.3);
+            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.1);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-cyan) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--accent-cyan);
+            padding: 0.4rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
             border-radius: 16px;
             padding: 2.5rem;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(20px);
+            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
         }
@@ -170,14 +320,14 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #00d4ff, #0891b2);
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--accent-cyan));
         }
 
         .service-card:hover {
             transform: translateY(-8px);
             border-color: rgba(0, 212, 255, 0.3);
-            box-shadow: 0 20px 60px rgba(0, 212, 255, 0.1);
+            box-shadow: 0 20px 60px rgba(0, 102, 255, 0.15);
         }
 
         .service-header {
@@ -190,42 +340,35 @@
         .service-icon {
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, #00d4ff 0%, #0891b2 100%);
-            border-radius: 12px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            color: white;
+            font-size: 1.3rem;
             flex-shrink: 0;
         }
 
-        .service-title {
-            flex: 1;
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
+        .service-info h3 {
+            font-size: 1.4rem;
             margin-bottom: 0.5rem;
-            color: #ffffff;
-            font-weight: 700;
+            color: var(--text-primary);
+            font-weight: 600;
         }
 
-        .service-highlight {
+        .service-tag {
             background: rgba(0, 212, 255, 0.1);
-            color: #00d4ff;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
+            color: var(--accent-cyan);
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
             font-weight: 600;
-            display: inline-block;
-            margin-bottom: 1rem;
         }
 
         .service-card p {
-            color: #94a3b8;
-            line-height: 1.6;
+            color: var(--text-secondary);
             margin-bottom: 1.5rem;
+            line-height: 1.6;
         }
 
         .service-features {
@@ -234,93 +377,164 @@
         }
 
         .service-features li {
-            padding: 0.5rem 0;
-            color: #cbd5e1;
+            padding: 0.4rem 0;
+            color: var(--text-secondary);
             position: relative;
-            padding-left: 1.5rem;
-            font-size: 0.95rem;
-        }
-
-        .service-features li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: #00d4ff;
-            font-weight: bold;
-        }
-
-        .cta-button {
-            background: linear-gradient(135deg, #00d4ff 0%, #0891b2 100%);
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
+            padding-left: 1.2rem;
             font-size: 0.9rem;
         }
 
-        .cta-button:hover {
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-weight: bold;
+        }
+
+        .service-cta {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .service-cta:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
+            box-shadow: 0 8px 25px rgba(0, 102, 255, 0.3);
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.05) 0%, rgba(0, 212, 255, 0.05) 100%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        .about-text p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            backdrop-filter: blur(20px);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
         }
 
         /* Contact Section */
-        .contact-section {
-            background: linear-gradient(135deg, rgba(15, 20, 25, 0.95) 0%, rgba(26, 32, 44, 0.95) 100%);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 3rem;
-            margin: 4rem 0;
-            text-align: center;
+        .contact {
+            padding: 6rem 0;
         }
 
-        .contact-grid {
+        .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin: 3rem 0;
-        }
-
-        .contact-info {
-            text-align: left;
+            gap: 4rem;
+            align-items: start;
         }
 
         .contact-info h3 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-bottom: 1.5rem;
-            color: #00d4ff;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .contact-info p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
         }
 
         .contact-item {
-            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
             padding: 1rem;
-            background: rgba(255, 255, 255, 0.05);
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
             border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
         }
 
         .contact-form {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            backdrop-filter: blur(20px);
         }
 
         .form-group {
             margin-bottom: 1.5rem;
-            text-align: left;
         }
 
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
-            color: #e4e6ea;
+            color: var(--text-primary);
             font-weight: 500;
+            font-size: 0.9rem;
         }
 
         .form-group input,
@@ -328,99 +542,91 @@
         .form-group select {
             width: 100%;
             padding: 0.8rem;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
             border-radius: 8px;
-            color: #e4e6ea;
-            font-size: 0.95rem;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
         }
 
         .form-group input:focus,
         .form-group textarea:focus,
         .form-group select:focus {
             outline: none;
-            border-color: #00d4ff;
+            border-color: var(--accent-cyan);
             box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.2);
         }
 
-        /* Info Section */
-        .info-section {
-            background: rgba(255, 255, 255, 0.02);
-            padding: 4rem 0;
-            margin: 4rem 0;
-            border-radius: 20px;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: start;
-        }
-
-        .info-card {
-            background: linear-gradient(135deg, rgba(15, 20, 25, 0.8) 0%, rgba(26, 32, 44, 0.8) 100%);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 2.5rem;
-        }
-
-        .info-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: #00d4ff;
-            font-weight: 700;
-        }
-
-        .info-card p {
-            color: #94a3b8;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Section Headers */
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #00d4ff 0%, #ffffff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .section-header p {
-            font-size: 1.2rem;
-            color: #64748b;
-            max-width: 600px;
-            margin: 0 auto;
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
         }
 
         /* Footer */
         footer {
-            background: rgba(15, 20, 25, 0.95);
-            backdrop-filter: blur(20px);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background: var(--darker-bg);
+            border-top: 1px solid var(--border-color);
             padding: 3rem 0 2rem;
-            margin-top: 4rem;
         }
 
         .footer-content {
             text-align: center;
-            color: #64748b;
         }
 
         .footer-logo {
             font-size: 1.5rem;
-            font-weight: 900;
-            color: #00d4ff;
+            font-weight: 700;
+            color: var(--accent-cyan);
             margin-bottom: 1rem;
+        }
+
+        .footer-text {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         /* Success/Error Messages */
@@ -432,73 +638,29 @@
         }
 
         .success {
-            background: rgba(16, 185, 129, 0.1);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            color: #10b981;
+            background: rgba(0, 200, 150, 0.1);
+            border: 1px solid rgba(0, 200, 150, 0.3);
+            color: var(--success-color);
         }
 
         .error {
-            background: rgba(239, 68, 68, 0.1);
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            color: #ef4444;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .logo-section {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.5rem;
-            }
-
-            .tagline {
-                font-size: 0.8rem;
-                max-width: 250px;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-grid,
-            .info-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-        }
-
-        /* Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+            background: rgba(255, 100, 100, 0.1);
+            border: 1px solid rgba(255, 100, 100, 0.3);
+            color: #ff6464;
         }
     </style>
 </head>
 <body>
     <header>
         <nav class="container">
-            <div class="logo-section">
-                <a href="#" class="logo">⚗️ Chemisters</a>
-                <div class="tagline">Future chemistry solutions discovery — chemistry driven by AI, robotics & automation.</div>
-            </div>
-            <ul class="nav-links">
+            <a href="#" class="logo">
+                ⚗️ Chemisters
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#features">Solutions</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact" class="contact-btn">Contact</a></li>
+                <li><a href="#contact" class="cta-nav">Get Started</a></li>
             </ul>
         </nav>
     </header>
@@ -506,209 +668,265 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Advanced Chemistry Solutions</h1>
-                <p class="subtitle">Revolutionizing chemical research through AI-driven automation, validated protocols, and cutting-edge R&D tools. From concept to production, we deliver tomorrow's chemistry today.</p>
+                <div class="hero-badge">🔬 Advanced Chemistry AI | Validated Research Solutions</div>
+                <h1>AI-Driven Chemistry Solutions</h1>
+                <p class="hero-subtitle">Transform your chemical research with validated AI protocols, automated workflows, and predictive analytics. From lab to production, we bridge traditional chemistry with cutting-edge technology.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn-primary">
+                        Start Your Project →
+                    </a>
+                    <a href="#services" class="btn-secondary">
+                        Explore Services
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="services-section">
+    <section id="features" class="features-overview">
         <div class="container">
             <div class="section-header">
-                <h2>Our Solutions</h2>
-                <p>Comprehensive chemistry services powered by advanced automation and AI technologies</p>
+                <div class="section-badge">Why Choose Chemisters</div>
+                <h2>Revolutionizing Chemistry Research</h2>
+                <p>Our AI-powered approach reduces experimental failures, accelerates discovery, and delivers reproducible results.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-up">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Validated Protocols</h3>
+                    <p>Peer-reviewed methodologies that reduce failed experiments and accelerate your research timeline.</p>
+                </div>
+                <div class="feature-card fade-up">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Powered Predictions</h3>
+                    <p>Advanced ML models predict reaction outcomes, optimize conditions, and minimize resource waste.</p>
+                </div>
+                <div class="feature-card fade-up">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Automation Ready</h3>
+                    <p>Transform manual procedures into robust, reproducible automated workflows.</p>
+                </div>
+                <div class="feature-card fade-up">
+                    <div class="feature-icon">📊</div>
+                    <h3>Data-Driven Insights</h3>
+                    <p>Comprehensive analytics and reporting to guide your research decisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Our Services</div>
+                <h2>Comprehensive Chemistry Solutions</h2>
+                <p>From concept validation to production optimization, we provide end-to-end chemistry research support.</p>
             </div>
             
             <div class="services-grid">
-                <div class="service-card fade-in">
+                <div class="service-card fade-up">
                     <div class="service-header">
                         <div class="service-icon">🔬</div>
-                        <div class="service-title">
-                            <h3>Practical focus — validated prototypes, not promises</h3>
-                            <div class="service-highlight">Validation-Ready</div>
+                        <div class="service-info">
+                            <h3>Protocol Validation & Development</h3>
+                            <span class="service-tag">Core Service</span>
                         </div>
                     </div>
-                    <p>Chemisters builds tools and consultancy that reduce failed experiments and accelerate discovery. Proprietary AI-driven methodologies paired with peer-reviewed reproducible protocols help you bring new ideas to life faster.</p>
+                    <p>Transform experimental ideas into validated, reproducible protocols that minimize failures and maximize success rates.</p>
                     <ul class="service-features">
-                        <li>Validated protocol development</li>
-                        <li>Reduced experimental failure rates</li>
                         <li>Peer-reviewed methodology frameworks</li>
-                        <li>Accelerated discovery pipelines</li>
+                        <li>Reduced experimental failure rates</li>
+                        <li>Reproducible protocol documentation</li>
+                        <li>Quality assurance integration</li>
                     </ul>
-                    <a href="#contact" class="cta-button">Request a validation call</a>
+                    <a href="#contact" class="service-cta">Request Validation →</a>
                 </div>
 
-                <div class="service-card fade-in">
+                <div class="service-card fade-up">
                     <div class="service-header">
-                        <div class="service-icon">⚡</div>
-                        <div class="service-title">
-                            <h3>Virtual reaction simulation</h3>
-                            <div class="service-highlight">AI-Powered</div>
+                        <div class="service-icon">🧮</div>
+                        <div class="service-info">
+                            <h3>Reaction Simulation & Prediction</h3>
+                            <span class="service-tag">AI-Powered</span>
                         </div>
                     </div>
-                    <p>Simulate new reactions before synthesis using our proprietary ML models to predict products, optimize conditions, and reduce resource expenditure.</p>
+                    <p>Predict reaction outcomes, optimize conditions, and identify potential issues before synthesis using advanced ML models.</p>
                     <ul class="service-features">
-                        <li>Advanced ML prediction models</li>
-                        <li>Reaction outcome forecasting</li>
+                        <li>Product outcome forecasting</li>
+                        <li>Side reaction probability analysis</li>
                         <li>Condition optimization algorithms</li>
                         <li>Resource efficiency maximization</li>
                     </ul>
-                    <a href="#contact" class="cta-button">Start simulation</a>
+                    <a href="#contact" class="service-cta">Start Simulation →</a>
                 </div>
 
-                <div class="service-card fade-in">
+                <div class="service-card fade-up">
                     <div class="service-header">
                         <div class="service-icon">🤖</div>
-                        <div class="service-title">
-                            <h3>R&D automation tools</h3>
-                            <div class="service-highlight">Next-Gen Tech</div>
+                        <div class="service-info">
+                            <h3>R&D Automation Solutions</h3>
+                            <span class="service-tag">Future-Ready</span>
                         </div>
                     </div>
-                    <p>Turn procedures into robust ready-workflows and reproducible autonomous solutions.</p>
+                    <p>Convert manual procedures into automated, reproducible workflows with robotic integration and quality assurance.</p>
                     <ul class="service-features">
                         <li>Automated workflow generation</li>
-                        <li>Reproducible protocol systems</li>
                         <li>Robotic integration platforms</li>
-                        <li>Quality assurance automation</li>
+                        <li>Real-time monitoring systems</li>
+                        <li>Scalable automation architecture</li>
                     </ul>
-                    <a href="#contact" class="cta-button">Explore automation</a>
+                    <a href="#contact" class="service-cta">Explore Automation →</a>
                 </div>
 
-                <div class="service-card fade-in">
+                <div class="service-card fade-up">
                     <div class="service-header">
-                        <div class="service-icon">📊</div>
-                        <div class="service-title">
-                            <h3>Reaction outcome prediction</h3>
-                            <div class="service-highlight">Predictive Analytics</div>
+                        <div class="service-icon">💡</div>
+                        <div class="service-info">
+                            <h3>Process Consulting & Optimization</h3>
+                            <span class="service-tag">Expert Support</span>
                         </div>
                     </div>
-                    <p>Generate robust data that can predict major products and likely side reactions.</p>
-                    <ul class="service-features">
-                        <li>Major product identification</li>
-                        <li>Side reaction probability analysis</li>
-                        <li>Yield optimization predictions</li>
-                        <li>Reaction pathway mapping</li>
-                    </ul>
-                    <a href="#contact" class="cta-button">Get predictions</a>
-                </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-header">
-                        <div class="service-icon">🧪</div>
-                        <div class="service-title">
-                            <h3>Consulting for chemical processes</h3>
-                            <div class="service-highlight">Expert Support</div>
-                        </div>
-                    </div>
-                    <p>Expert technical support, project scoping, protocol optimization, and ML integration.</p>
+                    <p>Strategic guidance on chemical processes, project scoping, protocol optimization, and ML system integration.</p>
                     <ul class="service-features">
                         <li>Technical process consultation</li>
                         <li>Project scope optimization</li>
-                        <li>Protocol efficiency enhancement</li>
-                        <li>ML system integration</li>
+                        <li>ML system integration planning</li>
+                        <li>Efficiency enhancement strategies</li>
                     </ul>
-                    <a href="#contact" class="cta-button">Book consultation</a>
+                    <a href="#contact" class="service-cta">Book Consultation →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="info-section">
+    <section id="about" class="about">
         <div class="container">
-            <div class="info-grid">
-                <div class="info-card fade-in" style="grid-column: 1 / -1; max-width: 800px; margin: 0 auto;">
-                    <h3>About us</h3>
-                    <p>At the intersection of chemistry and technology, Chemisters is a newly launched initiative focused on practical, reproducible tools that bring ML and automation to everyday lab operations.</p>
-                    <p>We believe that every chemical discovery should be backed by robust data, validated protocols, and reproducible methodologies. Our team combines deep chemistry expertise with cutting-edge AI and automation technologies.</p>
-                    <p>Based in Rabat, Morocco, we serve clients worldwide, delivering innovative solutions that bridge the gap between traditional chemistry and modern technological capabilities. Our approach emphasizes practical implementation over theoretical promises.</p>
+            <div class="about-content">
+                <div class="about-text fade-up">
+                    <div class="section-badge">About Chemisters</div>
+                    <h2>Bridging Chemistry & Technology</h2>
+                    <p>Founded with a mission to revolutionize chemical research, Chemisters represents the intersection of traditional chemistry expertise and cutting-edge AI technology. We specialize in developing practical, reproducible tools that bring machine learning and automation to laboratory operations worldwide.</p>
+                    <p>Based in Rabat, Morocco, our team combines deep chemistry knowledge with advanced technological capabilities, serving clients worldwide who demand robust, data-driven research solutions.</p>
+                    <p>Our mission is simple: every chemical discovery should be backed by validated protocols, predictive insights, and reproducible methodologies.</p>
+                </div>
+                <div class="stats-grid fade-up">
+                    <div class="stat-item">
+                        <div class="stat-number">AI/ML</div>
+                        <div class="stat-label">Core Technology</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">Global</div>
+                        <div class="stat-label">Client Reach</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Lab Automation</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Validated Protocols</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2>Contact Us</h2>
-                <p>Get in touch to discuss your chemistry challenges and discover how our AI-driven solutions can accelerate your research.</p>
+                <div class="section-badge">Get Started</div>
+                <h2>Ready to Transform Your Research?</h2>
+                <p>Let's discuss how our AI-driven chemistry solutions can accelerate your discoveries and optimize your processes.</p>
             </div>
             
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Main Contact Form</h3>
+            <div class="contact-container">
+                <div class="contact-info fade-up">
+                    <h3>Let's Connect</h3>
+                    <p>Ready to revolutionize your chemistry research? Get in touch to discuss your project requirements and discover how we can help.</p>
                     
-                    <form id="mainContactForm">
+                    <div class="contact-details">
                         <div class="contact-item">
-                            <strong>Full name *</strong><br>
-                            <input type="text" name="from_name" placeholder="Your full name" required style="margin-top: 0.5rem;">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <strong>Direct Email</strong><br>
+                                <span style="color: var(--accent-cyan);">mohamed.elbelghiti@um5r.ac.ma</span>
+                            </div>
                         </div>
-                        
                         <div class="contact-item">
-                            <strong>Email *</strong><br>
-                            <input type="email" name="from_email" placeholder="your.email@example.com" required style="margin-top: 0.5rem;">
+                            <div class="contact-icon">🌍</div>
+                            <div>
+                                <strong>Location</strong><br>
+                                Rabat, Morocco (Worldwide Clients)
+                            </div>
                         </div>
-                        
                         <div class="contact-item">
-                            <strong>Organization name</strong><br>
-                            <input type="text" name="organization" placeholder="Organization name/role" style="margin-top: 0.5rem;">
+                            <div class="contact-icon">🔬</div>
+                            <div>
+                                <strong>Specialization</strong><br>
+                                AI-Driven Chemistry Solutions
+                            </div>
                         </div>
-                        
                         <div class="contact-item">
-                            <strong>Message (purpose of contact) *</strong><br>
-                            <textarea name="message" rows="4" placeholder="How can we help you?" required style="margin-top: 0.5rem;"></textarea>
+                            <div class="contact-icon">⚡</div>
+                            <div>
+                                <strong>Response Time</strong><br>
+                                Within 24 hours
+                            </div>
                         </div>
-                        
-                        <button type="submit" class="cta-button" style="width: 100%; margin-top: 1rem;">Send Message</button>
-                    </form>
-                    
-                    <div id="mainFormMessage"></div>
-                    
-                    <div style="margin-top: 2rem; padding: 1rem; background: rgba(0, 212, 255, 0.1); border-radius: 8px; border: 1px solid rgba(0, 212, 255, 0.2);">
-                        <strong>Location:</strong> Rabat, Morocco (Worldwide clients)<br>
-                        <strong>Current stage:</strong> Newly founded | Research & prototype stage (2025)<br>
-                        <strong>Direct email:</strong> mohamed.elbelghiti@um5r.ac.ma
                     </div>
                 </div>
                 
-                <div class="contact-form">
-                    <h3 style="color: #00d4ff; margin-bottom: 1.5rem;">Quick Contact</h3>
-                    <form id="quickContactForm">
+                <div class="contact-form fade-up">
+                    <form id="contactForm">
                         <div class="form-group">
-                            <label>Your Email *</label>
-                            <input type="email" name="from_email" placeholder="your.email@example.com" required>
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required>
                         </div>
+                        
                         <div class="form-group">
-                            <label>Project Type</label>
-                            <select name="project_type">
-                                <option>Protocol Validation</option>
-                                <option>R&D Automation</option>
-                                <option>Reaction Simulation</option>
-                                <option>Process Consulting</option>
-                                <option>Custom Solution</option>
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="organization">Organization</label>
+                            <input type="text" id="organization" name="organization" placeholder="Company/University (Optional)">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service of Interest</label>
+                            <select id="service" name="service">
+                                <option value="protocol-validation">Protocol Validation & Development</option>
+                                <option value="reaction-simulation">Reaction Simulation & Prediction</option>
+                                <option value="rd-automation">R&D Automation Solutions</option>
+                                <option value="process-consulting">Process Consulting & Optimization</option>
+                                <option value="custom-solution">Custom Solution</option>
+                                <option value="general-inquiry">General Inquiry</option>
                             </select>
                         </div>
+                        
                         <div class="form-group">
-                            <label>Timeline</label>
-                            <select name="timeline">
-                                <option>Immediate (1-2 weeks)</option>
-                                <option>Short-term (1 month)</option>
-                                <option>Medium-term (3 months)</option>
-                                <option>Long-term (6+ months)</option>
+                            <label for="timeline">Project Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="immediate">Immediate (1-2 weeks)</option>
+                                <option value="short-term">Short-term (1 month)</option>
+                                <option value="medium-term">Medium-term (3 months)</option>
+                                <option value="long-term">Long-term (6+ months)</option>
+                                <option value="exploratory">Exploratory/Planning Phase</option>
                             </select>
                         </div>
+                        
                         <div class="form-group">
-                            <label>Budget Range</label>
-                            <select name="budget_range">
-                                <option>Under $5K</option>
-                                <option>$5K - $25K</option>
-                                <option>$25K - $100K</option>
-                                <option>$100K+</option>
-                                <option>Discuss</option>
-                            </select>
+                            <label for="message">Project Details *</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your chemistry challenges, research goals, or specific requirements..." required></textarea>
                         </div>
-                        <button type="submit" class="cta-button" style="width: 100%;">Submit Inquiry</button>
+                        
+                        <button type="submit" class="btn-primary" style="width: 100%;">
+                            Send Message →
+                        </button>
                     </form>
-                    <div id="quickFormMessage"></div>
+                    
+                    <div id="formMessage"></div>
                 </div>
             </div>
         </div>
@@ -718,169 +936,199 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">⚗️ Chemisters</div>
-                <p>Advancing chemistry through AI, automation, and validated methodologies</p>
-                <p style="margin-top: 1rem; font-size: 0.9rem;">© 2025 Chemisters. Based in Rabat, Morocco | Serving clients worldwide</p>
+                <p class="footer-text">
+                    Advancing chemistry through AI, automation, and validated methodologies.<br>
+                    Based in Rabat, Morocco | Serving researchers worldwide
+                </p>
+                <p class="footer-text" style="margin-top: 1rem; font-size: 0.8rem;">
+                    © 2025 Chemisters. Empowering chemical research through technology.
+                </p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Simple contact form without EmailJS
-        // Forms will show success message and provide direct contact info
-        
-        function showMessage(messageDiv, text, type) {
-            messageDiv.innerHTML = '<div class="message ' + type + '">' + text + '</div>';
-            setTimeout(function() {
-                messageDiv.innerHTML = '';
-            }, 8000);
-        }
-        
-        function handleFormSubmit(form, messageDiv, formType) {
-            var button = form.querySelector('button[type="submit"]');
-            var originalText = button.textContent;
-            
-            // Show loading
-            button.textContent = 'Processing...';
-            button.disabled = true;
-            
-            // Simulate processing time
-            setTimeout(function() {
-                button.textContent = 'Message Received ✓';
-                button.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
-                
-                showMessage(messageDiv, 
-                    'Thank you for your message! Since this is a demonstration site, please contact us directly at: mohamed.elbelghiti@um5r.ac.ma', 
-                    'success'
-                );
-                
-                form.reset();
-                
-                // Reset button after 4 seconds
-                setTimeout(function() {
-                    button.textContent = originalText;
-                    button.style.background = 'linear-gradient(135deg, #00d4ff 0%, #0891b2 100%)';
-                    button.disabled = false;
-                }, 4000);
-                
-            }, 1500);
-        }
-        
-        // Wait for page to load
-        document.addEventListener('DOMContentLoaded', function() {
-            // Smooth scrolling
-            var links = document.querySelectorAll('a[href^="#"]');
-            for (var i = 0; i < links.length; i++) {
-                links[i].addEventListener('click', function(e) {
+        // Smooth scrolling for navigation links
+        function initSmoothScrolling() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
                     e.preventDefault();
-                    var target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        const targetPosition = targetSection.offsetTop - headerHeight - 20;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
                         });
                     }
                 });
-            }
-            
-            // Animation observer
-            var observer = new IntersectionObserver(function(entries) {
-                for (var i = 0; i < entries.length; i++) {
-                    if (entries[i].isIntersecting) {
-                        entries[i].target.classList.add('visible');
-                    }
-                }
-            }, {
+            });
+        }
+
+        // Intersection Observer for fade-up animations
+        function initAnimations() {
+            const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
-            });
-            
-            var fadeElements = document.querySelectorAll('.fade-in');
-            for (var i = 0; i < fadeElements.length; i++) {
-                observer.observe(fadeElements[i]);
-            }
-            
-            // Main form handler
-            var mainForm = document.getElementById('mainContactForm');
-            var mainMessage = document.getElementById('mainFormMessage');
-            
-            mainForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                var name = this.querySelector('input[name="from_name"]').value;
-                var email = this.querySelector('input[name="from_email"]').value;
-                var message = this.querySelector('textarea[name="message"]').value;
-                
-                if (!name || !email || !message) {
-                    showMessage(mainMessage, 'Please fill in all required fields.', 'error');
-                    return;
-                }
-                
-                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(email)) {
-                    showMessage(mainMessage, 'Please enter a valid email address.', 'error');
-                    return;
-                }
-                
-                handleFormSubmit(this, mainMessage, 'main');
-            });
-            
-            // Quick form handler
-            var quickForm = document.getElementById('quickContactForm');
-            var quickMessage = document.getElementById('quickFormMessage');
-            
-            quickForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                var email = this.querySelector('input[name="from_email"]').value;
-                
-                if (!email) {
-                    showMessage(quickMessage, 'Please enter your email address.', 'error');
-                    return;
-                }
-                
-                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(email)) {
-                    showMessage(quickMessage, 'Please enter a valid email address.', 'error');
-                    return;
-                }
-                
-                handleFormSubmit(this, quickMessage, 'quick');
-            });
-            
-            // Service button handlers
-            var serviceButtons = document.querySelectorAll('.service-card .cta-button');
-            for (var i = 0; i < serviceButtons.length; i++) {
-                serviceButtons[i].addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    var contactSection = document.getElementById('contact');
-                    if (contactSection) {
-                        contactSection.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                        
-                        var serviceTitle = this.closest('.service-card').querySelector('h3').textContent;
-                        var messageField = document.querySelector('#mainContactForm textarea[name="message"]');
-                        if (messageField) {
-                            messageField.value = 'I am interested in: ' + serviceTitle + '\n\nPlease provide more information about this service.';
-                            setTimeout(function() {
-                                messageField.focus();
-                            }, 1000);
-                        }
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
                     }
                 });
-            }
-            
-            // Header scroll effect
-            window.addEventListener('scroll', function() {
-                var header = document.querySelector('header');
-                if (window.pageYOffset > 100) {
-                    header.style.background = 'rgba(15, 20, 25, 0.98)';
+            }, observerOptions);
+
+            const fadeElements = document.querySelectorAll('.fade-up');
+            fadeElements.forEach(el => observer.observe(el));
+        }
+
+        // Header scroll effect
+        function initHeaderEffect() {
+            const header = document.querySelector('header');
+            let lastScrollY = window.pageYOffset;
+
+            window.addEventListener('scroll', () => {
+                const currentScrollY = window.pageYOffset;
+                
+                if (currentScrollY > 100) {
+                    header.style.background = 'rgba(10, 15, 26, 0.98)';
                 } else {
-                    header.style.background = 'rgba(15, 20, 25, 0.95)';
+                    header.style.background = 'rgba(10, 15, 26, 0.95)';
                 }
+                
+                lastScrollY = currentScrollY;
             });
+        }
+
+        // Contact form handling
+        function initContactForm() {
+            const form = document.getElementById('contactForm');
+            const messageDiv = document.getElementById('formMessage');
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(form);
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const message = formData.get('message');
+                
+                // Validation
+                if (!name || !email || !message) {
+                    showMessage('Please fill in all required fields.', 'error');
+                    return;
+                }
+                
+                if (!isValidEmail(email)) {
+                    showMessage('Please enter a valid email address.', 'error');
+                    return;
+                }
+                
+                // Simulate form submission
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+                
+                setTimeout(() => {
+                    submitBtn.textContent = 'Message Sent ✓';
+                    submitBtn.style.background = 'linear-gradient(135deg, var(--success-color) 0%, #00a575 100%)';
+                    
+                    showMessage(
+                        'Thank you for your interest! Since this is a demonstration site, please contact us directly at: mohamed.elbelghiti@um5r.ac.ma',
+                        'success'
+                    );
+                    
+                    form.reset();
+                    
+                    // Reset button after delay
+                    setTimeout(() => {
+                        submitBtn.textContent = originalText;
+                        submitBtn.style.background = 'linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%)';
+                        submitBtn.disabled = false;
+                    }, 4000);
+                    
+                }, 1500);
+            });
+
+            function showMessage(text, type) {
+                messageDiv.innerHTML = `<div class="message ${type}">${text}</div>`;
+                setTimeout(() => {
+                    messageDiv.innerHTML = '';
+                }, 8000);
+            }
+
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+        }
+
+        // Service button click handlers
+        function initServiceButtons() {
+            const serviceButtons = document.querySelectorAll('.service-cta');
+            serviceButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Smooth scroll to contact section
+                    const contactSection = document.getElementById('contact');
+                    if (contactSection) {
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        const targetPosition = contactSection.offsetTop - headerHeight - 20;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Pre-fill service selection
+                        setTimeout(() => {
+                            const serviceTitle = this.closest('.service-card').querySelector('h3').textContent;
+                            const serviceSelect = document.getElementById('service');
+                            const messageField = document.getElementById('message');
+                            
+                            // Map service titles to select values
+                            const serviceMap = {
+                                'Protocol Validation & Development': 'protocol-validation',
+                                'Reaction Simulation & Prediction': 'reaction-simulation',
+                                'R&D Automation Solutions': 'rd-automation',
+                                'Process Consulting & Optimization': 'process-consulting'
+                            };
+                            
+                            const serviceValue = serviceMap[serviceTitle] || 'general-inquiry';
+                            serviceSelect.value = serviceValue;
+                            
+                            if (messageField && !messageField.value) {
+                                messageField.value = `I'm interested in: ${serviceTitle}\n\nPlease provide more information about this service and how it could help with my research needs.`;
+                                messageField.focus();
+                            }
+                        }, 1000);
+                    }
+                });
+            });
+        }
+
+        // Initialize all functionality when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initSmoothScrolling();
+            initAnimations();
+            initHeaderEffect();
+            initContactForm();
+            initServiceButtons();
+        });
+
+        // Add loading state management
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '1';
+            document.body.style.transform = 'translateY(0)';
         });
     </script>
 </body>
