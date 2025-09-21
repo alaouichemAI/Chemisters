@@ -665,7 +665,8 @@
                     
                     <div style="margin-top: 2rem; padding: 1rem; background: rgba(0, 212, 255, 0.1); border-radius: 8px; border: 1px solid rgba(0, 212, 255, 0.2);">
                         <strong>Location:</strong> Rabat, Morocco (Worldwide clients)<br>
-                        <strong>Current stage:</strong> Newly founded | Research & prototype stage (2025)
+                        <strong>Current stage:</strong> Newly founded | Research & prototype stage (2025)<br>
+                        <strong>Direct email:</strong> mohamed.elbelghiti@um5r.ac.ma
                     </div>
                 </div>
                 
@@ -723,205 +724,163 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
-        // EmailJS Configuration - Replace with your actual values
-        const EMAILJS_CONFIG = {
-            publicKey: "YOUR_EMAILJS_PUBLIC_KEY",
-            serviceID: "YOUR_SERVICE_ID",
-            templateID: "YOUR_TEMPLATE_ID"
-        };
-
-        // Initialize EmailJS if configured
-        if (EMAILJS_CONFIG.publicKey !== "YOUR_EMAILJS_PUBLIC_KEY") {
-            emailjs.init(EMAILJS_CONFIG.publicKey);
-        }
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Show message function
+        // Simple contact form without EmailJS
+        // Forms will show success message and provide direct contact info
+        
         function showMessage(messageDiv, text, type) {
             messageDiv.innerHTML = '<div class="message ' + type + '">' + text + '</div>';
             setTimeout(function() {
                 messageDiv.innerHTML = '';
-            }, 5000);
+            }, 8000);
         }
-
-        // Email sending function
-        function sendEmail(formData, buttonElement, messageDiv) {
-            // Check if EmailJS is configured
-            if (EMAILJS_CONFIG.publicKey === "YOUR_EMAILJS_PUBLIC_KEY") {
-                showMessage(messageDiv, 'EmailJS is not configured yet. Please contact us directly at: mohamed.elbelghiti@um5r.ac.ma', 'error');
-                return;
-            }
-
-            var originalText = buttonElement.textContent;
-            buttonElement.textContent = 'Sending...';
-            buttonElement.disabled = true;
-
-            emailjs.send(EMAILJS_CONFIG.serviceID, EMAILJS_CONFIG.templateID, formData)
-                .then(function(response) {
-                    console.log('Email sent successfully!', response);
-                    buttonElement.textContent = 'Sent ✓';
-                    buttonElement.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
-                    
-                    showMessage(messageDiv, 'Message sent successfully! We will get back to you soon.', 'success');
-                    
-                    var form = buttonElement.closest('form');
-                    if (form) {
-                        form.reset();
-                    }
-                    
-                    setTimeout(function() {
-                        buttonElement.textContent = originalText;
-                        buttonElement.style.background = 'linear-gradient(135deg, #00d4ff 0%, #0891b2 100%)';
-                        buttonElement.disabled = false;
-                    }, 3000);
-                }, function(error) {
-                    console.error('Email sending failed:', error);
-                    buttonElement.textContent = 'Error - Try Again';
-                    buttonElement.style.background = 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)';
-                    
-                    showMessage(messageDiv, 'Failed to send message. Please contact us directly at: mohamed.elbelghiti@um5r.ac.ma', 'error');
-                    
-                    setTimeout(function() {
-                        buttonElement.textContent = originalText;
-                        buttonElement.style.background = 'linear-gradient(135deg, #00d4ff 0%, #0891b2 100%)';
-                        buttonElement.disabled = false;
-                    }, 3000);
-                });
+        
+        function handleFormSubmit(form, messageDiv, formType) {
+            var button = form.querySelector('button[type="submit"]');
+            var originalText = button.textContent;
+            
+            // Show loading
+            button.textContent = 'Processing...';
+            button.disabled = true;
+            
+            // Simulate processing time
+            setTimeout(function() {
+                button.textContent = 'Message Received ✓';
+                button.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+                
+                showMessage(messageDiv, 
+                    'Thank you for your message! Since this is a demonstration site, please contact us directly at: mohamed.elbelghiti@um5r.ac.ma', 
+                    'success'
+                );
+                
+                form.reset();
+                
+                // Reset button after 4 seconds
+                setTimeout(function() {
+                    button.textContent = originalText;
+                    button.style.background = 'linear-gradient(135deg, #00d4ff 0%, #0891b2 100%)';
+                    button.disabled = false;
+                }, 4000);
+                
+            }, 1500);
         }
-
-        // Form submission handlers
+        
+        // Wait for page to load
         document.addEventListener('DOMContentLoaded', function() {
-            // Main contact form
-            const mainForm = document.getElementById('mainContactForm');
-            const mainFormMessage = document.getElementById('mainFormMessage');
+            // Smooth scrolling
+            var links = document.querySelectorAll('a[href^="#"]');
+            for (var i = 0; i < links.length; i++) {
+                links[i].addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            }
+            
+            // Animation observer
+            var observer = new IntersectionObserver(function(entries) {
+                for (var i = 0; i < entries.length; i++) {
+                    if (entries[i].isIntersecting) {
+                        entries[i].target.classList.add('visible');
+                    }
+                }
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            var fadeElements = document.querySelectorAll('.fade-in');
+            for (var i = 0; i < fadeElements.length; i++) {
+                observer.observe(fadeElements[i]);
+            }
+            
+            // Main form handler
+            var mainForm = document.getElementById('mainContactForm');
+            var mainMessage = document.getElementById('mainFormMessage');
             
             mainForm.addEventListener('submit', function(e) {
                 e.preventDefault();
                 
-                const formData = new FormData(this);
-                const templateParams = {
-                    from_name: formData.get('from_name'),
-                    from_email: formData.get('from_email'),
-                    organization: formData.get('organization') || 'Not specified',
-                    message: formData.get('message'),
-                    form_type: 'Main Contact Form'
-                };
+                var name = this.querySelector('input[name="from_name"]').value;
+                var email = this.querySelector('input[name="from_email"]').value;
+                var message = this.querySelector('textarea[name="message"]').value;
                 
-                // Validate required fields
-                if (!templateParams.from_name || !templateParams.from_email || !templateParams.message) {
-                    showMessage(mainFormMessage, 'Please fill in all required fields.', 'error');
+                if (!name || !email || !message) {
+                    showMessage(mainMessage, 'Please fill in all required fields.', 'error');
                     return;
                 }
                 
-                // Validate email format
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(templateParams.from_email)) {
-                    showMessage(mainFormMessage, 'Please enter a valid email address.', 'error');
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    showMessage(mainMessage, 'Please enter a valid email address.', 'error');
                     return;
                 }
                 
-                const submitButton = this.querySelector('button[type="submit"]');
-                sendEmail(templateParams, submitButton, mainFormMessage);
+                handleFormSubmit(this, mainMessage, 'main');
             });
             
-            // Quick contact form
-            const quickForm = document.getElementById('quickContactForm');
-            const quickFormMessage = document.getElementById('quickFormMessage');
+            // Quick form handler
+            var quickForm = document.getElementById('quickContactForm');
+            var quickMessage = document.getElementById('quickFormMessage');
             
             quickForm.addEventListener('submit', function(e) {
                 e.preventDefault();
                 
-                const formData = new FormData(this);
-                const templateParams = {
-                    from_name: 'Quick Contact Inquiry',
-                    from_email: formData.get('from_email'),
-                    project_type: formData.get('project_type'),
-                    timeline: formData.get('timeline'),
-                    budget_range: formData.get('budget_range'),
-                    message: 'Project Type: ' + formData.get('project_type') + '\nTimeline: ' + formData.get('timeline') + '\nBudget Range: ' + formData.get('budget_range'),
-                    form_type: 'Quick Contact Form'
-                };
+                var email = this.querySelector('input[name="from_email"]').value;
                 
-                // Validate email
-                if (!templateParams.from_email) {
-                    showMessage(quickFormMessage, 'Please enter your email address.', 'error');
+                if (!email) {
+                    showMessage(quickMessage, 'Please enter your email address.', 'error');
                     return;
                 }
                 
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(templateParams.from_email)) {
-                    showMessage(quickFormMessage, 'Please enter a valid email address.', 'error');
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    showMessage(quickMessage, 'Please enter a valid email address.', 'error');
                     return;
                 }
                 
-                const submitButton = this.querySelector('button[type="submit"]');
-                sendEmail(templateParams, submitButton, quickFormMessage);
+                handleFormSubmit(this, quickMessage, 'quick');
             });
-        });
-
-        // Service button handlers
-        document.querySelectorAll('.service-card .cta-button').forEach(function(button) {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const contactSection = document.getElementById('contact');
-                if (contactSection) {
-                    contactSection.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+            
+            // Service button handlers
+            var serviceButtons = document.querySelectorAll('.service-card .cta-button');
+            for (var i = 0; i < serviceButtons.length; i++) {
+                serviceButtons[i].addEventListener('click', function(e) {
+                    e.preventDefault();
                     
-                    const serviceTitle = this.closest('.service-card').querySelector('h3').textContent;
-                    const messageField = document.querySelector('#mainContactForm textarea[name="message"]');
-                    if (messageField) {
-                        messageField.value = 'I am interested in: ' + serviceTitle + '\n\nPlease provide more information about this service.';
-                        messageField.focus();
+                    var contactSection = document.getElementById('contact');
+                    if (contactSection) {
+                        contactSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        var serviceTitle = this.closest('.service-card').querySelector('h3').textContent;
+                        var messageField = document.querySelector('#mainContactForm textarea[name="message"]');
+                        if (messageField) {
+                            messageField.value = 'I am interested in: ' + serviceTitle + '\n\nPlease provide more information about this service.';
+                            setTimeout(function() {
+                                messageField.focus();
+                            }, 1000);
+                        }
                     }
+                });
+            }
+            
+            // Header scroll effect
+            window.addEventListener('scroll', function() {
+                var header = document.querySelector('header');
+                if (window.pageYOffset > 100) {
+                    header.style.background = 'rgba(15, 20, 25, 0.98)';
+                } else {
+                    header.style.background = 'rgba(15, 20, 25, 0.95)';
                 }
             });
-        });
-
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(15, 20, 25, 0.98)';
-            } else {
-                header.style.background = 'rgba(15, 20, 25, 0.95)';
-            }
         });
     </script>
 </body>
