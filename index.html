@@ -785,7 +785,7 @@
                 return;
             }
 
-            const originalText = buttonElement.textContent;
+            var originalText = buttonElement.textContent;
             buttonElement.textContent = 'Sending...';
             buttonElement.disabled = true;
 
@@ -797,7 +797,7 @@
                     
                     showMessage(messageDiv, 'Message sent successfully! We will get back to you soon.', 'success');
                     
-                    const form = buttonElement.closest('form');
+                    var form = buttonElement.closest('form');
                     if (form) {
                         form.reset();
                     }
@@ -807,8 +807,7 @@
                         buttonElement.style.background = 'linear-gradient(135deg, #00d4ff 0%, #0891b2 100%)';
                         buttonElement.disabled = false;
                     }, 3000);
-                })
-                .catch(function(error) {
+                }, function(error) {
                     console.error('Email sending failed:', error);
                     buttonElement.textContent = 'Error - Try Again';
                     buttonElement.style.background = 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)';
