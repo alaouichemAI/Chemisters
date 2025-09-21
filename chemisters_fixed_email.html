@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemisters - Future Chemistry Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #e4e6ea;
+            background: linear-gradient(135deg, #0f1419 0%, #1a202c 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(15, 20, 25, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #00d4ff;
+            text-decoration: none;
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            color: #64748b;
+            max-width: 300px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #e4e6ea;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #00d4ff;
+        }
+
+        .contact-btn {
+            background: linear-gradient(135deg, #00d4ff 0%, #0891b2 100%);
+            color: white !important;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 0 4rem;
+            margin-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at top, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+            line-height: 1.2;
+            background: linear-gradient(135deg, #00d4ff 0%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        /* Services Grid */
+        .services-section {
+            padding: 5rem 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, rgba(15, 20, 25, 0.8) 0%, rgba(26, 32, 44, 0.8) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2.5rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #00d4ff, #0891b2);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(0, 212, 255, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 212, 255, 0.1);
+        }
+
+        .service-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #00d4ff 0%, #0891b2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .service-title {
+            flex: 1;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .service-highlight {
+            background: rgba(0, 212, 255, 0.1);
+            color: #00d4ff;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            color: #cbd5e1;
+            position: relative;
+            padding-left: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .service-features li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #00d4ff;
+            font-weight: bold;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #00d4ff 0%, #0891b2 100%);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, rgba(15, 20, 25, 0.95) 0%, rgba(26, 32, 44, 0.95) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .contact-info {
+            text-align: left;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #00d4ff;
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #e4e6ea;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: #e4e6ea;
+            font-size: 0.95rem;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #00d4ff;
+            box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.2);
+        }
+
+        /* About & Documentation */
+        .info-section {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 4rem 0;
+            margin: 4rem 0;
+            border-radius: 20px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .info-card {
+            background: linear-gradient(135deg, rgba(15, 20, 25, 0.8) 0%, rgba(26, 32, 44, 0.8) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2.5rem;
+        }
+
+        .info-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #00d4ff;
+            font-weight: 700;
+        }
+
+        .info-card p {
+            color: #94a3b8;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .resource-list {
+            list-style: none;
+        }
+
+        .resource-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #cbd5e1;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .resource-list li::before {
+            content: '📄';
+            position: absolute;
+            left: 0;
+        }
+
+        .resource-list li:hover {
+            color: #00d4ff;
+            cursor: pointer;
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00d4ff 0%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(15, 20, 25, 0.95);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem 0 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            text-align: center;
+            color: #64748b;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #00d4ff;
+            margin-bottom: 1rem;
+        }
+
+        /* Success/Error Messages */
+        .message {
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-weight: 500;
+        }
+
+        .success {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: #10b981;
+        }
+
+        .error {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #ef4444;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .logo-section {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .tagline {
+                font-size: 0.8rem;
+                max-width: 250px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid,
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo-section">
+                <a href="#" class="logo">⚗️ Chemisters</a>
+                <div class="tagline">Future chemistry solutions discovery — chemistry driven by AI, robotics & automation.</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#contact" class="contact-btn">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Advanced Chemistry Solutions</h1>
+                <p class="subtitle">Revolutionizing chemical research through AI-driven automation, validated protocols, and cutting-edge R&D tools. From concept to production, we deliver tomorrow's chemistry today.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Solutions</h2>
+                <p>Comprehensive chemistry services powered by advanced automation and AI technologies</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-header">
+                        <div class="service-icon">🔬</div>
+                        <div class="service-title">
+                            <h3>Practical focus — validated prototypes, not promises</h3>
+                            <div class="service-highlight">Validation-Ready</div>
+                        </div>
+                    </div>
+                    <p>Chemisters builds tools and consultancy that reduce failed experiments and accelerate discovery. Proprietary AI-driven methodologies paired with peer-reviewed reproducible protocols help you bring new ideas to life faster.</p>
+                    <ul class="service-features">
+                        <li>Validated protocol development</li>
+                        <li>Reduced experimental failure rates</li>
+                        <li>Peer-reviewed methodology frameworks</li>
+                        <li>Accelerated discovery pipelines</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Request a validation call</a>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-header">
+                        <div class="service-icon">⚡</div>
+                        <div class="service-title">
+                            <h3>Virtual reaction simulation</h3>
+                            <div class="service-highlight">AI-Powered</div>
+                        </div>
+                    </div>
+                    <p>Simulate new reactions before synthesis using our proprietary ML models to predict products, optimize conditions, and reduce resource expenditure.</p>
+                    <ul class="service-features">
+                        <li>Advanced ML prediction models</li>
+                        <li>Reaction outcome forecasting</li>
+                        <li>Condition optimization algorithms</li>
+                        <li>Resource efficiency maximization</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Start simulation</a>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-header">
+                        <div class="service-icon">🤖</div>
+                        <div class="service-title">
+                            <h3>R&D automation tools</h3>
+                            <div class="service-highlight">Next-Gen Tech</div>
+                        </div>
+                    </div>
+                    <p>Turn procedures into robust ready-workflows and reproducible autonomous solutions.</p>
+                    <ul class="service-features">
+                        <li>Automated workflow generation</li>
+                        <li>Reproducible protocol systems</li>
+                        <li>Robotic integration platforms</li>
+                        <li>Quality assurance automation</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Explore automation</a>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-header">
+                        <div class="service-icon">📊</div>
+                        <div class="service-title">
+                            <h3>Reaction outcome prediction</h3>
+                            <div class="service-highlight">Predictive Analytics</div>
+                        </div>
+                    </div>
+                    <p>Generate robust data that can predict major products and likely side reactions.</p>
+                    <ul class="service-features">
+                        <li>Major product identification</li>
+                        <li>Side reaction probability analysis</li>
+                        <li>Yield optimization predictions</li>
+                        <li>Reaction pathway mapping</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Get predictions</a>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-header">
+                        <div class="service-icon">🧪</div>
+                        <div class="service-title">
+                            <h3>Consulting for chemical processes</h3>
+                            <div class="service-highlight">Expert Support</div>
+                        </div>
+                    </div>
+                    <p>Expert technical support, project scoping, protocol optimization, and ML integration.</p>
+                    <ul class="service-features">
+                        <li>Technical process consultation</li>
+                        <li>Project scope optimization</li>
+                        <li>Protocol efficiency enhancement</li>
+                        <li>ML system integration</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Book consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card fade-in" style="grid-column: 1 / -1; max-width: 800px; margin: 0 auto;">
+                    <h3>About us</h3>
+                    <p>At the intersection of chemistry and technology, Chemisters is a newly launched initiative focused on practical, reproducible tools that bring ML and automation to everyday lab operations.</p>
+                    <p>We believe that every chemical discovery should be backed by robust data, validated protocols, and reproducible methodologies. Our team combines deep chemistry expertise with cutting-edge AI and automation technologies.</p>
+                    <p>Based in Rabat, Morocco, we serve clients worldwide, delivering innovative solutions that bridge the gap between traditional chemistry and modern technological capabilities. Our approach emphasizes practical implementation over theoretical promises.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact & verification</h2>
+                <p>Get in touch to discuss your chemistry challenges and discover how our AI-driven solutions can accelerate your research.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Main Contact Form</h3>
+                    
+                    <form id="mainContactForm">
+                        <div class="contact-item">
+                            <strong>Full name *</strong><br>
+                            <input type="text" name="from_name" placeholder="Your full name" required style="margin-top: 0.5rem;">
+                        </div>
+                        
+                        <div class="contact-item">
+                            <strong>Email *</strong><br>
+                            <input type="email" name="from_email" placeholder="your.email@example.com" required style="margin-top: 0.5rem;">
+                        </div>
+                        
+                        <div class="contact-item">
+                            <strong>Organization name</strong><br>
+                            <input type="text" name="organization" placeholder="Organization name/role" style="margin-top: 0.5rem;">
+                        </div>
+                        
+                        <div class="contact-item">
+                            <strong>Message (purpose of contact) *</strong><br>
+                            <textarea name="message" rows="4" placeholder="How can we help you?" required style="margin-top: 0.5rem;"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="cta-button" style="width: 100%; justify-self: center; margin-top: 1rem;">Send Message</button>
+                    </form>
+                    
+                    <div id="mainFormMessage"></div>
+                    
+                    <div style="margin-top: 2rem; padding: 1rem; background: rgba(0, 212, 255, 0.1); border-radius: 8px; border: 1px solid rgba(0, 212, 255, 0.2);">
+                        <strong>Location:</strong> Rabat, Morocco (Worldwide clients)<br>
+                        <strong>Current stage:</strong> Newly founded | research & prototype stage alongside business idea in promising early stage (2025)
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3 style="color: #00d4ff; margin-bottom: 1.5rem;">Quick Contact</h3>
+                    <form id="quickContactForm">
+                        <div class="form-group">
+                            <label>Your Email *</label>
+                            <input type="email" name="from_email" placeholder="your.email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Project Type</label>
+                            <select name="project_type">
+                                <option>Protocol Validation</option>
+                                <option>R&D Automation</option>
+                                <option>Reaction Simulation</option>
+                                <option>Process Consulting</option>
+                                <option>Custom Solution</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Timeline</label>
+                            <select name="timeline">
+                                <option>Immediate (1-2 weeks)</option>
+                                <option>Short-term (1 month)</option>
+                                <option>Medium-term (3 months)</option>
+                                <option>Long-term (6+ months)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Budget Range</label>
+                            <select name="budget_range">
+                                <option>Under $5K</option>
+                                <option>$5K - $25K</option>
+                                <option>$25K - $100K</option>
+                                <option>$100K+</option>
+                                <option>Discuss</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="cta-button" style="width: 100%;">Submit Inquiry</button>
+                    </form>
+                    <div id="quickFormMessage"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">⚗️ Chemisters</div>
+                <p>Advancing chemistry through AI, automation, and validated methodologies</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">© 2025 Chemisters. Based in Rabat, Morocco | Serving clients worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with your public key
+        // REPLACE 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
+        emailjs.init("YOUR_PUBLIC_KEY");
+
+        // Configuration - REPLACE THESE WITH YOUR ACTUAL VALUES
+        const EMAIL_CONFIG = {
+            serviceID: "YOUR_SERVICE_ID",
+            templateID: "YOUR_TEMPLATE_ID"
+        };
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Show message function
+        function showMessage(messageDiv, text, type) {
+            messageDiv.innerHTML = `<div class="message ${type}">${text}</div>`;
+            setTimeout(() => {
+                messageDiv.innerHTML = '';
+            }, 5000);
+        }
+
+        // Email sending function
+        function sendEmail(formData, buttonElement, messageDiv) {
+            const originalText = buttonElement.textContent;
+            buttonElement.textContent = 'Sending...';
+            buttonElement.disabled = true;
+
+            emailjs.send(EMAIL_CONFIG.serviceID, EMAIL_CONFIG.templateID, formData)
+                .then(function(response) {
+                    console.log('Email sent successfully!', response);
+                    buttonElement.textContent = 'Sent ✓';
+                    buttonElement.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+                    
+                    showMessage(messageDiv, 'Message sent successfully! We\'ll get back to you soon.', 'success');
+                    
+                    // Reset form
+                    const form = buttonElement.closest('form');
+                    if (form) {
+                        form.reset();
+                    }
+                    
+                    // Reset button after 3 seconds
+                    setTimeout(() => {
+                        buttonElement.textContent = originalText;
+                        buttonElement.style.background = 'linear-gradient(135deg, #00d4ff 0%, #0891b2 100%)';
+                        buttonElement.disabled = false;
+                    }, 3000);
+                });
+        }
+
+        // Handle form submissions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Main contact form
+            const mainForm = document.getElementById('mainContactForm');
+            const mainFormMessage = document.getElementById('mainFormMessage');
+            
+            mainForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(this);
+                const templateParams = {
+                    from_name: formData.get('from_name'),
+                    from_email: formData.get('from_email'),
+                    organization: formData.get('organization') || 'Not specified',
+                    message: formData.get('message'),
+                    form_type: 'Main Contact Form'
+                };
+                
+                // Validate required fields
+                if (!templateParams.from_name || !templateParams.from_email || !templateParams.message) {
+                    showMessage(mainFormMessage, 'Please fill in all required fields.', 'error');
+                    return;
+                }
+                
+                // Validate email format
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(templateParams.from_email)) {
+                    showMessage(mainFormMessage, 'Please enter a valid email address.', 'error');
+                    return;
+                }
+                
+                const submitButton = this.querySelector('button[type="submit"]');
+                sendEmail(templateParams, submitButton, mainFormMessage);
+            });
+            
+            // Quick contact form
+            const quickForm = document.getElementById('quickContactForm');
+            const quickFormMessage = document.getElementById('quickFormMessage');
+            
+            quickForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(this);
+                const templateParams = {
+                    from_name: 'Quick Contact Inquiry',
+                    from_email: formData.get('from_email'),
+                    project_type: formData.get('project_type'),
+                    timeline: formData.get('timeline'),
+                    budget_range: formData.get('budget_range'),
+                    message: `Project Type: ${formData.get('project_type')}\nTimeline: ${formData.get('timeline')}\nBudget Range: ${formData.get('budget_range')}`,
+                    form_type: 'Quick Contact Form'
+                };
+                
+                // Validate email
+                if (!templateParams.from_email) {
+                    showMessage(quickFormMessage, 'Please enter your email address.', 'error');
+                    return;
+                }
+                
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(templateParams.from_email)) {
+                    showMessage(quickFormMessage, 'Please enter a valid email address.', 'error');
+                    return;
+                }
+                
+                const submitButton = this.querySelector('button[type="submit"]');
+                sendEmail(templateParams, submitButton, quickFormMessage);
+            });
+        });
+
+        // Service button handlers
+        document.querySelectorAll('.service-card .cta-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Scroll to contact section
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                    contactSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Pre-fill the main contact form with service info
+                    const serviceTitle = this.closest('.service-card').querySelector('h3').textContent;
+                    const messageField = document.querySelector('#mainContactForm textarea[name="message"]');
+                    if (messageField) {
+                        messageField.value = `I'm interested in: ${serviceTitle}\n\nPlease provide more information about this service.`;
+                        messageField.focus();
+                    }
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(15, 20, 25, 0.98)';
+            } else {
+                header.style.background = 'rgba(15, 20, 25, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html> seconds
+                    setTimeout(() => {
+                        buttonElement.textContent = originalText;
+                        buttonElement.style.background = 'linear-gradient(135deg, #00d4ff 0%, #0891b2 100%)';
+                        buttonElement.disabled = false;
+                    }, 3000);
+                    
+                }, function(error) {
+                    console.error('Email sending failed:', error);
+                    buttonElement.textContent = 'Error - Try Again';
+                    buttonElement.style.background = 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)';
+                    
+                    showMessage(messageDiv, 'Failed to send message. Please try again or contact us directly.', 'error');
+                    
+                    // Reset button after 3
