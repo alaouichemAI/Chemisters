@@ -655,12 +655,23 @@
             font-size: 1.3em;
             transition: all 0.3s ease;
             border: 1px solid #e5e7eb;
+            overflow: hidden;
+        }
+
+        .social-link img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .social-link:hover img {
+            transform: scale(1.1);
         }
 
         .social-link:hover {
-            background: #2563eb;
-            color: white;
-            transform: translateY(-5px) rotate(5deg);
+            border-color: #2563eb;
+            transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
         }
 
@@ -893,98 +904,98 @@
             <p class="section-intro fade-in">Comprehensive coverage across all major chemistry disciplines and emerging fields.</p>
             
             <div class="topics-grid">
-                <a href="organic chemistry.html" class="topic-card-link fade-in stagger-1">
+                <a href="pages/organic chemistry.html" class="topic-card-link fade-in stagger-1">
                     <div class="topic-card">
                         <span class="topic-icon">🌿</span>
                         <h3 class="topic-title">Organic Chemistry</h3>
                         <p class="topic-description">Synthetic routes, green chemistry, retrosynthesis, and molecular modeling.</p>
                     </div>
                 </a>
-                <a href="medicinal chemistry.html" class="topic-card-link fade-in stagger-2">
+                <a href="pages/medicinal chemistry.html" class="topic-card-link fade-in stagger-2">
                     <div class="topic-card">
                         <span class="topic-icon">💊</span>
                         <h3 class="topic-title">Medicinal Chemistry</h3>
                         <p class="topic-description">Drug discovery, pharmacokinetics, QSAR, and molecular docking insights.</p>
                     </div>
                 </a>
-                <a href="inorganic chemistry.html" class="topic-card-link fade-in stagger-3">
+                <a href="pages/inorganic chemistry.html" class="topic-card-link fade-in stagger-3">
                     <div class="topic-card">
                         <span class="topic-icon">⚙️</span>
                         <h3 class="topic-title">Inorganic Chemistry</h3>
                         <p class="topic-description">Catalysis, coordination compounds, and advanced materials.</p>
                     </div>
                 </a>
-                <a href="biological chemistry.html" class="topic-card-link fade-in stagger-4">
+                <a href="pages/biological chemistry.html" class="topic-card-link fade-in stagger-4">
                     <div class="topic-card">
                         <span class="topic-icon">🧬</span>
                         <h3 class="topic-title">Biological Chemistry</h3>
                         <p class="topic-description">Enzymatic catalysis, biomolecular interactions, and the chemistry of life.</p>
                     </div>
                 </a>
-                <a href="nano chemistry.html" class="topic-card-link fade-in stagger-5">
+                <a href="pages/nano chemistry.html" class="topic-card-link fade-in stagger-5">
                     <div class="topic-card">
                         <span class="topic-icon">⚛️</span>
                         <h3 class="topic-title">Nanochemistry</h3>
                         <p class="topic-description">Design, synthesis, and application of nanoscale materials for medicine and energy.</p>
                     </div>
                 </a>
-                <a href="chemoinformatics.html" class="topic-card-link fade-in stagger-6">
+                <a href="pages/chemoinformatics.html" class="topic-card-link fade-in stagger-6">
                     <div class="topic-card">
                         <span class="topic-icon">🧠</span>
                         <h3 class="topic-title">Chemoinformatics</h3>
                         <p class="topic-description">AI-driven prediction, QSAR/QSPR modeling, and molecular data intelligence.</p>
                     </div>
                 </a>
-                <a href="heterocyclic chemistry.html" class="topic-card-link fade-in stagger-1">
+                <a href="pages/heterocyclic chemistry.html" class="topic-card-link fade-in stagger-1">
                     <div class="topic-card">
                         <span class="topic-icon">🔁</span>
                         <h3 class="topic-title">Heterocyclic Chemistry</h3>
                         <p class="topic-description">Synthesis, reactivity, and pharmaceutical applications of ring systems.</p>
                     </div>
                 </a>
-                <a href="autonomous chemistry.html" class="topic-card-link fade-in stagger-2">
+                <a href="pages/autonomous chemistry.html" class="topic-card-link fade-in stagger-2">
                     <div class="topic-card">
                         <span class="topic-icon">🤖</span>
                         <h3 class="topic-title">Autonomous Chemistry</h3>
                         <p class="topic-description">Robotics, machine learning, and self-driving labs shaping the future of synthesis.</p>
                     </div>
                 </a>
-                <a href="synthetic chemistry.html" class="topic-card-link fade-in stagger-3">
+                <a href="pages/synthetic chemistry.html" class="topic-card-link fade-in stagger-3">
                     <div class="topic-card">
                         <span class="topic-icon">⚗️</span>
                         <h3 class="topic-title">Synthetic Chemistry</h3>
                         <p class="topic-description">Engineering molecules with purpose through multistep synthesis and automation.</p>
                     </div>
                 </a>
-                <a href="computational chemistry.html" class="topic-card-link fade-in stagger-4">
+                <a href="pages/computational chemistry.html" class="topic-card-link fade-in stagger-4">
                     <div class="topic-card">
                         <span class="topic-icon">💻</span>
                         <h3 class="topic-title">Computational Chemistry</h3>
                         <p class="topic-description">Simulating reality with quantum mechanics, molecular dynamics, and AI predictions.</p>
                     </div>
                 </a>
-                <a href="analytical chemistry.html" class="topic-card-link fade-in stagger-5">
+                <a href="pages/analytical chemistry.html" class="topic-card-link fade-in stagger-5">
                     <div class="topic-card">
                         <span class="topic-icon">🧫</span>
                         <h3 class="topic-title">Analytical Chemistry</h3>
                         <p class="topic-description">Precision instrumentation and advanced methods for molecular characterization.</p>
                     </div>
                 </a>
-                <a href="physical chemistry.html" class="topic-card-link fade-in stagger-6">
+                <a href="pages/physical chemistry.html" class="topic-card-link fade-in stagger-6">
                     <div class="topic-card">
                         <span class="topic-icon">🌡️</span>
                         <h3 class="topic-title">Physical Chemistry</h3>
                         <p class="topic-description">Understanding thermodynamics, kinetics, and the laws of molecular behavior.</p>
                     </div>
                 </a>
-                <a href="green chemistry.html" class="topic-card-link fade-in stagger-1">
+                <a href="pages/green chemistry.html" class="topic-card-link fade-in stagger-1">
                     <div class="topic-card">
                         <span class="topic-icon">🌱</span>
                         <h3 class="topic-title">Green Chemistry</h3>
                         <p class="topic-description">Sustainable synthesis and eco-friendly practices for a cleaner future.</p>
                     </div>
                 </a>
-                <a href="wisdom and stories.html" class="topic-card-link fade-in stagger-2">
+                <a href="pages/wisdom and stories.html" class="topic-card-link fade-in stagger-2">
                     <div class="topic-card">
                         <span class="topic-icon">📖</span>
                         <h3 class="topic-title">Wisdom & Stories</h3>
@@ -1049,10 +1060,24 @@
             </div>
 
             <div class="social-links fade-in">
-                <a href="#" class="social-link" aria-label="LinkedIn" title="LinkedIn">💼</a>
-                <a href="#" class="social-link" aria-label="Twitter" title="Twitter">🐦</a>
-                <a href="#" class="social-link" aria-label="GitHub" title="GitHub">💻</a>
-                <a href="#" class="social-link" aria-label="Instagram" title="Instagram">📸</a>
+                <a href="#" class="social-link" aria-label="LinkedIn" title="LinkedIn">
+                    <img src="images/linkedin.jpg" alt="LinkedIn">
+                </a>
+                <a href="#" class="social-link" aria-label="Facebook" title="Facebook">
+                    <img src="images/facebook.jpg" alt="Facebook">
+                </a>
+                <a href="#" class="social-link" aria-label="Instagram" title="Instagram">
+                    <img src="images/instagram.jpg" alt="Instagram">
+                </a>
+                <a href="#" class="social-link" aria-label="X (Twitter)" title="X">
+                    <img src="images/x.jpg" alt="X">
+                </a>
+                <a href="#" class="social-link" aria-label="GitHub" title="GitHub">
+                    <img src="images/github.jpg" alt="GitHub">
+                </a>
+                <a href="#" class="social-link" aria-label="Gmail" title="Gmail">
+                    <img src="images/gmail.jpg" alt="Gmail">
+                </a>
             </div>
         </section>
 
@@ -1100,8 +1125,8 @@
             </div>
             <div class="footer-bottom">
                 <p>© 2025 Chemisters. All rights reserved. | 
-                <a href="privacy-policy.html">Privacy Policy</a> | 
-                <a href="terms-of-use.html">Terms of Use</a></p>
+                <a href="legal/privacy-policy.html">Privacy Policy</a> | 
+                <a href="legal/terms-of-use.html">Terms of Use</a></p>
             </div>
         </div>
     </footer>
