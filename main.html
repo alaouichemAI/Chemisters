@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemisters — The Future of Chemistry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        nav {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+            transition: box-shadow 0.3s ease;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #2563eb;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #4b5563;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #2563eb;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #2563eb;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e7eb;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-nav.active {
+            display: block;
+        }
+
+        .mobile-nav ul {
+            list-style: none;
+            padding: 0 30px;
+        }
+
+        .mobile-nav li {
+            margin: 15px 0;
+        }
+
+        .mobile-nav a {
+            color: #4b5563;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1em;
+            display: block;
+            padding: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav a:hover {
+            color: #2563eb;
+            padding-left: 20px;
+        }
+
+        .scroll-progress {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, #2563eb, #3b82f6);
+            z-index: 101;
+            transition: width 0.1s ease;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 99;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scroll-to-top:hover {
+            background: #1d4ed8;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+        }
+
+        header {
+            padding: 120px 0 100px;
+            text-align: center;
+            background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.03;
+            pointer-events: none;
+        }
+
+        .molecule {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #2563eb;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .molecule:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .molecule:nth-child(2) {
+            top: 60%;
+            left: 80%;
+            animation-delay: 3s;
+            width: 60px;
+            height: 60px;
+        }
+
+        .molecule:nth-child(3) {
+            top: 80%;
+            left: 20%;
+            animation-delay: 6s;
+            width: 80px;
+            height: 80px;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            33% {
+                transform: translate(30px, -30px) rotate(120deg);
+            }
+            66% {
+                transform: translate(-20px, 20px) rotate(240deg);
+            }
+        }
+
+        .hero-title {
+            font-size: 3.2em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #111827;
+            letter-spacing: -1px;
+            line-height: 1.2;
+            position: relative;
+            animation: slideInFromTop 1s ease-out;
+        }
+
+        @keyframes slideInFromTop {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-accent {
+            color: #2563eb;
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25em;
+            color: #6b7280;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-weight: 400;
+            animation: slideInFromTop 1s ease-out 0.2s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: #2563eb;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            animation: slideInFromTop 1s ease-out 0.4s both;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .cta-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .cta-button:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+        }
+
+        .section {
+            padding: 80px 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-header {
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #111827;
+            letter-spacing: -0.5px;
+        }
+
+        .section-intro {
+            font-size: 1.15em;
+            color: #6b7280;
+            max-width: 800px;
+            margin-bottom: 50px;
+            line-height: 1.7;
+        }
+
+        .content-block {
+            background: #ffffff;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .content-block::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 0;
+            background: linear-gradient(180deg, #2563eb, #3b82f6);
+            border-radius: 12px 0 0 12px;
+            transition: height 0.4s ease;
+        }
+
+        .content-block:hover::before {
+            height: 100%;
+        }
+
+        .content-block:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transform: translateX(5px);
+        }
+
+        .content-block p {
+            font-size: 1.05em;
+            color: #374151;
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+
+        .content-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .topic-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .topic-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 35px 30px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .topic-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.05), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .topic-card:hover::before {
+            left: 100%;
+        }
+
+        .topic-card:hover {
+            border-color: #2563eb;
+            box-shadow: 0 8px 30px rgba(37, 99, 235, 0.15);
+            transform: translateY(-6px);
+        }
+
+        .topic-icon {
+            font-size: 2.2em;
+            margin-bottom: 18px;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .topic-card:hover .topic-icon {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .topic-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #111827;
+            transition: color 0.3s ease;
+        }
+
+        .topic-card:hover .topic-title {
+            color: #2563eb;
+        }
+
+        .topic-description {
+            font-size: 0.95em;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin: 50px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 30px;
+            background: #f9fafb;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            background: #f3f4f6;
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1em;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .newsletter-section {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            padding: 60px;
+            border-radius: 16px;
+            margin: 60px 0;
+            text-align: center;
+            color: white;
+            box-shadow: 0 10px 40px rgba(37, 99, 235, 0.3);
+        }
+
+        .newsletter-section h3 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .newsletter-section p {
+            font-size: 1.15em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            min-width: 250px;
+            padding: 14px 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            font-size: 1em;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .newsletter-input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .newsletter-button {
+            padding: 14px 32px;
+            background: white;
+            color: #2563eb;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .contact-card {
+            background: #f9fafb;
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            border-color: #2563eb;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.1);
+        }
+
+        .contact-card h3 {
+            font-size: 1.2em;
+            color: #111827;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .contact-card p {
+            color: #6b7280;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05em;
+            transition: gap 0.3s ease;
+        }
+
+        .contact-link:hover {
+            gap: 15px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #f9fafb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 1.3em;
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+
+        .social-link:hover {
+            background: #2563eb;
+            color: white;
+            transform: translateY(-5px) rotate(5deg);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+        }
+
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            padding: 60px 0 40px;
+            margin-top: 100px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 50px;
+        }
+
+        .footer-section h4 {
+            color: #ffffff;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer-section p {
+            color: #9ca3af;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #374151;
+            color: #6b7280;
+            font-size: 0.9em;
+        }
+
+        .footer-bottom a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-bottom a:hover {
+            color: #ffffff;
+        }
+
+        .tagline {
+            background: #f9fafb;
+            border-left: 4px solid #2563eb;
+            padding: 30px 40px;
+            margin: 40px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .tagline p {
+            font-size: 1.15em;
+            color: #374151;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        @media (max-width: 968px) {
+            .topics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-section {
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: 2.2em;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1em;
+            }
+
+            .section-header {
+                font-size: 1.8em;
+            }
+
+            .topics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .content-block {
+                padding: 25px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-input {
+                min-width: 100%;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+        .stagger-5 { transition-delay: 0.5s; }
+        .stagger-6 { transition-delay: 0.6s; }
+    </style>
+</head>
+<body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+    
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">Chemisters</div>
+                <ul class="nav-links">
+                    <li><a href="#mission">Mission</a></li>
+                    <li><a href="#coverage">Coverage</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="#mission">Mission</a></li>
+            <li><a href="#coverage">Coverage</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
+
+    <header>
+        <div class="hero-background">
+            <div class="molecule"></div>
+            <div class="molecule"></div>
+            <div class="molecule"></div>
+        </div>
+        <div class="container">
+            <h1 class="hero-title">Welcome to <span class="hero-accent">Chemisters</span></h1>
+            <p class="hero-subtitle">A modern chemistry intelligence and discovery hub for researchers, students, and innovators shaping the next era of science.</p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <div class="content-block fade-in">
+                <p>Chemisters delivers daily updates about molecules, reactions, laboratory techniques, and the global minds driving chemical innovation.</p>
+                <p>Here, chemistry isn't just studied — it's reimagined. From organic synthesis to AI-driven laboratory automation, we document every breakthrough redefining how humanity understands matter, energy, and life itself.</p>
+            </div>
+        </section>
+
+        <section class="section" id="mission">
+            <h2 class="section-header fade-in">Our Mission</h2>
+            <p class="section-intro fade-in">To make chemistry accessible, visionary, and actionable.</p>
+            <div class="content-block fade-in">
+                <p>At Chemisters, our mission is to connect the chemistry community through verified information, emerging technologies, and authentic scientific storytelling.</p>
+                <p>We believe in merging human expertise with digital intelligence to accelerate discovery — molecule by molecule.</p>
+            </div>
+        </section>
+
+        <section class="section" id="coverage">
+            <h2 class="section-header fade-in">What We Cover</h2>
+            <p class="section-intro fade-in">Comprehensive coverage across all major chemistry disciplines and emerging fields.</p>
+            
+            <div class="topics-grid">
+                <a href="organic chemistry.html" class="topic-card-link fade-in stagger-1">
+                    <div class="topic-card">
+                        <span class="topic-icon">🌿</span>
+                        <h3 class="topic-title">Organic Chemistry</h3>
+                        <p class="topic-description">Synthetic routes, green chemistry, retrosynthesis, and molecular modeling.</p>
+                    </div>
+                </a>
+                <a href="medicinal chemistry.html" class="topic-card-link fade-in stagger-2">
+                    <div class="topic-card">
+                        <span class="topic-icon">💊</span>
+                        <h3 class="topic-title">Medicinal Chemistry</h3>
+                        <p class="topic-description">Drug discovery, pharmacokinetics, QSAR, and molecular docking insights.</p>
+                    </div>
+                </a>
+                <a href="inorganic chemistry.html" class="topic-card-link fade-in stagger-3">
+                    <div class="topic-card">
+                        <span class="topic-icon">⚙️</span>
+                        <h3 class="topic-title">Inorganic Chemistry</h3>
+                        <p class="topic-description">Catalysis, coordination compounds, and advanced materials.</p>
+                    </div>
+                </a>
+                <a href="biological chemistry.html" class="topic-card-link fade-in stagger-4">
+                    <div class="topic-card">
+                        <span class="topic-icon">🧬</span>
+                        <h3 class="topic-title">Biological Chemistry</h3>
+                        <p class="topic-description">Enzymatic catalysis, biomolecular interactions, and the chemistry of life.</p>
+                    </div>
+                </a>
+                <a href="nano chemistry.html" class="topic-card-link fade-in stagger-5">
+                    <div class="topic-card">
+                        <span class="topic-icon">⚛️</span>
+                        <h3 class="topic-title">Nanochemistry</h3>
+                        <p class="topic-description">Design, synthesis, and application of nanoscale materials for medicine and energy.</p>
+                    </div>
+                </a>
+                <a href="chemoinformatics.html" class="topic-card-link fade-in stagger-6">
+                    <div class="topic-card">
+                        <span class="topic-icon">🧠</span>
+                        <h3 class="topic-title">Chemoinformatics</h3>
+                        <p class="topic-description">AI-driven prediction, QSAR/QSPR modeling, and molecular data intelligence.</p>
+                    </div>
+                </a>
+                <a href="heterocyclic chemistry.html" class="topic-card-link fade-in stagger-1">
+                    <div class="topic-card">
+                        <span class="topic-icon">🔁</span>
+                        <h3 class="topic-title">Heterocyclic Chemistry</h3>
+                        <p class="topic-description">Synthesis, reactivity, and pharmaceutical applications of ring systems.</p>
+                    </div>
+                </a>
+                <a href="autonomous chemistry.html" class="topic-card-link fade-in stagger-2">
+                    <div class="topic-card">
+                        <span class="topic-icon">🤖</span>
+                        <h3 class="topic-title">Autonomous Chemistry</h3>
+                        <p class="topic-description">Robotics, machine learning, and self-driving labs shaping the future of synthesis.</p>
+                    </div>
+                </a>
+                <a href="synthetic chemistry.html" class="topic-card-link fade-in stagger-3">
+                    <div class="topic-card">
+                        <span class="topic-icon">⚗️</span>
+                        <h3 class="topic-title">Synthetic Chemistry</h3>
+                        <p class="topic-description">Engineering molecules with purpose through multistep synthesis and automation.</p>
+                    </div>
+                </a>
+                <a href="computational chemistry.html" class="topic-card-link fade-in stagger-4">
+                    <div class="topic-card">
+                        <span class="topic-icon">💻</span>
+                        <h3 class="topic-title">Computational Chemistry</h3>
+                        <p class="topic-description">Simulating reality with quantum mechanics, molecular dynamics, and AI predictions.</p>
+                    </div>
+                </a>
+                <a href="analytical chemistry.html" class="topic-card-link fade-in stagger-5">
+                    <div class="topic-card">
+                        <span class="topic-icon">🧫</span>
+                        <h3 class="topic-title">Analytical Chemistry</h3>
+                        <p class="topic-description">Precision instrumentation and advanced methods for molecular characterization.</p>
+                    </div>
+                </a>
+                <a href="physical chemistry.html" class="topic-card-link fade-in stagger-6">
+                    <div class="topic-card">
+                        <span class="topic-icon">🌡️</span>
+                        <h3 class="topic-title">Physical Chemistry</h3>
+                        <p class="topic-description">Understanding thermodynamics, kinetics, and the laws of molecular behavior.</p>
+                    </div>
+                </a>
+                <a href="green chemistry.html" class="topic-card-link fade-in stagger-1">
+                    <div class="topic-card">
+                        <span class="topic-icon">🌱</span>
+                        <h3 class="topic-title">Green Chemistry</h3>
+                        <p class="topic-description">Sustainable synthesis and eco-friendly practices for a cleaner future.</p>
+                    </div>
+                </a>
+                <a href="wisdom and stories.html" class="topic-card-link fade-in stagger-2">
+                    <div class="topic-card">
+                        <span class="topic-icon">📖</span>
+                        <h3 class="topic-title">Wisdom & Stories</h3>
+                        <p class="topic-description">Reflections, experiences, and philosophical insights from chemists worldwide.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="tagline fade-in">
+                <p>Each section explores chemistry as both a science and a movement — connecting molecules, technology, and human creativity.</p>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <h2 class="section-header fade-in">About Chemisters</h2>
+            <div class="content-block fade-in">
+                <p>Founded in 2025, Chemisters aims to become the digital ecosystem of chemistry — where academic rigor meets modern communication.</p>
+                <p>We're not just another science blog — we are a network for the thinkers and builders of chemistry's future.</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-item fade-in">
+                    <div class="stat-number">2025</div>
+                    <div class="stat-label">Founded</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number">14+</div>
+                    <div class="stat-label">Chemistry Disciplines</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number">Daily</div>
+                    <div class="stat-label">Content Updates</div>
+                </div>
+            </div>
+
+            <div class="tagline fade-in">
+                <p>Our vision: To transform scientific knowledge into a living, interactive dialogue between chemistry and technology.</p>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <h2 class="section-header fade-in">Contact Us</h2>
+            <p class="section-intro fade-in">For collaboration, guest articles, partnership proposals, or media inquiries.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-card fade-in">
+                    <h3>Email Inquiry</h3>
+                    <p>Our editorial team responds within 48 hours to all verified requests.</p>
+                    <a href="mailto:contact@chemisters.com" class="contact-link">
+                        <span>📧</span>
+                        <span>contact@chemisters.com</span>
+                    </a>
+                </div>
+                <div class="contact-card fade-in">
+                    <h3>Visit Our Website</h3>
+                    <p>Explore our latest articles, research updates, and chemistry insights.</p>
+                    <a href="https://www.chemisters.com" class="contact-link" target="_blank" rel="noopener">
+                        <span>🌐</span>
+                        <span>www.chemisters.com</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="social-links fade-in">
+                <a href="#" class="social-link" aria-label="LinkedIn" title="LinkedIn">💼</a>
+                <a href="#" class="social-link" aria-label="Twitter" title="Twitter">🐦</a>
+                <a href="#" class="social-link" aria-label="GitHub" title="GitHub">💻</a>
+                <a href="#" class="social-link" aria-label="Instagram" title="Instagram">📸</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-header fade-in">Join the Chemisters Network</h2>
+            <div class="content-block fade-in">
+                <p>Follow us for daily updates, molecular insights, and cutting-edge chemistry stories. Together, we're shaping the next generation of scientific innovation — transparent, connected, and autonomous.</p>
+            </div>
+
+            <div class="newsletter-section fade-in">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Get weekly chemistry insights, breakthrough discoveries, and expert analysis delivered to your inbox.</p>
+                <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email address">
+                    <button type="submit" class="newsletter-button">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Chemisters</h4>
+                    <p>The digital ecosystem of chemistry — where academic rigor meets modern communication.</p>
+                    <p>Chemistry evolves. Chemisters documents it.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#mission">Mission</a></li>
+                        <li><a href="#coverage">Coverage</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contact@chemisters.com">Email</a></li>
+                        <li><a href="https://www.chemisters.com">Website</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Chemisters. All rights reserved. | 
+                <a href="privacy-policy.html">Privacy Policy</a> | 
+                <a href="terms-of-use.html">Terms of Use</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const targetPosition = target.offsetTop - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileNav = document.getElementById('mobileNav');
+                    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+                    if (mobileNav.classList.contains('active')) {
+                        mobileNav.classList.remove('active');
+                        mobileMenuToggle.classList.remove('active');
+                    }
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileNav = document.getElementById('mobileNav');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+        });
+
+        // Scroll progress bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('scrollProgress').style.width = scrolled + '%';
+        });
+
+        // Scroll to top button
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Navbar shadow on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Newsletter form handler
+        function handleNewsletterSubmit(e) {
+            e.preventDefault();
+            const email = e.target.querySelector('input[type="email"]').value;
+            
+            // Show success message
+            alert('Thank you for subscribing! We\'ll send chemistry insights to ' + email);
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>

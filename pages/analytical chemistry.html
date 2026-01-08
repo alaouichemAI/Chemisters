@@ -1,0 +1,2108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytical Chemistry — Chemisters</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        nav {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            padding: 15px 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .breadcrumb {
+            font-size: 0.85em;
+            color: #6b7280;
+            margin-top: 8px;
+        }
+
+        .breadcrumb a {
+            color: #6b7280;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            color: #2563eb;
+        }
+
+        .breadcrumb span {
+            margin: 0 8px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #2563eb;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #4b5563;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #2563eb;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            color: #ffffff;
+            padding: 120px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: float-particle 15s infinite;
+        }
+
+        @keyframes float-particle {
+            0% {
+                transform: translateY(100vh) translateX(0) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) translateX(100px) scale(1);
+                opacity: 0;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .hero-icon {
+            animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+        }
+
+        .hero-icon:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .hero-icon:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-title {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1.5px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-subtitle {
+            font-size: 1.4em;
+            opacity: 0;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-weight: 400;
+            line-height: 1.6;
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+        }
+
+        .hero-cta {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.6s forwards;
+        }
+
+        .hero-cta button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-cta button:hover {
+            background: white;
+            color: #8b5cf6;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .quick-nav {
+            background: #f9fafb;
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 81px;
+            z-index: 90;
+            backdrop-filter: blur(10px);
+            background: rgba(249, 250, 251, 0.95);
+            transition: top 0.3s ease;
+        }
+
+        nav.scrolled ~ .hero ~ .quick-nav {
+            top: 71px;
+        }
+
+        .quick-nav-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .quick-nav-list a {
+            padding: 8px 18px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #4b5563;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quick-nav-list a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .quick-nav-list a:hover::before {
+            left: 100%;
+        }
+
+        .quick-nav-list a:hover {
+            background: #8b5cf6;
+            color: #ffffff;
+            border-color: #8b5cf6;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+        }
+
+        .intro-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+        }
+
+        .intro-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .intro-text {
+            font-size: 1.2em;
+            color: #374151;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .intro-text.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 35px;
+            text-align: center;
+            transition: all 0.4s ease;
+            opacity: 0;
+            transform: translateY(20px) scale(0.95);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .stat-card:hover::before {
+            opacity: 1;
+        }
+
+        .stat-card.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .stat-card:hover {
+            border-color: #8b5cf6;
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.2);
+        }
+
+        .stat-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            display: inline-block;
+            transition: transform 0.4s ease;
+        }
+
+        .stat-card:hover .stat-icon {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .stat-number {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #8b5cf6;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .stat-label {
+            font-size: 0.95em;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #111827;
+            letter-spacing: -1px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #8b5cf6, #7c3aed);
+            border-radius: 2px;
+        }
+
+        .section-intro {
+            font-size: 1.15em;
+            color: #6b7280;
+            max-width: 800px;
+            margin-bottom: 50px;
+            line-height: 1.7;
+        }
+
+        .topics-list {
+            display: grid;
+            gap: 30px;
+            max-width: 1000px;
+        }
+
+        .topic-item {
+            background: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-left: 5px solid #8b5cf6;
+            border-radius: 12px;
+            padding: 35px 40px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateX(-30px);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .topic-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, #8b5cf6, #7c3aed);
+            transition: width 0.4s ease;
+        }
+
+        .topic-item:hover::before {
+            width: 100%;
+            opacity: 0.05;
+        }
+
+        .topic-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .topic-item:hover {
+            border-left-color: #7c3aed;
+            box-shadow: 0 8px 30px rgba(139, 92, 246, 0.2);
+            transform: translateX(10px) translateY(-4px);
+        }
+
+        .topic-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .topic-icon {
+            font-size: 2.5em;
+            margin-right: 20px;
+            opacity: 0.9;
+            transition: transform 0.3s ease;
+        }
+
+        .topic-item:hover .topic-icon {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .topic-title {
+            font-size: 1.35em;
+            font-weight: 700;
+            color: #111827;
+            flex: 1;
+            line-height: 1.4;
+        }
+
+        .expand-icon {
+            font-size: 1.4em;
+            color: #8b5cf6;
+            transition: transform 0.4s ease;
+            margin-left: 15px;
+        }
+
+        .topic-item.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .topic-description {
+            font-size: 1.05em;
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .topic-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .topic-item.expanded .topic-details {
+            max-height: 600px;
+        }
+
+        .topic-examples {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 20px;
+            border-left: 3px solid #8b5cf6;
+        }
+
+        .topic-examples h4 {
+            font-size: 1.05em;
+            color: #8b5cf6;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .topic-examples h4::before {
+            content: '💡';
+            font-size: 1.2em;
+        }
+
+        .topic-examples ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .topic-examples li {
+            padding: 10px 0;
+            color: #4b5563;
+            font-size: 0.95em;
+            padding-left: 25px;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+
+        .topic-examples li:hover {
+            color: #111827;
+            padding-left: 30px;
+        }
+
+        .topic-examples li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #8b5cf6;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+        }
+
+        .topic-examples li:hover::before {
+            transform: translateX(5px);
+        }
+
+        .comparison-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+        }
+
+        .comparison-table {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .comparison-table.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            border-bottom: 1px solid #e5e7eb;
+            transition: background 0.3s ease;
+        }
+
+        .comparison-row:hover {
+            background: #f9fafb;
+        }
+
+        .comparison-row.header {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-row.header:hover {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+        }
+
+        .comparison-cell {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 0.95em;
+        }
+
+        .comparison-cell:first-child {
+            justify-content: flex-start;
+            text-align: left;
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .comparison-row.header .comparison-cell {
+            color: white;
+        }
+
+        .breakthrough-section {
+            background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .breakthrough-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .breakthrough-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .breakthrough-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateY(30px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .breakthrough-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #8b5cf6, #7c3aed);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .breakthrough-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .breakthrough-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .breakthrough-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px rgba(139, 92, 246, 0.25);
+        }
+
+        .breakthrough-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(139, 92, 246, 0.3);
+        }
+
+        .breakthrough-title {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .breakthrough-description {
+            color: #4b5563;
+            line-height: 1.8;
+            font-size: 0.98em;
+        }
+
+        .breakthrough-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            display: block;
+            opacity: 0.8;
+        }
+
+        .visualization-section {
+            padding: 100px 0;
+            background: #ffffff;
+        }
+
+        .viz-container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+            border-radius: 20px;
+            padding: 50px;
+            border: 2px solid #e5e7eb;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .spectrum-display {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 30px;
+            position: relative;
+            height: 350px;
+            border: 2px solid #e5e7eb;
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.03);
+        }
+
+        .spectrum-canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        .viz-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .viz-button {
+            padding: 14px 24px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .viz-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .viz-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .viz-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+        }
+
+        .viz-button:active {
+            transform: translateY(-1px);
+        }
+
+        .viz-button.active {
+            background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+            box-shadow: 0 2px 10px rgba(139, 92, 246, 0.5);
+        }
+
+        .timeline-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+        }
+
+        .timeline {
+            max-width: 900px;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #8b5cf6, #7c3aed);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 50px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 30px rgba(139, 92, 246, 0.2);
+        }
+
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 0 5px #fff, 0 0 0 8px #8b5cf6;
+            z-index: 1;
+        }
+
+        .timeline-year {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #8b5cf6;
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .timeline-description {
+            color: #4b5563;
+            line-height: 1.7;
+            font-size: 0.95em;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-title {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-text {
+            font-size: 1.2em;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: #ffffff;
+            color: #8b5cf6;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            background: #f9fafb;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.6em;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 8px 30px rgba(139, 92, 246, 0.5);
+        }
+
+        .back-to-top::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.6s ease;
+        }
+
+        .back-to-top:hover::after {
+            transform: translate(-50%, -50%) scale(1.5);
+            opacity: 0;
+        }
+
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            padding: 80px 0 40px;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #374151, transparent);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 50px;
+        }
+
+        .footer-section h4 {
+            color: #ffffff;
+            font-size: 1.2em;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .footer-section p {
+            color: #9ca3af;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 14px;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid #374151;
+            color: #6b7280;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5em;
+            }
+
+            .hero-subtitle {
+                font-size: 1.15em;
+            }
+
+            .section-header {
+                font-size: 2em;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .topic-item {
+                padding: 25px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .breakthrough-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-nav-list {
+                gap: 10px;
+            }
+
+            .quick-nav-list a {
+                padding: 6px 14px;
+                font-size: 0.85em;
+            }
+
+            .comparison-row {
+                grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            }
+
+            .comparison-cell {
+                padding: 15px 10px;
+                font-size: 0.85em;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                flex-direction: row !important;
+            }
+
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+
+            .viz-container {
+                padding: 30px 20px;
+            }
+
+            .cta-title {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="mainNav">
+        <div class="container">
+            <div class="nav-content">
+                <div>
+                    <a href="index.html" class="logo">Chemisters</a>
+                    <div class="breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span>›</span>
+                        <span>Analytical Chemistry</span>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#coverage">All Topics</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="particles" id="particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-icons">
+                    <span class="hero-icon">🧫</span>
+                    <span class="hero-icon">📊</span>
+                    <span class="hero-icon">🔬</span>
+                </div>
+                <h1 class="hero-title">Analytical Chemistry</h1>
+                <p class="hero-subtitle">The Science of Precision and Proof — Where Every Molecule Tells a Story</p>
+                <div class="hero-cta">
+                    <button onclick="document.querySelector('#topics').scrollIntoView({behavior: 'smooth', block: 'start'})">
+                        Explore Topics ↓
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="quick-nav">
+        <div class="container">
+            <ul class="quick-nav-list">
+                <li><a href="#topics">📚 Topics</a></li>
+                <li><a href="#comparison">⚖️ Comparison</a></li>
+                <li><a href="#timeline">📅 Timeline</a></li>
+                <li><a href="#breakthroughs">🚀 Latest Advances</a></li>
+                <li><a href="#visualization">🎨 Interactive Demo</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="intro-section">
+        <div class="container">
+            <div class="intro-content">
+                <p class="intro-text">Analytical chemistry validates innovation by quantifying, identifying, and characterizing matter with unprecedented precision.</p>
+                <p class="intro-text">At Chemisters, we emphasize cutting-edge instrumental methods, trace detection capabilities, and AI-powered analytics that define modern science. We explore how automation, miniaturization, and machine learning are revolutionizing analytical frontiers in pharmaceuticals, materials science, and environmental monitoring.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-number">ppb</div>
+                        <div class="stat-label">Detection Limits Achieved</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">Accuracy Standards</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⏱️</div>
+                        <div class="stat-number">&lt;1s</div>
+                        <div class="stat-label">Real-time Analysis</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🤖</div>
+                        <div class="stat-number">AI</div>
+                        <div class="stat-label">Powered Methods</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section" id="topics">
+        <div class="container">
+            <h2 class="section-header">Topics Covered</h2>
+            <p class="section-intro">Comprehensive exploration of analytical techniques and instrumentation that power discovery across all chemical disciplines.</p>
+            
+            <div class="topics-list">
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">📡</span>
+                        <h3 class="topic-title">Spectroscopy (NMR, IR, UV-Vis, MS) and Structural Elucidation</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Advanced spectroscopic techniques for molecular identification and structure determination, including nuclear magnetic resonance, infrared, ultraviolet-visible, and mass spectrometry applications in complex mixture analysis.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>Pharmaceutical drug purity verification using HPLC-MS</li>
+                                <li>Protein structure determination via 2D NMR techniques</li>
+                                <li>Environmental pollutant identification at trace levels</li>
+                                <li>Food authenticity testing and fraud detection</li>
+                                <li>Unknown compound identification in forensic toxicology</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">🧪</span>
+                        <h3 class="topic-title">Chromatography and Separation Science</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">High-performance liquid chromatography, gas chromatography, and emerging separation technologies for purification, quantification, and analysis of complex chemical and biological samples.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>Blood plasma metabolite profiling for disease diagnosis</li>
+                                <li>Pesticide residue analysis in agricultural products</li>
+                                <li>Biopharmaceutical protein purification at industrial scale</li>
+                                <li>Essential oil composition analysis for quality control</li>
+                                <li>Chiral compound separation in drug development</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">📊</span>
+                        <h3 class="topic-title">Chemometrics and Data-Driven Analytics</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Statistical methods, multivariate analysis, and machine learning applications for extracting meaningful patterns from analytical data, enhancing method validation and predictive capabilities.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>Predictive models for drug formulation optimization</li>
+                                <li>Pattern recognition in metabolomics studies</li>
+                                <li>Quality control automation in manufacturing</li>
+                                <li>Spectral deconvolution using neural networks</li>
+                                <li>Process optimization through design of experiments</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">✓</span>
+                        <h3 class="topic-title">Quality Control and Forensic Applications</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Rigorous analytical protocols for pharmaceutical validation, materials testing, environmental monitoring, and forensic investigations ensuring accuracy, reproducibility, and regulatory compliance.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>Crime scene trace evidence analysis</li>
+                                <li>Pharmaceutical batch release testing</li>
+                                <li>Water quality monitoring for public health</li>
+                                <li>Counterfeit product identification</li>
+                                <li>Drug testing in sports and workplace settings</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">📱</span>
+                        <h3 class="topic-title">Sensor Technologies and In Situ Monitoring</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Development of real-time analytical sensors, biosensors, and portable devices for continuous monitoring, field analysis, and process analytical technology in industrial and environmental settings.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>Continuous glucose monitoring for diabetes management</li>
+                                <li>Industrial process control in chemical reactors</li>
+                                <li>Portable heavy metal detectors for field testing</li>
+                                <li>Wearable biosensors for health monitoring</li>
+                                <li>Environmental air quality monitoring networks</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison-section" id="comparison">
+        <div class="container">
+            <h2 class="section-header">Technique Comparison</h2>
+            <p class="section-intro">Understanding the strengths and applications of major analytical methods.</p>
+            
+            <div class="comparison-table">
+                <div class="comparison-row header">
+                    <div class="comparison-cell">Technique</div>
+                    <div class="comparison-cell">Detection Limit</div>
+                    <div class="comparison-cell">Analysis Time</div>
+                    <div class="comparison-cell">Best For</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">Mass Spectrometry</div>
+                    <div class="comparison-cell">fg-pg</div>
+                    <div class="comparison-cell">Minutes</div>
+                    <div class="comparison-cell">Trace analysis</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">NMR Spectroscopy</div>
+                    <div class="comparison-cell">μg-mg</div>
+                    <div class="comparison-cell">Minutes-Hours</div>
+                    <div class="comparison-cell">Structure</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">HPLC</div>
+                    <div class="comparison-cell">ng-μg</div>
+                    <div class="comparison-cell">10-60 min</div>
+                    <div class="comparison-cell">Separation</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">UV-Vis</div>
+                    <div class="comparison-cell">μg-mg</div>
+                    <div class="comparison-cell">Seconds</div>
+                    <div class="comparison-cell">Concentration</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">ICP-OES</div>
+                    <div class="comparison-cell">ppb-ppm</div>
+                    <div class="comparison-cell">Minutes</div>
+                    <div class="comparison-cell">Elemental</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline-section" id="timeline">
+        <div class="container">
+            <h2 class="section-header">Evolution of Analytical Chemistry</h2>
+            <p class="section-intro">Key milestones that shaped modern analytical science.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1940s</div>
+                        <div class="timeline-title">Birth of Modern Chromatography</div>
+                        <div class="timeline-description">Martin and Synge develop partition chromatography, revolutionizing separation science and earning the Nobel Prize in 1952.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1960s</div>
+                        <div class="timeline-title">NMR Enters Chemistry</div>
+                        <div class="timeline-description">Nuclear magnetic resonance spectroscopy becomes commercially available, transforming structural elucidation in organic chemistry.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1980s</div>
+                        <div class="timeline-title">Mass Spec Revolution</div>
+                        <div class="timeline-description">Development of electrospray ionization and MALDI enables analysis of large biomolecules, earning Nobel Prizes for Fenn and Tanaka.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2000s</div>
+                        <div class="timeline-title">Miniaturization Era</div>
+                        <div class="timeline-description">Lab-on-chip and microfluidic technologies emerge, enabling portable analysis and point-of-care diagnostics.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020s</div>
+                        <div class="timeline-title">AI Integration</div>
+                        <div class="timeline-description">Machine learning transforms data analysis, spectrum prediction, and automated method development in analytical chemistry.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="breakthrough-section" id="breakthroughs">
+        <div class="container">
+            <h2 class="section-header">Latest Advances in Analytical Chemistry</h2>
+            <p class="section-intro">Cutting-edge developments transforming how we measure, analyze, and understand chemical systems.</p>
+            
+            <div class="breakthrough-grid">
+                <div class="breakthrough-card">
+                    <span class="breakthrough-icon">❄️</span>
+                    <span class="breakthrough-badge">2024-2025</span>
+                    <h3 class="breakthrough-title">Cryo-EM for Small Molecules</h3>
+                    <p class="breakthrough-description">Revolutionary application of cryo-electron microscopy extends beyond proteins to enable direct visualization of small molecule structures, opening new frontiers in pharmaceutical analysis and drug discovery with atomic-level detail.</p>
+                </div>
+
+                <div class="breakthrough-card">
+                    <span class="breakthrough-icon">🧠</span>
+                    <span class="breakthrough-badge">AI Innovation</span>
+                    <h3 class="breakthrough-title">Deep Learning Spectrum Prediction</h3>
+                    <p class="breakthrough-description">Neural networks now predict NMR and MS spectra with remarkable accuracy, accelerating structure elucidation and enabling automated identification of unknown compounds in complex mixtures within seconds.</p>
+                </div>
+
+                <div class="breakthrough-card">
+                    <span class="breakthrough-icon">📱</span>
+                    <span class="breakthrough-badge">Miniaturization</span>
+                    <h3 class="breakthrough-title">Lab-on-Chip Mass Spectrometry</h3>
+                    <p class="breakthrough-description">Portable MS devices no larger than smartphones bring laboratory-grade analysis to the field, enabling point-of-care diagnostics, food safety testing, and environmental monitoring anywhere, anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="visualization-section" id="visualization">
+        <div class="container">
+            <h2 class="section-header">Interactive Spectroscopy Demo</h2>
+            <p class="section-intro">Explore how different analytical techniques reveal molecular information. Click the buttons to simulate different spectroscopic methods and see characteristic patterns.</p>
+            
+            <div class="viz-container">
+                <div class="spectrum-display">
+                    <canvas id="spectrumCanvas" class="spectrum-canvas"></canvas>
+                </div>
+                <div class="viz-controls">
+                    <button class="viz-button active" onclick="showSpectrum('nmr')">
+                        <span style="position: relative; z-index: 1;">🧲 NMR Spectrum</span>
+                    </button>
+                    <button class="viz-button" onclick="showSpectrum('ir')">
+                        <span style="position: relative; z-index: 1;">📉 IR Spectrum</span>
+                    </button>
+                    <button class="viz-button" onclick="showSpectrum('uv')">
+                        <span style="position: relative; z-index: 1;">🌈 UV-Vis Spectrum</span>
+                    </button>
+                    <button class="viz-button" onclick="showSpectrum('ms')">
+                        <span style="position: relative; z-index: 1;">⚛️ Mass Spectrum</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cta-section" id="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Follow Analytical Chemistry Innovation</h2>
+                <p class="cta-text">Stay updated on cutting-edge instrumentation, trace detection methods, and data analytics transforming chemical analysis. Join our community of analytical scientists.</p>
+                <a href="index.html#contact" class="cta-button">Connect With Us →</a>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Chemisters</h4>
+                    <p>The digital ecosystem of chemistry — where academic rigor meets modern communication.</p>
+                    <p>Chemistry evolves. Chemisters documents it.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#coverage">All Topics</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contact@chemisters.com">Email</a></li>
+                        <li><a href="https://www.chemisters.com">Website</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Chemisters. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Create animated particles in hero
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (10 + Math.random() * 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        createParticles();
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToAnimate = document.querySelectorAll(
+                '.intro-text, .stat-card, .topic-item, .breakthrough-card, .comparison-table, .timeline-item'
+            );
+            elementsToAnimate.forEach(el => observer.observe(el));
+
+            // Add stagger delay to stat cards
+            document.querySelectorAll('.stat-card').forEach((card, index) => {
+                card.style.transitionDelay = `${index * 0.1}s`;
+            });
+
+            // Add stagger delay to topic items
+            document.querySelectorAll('.topic-item').forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.1}s`;
+            });
+
+            // Add stagger delay to breakthrough cards
+            document.querySelectorAll('.breakthrough-card').forEach((card, index) => {
+                card.style.transitionDelay = `${index * 0.15}s`;
+            });
+
+            // Add stagger delay to timeline items
+            document.querySelectorAll('.timeline-item').forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.2}s`;
+            });
+        });
+
+        // Navigation scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+
+            // Back to top button
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Back to top functionality
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Expandable topic items
+        document.querySelectorAll('.topic-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                // Prevent expansion when clicking on links
+                if (e.target.tagName === 'A') return;
+                
+                this.classList.toggle('expanded');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 140;
+                    const targetPosition = target.offsetTop - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Interactive spectrum visualization
+        const canvas = document.getElementById('spectrumCanvas');
+        const ctx = canvas.getContext('2d');
+        let currentSpectrum = 'nmr';
+
+        function resizeCanvas() {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+            showSpectrum(currentSpectrum);
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        function showSpectrum(type) {
+            currentSpectrum = type;
+            
+            // Update active button
+            document.querySelectorAll('.viz-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.closest('.viz-button').classList.add('active');
+            
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            const width = canvas.width;
+            const height = canvas.height;
+            const padding = 50;
+
+            // Draw axes
+            ctx.strokeStyle = '#374151';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(padding, padding);
+            ctx.lineTo(padding, height - padding);
+            ctx.lineTo(width - padding, height - padding);
+            ctx.stroke();
+
+            // Draw grid
+            ctx.strokeStyle = '#e5e7eb';
+            ctx.lineWidth = 1;
+            for (let i = 1; i < 5; i++) {
+                const y = padding + (height - 2 * padding) * i / 5;
+                ctx.beginPath();
+                ctx.moveTo(padding, y);
+                ctx.lineTo(width - padding, y);
+                ctx.stroke();
+            }
+
+            // Draw spectrum based on type
+            ctx.strokeStyle = '#8b5cf6';
+            ctx.lineWidth = 3;
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = 'rgba(139, 92, 246, 0.5)';
+
+            switch(type) {
+                case 'nmr':
+                    drawNMR(width, height, padding);
+                    drawLabel('Chemical Shift (ppm)', 'Intensity', 'NMR Spectrum');
+                    break;
+                case 'ir':
+                    drawIR(width, height, padding);
+                    drawLabel('Wavenumber (cm⁻¹)', 'Transmittance (%)', 'IR Spectrum');
+                    break;
+                case 'uv':
+                    drawUV(width, height, padding);
+                    drawLabel('Wavelength (nm)', 'Absorbance', 'UV-Vis Spectrum');
+                    break;
+                case 'ms':
+                    drawMS(width, height, padding);
+                    drawLabel('m/z', 'Relative Intensity', 'Mass Spectrum');
+                    break;
+            }
+            
+            ctx.shadowBlur = 0;
+        }
+
+        function drawNMR(width, height, padding) {
+            const peaks = [
+                {x: 0.15, height: 0.3, width: 8},
+                {x: 0.35, height: 0.85, width: 10},
+                {x: 0.55, height: 0.45, width: 7},
+                {x: 0.75, height: 0.65, width: 9}
+            ];
+
+            peaks.forEach(peak => {
+                const x = padding + (width - 2 * padding) * peak.x;
+                const baseY = height - padding;
+                const peakY = baseY - (height - 2 * padding) * peak.height;
+
+                // Draw Lorentzian peak shape
+                ctx.beginPath();
+                ctx.moveTo(x - 20, baseY);
+                
+                for (let i = -20; i <= 20; i += 1) {
+                    const currentX = x + i;
+                    const lorentzian = peak.height / (1 + Math.pow(i / peak.width, 2));
+                    const currentY = baseY - (height - 2 * padding) * lorentzian;
+                    ctx.lineTo(currentX, currentY);
+                }
+                
+                ctx.lineTo(x + 20, baseY);
+                ctx.stroke();
+
+                // Fill under peak
+                ctx.fillStyle = 'rgba(139, 92, 246, 0.1)';
+                ctx.fill();
+            });
+        }
+
+        function drawIR(width, height, padding) {
+            ctx.beginPath();
+            ctx.moveTo(padding, padding + 20);
+
+            const absorptionBands = [
+                {center: 25, width: 8, depth: 100},
+                {center: 50, width: 6, depth: 140},
+                {center: 72, width: 4, depth: 80}
+            ];
+
+            for (let i = 0; i <= 100; i++) {
+                const x = padding + (width - 2 * padding) * i / 100;
+                let y = padding + 20;
+
+                // Add absorption bands
+                absorptionBands.forEach(band => {
+                    const distance = Math.abs(i - band.center);
+                    if (distance < band.width * 3) {
+                        const absorption = band.depth * Math.exp(-Math.pow(distance / band.width, 2));
+                        y += absorption;
+                    }
+                });
+
+                // Add baseline noise
+                y += Math.sin(i * 0.5) * 3 + Math.random() * 4;
+
+                ctx.lineTo(x, Math.min(y, height - padding - 10));
+            }
+            ctx.stroke();
+
+            // Fill under curve
+            ctx.lineTo(width - padding, height - padding);
+            ctx.lineTo(padding, height - padding);
+            ctx.closePath();
+            ctx.fillStyle = 'rgba(139, 92, 246, 0.05)';
+            ctx.fill();
+        }
+
+        function drawUV(width, height, padding) {
+            ctx.beginPath();
+            ctx.moveTo(padding, height - padding);
+
+            const peaks = [
+                {center: 0.5, height: 0.85, width: 0.15}
+            ];
+
+            for (let i = 0; i <= 100; i++) {
+                const x = padding + (width - 2 * padding) * i / 100;
+                const normalized = i / 100;
+                
+                let totalPeak = 0;
+                peaks.forEach(peak => {
+                    totalPeak += peak.height * Math.exp(-Math.pow((normalized - peak.center) / peak.width, 2));
+                });
+
+                const y = height - padding - (height - 2 * padding) * totalPeak;
+                ctx.lineTo(x, y);
+            }
+            ctx.stroke();
+
+            // Fill under curve
+            ctx.lineTo(width - padding, height - padding);
+            ctx.lineTo(padding, height - padding);
+            ctx.closePath();
+            ctx.fillStyle = 'rgba(139, 92, 246, 0.15)';
+            ctx.fill();
+        }
+
+        function drawMS(width, height, padding) {
+            const peaks = [
+                {x: 0.18, height: 0.35},
+                {x: 0.32, height: 0.22},
+                {x: 0.48, height: 0.58},
+                {x: 0.62, height: 0.40},
+                {x: 0.78, height: 1.0}
+            ];
+
+            peaks.forEach(peak => {
+                const x = padding + (width - 2 * padding) * peak.x;
+                const baseY = height - padding;
+                const peakY = baseY - (height - 2 * padding) * peak.height;
+
+                // Draw stick
+                ctx.beginPath();
+                ctx.moveTo(x, baseY);
+                ctx.lineTo(x, peakY);
+                ctx.stroke();
+
+                // Draw circle at top
+                ctx.beginPath();
+                ctx.arc(x, peakY, 4, 0, Math.PI * 2);
+                ctx.fillStyle = '#8b5cf6';
+                ctx.fill();
+
+                // Add m/z label for tallest peak
+                if (peak.height === 1.0) {
+                    ctx.fillStyle = '#111827';
+                    ctx.font = '11px sans-serif';
+                    ctx.textAlign = 'center';
+                    ctx.fillText('100%', x, peakY - 15);
+                }
+            });
+        }
+
+        function drawLabel(xLabel, yLabel, title) {
+            ctx.fillStyle = '#374151';
+            ctx.font = '13px -apple-system, BlinkMacSystemFont, sans-serif';
+            ctx.textAlign = 'center';
+            
+            // X-axis label
+            ctx.fillText(xLabel, canvas.width / 2, canvas.height - 15);
+            
+            // Y-axis label
+            ctx.save();
+            ctx.translate(18, canvas.height / 2);
+            ctx.rotate(-Math.PI / 2);
+            ctx.fillText(yLabel, 0, 0);
+            ctx.restore();
+            
+            // Title
+            ctx.font = 'bold 16px -apple-system, BlinkMacSystemFont, sans-serif';
+            ctx.fillStyle = '#111827';
+            ctx.fillText(title, canvas.width / 2, 30);
+        }
+
+        // Initialize with NMR spectrum
+        setTimeout(() => {
+            showSpectrum('nmr');
+        }, 100);
+
+        // Parallax effect for hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero');
+            if (parallax) {
+                parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Add smooth reveal animations
+        const revealElements = document.querySelectorAll('.stat-card, .topic-item, .breakthrough-card');
+        
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0) scale(1)';
+                    }, index * 100);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // Add counter animation for stats
+        function animateCounter(element, target, duration = 2000) {
+            const start = 0;
+            const startTime = performance.now();
+            
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                const current = Math.floor(progress * target);
+                element.textContent = current;
+                
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+            
+            requestAnimationFrame(update);
+        }
+
+        // Observe stat cards for counter animation
+        const statObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                    entry.target.classList.add('counted');
+                    const number = entry.target.querySelector('.stat-number');
+                    if (number && number.textContent.match(/^\d+$/)) {
+                        const target = parseInt(number.textContent);
+                        animateCounter(number, target);
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat-card').forEach(card => {
+            statObserver.observe(card);
+        });
+
+        // Add typing effect to hero subtitle (optional enhancement)
+        const heroSubtitle = document.querySelector('.hero-subtitle');
+        if (heroSubtitle) {
+            const originalText = heroSubtitle.textContent;
+            heroSubtitle.textContent = '';
+            let charIndex = 0;
+            
+            setTimeout(() => {
+                const typeInterval = setInterval(() => {
+                    if (charIndex < originalText.length) {
+                        heroSubtitle.textContent += originalText[charIndex];
+                        charIndex++;
+                    } else {
+                        clearInterval(typeInterval);
+                    }
+                }, 30);
+            }, 1000);
+        }
+
+        // Add ripple effect to CTA buttons
+        document.querySelectorAll('.cta-button, .viz-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple');
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        // Add keyboard navigation for accessibility
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.topic-item.expanded').forEach(item => {
+                    item.classList.remove('expanded');
+                });
+            }
+        });
+
+        // Performance optimization: Lazy load images if any are added
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                            imageObserver.unobserve(img);
+                        }
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Add smooth color transitions on scroll for sections
+        const sections = document.querySelectorAll('.section, .intro-section, .breakthrough-section');
+        sections.forEach(section => {
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.transition = 'background-color 0.6s ease';
+                    }
+                });
+            }, { threshold: 0.2 });
+            
+            sectionObserver.observe(section);
+        });
+
+        console.log('🧪 Analytical Chemistry page loaded successfully!');
+        console.log('✨ All interactive features activated');
+    </script>
+</body>
+</html>

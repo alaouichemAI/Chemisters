@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inorganic Chemistry — Chemisters</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        nav {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            padding: 15px 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .breadcrumb {
+            font-size: 0.85em;
+            color: #6b7280;
+            margin-top: 8px;
+        }
+
+        .breadcrumb a {
+            color: #6b7280;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            color: #f59e0b;
+        }
+
+        .breadcrumb span {
+            margin: 0 8px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #2563eb;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #4b5563;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #f59e0b;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #f59e0b;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: #ffffff;
+            padding: 120px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .hero-icon {
+            animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+        }
+
+        .hero-icon:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .hero-icon:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-title {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1.5px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-subtitle {
+            font-size: 1.4em;
+            opacity: 0;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-weight: 400;
+            line-height: 1.6;
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+        }
+
+        .hero-cta {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.6s forwards;
+        }
+
+        .hero-cta button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-cta button:hover {
+            background: white;
+            color: #f59e0b;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .quick-nav {
+            background: #f9fafb;
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 81px;
+            z-index: 90;
+        }
+
+        .quick-nav-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .quick-nav-list a {
+            padding: 8px 18px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #4b5563;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .quick-nav-list a:hover {
+            background: #f59e0b;
+            color: #ffffff;
+            border-color: #f59e0b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+        }
+
+        .intro-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+        }
+
+        .intro-text {
+            font-size: 1.2em;
+            color: #374151;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 35px;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .stat-card:hover {
+            border-color: #f59e0b;
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.2);
+        }
+
+        .stat-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .stat-number {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #f59e0b;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 0.95em;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #111827;
+            letter-spacing: -1px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #f59e0b, #d97706);
+            border-radius: 2px;
+        }
+
+        .section-intro {
+            font-size: 1.15em;
+            color: #6b7280;
+            max-width: 800px;
+            margin-bottom: 50px;
+            line-height: 1.7;
+        }
+
+        .topics-list {
+            display: grid;
+            gap: 30px;
+            max-width: 1000px;
+        }
+
+        .topic-item {
+            background: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-left: 5px solid #f59e0b;
+            border-radius: 12px;
+            padding: 35px 40px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .topic-item:hover {
+            border-left-color: #d97706;
+            box-shadow: 0 8px 30px rgba(245, 158, 11, 0.2);
+            transform: translateX(10px) translateY(-4px);
+        }
+
+        .topic-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 15px;
+        }
+
+        .topic-icon {
+            font-size: 2.5em;
+            margin-right: 20px;
+            opacity: 0.9;
+        }
+
+        .topic-title {
+            font-size: 1.35em;
+            font-weight: 700;
+            color: #111827;
+            flex: 1;
+            line-height: 1.4;
+        }
+
+        .expand-icon {
+            font-size: 1.4em;
+            color: #f59e0b;
+            transition: transform 0.4s ease;
+            margin-left: 15px;
+        }
+
+        .topic-item.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .topic-description {
+            font-size: 1.05em;
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .topic-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+
+        .topic-item.expanded .topic-details {
+            max-height: 600px;
+        }
+
+        .topic-examples {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 20px;
+            border-left: 3px solid #f59e0b;
+        }
+
+        .topic-examples h4 {
+            font-size: 1.05em;
+            color: #f59e0b;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .topic-examples ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .topic-examples li {
+            padding: 10px 0;
+            color: #4b5563;
+            font-size: 0.95em;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .topic-examples li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #f59e0b;
+            font-weight: bold;
+        }
+
+        .visualization-section {
+            padding: 100px 0;
+            background: #ffffff;
+        }
+
+        .viz-container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+            border-radius: 20px;
+            padding: 50px;
+            border: 2px solid #e5e7eb;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .crystal-display {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 30px;
+            position: relative;
+            height: 400px;
+            border: 2px solid #e5e7eb;
+        }
+
+        .crystal-canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        .viz-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .viz-button {
+            padding: 14px 24px;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+        }
+
+        .viz-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+        }
+
+        .viz-button.active {
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-title {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-text {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: #ffffff;
+            color: #f59e0b;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: all 0.4s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.6em;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s ease;
+            z-index: 1000;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-8px) scale(1.1);
+        }
+
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            padding: 80px 0 40px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 50px;
+        }
+
+        .footer-section h4 {
+            color: #ffffff;
+            font-size: 1.2em;
+            margin-bottom: 25px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 14px;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid #374151;
+            color: #6b7280;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5em; }
+            .nav-links { display: none; }
+            .footer-content { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav id="mainNav">
+        <div class="container">
+            <div class="nav-content">
+                <div>
+                    <a href="index.html" class="logo">Chemisters</a>
+                    <div class="breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span>›</span>
+                        <span>Inorganic Chemistry</span>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#coverage">All Topics</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-icons">
+                    <span class="hero-icon">⚙️</span>
+                    <span class="hero-icon">💎</span>
+                    <span class="hero-icon">🔋</span>
+                </div>
+                <h1 class="hero-title">Inorganic Chemistry</h1>
+                <p class="hero-subtitle">The Architecture of the Elements — Building Tomorrow's Materials</p>
+                <div class="hero-cta">
+                    <button onclick="document.querySelector('#topics').scrollIntoView({behavior: 'smooth'})">
+                        Explore Topics ↓
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="quick-nav">
+        <div class="container">
+            <ul class="quick-nav-list">
+                <li><a href="#topics">📚 Topics</a></li>
+                <li><a href="#visualization">🎨 Interactive Demo</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="intro-section">
+        <div class="container">
+            <p class="intro-text">Inorganic chemistry underpins the technologies that define modern civilization, from catalysts that enable sustainable energy to advanced materials powering electronics and infrastructure.</p>
+            <p class="intro-text">At Chemisters, we explore coordination complexes, nanomaterials, and hybrid structures that drive innovation across energy storage, catalysis, and materials science.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">💎</div>
+                    <div class="stat-number">118</div>
+                    <div class="stat-label">Elements to Master</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-number">90%</div>
+                    <div class="stat-label">Catalysis Efficiency</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔋</div>
+                    <div class="stat-number">2025</div>
+                    <div class="stat-label">Battery Innovations</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🌐</div>
+                    <div class="stat-number">MOFs</div>
+                    <div class="stat-label">Next-Gen Materials</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section" id="topics">
+        <div class="container">
+            <h2 class="section-header">Topics Covered</h2>
+            <p class="section-intro">Comprehensive exploration of inorganic chemistry from coordination complexes to cutting-edge nanomaterials.</p>
+            
+            <div class="topics-list">
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">🔗</span>
+                        <h3 class="topic-title">Coordination Chemistry and Ligand Design</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Exploring metal-ligand interactions, chelation strategies, crystal field theory, and the design of coordination compounds for catalysis, sensing, and therapeutic applications.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>Platinum-based anticancer drugs like cisplatin and carboplatin</li>
+                                <li>Hemoglobin and chlorophyll: nature's coordination chemistry</li>
+                                <li>Transition metal catalysts for cross-coupling reactions</li>
+                                <li>Luminescent complexes for OLED displays and bioimaging</li>
+                                <li>Metal sensors for environmental pollutant detection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">⚡</span>
+                        <h3 class="topic-title">Catalysis for Energy and Environmental Applications</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Investigation of homogeneous and heterogeneous catalysts for sustainable energy production, CO₂ reduction, water splitting, and pollution remediation.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>Hydrogen production via photocatalytic water splitting</li>
+                                <li>CO₂ electroreduction to valuable chemicals and fuels</li>
+                                <li>Automotive catalytic converters for emission control</li>
+                                <li>Ammonia synthesis using iron-based catalysts (Haber-Bosch)</li>
+                                <li>Fuel cell catalysts for clean energy conversion</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">🖥️</span>
+                        <h3 class="topic-title">Material Design and Electronic Structures</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Analysis of electronic properties, band structures, magnetic behavior, and quantum mechanical principles governing inorganic materials for electronics and photonics.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>Semiconductor materials for transistors and integrated circuits</li>
+                                <li>Magnetic materials for data storage and memory devices</li>
+                                <li>Transparent conductive oxides for touchscreens and displays</li>
+                                <li>Thermoelectric materials for waste heat recovery</li>
+                                <li>Superconducting materials for quantum computing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">🧪</span>
+                        <h3 class="topic-title">Advanced Inorganic Synthesis Methods</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Modern synthetic approaches including sol-gel processes, chemical vapor deposition, hydrothermal synthesis, and solid-state reactions for complex material fabrication.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>Thin film deposition for microelectronics fabrication</li>
+                                <li>Nanoparticle synthesis for drug delivery systems</li>
+                                <li>Crystal growth for laser and optical applications</li>
+                                <li>Ceramic material production for high-temperature applications</li>
+                                <li>Zeolite synthesis for catalysis and separations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">🌟</span>
+                        <h3 class="topic-title">Emerging Technologies in Metallic and Hybrid Materials</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Coverage of metal-organic frameworks, perovskites, quantum dots, 2D materials, and other next-generation materials for energy storage and advanced applications.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>MOFs for hydrogen storage and carbon capture</li>
+                                <li>Perovskite solar cells with record-breaking efficiencies</li>
+                                <li>Quantum dots for high-resolution displays and bioimaging</li>
+                                <li>Graphene and 2D materials for flexible electronics</li>
+                                <li>Lithium-ion battery electrode materials for EVs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="visualization-section" id="visualization">
+        <div class="container">
+            <h2 class="section-header">Interactive Crystal Structure Viewer</h2>
+            <p class="section-intro">Explore different crystal structures and materials. Click buttons to visualize various inorganic lattices.</p>
+            
+            <div class="viz-container">
+                <div class="crystal-display">
+                    <canvas id="crystalCanvas" class="crystal-canvas"></canvas>
+                </div>
+                <div class="viz-controls">
+                    <button class="viz-button active" data-structure="fcc">💎 FCC Lattice</button>
+                    <button class="viz-button" data-structure="octahedral">🔷 Octahedral</button>
+                    <button class="viz-button" data-structure="perovskite">🧊 Perovskite</button>
+                    <button class="viz-button" data-structure="mof">🌐 MOF Structure</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Explore Inorganic Chemistry Innovations</h2>
+            <p class="cta-text">Stay connected with breakthroughs in coordination chemistry, catalysis, nanomaterials, and the advanced materials powering our future.</p>
+            <a href="index.html#contact" class="cta-button">Connect With Us →</a>
+        </div>
+    </div>
+
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Chemisters</h4>
+                    <p>The digital ecosystem of chemistry — where academic rigor meets modern communication.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#coverage">All Topics</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contact@chemisters.com">Email</a></li>
+                        <li><a href="https://www.chemisters.com">Website</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Chemisters. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Back to top
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Expandable topics
+        document.querySelectorAll('.topic-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') return;
+                this.classList.toggle('expanded');
+            });
+        });
+
+        // Canvas visualization
+        const canvas = document.getElementById('crystalCanvas');
+        const ctx = canvas.getContext('2d');
+        let currentStructure = 'fcc';
+        let angle = 0;
+        let animationId;
+
+        function resizeCanvas() {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        // 3D rotation helpers
+        function rotate3D(x, y, z, ax, ay) {
+            let x1 = x * Math.cos(ay) - z * Math.sin(ay);
+            let z1 = x * Math.sin(ay) + z * Math.cos(ay);
+            let y1 = y * Math.cos(ax) - z1 * Math.sin(ax);
+            let z2 = y * Math.sin(ax) + z1 * Math.cos(ax);
+            return {x: x1, y: y1, z: z2};
+        }
+
+        function project(x, y, z, cx, cy) {
+            const scale = 200 / (200 + z);
+            return {
+                x: cx + x * scale,
+                y: cy + y * scale,
+                s: scale
+            };
+        }
+
+        function drawAtom(x, y, r, color) {
+            ctx.beginPath();
+            ctx.arc(x, y, r, 0, Math.PI * 2);
+            ctx.fillStyle = color;
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = color;
+            ctx.fill();
+            ctx.shadowBlur = 0;
+            ctx.strokeStyle = 'rgba(255,255,255,0.3)';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+        }
+
+        function drawBond(x1, y1, x2, y2) {
+            ctx.beginPath();
+            ctx.moveTo(x1, y1);
+            ctx.lineTo(x2, y2);
+            ctx.strokeStyle = 'rgba(107,114,128,0.4)';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+        }
+
+        function drawFCC() {
+            const s = 70;
+            const atoms = [
+                {x:-s,y:-s,z:-s,c:'#f59e0b'}, {x:s,y:-s,z:-s,c:'#f59e0b'},
+                {x:-s,y:s,z:-s,c:'#f59e0b'}, {x:s,y:s,z:-s,c:'#f59e0b'},
+                {x:-s,y:-s,z:s,c:'#f59e0b'}, {x:s,y:-s,z:s,c:'#f59e0b'},
+                {x:-s,y:s,z:s,c:'#f59e0b'}, {x:s,y:s,z:s,c:'#f59e0b'},
+                {x:0,y:0,z:-s,c:'#d97706'}, {x:0,y:0,z:s,c:'#d97706'},
+                {x:0,y:-s,z:0,c:'#d97706'}, {x:0,y:s,z:0,c:'#d97706'},
+                {x:-s,y:0,z:0,c:'#d97706'}, {x:s,y:0,z:0,c:'#d97706'}
+            ];
+
+            const cx = canvas.width/2, cy = canvas.height/2;
+            const proj = atoms.map(a => {
+                const r = rotate3D(a.x, a.y, a.z, angle*0.5, angle);
+                const p = project(r.x, r.y, r.z, cx, cy);
+                return {...p, c:a.c, z:r.z};
+            }).sort((a,b) => a.z - b.z);
+
+            const edges = [[0,1],[2,3],[4,5],[6,7],[0,2],[1,3],[4,6],[5,7],[0,4],[1,5],[2,6],[3,7]];
+            edges.forEach(([i,j]) => {
+                const a = proj[i], b = proj[j];
+                drawBond(a.x, a.y, b.x, b.y);
+            });
+
+            proj.forEach(p => drawAtom(p.x, p.y, 7*p.s, p.c));
+            
+            ctx.fillStyle = '#111827';
+            ctx.font = 'bold 16px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Face-Centered Cubic (FCC)', cx, 30);
+        }
+
+        function drawOctahedral() {
+            const d = 80;
+            const atoms = [
+                {x:0,y:0,z:0,c:'#d97706',r:12},
+                {x:d,y:0,z:0,c:'#10b981',r:9}, {x:-d,y:0,z:0,c:'#10b981',r:9},
+                {x:0,y:d,z:0,c:'#10b981',r:9}, {x:0,y:-d,z:0,c:'#10b981',r:9},
+                {x:0,y:0,z:d,c:'#10b981',r:9}, {x:0,y:0,z:-d,c:'#10b981',r:9}
+            ];
+
+            const cx = canvas.width/2, cy = canvas.height/2;
+            const proj = atoms.map(a => {
+                const r = rotate3D(a.x, a.y, a.z, angle*0.7, angle);
+                const p = project(r.x, r.y, r.z, cx, cy);
+                return {...p, c:a.c, r:a.r, z:r.z};
+            }).sort((a,b) => a.z - b.z);
+
+            for(let i=1; i<proj.length; i++) {
+                drawBond(proj[0].x, proj[0].y, proj[i].x, proj[i].y);
+            }
+
+            proj.forEach(p => drawAtom(p.x, p.y, p.r*p.s, p.c));
+            
+            ctx.fillStyle = '#111827';
+            ctx.font = 'bold 16px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Octahedral Complex', cx, 30);
+        }
+
+        function drawPerovskite() {
+            const s = 65;
+            const atoms = [
+                {x:-s,y:-s,z:-s,c:'#8b5cf6'}, {x:s,y:-s,z:-s,c:'#8b5cf6'},
+                {x:-s,y:s,z:-s,c:'#8b5cf6'}, {x:s,y:s,z:-s,c:'#8b5cf6'},
+                {x:-s,y:-s,z:s,c:'#8b5cf6'}, {x:s,y:-s,z:s,c:'#8b5cf6'},
+                {x:-s,y:s,z:s,c:'#8b5cf6'}, {x:s,y:s,z:s,c:'#8b5cf6'},
+                {x:0,y:0,z:0,c:'#f59e0b',r:10},
+                {x:s,y:0,z:0,c:'#ef4444',r:8}, {x:-s,y:0,z:0,c:'#ef4444',r:8},
+                {x:0,y:s,z:0,c:'#ef4444',r:8}, {x:0,y:-s,z:0,c:'#ef4444',r:8},
+                {x:0,y:0,z:s,c:'#ef4444',r:8}, {x:0,y:0,z:-s,c:'#ef4444',r:8}
+            ];
+
+            const cx = canvas.width/2, cy = canvas.height/2;
+            const proj = atoms.map(a => {
+                const r = rotate3D(a.x, a.y, a.z, angle*0.6, angle);
+                const p = project(r.x, r.y, r.z, cx, cy);
+                return {...p, c:a.c, r:a.r||7, z:r.z};
+            }).sort((a,b) => a.z - b.z);
+
+            const edges = [[0,1],[2,3],[4,5],[6,7],[0,2],[1,3],[4,6],[5,7],[0,4],[1,5],[2,6],[3,7]];
+            edges.forEach(([i,j]) => {
+                drawBond(proj[i].x, proj[i].y, proj[j].x, proj[j].y);
+            });
+
+            for(let i=9; i<15; i++) {
+                drawBond(proj[8].x, proj[8].y, proj[i].x, proj[i].y);
+            }
+
+            proj.forEach(p => drawAtom(p.x, p.y, p.r*p.s, p.c));
+            
+            ctx.fillStyle = '#111827';
+            ctx.font = 'bold 16px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Perovskite Structure (ABX₃)', cx, 30);
+        }
+
+        function drawMOF() {
+            const d = 90;
+            const nodes = [
+                {x:d,y:0,z:0,c:'#f59e0b'}, {x:-d,y:0,z:0,c:'#f59e0b'},
+                {x:0,y:d,z:0,c:'#f59e0b'}, {x:0,y:-d,z:0,c:'#f59e0b'},
+                {x:0,y:0,z:d,c:'#f59e0b'}, {x:0,y:0,z:-d,c:'#f59e0b'}
+            ];
+            const linkers = [
+                {x:d/2,y:d/2,z:0,c:'#6366f1',r:5}, {x:d/2,y:-d/2,z:0,c:'#6366f1',r:5},
+                {x:-d/2,y:d/2,z:0,c:'#6366f1',r:5}, {x:-d/2,y:-d/2,z:0,c:'#6366f1',r:5}
+            ];
+
+            const cx = canvas.width/2, cy = canvas.height/2;
+            const all = [...nodes, ...linkers];
+            const proj = all.map(a => {
+                const r = rotate3D(a.x, a.y, a.z, angle*0.5, angle);
+                const p = project(r.x, r.y, r.z, cx, cy);
+                return {...p, c:a.c, r:a.r||9, z:r.z};
+            }).sort((a,b) => a.z - b.z);
+
+            const conn = [[0,2],[0,3],[0,4],[0,5],[1,2],[1,3],[1,4],[1,5],[2,4],[2,5],[3,4],[3,5]];
+            conn.forEach(([i,j]) => {
+                drawBond(proj[i].x, proj[i].y, proj[j].x, proj[j].y);
+            });
+
+            proj.forEach(p => drawAtom(p.x, p.y, p.r*p.s, p.c));
+            
+            ctx.fillStyle = '#111827';
+            ctx.font = 'bold 16px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Metal-Organic Framework', cx, 30);
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            angle += 0.01;
+
+            switch(currentStructure) {
+                case 'fcc': drawFCC(); break;
+                case 'octahedral': drawOctahedral(); break;
+                case 'perovskite': drawPerovskite(); break;
+                case 'mof': drawMOF(); break;
+            }
+
+            animationId = requestAnimationFrame(animate);
+        }
+
+        // Button controls
+        document.querySelectorAll('.viz-button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.viz-button').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentStructure = this.dataset.structure;
+            });
+        });
+
+        animate();
+    </script>
+</body>
+</html>

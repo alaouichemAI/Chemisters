@@ -1,0 +1,2178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computational Chemistry — Chemisters</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        nav {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            padding: 15px 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .breadcrumb {
+            font-size: 0.85em;
+            color: #6b7280;
+            margin-top: 8px;
+        }
+
+        .breadcrumb a {
+            color: #6b7280;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            color: #3b82f6;
+        }
+
+        .breadcrumb span {
+            margin: 0 8px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #2563eb;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #4b5563;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #3b82f6;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #3b82f6;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: #ffffff;
+            padding: 120px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: float-particle 15s infinite;
+        }
+
+        @keyframes float-particle {
+            0% {
+                transform: translateY(100vh) translateX(0) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) translateX(100px) scale(1);
+                opacity: 0;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .hero-icon {
+            animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+        }
+
+        .hero-icon:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .hero-icon:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-title {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1.5px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-subtitle {
+            font-size: 1.4em;
+            opacity: 0;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-weight: 400;
+            line-height: 1.6;
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+        }
+
+        .hero-cta {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.6s forwards;
+        }
+
+        .hero-cta button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-cta button:hover {
+            background: white;
+            color: #3b82f6;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .quick-nav {
+            background: #f9fafb;
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 81px;
+            z-index: 90;
+            backdrop-filter: blur(10px);
+            background: rgba(249, 250, 251, 0.95);
+            transition: top 0.3s ease;
+        }
+
+        nav.scrolled ~ .hero ~ .quick-nav {
+            top: 71px;
+        }
+
+        .quick-nav-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .quick-nav-list a {
+            padding: 8px 18px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #4b5563;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quick-nav-list a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .quick-nav-list a:hover::before {
+            left: 100%;
+        }
+
+        .quick-nav-list a:hover {
+            background: #3b82f6;
+            color: #ffffff;
+            border-color: #3b82f6;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .intro-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+        }
+
+        .intro-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .intro-text {
+            font-size: 1.2em;
+            color: #374151;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .intro-text.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 35px;
+            text-align: center;
+            transition: all 0.4s ease;
+            opacity: 0;
+            transform: translateY(20px) scale(0.95);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .stat-card:hover::before {
+            opacity: 1;
+        }
+
+        .stat-card.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .stat-card:hover {
+            border-color: #3b82f6;
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.2);
+        }
+
+        .stat-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            display: inline-block;
+            transition: transform 0.4s ease;
+        }
+
+        .stat-card:hover .stat-icon {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .stat-number {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #3b82f6;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .stat-label {
+            font-size: 0.95em;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #111827;
+            letter-spacing: -1px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #2563eb);
+            border-radius: 2px;
+        }
+
+        .section-intro {
+            font-size: 1.15em;
+            color: #6b7280;
+            max-width: 800px;
+            margin-bottom: 50px;
+            line-height: 1.7;
+        }
+
+        .topics-list {
+            display: grid;
+            gap: 30px;
+            max-width: 1000px;
+        }
+
+        .topic-item {
+            background: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-left: 5px solid #3b82f6;
+            border-radius: 12px;
+            padding: 35px 40px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateX(-30px);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .topic-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, #3b82f6, #2563eb);
+            transition: width 0.4s ease;
+        }
+
+        .topic-item:hover::before {
+            width: 100%;
+            opacity: 0.05;
+        }
+
+        .topic-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .topic-item:hover {
+            border-left-color: #2563eb;
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.2);
+            transform: translateX(10px) translateY(-4px);
+        }
+
+        .topic-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .topic-icon {
+            font-size: 2.5em;
+            margin-right: 20px;
+            opacity: 0.9;
+            transition: transform 0.3s ease;
+        }
+
+        .topic-item:hover .topic-icon {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .topic-title {
+            font-size: 1.35em;
+            font-weight: 700;
+            color: #111827;
+            flex: 1;
+            line-height: 1.4;
+        }
+
+        .expand-icon {
+            font-size: 1.4em;
+            color: #3b82f6;
+            transition: transform 0.4s ease;
+            margin-left: 15px;
+        }
+
+        .topic-item.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .topic-description {
+            font-size: 1.05em;
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .topic-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .topic-item.expanded .topic-details {
+            max-height: 600px;
+        }
+
+        .topic-examples {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 20px;
+            border-left: 3px solid #3b82f6;
+        }
+
+        .topic-examples h4 {
+            font-size: 1.05em;
+            color: #3b82f6;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .topic-examples h4::before {
+            content: '💡';
+            font-size: 1.2em;
+        }
+
+        .topic-examples ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .topic-examples li {
+            padding: 10px 0;
+            color: #4b5563;
+            font-size: 0.95em;
+            padding-left: 25px;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+
+        .topic-examples li:hover {
+            color: #111827;
+            padding-left: 30px;
+        }
+
+        .topic-examples li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+        }
+
+        .topic-examples li:hover::before {
+            transform: translateX(5px);
+        }
+
+        .comparison-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+        }
+
+        .comparison-table {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .comparison-table.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            border-bottom: 1px solid #e5e7eb;
+            transition: background 0.3s ease;
+        }
+
+        .comparison-row:hover {
+            background: #f9fafb;
+        }
+
+        .comparison-row.header {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-row.header:hover {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        }
+
+        .comparison-cell {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 0.95em;
+        }
+
+        .comparison-cell:first-child {
+            justify-content: flex-start;
+            text-align: left;
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .comparison-row.header .comparison-cell {
+            color: white;
+        }
+
+        .breakthrough-section {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .breakthrough-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .breakthrough-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .breakthrough-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateY(30px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .breakthrough-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #2563eb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .breakthrough-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .breakthrough-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .breakthrough-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px rgba(59, 130, 246, 0.25);
+        }
+
+        .breakthrough-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(59, 130, 246, 0.3);
+        }
+
+        .breakthrough-title {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .breakthrough-description {
+            color: #4b5563;
+            line-height: 1.8;
+            font-size: 0.98em;
+        }
+
+        .breakthrough-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            display: block;
+            opacity: 0.8;
+        }
+
+        .visualization-section {
+            padding: 100px 0;
+            background: #ffffff;
+        }
+
+        .viz-container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+            border-radius: 20px;
+            padding: 50px;
+            border: 2px solid #e5e7eb;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .molecule-display {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 30px;
+            position: relative;
+            height: 350px;
+            border: 2px solid #e5e7eb;
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.03);
+        }
+
+        .molecule-canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        .viz-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .viz-button {
+            padding: 14px 24px;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .viz-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .viz-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .viz-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .viz-button:active {
+            transform: translateY(-1px);
+        }
+
+        .viz-button.active {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            box-shadow: 0 2px 10px rgba(59, 130, 246, 0.5);
+        }
+
+        .timeline-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+        }
+
+        .timeline {
+            max-width: 900px;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #3b82f6, #2563eb);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 50px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.2);
+        }
+
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 0 5px #fff, 0 0 0 8px #3b82f6;
+            z-index: 1;
+        }
+
+        .timeline-year {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #3b82f6;
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .timeline-description {
+            color: #4b5563;
+            line-height: 1.7;
+            font-size: 0.95em;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-title {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-text {
+            font-size: 1.2em;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: #ffffff;
+            color: #3b82f6;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            background: #f9fafb;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.6em;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.5);
+        }
+
+        .back-to-top::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.6s ease;
+        }
+
+        .back-to-top:hover::after {
+            transform: translate(-50%, -50%) scale(1.5);
+            opacity: 0;
+        }
+
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            padding: 80px 0 40px;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #374151, transparent);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 50px;
+        }
+
+        .footer-section h4 {
+            color: #ffffff;
+            font-size: 1.2em;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .footer-section p {
+            color: #9ca3af;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 14px;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid #374151;
+            color: #6b7280;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5em;
+            }
+
+            .hero-subtitle {
+                font-size: 1.15em;
+            }
+
+            .section-header {
+                font-size: 2em;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .topic-item {
+                padding: 25px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .breakthrough-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-nav-list {
+                gap: 10px;
+            }
+
+            .quick-nav-list a {
+                padding: 6px 14px;
+                font-size: 0.85em;
+            }
+
+            .comparison-row {
+                grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            }
+
+            .comparison-cell {
+                padding: 15px 10px;
+                font-size: 0.85em;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                flex-direction: row !important;
+            }
+
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+
+            .viz-container {
+                padding: 30px 20px;
+            }
+
+            .cta-title {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="mainNav">
+        <div class="container">
+            <div class="nav-content">
+                <div>
+                    <a href="index.html" class="logo">Chemisters</a>
+                    <div class="breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span>›</span>
+                        <span>Computational Chemistry</span>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#coverage">All Topics</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="particles" id="particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-icons">
+                    <span class="hero-icon">💻</span>
+                    <span class="hero-icon">⚛️</span>
+                    <span class="hero-icon">🧬</span>
+                </div>
+                <h1 class="hero-title">Computational Chemistry</h1>
+                <p class="hero-subtitle">Simulating Reality Before It Happens — From Atoms to Algorithms</p>
+                <div class="hero-cta">
+                    <button onclick="document.querySelector('#topics').scrollIntoView({behavior: 'smooth', block: 'start'})">
+                        Explore Topics ↓
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="quick-nav">
+        <div class="container">
+            <ul class="quick-nav-list">
+                <li><a href="#topics">📚 Topics</a></li>
+                <li><a href="#comparison">⚖️ Comparison</a></li>
+                <li><a href="#timeline">📅 Timeline</a></li>
+                <li><a href="#breakthroughs">🚀 Latest Advances</a></li>
+                <li><a href="#visualization">🎨 Interactive Demo</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="intro-section">
+        <div class="container">
+            <div class="intro-content">
+                <p class="intro-text">Computational chemistry transforms theoretical predictions into actionable insights, enabling the design of molecules, materials, and reactions before a single experiment is performed.</p>
+                <p class="intro-text">At Chemisters, we explore how quantum mechanics, molecular dynamics, and machine learning converge to accelerate discovery. From drug design to catalyst optimization, computation has become an indispensable partner to the laboratory bench.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-number">10⁶×</div>
+                        <div class="stat-label">Faster Than Experiments</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-number">&lt;1 kcal</div>
+                        <div class="stat-label">Energy Accuracy</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🧠</div>
+                        <div class="stat-number">AI</div>
+                        <div class="stat-label">Enhanced Predictions</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🌐</div>
+                        <div class="stat-number">100k+</div>
+                        <div class="stat-label">Atoms Simulated</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section" id="topics">
+        <div class="container">
+            <h2 class="section-header">Topics Covered</h2>
+            <p class="section-intro">Comprehensive exploration of computational methods revolutionizing chemical research and molecular design.</p>
+            
+            <div class="topics-list">
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">⚛️</span>
+                        <h3 class="topic-title">Quantum Chemistry and Molecular Orbital Theory</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Fundamental quantum mechanical principles applied to molecular systems, exploring electronic structure, wavefunction analysis, and the theoretical foundations that enable accurate prediction of molecular behavior.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>Prediction of molecular excited states for photochemistry</li>
+                                <li>Calculation of ionization energies and electron affinities</li>
+                                <li>Understanding chemical bonding in transition metal complexes</li>
+                                <li>Design of organic semiconductors for solar cells</li>
+                                <li>Characterization of reaction intermediates and radicals</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">🔬</span>
+                        <h3 class="topic-title">DFT, MD, and Ab Initio Simulations</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Density functional theory, molecular dynamics, and first-principles calculations providing accurate predictions of molecular properties, reaction mechanisms, thermodynamics, and material behavior across diverse chemical systems.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>Protein folding dynamics and drug binding simulations</li>
+                                <li>Prediction of reaction barriers and selectivity</li>
+                                <li>Materials property calculations for battery electrodes</li>
+                                <li>Spectroscopic property prediction (NMR, IR, UV-Vis)</li>
+                                <li>Crystal structure prediction and polymorphism studies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">🤖</span>
+                        <h3 class="topic-title">Machine Learning for Chemical Prediction</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Integration of deep learning, neural networks, and AI algorithms to predict reaction outcomes, molecular properties, and synthesis routes, dramatically accelerating the pace of chemical discovery and optimization.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>Retrosynthesis planning for complex molecule synthesis</li>
+                                <li>Property prediction for virtual screening campaigns</li>
+                                <li>Reaction condition optimization and yield prediction</li>
+                                <li>Molecular generation for drug discovery</li>
+                                <li>Accelerated force field development for MD simulations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">⚗️</span>
+                        <h3 class="topic-title">Computational Catalysis and Reaction Path Analysis</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Simulation of catalytic mechanisms, transition state identification, and energy profile calculations to guide experimental catalyst design, understand selectivity, and optimize reaction conditions.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>Design of homogeneous catalysts for organic synthesis</li>
+                                <li>Understanding enzyme catalysis mechanisms</li>
+                                <li>Optimization of heterogeneous catalysts for industrial processes</li>
+                                <li>Identification of reaction intermediates and side products</li>
+                                <li>Prediction of enantioselectivity in asymmetric catalysis</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">🔗</span>
+                        <h3 class="topic-title">Integration of Computational and Experimental Workflows</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Best practices for combining in silico predictions with laboratory validation, creating synergistic approaches that accelerate discovery, reduce experimental costs, and enable hypothesis-driven research.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>Virtual screening followed by targeted synthesis</li>
+                                <li>Computational pre-screening of reaction conditions</li>
+                                <li>Spectroscopic assignment using calculated spectra</li>
+                                <li>Mechanism validation through isotope labeling predictions</li>
+                                <li>Materials discovery using high-throughput DFT screening</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison-section" id="comparison">
+        <div class="container">
+            <h2 class="section-header">Method Comparison</h2>
+            <p class="section-intro">Understanding the strengths and computational costs of major computational chemistry methods.</p>
+            
+            <div class="comparison-table">
+                <div class="comparison-row header">
+                    <div class="comparison-cell">Method</div>
+                    <div class="comparison-cell">Accuracy</div>
+                    <div class="comparison-cell">System Size</div>
+                    <div class="comparison-cell">Best For</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">CCSD(T)</div>
+                    <div class="comparison-cell">Very High</div>
+                    <div class="comparison-cell">&lt;50 atoms</div>
+                    <div class="comparison-cell">Benchmarks</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">DFT (B3LYP)</div>
+                    <div class="comparison-cell">High</div>
+                    <div class="comparison-cell">&lt;500 atoms</div>
+                    <div class="comparison-cell">General use</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">Semi-empirical</div>
+                    <div class="comparison-cell">Medium</div>
+                    <div class="comparison-cell">&lt;10k atoms</div>
+                    <div class="comparison-cell">Large systems</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">Classical MD</div>
+                    <div class="comparison-cell">Empirical</div>
+                    <div class="comparison-cell">100k+ atoms</div>
+                    <div class="comparison-cell">Dynamics</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">ML Models</div>
+                    <div class="comparison-cell">Variable</div>
+                    <div class="comparison-cell">Unlimited</div>
+                    <div class="comparison-cell">Screening</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline-section" id="timeline">
+        <div class="container">
+            <h2 class="section-header">Evolution of Computational Chemistry</h2>
+            <p class="section-intro">Key milestones that transformed chemistry from purely experimental to computationally driven science.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1950s</div>
+                        <div class="timeline-title">Birth of Quantum Chemistry</div>
+                        <div class="timeline-description">Development of Hartree-Fock methods and the first electronic structure calculations on primitive computers, laying the foundation for computational chemistry.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1970s</div>
+                        <div class="timeline-title">Molecular Mechanics Emerges</div>
+                        <div class="timeline-description">Introduction of force fields enabling simulation of large biomolecules and polymers, making protein and DNA structure calculations feasible.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1990s</div>
+                        <div class="timeline-title">DFT Revolution</div>
+                        <div class="timeline-description">Density functional theory becomes practical for routine calculations, earning Kohn and Pople the Nobel Prize in Chemistry in 1998.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2000s</div>
+                        <div class="timeline-title">High-Throughput Computing</div>
+                        <div class="timeline-description">Parallel computing and software advances enable virtual screening of millions of compounds, accelerating drug discovery and materials design.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020s</div>
+                        <div class="timeline-title">AI Transforms Chemistry</div>
+                        <div class="timeline-description">Machine learning models like AlphaFold and neural network potentials achieve breakthrough accuracy, predicting protein structures and molecular properties at unprecedented speed.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="breakthrough-section" id="breakthroughs">
+        <div class="container">
+            <h2 class="section-header">Latest Advances in Computational Chemistry</h2>
+            <p class="section-intro">Cutting-edge developments transforming how we simulate, predict, and design chemical systems.</p>
+            
+            <div class="breakthrough-grid">
+                <div class="breakthrough-card">
+                    <span class="breakthrough-icon">🧬</span>
+                    <span class="breakthrough-badge">2024-2025</span>
+                    <h3 class="breakthrough-title">AlphaFold 3 and Beyond</h3>
+                    <p class="breakthrough-description">AI-powered structure prediction extends beyond proteins to nucleic acids, ligands, and complex biomolecular assemblies, revolutionizing structural biology and enabling computational drug design with atomic precision.</p>
+                </div>
+
+                <div class="breakthrough-card">
+                    <span class="breakthrough-icon">⚡</span>
+                    <span class="breakthrough-badge">Quantum Computing</span>
+                    <h3 class="breakthrough-title">Quantum Algorithms for Chemistry</h3>
+                    <p class="breakthrough-description">Early quantum computers demonstrate advantage in simulating molecular systems, with variational quantum eigensolvers solving electronic structure problems intractable for classical computers.</p>
+                </div>
+
+                <div class="breakthrough-card">
+                    <span class="breakthrough-icon">🎯</span>
+                    <span class="breakthrough-badge">ML Acceleration</span>
+                    <h3 class="breakthrough-title">Neural Network Potentials</h3>
+                    <p class="breakthrough-description">Machine learning force fields achieve quantum accuracy at classical MD speed, enabling microsecond simulations of complex systems like protein-ligand binding with DFT-level precision.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="visualization-section" id="visualization">
+        <div class="container">
+            <h2 class="section-header">Interactive Molecular Simulation</h2>
+            <p class="section-intro">Explore different computational chemistry visualizations. Click the buttons to see how various methods represent molecular systems.</p>
+            
+            <div class="viz-container">
+                <div class="molecule-display">
+                    <canvas id="moleculeCanvas" class="molecule-canvas"></canvas>
+                </div>
+                <div class="viz-controls">
+                    <button class="viz-button active" onclick="showVisualization('orbital')">
+                        <span style="position: relative; z-index: 1;">🌀 Molecular Orbitals</span>
+                    </button>
+                    <button class="viz-button" onclick="showVisualization('energy')">
+                        <span style="position: relative; z-index: 1;">📊 Energy Surface</span>
+                    </button>
+                    <button class="viz-button" onclick="showVisualization('dynamics')">
+                        <span style="position: relative; z-index: 1;">🔄 MD Trajectory</span>
+                    </button>
+                    <button class="viz-button" onclick="showVisualization('density')">
+                        <span style="position: relative; z-index: 1;">⚛️ Electron Density</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cta-section" id="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Follow Computational Chemistry Innovation</h2>
+                <p class="cta-text">Stay updated on quantum simulations, machine learning applications, and computational breakthroughs transforming chemical discovery.</p>
+                <a href="index.html#contact" class="cta-button">Connect With Us →</a>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Chemisters</h4>
+                    <p>The digital ecosystem of chemistry — where academic rigor meets modern communication.</p>
+                    <p>Chemistry evolves. Chemisters documents it.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#coverage">All Topics</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contact@chemisters.com">Email</a></li>
+                        <li><a href="https://www.chemisters.com">Website</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Chemisters. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Create animated particles in hero
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (10 + Math.random() * 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        createParticles();
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToAnimate = document.querySelectorAll(
+                '.intro-text, .stat-card, .topic-item, .breakthrough-card, .comparison-table, .timeline-item'
+            );
+            elementsToAnimate.forEach(el => observer.observe(el));
+
+            // Add stagger delay to stat cards
+            document.querySelectorAll('.stat-card').forEach((card, index) => {
+                card.style.transitionDelay = `${index * 0.1}s`;
+            });
+
+            // Add stagger delay to topic items
+            document.querySelectorAll('.topic-item').forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.1}s`;
+            });
+
+            // Add stagger delay to breakthrough cards
+            document.querySelectorAll('.breakthrough-card').forEach((card, index) => {
+                card.style.transitionDelay = `${index * 0.15}s`;
+            });
+
+            // Add stagger delay to timeline items
+            document.querySelectorAll('.timeline-item').forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.2}s`;
+            });
+        });
+
+        // Navigation scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+
+            // Back to top button
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Back to top functionality
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Expandable topic items
+        document.querySelectorAll('.topic-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') return;
+                this.classList.toggle('expanded');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 140;
+                    const targetPosition = target.offsetTop - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Interactive molecular visualization
+        const canvas = document.getElementById('moleculeCanvas');
+        const ctx = canvas.getContext('2d');
+        let currentViz = 'orbital';
+        let animationFrame;
+
+        function resizeCanvas() {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+            showVisualization(currentViz);
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        function showVisualization(type) {
+            currentViz = type;
+            
+            // Update active button
+            document.querySelectorAll('.viz-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.closest('.viz-button').classList.add('active');
+            
+            if (animationFrame) {
+                cancelAnimationFrame(animationFrame);
+            }
+            
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            switch(type) {
+                case 'orbital':
+                    drawMolecularOrbitals();
+                    break;
+                case 'energy':
+                    drawEnergySurface();
+                    break;
+                case 'dynamics':
+                    animateMolecularDynamics();
+                    break;
+                case 'density':
+                    drawElectronDensity();
+                    break;
+            }
+        }
+
+        function drawMolecularOrbitals() {
+            const width = canvas.width;
+            const height = canvas.height;
+            const centerX = width / 2;
+            const centerY = height / 2;
+
+            // Draw title
+            ctx.fillStyle = '#111827';
+            ctx.font = 'bold 16px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Molecular Orbital Visualization', centerX, 30);
+
+            // Draw atomic centers
+            const atoms = [
+                {x: centerX - 80, y: centerY, label: 'C'},
+                {x: centerX + 80, y: centerY, label: 'O'}
+            ];
+
+            // Draw orbital lobes
+            ctx.globalAlpha = 0.3;
+            
+            // Left lobe (bonding orbital)
+            const gradient1 = ctx.createRadialGradient(centerX - 80, centerY, 0, centerX - 80, centerY, 60);
+            gradient1.addColorStop(0, '#3b82f6');
+            gradient1.addColorStop(1, 'transparent');
+            ctx.fillStyle = gradient1;
+            ctx.beginPath();
+            ctx.arc(centerX - 80, centerY, 60, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Right lobe (bonding orbital)
+            const gradient2 = ctx.createRadialGradient(centerX + 80, centerY, 0, centerX + 80, centerY, 60);
+            gradient2.addColorStop(0, '#3b82f6');
+            gradient2.addColorStop(1, 'transparent');
+            ctx.fillStyle = gradient2;
+            ctx.beginPath();
+            ctx.arc(centerX + 80, centerY, 60, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Overlap region
+            ctx.globalAlpha = 0.5;
+            const gradient3 = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, 40);
+            gradient3.addColorStop(0, '#2563eb');
+            gradient3.addColorStop(1, 'transparent');
+            ctx.fillStyle = gradient3;
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 40, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.globalAlpha = 1;
+
+            // Draw atoms
+            atoms.forEach(atom => {
+                ctx.beginPath();
+                ctx.arc(atom.x, atom.y, 15, 0, Math.PI * 2);
+                ctx.fillStyle = '#1f2937';
+                ctx.fill();
+                ctx.strokeStyle = '#3b82f6';
+                ctx.lineWidth = 3;
+                ctx.stroke();
+
+                ctx.fillStyle = '#ffffff';
+                ctx.font = 'bold 14px sans-serif';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(atom.label, atom.x, atom.y);
+            });
+
+            // Draw bond
+            ctx.strokeStyle = '#6b7280';
+            ctx.lineWidth = 2;
+            ctx.setLineDash([5, 5]);
+            ctx.beginPath();
+            ctx.moveTo(centerX - 65, centerY);
+            ctx.lineTo(centerX + 65, centerY);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // Label
+            ctx.fillStyle = '#6b7280';
+            ctx.font = '13px sans-serif';
+            ctx.fillText('σ bonding orbital', centerX, height - 30);
+        }
+
+        function drawEnergySurface() {
+            const width = canvas.width;
+            const height = canvas.height;
+            const padding = 60;
+
+            // Draw title
+            ctx.fillStyle = '#111827';
+            ctx.font = 'bold 16px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Potential Energy Surface', width / 2, 30);
+
+            // Draw axes
+            ctx.strokeStyle = '#374151';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(padding, padding);
+            ctx.lineTo(padding, height - padding);
+            ctx.lineTo(width - padding, height - padding);
+            ctx.stroke();
+
+            // Labels
+            ctx.fillStyle = '#4b5563';
+            ctx.font = '12px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Reaction Coordinate', width / 2, height - 20);
+            
+            ctx.save();
+            ctx.translate(20, height / 2);
+            ctx.rotate(-Math.PI / 2);
+            ctx.fillText('Energy', 0, 0);
+            ctx.restore();
+
+            // Draw energy profile
+            ctx.strokeStyle = '#3b82f6';
+            ctx.lineWidth = 3;
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = 'rgba(59, 130, 246, 0.5)';
+            
+            ctx.beginPath();
+            const points = [];
+            const steps = 100;
+            
+            for (let i = 0; i <= steps; i++) {
+                const x = padding + (width - 2 * padding) * i / steps;
+                const progress = i / steps;
+                
+                // Create a reaction coordinate profile
+                let y;
+                if (progress < 0.4) {
+                    y = height - padding - 40 - Math.sin(progress * Math.PI / 0.4) * 80;
+                } else if (progress < 0.6) {
+                    y = height - padding - 120 + (progress - 0.4) * 200;
+                } else {
+                    y = height - padding - 80 - Math.sin((progress - 0.6) * Math.PI / 0.4) * 20;
+                }
+                
+                points.push({x, y});
+                if (i === 0) {
+                    ctx.moveTo(x, y);
+                } else {
+                    ctx.lineTo(x, y);
+                }
+            }
+            ctx.stroke();
+            ctx.shadowBlur = 0;
+
+            // Mark reactants, TS, and products
+            const markers = [
+                {x: points[0].x, y: points[0].y, label: 'Reactants'},
+                {x: points[40].x, y: points[40].y, label: 'TS', color: '#ef4444'},
+                {x: points[99].x, y: points[99].y, label: 'Products'}
+            ];
+
+            markers.forEach(marker => {
+                ctx.beginPath();
+                ctx.arc(marker.x, marker.y, 6, 0, Math.PI * 2);
+                ctx.fillStyle = marker.color || '#3b82f6';
+                ctx.fill();
+                
+                ctx.fillStyle = '#1f2937';
+                ctx.font = '11px sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText(marker.label, marker.x, marker.y - 15);
+            });
+
+            // Draw activation energy arrow
+            ctx.strokeStyle = '#ef4444';
+            ctx.lineWidth = 2;
+            ctx.setLineDash([3, 3]);
+            ctx.beginPath();
+            ctx.moveTo(points[0].x + 20, points[0].y);
+            ctx.lineTo(points[0].x + 20, points[40].y);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            ctx.fillStyle = '#ef4444';
+            ctx.font = '10px sans-serif';
+            ctx.textAlign = 'left';
+            ctx.fillText('Ea', points[0].x + 25, (points[0].y + points[40].y) / 2);
+        }
+
+        let mdTime = 0;
+        function animateMolecularDynamics() {
+            const width = canvas.width;
+            const height = canvas.height;
+            
+            ctx.clearRect(0, 0, width, height);
+
+            // Draw title
+            ctx.fillStyle = '#111827';
+            ctx.font = 'bold 16px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Molecular Dynamics Simulation', width / 2, 30);
+
+            const centerX = width / 2;
+            const centerY = height / 2;
+            const time = mdTime * 0.05;
+
+            // Simulate multiple molecules
+            const molecules = [
+                {baseX: centerX - 100, baseY: centerY - 80},
+                {baseX: centerX + 80, baseY: centerY - 60},
+                {baseX: centerX - 60, baseY: centerY + 70},
+                {baseX: centerX + 100, baseY: centerY + 80},
+                {baseX: centerX, baseY: centerY - 20}
+            ];
+
+            molecules.forEach((mol, idx) => {
+                const phase = idx * Math.PI / 3;
+                const x = mol.baseX + Math.sin(time + phase) * 15;
+                const y = mol.baseY + Math.cos(time * 1.3 + phase) * 12;
+
+                // Draw molecule (simple representation)
+                ctx.globalAlpha = 0.7;
+                ctx.beginPath();
+                ctx.arc(x, y, 18, 0, Math.PI * 2);
+                ctx.fillStyle = '#3b82f6';
+                ctx.fill();
+                ctx.strokeStyle = '#2563eb';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                // Draw velocity vector
+                const vx = Math.cos(time + phase) * 20;
+                const vy = -Math.sin(time * 1.3 + phase) * 20;
+                
+                ctx.globalAlpha = 0.5;
+                ctx.strokeStyle = '#ef4444';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+                ctx.lineTo(x + vx, y + vy);
+                ctx.stroke();
+
+                // Arrow head
+                const angle = Math.atan2(vy, vx);
+                ctx.beginPath();
+                ctx.moveTo(x + vx, y + vy);
+                ctx.lineTo(x + vx - 8 * Math.cos(angle - Math.PI / 6), y + vy - 8 * Math.sin(angle - Math.PI / 6));
+                ctx.moveTo(x + vx, y + vy);
+                ctx.lineTo(x + vx - 8 * Math.cos(angle + Math.PI / 6), y + vy - 8 * Math.sin(angle + Math.PI / 6));
+                ctx.stroke();
+
+                ctx.globalAlpha = 1;
+            });
+
+            // Info text
+            ctx.fillStyle = '#6b7280';
+            ctx.font = '13px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Temperature: 298 K | Time step: 1 fs', width / 2, height - 30);
+
+            mdTime++;
+            animationFrame = requestAnimationFrame(animateMolecularDynamics);
+        }
+
+        function drawElectronDensity() {
+            const width = canvas.width;
+            const height = canvas.height;
+            const centerX = width / 2;
+            const centerY = height / 2;
+
+            // Draw title
+            ctx.fillStyle = '#111827';
+            ctx.font = 'bold 16px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Electron Density Distribution', centerX, 30);
+
+            // Create electron density map using gradients
+            const densityPoints = [
+                {x: centerX - 60, y: centerY - 30, intensity: 0.8, radius: 50},
+                {x: centerX + 60, y: centerY - 30, intensity: 0.8, radius: 50},
+                {x: centerX, y: centerY + 40, intensity: 0.6, radius: 45},
+                {x: centerX - 40, y: centerY + 60, intensity: 0.5, radius: 35},
+                {x: centerX + 40, y: centerY + 60, intensity: 0.5, radius: 35}
+            ];
+
+            // Draw density contours
+            const contourLevels = [0.8, 0.6, 0.4, 0.2];
+            contourLevels.forEach((level, idx) => {
+                ctx.globalAlpha = 0.15;
+                densityPoints.forEach(point => {
+                    const gradient = ctx.createRadialGradient(
+                        point.x, point.y, 0,
+                        point.x, point.y, point.radius * (1 + idx * 0.3)
+                    );
+                    
+                    const color = `rgba(59, 130, 246, ${point.intensity * level})`;
+                    gradient.addColorStop(0, color);
+                    gradient.addColorStop(1, 'transparent');
+                    
+                    ctx.fillStyle = gradient;
+                    ctx.beginPath();
+                    ctx.arc(point.x, point.y, point.radius * (1 + idx * 0.3), 0, Math.PI * 2);
+                    ctx.fill();
+                });
+            });
+
+            ctx.globalAlpha = 1;
+
+            // Draw atomic nuclei
+            const nuclei = [
+                {x: centerX - 60, y: centerY - 30, label: 'N'},
+                {x: centerX + 60, y: centerY - 30, label: 'C'},
+                {x: centerX, y: centerY + 40, label: 'C'},
+                {x: centerX - 40, y: centerY + 60, label: 'H'},
+                {x: centerX + 40, y: centerY + 60, label: 'H'}
+            ];
+
+            nuclei.forEach(nucleus => {
+                ctx.beginPath();
+                ctx.arc(nucleus.x, nucleus.y, 12, 0, Math.PI * 2);
+                ctx.fillStyle = '#1f2937';
+                ctx.fill();
+                ctx.strokeStyle = '#3b82f6';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                ctx.fillStyle = '#ffffff';
+                ctx.font = 'bold 11px sans-serif';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(nucleus.label, nucleus.x, nucleus.y);
+            });
+
+            // Draw bonds
+            ctx.strokeStyle = '#6b7280';
+            ctx.lineWidth = 2;
+            ctx.setLineDash([4, 4]);
+            const bonds = [
+                [0, 1], [1, 2], [2, 3], [2, 4]
+            ];
+            bonds.forEach(bond => {
+                ctx.beginPath();
+                ctx.moveTo(nuclei[bond[0]].x, nuclei[bond[0]].y);
+                ctx.lineTo(nuclei[bond[1]].x, nuclei[bond[1]].y);
+                ctx.stroke();
+            });
+            ctx.setLineDash([]);
+
+            // Color scale
+            const scaleX = width - 100;
+            const scaleY = 80;
+            const scaleHeight = 100;
+            
+            const scaleGradient = ctx.createLinearGradient(scaleX, scaleY, scaleX, scaleY + scaleHeight);
+            scaleGradient.addColorStop(0, '#2563eb');
+            scaleGradient.addColorStop(0.5, '#3b82f6');
+            scaleGradient.addColorStop(1, '#93c5fd');
+            
+            ctx.fillStyle = scaleGradient;
+            ctx.fillRect(scaleX, scaleY, 20, scaleHeight);
+            ctx.strokeStyle = '#6b7280';
+            ctx.strokeRect(scaleX, scaleY, 20, scaleHeight);
+
+            ctx.fillStyle = '#4b5563';
+            ctx.font = '10px sans-serif';
+            ctx.textAlign = 'left';
+            ctx.fillText('High', scaleX + 25, scaleY + 5);
+            ctx.fillText('Low', scaleX + 25, scaleY + scaleHeight);
+
+            // Info
+            ctx.fillStyle = '#6b7280';
+            ctx.font = '13px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Isosurface: 0.02 e/Å³', centerX, height - 30);
+        }
+
+        // Initialize with orbital visualization
+        setTimeout(() => {
+            showVisualization('orbital');
+        }, 100);
+
+        // Parallax effect for hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero');
+            if (parallax) {
+                parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Add smooth reveal animations
+        const revealElements = document.querySelectorAll('.stat-card, .topic-item, .breakthrough-card');
+        
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0) scale(1)';
+                    }, index * 100);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // Add keyboard navigation for accessibility
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.topic-item.expanded').forEach(item => {
+                    item.classList.remove('expanded');
+                });
+            }
+        });
+
+        console.log('💻 Computational Chemistry page loaded successfully!');
+        console.log('✨ All interactive features activated');
+    </script>
+</body>
+</html>

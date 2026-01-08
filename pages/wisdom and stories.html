@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisdom & Stories — Chemisters</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        nav {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #2563eb;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #4b5563;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            color: #ffffff;
+            padding: 100px 0 80px;
+            text-align: center;
+        }
+
+        .hero-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .hero-title {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3em;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .intro-section {
+            padding: 80px 0;
+            background: #f9fafb;
+        }
+
+        .intro-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .intro-text {
+            font-size: 1.2em;
+            color: #374151;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #111827;
+            letter-spacing: -0.5px;
+        }
+
+        .section-intro {
+            font-size: 1.15em;
+            color: #6b7280;
+            max-width: 800px;
+            margin-bottom: 50px;
+            line-height: 1.7;
+        }
+
+        .topics-list {
+            display: grid;
+            gap: 25px;
+            max-width: 900px;
+        }
+
+        .topic-item {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-left: 4px solid #dc2626;
+            border-radius: 8px;
+            padding: 30px 35px;
+            transition: all 0.3s ease;
+        }
+
+        .topic-item:hover {
+            border-left-color: #b91c1c;
+            box-shadow: 0 4px 20px rgba(220, 38, 38, 0.15);
+            transform: translateX(8px);
+        }
+
+        .topic-title {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 12px;
+        }
+
+        .topic-description {
+            font-size: 1.05em;
+            color: #4b5563;
+            line-height: 1.7;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2em;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 20px;
+        }
+
+        .cta-text {
+            font-size: 1.15em;
+            color: #4b5563;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: #dc2626;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #b91c1c;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
+        }
+
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            padding: 60px 0 40px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 50px;
+        }
+
+        .footer-section h4 {
+            color: #ffffff;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer-section p {
+            color: #9ca3af;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #374151;
+            color: #6b7280;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2em;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1em;
+            }
+
+            .section-header {
+                font-size: 1.8em;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .topic-item {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">Chemisters</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#coverage">All Topics</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="container">
+            <div class="hero-icon">📖</div>
+            <h1 class="hero-title">Wisdom & Stories</h1>
+            <p class="hero-subtitle">Lessons Beyond the Laboratory</p>
+        </div>
+    </div>
+
+    <div class="intro-section">
+        <div class="container">
+            <div class="intro-content">
+                <p class="intro-text">Chemistry is more than reactions and equations; it is a human endeavor shaped by curiosity, perseverance, and insight.</p>
+                <p class="intro-text">At Chemisters, we share reflections, experiences, and philosophical perspectives from chemists worldwide — from legendary innovators to emerging voices. This section connects scientific rigor with the wisdom gained from practice, failures, and discovery.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-header">Topics Covered</h2>
+            <p class="section-intro">Authentic narratives and profound insights that illuminate the human dimension of chemical science and innovation.</p>
+            
+            <div class="topics-list">
+                <div class="topic-item">
+                    <h3 class="topic-title">Personal Journeys of Renowned and Emerging Chemists</h3>
+                    <p class="topic-description">Intimate accounts of scientific careers from Nobel laureates to rising researchers, exploring the paths, pivotal moments, and decisions that shaped their contributions to chemistry and inspired future generations.</p>
+                </div>
+
+                <div class="topic-item">
+                    <h3 class="topic-title">Lessons Learned from Experimental Successes and Failures</h3>
+                    <p class="topic-description">Candid reflections on breakthrough discoveries and failed experiments, revealing how mistakes transform into insights, resilience builds expertise, and unexpected results often lead to the most important innovations.</p>
+                </div>
+
+                <div class="topic-item">
+                    <h3 class="topic-title">Philosophical and Ethical Considerations in Chemistry</h3>
+                    <p class="topic-description">Thoughtful exploration of moral responsibilities in chemical research, including safety, environmental impact, dual-use concerns, research integrity, and the societal implications of scientific advancement.</p>
+                </div>
+
+                <div class="topic-item">
+                    <h3 class="topic-title">Inspirational Stories Shaping Scientific Culture</h3>
+                    <p class="topic-description">Narratives of perseverance, collaboration, and creativity that define the culture of chemistry, from historic laboratory moments to contemporary tales of mentorship, diversity, and community building in science.</p>
+                </div>
+
+                <div class="topic-item">
+                    <h3 class="topic-title">Reflections on the Future of Chemistry and Innovation</h3>
+                    <p class="topic-description">Forward-looking perspectives from leading thinkers on emerging challenges, opportunities, and transformative directions in chemistry, exploring how the discipline evolves and what defines the next era of molecular science.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Share Your Story With Chemisters</h2>
+            <p class="cta-text">Have a lesson, reflection, or experience that could inspire the chemistry community? We welcome authentic voices and meaningful insights.</p>
+            <a href="index.html#contact" class="cta-button">Connect With Us</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Chemisters</h4>
+                    <p>The digital ecosystem of chemistry — where academic rigor meets modern communication.</p>
+                    <p>Chemistry evolves. Chemisters documents it.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#coverage">All Topics</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contact@chemisters.com">Email</a></li>
+                        <li><a href="https://www.chemisters.com">Website</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Chemisters. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

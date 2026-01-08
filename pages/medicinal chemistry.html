@@ -1,0 +1,2183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicinal Chemistry — Chemisters</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        nav {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            padding: 15px 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .breadcrumb {
+            font-size: 0.85em;
+            color: #6b7280;
+            margin-top: 8px;
+        }
+
+        .breadcrumb a {
+            color: #6b7280;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            color: #2563eb;
+        }
+
+        .breadcrumb span {
+            margin: 0 8px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #2563eb;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #4b5563;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #2563eb;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+            color: #ffffff;
+            padding: 120px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: float-particle 15s infinite;
+        }
+
+        @keyframes float-particle {
+            0% {
+                transform: translateY(100vh) translateX(0) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) translateX(100px) scale(1);
+                opacity: 0;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .hero-icon {
+            animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+        }
+
+        .hero-icon:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .hero-icon:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-title {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1.5px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-subtitle {
+            font-size: 1.4em;
+            opacity: 0;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-weight: 400;
+            line-height: 1.6;
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+        }
+
+        .hero-cta {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.6s forwards;
+        }
+
+        .hero-cta button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-cta button:hover {
+            background: white;
+            color: #ec4899;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .quick-nav {
+            background: #f9fafb;
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 81px;
+            z-index: 90;
+            backdrop-filter: blur(10px);
+            background: rgba(249, 250, 251, 0.95);
+            transition: top 0.3s ease;
+        }
+
+        nav.scrolled ~ .hero ~ .quick-nav {
+            top: 71px;
+        }
+
+        .quick-nav-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .quick-nav-list a {
+            padding: 8px 18px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #4b5563;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quick-nav-list a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(236, 72, 153, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .quick-nav-list a:hover::before {
+            left: 100%;
+        }
+
+        .quick-nav-list a:hover {
+            background: #ec4899;
+            color: #ffffff;
+            border-color: #ec4899;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+        }
+
+        .intro-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+        }
+
+        .intro-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .intro-text {
+            font-size: 1.2em;
+            color: #374151;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .intro-text.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 35px;
+            text-align: center;
+            transition: all 0.4s ease;
+            opacity: 0;
+            transform: translateY(20px) scale(0.95);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.05) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .stat-card:hover::before {
+            opacity: 1;
+        }
+
+        .stat-card.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .stat-card:hover {
+            border-color: #ec4899;
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(236, 72, 153, 0.2);
+        }
+
+        .stat-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            display: inline-block;
+            transition: transform 0.4s ease;
+        }
+
+        .stat-card:hover .stat-icon {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .stat-number {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #ec4899;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .stat-label {
+            font-size: 0.95em;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #111827;
+            letter-spacing: -1px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #ec4899, #db2777);
+            border-radius: 2px;
+        }
+
+        .section-intro {
+            font-size: 1.15em;
+            color: #6b7280;
+            max-width: 800px;
+            margin-bottom: 50px;
+            line-height: 1.7;
+        }
+
+        .topics-list {
+            display: grid;
+            gap: 30px;
+            max-width: 1000px;
+        }
+
+        .topic-item {
+            background: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-left: 5px solid #ec4899;
+            border-radius: 12px;
+            padding: 35px 40px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateX(-30px);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .topic-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, #ec4899, #db2777);
+            transition: width 0.4s ease;
+        }
+
+        .topic-item:hover::before {
+            width: 100%;
+            opacity: 0.05;
+        }
+
+        .topic-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .topic-item:hover {
+            border-left-color: #db2777;
+            box-shadow: 0 8px 30px rgba(236, 72, 153, 0.2);
+            transform: translateX(10px) translateY(-4px);
+        }
+
+        .topic-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .topic-icon {
+            font-size: 2.5em;
+            margin-right: 20px;
+            opacity: 0.9;
+            transition: transform 0.3s ease;
+        }
+
+        .topic-item:hover .topic-icon {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .topic-title {
+            font-size: 1.35em;
+            font-weight: 700;
+            color: #111827;
+            flex: 1;
+            line-height: 1.4;
+        }
+
+        .expand-icon {
+            font-size: 1.4em;
+            color: #ec4899;
+            transition: transform 0.4s ease;
+            margin-left: 15px;
+        }
+
+        .topic-item.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .topic-description {
+            font-size: 1.05em;
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .topic-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .topic-item.expanded .topic-details {
+            max-height: 600px;
+        }
+
+        .topic-examples {
+            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 20px;
+            border-left: 3px solid #ec4899;
+        }
+
+        .topic-examples h4 {
+            font-size: 1.05em;
+            color: #ec4899;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .topic-examples h4::before {
+            content: '💡';
+            font-size: 1.2em;
+        }
+
+        .topic-examples ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .topic-examples li {
+            padding: 10px 0;
+            color: #4b5563;
+            font-size: 0.95em;
+            padding-left: 25px;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+
+        .topic-examples li:hover {
+            color: #111827;
+            padding-left: 30px;
+        }
+
+        .topic-examples li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #ec4899;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+        }
+
+        .topic-examples li:hover::before {
+            transform: translateX(5px);
+        }
+
+        .pipeline-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+        }
+
+        .pipeline-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            position: relative;
+        }
+
+        .pipeline-step {
+            display: grid;
+            grid-template-columns: 1fr 80px 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .pipeline-step.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .pipeline-step:nth-child(even) {
+            grid-template-columns: 1fr 80px 1fr;
+        }
+
+        .pipeline-step:nth-child(even) .step-content:first-child {
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+        .pipeline-step:nth-child(even) .step-arrow {
+            grid-column: 2;
+        }
+
+        .step-content {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .step-content:hover {
+            border-color: #ec4899;
+            box-shadow: 0 8px 30px rgba(236, 72, 153, 0.15);
+            transform: scale(1.02);
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(135deg, #ec4899, #db2777);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .step-title {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .step-description {
+            color: #4b5563;
+            line-height: 1.7;
+            font-size: 0.98em;
+        }
+
+        .step-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            color: #ec4899;
+        }
+
+        .breakthrough-section {
+            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .breakthrough-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .breakthrough-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .breakthrough-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 4px 20px rgba(236, 72, 153, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateY(30px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .breakthrough-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #ec4899, #db2777);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .breakthrough-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .breakthrough-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .breakthrough-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px rgba(236, 72, 153, 0.25);
+        }
+
+        .breakthrough-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(236, 72, 153, 0.3);
+        }
+
+        .breakthrough-title {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .breakthrough-description {
+            color: #4b5563;
+            line-height: 1.8;
+            font-size: 0.98em;
+        }
+
+        .breakthrough-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            display: block;
+            opacity: 0.8;
+        }
+
+        .visualization-section {
+            padding: 100px 0;
+            background: #ffffff;
+        }
+
+        .viz-container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+            border-radius: 20px;
+            padding: 50px;
+            border: 2px solid #e5e7eb;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .molecule-display {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 30px;
+            position: relative;
+            height: 350px;
+            border: 2px solid #e5e7eb;
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.03);
+        }
+
+        .molecule-canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        .viz-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .viz-button {
+            padding: 14px 24px;
+            background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .viz-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .viz-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .viz-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(236, 72, 153, 0.4);
+        }
+
+        .viz-button:active {
+            transform: translateY(-1px);
+        }
+
+        .viz-button.active {
+            background: linear-gradient(135deg, #db2777 0%, #be185d 100%);
+            box-shadow: 0 2px 10px rgba(236, 72, 153, 0.5);
+        }
+
+        .timeline-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+        }
+
+        .timeline {
+            max-width: 900px;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #ec4899, #db2777);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 50px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 30px rgba(236, 72, 153, 0.2);
+        }
+
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, #ec4899, #db2777);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 0 5px #fff, 0 0 0 8px #ec4899;
+            z-index: 1;
+        }
+
+        .timeline-year {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #ec4899;
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .timeline-description {
+            color: #4b5563;
+            line-height: 1.7;
+            font-size: 0.95em;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-title {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-text {
+            font-size: 1.2em;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: #ffffff;
+            color: #ec4899;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            background: #f9fafb;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.6em;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(236, 72, 153, 0.4);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 8px 30px rgba(236, 72, 153, 0.5);
+        }
+
+        .back-to-top::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.6s ease;
+        }
+
+        .back-to-top:hover::after {
+            transform: translate(-50%, -50%) scale(1.5);
+            opacity: 0;
+        }
+
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            padding: 80px 0 40px;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #374151, transparent);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 50px;
+        }
+
+        .footer-section h4 {
+            color: #ffffff;
+            font-size: 1.2em;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .footer-section p {
+            color: #9ca3af;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 14px;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid #374151;
+            color: #6b7280;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5em;
+            }
+
+            .hero-subtitle {
+                font-size: 1.15em;
+            }
+
+            .section-header {
+                font-size: 2em;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .topic-item {
+                padding: 25px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .breakthrough-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-nav-list {
+                gap: 10px;
+            }
+
+            .quick-nav-list a {
+                padding: 6px 14px;
+                font-size: 0.85em;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                flex-direction: row !important;
+            }
+
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+
+            .viz-container {
+                padding: 30px 20px;
+            }
+
+            .cta-title {
+                font-size: 2em;
+            }
+
+            .pipeline-step {
+                grid-template-columns: 1fr !important;
+            }
+
+            .pipeline-step:nth-child(even) .step-content:first-child {
+                grid-column: 1;
+                grid-row: auto;
+            }
+
+            .step-arrow {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="mainNav">
+        <div class="container">
+            <div class="nav-content">
+                <div>
+                    <a href="index.html" class="logo">Chemisters</a>
+                    <div class="breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span>›</span>
+                        <span>Medicinal Chemistry</span>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#coverage">All Topics</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="particles" id="particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-icons">
+                    <span class="hero-icon">💊</span>
+                    <span class="hero-icon">🧬</span>
+                    <span class="hero-icon">⚕️</span>
+                </div>
+                <h1 class="hero-title">Medicinal Chemistry</h1>
+                <p class="hero-subtitle">From Molecular Design to Life-Saving Therapies</p>
+                <div class="hero-cta">
+                    <button onclick="document.querySelector('#topics').scrollIntoView({behavior: 'smooth', block: 'start'})">
+                        Explore Topics ↓
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="quick-nav">
+        <div class="container">
+            <ul class="quick-nav-list">
+                <li><a href="#topics">📚 Topics</a></li>
+                <li><a href="#pipeline">🔬 Drug Pipeline</a></li>
+                <li><a href="#timeline">📅 History</a></li>
+                <li><a href="#breakthroughs">🚀 Breakthroughs</a></li>
+                <li><a href="#visualization">🧪 Interactive Demo</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="intro-section">
+        <div class="container">
+            <div class="intro-content">
+                <p class="intro-text">Medicinal chemistry bridges molecular innovation and therapeutic impact, transforming chemical insights into life-saving medicines.</p>
+                <p class="intro-text">At Chemisters, we explore how structure-activity relationships, computational modeling, and AI-driven design accelerate drug discovery from hit identification to clinical candidates.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Years to Market</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💰</div>
+                        <div class="stat-number">$2.6B</div>
+                        <div class="stat-label">Average Development Cost</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-number">1/10K</div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-number">90%</div>
+                        <div class="stat-label">Clinical Failure Rate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section" id="topics">
+        <div class="container">
+            <h2 class="section-header">Topics Covered</h2>
+            <p class="section-intro">Comprehensive exploration of drug design principles, optimization strategies, and therapeutic development methodologies.</p>
+            
+            <div class="topics-list">
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">🎯</span>
+                        <h3 class="topic-title">QSAR/QSPR Modeling for Drug Candidates</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Quantitative structure-activity and structure-property relationship models that predict biological activity, ADME properties, and toxicity profiles, enabling rational drug design and virtual screening.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Key Applications:</h4>
+                            <ul>
+                                <li>Predicting binding affinity to target proteins</li>
+                                <li>Estimating oral bioavailability and blood-brain barrier penetration</li>
+                                <li>Machine learning models for toxicity prediction</li>
+                                <li>Virtual screening of chemical libraries</li>
+                                <li>Optimization of physicochemical properties</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">⚗️</span>
+                        <h3 class="topic-title">Lead Optimization Strategies</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Systematic approaches to enhancing potency, selectivity, metabolic stability, and pharmacokinetic properties while minimizing toxicity and off-target effects in lead compounds.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Key Applications:</h4>
+                            <ul>
+                                <li>Structure-based drug design using protein crystallography</li>
+                                <li>Fragment-based lead discovery and elaboration</li>
+                                <li>Bioisosteric replacement for improved properties</li>
+                                <li>Reducing metabolic liabilities through chemical modifications</li>
+                                <li>Improving selectivity to avoid off-target interactions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">⚠️</span>
+                        <h3 class="topic-title">Toxicology Assessments and Predictive Safety</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Computational and experimental methods for early detection of safety liabilities, including genotoxicity, cardiotoxicity, hepatotoxicity, and reactive metabolite formation.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Key Applications:</h4>
+                            <ul>
+                                <li>In silico prediction of hERG channel inhibition</li>
+                                <li>Metabolite identification and structural alerts</li>
+                                <li>Genotoxicity assessment using Ames test predictors</li>
+                                <li>Hepatotoxicity risk evaluation</li>
+                                <li>Minimizing reactive metabolite formation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">🚀</span>
+                        <h3 class="topic-title">Drug Formulation and Targeted Delivery</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Innovations in pharmaceutical formulation, including nanoparticles, liposomes, antibody-drug conjugates, and prodrug strategies for enhanced delivery and therapeutic efficacy.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Key Applications:</h4>
+                            <ul>
+                                <li>Nanoparticle delivery systems for cancer therapy</li>
+                                <li>Antibody-drug conjugates (ADCs) for targeted treatment</li>
+                                <li>Prodrug design to improve bioavailability</li>
+                                <li>Controlled-release formulations</li>
+                                <li>Brain-targeting strategies for CNS drugs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">📖</span>
+                        <h3 class="topic-title">Case Studies on Breakthrough Pharmaceuticals</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Analysis of landmark drug discoveries, from initial concept through clinical development, revealing the strategies and serendipity behind therapeutic breakthroughs.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Key Applications:</h4>
+                            <ul>
+                                <li>Development of kinase inhibitors for cancer treatment</li>
+                                <li>Discovery of direct-acting antivirals for hepatitis C</li>
+                                <li>GLP-1 receptor agonists for diabetes and obesity</li>
+                                <li>PROTAC technology for targeted protein degradation</li>
+                                <li>mRNA vaccine platform development</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pipeline-section" id="pipeline">
+        <div class="container">
+            <h2 class="section-header">Drug Discovery Pipeline</h2>
+            <p class="section-intro">The journey from target identification to approved therapy—understanding each critical stage.</p>
+            
+            <div class="pipeline-container">
+                <div class="pipeline-step">
+                    <div class="step-content">
+                        <span class="step-number">1</span>
+                        <h3 class="step-title">Target Identification & Validation</h3>
+                        <p class="step-description">Identifying disease-relevant biological targets through genomics, proteomics, and pathway analysis, then validating their therapeutic potential.</p>
+                    </div>
+                    <div class="step-arrow">→</div>
+                    <div></div>
+                </div>
+
+                <div class="pipeline-step">
+                    <div></div>
+                    <div class="step-arrow">→</div>
+                    <div class="step-content">
+                        <span class="step-number">2</span>
+                        <h3 class="step-title">Hit Identification</h3>
+                        <p class="step-description">Screening chemical libraries, natural products, or fragment-based approaches to identify initial compounds with desired activity against the target.</p>
+                    </div>
+                </div>
+
+                <div class="pipeline-step">
+                    <div class="step-content">
+                        <span class="step-number">3</span>
+                        <h3 class="step-title">Lead Optimization</h3>
+                        <p class="step-description">Iterative chemical modification to improve potency, selectivity, ADME properties, and reduce toxicity while maintaining druglike characteristics.</p>
+                    </div>
+                    <div class="step-arrow">→</div>
+                    <div></div>
+                </div>
+
+                <div class="pipeline-step">
+                    <div></div>
+                    <div class="step-arrow">→</div>
+                    <div class="step-content">
+                        <span class="step-number">4</span>
+                        <h3 class="step-title">Preclinical Development</h3>
+                        <p class="step-description">Extensive in vitro and in vivo testing for efficacy, safety, pharmacokinetics, and formulation development before human trials.</p>
+                    </div>
+                </div>
+
+                <div class="pipeline-step">
+                    <div class="step-content">
+                        <span class="step-number">5</span>
+                        <h3 class="step-title">Clinical Trials & Approval</h3>
+                        <p class="step-description">Phase I-III clinical trials to establish safety, dosing, and efficacy in humans, culminating in regulatory approval for market.</p>
+                    </div>
+                    <div class="step-arrow">✓</div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline-section" id="timeline">
+        <div class="container">
+            <h2 class="section-header">Milestones in Medicinal Chemistry</h2>
+            <p class="section-intro">Transformative discoveries that shaped modern pharmaceutical science.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1928</div>
+                        <div class="timeline-title">Discovery of Penicillin</div>
+                        <div class="timeline-description">Alexander Fleming's serendipitous discovery of penicillin launches the antibiotic era, revolutionizing the treatment of bacterial infections.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1950s</div>
+                        <div class="timeline-title">Rational Drug Design Emerges</div>
+                        <div class="timeline-description">Understanding of enzyme mechanisms and receptor theory enables the first rational approaches to drug design beyond trial and error.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1980s</div>
+                        <div class="timeline-title">Structure-Based Drug Design</div>
+                        <div class="timeline-description">X-ray crystallography of drug-target complexes enables structure-guided optimization, exemplified by the development of HIV protease inhibitors.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2001</div>
+                        <div class="timeline-title">Gleevec Approved</div>
+                        <div class="timeline-description">Imatinib (Gleevec) becomes the first targeted cancer therapy designed to inhibit a specific oncogenic kinase, transforming cancer treatment.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020s</div>
+                        <div class="timeline-title">AI-Driven Drug Discovery</div>
+                        <div class="timeline-description">Machine learning and generative AI accelerate hit identification, lead optimization, and clinical trial design, reducing development timelines.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="breakthrough-section" id="breakthroughs">
+        <div class="container">
+            <h2 class="section-header">Recent Breakthroughs</h2>
+            <p class="section-intro">Cutting-edge developments transforming drug discovery and therapeutic approaches.</p>
+            
+            <div class="breakthrough-grid">
+                <div class="breakthrough-card">
+                    <span class="breakthrough-icon">🧬</span>
+                    <span class="breakthrough-badge">2024-2025</span>
+                    <h3 class="breakthrough-title">PROTAC Revolution</h3>
+                    <p class="breakthrough-description">Proteolysis-targeting chimeras (PROTACs) enable degradation of previously "undruggable" proteins by hijacking cellular machinery, opening new therapeutic frontiers for cancer and neurodegenerative diseases.</p>
+                </div>
+
+                <div class="breakthrough-card">
+                    <span class="breakthrough-icon">🤖</span>
+                    <span class="breakthrough-badge">AI Innovation</span>
+                    <h3 class="breakthrough-title">AlphaFold for Drug Design</h3>
+                    <p class="breakthrough-description">AI-predicted protein structures accelerate structure-based drug design, enabling virtual screening and optimization against previously inaccessible targets with unprecedented accuracy.</p>
+                </div>
+
+                <div class="breakthrough-card">
+                    <span class="breakthrough-icon">💉</span>
+                    <span class="breakthrough-badge">GLP-1 Therapeutics</span>
+                    <h3 class="breakthrough-title">Next-Gen Metabolic Drugs</h3>
+                    <p class="breakthrough-description">Advanced GLP-1 receptor agonists demonstrate remarkable efficacy for diabetes, obesity, and cardiovascular protection, representing a paradigm shift in metabolic disease management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="visualization-section" id="visualization">
+        <div class="container">
+            <h2 class="section-header">Interactive Drug Properties</h2>
+            <p class="section-intro">Explore how medicinal chemists evaluate and optimize drug candidates. Click to visualize different molecular properties.</p>
+            
+            <div class="viz-container">
+                <div class="molecule-display">
+                    <canvas id="moleculeCanvas" class="molecule-canvas"></canvas>
+                </div>
+                <div class="viz-controls">
+                    <button class="viz-button active" onclick="showProperty('lipinski')">
+                        <span style="position: relative; z-index: 1;">⚖️ Lipinski's Rule</span>
+                    </button>
+                    <button class="viz-button" onclick="showProperty('adme')">
+                        <span style="position: relative; z-index: 1;">🔄 ADME Profile</span>
+                    </button>
+                    <button class="viz-button" onclick="showProperty('binding')">
+                        <span style="position: relative; z-index: 1;">🎯 Binding Affinity</span>
+                    </button>
+                    <button class="viz-button" onclick="showProperty('toxicity')">
+                        <span style="position: relative; z-index: 1;">⚠️ Toxicity Risk</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cta-section" id="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Follow Medicinal Chemistry Innovation</h2>
+                <p class="cta-text">Stay updated on breakthrough therapeutics, drug design strategies, and the latest advances in pharmaceutical sciences.</p>
+                <a href="index.html#contact" class="cta-button">Connect With Us →</a>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Chemisters</h4>
+                    <p>The digital ecosystem of chemistry — where academic rigor meets modern communication.</p>
+                    <p>Chemistry evolves. Chemisters documents it.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#coverage">All Topics</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contact@chemisters.com">Email</a></li>
+                        <li><a href="https://www.chemisters.com">Website</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Chemisters. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Create animated particles in hero
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (10 + Math.random() * 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        createParticles();
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToAnimate = document.querySelectorAll(
+                '.intro-text, .stat-card, .topic-item, .breakthrough-card, .timeline-item, .pipeline-step'
+            );
+            elementsToAnimate.forEach(el => observer.observe(el));
+
+            // Add stagger delay to stat cards
+            document.querySelectorAll('.stat-card').forEach((card, index) => {
+                card.style.transitionDelay = `${index * 0.1}s`;
+            });
+
+            // Add stagger delay to topic items
+            document.querySelectorAll('.topic-item').forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.1}s`;
+            });
+
+            // Add stagger delay to breakthrough cards
+            document.querySelectorAll('.breakthrough-card').forEach((card, index) => {
+                card.style.transitionDelay = `${index * 0.15}s`;
+            });
+
+            // Add stagger delay to timeline items
+            document.querySelectorAll('.timeline-item').forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.2}s`;
+            });
+
+            // Add stagger delay to pipeline steps
+            document.querySelectorAll('.pipeline-step').forEach((step, index) => {
+                step.style.transitionDelay = `${index * 0.15}s`;
+            });
+        });
+
+        // Navigation scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+
+            // Back to top button
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Back to top functionality
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Expandable topic items
+        document.querySelectorAll('.topic-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') return;
+                this.classList.toggle('expanded');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 140;
+                    const targetPosition = target.offsetTop - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Interactive molecule visualization
+        const canvas = document.getElementById('moleculeCanvas');
+        const ctx = canvas.getContext('2d');
+        let currentProperty = 'lipinski';
+
+        function resizeCanvas() {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+            showProperty(currentProperty);
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        function showProperty(type) {
+            currentProperty = type;
+            
+            // Update active button
+            document.querySelectorAll('.viz-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.closest('.viz-button').classList.add('active');
+            
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            const width = canvas.width;
+            const height = canvas.height;
+            const padding = 50;
+
+            // Draw based on property type
+            switch(type) {
+                case 'lipinski':
+                    drawLipinski(width, height, padding);
+                    break;
+                case 'adme':
+                    drawADME(width, height, padding);
+                    break;
+                case 'binding':
+                    drawBinding(width, height, padding);
+                    break;
+                case 'toxicity':
+                    drawToxicity(width, height, padding);
+                    break;
+            }
+        }
+
+        function drawLipinski(width, height, padding) {
+            // Draw title
+            ctx.fillStyle = '#111827';
+            ctx.font = 'bold 18px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText("Lipinski's Rule of Five", width / 2, 35);
+
+            // Draw rules as bars
+            const rules = [
+                { label: 'MW < 500', value: 420, max: 500, unit: 'Da' },
+                { label: 'LogP < 5', value: 3.2, max: 5, unit: '' },
+                { label: 'H-donors < 5', value: 3, max: 5, unit: '' },
+                { label: 'H-acceptors < 10', value: 6, max: 10, unit: '' }
+            ];
+
+            const barHeight = 40;
+            const barSpacing = 60;
+            const startY = 80;
+
+            rules.forEach((rule, index) => {
+                const y = startY + index * barSpacing;
+                const barWidth = width - 2 * padding - 150;
+                const fillWidth = (rule.value / rule.max) * barWidth;
+
+                // Draw label
+                ctx.fillStyle = '#4b5563';
+                ctx.font = '14px sans-serif';
+                ctx.textAlign = 'left';
+                ctx.fillText(rule.label, padding, y + 20);
+
+                // Draw bar background
+                ctx.fillStyle = '#e5e7eb';
+                ctx.fillRect(padding + 150, y, barWidth, barHeight);
+
+                // Draw bar fill
+                const gradient = ctx.createLinearGradient(padding + 150, 0, padding + 150 + fillWidth, 0);
+                gradient.addColorStop(0, '#ec4899');
+                gradient.addColorStop(1, '#db2777');
+                ctx.fillStyle = gradient;
+                ctx.fillRect(padding + 150, y, fillWidth, barHeight);
+
+                // Draw value text
+                ctx.fillStyle = '#111827';
+                ctx.font = 'bold 14px sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText(rule.value + ' ' + rule.unit, padding + 150 + fillWidth / 2, y + 25);
+
+                // Draw checkmark
+                if (rule.value < rule.max) {
+                    ctx.fillStyle = '#10b981';
+                    ctx.font = 'bold 24px sans-serif';
+                    ctx.textAlign = 'right';
+                    ctx.fillText('✓', width - padding, y + 27);
+                }
+            });
+        }
+
+        function drawADME(width, height, padding) {
+            // Draw title
+            ctx.fillStyle = '#111827';
+            ctx.font = 'bold 18px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('ADME Profile Assessment', width / 2, 35);
+
+            const properties = [
+                { label: 'Absorption', value: 85, color: '#ec4899' },
+                { label: 'Distribution', value: 72, color: '#db2777' },
+                { label: 'Metabolism', value: 68, color: '#be185d' },
+                { label: 'Excretion', value: 78, color: '#9f1239' }
+            ];
+
+            const centerX = width / 2;
+            const centerY = height / 2 + 20;
+            const radius = 80;
+
+            // Draw radar chart
+            const angleStep = (Math.PI * 2) / properties.length;
+            
+            // Draw grid circles
+            ctx.strokeStyle = '#e5e7eb';
+            ctx.lineWidth = 1;
+            for (let i = 1; i <= 3; i++) {
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, radius * (i / 3), 0, Math.PI * 2);
+                ctx.stroke();
+            }
+
+            // Draw axes
+            properties.forEach((prop, index) => {
+                const angle = index * angleStep - Math.PI / 2;
+                const x = centerX + Math.cos(angle) * radius;
+                const y = centerY + Math.sin(angle) * radius;
+                
+                ctx.beginPath();
+                ctx.strokeStyle = '#e5e7eb';
+                ctx.moveTo(centerX, centerY);
+                ctx.lineTo(x, y);
+                ctx.stroke();
+
+                // Draw labels
+                const labelX = centerX + Math.cos(angle) * (radius + 30);
+                const labelY = centerY + Math.sin(angle) * (radius + 30);
+                ctx.fillStyle = '#4b5563';
+                ctx.font = '13px sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText(prop.label, labelX, labelY);
+                ctx.font = 'bold 12px sans-serif';
+                ctx.fillStyle = '#ec4899';
+                ctx.fillText(prop.value + '%', labelX, labelY + 15);
+            });
+
+            // Draw data polygon
+            ctx.beginPath();
+            properties.forEach((prop, index) => {
+                const angle = index * angleStep - Math.PI / 2;
+                const distance = radius * (prop.value / 100);
+                const x = centerX + Math.cos(angle) * distance;
+                const y = centerY + Math.sin(angle) * distance;
+                
+                if (index === 0) {
+                    ctx.moveTo(x, y);
+                } else {
+                    ctx.lineTo(x, y);
+                }
+            });
+            ctx.closePath();
+            ctx.fillStyle = 'rgba(236, 72, 153, 0.2)';
+            ctx.fill();
+            ctx.strokeStyle = '#ec4899';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // Draw data points
+            properties.forEach((prop, index) => {
+                const angle = index * angleStep - Math.PI / 2;
+                const distance = radius * (prop.value / 100);
+                const x = centerX + Math.cos(angle) * distance;
+                const y = centerY + Math.sin(angle) * distance;
+                
+                ctx.beginPath();
+                ctx.arc(x, y, 5, 0, Math.PI * 2);
+                ctx.fillStyle = '#ec4899';
+                ctx.fill();
+            });
+        }
+
+        function drawBinding(width, height, padding) {
+            // Draw title
+            ctx.fillStyle = '#111827';
+            ctx.font = 'bold 18px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Binding Affinity Analysis', width / 2, 35);
+
+            // Draw binding curve
+            const startX = padding;
+            const endX = width - padding;
+            const startY = height - padding;
+            const endY = padding + 40;
+
+            // Draw axes
+            ctx.strokeStyle = '#374151';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX, endY);
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(endX, startY);
+            ctx.stroke();
+
+            // Draw labels
+            ctx.fillStyle = '#4b5563';
+            ctx.font = '13px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Ligand Concentration', width / 2, height - 15);
+            ctx.save();
+            ctx.translate(20, height / 2);
+            ctx.rotate(-Math.PI / 2);
+            ctx.fillText('% Bound', 0, 0);
+            ctx.restore();
+
+            // Draw sigmoid binding curve
+            ctx.beginPath();
+            ctx.strokeStyle = '#ec4899';
+            ctx.lineWidth = 3;
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = 'rgba(236, 72, 153, 0.5)';
+
+            const curveWidth = endX - startX - 20;
+            const curveHeight = startY - endY - 20;
+
+            for (let i = 0; i <= 100; i++) {
+                const x = startX + 10 + (curveWidth * i / 100);
+                const normalized = (i - 50) / 10;
+                const sigmoid = 1 / (1 + Math.exp(-normalized));
+                const y = startY - 10 - (curveHeight * sigmoid);
+                
+                if (i === 0) {
+                    ctx.moveTo(x, y);
+                } else {
+                    ctx.lineTo(x, y);
+                }
+            }
+            ctx.stroke();
+            ctx.shadowBlur = 0;
+
+            // Draw IC50 marker
+            const ic50X = startX + 10 + curveWidth / 2;
+            const ic50Y = startY - 10 - curveHeight / 2;
+            
+            ctx.setLineDash([5, 5]);
+            ctx.strokeStyle = '#9ca3af';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(ic50X, ic50Y);
+            ctx.lineTo(ic50X, startY);
+            ctx.moveTo(startX, ic50Y);
+            ctx.lineTo(ic50X, ic50Y);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // Draw IC50 label
+            ctx.fillStyle = '#ec4899';
+            ctx.font = 'bold 14px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('IC₅₀ = 2.3 nM', ic50X, ic50Y - 15);
+        }
+
+        function drawToxicity(width, height, padding) {
+            // Draw title
+            ctx.fillStyle = '#111827';
+            ctx.font = 'bold 18px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Toxicity Risk Assessment', width / 2, 35);
+
+            const risks = [
+                { label: 'Hepatotoxicity', risk: 15, threshold: 30 },
+                { label: 'Cardiotoxicity', risk: 22, threshold: 30 },
+                { label: 'Genotoxicity', risk: 8, threshold: 20 },
+                { label: 'Cytotoxicity', risk: 18, threshold: 30 }
+            ];
+
+            const centerX = width / 2;
+            const startY = 80;
+            const gaugeWidth = 200;
+            const gaugeHeight = 30;
+            const gaugeSpacing = 55;
+
+            risks.forEach((item, index) => {
+                const y = startY + index * gaugeSpacing;
+
+                // Draw label
+                ctx.fillStyle = '#4b5563';
+                ctx.font = '14px sans-serif';
+                ctx.textAlign = 'right';
+                ctx.fillText(item.label, centerX - gaugeWidth / 2 - 15, y + 20);
+
+                // Draw gauge background
+                ctx.fillStyle = '#e5e7eb';
+                ctx.fillRect(centerX - gaugeWidth / 2, y, gaugeWidth, gaugeHeight);
+
+                // Draw risk zones
+                const safeZone = gaugeWidth * (item.threshold / 100);
+                ctx.fillStyle = '#10b981';
+                ctx.fillRect(centerX - gaugeWidth / 2, y, safeZone, gaugeHeight);
+                ctx.fillStyle = '#ef4444';
+                ctx.fillRect(centerX - gaugeWidth / 2 + safeZone, y, gaugeWidth - safeZone, gaugeHeight);
+
+                // Draw risk level
+                const riskWidth = gaugeWidth * (item.risk / 100);
+                ctx.fillStyle = 'rgba(236, 72, 153, 0.8)';
+                ctx.fillRect(centerX - gaugeWidth / 2, y, riskWidth, gaugeHeight);
+
+                // Draw border
+                ctx.strokeStyle = '#9ca3af';
+                ctx.lineWidth = 1;
+                ctx.strokeRect(centerX - gaugeWidth / 2, y, gaugeWidth, gaugeHeight);
+
+                // Draw risk value
+                ctx.fillStyle = '#111827';
+                ctx.font = 'bold 13px sans-serif';
+                ctx.textAlign = 'left';
+                ctx.fillText(item.risk + '%', centerX + gaugeWidth / 2 + 10, y + 20);
+
+                // Draw status
+                const status = item.risk < item.threshold ? '✓ Safe' : '⚠ Risk';
+                ctx.fillStyle = item.risk < item.threshold ? '#10b981' : '#ef4444';
+                ctx.font = 'bold 13px sans-serif';
+                ctx.fillText(status, centerX + gaugeWidth / 2 + 60, y + 20);
+            });
+        }
+
+        // Initialize with Lipinski's rule
+        setTimeout(() => {
+            showProperty('lipinski');
+        }, 100);
+
+        // Parallax effect for hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero');
+            if (parallax) {
+                parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Add smooth reveal animations
+        const revealElements = document.querySelectorAll('.stat-card, .topic-item, .breakthrough-card');
+        
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0) scale(1)';
+                    }, index * 100);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // Add ripple effect to buttons
+        document.querySelectorAll('.cta-button, .viz-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple');
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        // Add keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.topic-item.expanded').forEach(item => {
+                    item.classList.remove('expanded');
+                });
+            }
+        });
+
+        // Performance optimization: Lazy load images if any are added
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                            imageObserver.unobserve(img);
+                        }
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        console.log('💊 Medicinal Chemistry page loaded successfully!');
+        console.log('✨ All interactive features activated');
+    </script>
+</body>
+</html>

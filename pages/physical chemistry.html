@@ -1,0 +1,2126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physical Chemistry — Chemisters</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        nav {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            padding: 15px 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .breadcrumb {
+            font-size: 0.85em;
+            color: #6b7280;
+            margin-top: 8px;
+        }
+
+        .breadcrumb a {
+            color: #6b7280;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            color: #f59e0b;
+        }
+
+        .breadcrumb span {
+            margin: 0 8px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #2563eb;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #4b5563;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #f59e0b;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #f59e0b;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: #ffffff;
+            padding: 120px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: float-particle 15s infinite;
+        }
+
+        @keyframes float-particle {
+            0% {
+                transform: translateY(100vh) translateX(0) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) translateX(100px) scale(1);
+                opacity: 0;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .hero-icon {
+            animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+        }
+
+        .hero-icon:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .hero-icon:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-title {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1.5px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-subtitle {
+            font-size: 1.4em;
+            opacity: 0;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-weight: 400;
+            line-height: 1.6;
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+        }
+
+        .hero-cta {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.6s forwards;
+        }
+
+        .hero-cta button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-cta button:hover {
+            background: white;
+            color: #f59e0b;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .quick-nav {
+            background: #f9fafb;
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 81px;
+            z-index: 90;
+            backdrop-filter: blur(10px);
+            background: rgba(249, 250, 251, 0.95);
+            transition: top 0.3s ease;
+        }
+
+        nav.scrolled ~ .hero ~ .quick-nav {
+            top: 71px;
+        }
+
+        .quick-nav-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .quick-nav-list a {
+            padding: 8px 18px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #4b5563;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quick-nav-list a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .quick-nav-list a:hover::before {
+            left: 100%;
+        }
+
+        .quick-nav-list a:hover {
+            background: #f59e0b;
+            color: #ffffff;
+            border-color: #f59e0b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+        }
+
+        .intro-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+        }
+
+        .intro-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .intro-text {
+            font-size: 1.2em;
+            color: #374151;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .intro-text.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 35px;
+            text-align: center;
+            transition: all 0.4s ease;
+            opacity: 0;
+            transform: translateY(20px) scale(0.95);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .stat-card:hover::before {
+            opacity: 1;
+        }
+
+        .stat-card.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .stat-card:hover {
+            border-color: #f59e0b;
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.2);
+        }
+
+        .stat-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            display: inline-block;
+            transition: transform 0.4s ease;
+        }
+
+        .stat-card:hover .stat-icon {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .stat-number {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #f59e0b;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .stat-label {
+            font-size: 0.95em;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #111827;
+            letter-spacing: -1px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #f59e0b, #d97706);
+            border-radius: 2px;
+        }
+
+        .section-intro {
+            font-size: 1.15em;
+            color: #6b7280;
+            max-width: 800px;
+            margin-bottom: 50px;
+            line-height: 1.7;
+        }
+
+        .topics-list {
+            display: grid;
+            gap: 30px;
+            max-width: 1000px;
+        }
+
+        .topic-item {
+            background: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-left: 5px solid #f59e0b;
+            border-radius: 12px;
+            padding: 35px 40px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateX(-30px);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .topic-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, #f59e0b, #d97706);
+            transition: width 0.4s ease;
+        }
+
+        .topic-item:hover::before {
+            width: 100%;
+            opacity: 0.05;
+        }
+
+        .topic-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .topic-item:hover {
+            border-left-color: #d97706;
+            box-shadow: 0 8px 30px rgba(245, 158, 11, 0.2);
+            transform: translateX(10px) translateY(-4px);
+        }
+
+        .topic-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .topic-icon {
+            font-size: 2.5em;
+            margin-right: 20px;
+            opacity: 0.9;
+            transition: transform 0.3s ease;
+        }
+
+        .topic-item:hover .topic-icon {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .topic-title {
+            font-size: 1.35em;
+            font-weight: 700;
+            color: #111827;
+            flex: 1;
+            line-height: 1.4;
+        }
+
+        .expand-icon {
+            font-size: 1.4em;
+            color: #f59e0b;
+            transition: transform 0.4s ease;
+            margin-left: 15px;
+        }
+
+        .topic-item.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .topic-description {
+            font-size: 1.05em;
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .topic-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .topic-item.expanded .topic-details {
+            max-height: 600px;
+        }
+
+        .topic-examples {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 20px;
+            border-left: 3px solid #f59e0b;
+        }
+
+        .topic-examples h4 {
+            font-size: 1.05em;
+            color: #f59e0b;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .topic-examples h4::before {
+            content: '🔬';
+            font-size: 1.2em;
+        }
+
+        .topic-examples ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .topic-examples li {
+            padding: 10px 0;
+            color: #4b5563;
+            font-size: 0.95em;
+            padding-left: 25px;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+
+        .topic-examples li:hover {
+            color: #111827;
+            padding-left: 30px;
+        }
+
+        .topic-examples li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #f59e0b;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+        }
+
+        .topic-examples li:hover::before {
+            transform: translateX(5px);
+        }
+
+        .comparison-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+        }
+
+        .comparison-table {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .comparison-table.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            border-bottom: 1px solid #e5e7eb;
+            transition: background 0.3s ease;
+        }
+
+        .comparison-row:hover {
+            background: #f9fafb;
+        }
+
+        .comparison-row.header {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-row.header:hover {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+
+        .comparison-cell {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 0.95em;
+        }
+
+        .comparison-cell:first-child {
+            justify-content: flex-start;
+            text-align: left;
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .comparison-row.header .comparison-cell {
+            color: white;
+        }
+
+        .breakthrough-section {
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .breakthrough-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .breakthrough-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .breakthrough-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateY(30px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .breakthrough-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #f59e0b, #d97706);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .breakthrough-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .breakthrough-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .breakthrough-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px rgba(245, 158, 11, 0.25);
+        }
+
+        .breakthrough-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(245, 158, 11, 0.3);
+        }
+
+        .breakthrough-title {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .breakthrough-description {
+            color: #4b5563;
+            line-height: 1.8;
+            font-size: 0.98em;
+        }
+
+        .breakthrough-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            display: block;
+            opacity: 0.8;
+        }
+
+        .visualization-section {
+            padding: 100px 0;
+            background: #ffffff;
+        }
+
+        .viz-container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+            border-radius: 20px;
+            padding: 50px;
+            border: 2px solid #e5e7eb;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .energy-display {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 30px;
+            position: relative;
+            height: 350px;
+            border: 2px solid #e5e7eb;
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.03);
+        }
+
+        .energy-canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        .viz-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .viz-button {
+            padding: 14px 24px;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .viz-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .viz-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .viz-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+        }
+
+        .viz-button:active {
+            transform: translateY(-1px);
+        }
+
+        .viz-button.active {
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+            box-shadow: 0 2px 10px rgba(245, 158, 11, 0.5);
+        }
+
+        .timeline-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+        }
+
+        .timeline {
+            max-width: 900px;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #f59e0b, #d97706);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 50px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 30px rgba(245, 158, 11, 0.2);
+        }
+
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 0 5px #fff, 0 0 0 8px #f59e0b;
+            z-index: 1;
+        }
+
+        .timeline-year {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #f59e0b;
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .timeline-description {
+            color: #4b5563;
+            line-height: 1.7;
+            font-size: 0.95em;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-title {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-text {
+            font-size: 1.2em;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: #ffffff;
+            color: #f59e0b;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            background: #f9fafb;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.6em;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 8px 30px rgba(245, 158, 11, 0.5);
+        }
+
+        .back-to-top::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.6s ease;
+        }
+
+        .back-to-top:hover::after {
+            transform: translate(-50%, -50%) scale(1.5);
+            opacity: 0;
+        }
+
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            padding: 80px 0 40px;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #374151, transparent);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 50px;
+        }
+
+        .footer-section h4 {
+            color: #ffffff;
+            font-size: 1.2em;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .footer-section p {
+            color: #9ca3af;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 14px;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid #374151;
+            color: #6b7280;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5em;
+            }
+
+            .hero-subtitle {
+                font-size: 1.15em;
+            }
+
+            .section-header {
+                font-size: 2em;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .topic-item {
+                padding: 25px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .breakthrough-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-nav-list {
+                gap: 10px;
+            }
+
+            .quick-nav-list a {
+                padding: 6px 14px;
+                font-size: 0.85em;
+            }
+
+            .comparison-row {
+                grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            }
+
+            .comparison-cell {
+                padding: 15px 10px;
+                font-size: 0.85em;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                flex-direction: row !important;
+            }
+
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+
+            .viz-container {
+                padding: 30px 20px;
+            }
+
+            .cta-title {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="mainNav">
+        <div class="container">
+            <div class="nav-content">
+                <div>
+                    <a href="index.html" class="logo">Chemisters</a>
+                    <div class="breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span>›</span>
+                        <span>Physical Chemistry</span>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#coverage">All Topics</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="particles" id="particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-icons">
+                    <span class="hero-icon">🌡️</span>
+                    <span class="hero-icon">⚡</span>
+                    <span class="hero-icon">🔬</span>
+                </div>
+                <h1 class="hero-title">Physical Chemistry</h1>
+                <p class="hero-subtitle">Unveiling the Fundamental Laws Governing Molecular Behavior and Energy</p>
+                <div class="hero-cta">
+                    <button onclick="document.querySelector('#topics').scrollIntoView({behavior: 'smooth', block: 'start'})">
+                        Explore Topics ↓
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="quick-nav">
+        <div class="container">
+            <ul class="quick-nav-list">
+                <li><a href="#topics">📚 Topics</a></li>
+                <li><a href="#comparison">⚖️ Laws & Principles</a></li>
+                <li><a href="#timeline">📅 Timeline</a></li>
+                <li><a href="#breakthroughs">🚀 Advances</a></li>
+                <li><a href="#visualization">🎨 Energy Diagrams</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="intro-section">
+        <div class="container">
+            <div class="intro-content">
+                <p class="intro-text">Physical chemistry bridges physics and molecular science to explain why matter behaves the way it does, from energy transformations to quantum phenomena.</p>
+                <p class="intro-text">At Chemisters, we explore thermodynamics, kinetics, and quantum mechanics that shape reactivity, stability, and energy transfer. Our focus includes computational modeling, spectroscopic techniques, and machine learning applications for predicting molecular properties and reaction dynamics.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-number">kJ/mol</div>
+                        <div class="stat-label">Energy Precision</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📈</div>
+                        <div class="stat-number">10⁻¹⁵s</div>
+                        <div class="stat-label">Femtosecond Resolution</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Laws of Thermodynamics</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💻</div>
+                        <div class="stat-number">DFT</div>
+                        <div class="stat-label">Computational Methods</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section" id="topics">
+        <div class="container">
+            <h2 class="section-header">Topics Covered</h2>
+            <p class="section-intro">Comprehensive exploration of fundamental principles governing molecular behavior, energy transformations, and reaction dynamics.</p>
+            
+            <div class="topics-list">
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">⚡</span>
+                        <h3 class="topic-title">Chemical Kinetics and Reaction Mechanisms</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Detailed analysis of reaction rates, rate laws, and mechanistic pathways including elementary steps, transition states, activation energies, and catalytic cycles that control chemical transformations.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Key Concepts:</h4>
+                            <ul>
+                                <li>Arrhenius equation and temperature-dependent rate constants</li>
+                                <li>Transition state theory and reaction coordinate diagrams</li>
+                                <li>Elementary reactions and multi-step mechanisms</li>
+                                <li>Steady-state approximation in complex reactions</li>
+                                <li>Enzyme kinetics and Michaelis-Menten equations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">🌡️</span>
+                        <h3 class="topic-title">Thermodynamics and Equilibrium Systems</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Exploration of energy, entropy, and free energy principles governing spontaneity, equilibrium, phase transitions, and molecular stability in chemical and biological systems.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Key Concepts:</h4>
+                            <ul>
+                                <li>First, second, and third laws of thermodynamics</li>
+                                <li>Gibbs free energy and spontaneity predictions</li>
+                                <li>Chemical equilibrium and Le Chatelier's principle</li>
+                                <li>Phase diagrams and Clausius-Clapeyron equation</li>
+                                <li>Statistical thermodynamics and partition functions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">🌀</span>
+                        <h3 class="topic-title">Quantum Chemistry and Spectroscopy</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Foundational quantum mechanical principles underlying molecular structure, bonding theories, and spectroscopic transitions including electronic, vibrational, and rotational energy levels.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Key Concepts:</h4>
+                            <ul>
+                                <li>Schrödinger equation and wave functions</li>
+                                <li>Molecular orbital theory and HOMO-LUMO gaps</li>
+                                <li>Selection rules for spectroscopic transitions</li>
+                                <li>Raman and infrared spectroscopy principles</li>
+                                <li>Electron spin resonance and NMR spectroscopy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">💧</span>
+                        <h3 class="topic-title">Surface and Interface Phenomena</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Investigation of molecular behavior at interfaces, surface tension, adsorption processes, colloidal systems, and heterogeneous catalysis critical to materials science and environmental chemistry.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Key Concepts:</h4>
+                            <ul>
+                                <li>Langmuir and BET adsorption isotherms</li>
+                                <li>Surface tension and capillary phenomena</li>
+                                <li>Catalytic mechanisms on solid surfaces</li>
+                                <li>Electrochemical double layer theory</li>
+                                <li>Self-assembly and supramolecular structures</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">💻</span>
+                        <h3 class="topic-title">Computational and Theoretical Methods</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Application of mathematical frameworks, density functional theory, molecular dynamics simulations, and machine learning to predict and simulate physical properties, phase behavior, and reaction pathways.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Key Concepts:</h4>
+                            <ul>
+                                <li>Density functional theory (DFT) calculations</li>
+                                <li>Molecular dynamics and Monte Carlo simulations</li>
+                                <li>Ab initio and semi-empirical methods</li>
+                                <li>Machine learning for property prediction</li>
+                                <li>Free energy calculations and enhanced sampling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison-section" id="comparison">
+        <div class="container">
+            <h2 class="section-header">Fundamental Laws & Principles</h2>
+            <p class="section-intro">Core physical chemistry principles that govern molecular behavior and energy transformations.</p>
+            
+            <div class="comparison-table">
+                <div class="comparison-row header">
+                    <div class="comparison-cell">Principle</div>
+                    <div class="comparison-cell">Domain</div>
+                    <div class="comparison-cell">Key Variable</div>
+                    <div class="comparison-cell">Application</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">1st Law of Thermodynamics</div>
+                    <div class="comparison-cell">Energy</div>
+                    <div class="comparison-cell">ΔU</div>
+                    <div class="comparison-cell">Conservation</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">2nd Law of Thermodynamics</div>
+                    <div class="comparison-cell">Entropy</div>
+                    <div class="comparison-cell">ΔS</div>
+                    <div class="comparison-cell">Spontaneity</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">Arrhenius Equation</div>
+                    <div class="comparison-cell">Kinetics</div>
+                    <div class="comparison-cell">Ea</div>
+                    <div class="comparison-cell">Rate constants</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">Schrödinger Equation</div>
+                    <div class="comparison-cell">Quantum</div>
+                    <div class="comparison-cell">Ψ</div>
+                    <div class="comparison-cell">Wave function</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">Gibbs Free Energy</div>
+                    <div class="comparison-cell">Equilibrium</div>
+                    <div class="comparison-cell">ΔG</div>
+                    <div class="comparison-cell">Feasibility</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline-section" id="timeline">
+        <div class="container">
+            <h2 class="section-header">Evolution of Physical Chemistry</h2>
+            <p class="section-intro">Key milestones that shaped our understanding of molecular behavior and energy transformations.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1850s</div>
+                        <div class="timeline-title">Birth of Thermodynamics</div>
+                        <div class="timeline-description">Clausius and Kelvin formulate the laws of thermodynamics, establishing the foundations for understanding energy transformations in chemical systems.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1889</div>
+                        <div class="timeline-title">Arrhenius Equation</div>
+                        <div class="timeline-description">Svante Arrhenius develops his temperature-dependent rate equation, revolutionizing chemical kinetics and reaction rate understanding.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1926</div>
+                        <div class="timeline-title">Quantum Mechanics Revolution</div>
+                        <div class="timeline-description">Schrödinger publishes his wave equation, providing the mathematical framework for understanding molecular structure and bonding at the quantum level.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1965</div>
+                        <div class="timeline-title">Density Functional Theory</div>
+                        <div class="timeline-description">Hohenberg and Kohn establish DFT foundations, later earning Kohn the Nobel Prize and transforming computational chemistry capabilities.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1999</div>
+                        <div class="timeline-title">Femtochemistry Era</div>
+                        <div class="timeline-description">Ahmed Zewail wins Nobel Prize for femtosecond spectroscopy, enabling direct observation of chemical bonds forming and breaking in real time.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020s</div>
+                        <div class="timeline-title">AI-Enhanced Physical Chemistry</div>
+                        <div class="timeline-description">Machine learning algorithms predict molecular properties, reaction pathways, and thermodynamic parameters with unprecedented accuracy and speed.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="breakthrough-section" id="breakthroughs">
+        <div class="container">
+            <h2 class="section-header">Latest Advances in Physical Chemistry</h2>
+            <p class="section-intro">Cutting-edge developments transforming our understanding of molecular behavior and energy systems.</p>
+            
+            <div class="breakthrough-grid">
+                <div class="breakthrough-card">
+                    <span class="breakthrough-icon">🔬</span>
+                    <span class="breakthrough-badge">Ultrafast Spectroscopy</span>
+                    <h3 class="breakthrough-title">Attosecond Pulse Technology</h3>
+                    <p class="breakthrough-description">Next-generation ultrafast spectroscopy with attosecond (10⁻¹⁸ s) time resolution enables direct observation of electron dynamics during chemical reactions, providing unprecedented insights into bond formation mechanisms.</p>
+                </div>
+
+                <div class="breakthrough-card">
+                    <span class="breakthrough-icon">🧠</span>
+                    <span class="breakthrough-badge">Machine Learning</span>
+                    <h3 class="breakthrough-title">Neural Network Potentials</h3>
+                    <p class="breakthrough-description">AI-trained potential energy surfaces achieve quantum mechanical accuracy at classical computational cost, revolutionizing molecular dynamics simulations and enabling large-scale reaction pathway exploration.</p>
+                </div>
+
+                <div class="breakthrough-card">
+                    <span class="breakthrough-icon">🌊</span>
+                    <span class="breakthrough-badge">Quantum Computing</span>
+                    <h3 class="breakthrough-title">Quantum Algorithms for Chemistry</h3>
+                    <p class="breakthrough-description">Variational quantum eigensolvers solve electronic structure problems beyond classical capabilities, promising exponential speedup for calculating molecular properties and reaction energetics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="visualization-section" id="visualization">
+        <div class="container">
+            <h2 class="section-header">Interactive Energy Diagrams</h2>
+            <p class="section-intro">Explore fundamental energy relationships in physical chemistry. Click the buttons to visualize different energy profiles.</p>
+            
+            <div class="viz-container">
+                <div class="energy-display">
+                    <canvas id="energyCanvas" class="energy-canvas"></canvas>
+                </div>
+                <div class="viz-controls">
+                    <button class="viz-button active" onclick="showDiagram('reaction')">
+                        <span style="position: relative; z-index: 1;">⚡ Reaction Coordinate</span>
+                    </button>
+                    <button class="viz-button" onclick="showDiagram('boltzmann')">
+                        <span style="position: relative; z-index: 1;">📊 Boltzmann Distribution</span>
+                    </button>
+                    <button class="viz-button" onclick="showDiagram('morse')">
+                        <span style="position: relative; z-index: 1;">🌊 Morse Potential</span>
+                    </button>
+                    <button class="viz-button" onclick="showDiagram('gibbs')">
+                        <span style="position: relative; z-index: 1;">📈 Gibbs Energy</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cta-section" id="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Follow Physical Chemistry Innovation</h2>
+                <p class="cta-text">Stay updated on thermodynamic modeling, kinetic analysis, quantum computational methods, and theoretical breakthroughs shaping molecular understanding.</p>
+                <a href="index.html#contact" class="cta-button">Connect With Us →</a>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Chemisters</h4>
+                    <p>The digital ecosystem of chemistry — where academic rigor meets modern communication.</p>
+                    <p>Chemistry evolves. Chemisters documents it.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#coverage">All Topics</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contact@chemisters.com">Email</a></li>
+                        <li><a href="https://www.chemisters.com">Website</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Chemisters. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Create animated particles in hero
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (10 + Math.random() * 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        createParticles();
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToAnimate = document.querySelectorAll(
+                '.intro-text, .stat-card, .topic-item, .breakthrough-card, .comparison-table, .timeline-item'
+            );
+            elementsToAnimate.forEach(el => observer.observe(el));
+
+            // Add stagger delay to stat cards
+            document.querySelectorAll('.stat-card').forEach((card, index) => {
+                card.style.transitionDelay = `${index * 0.1}s`;
+            });
+
+            // Add stagger delay to topic items
+            document.querySelectorAll('.topic-item').forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.1}s`;
+            });
+
+            // Add stagger delay to breakthrough cards
+            document.querySelectorAll('.breakthrough-card').forEach((card, index) => {
+                card.style.transitionDelay = `${index * 0.15}s`;
+            });
+
+            // Add stagger delay to timeline items
+            document.querySelectorAll('.timeline-item').forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.2}s`;
+            });
+        });
+
+        // Navigation scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+
+            // Back to top button
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Back to top functionality
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Expandable topic items
+        document.querySelectorAll('.topic-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') return;
+                this.classList.toggle('expanded');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 140;
+                    const targetPosition = target.offsetTop - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Interactive energy diagram visualization
+        const canvas = document.getElementById('energyCanvas');
+        const ctx = canvas.getContext('2d');
+        let currentDiagram = 'reaction';
+
+        function resizeCanvas() {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+            showDiagram(currentDiagram);
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        function showDiagram(type) {
+            currentDiagram = type;
+            
+            // Update active button
+            document.querySelectorAll('.viz-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.closest('.viz-button').classList.add('active');
+            
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            const width = canvas.width;
+            const height = canvas.height;
+            const padding = 50;
+
+            // Draw axes
+            ctx.strokeStyle = '#374151';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(padding, padding);
+            ctx.lineTo(padding, height - padding);
+            ctx.lineTo(width - padding, height - padding);
+            ctx.stroke();
+
+            // Draw grid
+            ctx.strokeStyle = '#e5e7eb';
+            ctx.lineWidth = 1;
+            for (let i = 1; i < 5; i++) {
+                const y = padding + (height - 2 * padding) * i / 5;
+                ctx.beginPath();
+                ctx.moveTo(padding, y);
+                ctx.lineTo(width - padding, y);
+                ctx.stroke();
+            }
+
+            // Draw diagram based on type
+            ctx.strokeStyle = '#f59e0b';
+            ctx.lineWidth = 3;
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = 'rgba(245, 158, 11, 0.5)';
+
+            switch(type) {
+                case 'reaction':
+                    drawReactionCoordinate(width, height, padding);
+                    drawEnergyLabel('Reaction Coordinate', 'Energy', 'Reaction Energy Diagram');
+                    break;
+                case 'boltzmann':
+                    drawBoltzmann(width, height, padding);
+                    drawEnergyLabel('Energy', 'Population', 'Boltzmann Distribution');
+                    break;
+                case 'morse':
+                    drawMorsePotential(width, height, padding);
+                    drawEnergyLabel('Internuclear Distance', 'Potential Energy', 'Morse Potential');
+                    break;
+                case 'gibbs':
+                    drawGibbsEnergy(width, height, padding);
+                    drawEnergyLabel('Temperature (K)', 'ΔG (kJ/mol)', 'Gibbs Energy vs Temperature');
+                    break;
+            }
+            
+            ctx.shadowBlur = 0;
+        }
+
+        function drawReactionCoordinate(width, height, padding) {
+            const baseY = height - padding - 80;
+            const activationHeight = 120;
+            const productOffset = -40;
+
+            ctx.beginPath();
+            ctx.moveTo(padding + 50, baseY);
+
+            // Reactants plateau
+            for (let i = 0; i <= 20; i++) {
+                const x = padding + 50 + i * 3;
+                const y = baseY + Math.sin(i * 0.5) * 2;
+                ctx.lineTo(x, y);
+            }
+
+            // Transition state rise
+            for (let i = 0; i <= 40; i++) {
+                const progress = i / 40;
+                const x = padding + 110 + i * 4;
+                const curve = Math.sin(progress * Math.PI / 2);
+                const y = baseY - activationHeight * curve;
+                ctx.lineTo(x, y);
+            }
+
+            // Transition state peak (small plateau)
+            for (let i = 0; i <= 15; i++) {
+                const x = padding + 270 + i * 2;
+                const y = baseY - activationHeight + Math.sin(i * 0.8) * 3;
+                ctx.lineTo(x, y);
+            }
+
+            // Products descent
+            for (let i = 0; i <= 40; i++) {
+                const progress = i / 40;
+                const x = padding + 300 + i * 4;
+                const curve = Math.cos(progress * Math.PI / 2);
+                const y = baseY - activationHeight + (activationHeight - Math.abs(productOffset)) * (1 - curve);
+                ctx.lineTo(x, y);
+            }
+
+            // Products plateau
+            for (let i = 0; i <= 20; i++) {
+                const x = padding + 460 + i * 3;
+                const y = baseY + productOffset + Math.sin(i * 0.5) * 2;
+                ctx.lineTo(x, y);
+            }
+
+            ctx.stroke();
+
+            // Add labels
+            ctx.fillStyle = '#111827';
+            ctx.font = 'bold 14px sans-serif';
+            ctx.fillText('Reactants', padding + 90, baseY + 30);
+            ctx.fillText('Products', padding + 480, baseY + productOffset + 30);
+            
+            ctx.fillStyle = '#f59e0b';
+            ctx.fillText('Transition State', padding + 250, baseY - activationHeight - 15);
+
+            // Draw energy arrows
+            ctx.strokeStyle = '#6b7280';
+            ctx.lineWidth = 2;
+            ctx.setLineDash([5, 5]);
+            
+            // Activation energy arrow
+            ctx.beginPath();
+            ctx.moveTo(padding + 30, baseY);
+            ctx.lineTo(padding + 30, baseY - activationHeight);
+            ctx.stroke();
+            
+            ctx.fillStyle = '#6b7280';
+            ctx.font = '12px sans-serif';
+            ctx.fillText('Ea', padding + 15, baseY - activationHeight / 2);
+
+            ctx.setLineDash([]);
+        }
+
+        function drawBoltzmann(width, height, padding) {
+            ctx.beginPath();
+            const startX = padding + 30;
+            const maxWidth = width - padding - startX;
+            
+            ctx.moveTo(startX, height - padding);
+
+            // Draw Boltzmann distribution curve
+            for (let i = 0; i <= 100; i++) {
+                const x = startX + maxWidth * i / 100;
+                const energy = i / 20;
+                
+                // Boltzmann distribution: P(E) ∝ E * exp(-E/kT)
+                const kT = 2.5;
+                const population = energy * Math.exp(-energy / kT);
+                const y = height - padding - (height - 2 * padding - 40) * population / 0.4;
+                
+                ctx.lineTo(x, y);
+            }
+
+            ctx.stroke();
+
+            // Fill under curve
+            ctx.lineTo(width - padding - 30, height - padding);
+            ctx.lineTo(startX, height - padding);
+            ctx.closePath();
+            ctx.fillStyle = 'rgba(245, 158, 11, 0.15)';
+            ctx.fill();
+
+            // Draw activation energy threshold
+            ctx.strokeStyle = '#dc2626';
+            ctx.lineWidth = 2;
+            ctx.setLineDash([8, 4]);
+            const eaX = startX + maxWidth * 0.65;
+            ctx.beginPath();
+            ctx.moveTo(eaX, padding + 40);
+            ctx.lineTo(eaX, height - padding);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // Label
+            ctx.fillStyle = '#dc2626';
+            ctx.font = 'bold 13px sans-serif';
+            ctx.fillText('Ea', eaX + 10, padding + 60);
+
+            // Shade area representing molecules with E ≥ Ea
+            ctx.fillStyle = 'rgba(220, 38, 38, 0.1)';
+            ctx.beginPath();
+            ctx.moveTo(eaX, height - padding);
+            
+            for (let i = 65; i <= 100; i++) {
+                const x = startX + maxWidth * i / 100;
+                const energy = i / 20;
+                const kT = 2.5;
+                const population = energy * Math.exp(-energy / kT);
+                const y = height - padding - (height - 2 * padding - 40) * population / 0.4;
+                ctx.lineTo(x, y);
+            }
+            
+            ctx.lineTo(width - padding - 30, height - padding);
+            ctx.closePath();
+            ctx.fill();
+        }
+
+        function drawMorsePotential(width, height, padding) {
+            const centerX = width / 2;
+            const minY = height - padding - 60;
+            const De = 150; // Dissociation energy
+
+            ctx.beginPath();
+            
+            for (let i = 0; i <= 100; i++) {
+                const r = 0.5 + i * 0.05; // Internuclear distance
+                const re = 1.5; // Equilibrium distance
+                const a = 1.5; // Width parameter
+                
+                // Morse potential: V(r) = De * (1 - exp(-a(r-re)))^2 - De
+                const morse = De * Math.pow(1 - Math.exp(-a * (r - re)), 2) - De;
+                
+                const x = padding + 50 + i * (width - 2 * padding - 100) / 100;
+                const y = minY - morse;
+                
+                if (i === 0) {
+                    ctx.moveTo(x, Math.max(y, padding + 20));
+                } else {
+                    ctx.lineTo(x, Math.max(y, padding + 20));
+                }
+            }
+
+            ctx.stroke();
+
+            // Draw equilibrium distance line
+            ctx.strokeStyle = '#10b981';
+            ctx.lineWidth = 2;
+            ctx.setLineDash([5, 5]);
+            const reX = padding + 50 + 20 * (width - 2 * padding - 100) / 100;
+            ctx.beginPath();
+            ctx.moveTo(reX, padding + 40);
+            ctx.lineTo(reX, height - padding);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // Draw dissociation energy
+            ctx.strokeStyle = '#6b7280';
+            ctx.setLineDash([3, 3]);
+            ctx.beginPath();
+            ctx.moveTo(padding + 50, minY - De);
+            ctx.lineTo(width - padding - 50, minY - De);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // Labels
+            ctx.fillStyle = '#10b981';
+            ctx.font = 'bold 13px sans-serif';
+            ctx.fillText('re', reX - 10, height - padding + 20);
+
+            ctx.fillStyle = '#6b7280';
+            ctx.fillText('De', width - padding - 70, minY - De - 10);
+
+            // Draw well minimum indicator
+            ctx.beginPath();
+            ctx.arc(reX, minY, 5, 0, Math.PI * 2);
+            ctx.fillStyle = '#f59e0b';
+            ctx.fill();
+        }
+
+        function drawGibbsEnergy(width, height, padding) {
+            const midY = (height - padding + padding) / 2;
+
+            // Draw ΔG = 0 line
+            ctx.strokeStyle = '#6b7280';
+            ctx.lineWidth = 1;
+            ctx.setLineDash([5, 5]);
+            ctx.beginPath();
+            ctx.moveTo(padding, midY);
+            ctx.lineTo(width - padding, midY);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // Draw ΔG curve
+            ctx.strokeStyle = '#f59e0b';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+
+            for (let i = 0; i <= 100; i++) {
+                const x = padding + (width - 2 * padding) * i / 100;
+                const T = 200 + i * 6; // Temperature from 200K to 800K
+                
+                // ΔG = ΔH - TΔS (simplified: ΔH = 100 kJ/mol, ΔS = 0.15 kJ/mol·K)
+                const deltaH = 100;
+                const deltaS = 0.15;
+                const deltaG = deltaH - T * deltaS;
+                
+                // Scale to canvas
+                const y = midY - deltaG * 0.8;
+                
+                if (i === 0) {
+                    ctx.moveTo(x, y);
+                } else {
+                    ctx.lineTo(x, y);
+                }
+            }
+
+            ctx.stroke();
+
+            // Mark transition point where ΔG = 0
+            const T_transition = 100 / 0.15; // Temperature where ΔG = 0
+            const transitionX = padding + (width - 2 * padding) * (T_transition - 200) / 600;
+
+            ctx.beginPath();
+            ctx.arc(transitionX, midY, 6, 0, Math.PI * 2);
+            ctx.fillStyle = '#ef4444';
+            ctx.fill();
+
+            // Labels
+            ctx.fillStyle = '#111827';
+            ctx.font = '13px sans-serif';
+            ctx.fillText('ΔG = 0', width - padding - 80, midY - 15);
+            
+            ctx.fillStyle = '#ef4444';
+            ctx.font = 'bold 12px sans-serif';
+            ctx.fillText(`T = ${Math.round(T_transition)}K`, transitionX - 30, midY + 25);
+
+            // Regions
+            ctx.fillStyle = '#10b981';
+            ctx.font = 'bold 14px sans-serif';
+            ctx.fillText('Spontaneous', padding + 50, midY + 60);
+
+            ctx.fillStyle = '#ef4444';
+            ctx.fillText('Non-spontaneous', width - padding - 140, midY - 60);
+        }
+
+        function drawEnergyLabel(xLabel, yLabel, title) {
+            ctx.fillStyle = '#374151';
+            ctx.font = '13px -apple-system, BlinkMacSystemFont, sans-serif';
+            ctx.textAlign = 'center';
+            
+            // X-axis label
+            ctx.fillText(xLabel, canvas.width / 2, canvas.height - 15);
+            
+            // Y-axis label
+            ctx.save();
+            ctx.translate(18, canvas.height / 2);
+            ctx.rotate(-Math.PI / 2);
+            ctx.fillText(yLabel, 0, 0);
+            ctx.restore();
+            
+            // Title
+            ctx.font = 'bold 16px -apple-system, BlinkMacSystemFont, sans-serif';
+            ctx.fillStyle = '#111827';
+            ctx.fillText(title, canvas.width / 2, 30);
+        }
+
+        // Initialize with reaction coordinate diagram
+        setTimeout(() => {
+            showDiagram('reaction');
+        }, 100);
+
+        // Parallax effect for hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero');
+            if (parallax) {
+                parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Add smooth reveal animations
+        const revealElements = document.querySelectorAll('.stat-card, .topic-item, .breakthrough-card');
+        
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0) scale(1)';
+                    }, index * 100);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        console.log('⚡ Physical Chemistry page loaded successfully!');
+        console.log('✨ All interactive energy diagrams activated');
+    </script>
+</body>
+</html>

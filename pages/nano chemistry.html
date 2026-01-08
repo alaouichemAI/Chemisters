@@ -1,0 +1,2253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanochemistry — Chemisters</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        nav {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 0;
+            position: relative;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            padding: 20px 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .breadcrumb {
+            font-size: 0.85em;
+            color: #6b7280;
+            margin-top: 8px;
+        }
+
+        .breadcrumb a {
+            color: #6b7280;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            color: #06b6d4;
+        }
+
+        .breadcrumb span {
+            margin: 0 8px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #2563eb;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #4b5563;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #06b6d4;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #06b6d4;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+            color: #ffffff;
+            padding: 120px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: float-particle 15s infinite;
+        }
+
+        @keyframes float-particle {
+            0% {
+                transform: translateY(100vh) translateX(0) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) translateX(100px) scale(1);
+                opacity: 0;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .hero-icon {
+            animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+        }
+
+        .hero-icon:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .hero-icon:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-title {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1.5px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-subtitle {
+            font-size: 1.4em;
+            opacity: 0;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-weight: 400;
+            line-height: 1.6;
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+        }
+
+        .hero-cta {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.6s forwards;
+        }
+
+        .hero-cta button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-cta button:hover {
+            background: white;
+            color: #06b6d4;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .quick-nav {
+            background: #f9fafb;
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e7eb;
+            position: relative;
+            z-index: 90;
+        }
+
+        .quick-nav-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .quick-nav-list a {
+            padding: 8px 18px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #4b5563;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quick-nav-list a:hover {
+            background: #06b6d4;
+            color: #ffffff;
+            border-color: #06b6d4;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+        }
+
+        .intro-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+        }
+
+        .intro-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .intro-text {
+            font-size: 1.2em;
+            color: #374151;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .intro-text.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 35px;
+            text-align: center;
+            transition: all 0.4s ease;
+            opacity: 0;
+            transform: translateY(20px) scale(0.95);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .stat-card:hover::before {
+            opacity: 1;
+        }
+
+        .stat-card.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .stat-card:hover {
+            border-color: #06b6d4;
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(6, 182, 212, 0.2);
+        }
+
+        .stat-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            display: inline-block;
+            transition: transform 0.4s ease;
+        }
+
+        .stat-card:hover .stat-icon {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .stat-number {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #06b6d4;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .stat-label {
+            font-size: 0.95em;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #111827;
+            letter-spacing: -1px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #06b6d4, #0891b2);
+            border-radius: 2px;
+        }
+
+        .section-intro {
+            font-size: 1.15em;
+            color: #6b7280;
+            max-width: 800px;
+            margin-bottom: 50px;
+            line-height: 1.7;
+        }
+
+        .topics-list {
+            display: grid;
+            gap: 30px;
+            max-width: 1000px;
+        }
+
+        .topic-item {
+            background: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-left: 5px solid #06b6d4;
+            border-radius: 12px;
+            padding: 35px 40px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateX(-30px);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .topic-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, #06b6d4, #0891b2);
+            transition: width 0.4s ease;
+        }
+
+        .topic-item:hover::before {
+            width: 100%;
+            opacity: 0.05;
+        }
+
+        .topic-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .topic-item:hover {
+            border-left-color: #0891b2;
+            box-shadow: 0 8px 30px rgba(6, 182, 212, 0.2);
+            transform: translateX(10px) translateY(-4px);
+        }
+
+        .topic-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .topic-icon {
+            font-size: 2.5em;
+            margin-right: 20px;
+            opacity: 0.9;
+            transition: transform 0.3s ease;
+        }
+
+        .topic-item:hover .topic-icon {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .topic-title {
+            font-size: 1.35em;
+            font-weight: 700;
+            color: #111827;
+            flex: 1;
+            line-height: 1.4;
+        }
+
+        .expand-icon {
+            font-size: 1.4em;
+            color: #06b6d4;
+            transition: transform 0.4s ease;
+            margin-left: 15px;
+        }
+
+        .topic-item.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .topic-description {
+            font-size: 1.05em;
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .topic-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .topic-item.expanded .topic-details {
+            max-height: 600px;
+        }
+
+        .topic-examples {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 20px;
+            border-left: 3px solid #06b6d4;
+        }
+
+        .topic-examples h4 {
+            font-size: 1.05em;
+            color: #06b6d4;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .topic-examples h4::before {
+            content: '💡';
+            font-size: 1.2em;
+        }
+
+        .topic-examples ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .topic-examples li {
+            padding: 10px 0;
+            color: #4b5563;
+            font-size: 0.95em;
+            padding-left: 25px;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+
+        .topic-examples li:hover {
+            color: #111827;
+            padding-left: 30px;
+        }
+
+        .topic-examples li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #06b6d4;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+        }
+
+        .topic-examples li:hover::before {
+            transform: translateX(5px);
+        }
+
+        .scale-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+        }
+
+        .scale-visualization {
+            max-width: 1000px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 16px;
+            padding: 50px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .scale-item {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 25px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+            border-radius: 12px;
+            border-left: 4px solid #06b6d4;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+
+        .scale-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scale-item:hover {
+            box-shadow: 0 4px 20px rgba(6, 182, 212, 0.15);
+        }
+
+        .scale-icon {
+            font-size: 3em;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .scale-content {
+            flex: 1;
+        }
+
+        .scale-title {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+
+        .scale-size {
+            font-size: 1.1em;
+            color: #06b6d4;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .scale-description {
+            color: #4b5563;
+            line-height: 1.6;
+        }
+
+        .applications-section {
+            background: linear-gradient(135deg, #ecfeff 0%, #cffafe 100%);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .applications-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .applications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .application-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 4px 20px rgba(6, 182, 212, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateY(30px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .application-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #06b6d4, #0891b2);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .application-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .application-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .application-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px rgba(6, 182, 212, 0.25);
+        }
+
+        .application-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(6, 182, 212, 0.3);
+        }
+
+        .application-title {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .application-description {
+            color: #4b5563;
+            line-height: 1.8;
+            font-size: 0.98em;
+        }
+
+        .application-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            display: block;
+            opacity: 0.8;
+        }
+
+        .timeline-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+        }
+
+        .timeline {
+            max-width: 900px;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #06b6d4, #0891b2);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 50px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            box-shadow: 0 8px 30px rgba(6, 182, 212, 0.2);
+        }
+
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, #06b6d4, #0891b2);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 0 5px #fff, 0 0 0 8px #06b6d4;
+            z-index: 1;
+        }
+
+        .timeline-year {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #06b6d4;
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .timeline-description {
+            color: #4b5563;
+            line-height: 1.7;
+            font-size: 0.95em;
+        }
+
+        .interactive-section {
+            padding: 100px 0;
+            background: #ffffff;
+        }
+
+        .nano-canvas {
+            max-width: 900px;
+            margin: 50px auto;
+            background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+            border-radius: 20px;
+            padding: 50px;
+            border: 2px solid #e5e7eb;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .canvas-display {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            position: relative;
+            height: 400px;
+            border: 2px solid #e5e7eb;
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.03);
+        }
+
+        #nanoCanvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .canvas-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .control-button {
+            padding: 14px 24px;
+            background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+            box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .control-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .control-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .control-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(6, 182, 212, 0.4);
+        }
+
+        .control-button:active {
+            transform: translateY(-1px);
+        }
+
+        .control-button.active {
+            background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+            box-shadow: 0 2px 10px rgba(6, 182, 212, 0.5);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-title {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-text {
+            font-size: 1.2em;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: #ffffff;
+            color: #06b6d4;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            background: #f9fafb;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.6em;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(6, 182, 212, 0.4);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 8px 30px rgba(6, 182, 212, 0.5);
+        }
+
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            padding: 80px 0 40px;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #374151, transparent);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 50px;
+        }
+
+        .footer-section h4 {
+            color: #ffffff;
+            font-size: 1.2em;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .footer-section p {
+            color: #9ca3af;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 14px;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid #374151;
+            color: #6b7280;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5em;
+            }
+
+            .hero-subtitle {
+                font-size: 1.15em;
+            }
+
+            .section-header {
+                font-size: 2em;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .topic-item {
+                padding: 25px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .applications-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-nav-list {
+                gap: 10px;
+            }
+
+            .quick-nav-list a {
+                padding: 6px 14px;
+                font-size: 0.85em;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                flex-direction: row !important;
+            }
+
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+
+            .nano-canvas {
+                padding: 30px 20px;
+            }
+
+            .cta-title {
+                font-size: 2em;
+            }
+
+            .scale-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="mainNav">
+        <div class="container">
+            <div class="nav-content">
+                <div>
+                    <a href="index.html" class="logo">Chemisters</a>
+                    <div class="breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span>›</span>
+                        <span>Nanochemistry</span>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#coverage">All Topics</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="particles" id="particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-icons">
+                    <span class="hero-icon">⚛️</span>
+                    <span class="hero-icon">🔬</span>
+                    <span class="hero-icon">✨</span>
+                </div>
+                <h1 class="hero-title">Nanochemistry</h1>
+                <p class="hero-subtitle">Engineering Matter at the Atomic Scale — Where Chemistry Meets Quantum Physics</p>
+                <div class="hero-cta">
+                    <button onclick="document.querySelector('#topics').scrollIntoView({behavior: 'smooth', block: 'start'})">
+                        Explore Topics ↓
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="quick-nav">
+        <div class="container">
+            <ul class="quick-nav-list">
+                <li><a href="#topics">📚 Topics</a></li>
+                <li><a href="#scale">📏 Scale Visualization</a></li>
+                <li><a href="#timeline">📅 Timeline</a></li>
+                <li><a href="#applications">🚀 Applications</a></li>
+                <li><a href="#interactive">🎨 Interactive Demo</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="intro-section">
+        <div class="container">
+            <div class="intro-content">
+                <p class="intro-text">Nanochemistry merges molecular precision with nanoscale engineering to create materials with transformative properties that don't exist in bulk forms.</p>
+                <p class="intro-text">At Chemisters, we explore cutting-edge synthesis techniques, quantum confinement effects, and surface chemistry at dimensions where classical physics meets quantum mechanics. From targeted drug delivery to quantum computing materials, nanochemistry is reshaping the boundaries of what's chemically possible.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📐</div>
+                        <div class="stat-number">1-100</div>
+                        <div class="stat-label">Nanometer Scale</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-number">10⁶</div>
+                        <div class="stat-label">Surface Atom Ratio</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-number">1000x</div>
+                        <div class="stat-label">Enhanced Reactivity</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🔮</div>
+                        <div class="stat-number">Quantum</div>
+                        <div class="stat-label">Size Effects</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section" id="topics">
+        <div class="container">
+            <h2 class="section-header">Topics Covered</h2>
+            <p class="section-intro">Comprehensive exploration of nanomaterial design, synthesis, characterization, and revolutionary applications across disciplines.</p>
+            
+            <div class="topics-list">
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">🧬</span>
+                        <h3 class="topic-title">Nanoparticle Synthesis and Self-Assembly</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Advanced bottom-up and top-down synthesis methods including sol-gel processes, chemical vapor deposition, hydrothermal synthesis, and directed self-assembly for creating precisely controlled nanostructures.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>Gold nanoparticles for cancer photothermal therapy</li>
+                                <li>Quantum dots in next-generation display technology</li>
+                                <li>Self-assembled monolayers for molecular electronics</li>
+                                <li>Core-shell nanoparticles for controlled drug release</li>
+                                <li>Plasmonic nanostructures for ultrasensitive biosensing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">⚡</span>
+                        <h3 class="topic-title">Nanocatalysis and Surface Engineering</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Exploiting high surface-to-volume ratios and quantum size effects in nanostructured catalysts for unprecedented activity, selectivity, and efficiency in chemical transformations and energy conversion.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>Platinum nanoparticles in fuel cell electrodes</li>
+                                <li>Metal-organic frameworks for CO2 capture and conversion</li>
+                                <li>Nano-zeolites in petroleum refining processes</li>
+                                <li>Single-atom catalysts for green hydrogen production</li>
+                                <li>Photocatalytic nanoparticles for water purification</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">💊</span>
+                        <h3 class="topic-title">Nanomedicine and Targeted Delivery</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Design of biocompatible nanocarriers, functionalized nanoparticles for targeted drug delivery, diagnostic imaging contrast agents, and theranostic platforms combining therapy and diagnostics.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>Lipid nanoparticles in mRNA vaccine delivery</li>
+                                <li>Iron oxide nanoparticles for MRI contrast enhancement</li>
+                                <li>Antibody-conjugated nanoparticles for cancer targeting</li>
+                                <li>Quantum dots for cellular imaging and tracking</li>
+                                <li>Stimuli-responsive nanocarriers for controlled release</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">🔋</span>
+                        <h3 class="topic-title">Nanomaterials for Energy Storage and Conversion</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Development of nanostructured electrodes, quantum-confined semiconductors for photovoltaics, and advanced materials for batteries, supercapacitors, and renewable energy technologies.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>Silicon nanowires for high-capacity lithium-ion batteries</li>
+                                <li>Perovskite nanocrystals in solar cell technology</li>
+                                <li>Carbon nanotubes for supercapacitor electrodes</li>
+                                <li>Nanostructured catalysts for water splitting</li>
+                                <li>Graphene-based materials for flexible electronics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">🔬</span>
+                        <h3 class="topic-title">Characterization and Quantum Properties</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Advanced techniques for probing nanoscale structure, composition, and properties including electron microscopy, scanning probe methods, and spectroscopic analysis of quantum confinement effects.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>Transmission electron microscopy for atomic-resolution imaging</li>
+                                <li>Atomic force microscopy for surface topography mapping</li>
+                                <li>X-ray photoelectron spectroscopy for surface chemistry</li>
+                                <li>Dynamic light scattering for size distribution analysis</li>
+                                <li>Fluorescence spectroscopy for quantum dot characterization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="scale-section" id="scale">
+        <div class="container">
+            <h2 class="section-header">Understanding the Nanoscale</h2>
+            <p class="section-intro">Visualize the incredible dimensions where nanochemistry operates, from atoms to visible structures.</p>
+            
+            <div class="scale-visualization">
+                <div class="scale-item">
+                    <div class="scale-icon">⚛️</div>
+                    <div class="scale-content">
+                        <div class="scale-title">Atoms</div>
+                        <div class="scale-size">0.1 - 0.3 nm</div>
+                        <div class="scale-description">Individual atoms and small molecules. The fundamental building blocks where quantum mechanics dominates.</div>
+                    </div>
+                </div>
+
+                <div class="scale-item">
+                    <div class="scale-icon">🔵</div>
+                    <div class="scale-content">
+                        <div class="scale-title">Quantum Dots</div>
+                        <div class="scale-size">2 - 10 nm</div>
+                        <div class="scale-description">Semiconductor nanocrystals exhibiting quantum confinement effects and size-tunable optical properties.</div>
+                    </div>
+                </div>
+
+                <div class="scale-item">
+                    <div class="scale-icon">✨</div>
+                    <div class="scale-content">
+                        <div class="scale-title">Nanoparticles</div>
+                        <div class="scale-size">1 - 100 nm</div>
+                        <div class="scale-description">The core nanoscale regime where materials exhibit unique properties distinct from bulk counterparts.</div>
+                    </div>
+                </div>
+
+                <div class="scale-item">
+                    <div class="scale-icon">🧬</div>
+                    <div class="scale-content">
+                        <div class="scale-title">Proteins & DNA</div>
+                        <div class="scale-size">5 - 50 nm</div>
+                        <div class="scale-description">Biological macromolecules providing templates and inspiration for nanomaterial design.</div>
+                    </div>
+                </div>
+
+                <div class="scale-item">
+                    <div class="scale-icon">🦠</div>
+                    <div class="scale-content">
+                        <div class="scale-title">Viruses</div>
+                        <div class="scale-size">20 - 300 nm</div>
+                        <div class="scale-description">Biological nanostructures at the upper limit of the nanoscale, bridging to microscale.</div>
+                    </div>
+                </div>
+
+                <div class="scale-item">
+                    <div class="scale-icon">👁️</div>
+                    <div class="scale-content">
+                        <div class="scale-title">Wavelength of Light</div>
+                        <div class="scale-size">400 - 700 nm</div>
+                        <div class="scale-description">Visible light wavelengths, beyond which structures become optically visible.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline-section" id="timeline">
+        <div class="container">
+            <h2 class="section-header">Evolution of Nanochemistry</h2>
+            <p class="section-intro">Key milestones that shaped our ability to manipulate matter at the atomic scale.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1959</div>
+                        <div class="timeline-title">Feynman's Vision</div>
+                        <div class="timeline-description">Richard Feynman delivers his famous lecture "There's Plenty of Room at the Bottom," envisioning the possibility of manipulating individual atoms and molecules.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1981</div>
+                        <div class="timeline-title">Scanning Tunneling Microscope</div>
+                        <div class="timeline-description">Binnig and Rohrer invent the STM, enabling visualization and manipulation of individual atoms, earning them the Nobel Prize in 1986.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1985</div>
+                        <div class="timeline-title">Discovery of Fullerenes</div>
+                        <div class="timeline-description">Buckminsterfullerene (C60) discovered by Kroto, Curl, and Smalley, opening the field of carbon nanomaterials and earning the 1996 Nobel Prize.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1991</div>
+                        <div class="timeline-title">Carbon Nanotubes</div>
+                        <div class="timeline-description">Iijima reports multi-walled carbon nanotubes, revolutionizing materials science with their extraordinary mechanical and electronic properties.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2010s</div>
+                        <div class="timeline-title">Nanomedicine Revolution</div>
+                        <div class="timeline-description">FDA approvals of multiple nanoparticle-based drugs and the development of lipid nanoparticles for mRNA vaccine delivery platforms.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020s</div>
+                        <div class="timeline-title">AI-Driven Nanomaterials</div>
+                        <div class="timeline-description">Machine learning accelerates discovery and design of nanomaterials with predictive modeling of properties and automated synthesis optimization.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="applications-section" id="applications">
+        <div class="container">
+            <h2 class="section-header">Breakthrough Applications</h2>
+            <p class="section-intro">Cutting-edge nanomaterials transforming industries from medicine to energy to computing.</p>
+            
+            <div class="applications-grid">
+                <div class="application-card">
+                    <span class="application-icon">💉</span>
+                    <span class="application-badge">Healthcare</span>
+                    <h3 class="application-title">mRNA Vaccine Delivery</h3>
+                    <p class="application-description">Lipid nanoparticles enable safe and effective delivery of genetic material, revolutionizing vaccine development and opening new frontiers in gene therapy and personalized medicine.</p>
+                </div>
+
+                <div class="application-card">
+                    <span class="application-icon">☀️</span>
+                    <span class="application-badge">Energy</span>
+                    <h3 class="application-title">Perovskite Solar Cells</h3>
+                    <p class="application-description">Nanostructured perovskite materials achieve record-breaking efficiency in converting sunlight to electricity, promising affordable and scalable renewable energy solutions.</p>
+                </div>
+
+                <div class="application-card">
+                    <span class="application-icon">💻</span>
+                    <span class="application-badge">Electronics</span>
+                    <h3 class="application-title">Quantum Computing Materials</h3>
+                    <p class="application-description">Quantum dots and topological nanomaterials form the foundation for next-generation quantum computers, enabling unprecedented computational power.</p>
+                </div>
+
+                <div class="application-card">
+                    <span class="application-icon">💧</span>
+                    <span class="application-badge">Environment</span>
+                    <h3 class="application-title">Photocatalytic Water Purification</h3>
+                    <p class="application-description">Titanium dioxide nanoparticles and related photocatalysts break down organic pollutants using sunlight, providing sustainable solutions for clean water access.</p>
+                </div>
+
+                <div class="application-card">
+                    <span class="application-icon">🔬</span>
+                    <span class="application-badge">Diagnostics</span>
+                    <h3 class="application-title">Point-of-Care Biosensors</h3>
+                    <p class="application-description">Gold nanoparticle-based lateral flow assays and electrochemical nanosensors enable rapid disease detection at the point of care with smartphone readout.</p>
+                </div>
+
+                <div class="application-card">
+                    <span class="application-icon">🏗️</span>
+                    <span class="application-badge">Materials</span>
+                    <h3 class="application-title">Self-Healing Nanocomposites</h3>
+                    <p class="application-description">Nanoparticle-filled polymers autonomously repair damage, extending material lifetime and reducing waste in construction, automotive, and aerospace applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="interactive-section" id="interactive">
+        <div class="container">
+            <h2 class="section-header">Interactive Nanoparticle Simulation</h2>
+            <p class="section-intro">Explore how nanoparticle size and composition affect their properties. Click the buttons to visualize different nanomaterials and their characteristic features.</p>
+            
+            <div class="nano-canvas">
+                <div class="canvas-display">
+                    <canvas id="nanoCanvas"></canvas>
+                </div>
+                <div class="canvas-controls">
+                    <button class="control-button active" data-material="quantum">
+                        <span style="position: relative; z-index: 1;">🔵 Quantum Dots</span>
+                    </button>
+                    <button class="control-button" data-material="gold">
+                        <span style="position: relative; z-index: 1;">⭐ Gold NPs</span>
+                    </button>
+                    <button class="control-button" data-material="carbon">
+                        <span style="position: relative; z-index: 1;">⚫ Carbon Nanotubes</span>
+                    </button>
+                    <button class="control-button" data-material="liposome">
+                        <span style="position: relative; z-index: 1;">💊 Liposomes</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Explore Nanochemistry Frontiers</h2>
+                <p class="cta-text">Stay updated on nanomaterial innovations transforming medicine, energy, and technology. Join our community of researchers pushing the boundaries of molecular engineering.</p>
+                <a href="index.html#contact" class="cta-button">Connect With Us →</a>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Chemisters</h4>
+                    <p>The digital ecosystem of chemistry — where academic rigor meets modern communication.</p>
+                    <p>Chemistry evolves. Chemisters documents it.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#coverage">All Topics</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contact@chemisters.com">Email</a></li>
+                        <li><a href="https://www.chemisters.com">Website</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Chemisters. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Create animated particles in hero
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (10 + Math.random() * 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        createParticles();
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToAnimate = document.querySelectorAll(
+                '.intro-text, .stat-card, .topic-item, .application-card, .timeline-item, .scale-item'
+            );
+            elementsToAnimate.forEach(el => observer.observe(el));
+
+            // Add stagger delay to stat cards
+            document.querySelectorAll('.stat-card').forEach((card, index) => {
+                card.style.transitionDelay = `${index * 0.1}s`;
+            });
+
+            // Add stagger delay to topic items
+            document.querySelectorAll('.topic-item').forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.1}s`;
+            });
+
+            // Add stagger delay to application cards
+            document.querySelectorAll('.application-card').forEach((card, index) => {
+                card.style.transitionDelay = `${index * 0.15}s`;
+            });
+
+            // Add stagger delay to timeline items
+            document.querySelectorAll('.timeline-item').forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.2}s`;
+            });
+
+            // Add stagger delay to scale items
+            document.querySelectorAll('.scale-item').forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.1}s`;
+            });
+        });
+
+        // Navigation scroll effect only
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+
+            // Back to top button
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Back to top functionality
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Expandable topic items
+        document.querySelectorAll('.topic-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                // Prevent expansion when clicking on links
+                if (e.target.tagName === 'A') return;
+                
+                this.classList.toggle('expanded');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 140;
+                    const targetPosition = target.offsetTop - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Interactive nanoparticle visualization with scientifically accurate rendering
+        const canvas = document.getElementById('nanoCanvas');
+        const ctx = canvas.getContext('2d');
+        let currentMaterial = 'quantum';
+        let animationFrame;
+        let particles = [];
+        const dpr = window.devicePixelRatio || 1;
+
+        // Helper function to convert hex to rgba
+        function hexToRgba(hex, alpha) {
+            const r = parseInt(hex.slice(1, 3), 16);
+            const g = parseInt(hex.slice(3, 5), 16);
+            const b = parseInt(hex.slice(5, 7), 16);
+            return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+        }
+
+        function resizeCanvas() {
+            const container = canvas.parentElement;
+            const cssWidth = container.clientWidth;
+            const cssHeight = container.clientHeight;
+            
+            canvas.width = cssWidth * dpr;
+            canvas.height = cssHeight * dpr;
+            canvas.style.width = cssWidth + 'px';
+            canvas.style.height = cssHeight + 'px';
+            
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            
+            if (particles.length === 0) {
+                initParticles();
+            }
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        
+        class NanoParticle {
+            constructor(x, y, size, color, type) {
+                this.x = x;
+                this.y = y;
+                this.size = size;
+                this.color = color;
+                this.type = type;
+                
+                const angle = Math.random() * Math.PI * 2;
+                const speed = type === 'quantum' ? 1.2 : type === 'liposome' ? 0.4 : 0.7;
+                this.vx = Math.cos(angle) * speed;
+                this.vy = Math.sin(angle) * speed;
+                this.rotation = angle;
+                this.rotationSpeed = (Math.random() - 0.5) * 0.02;
+            }
+
+            update() {
+                // Brownian motion - small random perturbations
+                this.vx += (Math.random() - 0.5) * 0.1;
+                this.vy += (Math.random() - 0.5) * 0.1;
+                
+                // Damping to prevent runaway
+                this.vx *= 0.98;
+                this.vy *= 0.98;
+                
+                // Update position
+                this.x += this.vx;
+                this.y += this.vy;
+                
+                // Update rotation for elongated particles
+                if (this.type === 'carbon') {
+                    this.rotation = Math.atan2(this.vy, this.vx);
+                    this.rotation += this.rotationSpeed;
+                }
+
+                const margin = this.size + 4;
+                const cssWidth = canvas.width / dpr;
+                const cssHeight = canvas.height / dpr;
+                
+                // Elastic bounce with energy loss
+                if (this.x < margin || this.x > cssWidth - margin) {
+                    this.vx *= -0.8;
+                    this.x = Math.max(margin, Math.min(cssWidth - margin, this.x));
+                }
+                if (this.y < margin || this.y > cssHeight - margin) {
+                    this.vy *= -0.8;
+                    this.y = Math.max(margin, Math.min(cssHeight - margin, this.y));
+                }
+            }
+
+            applyRepulsion(others) {
+                for (let other of others) {
+                    if (other === this) continue;
+                    
+                    const dx = this.x - other.x;
+                    const dy = this.y - other.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    const minDist = this.size + other.size;
+                    
+                    if (distance < minDist && distance > 0) {
+                        const force = (minDist - distance) * 0.05;
+                        const nx = dx / distance;
+                        const ny = dy / distance;
+                        this.vx += nx * force;
+                        this.vy += ny * force;
+                    }
+                }
+            }
+
+            drawHalo() {
+                ctx.save();
+                ctx.globalCompositeOperation = 'lighter';
+                
+                const glowRadius = this.type === 'quantum' ? this.size * 3 : 
+                                  this.type === 'gold' ? this.size * 2.5 :
+                                  this.type === 'carbon' ? this.size * 1.5 :
+                                  this.size * 2;
+                
+                const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, glowRadius);
+                gradient.addColorStop(0, hexToRgba(this.color, 0.35));
+                gradient.addColorStop(0.5, hexToRgba(this.color, 0.12));
+                gradient.addColorStop(1, hexToRgba(this.color, 0));
+                
+                ctx.fillStyle = gradient;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, glowRadius, 0, Math.PI * 2);
+                ctx.fill();
+                
+                ctx.restore();
+            }
+
+            drawCore() {
+                ctx.save();
+                ctx.globalCompositeOperation = 'source-over';
+                
+                if (this.type === 'carbon') {
+                    // Draw carbon nanotube as elongated capsule
+                    const length = this.size * 2.5;
+                    const width = this.size * 0.8;
+                    
+                    ctx.translate(this.x, this.y);
+                    ctx.rotate(this.rotation);
+                    
+                    ctx.fillStyle = this.color;
+                    ctx.beginPath();
+                    ctx.ellipse(0, 0, length / 2, width / 2, 0, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                    // Rim highlight
+                    ctx.strokeStyle = hexToRgba('#ffffff', 0.1);
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                    
+                } else if (this.type === 'liposome') {
+                    // Draw liposome with membrane gradient
+                    const membraneGradient = ctx.createRadialGradient(
+                        this.x, this.y, 0,
+                        this.x, this.y, this.size
+                    );
+                    membraneGradient.addColorStop(0, hexToRgba(this.color, 0.3));
+                    membraneGradient.addColorStop(0.7, hexToRgba(this.color, 0.6));
+                    membraneGradient.addColorStop(1, hexToRgba(this.color, 0.2));
+                    
+                    ctx.fillStyle = membraneGradient;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                } else {
+                    // Draw standard spherical particle (quantum dots, gold NPs)
+                    ctx.fillStyle = this.color;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                    // Specular highlight for gold
+                    if (this.type === 'gold') {
+                        const highlightGradient = ctx.createRadialGradient(
+                            this.x - this.size * 0.3, this.y - this.size * 0.3, 0,
+                            this.x, this.y, this.size
+                        );
+                        highlightGradient.addColorStop(0, hexToRgba('#ffffff', 0.4));
+                        highlightGradient.addColorStop(0.5, hexToRgba('#ffffff', 0.1));
+                        highlightGradient.addColorStop(1, hexToRgba('#ffffff', 0));
+                        
+                        ctx.fillStyle = highlightGradient;
+                        ctx.beginPath();
+                        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                }
+                
+                ctx.restore();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            const cssWidth = canvas.width / dpr;
+            const cssHeight = canvas.height / dpr;
+            
+            const configs = {
+                quantum: {
+                    count: 40,
+                    sizeRange: [3, 8],
+                    colors: ['#06b6d4', '#0891b2', '#0e7490']
+                },
+                gold: {
+                    count: 24,
+                    sizeRange: [8, 14],
+                    colors: ['#fbbf24', '#f59e0b', '#d97706']
+                },
+                carbon: {
+                    count: 15,
+                    sizeRange: [10, 16],
+                    colors: ['#374151', '#4b5563', '#6b7280']
+                },
+                liposome: {
+                    count: 16,
+                    sizeRange: [14, 24],
+                    colors: ['#ec4899', '#db2777', '#be185d']
+                }
+            };
+
+            const config = configs[currentMaterial];
+
+            for (let i = 0; i < config.count; i++) {
+                const margin = 50;
+                const x = Math.random() * (cssWidth - margin * 2) + margin;
+                const y = Math.random() * (cssHeight - margin * 2) + margin;
+                const size = config.sizeRange[0] + Math.random() * (config.sizeRange[1] - config.sizeRange[0]);
+                const color = config.colors[Math.floor(Math.random() * config.colors.length)];
+
+                particles.push(new NanoParticle(x, y, size, color, currentMaterial));
+            }
+        }
+
+        function drawConnections() {
+            const cssWidth = canvas.width / dpr;
+            const threshold = cssWidth * 0.15;
+            
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < threshold) {
+                        const opacity = (1 - distance / threshold) * 0.15;
+                        ctx.strokeStyle = hexToRgba('#06b6d4', opacity);
+                        ctx.lineWidth = 0.5;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function animate() {
+            // Clear with physical pixels
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw background
+            const cssWidth = canvas.width / dpr;
+            const cssHeight = canvas.height / dpr;
+            const bgGradient = ctx.createLinearGradient(0, 0, cssWidth, cssHeight);
+            bgGradient.addColorStop(0, '#fafafa');
+            bgGradient.addColorStop(1, '#ffffff');
+            ctx.fillStyle = bgGradient;
+            ctx.fillRect(0, 0, cssWidth, cssHeight);
+
+            // Draw connections first (background layer)
+            drawConnections();
+
+            // Apply inter-particle repulsion
+            particles.forEach(p => p.applyRepulsion(particles));
+
+            // Update particles
+            particles.forEach(p => p.update());
+
+            // Draw halos with additive blending
+            particles.forEach(p => p.drawHalo());
+
+            // Draw cores on top
+            particles.forEach(p => p.drawCore());
+
+            // Draw material label
+            ctx.fillStyle = '#374151';
+            ctx.font = 'bold 14px -apple-system, sans-serif';
+            ctx.textAlign = 'left';
+            const labels = {
+                quantum: 'Quantum Dots (2-10 nm) • Brownian motion • Quantum confinement',
+                gold: 'Gold Nanoparticles (10-50 nm) • Plasmonic properties',
+                carbon: 'Carbon Nanotubes (20-100 nm) • High aspect ratio • Anisotropic',
+                liposome: 'Liposomes (50-200 nm) • Lipid bilayer • Drug delivery'
+            };
+            ctx.fillText(labels[currentMaterial], 20, 30);
+
+            animationFrame = requestAnimationFrame(animate);
+        }
+
+        function showNanoMaterial(type, btn) {
+            // Cancel previous animation frame
+            if (animationFrame) {
+                cancelAnimationFrame(animationFrame);
+            }
+            
+            currentMaterial = type;
+
+            // Update active button
+            document.querySelectorAll('.control-button').forEach(b => {
+                b.classList.remove('active');
+            });
+            btn.classList.add('active');
+
+            // Reinitialize and restart animation
+            initParticles();
+            animate();
+        }
+
+        // Wire up material buttons programmatically
+        document.querySelectorAll('.control-button').forEach(btn => {
+            const material = btn.dataset.material;
+            btn.addEventListener('click', () => showNanoMaterial(material, btn));
+        });
+
+        // Keyboard shortcuts for accessibility
+        document.addEventListener('keydown', (e) => {
+            const materials = ['quantum', 'gold', 'carbon', 'liposome'];
+            const buttons = document.querySelectorAll('.control-button');
+            
+            if (e.key >= '1' && e.key <= '4') {
+                const index = parseInt(e.key) - 1;
+                showNanoMaterial(materials[index], buttons[index]);
+            } else if (e.key === 'ArrowLeft') {
+                const currentIndex = materials.indexOf(currentMaterial);
+                const newIndex = (currentIndex - 1 + materials.length) % materials.length;
+                showNanoMaterial(materials[newIndex], buttons[newIndex]);
+            } else if (e.key === 'ArrowRight') {
+                const currentIndex = materials.indexOf(currentMaterial);
+                const newIndex = (currentIndex + 1) % materials.length;
+                showNanoMaterial(materials[newIndex], buttons[newIndex]);
+            } else if (e.key === ' ' || e.key === 'Escape') {
+                if (animationFrame) {
+                    cancelAnimationFrame(animationFrame);
+                    animationFrame = null;
+                } else {
+                    animate();
+                }
+            }
+        });
+
+        // Initialize canvas on load
+        window.addEventListener('load', () => {
+            resizeCanvas();
+            initParticles();
+            animate();
+        });
+
+        // Backup initialization
+        setTimeout(() => {
+            if (particles.length === 0) {
+                resizeCanvas();
+                initParticles();
+                animate();
+            }
+        }, 500);
+
+        // Add keyboard navigation for accessibility
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.topic-item.expanded').forEach(item => {
+                    item.classList.remove('expanded');
+                });
+            }
+        });
+
+
+        // Performance optimization: Lazy load images if any are added
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                            imageObserver.unobserve(img);
+                        }
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Add smooth color transitions on scroll for sections
+        const sections = document.querySelectorAll('.section, .intro-section, .applications-section');
+        sections.forEach(section => {
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.transition = 'background-color 0.6s ease';
+                    }
+                });
+            }, { threshold: 0.2 });
+            
+            sectionObserver.observe(section);
+        });
+
+        // Add ripple effect to buttons
+        document.querySelectorAll('.cta-button, .control-button, .hero-cta button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple');
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        // Add interactive hover effects to scale items
+        document.querySelectorAll('.scale-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                if (this.classList.contains('visible')) {
+                    this.style.transition = 'all 0.3s ease';
+                    this.style.transform = 'translateX(15px) scale(1.02)';
+                }
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                if (this.classList.contains('visible')) {
+                    this.style.transition = 'all 0.3s ease';
+                    this.style.transform = 'translateX(0) scale(1)';
+                }
+            });
+        });
+
+        // Enhance timeline interactivity
+        document.querySelectorAll('.timeline-content').forEach(content => {
+            content.addEventListener('mouseenter', function() {
+                this.style.transition = 'all 0.3s ease';
+            });
+            
+            content.addEventListener('mouseleave', function() {
+                this.style.transition = 'all 0.3s ease';
+            });
+        });
+
+        // Add count-up animation for stat numbers
+        function animateValue(element, start, end, duration, suffix = '') {
+            const startTime = performance.now();
+            
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                const current = Math.floor(progress * (end - start) + start);
+                element.textContent = current + suffix;
+                
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+            
+            requestAnimationFrame(update);
+        }
+
+        // Observe stat cards for counter animation
+        const statObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                    entry.target.classList.add('counted');
+                    const number = entry.target.querySelector('.stat-number');
+                    
+                    if (number) {
+                        const text = number.textContent;
+                        // Only animate pure numbers
+                        if (text.match(/^\d+$/)) {
+                            const target = parseInt(text);
+                            animateValue(number, 0, target, 2000);
+                        }
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat-card').forEach(card => {
+            statObserver.observe(card);
+        });
+
+        // Add subtle floating animation to application cards
+        const floatStyle = document.createElement('style');
+        floatStyle.textContent = `
+            @keyframes float {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-5px); }
+            }
+        `;
+        document.head.appendChild(floatStyle);
+
+        // Enhanced interaction feedback for topic items
+        document.querySelectorAll('.topic-item').forEach(item => {
+            const icon = item.querySelector('.topic-icon');
+            
+            item.addEventListener('mouseenter', function() {
+                if (icon) {
+                    icon.style.transition = 'transform 0.3s ease';
+                }
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                if (icon) {
+                    icon.style.transition = 'transform 0.3s ease';
+                }
+            });
+        });
+
+        // Log initialization
+        console.log('⚛️ Nanochemistry page loaded successfully!');
+        console.log('✨ All interactive features activated');
+        console.log('🔬 Nanoparticle simulation ready');
+    </script>
+</body>
+</html>

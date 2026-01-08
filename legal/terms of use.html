@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use — Chemisters</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: #fafbfc;
+            color: #1a1a1a;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        nav {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #2563eb;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #4b5563;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #2563eb 100%);
+            color: #ffffff;
+            padding: 100px 0 70px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1.5px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2em;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+        .content-section {
+            padding: 70px 0 100px;
+        }
+
+        .content-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 60px 70px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 10px 40px rgba(0, 0, 0, 0.03);
+        }
+
+        .last-updated {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 18px 28px;
+            border-radius: 10px;
+            margin-bottom: 50px;
+            font-size: 0.95em;
+            color: #0c4a6e;
+            border-left: 4px solid #0284c7;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .last-updated::before {
+            content: '📅';
+            font-size: 1.2em;
+        }
+
+        .section-block {
+            margin-bottom: 55px;
+            padding-bottom: 50px;
+            border-bottom: 1px solid #f1f3f5;
+        }
+
+        .section-block:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 1.75em;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 25px;
+            letter-spacing: -0.7px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            bottom: 5px;
+            width: 4px;
+            background: linear-gradient(180deg, #2563eb 0%, #3b82f6 100%);
+            border-radius: 2px;
+        }
+
+        .section-text {
+            font-size: 1.05em;
+            color: #374151;
+            line-height: 1.85;
+            margin-bottom: 20px;
+        }
+
+        .section-text a {
+            color: #2563eb;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+
+        .section-text a:hover {
+            border-bottom-color: #2563eb;
+        }
+
+        .subsection-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #1f2937;
+            margin-top: 35px;
+            margin-bottom: 18px;
+            padding-left: 15px;
+            border-left: 3px solid #e5e7eb;
+        }
+
+        .bullet-list {
+            margin-left: 30px;
+            margin-bottom: 25px;
+            list-style: none;
+        }
+
+        .bullet-list li {
+            font-size: 1.05em;
+            color: #374151;
+            line-height: 1.85;
+            margin-bottom: 14px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .bullet-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border-left: 4px solid #f59e0b;
+            padding: 28px 32px;
+            border-radius: 10px;
+            margin: 40px 0;
+            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.1);
+        }
+
+        .highlight-box::before {
+            content: '⚠️';
+            font-size: 1.5em;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .highlight-box p {
+            font-size: 1.05em;
+            color: #78350f;
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        .highlight-box strong {
+            color: #92400e;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #9ca3af;
+            padding: 70px 0 40px;
+            margin-top: 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 70px;
+            margin-bottom: 50px;
+        }
+
+        .footer-section h4 {
+            color: #ffffff;
+            font-size: 1.15em;
+            margin-bottom: 22px;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+        }
+
+        .footer-section p {
+            color: #94a3b8;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 14px;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            font-size: 0.95em;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+            transform: translateX(3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 35px;
+            border-top: 1px solid #334155;
+            color: #64748b;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2em;
+            }
+
+            .hero-subtitle {
+                font-size: 1.05em;
+            }
+
+            .content-wrapper {
+                padding: 40px 30px;
+            }
+
+            .section-title {
+                font-size: 1.5em;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">Chemisters</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#coverage">All Topics</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Terms of Use</h1>
+                <p class="hero-subtitle">Please read these terms carefully before using Chemisters.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="last-updated">
+                    <strong>Last Updated:</strong> October 20, 2025
+                </div>
+
+                <div class="section-block">
+                    <h2 class="section-title">Agreement to Terms</h2>
+                    <p class="section-text">
+                        Welcome to Chemisters. By accessing or using our website and services, you agree to be bound by these Terms of Use and all applicable laws and regulations. If you do not agree with any part of these terms, you may not use our services.
+                    </p>
+                    <p class="section-text">
+                        These Terms of Use constitute a legally binding agreement between you and Chemisters. We reserve the right to modify these terms at any time, and your continued use of the platform constitutes acceptance of any changes.
+                    </p>
+                </div>
+
+                <div class="section-block">
+                    <h2 class="section-title">Use of Content</h2>
+                    
+                    <h3 class="subsection-title">Educational Purpose</h3>
+                    <p class="section-text">
+                        Chemisters provides educational content related to chemistry, scientific research, and related topics. All content is provided for informational and educational purposes only. The information presented should not be considered professional advice, and users should consult qualified professionals for specific guidance.
+                    </p>
+
+                    <h3 class="subsection-title">Intellectual Property</h3>
+                    <p class="section-text">
+                        All content on Chemisters, including but not limited to text, graphics, logos, images, and software, is the property of Chemisters or its content suppliers and is protected by intellectual property laws. You may not:
+                    </p>
+                    <ul class="bullet-list">
+                        <li>Reproduce, distribute, or publicly display content without written permission</li>
+                        <li>Modify, create derivative works, or exploit content for commercial purposes</li>
+                        <li>Remove copyright or proprietary notices from any content</li>
+                        <li>Use automated systems (bots, scrapers) to access or collect content</li>
+                    </ul>
+
+                    <h3 class="subsection-title">Permitted Use</h3>
+                    <p class="section-text">
+                        You may access and view content for personal, non-commercial use. You may share links to our content on social media or other platforms, provided you do so in a manner that does not suggest endorsement or affiliation without permission.
+                    </p>
+                </div>
+
+                <div class="section-block">
+                    <h2 class="section-title">User Conduct</h2>
+                    <p class="section-text">
+                        When using Chemisters, you agree to:
+                    </p>
+                    <ul class="bullet-list">
+                        <li>Comply with all applicable laws and regulations</li>
+                        <li>Not use the platform for any unlawful or fraudulent purpose</li>
+                        <li>Not attempt to gain unauthorized access to any part of the platform</li>
+                        <li>Not transmit viruses, malware, or other harmful code</li>
+                        <li>Not interfere with the proper functioning of the website</li>
+                        <li>Not impersonate any person or entity or misrepresent your affiliation</li>
+                        <li>Not harass, threaten, or harm other users or our team</li>
+                    </ul>
+                </div>
+
+                <div class="section-block">
+                    <h2 class="section-title">Accuracy of Information</h2>
+                    <p class="section-text">
+                        While we strive to provide accurate and up-to-date information, Chemisters makes no representations or warranties about the accuracy, completeness, or reliability of any content on the platform. Scientific knowledge evolves rapidly, and information may become outdated or require revision.
+                    </p>
+                    <p class="section-text">
+                        Users are responsible for independently verifying any information before relying on it for research, professional, or personal purposes. Chemisters is not responsible for any errors or omissions in the content.
+                    </p>
+                </div>
+
+                <div class="section-block">
+                    <h2 class="section-title">Third-Party Links and Content</h2>
+                    <p class="section-text">
+                        Chemisters may contain links to third-party websites, resources, or services. These links are provided for convenience only and do not constitute an endorsement. We have no control over third-party content and are not responsible for:
+                    </p>
+                    <ul class="bullet-list">
+                        <li>The availability, accuracy, or content of third-party websites</li>
+                        <li>Privacy practices of external sites</li>
+                        <li>Any damages or losses resulting from your use of third-party resources</li>
+                    </ul>
+                    <p class="section-text">
+                        You access third-party links at your own risk and should review their terms and privacy policies.
+                    </p>
+                </div>
+
+                <div class="section-block">
+                    <h2 class="section-title">Disclaimer of Warranties</h2>
+                    <p class="section-text">
+                        Chemisters is provided on an "as is" and "as available" basis without warranties of any kind, either express or implied, including but not limited to:
+                    </p>
+                    <ul class="bullet-list">
+                        <li>Warranties of merchantability or fitness for a particular purpose</li>
+                        <li>Warranties that the service will be uninterrupted, secure, or error-free</li>
+                        <li>Warranties regarding the accuracy or reliability of information</li>
+                    </ul>
+                    <p class="section-text">
+                        Your use of Chemisters is at your sole risk. We do not guarantee that the platform will meet your requirements or that any errors will be corrected.
+                    </p>
+                </div>
+
+                <div class="section-block">
+                    <h2 class="section-title">Limitation of Liability</h2>
+                    <p class="section-text">
+                        To the fullest extent permitted by law, Chemisters and its affiliates, officers, employees, and contributors shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:
+                    </p>
+                    <ul class="bullet-list">
+                        <li>Loss of profits, data, or goodwill</li>
+                        <li>Service interruptions or security breaches</li>
+                        <li>Errors or omissions in content</li>
+                        <li>Any damages arising from your use or inability to use the platform</li>
+                    </ul>
+                    <p class="section-text">
+                        Some jurisdictions do not allow limitations on liability, so these limitations may not apply to you.
+                    </p>
+                </div>
+
+                <div class="section-block">
+                    <h2 class="section-title">Indemnification</h2>
+                    <p class="section-text">
+                        You agree to indemnify, defend, and hold harmless Chemisters and its affiliates from any claims, damages, losses, liabilities, and expenses (including legal fees) arising from:
+                    </p>
+                    <ul class="bullet-list">
+                        <li>Your violation of these Terms of Use</li>
+                        <li>Your use or misuse of the platform</li>
+                        <li>Your violation of any third-party rights</li>
+                        <li>Any content you submit or share through the platform</li>
+                    </ul>
+                </div>
+
+                <div class="section-block">
+                    <h2 class="section-title">User Submissions</h2>
+                    <p class="section-text">
+                        If you submit feedback, comments, suggestions, or other communications to Chemisters (collectively, "Submissions"), you grant us a non-exclusive, worldwide, perpetual, irrevocable, royalty-free license to use, reproduce, modify, and distribute such Submissions for any purpose.
+                    </p>
+                    <p class="section-text">
+                        You represent and warrant that any Submissions you provide do not violate any third-party rights and that you have all necessary rights to grant the license described above.
+                    </p>
+                </div>
+
+                <div class="section-block">
+                    <h2 class="section-title">Privacy</h2>
+                    <p class="section-text">
+                        Your use of Chemisters is also governed by our Privacy Policy, which explains how we collect, use, and protect your information. By using our platform, you consent to our data practices as described in the Privacy Policy.
+                    </p>
+                </div>
+
+                <div class="section-block">
+                    <h2 class="section-title">Termination</h2>
+                    <p class="section-text">
+                        We reserve the right to terminate or suspend your access to Chemisters at any time, without notice, for conduct that we believe:
+                    </p>
+                    <ul class="bullet-list">
+                        <li>Violates these Terms of Use</li>
+                        <li>Is harmful to other users, third parties, or our business interests</li>
+                        <li>Violates applicable laws or regulations</li>
+                    </ul>
+                    <p class="section-text">
+                        Upon termination, your right to use the platform will immediately cease. All provisions of these Terms that by their nature should survive termination shall survive, including ownership provisions, warranty disclaimers, and limitations of liability.
+                    </p>
+                </div>
+
+                <div class="section-block">
+                    <h2 class="section-title">Governing Law</h2>
+                    <p class="section-text">
+                        These Terms of Use shall be governed by and construed in accordance with the laws of the jurisdiction in which Chemisters operates, without regard to its conflict of law provisions.
+                    </p>
+                    <p class="section-text">
+                        Any disputes arising from these terms or your use of the platform shall be resolved through binding arbitration or in the courts of the applicable jurisdiction, as determined by Chemisters.
+                    </p>
+                </div>
+
+                <div class="section-block">
+                    <h2 class="section-title">Changes to Terms</h2>
+                    <p class="section-text">
+                        We reserve the right to modify or replace these Terms of Use at any time at our sole discretion. Material changes will be indicated by updating the "Last Updated" date at the top of this page. We may also notify you through email or a prominent notice on the platform.
+                    </p>
+                    <p class="section-text">
+                        Your continued use of Chemisters after any changes constitutes acceptance of the new terms. If you do not agree to the revised terms, you must stop using the platform.
+                    </p>
+                </div>
+
+                <div class="section-block">
+                    <h2 class="section-title">Severability</h2>
+                    <p class="section-text">
+                        If any provision of these Terms of Use is found to be invalid, illegal, or unenforceable, the remaining provisions shall continue in full force and effect. The invalid provision shall be modified to the minimum extent necessary to make it valid and enforceable.
+                    </p>
+                </div>
+
+                <div class="section-block">
+                    <h2 class="section-title">Entire Agreement</h2>
+                    <p class="section-text">
+                        These Terms of Use, together with our Privacy Policy, constitute the entire agreement between you and Chemisters regarding your use of the platform and supersede all prior agreements and understandings, whether written or oral.
+                    </p>
+                </div>
+
+                <div class="section-block">
+                    <h2 class="section-title">Contact Information</h2>
+                    <p class="section-text">
+                        If you have any questions, concerns, or feedback regarding these Terms of Use, please contact us at:
+                    </p>
+                    <p class="section-text">
+                        <strong>Email:</strong> <a href="mailto:legal@chemisters.com">legal@chemisters.com</a><br>
+                        <strong>Website:</strong> <a href="https://www.chemisters.com">www.chemisters.com</a>
+                    </p>
+                </div>
+
+                <div class="highlight-box">
+                    <p>
+                        <strong>Important Notice:</strong> By using Chemisters, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use. These terms protect both you and Chemisters, ensuring a safe and respectful environment for all users.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Chemisters</h4>
+                    <p>The digital ecosystem of chemistry — where academic rigor meets modern communication.</p>
+                    <p>Chemistry evolves. Chemisters documents it.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#coverage">All Topics</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-use.html">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Chemisters. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

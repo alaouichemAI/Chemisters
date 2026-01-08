@@ -1,0 +1,2093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemoinformatics — Chemisters</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        nav {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            padding: 15px 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .breadcrumb {
+            font-size: 0.85em;
+            color: #6b7280;
+            margin-top: 8px;
+        }
+
+        .breadcrumb a {
+            color: #6b7280;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            color: #6366f1;
+        }
+
+        .breadcrumb span {
+            margin: 0 8px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #2563eb;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #4b5563;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #6366f1;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #6366f1;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            color: #ffffff;
+            padding: 120px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: float-particle 15s infinite;
+        }
+
+        @keyframes float-particle {
+            0% {
+                transform: translateY(100vh) translateX(0) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) translateX(100px) scale(1);
+                opacity: 0;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .hero-icon {
+            animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+        }
+
+        .hero-icon:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .hero-icon:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-title {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1.5px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-subtitle {
+            font-size: 1.4em;
+            opacity: 0;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-weight: 400;
+            line-height: 1.6;
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+        }
+
+        .hero-cta {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.6s forwards;
+        }
+
+        .hero-cta button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-cta button:hover {
+            background: white;
+            color: #6366f1;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .quick-nav {
+            background: #f9fafb;
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 81px;
+            z-index: 90;
+            backdrop-filter: blur(10px);
+            background: rgba(249, 250, 251, 0.95);
+            transition: top 0.3s ease;
+        }
+
+        nav.scrolled ~ .hero ~ .quick-nav {
+            top: 71px;
+        }
+
+        .quick-nav-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .quick-nav-list a {
+            padding: 8px 18px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #4b5563;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quick-nav-list a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .quick-nav-list a:hover::before {
+            left: 100%;
+        }
+
+        .quick-nav-list a:hover {
+            background: #6366f1;
+            color: #ffffff;
+            border-color: #6366f1;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+
+        .intro-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+        }
+
+        .intro-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .intro-text {
+            font-size: 1.2em;
+            color: #374151;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .intro-text.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 35px;
+            text-align: center;
+            transition: all 0.4s ease;
+            opacity: 0;
+            transform: translateY(20px) scale(0.95);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .stat-card:hover::before {
+            opacity: 1;
+        }
+
+        .stat-card.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .stat-card:hover {
+            border-color: #6366f1;
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.2);
+        }
+
+        .stat-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            display: inline-block;
+            transition: transform 0.4s ease;
+        }
+
+        .stat-card:hover .stat-icon {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .stat-number {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #6366f1;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .stat-label {
+            font-size: 0.95em;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #111827;
+            letter-spacing: -1px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #6366f1, #4f46e5);
+            border-radius: 2px;
+        }
+
+        .section-intro {
+            font-size: 1.15em;
+            color: #6b7280;
+            max-width: 800px;
+            margin-bottom: 50px;
+            line-height: 1.7;
+        }
+
+        .topics-list {
+            display: grid;
+            gap: 30px;
+            max-width: 1000px;
+        }
+
+        .topic-item {
+            background: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-left: 5px solid #6366f1;
+            border-radius: 12px;
+            padding: 35px 40px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateX(-30px);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .topic-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, #6366f1, #4f46e5);
+            transition: width 0.4s ease;
+        }
+
+        .topic-item:hover::before {
+            width: 100%;
+            opacity: 0.05;
+        }
+
+        .topic-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .topic-item:hover {
+            border-left-color: #4f46e5;
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.2);
+            transform: translateX(10px) translateY(-4px);
+        }
+
+        .topic-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .topic-icon {
+            font-size: 2.5em;
+            margin-right: 20px;
+            opacity: 0.9;
+            transition: transform 0.3s ease;
+        }
+
+        .topic-item:hover .topic-icon {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .topic-title {
+            font-size: 1.35em;
+            font-weight: 700;
+            color: #111827;
+            flex: 1;
+            line-height: 1.4;
+        }
+
+        .expand-icon {
+            font-size: 1.4em;
+            color: #6366f1;
+            transition: transform 0.4s ease;
+            margin-left: 15px;
+        }
+
+        .topic-item.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .topic-description {
+            font-size: 1.05em;
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .topic-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .topic-item.expanded .topic-details {
+            max-height: 600px;
+        }
+
+        .topic-examples {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 20px;
+            border-left: 3px solid #6366f1;
+        }
+
+        .topic-examples h4 {
+            font-size: 1.05em;
+            color: #6366f1;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .topic-examples h4::before {
+            content: '💡';
+            font-size: 1.2em;
+        }
+
+        .topic-examples ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .topic-examples li {
+            padding: 10px 0;
+            color: #4b5563;
+            font-size: 0.95em;
+            padding-left: 25px;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+
+        .topic-examples li:hover {
+            color: #111827;
+            padding-left: 30px;
+        }
+
+        .topic-examples li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #6366f1;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+        }
+
+        .topic-examples li:hover::before {
+            transform: translateX(5px);
+        }
+
+        .comparison-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+        }
+
+        .comparison-table {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .comparison-table.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 2fr 1.5fr 1.5fr 1fr;
+            border-bottom: 1px solid #e5e7eb;
+            transition: background 0.3s ease;
+        }
+
+        .comparison-row:hover {
+            background: #f9fafb;
+        }
+
+        .comparison-row.header {
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-row.header:hover {
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+        }
+
+        .comparison-cell {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 0.95em;
+        }
+
+        .comparison-cell:first-child {
+            justify-content: flex-start;
+            text-align: left;
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .comparison-row.header .comparison-cell {
+            color: white;
+        }
+
+        .breakthrough-section {
+            background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .breakthrough-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .breakthrough-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .breakthrough-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateY(30px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .breakthrough-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #6366f1, #4f46e5);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .breakthrough-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .breakthrough-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .breakthrough-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px rgba(99, 102, 241, 0.25);
+        }
+
+        .breakthrough-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(99, 102, 241, 0.3);
+        }
+
+        .breakthrough-title {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .breakthrough-description {
+            color: #4b5563;
+            line-height: 1.8;
+            font-size: 0.98em;
+        }
+
+        .breakthrough-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            display: block;
+            opacity: 0.8;
+        }
+
+        .visualization-section {
+            padding: 100px 0;
+            background: #ffffff;
+        }
+
+        .viz-container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+            border-radius: 20px;
+            padding: 50px;
+            border: 2px solid #e5e7eb;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .molecule-display {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 30px;
+            position: relative;
+            height: 350px;
+            border: 2px solid #e5e7eb;
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.03);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .molecule-canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        .viz-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .viz-button {
+            padding: 14px 24px;
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .viz-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .viz-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .viz-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+        }
+
+        .viz-button:active {
+            transform: translateY(-1px);
+        }
+
+        .viz-button.active {
+            background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+            box-shadow: 0 2px 10px rgba(99, 102, 241, 0.5);
+        }
+
+        .timeline-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+        }
+
+        .timeline {
+            max-width: 900px;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #6366f1, #4f46e5);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 50px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.2);
+        }
+
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 0 5px #fff, 0 0 0 8px #6366f1;
+            z-index: 1;
+        }
+
+        .timeline-year {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #6366f1;
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .timeline-description {
+            color: #4b5563;
+            line-height: 1.7;
+            font-size: 0.95em;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-title {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-text {
+            font-size: 1.2em;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: #ffffff;
+            color: #6366f1;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            background: #f9fafb;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.6em;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.5);
+        }
+
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            padding: 80px 0 40px;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #374151, transparent);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 50px;
+        }
+
+        .footer-section h4 {
+            color: #ffffff;
+            font-size: 1.2em;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .footer-section p {
+            color: #9ca3af;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 14px;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid #374151;
+            color: #6b7280;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5em;
+            }
+
+            .hero-subtitle {
+                font-size: 1.15em;
+            }
+
+            .section-header {
+                font-size: 2em;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .topic-item {
+                padding: 25px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .breakthrough-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-nav-list {
+                gap: 10px;
+            }
+
+            .quick-nav-list a {
+                padding: 6px 14px;
+                font-size: 0.85em;
+            }
+
+            .comparison-row {
+                grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            }
+
+            .comparison-cell {
+                padding: 15px 10px;
+                font-size: 0.85em;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                flex-direction: row !important;
+            }
+
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+
+            .viz-container {
+                padding: 30px 20px;
+            }
+
+            .cta-title {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="mainNav">
+        <div class="container">
+            <div class="nav-content">
+                <div>
+                    <a href="index.html" class="logo">Chemisters</a>
+                    <div class="breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span>›</span>
+                        <span>Chemoinformatics</span>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#coverage">All Topics</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="particles" id="particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-icons">
+                    <span class="hero-icon">🧠</span>
+                    <span class="hero-icon">💻</span>
+                    <span class="hero-icon">⚗️</span>
+                </div>
+                <h1 class="hero-title">Chemoinformatics</h1>
+                <p class="hero-subtitle">Where Data Science Meets Molecular Discovery — Transforming Chemistry Through Computation</p>
+                <div class="hero-cta">
+                    <button onclick="document.querySelector('#topics').scrollIntoView({behavior: 'smooth', block: 'start'})">
+                        Explore Topics ↓
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="quick-nav">
+        <div class="container">
+            <ul class="quick-nav-list">
+                <li><a href="#topics">📚 Topics</a></li>
+                <li><a href="#comparison">⚖️ Tool Comparison</a></li>
+                <li><a href="#timeline">📅 Timeline</a></li>
+                <li><a href="#breakthroughs">🚀 Latest Advances</a></li>
+                <li><a href="#visualization">🎨 Interactive Demo</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="intro-section">
+        <div class="container">
+            <div class="intro-content">
+                <p class="intro-text">Data is the new reagent in chemical research, and algorithms are the catalysts of discovery.</p>
+                <p class="intro-text">At Chemisters, we explore how computational methods, machine learning, and molecular descriptors are revolutionizing drug discovery, materials design, and chemical space exploration. We decode QSAR models, molecular fingerprints, and AI-driven predictions that convert chemical intuition into computational intelligence.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">🗄️</div>
+                        <div class="stat-number">100M+</div>
+                        <div class="stat-label">Compounds in Databases</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-number">&lt;1ms</div>
+                        <div class="stat-label">Similarity Search Speed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">ML Prediction Accuracy</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🔬</div>
+                        <div class="stat-number">10⁶⁰</div>
+                        <div class="stat-label">Chemical Space Size</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section" id="topics">
+        <div class="container">
+            <h2 class="section-header">Topics Covered</h2>
+            <p class="section-intro">Comprehensive exploration of data-driven chemistry and computational approaches to molecular discovery.</p>
+            
+            <div class="topics-list">
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">🛠️</span>
+                        <h3 class="topic-title">Chemoinformatics Software and Tools</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Analysis of platforms like RDKit, ChemAxon, and OpenEye for molecular manipulation, visualization, and property calculation in drug discovery workflows.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>High-throughput virtual screening of millions of compounds</li>
+                                <li>Automated structure standardization in corporate databases</li>
+                                <li>3D conformer generation for molecular docking studies</li>
+                                <li>Patent chemistry analysis and landscape mapping</li>
+                                <li>Chemical reaction prediction and retrosynthesis planning</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">🔍</span>
+                        <h3 class="topic-title">Molecular Fingerprints and Similarity Searches</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Techniques for encoding molecular structures as binary vectors, enabling rapid similarity assessment, virtual screening, and structure-based retrieval across massive chemical libraries.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>Lead hopping to discover novel scaffolds with similar activity</li>
+                                <li>Diversity analysis for compound library design</li>
+                                <li>Near-neighbor searching in million-compound databases</li>
+                                <li>Clustering analysis for hit series identification</li>
+                                <li>Property-based filtering in hit-to-lead optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">📊</span>
+                        <h3 class="topic-title">Data Curation and Chemical Databases</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Best practices for managing chemical data, standardization protocols, and exploration of major databases including PubChem, ChEMBL, and ZINC for research and discovery.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>Integration of multi-source bioactivity data for target analysis</li>
+                                <li>Structure deduplication and tautomer standardization</li>
+                                <li>Bioassay data aggregation for SAR modeling</li>
+                                <li>Chemical space visualization of screening libraries</li>
+                                <li>Public data mining for drug repurposing opportunities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">🤖</span>
+                        <h3 class="topic-title">Machine Learning Pipelines for Prediction</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Implementation of ML algorithms for reaction outcome prediction, property estimation, and retrosynthetic planning using neural networks, random forests, and graph-based models.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>ADMET property prediction to filter toxic compounds early</li>
+                                <li>Synthesis route planning using transformer models</li>
+                                <li>Protein-ligand binding affinity prediction</li>
+                                <li>De novo molecular generation with desired properties</li>
+                                <li>Reaction condition optimization using Bayesian methods</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-header">
+                        <span class="topic-icon">💊</span>
+                        <h3 class="topic-title">Drug Discovery and Automation Applications</h3>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <p class="topic-description">Real-world case studies of chemoinformatics accelerating hit identification, lead optimization, and integration with robotic laboratory systems for automated synthesis.</p>
+                    <div class="topic-details">
+                        <div class="topic-examples">
+                            <h4>Real-World Applications:</h4>
+                            <ul>
+                                <li>AI-guided compound selection for automated synthesis platforms</li>
+                                <li>Fragment-based drug design with computational screening</li>
+                                <li>Multi-parameter optimization balancing potency and ADME</li>
+                                <li>Target druggability assessment using chemical descriptors</li>
+                                <li>Integration of virtual and high-throughput screening data</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline-section" id="timeline">
+        <div class="container">
+            <h2 class="section-header">Evolution of Chemoinformatics</h2>
+            <p class="section-intro">Key milestones that shaped computational chemistry and data-driven molecular design.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1960s</div>
+                        <div class="timeline-title">Birth of SMILES Notation</div>
+                        <div class="timeline-description">Development of chemical line notations enables computer representation of molecular structures, laying the foundation for computational chemistry.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1980s</div>
+                        <div class="timeline-title">QSAR Revolution</div>
+                        <div class="timeline-description">Quantitative structure-activity relationship models emerge, enabling prediction of biological activity from molecular structure descriptors.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2000s</div>
+                        <div class="timeline-title">Public Chemical Databases</div>
+                        <div class="timeline-description">Launch of PubChem and ChEMBL provides open access to millions of compounds and bioactivity data, democratizing drug discovery research.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2010s</div>
+                        <div class="timeline-title">Machine Learning Integration</div>
+                        <div class="timeline-description">Deep learning and neural networks transform property prediction, achieving unprecedented accuracy in ADMET and bioactivity forecasting.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020s</div>
+                        <div class="timeline-title">Generative AI Era</div>
+                        <div class="timeline-description">Transformer models and graph neural networks enable de novo molecular design, generating novel compounds with desired properties automatically.</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="breakthrough-section" id="breakthroughs">
+        <div class="container">
+            <h2 class="section-header">Latest Advances in Chemoinformatics</h2>
+            <p class="section-intro">Cutting-edge developments transforming how we design, predict, and discover molecules.</p>
+            
+            <div class="breakthrough-grid">
+                <div class="breakthrough-card">
+                    <span class="breakthrough-icon">🧬</span>
+                    <span class="breakthrough-badge">2024-2025</span>
+                    <h3 class="breakthrough-title">Protein Language Models</h3>
+                    <p class="breakthrough-description">Large language models trained on protein sequences now predict 3D structures and binding sites with remarkable accuracy, revolutionizing structure-based drug design and enabling computational screening without experimental structures.</p>
+                </div>
+
+                <div class="breakthrough-card">
+                    <span class="breakthrough-icon">🎨</span>
+                    <span class="breakthrough-badge">AI Innovation</span>
+                    <h3 class="breakthrough-title">Generative Molecular Design</h3>
+                    <p class="breakthrough-description">Diffusion models and transformers generate novel molecules optimized for multiple properties simultaneously, creating drug candidates that balance potency, selectivity, and pharmacokinetics in silico before synthesis.</p>
+                </div>
+
+                <div class="breakthrough-card">
+                    <span class="breakthrough-icon">⚡</span>
+                    <span class="breakthrough-badge">Acceleration</span>
+                    <h3 class="breakthrough-title">Quantum Chemistry Integration</h3>
+                    <p class="breakthrough-description">Machine learning accelerates quantum mechanical calculations by 1000x, enabling accurate electronic structure predictions for large-scale virtual screening and reaction mechanism studies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="visualization-section" id="visualization">
+        <div class="container">
+            <h2 class="section-header">Interactive Molecular Fingerprint Demo</h2>
+            <p class="section-intro">Explore how different molecular fingerprints encode chemical structure. Click the buttons to see various fingerprint representations of the same molecule.</p>
+            
+            <div class="viz-container">
+                <div class="molecule-display">
+                    <canvas id="moleculeCanvas" class="molecule-canvas"></canvas>
+                </div>
+                <div class="viz-controls">
+                    <button class="viz-button active" onclick="showFingerprint('morgan')">
+                        <span style="position: relative; z-index: 1;">🔷 Morgan (ECFP)</span>
+                    </button>
+                    <button class="viz-button" onclick="showFingerprint('maccs')">
+                        <span style="position: relative; z-index: 1;">🔶 MACCS Keys</span>
+                    </button>
+                    <button class="viz-button" onclick="showFingerprint('topological')">
+                        <span style="position: relative; z-index: 1;">🔵 Topological</span>
+                    </button>
+                    <button class="viz-button" onclick="showFingerprint('pharmacophore')">
+                        <span style="position: relative; z-index: 1;">💊 Pharmacophore</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cta-section" id="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Follow Chemoinformatics Innovation</h2>
+                <p class="cta-text">Stay updated on computational chemistry, data science applications, and AI-driven molecular design. Join our community exploring the intersection of chemistry and information science.</p>
+                <a href="index.html#contact" class="cta-button">Connect With Us →</a>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Chemisters</h4>
+                    <p>The digital ecosystem of chemistry — where academic rigor meets modern communication.</p>
+                    <p>Chemistry evolves. Chemisters documents it.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#coverage">All Topics</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contact@chemisters.com">Email</a></li>
+                        <li><a href="https://www.chemisters.com">Website</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Chemisters. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Create animated particles in hero
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (10 + Math.random() * 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        createParticles();
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToAnimate = document.querySelectorAll(
+                '.intro-text, .stat-card, .topic-item, .breakthrough-card, .comparison-table, .timeline-item'
+            );
+            elementsToAnimate.forEach(el => observer.observe(el));
+
+            // Add stagger delay to stat cards
+            document.querySelectorAll('.stat-card').forEach((card, index) => {
+                card.style.transitionDelay = `${index * 0.1}s`;
+            });
+
+            // Add stagger delay to topic items
+            document.querySelectorAll('.topic-item').forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.1}s`;
+            });
+
+            // Add stagger delay to breakthrough cards
+            document.querySelectorAll('.breakthrough-card').forEach((card, index) => {
+                card.style.transitionDelay = `${index * 0.15}s`;
+            });
+
+            // Add stagger delay to timeline items
+            document.querySelectorAll('.timeline-item').forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.2}s`;
+            });
+        });
+
+        // Navigation scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+
+            // Back to top button
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Back to top functionality
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Expandable topic items
+        document.querySelectorAll('.topic-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') return;
+                this.classList.toggle('expanded');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 140;
+                    const targetPosition = target.offsetTop - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Interactive molecular fingerprint visualization
+        const canvas = document.getElementById('moleculeCanvas');
+        const ctx = canvas.getContext('2d');
+        let currentFingerprint = 'morgan';
+
+        function resizeCanvas() {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+            showFingerprint(currentFingerprint);
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        function showFingerprint(type) {
+            currentFingerprint = type;
+            
+            // Update active button
+            document.querySelectorAll('.viz-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.closest('.viz-button').classList.add('active');
+            
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            const width = canvas.width;
+            const height = canvas.height;
+            const padding = 40;
+
+            // Draw title
+            ctx.fillStyle = '#111827';
+            ctx.font = 'bold 18px -apple-system, BlinkMacSystemFont, sans-serif';
+            ctx.textAlign = 'center';
+            
+            switch(type) {
+                case 'morgan':
+                    ctx.fillText('Morgan Fingerprint (Circular, Radius=2)', width / 2, 30);
+                    drawMorganFingerprint(width, height, padding);
+                    break;
+                case 'maccs':
+                    ctx.fillText('MACCS Keys (166 Structural Keys)', width / 2, 30);
+                    drawMACCSFingerprint(width, height, padding);
+                    break;
+                case 'topological':
+                    ctx.fillText('Topological Fingerprint (Path-based)', width / 2, 30);
+                    drawTopologicalFingerprint(width, height, padding);
+                    break;
+                case 'pharmacophore':
+                    ctx.fillText('Pharmacophore Fingerprint (3D Features)', width / 2, 30);
+                    drawPharmacophoreFingerprint(width, height, padding);
+                    break;
+            }
+        }
+
+        function drawMorganFingerprint(width, height, padding) {
+            // Draw circular representation
+            const centerX = width / 2;
+            const centerY = height / 2 + 20;
+            const maxRadius = Math.min(width, height) / 3;
+
+            // Draw concentric circles for different radii
+            for (let r = 0; r <= 2; r++) {
+                const radius = maxRadius * (r + 1) / 3;
+                ctx.strokeStyle = r === 2 ? '#6366f1' : '#e5e7eb';
+                ctx.lineWidth = r === 2 ? 3 : 1;
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+                ctx.stroke();
+
+                // Add radius label
+                ctx.fillStyle = '#6b7280';
+                ctx.font = '12px sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText(`R=${r}`, centerX, centerY - radius - 8);
+            }
+
+            // Draw molecular substructure representations
+            const numBits = 16;
+            const angleStep = (Math.PI * 2) / numBits;
+            
+            for (let i = 0; i < numBits; i++) {
+                const angle = i * angleStep - Math.PI / 2;
+                const r = maxRadius + 20;
+                const x = centerX + Math.cos(angle) * r;
+                const y = centerY + Math.sin(angle) * r;
+                
+                // Random on/off for demonstration
+                const isOn = Math.random() > 0.5;
+                
+                ctx.beginPath();
+                ctx.arc(x, y, 6, 0, Math.PI * 2);
+                ctx.fillStyle = isOn ? '#6366f1' : '#e5e7eb';
+                ctx.fill();
+                ctx.strokeStyle = '#ffffff';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                // Connect to center if on
+                if (isOn) {
+                    ctx.strokeStyle = 'rgba(99, 102, 241, 0.3)';
+                    ctx.lineWidth = 1;
+                    ctx.beginPath();
+                    ctx.moveTo(centerX, centerY);
+                    ctx.lineTo(x, y);
+                    ctx.stroke();
+                }
+            }
+
+            // Central molecule indicator
+            ctx.fillStyle = '#6366f1';
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 12, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 14px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('C', centerX, centerY);
+        }
+
+        function drawMACCSFingerprint(width, height, padding) {
+            // Draw bit array representation
+            const bitsPerRow = 26;
+            const rows = 6;
+            const bitSize = 12;
+            const spacing = 3;
+            const startX = (width - (bitsPerRow * (bitSize + spacing))) / 2;
+            const startY = 60;
+
+            ctx.font = '11px sans-serif';
+            ctx.textAlign = 'left';
+            
+            for (let row = 0; row < rows; row++) {
+                for (let col = 0; col < bitsPerRow; col++) {
+                    const bitIndex = row * bitsPerRow + col;
+                    if (bitIndex >= 166) break;
+
+                    const x = startX + col * (bitSize + spacing);
+                    const y = startY + row * (bitSize + spacing + 5);
+                    
+                    // Random on/off for demonstration
+                    const isOn = Math.random() > 0.6;
+                    
+                    ctx.fillStyle = isOn ? '#6366f1' : '#f3f4f6';
+                    ctx.fillRect(x, y, bitSize, bitSize);
+                    
+                    if (isOn) {
+                        ctx.strokeStyle = '#4f46e5';
+                        ctx.lineWidth = 2;
+                        ctx.strokeRect(x, y, bitSize, bitSize);
+                    }
+                }
+            }
+
+            // Add legend
+            ctx.fillStyle = '#4b5563';
+            ctx.font = '12px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Each bit represents a specific structural feature', width / 2, startY + rows * (bitSize + spacing + 5) + 20);
+        }
+
+        function drawTopologicalFingerprint(width, height, padding) {
+            // Draw path-based representation
+            const startY = 70;
+            const paths = [
+                { label: 'C-C-C', active: true },
+                { label: 'C-C-N', active: false },
+                { label: 'C-C-O', active: true },
+                { label: 'C=C-C', active: true },
+                { label: 'C-N-C', active: false },
+                { label: 'C-C-C-C', active: true },
+                { label: 'C=C-C=C', active: false },
+                { label: 'C-O-C-C', active: true }
+            ];
+
+            const boxWidth = 140;
+            const boxHeight = 35;
+            const cols = 4;
+            const spacing = 20;
+            const startX = (width - (cols * boxWidth + (cols - 1) * spacing)) / 2;
+
+            paths.forEach((path, index) => {
+                const row = Math.floor(index / cols);
+                const col = index % cols;
+                const x = startX + col * (boxWidth + spacing);
+                const y = startY + row * (boxHeight + spacing);
+
+                // Draw box
+                ctx.fillStyle = path.active ? '#eef2ff' : '#f9fafb';
+                ctx.fillRect(x, y, boxWidth, boxHeight);
+                
+                ctx.strokeStyle = path.active ? '#6366f1' : '#e5e7eb';
+                ctx.lineWidth = path.active ? 3 : 1;
+                ctx.strokeRect(x, y, boxWidth, boxHeight);
+
+                // Draw label
+                ctx.fillStyle = path.active ? '#6366f1' : '#9ca3af';
+                ctx.font = path.active ? 'bold 14px monospace' : '13px monospace';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(path.label, x + boxWidth / 2, y + boxHeight / 2);
+            });
+
+            // Add legend
+            ctx.fillStyle = '#4b5563';
+            ctx.font = '12px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Highlighted paths present in molecule', width / 2, startY + 3 * (boxHeight + spacing));
+        }
+
+        function drawPharmacophoreFingerprint(width, height, padding) {
+            // Draw 3D pharmacophore features
+            const centerX = width / 2;
+            const centerY = height / 2 + 20;
+            
+            const features = [
+                { x: 0, y: -80, z: 0, type: 'Donor', color: '#3b82f6', active: true },
+                { x: -70, y: 30, z: 20, type: 'Accept', color: '#ef4444', active: true },
+                { x: 70, y: 30, z: -20, type: 'Hydro', color: '#10b981', active: true },
+                { x: 40, y: -30, z: 40, type: 'Arom', color: '#f59e0b', active: false },
+                { x: -40, y: 50, z: -30, type: 'Charge+', color: '#8b5cf6', active: true },
+                { x: 0, y: 60, z: 0, type: 'Charge-', color: '#ec4899', active: false }
+            ];
+
+            // Draw connections between features
+            ctx.strokeStyle = 'rgba(99, 102, 241, 0.2)';
+            ctx.lineWidth = 2;
+            for (let i = 0; i < features.length; i++) {
+                for (let j = i + 1; j < features.length; j++) {
+                    if (features[i].active && features[j].active) {
+                        const x1 = centerX + features[i].x;
+                        const y1 = centerY + features[i].y + features[i].z * 0.3;
+                        const x2 = centerX + features[j].x;
+                        const y2 = centerY + features[j].y + features[j].z * 0.3;
+                        
+                        ctx.beginPath();
+                        ctx.moveTo(x1, y1);
+                        ctx.lineTo(x2, y2);
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            // Draw features
+            features.forEach(feature => {
+                const x = centerX + feature.x;
+                const y = centerY + feature.y + feature.z * 0.3;
+                const radius = feature.active ? 25 : 20;
+                
+                // Shadow for 3D effect
+                if (feature.active) {
+                    ctx.shadowBlur = 15;
+                    ctx.shadowColor = feature.color;
+                } else {
+                    ctx.shadowBlur = 0;
+                }
+
+                // Draw sphere
+                const gradient = ctx.createRadialGradient(x - 8, y - 8, 0, x, y, radius);
+                if (feature.active) {
+                    gradient.addColorStop(0, feature.color);
+                    gradient.addColorStop(1, feature.color + 'cc');
+                } else {
+                    gradient.addColorStop(0, '#e5e7eb');
+                    gradient.addColorStop(1, '#d1d5db');
+                }
+                
+                ctx.fillStyle = gradient;
+                ctx.beginPath();
+                ctx.arc(x, y, radius, 0, Math.PI * 2);
+                ctx.fill();
+
+                ctx.shadowBlur = 0;
+
+                // Draw border
+                ctx.strokeStyle = feature.active ? '#ffffff' : '#9ca3af';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                // Draw label
+                ctx.fillStyle = feature.active ? '#ffffff' : '#6b7280';
+                ctx.font = feature.active ? 'bold 11px sans-serif' : '10px sans-serif';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(feature.type, x, y);
+            });
+
+            // Add legend
+            ctx.fillStyle = '#4b5563';
+            ctx.font = '12px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('3D spatial arrangement of chemical features', width / 2, height - 20);
+        }
+
+        // Initialize with Morgan fingerprint
+        setTimeout(() => {
+            showFingerprint('morgan');
+        }, 100);
+
+        // Parallax effect for hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero');
+            if (parallax) {
+                parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Add smooth reveal animations
+        const revealElements = document.querySelectorAll('.stat-card, .topic-item, .breakthrough-card');
+        
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0) scale(1)';
+                    }, index * 100);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // Add ripple effect to CTA buttons
+        document.querySelectorAll('.cta-button, .viz-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple');
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        // Add keyboard navigation for accessibility
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.topic-item.expanded').forEach(item => {
+                    item.classList.remove('expanded');
+                });
+            }
+        });
+
+        // Performance optimization: Lazy load images if any are added
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                            imageObserver.unobserve(img);
+                        }
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Add smooth color transitions on scroll for sections
+        const sections = document.querySelectorAll('.section, .intro-section, .breakthrough-section');
+        sections.forEach(section => {
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.transition = 'background-color 0.6s ease';
+                    }
+                });
+            }, { threshold: 0.2 });
+            
+            sectionObserver.observe(section);
+        });
+
+        console.log('🧠 Chemoinformatics page loaded successfully!');
+        console.log('✨ All interactive features activated');
+    </script>
+</body>
+</html>
+
+    <section class="comparison-section" id="comparison">
+        <div class="container">
+            <h2 class="section-header">Software Tool Comparison</h2>
+            <p class="section-intro">Understanding the strengths and applications of major chemoinformatics platforms.</p>
+            
+            <div class="comparison-table">
+                <div class="comparison-row header">
+                    <div class="comparison-cell">Tool/Platform</div>
+                    <div class="comparison-cell">Primary Use</div>
+                    <div class="comparison-cell">License Type</div>
+                    <div class="comparison-cell">Best For</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">RDKit</div>
+                    <div class="comparison-cell">General toolkit</div>
+                    <div class="comparison-cell">Open Source</div>
+                    <div class="comparison-cell">Python integration</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">ChemAxon</div>
+                    <div class="comparison-cell">Enterprise suite</div>
+                    <div class="comparison-cell">Commercial</div>
+                    <div class="comparison-cell">Industrial workflows</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">OpenEye</div>
+                    <div class="comparison-cell">3D modeling</div>
+                    <div class="comparison-cell">Commercial</div>
+                    <div class="comparison-cell">Docking studies</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">DeepChem</div>
+                    <div class="comparison-cell">ML models</div>
+                    <div class="comparison-cell">Open Source</div>
+                    <div class="comparison-cell">Deep learning</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">MOE</div>
+                    <div class="comparison-cell">Modeling suite</div>
+                    <div class="comparison-cell">Commercial</div>
+                    <div class="comparison-cell">Drug design</div>
+                </div>
+            </div>
+        </div>
+    </section>
