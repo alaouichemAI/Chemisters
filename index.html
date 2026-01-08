@@ -3,13 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chemisters - AI-Driven Chemistry Solutions</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230066ff'/%3E%3Cstop offset='100%25' style='stop-color:%2300d4ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23grad)'/%3E%3Ctext x='50' y='65' font-family='Arial,sans-serif' font-size='45' font-weight='bold' text-anchor='middle' fill='white'%3EC%3C/text%3E%3Ccircle cx='75' cy='25' r='8' fill='%2300d4ff' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230066ff'/%3E%3Cstop offset='100%25' style='stop-color:%2300d4ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23grad)'/%3E%3Ctext x='50' y='65' font-family='Arial,sans-serif' font-size='45' font-weight='bold' text-anchor='middle' fill='white'%3EC%3C/text%3E%3Ccircle cx='75' cy='25' r='8' fill='%2300d4ff' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
-    
+    <title>Chemisters — The Future of Chemistry</title>
     <style>
         * {
             margin: 0;
@@ -17,1150 +11,1198 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --primary-blue: #0066ff;
-            --secondary-blue: #0052cc;
-            --accent-cyan: #00d4ff;
-            --dark-bg: #0a0f1a;
-            --darker-bg: #050810;
-            --card-bg: rgba(15, 25, 40, 0.8);
-            --text-primary: #ffffff;
-            --text-secondary: #b8c5d6;
-            --text-muted: #7a8699;
-            --border-color: rgba(255, 255, 255, 0.1);
-            --success-color: #00c896;
-            --warning-color: #ffa726;
-        }
-
         body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
-            color: var(--text-primary);
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.7;
             overflow-x: hidden;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1140px;
             margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header & Navigation */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(10, 15, 26, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border-color);
-            z-index: 1000;
-            transition: all 0.3s ease;
+            padding: 0 30px;
         }
 
         nav {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+            transition: box-shadow 0.3s ease;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .nav-content {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            padding: 1rem 0;
+            align-items: center;
         }
 
         .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 1.5rem;
+            font-size: 1.5em;
             font-weight: 700;
-            color: var(--accent-cyan);
-            text-decoration: none;
+            color: #2563eb;
+            letter-spacing: -0.5px;
         }
 
-        .nav-menu {
+        .nav-links {
             display: flex;
+            gap: 35px;
             list-style: none;
-            gap: 2rem;
-            align-items: center;
         }
 
-        .nav-menu a {
+        .nav-links a {
+            color: #4b5563;
             text-decoration: none;
-            color: var(--text-secondary);
             font-weight: 500;
-            transition: color 0.3s ease;
+            font-size: 0.95em;
+            transition: color 0.2s ease;
             position: relative;
         }
 
-        .nav-menu a:hover {
-            color: var(--accent-cyan);
-        }
-
-        .nav-menu a::after {
+        .nav-links a::after {
             content: '';
             position: absolute;
-            bottom: -4px;
+            bottom: -5px;
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--accent-cyan);
+            background: #2563eb;
             transition: width 0.3s ease;
         }
 
-        .nav-menu a:hover::after {
+        .nav-links a:hover::after {
             width: 100%;
         }
 
-        .cta-nav {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
-            color: white !important;
-            padding: 0.6rem 1.2rem;
-            border-radius: 6px;
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #2563eb;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+            border-radius: 2px;
         }
 
-        .cta-nav:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 102, 255, 0.4);
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
         }
 
-        /* Hero Section */
-        .hero {
-            padding: 8rem 0 6rem;
-            text-align: center;
-            position: relative;
-            background: radial-gradient(ellipse at center top, rgba(0, 102, 255, 0.1) 0%, transparent 70%);
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
         }
 
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
         }
 
-        .hero-badge {
-            display: inline-block;
-            background: rgba(0, 212, 255, 0.1);
-            border: 1px solid rgba(0, 212, 255, 0.3);
-            color: var(--accent-cyan);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
-        }
-
-        .hero h1 {
-            font-size: 3.2rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-cyan) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.2;
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            margin-bottom: 2.5rem;
-            line-height: 1.6;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
-            color: white;
-            padding: 0.8rem 2rem;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 102, 255, 0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--text-primary);
-            padding: 0.8rem 2rem;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--accent-cyan);
-            color: var(--accent-cyan);
-            transform: translateY(-2px);
-        }
-
-        /* Features Overview */
-        .features-overview {
-            padding: 4rem 0;
-            background: rgba(255, 255, 255, 0.02);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .feature-card {
-            text-align: center;
-            padding: 2rem 1.5rem;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            backdrop-filter: blur(20px);
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(0, 212, 255, 0.3);
-            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.1);
-        }
-
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            margin: 0 auto 1rem;
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-cyan) 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-        }
-
-        .feature-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-
-        .feature-card p {
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        /* Services Section */
-        .services {
-            padding: 6rem 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-badge {
-            display: inline-block;
-            background: rgba(0, 212, 255, 0.1);
-            color: var(--accent-cyan);
-            padding: 0.4rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-
-        .section-header p {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 2.5rem;
-            backdrop-filter: blur(20px);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 70px;
             left: 0;
             right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e7eb;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-nav.active {
+            display: block;
+        }
+
+        .mobile-nav ul {
+            list-style: none;
+            padding: 0 30px;
+        }
+
+        .mobile-nav li {
+            margin: 15px 0;
+        }
+
+        .mobile-nav a {
+            color: #4b5563;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1em;
+            display: block;
+            padding: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav a:hover {
+            color: #2563eb;
+            padding-left: 20px;
+        }
+
+        .scroll-progress {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 0%;
             height: 3px;
-            background: linear-gradient(90deg, var(--primary-blue), var(--accent-cyan));
+            background: linear-gradient(90deg, #2563eb, #3b82f6);
+            z-index: 101;
+            transition: width 0.1s ease;
         }
 
-        .service-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(0, 212, 255, 0.3);
-            box-shadow: 0 20px 60px rgba(0, 102, 255, 0.15);
-        }
-
-        .service-header {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-icon {
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            flex-shrink: 0;
-        }
-
-        .service-info h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-
-        .service-tag {
-            background: rgba(0, 212, 255, 0.1);
-            color: var(--accent-cyan);
-            padding: 0.2rem 0.6rem;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-
-        .service-card p {
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .service-features {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-
-        .service-features li {
-            padding: 0.4rem 0;
-            color: var(--text-secondary);
-            position: relative;
-            padding-left: 1.2rem;
-            font-size: 0.9rem;
-        }
-
-        .service-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--success-color);
-            font-weight: bold;
-        }
-
-        .service-cta {
-            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            background: #2563eb;
             color: white;
-            padding: 0.7rem 1.5rem;
             border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-        }
-
-        .service-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 102, 255, 0.3);
-        }
-
-        /* About Section */
-        .about {
-            padding: 6rem 0;
-            background: linear-gradient(135deg, rgba(0, 102, 255, 0.05) 0%, rgba(0, 212, 255, 0.05) 100%);
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-text h2 {
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-            color: var(--text-primary);
-            font-weight: 700;
-        }
-
-        .about-text p {
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 1.5rem;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            backdrop-filter: blur(20px);
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--accent-cyan);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 6rem 0;
-        }
-
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: start;
-        }
-
-        .contact-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-
-        .contact-info p {
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-
-        .contact-details {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            padding: 1rem;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            backdrop-filter: blur(20px);
-        }
-
-        .contact-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
-            border-radius: 8px;
+            border-radius: 50%;
+            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1rem;
-            flex-shrink: 0;
-        }
-
-        .contact-form {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 2.5rem;
-            backdrop-filter: blur(20px);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
-            font-weight: 500;
-            font-size: 0.9rem;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            color: var(--text-primary);
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            font-family: inherit;
-        }
-
-        .form-group select {
-            width: 100%;
-            padding: 0.8rem;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            color: var(--text-primary);
-            font-size: 0.9rem;
-            font-family: inherit;
-            cursor: pointer;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
-            background-repeat: no-repeat;
-            background-position: right 0.8rem center;
-            background-size: 1rem;
-            padding-right: 2.5rem;
-        }
-
-        .form-group select option {
-            background: var(--dark-bg);
-            color: var(--text-primary);
-            padding: 0.5rem;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--accent-cyan);
-            box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.2);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--darker-bg);
-            border-top: 1px solid var(--border-color);
-            padding: 3rem 0 2rem;
-        }
-
-        .footer-content {
-            text-align: center;
-        }
-
-        .footer-logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--accent-cyan);
-            margin-bottom: 1rem;
-        }
-
-        .footer-text {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-cta {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .about-content,
-            .contact-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Animations */
-        .fade-up {
+            font-size: 1.5em;
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 99;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
         }
 
-        .fade-up.visible {
+        .scroll-to-top.visible {
             opacity: 1;
             transform: translateY(0);
         }
 
-        /* Success/Error Messages */
-        .message {
-            padding: 1rem;
+        .scroll-to-top:hover {
+            background: #1d4ed8;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+        }
+
+        header {
+            padding: 120px 0 100px;
+            text-align: center;
+            background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.03;
+            pointer-events: none;
+        }
+
+        .molecule {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #2563eb;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .molecule:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .molecule:nth-child(2) {
+            top: 60%;
+            left: 80%;
+            animation-delay: 3s;
+            width: 60px;
+            height: 60px;
+        }
+
+        .molecule:nth-child(3) {
+            top: 80%;
+            left: 20%;
+            animation-delay: 6s;
+            width: 80px;
+            height: 80px;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            33% {
+                transform: translate(30px, -30px) rotate(120deg);
+            }
+            66% {
+                transform: translate(-20px, 20px) rotate(240deg);
+            }
+        }
+
+        .hero-title {
+            font-size: 3.2em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #111827;
+            letter-spacing: -1px;
+            line-height: 1.2;
+            position: relative;
+            animation: slideInFromTop 1s ease-out;
+        }
+
+        @keyframes slideInFromTop {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-accent {
+            color: #2563eb;
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25em;
+            color: #6b7280;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-weight: 400;
+            animation: slideInFromTop 1s ease-out 0.2s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: #2563eb;
+            color: #ffffff;
+            text-decoration: none;
             border-radius: 8px;
-            margin: 1rem 0;
+            font-weight: 600;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            animation: slideInFromTop 1s ease-out 0.4s both;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .cta-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .cta-button:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+        }
+
+        .section {
+            padding: 80px 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-header {
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #111827;
+            letter-spacing: -0.5px;
+        }
+
+        .section-intro {
+            font-size: 1.15em;
+            color: #6b7280;
+            max-width: 800px;
+            margin-bottom: 50px;
+            line-height: 1.7;
+        }
+
+        .content-block {
+            background: #ffffff;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .content-block::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 0;
+            background: linear-gradient(180deg, #2563eb, #3b82f6);
+            border-radius: 12px 0 0 12px;
+            transition: height 0.4s ease;
+        }
+
+        .content-block:hover::before {
+            height: 100%;
+        }
+
+        .content-block:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transform: translateX(5px);
+        }
+
+        .content-block p {
+            font-size: 1.05em;
+            color: #374151;
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+
+        .content-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .topic-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .topic-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 35px 30px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .topic-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.05), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .topic-card:hover::before {
+            left: 100%;
+        }
+
+        .topic-card:hover {
+            border-color: #2563eb;
+            box-shadow: 0 8px 30px rgba(37, 99, 235, 0.15);
+            transform: translateY(-6px);
+        }
+
+        .topic-icon {
+            font-size: 2.2em;
+            margin-bottom: 18px;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .topic-card:hover .topic-icon {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .topic-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #111827;
+            transition: color 0.3s ease;
+        }
+
+        .topic-card:hover .topic-title {
+            color: #2563eb;
+        }
+
+        .topic-description {
+            font-size: 0.95em;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin: 50px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 30px;
+            background: #f9fafb;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            background: #f3f4f6;
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1em;
+            color: #6b7280;
             font-weight: 500;
         }
 
-        .success {
-            background: rgba(0, 200, 150, 0.1);
-            border: 1px solid rgba(0, 200, 150, 0.3);
-            color: var(--success-color);
+        .newsletter-section {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            padding: 60px;
+            border-radius: 16px;
+            margin: 60px 0;
+            text-align: center;
+            color: white;
+            box-shadow: 0 10px 40px rgba(37, 99, 235, 0.3);
         }
 
-        .error {
-            background: rgba(255, 100, 100, 0.1);
-            border: 1px solid rgba(255, 100, 100, 0.3);
-            color: #ff6464;
+        .newsletter-section h3 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            font-weight: 700;
         }
+
+        .newsletter-section p {
+            font-size: 1.15em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            min-width: 250px;
+            padding: 14px 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            font-size: 1em;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .newsletter-input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .newsletter-button {
+            padding: 14px 32px;
+            background: white;
+            color: #2563eb;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .contact-card {
+            background: #f9fafb;
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            border-color: #2563eb;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.1);
+        }
+
+        .contact-card h3 {
+            font-size: 1.2em;
+            color: #111827;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .contact-card p {
+            color: #6b7280;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05em;
+            transition: gap 0.3s ease;
+        }
+
+        .contact-link:hover {
+            gap: 15px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #f9fafb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 1.3em;
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+
+        .social-link:hover {
+            background: #2563eb;
+            color: white;
+            transform: translateY(-5px) rotate(5deg);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+        }
+
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            padding: 60px 0 40px;
+            margin-top: 100px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 50px;
+        }
+
+        .footer-section h4 {
+            color: #ffffff;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer-section p {
+            color: #9ca3af;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #374151;
+            color: #6b7280;
+            font-size: 0.9em;
+        }
+
+        .footer-bottom a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-bottom a:hover {
+            color: #ffffff;
+        }
+
+        .tagline {
+            background: #f9fafb;
+            border-left: 4px solid #2563eb;
+            padding: 30px 40px;
+            margin: 40px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .tagline p {
+            font-size: 1.15em;
+            color: #374151;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        @media (max-width: 968px) {
+            .topics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-section {
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: 2.2em;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1em;
+            }
+
+            .section-header {
+                font-size: 1.8em;
+            }
+
+            .topics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .content-block {
+                padding: 25px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-input {
+                min-width: 100%;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+        .stagger-5 { transition-delay: 0.5s; }
+        .stagger-6 { transition-delay: 0.6s; }
     </style>
 </head>
 <body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+    
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">Chemisters</div>
+                <ul class="nav-links">
+                    <li><a href="#mission">Mission</a></li>
+                    <li><a href="#coverage">Coverage</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="#mission">Mission</a></li>
+            <li><a href="#coverage">Coverage</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
+
     <header>
-        <nav class="container">
-            <a href="#" class="logo">
-                ⚗️ Chemisters
-            </a>
-            <ul class="nav-menu">
-                <li><a href="#features">Solutions</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact" class="cta-nav">Get Started</a></li>
-            </ul>
-        </nav>
+        <div class="hero-background">
+            <div class="molecule"></div>
+            <div class="molecule"></div>
+            <div class="molecule"></div>
+        </div>
+        <div class="container">
+            <h1 class="hero-title">Welcome to <span class="hero-accent">Chemisters</span></h1>
+            <p class="hero-subtitle">A modern chemistry intelligence and discovery hub for researchers, students, and innovators shaping the next era of science.</p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">🔬 Advanced Chemistry AI | Validated Research Solutions</div>
-                <h1>AI-Driven Chemistry Solutions</h1>
-                <p class="hero-subtitle">Transform your chemical research with validated AI protocols, automated workflows, and predictive analytics. From lab to production, we bridge traditional chemistry with cutting-edge technology.</p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn-primary">
-                        Start Your Project →
-                    </a>
-                    <a href="#services" class="btn-secondary">
-                        Explore Services
-                    </a>
-                </div>
+    <main class="container">
+        <section class="section">
+            <div class="content-block fade-in">
+                <p>Chemisters delivers daily updates about molecules, reactions, laboratory techniques, and the global minds driving chemical innovation.</p>
+                <p>Here, chemistry isn't just studied — it's reimagined. From organic synthesis to AI-driven laboratory automation, we document every breakthrough redefining how humanity understands matter, energy, and life itself.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="features" class="features-overview">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">Why Choose Chemisters</div>
-                <h2>Revolutionizing Chemistry Research</h2>
-                <p>Our AI-powered approach reduces experimental failures, accelerates discovery, and delivers reproducible results.</p>
+        <section class="section" id="mission">
+            <h2 class="section-header fade-in">Our Mission</h2>
+            <p class="section-intro fade-in">To make chemistry accessible, visionary, and actionable.</p>
+            <div class="content-block fade-in">
+                <p>At Chemisters, our mission is to connect the chemistry community through verified information, emerging technologies, and authentic scientific storytelling.</p>
+                <p>We believe in merging human expertise with digital intelligence to accelerate discovery — molecule by molecule.</p>
             </div>
-            <div class="features-grid">
-                <div class="feature-card fade-up">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Validated Protocols</h3>
-                    <p>Peer-reviewed methodologies that reduce failed experiments and accelerate your research timeline.</p>
-                </div>
-                <div class="feature-card fade-up">
-                    <div class="feature-icon">🤖</div>
-                    <h3>AI-Powered Predictions</h3>
-                    <p>Advanced ML models predict reaction outcomes, optimize conditions, and minimize resource waste.</p>
-                </div>
-                <div class="feature-card fade-up">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Automation Ready</h3>
-                    <p>Transform manual procedures into robust, reproducible automated workflows.</p>
-                </div>
-                <div class="feature-card fade-up">
-                    <div class="feature-icon">📊</div>
-                    <h3>Data-Driven Insights</h3>
-                    <p>Comprehensive analytics and reporting to guide your research decisions.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">Our Services</div>
-                <h2>Comprehensive Chemistry Solutions</h2>
-                <p>From concept validation to production optimization, we provide end-to-end chemistry research support.</p>
+        <section class="section" id="coverage">
+            <h2 class="section-header fade-in">What We Cover</h2>
+            <p class="section-intro fade-in">Comprehensive coverage across all major chemistry disciplines and emerging fields.</p>
+            
+            <div class="topics-grid">
+                <a href="organic chemistry.html" class="topic-card-link fade-in stagger-1">
+                    <div class="topic-card">
+                        <span class="topic-icon">🌿</span>
+                        <h3 class="topic-title">Organic Chemistry</h3>
+                        <p class="topic-description">Synthetic routes, green chemistry, retrosynthesis, and molecular modeling.</p>
+                    </div>
+                </a>
+                <a href="medicinal chemistry.html" class="topic-card-link fade-in stagger-2">
+                    <div class="topic-card">
+                        <span class="topic-icon">💊</span>
+                        <h3 class="topic-title">Medicinal Chemistry</h3>
+                        <p class="topic-description">Drug discovery, pharmacokinetics, QSAR, and molecular docking insights.</p>
+                    </div>
+                </a>
+                <a href="inorganic chemistry.html" class="topic-card-link fade-in stagger-3">
+                    <div class="topic-card">
+                        <span class="topic-icon">⚙️</span>
+                        <h3 class="topic-title">Inorganic Chemistry</h3>
+                        <p class="topic-description">Catalysis, coordination compounds, and advanced materials.</p>
+                    </div>
+                </a>
+                <a href="biological chemistry.html" class="topic-card-link fade-in stagger-4">
+                    <div class="topic-card">
+                        <span class="topic-icon">🧬</span>
+                        <h3 class="topic-title">Biological Chemistry</h3>
+                        <p class="topic-description">Enzymatic catalysis, biomolecular interactions, and the chemistry of life.</p>
+                    </div>
+                </a>
+                <a href="nano chemistry.html" class="topic-card-link fade-in stagger-5">
+                    <div class="topic-card">
+                        <span class="topic-icon">⚛️</span>
+                        <h3 class="topic-title">Nanochemistry</h3>
+                        <p class="topic-description">Design, synthesis, and application of nanoscale materials for medicine and energy.</p>
+                    </div>
+                </a>
+                <a href="chemoinformatics.html" class="topic-card-link fade-in stagger-6">
+                    <div class="topic-card">
+                        <span class="topic-icon">🧠</span>
+                        <h3 class="topic-title">Chemoinformatics</h3>
+                        <p class="topic-description">AI-driven prediction, QSAR/QSPR modeling, and molecular data intelligence.</p>
+                    </div>
+                </a>
+                <a href="heterocyclic chemistry.html" class="topic-card-link fade-in stagger-1">
+                    <div class="topic-card">
+                        <span class="topic-icon">🔁</span>
+                        <h3 class="topic-title">Heterocyclic Chemistry</h3>
+                        <p class="topic-description">Synthesis, reactivity, and pharmaceutical applications of ring systems.</p>
+                    </div>
+                </a>
+                <a href="autonomous chemistry.html" class="topic-card-link fade-in stagger-2">
+                    <div class="topic-card">
+                        <span class="topic-icon">🤖</span>
+                        <h3 class="topic-title">Autonomous Chemistry</h3>
+                        <p class="topic-description">Robotics, machine learning, and self-driving labs shaping the future of synthesis.</p>
+                    </div>
+                </a>
+                <a href="synthetic chemistry.html" class="topic-card-link fade-in stagger-3">
+                    <div class="topic-card">
+                        <span class="topic-icon">⚗️</span>
+                        <h3 class="topic-title">Synthetic Chemistry</h3>
+                        <p class="topic-description">Engineering molecules with purpose through multistep synthesis and automation.</p>
+                    </div>
+                </a>
+                <a href="computational chemistry.html" class="topic-card-link fade-in stagger-4">
+                    <div class="topic-card">
+                        <span class="topic-icon">💻</span>
+                        <h3 class="topic-title">Computational Chemistry</h3>
+                        <p class="topic-description">Simulating reality with quantum mechanics, molecular dynamics, and AI predictions.</p>
+                    </div>
+                </a>
+                <a href="analytical chemistry.html" class="topic-card-link fade-in stagger-5">
+                    <div class="topic-card">
+                        <span class="topic-icon">🧫</span>
+                        <h3 class="topic-title">Analytical Chemistry</h3>
+                        <p class="topic-description">Precision instrumentation and advanced methods for molecular characterization.</p>
+                    </div>
+                </a>
+                <a href="physical chemistry.html" class="topic-card-link fade-in stagger-6">
+                    <div class="topic-card">
+                        <span class="topic-icon">🌡️</span>
+                        <h3 class="topic-title">Physical Chemistry</h3>
+                        <p class="topic-description">Understanding thermodynamics, kinetics, and the laws of molecular behavior.</p>
+                    </div>
+                </a>
+                <a href="green chemistry.html" class="topic-card-link fade-in stagger-1">
+                    <div class="topic-card">
+                        <span class="topic-icon">🌱</span>
+                        <h3 class="topic-title">Green Chemistry</h3>
+                        <p class="topic-description">Sustainable synthesis and eco-friendly practices for a cleaner future.</p>
+                    </div>
+                </a>
+                <a href="wisdom and stories.html" class="topic-card-link fade-in stagger-2">
+                    <div class="topic-card">
+                        <span class="topic-icon">📖</span>
+                        <h3 class="topic-title">Wisdom & Stories</h3>
+                        <p class="topic-description">Reflections, experiences, and philosophical insights from chemists worldwide.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="tagline fade-in">
+                <p>Each section explores chemistry as both a science and a movement — connecting molecules, technology, and human creativity.</p>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <h2 class="section-header fade-in">About Chemisters</h2>
+            <div class="content-block fade-in">
+                <p>Founded in 2025, Chemisters aims to become the digital ecosystem of chemistry — where academic rigor meets modern communication.</p>
+                <p>We're not just another science blog — we are a network for the thinkers and builders of chemistry's future.</p>
             </div>
             
-            <div class="services-grid">
-                <div class="service-card fade-up">
-                    <div class="service-header">
-                        <div class="service-icon">🔬</div>
-                        <div class="service-info">
-                            <h3>Protocol Validation & Development</h3>
-                            <span class="service-tag">Core Service</span>
-                        </div>
-                    </div>
-                    <p>Transform experimental ideas into validated, reproducible protocols that minimize failures and maximize success rates.</p>
-                    <ul class="service-features">
-                        <li>Peer-reviewed methodology frameworks</li>
-                        <li>Reduced experimental failure rates</li>
-                        <li>Reproducible protocol documentation</li>
-                        <li>Quality assurance integration</li>
-                    </ul>
-                    <a href="#contact" class="service-cta">Request Validation →</a>
+            <div class="stats-grid">
+                <div class="stat-item fade-in">
+                    <div class="stat-number">2025</div>
+                    <div class="stat-label">Founded</div>
                 </div>
-
-                <div class="service-card fade-up">
-                    <div class="service-header">
-                        <div class="service-icon">🧮</div>
-                        <div class="service-info">
-                            <h3>Reaction Simulation & Prediction</h3>
-                            <span class="service-tag">AI-Powered</span>
-                        </div>
-                    </div>
-                    <p>Predict reaction outcomes, optimize conditions, and identify potential issues before synthesis using advanced ML models.</p>
-                    <ul class="service-features">
-                        <li>Product outcome forecasting</li>
-                        <li>Side reaction probability analysis</li>
-                        <li>Condition optimization algorithms</li>
-                        <li>Resource efficiency maximization</li>
-                    </ul>
-                    <a href="#contact" class="service-cta">Start Simulation →</a>
+                <div class="stat-item fade-in">
+                    <div class="stat-number">14+</div>
+                    <div class="stat-label">Chemistry Disciplines</div>
                 </div>
-
-                <div class="service-card fade-up">
-                    <div class="service-header">
-                        <div class="service-icon">🤖</div>
-                        <div class="service-info">
-                            <h3>R&D Automation Solutions</h3>
-                            <span class="service-tag">Future-Ready</span>
-                        </div>
-                    </div>
-                    <p>Convert manual procedures into automated, reproducible workflows with robotic integration and quality assurance.</p>
-                    <ul class="service-features">
-                        <li>Automated workflow generation</li>
-                        <li>Robotic integration platforms</li>
-                        <li>Real-time monitoring systems</li>
-                        <li>Scalable automation architecture</li>
-                    </ul>
-                    <a href="#contact" class="service-cta">Explore Automation →</a>
-                </div>
-
-                <div class="service-card fade-up">
-                    <div class="service-header">
-                        <div class="service-icon">💡</div>
-                        <div class="service-info">
-                            <h3>Process Consulting & Optimization</h3>
-                            <span class="service-tag">Expert Support</span>
-                        </div>
-                    </div>
-                    <p>Strategic guidance on chemical processes, project scoping, protocol optimization, and ML system integration.</p>
-                    <ul class="service-features">
-                        <li>Technical process consultation</li>
-                        <li>Project scope optimization</li>
-                        <li>ML system integration planning</li>
-                        <li>Efficiency enhancement strategies</li>
-                    </ul>
-                    <a href="#contact" class="service-cta">Book Consultation →</a>
+                <div class="stat-item fade-in">
+                    <div class="stat-number">Daily</div>
+                    <div class="stat-label">Content Updates</div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text fade-up">
-                    <div class="section-badge">About Chemisters</div>
-                    <h2>Bridging Chemistry & Technology</h2>
-                    <p>Founded with a mission to revolutionize chemical research, Chemisters represents the intersection of traditional chemistry expertise and cutting-edge AI technology. We specialize in developing practical, reproducible tools that bring machine learning and automation to laboratory operations worldwide.</p>
-                    <p>Based in Rabat, Morocco, our team combines deep chemistry knowledge with advanced technological capabilities, serving clients worldwide who demand robust, data-driven research solutions.</p>
-                    <p>Our mission is simple: every chemical discovery should be backed by validated protocols, predictive insights, and reproducible methodologies.</p>
-                </div>
-                <div class="stats-grid fade-up">
-                    <div class="stat-item">
-                        <div class="stat-number">AI/ML</div>
-                        <div class="stat-label">Core Technology</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">Global</div>
-                        <div class="stat-label">Client Reach</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">Lab Automation</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Validated Protocols</div>
-                    </div>
-                </div>
+            <div class="tagline fade-in">
+                <p>Our vision: To transform scientific knowledge into a living, interactive dialogue between chemistry and technology.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">Get Started</div>
-                <h2>Ready to Transform Your Research?</h2>
-                <p>Let's discuss how our AI-driven chemistry solutions can accelerate your discoveries and optimize your processes.</p>
-            </div>
+        <section class="section" id="contact">
+            <h2 class="section-header fade-in">Contact Us</h2>
+            <p class="section-intro fade-in">For collaboration, guest articles, partnership proposals, or media inquiries.</p>
             
-            <div class="contact-container">
-                <div class="contact-info fade-up">
-                    <h3>Let's Connect</h3>
-                    <p>Ready to revolutionize your chemistry research? Get in touch to discuss your project requirements and discover how we can help.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">📧</div>
-                            <div>
-                                <strong>Direct Email</strong><br>
-                                <span style="color: var(--accent-cyan);">mohamed.elbelghiti@um5r.ac.ma</span>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">🌍</div>
-                            <div>
-                                <strong>Location</strong><br>
-                                Rabat, Morocco (Worldwide Clients)
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">🔬</div>
-                            <div>
-                                <strong>Specialization</strong><br>
-                                AI-Driven Chemistry Solutions
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">⚡</div>
-                            <div>
-                                <strong>Response Time</strong><br>
-                                Within 24 hours
-                            </div>
-                        </div>
-                    </div>
+            <div class="contact-grid">
+                <div class="contact-card fade-in">
+                    <h3>Email Inquiry</h3>
+                    <p>Our editorial team responds within 48 hours to all verified requests.</p>
+                    <a href="mailto:contact@chemisters.com" class="contact-link">
+                        <span>📧</span>
+                        <span>contact@chemisters.com</span>
+                    </a>
                 </div>
-                
-                <div class="contact-form fade-up">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" placeholder="Your full name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="organization">Organization</label>
-                            <input type="text" id="organization" name="organization" placeholder="Company/University (Optional)">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="service">Service of Interest</label>
-                            <select id="service" name="service">
-                                <option value="protocol-validation">Protocol Validation & Development</option>
-                                <option value="reaction-simulation">Reaction Simulation & Prediction</option>
-                                <option value="rd-automation">R&D Automation Solutions</option>
-                                <option value="process-consulting">Process Consulting & Optimization</option>
-                                <option value="custom-solution">Custom Solution</option>
-                                <option value="general-inquiry">General Inquiry</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="timeline">Project Timeline</label>
-                            <select id="timeline" name="timeline">
-                                <option value="immediate">Immediate (1-2 weeks)</option>
-                                <option value="short-term">Short-term (1 month)</option>
-                                <option value="medium-term">Medium-term (3 months)</option>
-                                <option value="long-term">Long-term (6+ months)</option>
-                                <option value="exploratory">Exploratory/Planning Phase</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Project Details *</label>
-                            <textarea id="message" name="message" placeholder="Tell us about your chemistry challenges, research goals, or specific requirements..." required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn-primary" style="width: 100%;">
-                            Send Message →
-                        </button>
-                    </form>
-                    
-                    <div id="formMessage"></div>
+                <div class="contact-card fade-in">
+                    <h3>Visit Our Website</h3>
+                    <p>Explore our latest articles, research updates, and chemistry insights.</p>
+                    <a href="https://www.chemisters.com" class="contact-link" target="_blank" rel="noopener">
+                        <span>🌐</span>
+                        <span>www.chemisters.com</span>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+
+            <div class="social-links fade-in">
+                <a href="#" class="social-link" aria-label="LinkedIn" title="LinkedIn">💼</a>
+                <a href="#" class="social-link" aria-label="Twitter" title="Twitter">🐦</a>
+                <a href="#" class="social-link" aria-label="GitHub" title="GitHub">💻</a>
+                <a href="#" class="social-link" aria-label="Instagram" title="Instagram">📸</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-header fade-in">Join the Chemisters Network</h2>
+            <div class="content-block fade-in">
+                <p>Follow us for daily updates, molecular insights, and cutting-edge chemistry stories. Together, we're shaping the next generation of scientific innovation — transparent, connected, and autonomous.</p>
+            </div>
+
+            <div class="newsletter-section fade-in">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Get weekly chemistry insights, breakthrough discoveries, and expert analysis delivered to your inbox.</p>
+                <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email address">
+                    <button type="submit" class="newsletter-button">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">⚗️ Chemisters</div>
-                <p class="footer-text">
-                    Advancing chemistry through AI, automation, and validated methodologies.<br>
-                    Based in Rabat, Morocco | Serving researchers worldwide
-                </p>
-                <p class="footer-text" style="margin-top: 1rem; font-size: 0.8rem;">
-                    © 2025 Chemisters. Empowering chemical research through technology.
-                </p>
+                <div class="footer-section">
+                    <h4>Chemisters</h4>
+                    <p>The digital ecosystem of chemistry — where academic rigor meets modern communication.</p>
+                    <p>Chemistry evolves. Chemisters documents it.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#mission">Mission</a></li>
+                        <li><a href="#coverage">Coverage</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contact@chemisters.com">Email</a></li>
+                        <li><a href="https://www.chemisters.com">Website</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Chemisters. All rights reserved. | 
+                <a href="privacy-policy.html">Privacy Policy</a> | 
+                <a href="terms-of-use.html">Terms of Use</a></p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
-        function initSmoothScrolling() {
-            const links = document.querySelectorAll('a[href^="#"]');
-            links.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetSection = document.querySelector(targetId);
-                    if (targetSection) {
-                        const headerHeight = document.querySelector('header').offsetHeight;
-                        const targetPosition = targetSection.offsetTop - headerHeight - 20;
-                        
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        }
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
 
-        // Intersection Observer for fade-up animations
-        function initAnimations() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, observerOptions);
-
-            const fadeElements = document.querySelectorAll('.fade-up');
-            fadeElements.forEach(el => observer.observe(el));
-        }
-
-        // Header scroll effect
-        function initHeaderEffect() {
-            const header = document.querySelector('header');
-            let lastScrollY = window.pageYOffset;
-
-            window.addEventListener('scroll', () => {
-                const currentScrollY = window.pageYOffset;
-                
-                if (currentScrollY > 100) {
-                    header.style.background = 'rgba(10, 15, 26, 0.98)';
-                } else {
-                    header.style.background = 'rgba(10, 15, 26, 0.95)';
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
                 }
-                
-                lastScrollY = currentScrollY;
             });
-        }
+        }, observerOptions);
 
-        // Contact form handling
-        function initContactForm() {
-            const form = document.getElementById('contactForm');
-            const messageDiv = document.getElementById('formMessage');
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
 
-            form.addEventListener('submit', function(e) {
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
-                const formData = new FormData(form);
-                const name = formData.get('name');
-                const email = formData.get('email');
-                const message = formData.get('message');
-                
-                // Validation
-                if (!name || !email || !message) {
-                    showMessage('Please fill in all required fields.', 'error');
-                    return;
-                }
-                
-                if (!isValidEmail(email)) {
-                    showMessage('Please enter a valid email address.', 'error');
-                    return;
-                }
-                
-                // Simulate form submission
-                const submitBtn = form.querySelector('button[type="submit"]');
-                const originalText = submitBtn.textContent;
-                
-                submitBtn.textContent = 'Sending...';
-                submitBtn.disabled = true;
-                
-                setTimeout(() => {
-                    submitBtn.textContent = 'Message Sent ✓';
-                    submitBtn.style.background = 'linear-gradient(135deg, var(--success-color) 0%, #00a575 100%)';
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const targetPosition = target.offsetTop - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
                     
-                    showMessage(
-                        'We got your message',
-                        'success'
-                    );
-                    
-                    form.reset();
-                    
-                    // Reset button after delay
-                    setTimeout(() => {
-                        submitBtn.textContent = originalText;
-                        submitBtn.style.background = 'linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%)';
-                        submitBtn.disabled = false;
-                    }, 4000);
-                    
-                }, 1500);
-            });
-
-            function showMessage(text, type) {
-                messageDiv.innerHTML = `<div class="message ${type}">${text}</div>`;
-                setTimeout(() => {
-                    messageDiv.innerHTML = '';
-                }, 8000);
-            }
-
-            function isValidEmail(email) {
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                return emailRegex.test(email);
-            }
-        }
-
-        // Service button click handlers
-        function initServiceButtons() {
-            const serviceButtons = document.querySelectorAll('.service-cta');
-            serviceButtons.forEach(button => {
-                button.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    // Smooth scroll to contact section
-                    const contactSection = document.getElementById('contact');
-                    if (contactSection) {
-                        const headerHeight = document.querySelector('header').offsetHeight;
-                        const targetPosition = contactSection.offsetTop - headerHeight - 20;
-                        
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                        
-                        // Pre-fill service selection
-                        setTimeout(() => {
-                            const serviceTitle = this.closest('.service-card').querySelector('h3').textContent;
-                            const serviceSelect = document.getElementById('service');
-                            const messageField = document.getElementById('message');
-                            
-                            // Map service titles to select values
-                            const serviceMap = {
-                                'Protocol Validation & Development': 'protocol-validation',
-                                'Reaction Simulation & Prediction': 'reaction-simulation',
-                                'R&D Automation Solutions': 'rd-automation',
-                                'Process Consulting & Optimization': 'process-consulting'
-                            };
-                            
-                            const serviceValue = serviceMap[serviceTitle] || 'general-inquiry';
-                            serviceSelect.value = serviceValue;
-                            
-                            if (messageField && !messageField.value) {
-                                messageField.value = `I'm interested in: ${serviceTitle}\n\nPlease provide more information about this service and how it could help with my research needs.`;
-                                messageField.focus();
-                            }
-                        }, 1000);
+                    // Close mobile menu if open
+                    const mobileNav = document.getElementById('mobileNav');
+                    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+                    if (mobileNav.classList.contains('active')) {
+                        mobileNav.classList.remove('active');
+                        mobileMenuToggle.classList.remove('active');
                     }
-                });
+                }
             });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileNav = document.getElementById('mobileNav');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+        });
+
+        // Scroll progress bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('scrollProgress').style.width = scrolled + '%';
+        });
+
+        // Scroll to top button
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Navbar shadow on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Newsletter form handler
+        function handleNewsletterSubmit(e) {
+            e.preventDefault();
+            const email = e.target.querySelector('input[type="email"]').value;
+            
+            // Show success message
+            alert('Thank you for subscribing! We\'ll send chemistry insights to ' + email);
+            e.target.reset();
         }
-
-        // Initialize all functionality when DOM is loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            initSmoothScrolling();
-            initAnimations();
-            initHeaderEffect();
-            initContactForm();
-            initServiceButtons();
-        });
-
-        // Add loading state management
-        window.addEventListener('load', function() {
-            document.body.style.opacity = '1';
-            document.body.style.transform = 'translateY(0)';
-        });
     </script>
 </body>
 </html>
