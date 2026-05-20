@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chemisters — The Future of Chemistry</title>
+    <link rel="icon" type="image/png" href="images/Chemisters_logo.png">
+    <link rel="apple-touch-icon" href="images/Chemisters_logo.png">
     <style>
         * {
             margin: 0;
@@ -523,13 +525,24 @@
             display: block;
         }
 
+        a.topic-card-link {
+            cursor: pointer;
+        }
+
+        div.topic-card-link {
+            cursor: default;
+        }
+
+        a.topic-card-link .topic-card {
+            cursor: pointer;
+        }
+
         .topic-card {
             background: #ffffff;
             border: 1px solid #e5e7eb;
             border-radius: 14px;
             padding: 30px 26px 24px;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
             position: relative;
             overflow: hidden;
             display: flex;
@@ -615,6 +628,7 @@
             justify-content: center;
             transition: all 0.3s ease;
             text-decoration: none;
+            cursor: pointer;
         }
 
         .card-social-link.linkedin-link {
@@ -1381,27 +1395,30 @@
         grid.innerHTML = `<div class="no-results"><div class="no-results-icon">🔍</div><div class="no-results-text">No channels found</div></div>`;
       } else {
         filtered.forEach((ch, i) => {
-          const wrapper = document.createElement('div');
-          // page link wraps the top content, socials stay outside the <a>
           const hasPage = ch.page && ch.page.length > 0;
 
           let socialsHTML = '';
           if (ch.li || ch.fb) {
-            socialsHTML = '<div class="card-socials">';
-            if (ch.li) socialsHTML += `<a href="${ch.li}" class="card-social-link linkedin-link" target="_blank" rel="noopener" aria-label="${ch.name} on LinkedIn" title="LinkedIn">${linkedinSVG}</a>`;
-            if (ch.fb) socialsHTML += `<a href="${ch.fb}" class="card-social-link facebook-link" target="_blank" rel="noopener" aria-label="${ch.name} on Facebook" title="Facebook">${facebookSVG}</a>`;
+            socialsHTML = '<div class="card-socials" onclick="event.preventDefault();event.stopPropagation();">';
+            if (ch.li) socialsHTML += `<a href="${ch.li}" class="card-social-link linkedin-link" target="_blank" rel="noopener" aria-label="${ch.name} on LinkedIn" title="LinkedIn" onclick="event.stopPropagation();">${linkedinSVG}</a>`;
+            if (ch.fb) socialsHTML += `<a href="${ch.fb}" class="card-social-link facebook-link" target="_blank" rel="noopener" aria-label="${ch.name} on Facebook" title="Facebook" onclick="event.stopPropagation();">${facebookSVG}</a>`;
             socialsHTML += '</div>';
           }
 
+          // If the channel has a subpage, the whole card is an <a>. Otherwise, just a <div>.
+          const wrapper = document.createElement(hasPage ? 'a' : 'div');
+          if (hasPage) {
+            wrapper.href = ch.page;
+            wrapper.style.textDecoration = 'none';
+            wrapper.style.color = 'inherit';
+          }
           wrapper.className = 'topic-card-link';
           wrapper.style.animationDelay = `${Math.min(i * 0.04, 0.6)}s`;
           wrapper.innerHTML = `
             <div class="topic-card">
-              ${hasPage ? `<a href="${ch.page}" style="text-decoration:none;color:inherit;display:contents;">` : ''}
-                <div class="topic-icon-wrap ${ch.iconBg}">${ch.icon}</div>
-                <h3 class="topic-title">${ch.name}</h3>
-                <p class="topic-description">${ch.desc}</p>
-              ${hasPage ? '</a>' : ''}
+              <div class="topic-icon-wrap ${ch.iconBg}">${ch.icon}</div>
+              <h3 class="topic-title">${ch.name}</h3>
+              <p class="topic-description">${ch.desc}</p>
               ${socialsHTML}
             </div>`;
           grid.appendChild(wrapper);
