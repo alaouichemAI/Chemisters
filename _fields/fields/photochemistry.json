@@ -1,0 +1,305 @@
+{
+ "slug": "photochemistry",
+ "channel": "Photochemistry",
+ "number": 17,
+ "symbol": "Pc",
+ "category": "Synthesis & reactivity",
+ "name": "Photochemistry",
+ "tagline": "Light-driven reactions, photocatalysis, and solar energy conversion.",
+ "seo_title": "Photochemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Photochemistry on LinkedIn and Facebook: paper summaries, news and innovations in photocatalysis, solar fuels, photophysics and light-driven synthesis.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#f2d77d",
+  "accent2": "#c7f089",
+  "tile": "#2e1c12",
+  "motif": "spark"
+ },
+ "definition": {
+  "lead": "Photochemistry studies reactions started by light: a molecule absorbs a photon, reaches an excited state and does chemistry that is impossible in the dark.",
+  "body": "Light drives photosynthesis, vision, vitamin D formation and the ozone layer. In the lab, light lets chemists build strained rings, activate stable bonds at room temperature and turn sunlight into fuels and electricity.",
+  "facts": [
+   {
+    "value": "400–700 nm",
+    "label": "the range of light that plants use for photosynthesis"
+   },
+   {
+    "value": "1912",
+    "label": "Ciamician's lecture 'The Photochemistry of the Future'"
+   },
+   {
+    "value": "1st law",
+    "label": "only light that is absorbed can cause a photochemical change"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Excited states",
+   "summary": "What a molecule does after absorbing light: fluorescence, phosphorescence, reaction.",
+   "example": "The Jablonski diagram.",
+   "channel": ""
+  },
+  {
+   "name": "Organic photochemistry",
+   "summary": "Light-driven reactions forbidden in the dark.",
+   "example": "[2+2] cycloadditions that make cyclobutanes.",
+   "channel": ""
+  },
+  {
+   "name": "Photoredox catalysis",
+   "summary": "Visible-light catalysts that transfer single electrons.",
+   "example": "Mild new routes to C–C bonds.",
+   "channel": "Catalytic Chemistry"
+  },
+  {
+   "name": "Solar fuels",
+   "summary": "Using sunlight to make fuels.",
+   "example": "Splitting water into hydrogen and oxygen.",
+   "channel": "Energy Chemistry"
+  },
+  {
+   "name": "Atmospheric photochemistry",
+   "summary": "Light-driven reactions in the air.",
+   "example": "How UV light makes and breaks ozone.",
+   "channel": "Environmental Chemistry"
+  },
+  {
+   "name": "Solar cells & dyes",
+   "summary": "Turning absorbed light into electricity.",
+   "example": "Dye-sensitized and perovskite solar cells.",
+   "channel": ""
+  },
+  {
+   "name": "Photopolymerization",
+   "summary": "Light that hardens liquid resins.",
+   "example": "Dental fillings and resin 3D printing.",
+   "channel": "Polymers Chemistry"
+  },
+  {
+   "name": "Light-activated medicine",
+   "summary": "Drugs and therapies switched on by light.",
+   "example": "Photodynamic therapy for some cancers.",
+   "channel": "Medicinal Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1779,
+   "title": "Plants need light",
+   "text": "Jan Ingenhousz shows that plants restore air only in sunlight.",
+   "why": "The discovery of photosynthesis's dependence on light."
+  },
+  {
+   "year": 1817,
+   "title": "Only absorbed light acts",
+   "text": "Theodor von Grotthuss states that only absorbed light can drive a chemical change.",
+   "why": "The first law of photochemistry."
+  },
+  {
+   "year": 1912,
+   "title": "The photochemistry of the future",
+   "text": "Giacomo Ciamician imagines industry powered by sunlight instead of coal.",
+   "why": "A vision now pursued by solar-fuel research."
+  },
+  {
+   "year": 1930,
+   "title": "The ozone cycle",
+   "text": "Sydney Chapman explains how UV light forms and destroys stratospheric ozone.",
+   "why": "The basis of atmospheric photochemistry."
+  },
+  {
+   "year": 1949,
+   "title": "Flash photolysis",
+   "text": "Ronald Norrish and George Porter use intense flashes to create and study short-lived species.",
+   "why": "Opened fast photochemistry; Nobel Prize in 1967."
+  },
+  {
+   "year": 1961,
+   "title": "The path of carbon",
+   "text": "Nobel Prize to Melvin Calvin for the carbon assimilation cycle in photosynthesis.",
+   "why": "Explained how plants turn CO₂ into sugar."
+  },
+  {
+   "year": 1972,
+   "title": "Water split with light",
+   "text": "Akira Fujishima and Kenichi Honda use titanium dioxide and light to split water.",
+   "why": "Launched semiconductor photocatalysis."
+  },
+  {
+   "year": 1991,
+   "title": "The dye-sensitized solar cell",
+   "text": "Brian O'Regan and Michael Grätzel report an efficient dye-sensitized cell.",
+   "why": "A new, low-cost kind of solar cell."
+  },
+  {
+   "year": 1995,
+   "title": "Ozone depletion",
+   "text": "Nobel Prize to Crutzen, Molina and Rowland for atmospheric chemistry of ozone.",
+   "why": "Led to the global phase-out of ozone-destroying chemicals."
+  },
+  {
+   "year": 2008,
+   "title": "Visible-light photoredox",
+   "text": "Groups including David MacMillan's bring photoredox catalysis to organic synthesis.",
+   "why": "Light became a routine reagent in synthesis labs."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "pc-001",
+   "q": "What does the first law of photochemistry say?",
+   "options": [
+    "Only absorbed light can cause a photochemical change",
+    "All light causes reactions",
+    "Heat is a form of light",
+    "Light has mass"
+   ],
+   "answer": 0,
+   "explain": "Light that passes straight through does nothing chemically."
+  },
+  {
+   "id": "pc-002",
+   "q": "Why does phosphorescence last longer than fluorescence?",
+   "options": [
+    "It comes from a spin-forbidden transition out of a triplet state",
+    "The excited molecule is hotter and cools slowly",
+    "It only happens in molecules with heavy atoms",
+    "It is a slow chemical reaction, not light emission"
+   ],
+   "answer": 0,
+   "explain": "Spin-forbidden transitions are slow, so the glow lingers."
+  },
+  {
+   "id": "pc-003",
+   "q": "As wavelength decreases, the energy of a photon…",
+   "options": [
+    "Increases",
+    "Decreases",
+    "Stays the same",
+    "Doubles every nanometre"
+   ],
+   "answer": 0,
+   "explain": "E = hc/λ: UV photons carry more energy than red ones."
+  },
+  {
+   "id": "pc-004",
+   "q": "A [2+2] photocycloaddition forms…",
+   "options": [
+    "Cyclobutane rings",
+    "Benzene rings",
+    "Cyclohexene rings",
+    "Polymers"
+   ],
+   "answer": 0,
+   "explain": "Two alkenes join into a four-membered ring."
+  },
+  {
+   "id": "pc-005",
+   "q": "Why do many [2+2] cycloadditions need light?",
+   "options": [
+    "Orbital symmetry forbids them thermally but allows them from the excited state",
+    "Light simply heats the flask to start the reaction",
+    "Light acts only as a catalyst that is regenerated",
+    "Light adds mass to the molecules so they react"
+   ],
+   "answer": 0,
+   "explain": "Exciting an electron changes which orbitals overlap."
+  },
+  {
+   "id": "pc-006",
+   "q": "Stratospheric ozone forms when UV light…",
+   "options": [
+    "Splits O₂ into oxygen atoms that then join O₂",
+    "Splits water vapour into hydrogen and oxygen",
+    "Turns carbon dioxide into ozone directly",
+    "Splits nitrogen molecules into atoms"
+   ],
+   "answer": 0,
+   "explain": "O + O₂ → O₃, the Chapman mechanism."
+  },
+  {
+   "id": "pc-007",
+   "q": "What did Fujishima and Honda do with TiO₂ and light in 1972?",
+   "options": [
+    "Split water",
+    "Make plastics",
+    "Make ammonia",
+    "Burn methane"
+   ],
+   "answer": 0,
+   "explain": "The first well-known semiconductor photoelectrode for water splitting."
+  },
+  {
+   "id": "pc-008",
+   "q": "Photoredox catalysts typically…",
+   "options": [
+    "Absorb visible light and transfer single electrons",
+    "Absorb X-rays and break bonds directly",
+    "Heat the reaction mixture like a hot plate",
+    "Release oxygen that oxidizes the substrate"
+   ],
+   "answer": 0,
+   "explain": "The excited catalyst becomes a strong oxidant or reductant."
+  },
+  {
+   "id": "pc-009",
+   "q": "Which pigment captures light in plants?",
+   "options": [
+    "Chlorophyll",
+    "Haemoglobin",
+    "Melanin",
+    "Insulin"
+   ],
+   "answer": 0,
+   "explain": "It absorbs mainly red and blue light, so plants look green."
+  },
+  {
+   "id": "pc-010",
+   "q": "A Grätzel cell is…",
+   "options": [
+    "A dye-sensitized solar cell",
+    "A rechargeable lithium battery",
+    "A hydrogen fuel cell",
+    "An LED light bulb"
+   ],
+   "answer": 0,
+   "explain": "A dye absorbs light and injects electrons into titanium dioxide."
+  },
+  {
+   "id": "pc-011",
+   "q": "Vitamin D forms in skin when UVB light…",
+   "options": [
+    "Opens a ring of 7-dehydrocholesterol",
+    "Splits water in the skin cells",
+    "Heats the blood near the surface",
+    "Turns melanin into vitamin D"
+   ],
+   "answer": 0,
+   "explain": "The ring-opened product then rearranges into vitamin D₃."
+  },
+  {
+   "id": "pc-012",
+   "q": "Who gave the 1912 lecture 'The Photochemistry of the Future'?",
+   "options": [
+    "Giacomo Ciamician",
+    "Marie Curie",
+    "Albert Einstein",
+    "George Porter"
+   ],
+   "answer": 0,
+   "explain": "He pictured glass-covered fields making chemicals from sunlight."
+  }
+ ],
+ "related": [
+  "Catalytic Chemistry",
+  "Energy Chemistry",
+  "Electrochemistry",
+  "Reactive Matter",
+  "Environmental Chemistry"
+ ]
+}

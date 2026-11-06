@@ -1,0 +1,293 @@
+{
+ "slug": "chemical-data-science-and-automation",
+ "channel": "Chemical Data Science & Automation",
+ "number": 37,
+ "symbol": "Dt",
+ "category": "Computational & AI",
+ "name": "Chemical Data Science & Automation",
+ "tagline": "Data pipelines, lab automation, and informatics-driven experiment design.",
+ "seo_title": "Chemical Data Science & Automation — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Chemical Data Science & Automation on LinkedIn and Facebook: paper summaries, news and innovations in chemical data, lab automation, design of experiments and reproducibility.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#b47df2",
+  "accent2": "#f089e6",
+  "tile": "#1e1936",
+  "motif": "dots"
+ },
+ "definition": {
+  "lead": "Chemical data science turns the data chemistry produces, from instruments, experiments and the literature, into reliable knowledge, and automates the pipelines that handle it.",
+  "body": "Clean, well-described data is the fuel of every model and every automated lab. This field covers data capture, standards, electronic lab notebooks, analysis pipelines and statistics, so that results are findable and reproducible.",
+  "facts": [
+   {
+    "value": "FAIR",
+    "label": "Findable, Accessible, Interoperable, Reusable: the data principles published in 2016"
+   },
+   {
+    "value": "DoE",
+    "label": "design of experiments: varying several factors at once, not one at a time"
+   },
+   {
+    "value": "2021",
+    "label": "the Open Reaction Database is launched for shared reaction data"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Data capture & standards",
+   "summary": "Recording data in open, machine-readable formats.",
+   "example": "Instrument data saved with full metadata.",
+   "channel": ""
+  },
+  {
+   "name": "Electronic lab notebooks",
+   "summary": "Structured, searchable records of experiments.",
+   "example": "Linking each sample to its spectra and conditions.",
+   "channel": ""
+  },
+  {
+   "name": "Design of experiments",
+   "summary": "Planning experiments to learn the most from the fewest runs.",
+   "example": "Factorial designs and response surfaces.",
+   "channel": ""
+  },
+  {
+   "name": "Analytical data processing",
+   "summary": "Turning raw signals into results automatically.",
+   "example": "Automatic peak picking in chromatograms.",
+   "channel": "Analytical Chemistry"
+  },
+  {
+   "name": "Workflow automation",
+   "summary": "Pipelines from instrument to database to report.",
+   "example": "Scripts that process every new result.",
+   "channel": ""
+  },
+  {
+   "name": "Text & data mining",
+   "summary": "Extracting structured data from papers and patents.",
+   "example": "Pulling reactions and conditions from the literature.",
+   "channel": "Chemistry AI & ML Applications"
+  },
+  {
+   "name": "Statistics & uncertainty",
+   "summary": "Knowing how much to trust a number.",
+   "example": "Error bars and replicates.",
+   "channel": ""
+  },
+  {
+   "name": "Lab automation integration",
+   "summary": "Connecting robots, instruments and data.",
+   "example": "Self-driving lab data systems.",
+   "channel": "Autonomous Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1935,
+   "title": "The Design of Experiments",
+   "text": "Ronald Fisher publishes his book on planning experiments statistically.",
+   "why": "Randomization and factorial design entered science."
+  },
+  {
+   "year": 1951,
+   "title": "Response surfaces",
+   "text": "George Box and K. B. Wilson introduce response surface methodology.",
+   "why": "Finding optimal conditions efficiently."
+  },
+  {
+   "year": 1965,
+   "title": "The CAS Registry",
+   "text": "Chemical Abstracts Service starts assigning registry numbers to substances.",
+   "why": "A unique identifier for every substance."
+  },
+  {
+   "year": 2004,
+   "title": "PubChem",
+   "text": "A free public database of chemical structures and assay results is launched.",
+   "why": "Open chemical data at scale."
+  },
+  {
+   "year": 2005,
+   "title": "InChI",
+   "text": "IUPAC releases a standard identifier for chemical structures.",
+   "why": "Linking data across databases."
+  },
+  {
+   "year": 2009,
+   "title": "ChEMBL",
+   "text": "An open database of bioactivity data is launched.",
+   "why": "Fuel for machine learning in drug discovery."
+  },
+  {
+   "year": 2016,
+   "title": "The FAIR principles",
+   "text": "Guidelines for findable, accessible, interoperable and reusable data are published.",
+   "why": "Adopted by funders and journals worldwide."
+  },
+  {
+   "year": 2021,
+   "title": "The Open Reaction Database",
+   "text": "An open, structured database for chemical reaction data is introduced.",
+   "why": "Aims to fix the shortage of shareable reaction data."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "dt-001",
+   "q": "What does FAIR stand for in data management?",
+   "options": [
+    "Findable, Accessible, Interoperable, Reusable",
+    "Fast, Accurate, Integrated, Reliable",
+    "Free, Available, Indexed, Readable",
+    "Filtered, Archived, Inspected, Reported"
+   ],
+   "answer": 0,
+   "explain": "Published in 2016 and now widely adopted."
+  },
+  {
+   "id": "dt-002",
+   "q": "What is the main advantage of design of experiments?",
+   "options": [
+    "It reveals interactions between factors with fewer runs than changing one factor at a time",
+    "It removes the need for any statistical analysis",
+    "It needs only a single, carefully chosen experiment",
+    "It works only in industry, not in research labs"
+   ],
+   "answer": 0,
+   "explain": "One-factor-at-a-time misses interactions."
+  },
+  {
+   "id": "dt-003",
+   "q": "Metadata is…",
+   "options": [
+    "Data describing the data: conditions, instrument, units",
+    "Very large data sets that need special storage",
+    "Data that was deleted but can still be recovered",
+    "Encrypted data that only the owner can read"
+   ],
+   "answer": 0,
+   "explain": "Without it, data cannot be reused."
+  },
+  {
+   "id": "dt-004",
+   "q": "Why record failed experiments?",
+   "options": [
+    "Models need negative results to learn what does not work",
+    "To fill the notebook so it looks complete",
+    "Because funding agencies pay per page",
+    "They are never useful, so this is not needed"
+   ],
+   "answer": 0,
+   "explain": "Published data is biased toward successes."
+  },
+  {
+   "id": "dt-005",
+   "q": "What should you do with an outlier?",
+   "options": [
+    "Investigate it before deciding whether to exclude it",
+    "Delete it immediately to keep the data clean",
+    "Ignore it, since one point never matters",
+    "Copy it several times to strengthen the trend"
+   ],
+   "answer": 0,
+   "explain": "Some outliers are errors; some are discoveries."
+  },
+  {
+   "id": "dt-006",
+   "q": "What is a key benefit of an electronic lab notebook?",
+   "options": [
+    "Searchable, structured records linked to data",
+    "It is always free",
+    "It needs no backup",
+    "It replaces experiments"
+   ],
+   "answer": 0,
+   "explain": "Paper notebooks are hard to search and share."
+  },
+  {
+   "id": "dt-007",
+   "q": "Standard deviation measures…",
+   "options": [
+    "The spread of measurements",
+    "The average",
+    "The maximum",
+    "The sample size"
+   ],
+   "answer": 0,
+   "explain": "A larger standard deviation means less precise data."
+  },
+  {
+   "id": "dt-008",
+   "q": "Data leakage in machine learning means…",
+   "options": [
+    "Information from the test set influences training, inflating performance",
+    "Data stolen from a lab's servers by hackers",
+    "Files lost because a hard drive failed",
+    "Data encrypted so that models cannot read it"
+   ],
+   "answer": 0,
+   "explain": "A common cause of over-optimistic results."
+  },
+  {
+   "id": "dt-009",
+   "q": "A CAS Registry Number is…",
+   "options": [
+    "A unique identifier for a chemical substance",
+    "A price code used by chemical suppliers",
+    "A safety rating from 1 to 10 for each chemical",
+    "A batch number printed on each bottle"
+   ],
+   "answer": 0,
+   "explain": "Water is 7732-18-5."
+  },
+  {
+   "id": "dt-010",
+   "q": "Response surface methodology is used to…",
+   "options": [
+    "Model how a result depends on several factors and find the optimum",
+    "Polish the surfaces of reaction vessels",
+    "Measure the surface tension of liquids",
+    "Paint samples so they can be photographed"
+   ],
+   "answer": 0,
+   "explain": "Introduced by Box and Wilson in 1951."
+  },
+  {
+   "id": "dt-011",
+   "q": "Text mining chemistry papers means…",
+   "options": [
+    "Automatically extracting structured data such as reactions from text",
+    "Printing every paper to read it by hand",
+    "Translating only the titles of papers",
+    "Counting words to rank the most popular papers"
+   ],
+   "answer": 0,
+   "explain": "Much chemical knowledge is still locked in prose."
+  },
+  {
+   "id": "dt-012",
+   "q": "Reproducibility requires…",
+   "options": [
+    "Complete reporting of methods, data and code",
+    "A famous author on the paper",
+    "Publication in a high-impact journal",
+    "A single, very careful experiment"
+   ],
+   "answer": 0,
+   "explain": "Others must be able to repeat the work."
+  }
+ ],
+ "related": [
+  "Autonomous Chemistry",
+  "Chemoinformatics",
+  "Chemistry AI & ML Applications",
+  "Analytical Chemistry",
+  "Chemical Engineering"
+ ]
+}

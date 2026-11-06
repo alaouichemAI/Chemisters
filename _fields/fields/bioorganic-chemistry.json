@@ -1,0 +1,299 @@
+{
+ "slug": "bioorganic-chemistry",
+ "channel": "Bioorganic Chemistry",
+ "number": 30,
+ "symbol": "Bo",
+ "category": "Life & health",
+ "name": "Bioorganic Chemistry",
+ "tagline": "Natural products, biosynthesis, and organic chemistry of biological systems.",
+ "seo_title": "Bioorganic Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Bioorganic Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in natural products, biosynthesis, enzyme mechanisms and bioorthogonal chemistry.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#f27d85",
+  "accent2": "#f0c489",
+  "tile": "#2b1420",
+  "motif": "bonds"
+ },
+ "definition": {
+  "lead": "Bioorganic chemistry uses the tools of organic chemistry to understand how living systems make and use molecules.",
+  "body": "It studies how enzymes catalyse reactions, how cells build natural products and how small molecules can probe or switch biological processes. It connects the flask to the cell.",
+  "facts": [
+   {
+    "value": "1894",
+    "label": "Emil Fischer proposes the lock-and-key model of enzymes"
+   },
+   {
+    "value": "1953",
+    "label": "the Miller–Urey experiment makes amino acids from simple gases"
+   },
+   {
+    "value": "2022",
+    "label": "Nobel Prize for click and bioorthogonal chemistry"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Natural products",
+   "summary": "Molecules made by plants, fungi, bacteria and marine life.",
+   "example": "Alkaloids, terpenes and polyketides.",
+   "channel": ""
+  },
+  {
+   "name": "Biosynthesis",
+   "summary": "How organisms assemble complex molecules.",
+   "example": "Polyketide synthases working like assembly lines.",
+   "channel": ""
+  },
+  {
+   "name": "Enzyme mechanisms",
+   "summary": "The organic chemistry inside an active site.",
+   "example": "The catalytic triad of serine proteases.",
+   "channel": "Biological Chemistry"
+  },
+  {
+   "name": "Bioorthogonal chemistry",
+   "summary": "Reactions that run inside living systems without disturbing them.",
+   "example": "Labelling sugars on the surface of cancer cells.",
+   "channel": ""
+  },
+  {
+   "name": "Peptides",
+   "summary": "Short chains of amino acids as drugs and tools.",
+   "example": "Cyclic peptides that resist digestion.",
+   "channel": ""
+  },
+  {
+   "name": "Carbohydrates",
+   "summary": "The chemistry of sugars and glycans.",
+   "example": "Sugar coats that cells use to recognize each other.",
+   "channel": ""
+  },
+  {
+   "name": "Nucleic acid chemistry",
+   "summary": "Modified building blocks for DNA and RNA.",
+   "example": "Modified nucleosides in mRNA vaccines.",
+   "channel": ""
+  },
+  {
+   "name": "Biomimetic chemistry",
+   "summary": "Imitating nature's catalysts and structures.",
+   "example": "Artificial enzymes.",
+   "channel": "Supramolecular Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1894,
+   "title": "Lock and key",
+   "text": "Emil Fischer proposes that an enzyme fits its substrate like a key in a lock.",
+   "why": "The first model of molecular recognition."
+  },
+  {
+   "year": 1902,
+   "title": "Sugars and purines",
+   "text": "Emil Fischer receives the Nobel Prize for his work on sugars and purines.",
+   "why": "Organic chemistry applied to the molecules of life."
+  },
+  {
+   "year": 1953,
+   "title": "The Miller–Urey experiment",
+   "text": "Stanley Miller and Harold Urey make amino acids by sparking a mixture of simple gases.",
+   "why": "Showed that building blocks of life can form spontaneously."
+  },
+  {
+   "year": 1958,
+   "title": "Induced fit",
+   "text": "Daniel Koshland proposes that enzymes change shape when they bind.",
+   "why": "Refined the lock-and-key picture."
+  },
+  {
+   "year": 1969,
+   "title": "An enzyme made in the lab",
+   "text": "Bernd Gutte and Bruce Merrifield synthesize the enzyme ribonuclease A.",
+   "why": "A working enzyme built entirely by chemists."
+  },
+  {
+   "year": 1982,
+   "title": "Catalytic RNA",
+   "text": "Thomas Cech discovers that RNA can act as a catalyst.",
+   "why": "Not all biological catalysts are proteins."
+  },
+  {
+   "year": 2003,
+   "title": "Bioorthogonal chemistry",
+   "text": "Carolyn Bertozzi coins the term for reactions that work inside living systems.",
+   "why": "Chemistry performed inside living organisms."
+  },
+  {
+   "year": 2005,
+   "title": "Modified RNA",
+   "text": "Katalin Karikó and Drew Weissman show modified nucleosides reduce immune reactions to mRNA.",
+   "why": "A key step toward mRNA vaccines."
+  },
+  {
+   "year": 2022,
+   "title": "Click and bioorthogonal chemistry",
+   "text": "Nobel Prize to Bertozzi, Meldal and Sharpless.",
+   "why": "Reliable reactions from the flask to the living cell."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "bo-001",
+   "q": "Fischer's lock-and-key model says…",
+   "options": [
+    "An enzyme's active site fits its substrate's shape",
+    "DNA strands unzip like a lock when an enzyme binds",
+    "Crystals lock together in a fixed, repeating pattern",
+    "Metal ions act as keys that switch enzymes off"
+   ],
+   "answer": 0,
+   "explain": "It explained why enzymes are so selective."
+  },
+  {
+   "id": "bo-002",
+   "q": "The induced-fit model adds that…",
+   "options": [
+    "The enzyme changes shape when the substrate binds",
+    "The substrate never changes",
+    "The lock is perfectly rigid",
+    "Enzymes cannot bind anything"
+   ],
+   "answer": 0,
+   "explain": "The fit tightens upon binding."
+  },
+  {
+   "id": "bo-003",
+   "q": "A bioorthogonal reaction…",
+   "options": [
+    "Works inside living systems without interfering with their chemistry",
+    "Needs boiling conditions to work inside cells",
+    "Uses only natural enzymes found in the organism",
+    "Is designed to be toxic so it kills target cells"
+   ],
+   "answer": 0,
+   "explain": "The two partners react only with each other."
+  },
+  {
+   "id": "bo-004",
+   "q": "Natural products are…",
+   "options": [
+    "Molecules made by living organisms",
+    "Only synthetic molecules",
+    "Minerals",
+    "Metals"
+   ],
+   "answer": 0,
+   "explain": "Many medicines come from them or were inspired by them."
+  },
+  {
+   "id": "bo-005",
+   "q": "Polyketides are built from…",
+   "options": [
+    "Acetate and malonate units by polyketide synthases",
+    "Amino acids joined by ribosomes",
+    "Nucleotides joined by DNA polymerase",
+    "Steroid rings joined by cyclases"
+   ],
+   "answer": 0,
+   "explain": "Erythromycin and many other antibiotics are polyketides."
+  },
+  {
+   "id": "bo-006",
+   "q": "What did the Miller–Urey experiment show?",
+   "options": [
+    "Amino acids can form from simple gases with electric sparks",
+    "Living cells can assemble from simple gases",
+    "How DNA copies itself without enzymes",
+    "How proteins fold into their final shape"
+   ],
+   "answer": 0,
+   "explain": "It made glycine, alanine and other amino acids."
+  },
+  {
+   "id": "bo-007",
+   "q": "Ribozymes are…",
+   "options": [
+    "RNA molecules that catalyse reactions",
+    "Protein enzymes that cut RNA molecules",
+    "DNA strands that store genetic code",
+    "Lipids that form membrane channels"
+   ],
+   "answer": 0,
+   "explain": "The ribosome's core that forms peptide bonds is RNA."
+  },
+  {
+   "id": "bo-008",
+   "q": "A peptide bond links…",
+   "options": [
+    "The amino group of one amino acid to the carboxyl group of another",
+    "Two sugars through an oxygen bridge",
+    "Two nucleotides through a phosphate group",
+    "Two fatty acids through a glycerol backbone"
+   ],
+   "answer": 0,
+   "explain": "It is an amide bond."
+  },
+  {
+   "id": "bo-009",
+   "q": "Why do mRNA vaccines use modified nucleosides such as pseudouridine?",
+   "options": [
+    "To reduce unwanted immune activation and boost protein production",
+    "To give the vaccine a colour for quality checks",
+    "To make the mRNA stable at room temperature for years",
+    "To make the vaccine cheaper to manufacture"
+   ],
+   "answer": 0,
+   "explain": "Unmodified mRNA triggers strong innate immune responses."
+  },
+  {
+   "id": "bo-010",
+   "q": "The catalytic triad of serine proteases is…",
+   "options": [
+    "Serine, histidine and aspartate",
+    "Three glycines",
+    "Three cysteines",
+    "Lysine, arginine and histidine"
+   ],
+   "answer": 0,
+   "explain": "They work together to make serine a strong nucleophile."
+  },
+  {
+   "id": "bo-011",
+   "q": "Penicillin and erythromycin are examples of…",
+   "options": [
+    "Natural-product antibiotics",
+    "Synthetic dyes",
+    "Hormones",
+    "Vitamins"
+   ],
+   "answer": 0,
+   "explain": "Both were first isolated from microorganisms."
+  },
+  {
+   "id": "bo-012",
+   "q": "Who coined the term 'bioorthogonal chemistry'?",
+   "options": [
+    "Carolyn Bertozzi",
+    "Barry Sharpless",
+    "Emil Fischer",
+    "Frances Arnold"
+   ],
+   "answer": 0,
+   "explain": "In 2003; she shared the 2022 Nobel Prize."
+  }
+ ],
+ "related": [
+  "Biological Chemistry",
+  "Organic Chemistry",
+  "Medicinal Chemistry",
+  "Heterocyclic Chemistry",
+  "Marine Chemistry"
+ ]
+}

@@ -1,0 +1,299 @@
+{
+ "slug": "drug-discovery",
+ "channel": "Drug Discovery",
+ "number": 29,
+ "symbol": "Dd",
+ "category": "Life & health",
+ "name": "Drug Discovery",
+ "tagline": "Hit-to-lead optimization, ADMET profiling, and clinical candidate design.",
+ "seo_title": "Drug Discovery — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Drug Discovery on LinkedIn and Facebook: paper summaries, news and innovations in target discovery, screening, AI-driven design, ADMET and clinical development.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#f27d94",
+  "accent2": "#f0b689",
+  "tile": "#2b1420",
+  "motif": "rings"
+ },
+ "definition": {
+  "lead": "Drug discovery is the long road from a disease target to a medicine: finding molecules that act on the target, then making them safe and effective enough for patients.",
+  "body": "It usually takes more than a decade and passes through target identification, hit finding, lead optimization, preclinical testing and clinical trials. Most candidates fail along the way, which is why better prediction, from AI to new screening methods, matters so much.",
+  "facts": [
+   {
+    "value": "10–15 years",
+    "label": "typical time from early discovery to an approved medicine"
+   },
+   {
+    "value": "About 90%",
+    "label": "of drug candidates that enter clinical trials do not reach approval"
+   },
+   {
+    "value": "3",
+    "label": "main phases of clinical trials before approval"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Target identification",
+   "summary": "Finding the protein or pathway to act on.",
+   "example": "Human genetics linking a gene to a disease.",
+   "channel": ""
+  },
+  {
+   "name": "Hit finding",
+   "summary": "Finding the first molecules that act on the target.",
+   "example": "High-throughput screening and DNA-encoded libraries.",
+   "channel": ""
+  },
+  {
+   "name": "Lead optimization",
+   "summary": "Improving potency, selectivity and properties.",
+   "example": "Many design–make–test cycles.",
+   "channel": "Medicinal Chemistry"
+  },
+  {
+   "name": "Structure-based design",
+   "summary": "Using the target's 3D structure to design ligands.",
+   "example": "HIV protease inhibitors.",
+   "channel": "Structural Chemistry"
+  },
+  {
+   "name": "Virtual screening & AI",
+   "summary": "Predicting activity and properties in silico.",
+   "example": "Docking millions of molecules before testing any.",
+   "channel": "Chemistry AI & ML Applications"
+  },
+  {
+   "name": "ADMET profiling",
+   "summary": "Absorption, distribution, metabolism, excretion and toxicity.",
+   "example": "Predicting how fast the liver clears a drug.",
+   "channel": "Chemoinformatics"
+  },
+  {
+   "name": "New modalities",
+   "summary": "Beyond classic small molecules.",
+   "example": "Antibodies, PROTAC degraders, RNA medicines.",
+   "channel": "Biological Chemistry"
+  },
+  {
+   "name": "Clinical development",
+   "summary": "Testing in people, phase by phase.",
+   "example": "Phase I safety to Phase III efficacy.",
+   "channel": ""
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1928,
+   "title": "Penicillin",
+   "text": "Alexander Fleming observes a mould killing bacteria.",
+   "why": "The discovery that launched antibiotics."
+  },
+  {
+   "year": 1975,
+   "title": "Monoclonal antibodies",
+   "text": "Georges Köhler and César Milstein produce identical antibodies from a single cell line.",
+   "why": "The basis of today's antibody drugs."
+  },
+  {
+   "year": 1988,
+   "title": "Rational drug design",
+   "text": "Nobel Prize in Medicine to James Black, Gertrude Elion and George Hitchings.",
+   "why": "Drugs designed from an understanding of biochemistry."
+  },
+  {
+   "year": 1995,
+   "title": "Structure-based success",
+   "text": "The first HIV protease inhibitor, saquinavir, is approved.",
+   "why": "Designed with knowledge of the enzyme's structure."
+  },
+  {
+   "year": 1996,
+   "title": "Fragment-based discovery",
+   "text": "Stephen Fesik's team links small fragments found by NMR into potent ligands.",
+   "why": "Start small, then grow."
+  },
+  {
+   "year": 2001,
+   "title": "The human genome",
+   "text": "The first drafts of the human genome sequence are published.",
+   "why": "Thousands of potential new targets."
+  },
+  {
+   "year": 2020,
+   "title": "mRNA vaccines",
+   "text": "The first mRNA vaccines are authorized against COVID-19.",
+   "why": "A new class of medicine in record time."
+  },
+  {
+   "year": 2021,
+   "title": "Predicted structures for all",
+   "text": "AlphaFold's structure predictions are released in a public database.",
+   "why": "Structural models for almost any target protein."
+  },
+  {
+   "year": 2023,
+   "title": "AI-designed candidates in trials",
+   "text": "A candidate whose target and molecule were found with generative AI enters Phase 2 trials.",
+   "why": "AI moved from papers into the clinic."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "dd-001",
+   "q": "In drug discovery, a 'hit' is…",
+   "options": [
+    "A compound that shows activity in a screen",
+    "A drug that has just been approved",
+    "A side effect seen in early trials",
+    "A positive result in a clinical trial"
+   ],
+   "answer": 0,
+   "explain": "Hits are starting points, far from being drugs."
+  },
+  {
+   "id": "dd-002",
+   "q": "Phase I clinical trials mainly test…",
+   "options": [
+    "Safety and dosing, often in healthy volunteers",
+    "Efficacy in thousands of patients",
+    "Marketing",
+    "Price"
+   ],
+   "answer": 0,
+   "explain": "Efficacy comes in Phases II and III."
+  },
+  {
+   "id": "dd-003",
+   "q": "High-throughput screening means…",
+   "options": [
+    "Testing large compound libraries quickly with automation",
+    "Testing one compound slowly and in detail",
+    "Running a clinical trial with many patients",
+    "Doing toxicology studies in animals"
+   ],
+   "answer": 0,
+   "explain": "Hundreds of thousands of compounds can be tested."
+  },
+  {
+   "id": "dd-004",
+   "q": "Fragment-based discovery starts from…",
+   "options": [
+    "Very small molecules that bind weakly",
+    "Large antibodies that bind strongly",
+    "Complex extracts from medicinal plants",
+    "Approved drugs used for new diseases"
+   ],
+   "answer": 0,
+   "explain": "Fragments are grown or linked into potent leads."
+  },
+  {
+   "id": "dd-005",
+   "q": "Why do most candidates fail in clinical trials?",
+   "options": [
+    "Lack of efficacy or unexpected safety problems",
+    "The price of the drug is set too high",
+    "Paperwork errors in the trial records",
+    "Their names are already trademarked"
+   ],
+   "answer": 0,
+   "explain": "Animal and cell models do not always predict humans."
+  },
+  {
+   "id": "dd-006",
+   "q": "A PROTAC…",
+   "options": [
+    "Brings a target protein to the cell's disposal machinery so it is degraded",
+    "Blocks an enzyme's active site, like a classic inhibitor",
+    "Is a vaccine that trains the immune system",
+    "Is an antibody that marks cells for attack"
+   ],
+   "answer": 0,
+   "explain": "It removes the protein instead of just inhibiting it."
+  },
+  {
+   "id": "dd-007",
+   "q": "Monoclonal antibodies are…",
+   "options": [
+    "Identical antibodies produced from one cell clone",
+    "Small molecules that block antibody binding",
+    "Vaccines made from weakened viruses",
+    "Hormones produced by the immune system"
+   ],
+   "answer": 0,
+   "explain": "Köhler and Milstein shared the 1984 Nobel Prize in Medicine."
+  },
+  {
+   "id": "dd-008",
+   "q": "Target validation means…",
+   "options": [
+    "Evidence that acting on the target changes the disease",
+    "The target is cheap",
+    "The target has been crystallized",
+    "The target is patented"
+   ],
+   "answer": 0,
+   "explain": "Poor validation is a major cause of late failures."
+  },
+  {
+   "id": "dd-009",
+   "q": "Virtual screening…",
+   "options": [
+    "Ranks molecules computationally before they are tested",
+    "Screens televisions for medical adverts",
+    "Is manual testing of each compound in the lab",
+    "Is a stage of clinical trials in patients"
+   ],
+   "answer": 0,
+   "explain": "It narrows millions of options to a testable few."
+  },
+  {
+   "id": "dd-010",
+   "q": "Why does selectivity matter?",
+   "options": [
+    "Hitting related proteins can cause side effects",
+    "It makes testing faster",
+    "It lowers the price",
+    "It is a legal requirement"
+   ],
+   "answer": 0,
+   "explain": "Kinase inhibitors, for example, must avoid hundreds of similar kinases."
+  },
+  {
+   "id": "dd-011",
+   "q": "The 1988 Nobel Prize to Black, Elion and Hitchings recognized…",
+   "options": [
+    "Principles of rational drug design",
+    "Penicillin",
+    "The DNA structure",
+    "Vaccines"
+   ],
+   "answer": 0,
+   "explain": "Their work gave beta-blockers, H2 blockers and antivirals."
+  },
+  {
+   "id": "dd-012",
+   "q": "Preclinical studies test a candidate…",
+   "options": [
+    "In cells and animals before humans",
+    "In patients",
+    "After approval",
+    "Only on computers"
+   ],
+   "answer": 0,
+   "explain": "They establish a starting dose and safety margin."
+  }
+ ],
+ "related": [
+  "Medicinal Chemistry",
+  "Chemoinformatics",
+  "Chemistry AI & ML Applications",
+  "Biological Chemistry",
+  "Computational Chemistry"
+ ]
+}

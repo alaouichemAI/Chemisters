@@ -1,0 +1,306 @@
+{
+ "slug": "catalytic-chemistry",
+ "channel": "Catalytic Chemistry",
+ "number": 14,
+ "symbol": "Ct",
+ "category": "Synthesis & reactivity",
+ "name": "Catalytic Chemistry",
+ "tagline": "Accelerating reactions through homogeneous, heterogeneous, and biocatalysis.",
+ "seo_title": "Catalytic Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Catalytic Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in homogeneous, heterogeneous, enzymatic, photo- and electrocatalysis.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#f2c77d",
+  "accent2": "#d5f089",
+  "tile": "#2e1c12",
+  "motif": "orbit"
+ },
+ "definition": {
+  "lead": "Catalysis speeds up chemical reactions without the catalyst being used up, and it can steer them toward one product.",
+  "body": "Most industrial chemical processes rely on at least one catalyst, from fertilizer and fuels to plastics and medicines. Enzymes, metal complexes, solid surfaces and small organic molecules can all play the role.",
+  "facts": [
+   {
+    "value": "1835",
+    "label": "Berzelius coins the word 'catalysis'"
+   },
+   {
+    "value": "1909",
+    "label": "Fritz Haber demonstrates catalytic ammonia synthesis"
+   },
+   {
+    "value": "2021",
+    "label": "Nobel Prize for asymmetric organocatalysis"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Homogeneous catalysis",
+   "summary": "Catalysts dissolved in the same phase as the reactants, often metal complexes.",
+   "example": "Wilkinson's catalyst for hydrogenation.",
+   "channel": ""
+  },
+  {
+   "name": "Heterogeneous catalysis",
+   "summary": "Solid catalysts working at their surface.",
+   "example": "The iron catalyst of the Haber–Bosch process.",
+   "channel": "Surface Chemistry"
+  },
+  {
+   "name": "Biocatalysis",
+   "summary": "Enzymes as catalysts, natural or engineered.",
+   "example": "Enzymes in laundry detergents and drug manufacture.",
+   "channel": "Biological Chemistry"
+  },
+  {
+   "name": "Organocatalysis",
+   "summary": "Small organic molecules as catalysts, without metals.",
+   "example": "Proline catalysing an aldol reaction.",
+   "channel": ""
+  },
+  {
+   "name": "Photocatalysis",
+   "summary": "Catalysts driven by light.",
+   "example": "Visible-light photoredox reactions.",
+   "channel": "Photochemistry"
+  },
+  {
+   "name": "Electrocatalysis",
+   "summary": "Catalysts that speed up electrode reactions.",
+   "example": "Water splitting for green hydrogen.",
+   "channel": "Electrochemistry"
+  },
+  {
+   "name": "Asymmetric catalysis",
+   "summary": "Catalysts that make one mirror-image product.",
+   "example": "Noyori's chiral hydrogenation catalysts.",
+   "channel": ""
+  },
+  {
+   "name": "Industrial catalysis",
+   "summary": "Catalysts that run refineries and chemical plants.",
+   "example": "Zeolites in fluid catalytic cracking.",
+   "channel": "Industrial Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1835,
+   "title": "Catalysis is named",
+   "text": "Jöns Jacob Berzelius coins 'catalysis' for reactions sped up by substances that are not consumed.",
+   "why": "Gave a name to a phenomenon seen in many labs."
+  },
+  {
+   "year": 1909,
+   "title": "Ammonia from air",
+   "text": "Fritz Haber demonstrates catalytic ammonia synthesis; Carl Bosch scales it up.",
+   "why": "Fertilizer that now helps feed much of humanity."
+  },
+  {
+   "year": 1912,
+   "title": "Hydrogenation",
+   "text": "Nobel Prize to Paul Sabatier for hydrogenation with finely divided metals, shared with Victor Grignard.",
+   "why": "The basis of margarine and many industrial reductions."
+  },
+  {
+   "year": 1925,
+   "title": "Fischer–Tropsch",
+   "text": "Franz Fischer and Hans Tropsch convert carbon monoxide and hydrogen into liquid hydrocarbons.",
+   "why": "Synthetic fuels from coal, gas or biomass."
+  },
+  {
+   "year": 1953,
+   "title": "Ziegler catalysts",
+   "text": "Karl Ziegler makes polyethylene at low pressure with metal catalysts; Giulio Natta extends it to polypropylene.",
+   "why": "Shaped the modern plastics industry; Nobel Prize in 1963."
+  },
+  {
+   "year": 1975,
+   "title": "Catalytic converters",
+   "text": "Cars in the United States begin to use catalytic converters.",
+   "why": "Cut emissions of carbon monoxide and unburned fuel."
+  },
+  {
+   "year": 2001,
+   "title": "Asymmetric catalysis",
+   "text": "Nobel Prize to Knowles, Noyori and Sharpless.",
+   "why": "Single-enantiomer drugs made efficiently."
+  },
+  {
+   "year": 2007,
+   "title": "Surfaces explained",
+   "text": "Nobel Prize to Gerhard Ertl for studies of chemical processes on solid surfaces.",
+   "why": "Revealed step by step how the Haber–Bosch catalyst works."
+  },
+  {
+   "year": 2018,
+   "title": "Evolving enzymes",
+   "text": "Nobel Prize to Frances Arnold for the directed evolution of enzymes.",
+   "why": "Enzymes tailored for green industrial chemistry."
+  },
+  {
+   "year": 2021,
+   "title": "Organocatalysis",
+   "text": "Nobel Prize to Benjamin List and David MacMillan.",
+   "why": "Cheap, metal-free catalysts for asymmetric synthesis."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "ct-001",
+   "q": "A catalyst…",
+   "options": [
+    "Speeds up a reaction and is regenerated",
+    "Is consumed in the reaction",
+    "Shifts the equilibrium",
+    "Raises the activation energy"
+   ],
+   "answer": 0,
+   "explain": "It offers a lower-energy path and comes back unchanged at the end of each cycle."
+  },
+  {
+   "id": "ct-002",
+   "q": "A heterogeneous catalyst is…",
+   "options": [
+    "In a different phase from the reactants",
+    "In the same phase as the reactants",
+    "Always an enzyme",
+    "Always a gas"
+   ],
+   "answer": 0,
+   "explain": "Typically a solid with gases or liquids flowing over it."
+  },
+  {
+   "id": "ct-003",
+   "q": "The Haber–Bosch process uses a catalyst based on…",
+   "options": [
+    "Iron",
+    "Platinum",
+    "An enzyme",
+    "A zeolite"
+   ],
+   "answer": 0,
+   "explain": "Promoted iron catalysts make ammonia from nitrogen and hydrogen."
+  },
+  {
+   "id": "ct-004",
+   "q": "The turnover number of a catalyst is…",
+   "options": [
+    "Moles of product made per mole of catalyst before it dies",
+    "The temperature at which the catalyst works best",
+    "The number of steps in the catalytic cycle",
+    "The mass of catalyst needed per litre of solvent"
+   ],
+   "answer": 0,
+   "explain": "A high turnover number means a little catalyst goes a long way."
+  },
+  {
+   "id": "ct-005",
+   "q": "Which metals do car catalytic converters use?",
+   "options": [
+    "Platinum, palladium and rhodium",
+    "Iron and copper",
+    "Sodium and potassium",
+    "Lead"
+   ],
+   "answer": 0,
+   "explain": "They oxidize CO and hydrocarbons and reduce nitrogen oxides."
+  },
+  {
+   "id": "ct-006",
+   "q": "Catalyst poisoning happens when…",
+   "options": [
+    "A substance binds strongly to the active sites and blocks them",
+    "The catalyst gets too hot and melts",
+    "The catalyst dissolves into the product",
+    "The catalyst turns into an enzyme over time"
+   ],
+   "answer": 0,
+   "explain": "Leaded petrol, for example, poisons catalytic converters."
+  },
+  {
+   "id": "ct-007",
+   "q": "Most enzymes are…",
+   "options": [
+    "Proteins",
+    "Metals",
+    "Sugars",
+    "Lipids"
+   ],
+   "answer": 0,
+   "explain": "A few catalysts in cells, called ribozymes, are made of RNA."
+  },
+  {
+   "id": "ct-008",
+   "q": "Organocatalysis, recognized with the 2021 Nobel Prize, uses…",
+   "options": [
+    "Small organic molecules without metals",
+    "Enzymes taken from living organisms",
+    "Platinum and palladium complexes",
+    "Visible light with no catalyst at all"
+   ],
+   "answer": 0,
+   "explain": "Molecules like the amino acid proline can catalyse asymmetric reactions."
+  },
+  {
+   "id": "ct-009",
+   "q": "Ziegler–Natta catalysts are used to make…",
+   "options": [
+    "Polyethylene and polypropylene",
+    "Ammonia",
+    "Sulfuric acid",
+    "Aspirin"
+   ],
+   "answer": 0,
+   "explain": "They grow polymer chains at metal centres."
+  },
+  {
+   "id": "ct-010",
+   "q": "Frances Arnold's 2018 Nobel Prize was for…",
+   "options": [
+    "Directed evolution of enzymes",
+    "The Haber–Bosch process",
+    "Zeolites",
+    "Catalytic converters"
+   ],
+   "answer": 0,
+   "explain": "She used cycles of mutation and selection to create better enzymes."
+  },
+  {
+   "id": "ct-011",
+   "q": "Why are converter catalysts spread on a honeycomb structure?",
+   "options": [
+    "To maximize the surface area in contact with the gas",
+    "Only to reduce the weight of the car",
+    "To make the converter look more modern",
+    "To cool the exhaust gas before it leaves"
+   ],
+   "answer": 0,
+   "explain": "Heterogeneous catalysis happens only at the surface."
+  },
+  {
+   "id": "ct-012",
+   "q": "Who coined the word 'catalysis' in 1835?",
+   "options": [
+    "Jöns Jacob Berzelius",
+    "Fritz Haber",
+    "Paul Sabatier",
+    "Wilhelm Ostwald"
+   ],
+   "answer": 0,
+   "explain": "Berzelius also introduced modern chemical symbols."
+  }
+ ],
+ "related": [
+  "Green Chemistry",
+  "Industrial Chemistry",
+  "Photochemistry",
+  "Electrochemistry",
+  "Surface Chemistry",
+  "Chemical Kinetics"
+ ]
+}

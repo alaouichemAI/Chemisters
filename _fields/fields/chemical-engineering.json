@@ -1,0 +1,299 @@
+{
+ "slug": "chemical-engineering",
+ "channel": "Chemical Engineering",
+ "number": 21,
+ "symbol": "Cg",
+ "category": "Applied & industrial",
+ "name": "Chemical Engineering",
+ "tagline": "Reactor design, process optimization, and chemical plant operations.",
+ "seo_title": "Chemical Engineering — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Chemical Engineering on LinkedIn and Facebook: paper summaries, news and innovations in reactor design, separations, process safety, scale-up and process control.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#b8f27d",
+  "accent2": "#89f097",
+  "tile": "#1b2513",
+  "motif": "circuit"
+ },
+ "definition": {
+  "lead": "Chemical engineering designs and runs the processes that turn raw materials into useful products, at scales of tonnes per hour.",
+  "body": "It combines chemistry with mass and energy balances, fluid flow, heat transfer, separations, reaction engineering and control. Chemical engineers scale up drugs, fuels, food, water treatment and batteries, and keep plants safe and efficient.",
+  "facts": [
+   {
+    "value": "1888",
+    "label": "MIT launches the first chemical engineering degree programme"
+   },
+   {
+    "value": "1901",
+    "label": "George E. Davis publishes 'A Handbook of Chemical Engineering'"
+   },
+   {
+    "value": "1915",
+    "label": "Arthur D. Little introduces the idea of unit operations"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Reaction engineering",
+   "summary": "Designing reactors and choosing conditions.",
+   "example": "Stirred tanks versus plug-flow tubes.",
+   "channel": ""
+  },
+  {
+   "name": "Separations",
+   "summary": "Purifying products and recovering solvents.",
+   "example": "Distillation columns in an oil refinery.",
+   "channel": ""
+  },
+  {
+   "name": "Transport phenomena",
+   "summary": "How momentum, heat and mass move.",
+   "example": "Sizing a heat exchanger.",
+   "channel": ""
+  },
+  {
+   "name": "Process control",
+   "summary": "Sensors and feedback that keep a plant on target.",
+   "example": "PID controllers holding a temperature steady.",
+   "channel": "Chemical Data Science & Automation"
+  },
+  {
+   "name": "Design & simulation",
+   "summary": "Building and testing a plant on the computer first.",
+   "example": "Flowsheet simulators.",
+   "channel": ""
+  },
+  {
+   "name": "Process safety",
+   "summary": "Preventing fires, explosions and releases.",
+   "example": "HAZOP studies.",
+   "channel": "Industrial Chemistry"
+  },
+  {
+   "name": "Biochemical engineering",
+   "summary": "Scaling up processes that use cells and enzymes.",
+   "example": "Fermenters for antibiotics and vaccines.",
+   "channel": "Biological Chemistry"
+  },
+  {
+   "name": "Energy & sustainability",
+   "summary": "Cleaner energy and lower emissions.",
+   "example": "Capturing CO₂ from flue gas.",
+   "channel": "Energy Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1888,
+   "title": "A new degree",
+   "text": "MIT starts the first chemical engineering degree, Course X.",
+   "why": "Chemical engineering becomes a profession."
+  },
+  {
+   "year": 1901,
+   "title": "The first handbook",
+   "text": "George E. Davis publishes 'A Handbook of Chemical Engineering'.",
+   "why": "Organized the field's knowledge for practitioners."
+  },
+  {
+   "year": 1908,
+   "title": "AIChE",
+   "text": "The American Institute of Chemical Engineers is founded.",
+   "why": "Gave the profession a home and standards."
+  },
+  {
+   "year": 1915,
+   "title": "Unit operations",
+   "text": "Arthur D. Little describes processes as combinations of standard operations.",
+   "why": "The way chemical engineering is still taught."
+  },
+  {
+   "year": 1923,
+   "title": "A founding textbook",
+   "text": "Walker, Lewis and McAdams publish 'Principles of Chemical Engineering'.",
+   "why": "Made the field quantitative."
+  },
+  {
+   "year": 1944,
+   "title": "Penicillin at scale",
+   "text": "Pfizer opens a deep-tank fermentation plant for penicillin.",
+   "why": "Engineering turned a lab curiosity into a mass-produced drug."
+  },
+  {
+   "year": 1960,
+   "title": "Transport Phenomena",
+   "text": "Bird, Stewart and Lightfoot publish their textbook.",
+   "why": "Unified the treatment of heat, mass and momentum transfer."
+  },
+  {
+   "year": 1974,
+   "title": "Flixborough",
+   "text": "An explosion at a chemical plant in Flixborough, England, kills 28 people.",
+   "why": "Reshaped process safety thinking and regulation."
+  },
+  {
+   "year": 1981,
+   "title": "Process simulation",
+   "text": "AspenTech is founded to commercialize the ASPEN process simulator developed at MIT.",
+   "why": "Computer simulation became standard in plant design."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "cg-001",
+   "q": "Distillation separates components by…",
+   "options": [
+    "Differences in volatility (boiling point)",
+    "Differences in colour",
+    "Differences in mass only",
+    "Differences in magnetism"
+   ],
+   "answer": 0,
+   "explain": "The more volatile component concentrates in the vapour."
+  },
+  {
+   "id": "cg-002",
+   "q": "What does CSTR stand for?",
+   "options": [
+    "Continuous stirred-tank reactor",
+    "Chemical steam transfer reactor",
+    "Cooled solid tube reactor",
+    "Central safety test routine"
+   ],
+   "answer": 0,
+   "explain": "Well mixed: the outlet has the same composition as the tank."
+  },
+  {
+   "id": "cg-003",
+   "q": "A general mass balance says…",
+   "options": [
+    "In = out + accumulation (accounting for reaction)",
+    "Mass can be created inside a reactor",
+    "Mass in equals energy out",
+    "Heat is a form of mass"
+   ],
+   "answer": 0,
+   "explain": "The first tool of every chemical engineer."
+  },
+  {
+   "id": "cg-004",
+   "q": "The idea of unit operations is that…",
+   "options": [
+    "Complex processes combine standard steps like distillation, filtration and drying",
+    "Every chemical plant must be designed completely from scratch",
+    "Reactions are unnecessary if separations are good enough",
+    "The method applies only to food and drink production"
+   ],
+   "answer": 0,
+   "explain": "Learn the operations once, apply them to any process."
+  },
+  {
+   "id": "cg-005",
+   "q": "A heat exchanger…",
+   "options": [
+    "Transfers heat between two fluids without mixing them",
+    "Mixes two fluids so they reach the same temperature",
+    "Creates heat by burning a small amount of fuel",
+    "Stores electricity as heat for later use"
+   ],
+   "answer": 0,
+   "explain": "Shell-and-tube exchangers are the classic design."
+  },
+  {
+   "id": "cg-006",
+   "q": "The Reynolds number tells you whether a flow is…",
+   "options": [
+    "Laminar or turbulent",
+    "Hot or cold",
+    "Acidic or basic",
+    "Fast or slow only"
+   ],
+   "answer": 0,
+   "explain": "It compares inertial forces with viscous forces."
+  },
+  {
+   "id": "cg-007",
+   "q": "Why is scale-up difficult?",
+   "options": [
+    "Heat and mass transfer do not scale like volume; the surface-to-volume ratio falls",
+    "The chemistry changes completely at larger scale",
+    "Molecules become bigger in bigger reactors",
+    "Gravity acts differently on large volumes of liquid"
+   ],
+   "answer": 0,
+   "explain": "A reaction easily cooled in a flask can overheat in a large tank."
+  },
+  {
+   "id": "cg-008",
+   "q": "A PID controller is…",
+   "options": [
+    "A feedback controller using proportional, integral and derivative terms",
+    "A type of pump used to move viscous liquids",
+    "A reactor that runs at very high pressure",
+    "A pipe that controls flow by its diameter"
+   ],
+   "answer": 0,
+   "explain": "The most common controller in process plants."
+  },
+  {
+   "id": "cg-009",
+   "q": "A HAZOP is…",
+   "options": [
+    "A structured review of hazards and operability problems",
+    "A reactor type for hazardous reactions",
+    "A toxic gas released by overheated reactors",
+    "A software package for drawing flowsheets"
+   ],
+   "answer": 0,
+   "explain": "A team examines each part of a design with guide words such as 'more' or 'no flow'."
+  },
+  {
+   "id": "cg-010",
+   "q": "Which 1974 accident in England reshaped process safety?",
+   "options": [
+    "Flixborough",
+    "Chernobyl",
+    "Exxon Valdez",
+    "Seveso"
+   ],
+   "answer": 0,
+   "explain": "A temporary pipe failed, releasing cyclohexane that exploded."
+  },
+  {
+   "id": "cg-011",
+   "q": "In a plug-flow reactor, composition changes…",
+   "options": [
+    "Along the length of the tube",
+    "Uniformly over time",
+    "Randomly",
+    "Not at all"
+   ],
+   "answer": 0,
+   "explain": "Each slice of fluid behaves like a small batch reactor moving down the tube."
+  },
+  {
+   "id": "cg-012",
+   "q": "When was the American Institute of Chemical Engineers founded?",
+   "options": [
+    "1908",
+    "1888",
+    "1950",
+    "1776"
+   ],
+   "answer": 0,
+   "explain": "Twenty years after MIT's first degree programme."
+  }
+ ],
+ "related": [
+  "Industrial Chemistry",
+  "Energy Chemistry",
+  "Chemical Data Science & Automation",
+  "Quality Control",
+  "Catalytic Chemistry"
+ ]
+}

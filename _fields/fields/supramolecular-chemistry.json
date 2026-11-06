@@ -1,0 +1,299 @@
+{
+ "slug": "supramolecular-chemistry",
+ "channel": "Supramolecular Chemistry",
+ "number": 44,
+ "symbol": "Su",
+ "category": "Materials & nano",
+ "name": "Supramolecular Chemistry",
+ "tagline": "Self-assembly, host-guest chemistry, and non-covalent interaction design.",
+ "seo_title": "Supramolecular Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Supramolecular Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in molecular recognition, self-assembly, host–guest chemistry and molecular machines.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#7de6f2",
+  "accent2": "#89a5f0",
+  "tile": "#0e2a29",
+  "motif": "orbit"
+ },
+ "definition": {
+  "lead": "Supramolecular chemistry is chemistry beyond the molecule: it studies how molecules recognize, bind and assemble through non-covalent interactions.",
+  "body": "Hydrogen bonds, π-stacking, metal coordination and the hydrophobic effect let molecules form host–guest complexes, self-assembled cages and even molecular machines. Nature uses the same tools to fold proteins and pair DNA strands.",
+  "facts": [
+   {
+    "value": "1967",
+    "label": "Charles Pedersen discovers crown ethers"
+   },
+   {
+    "value": "1987",
+    "label": "Nobel Prize to Cram, Lehn and Pedersen"
+   },
+   {
+    "value": "2016",
+    "label": "Nobel Prize for the design and synthesis of molecular machines"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Host–guest chemistry",
+   "summary": "A host molecule that wraps around a guest.",
+   "example": "Crown ethers and cyclodextrins.",
+   "channel": ""
+  },
+  {
+   "name": "Molecular recognition",
+   "summary": "Selective binding through shape and interactions.",
+   "example": "Synthetic receptors for specific ions.",
+   "channel": ""
+  },
+  {
+   "name": "Self-assembly",
+   "summary": "Components that organize themselves into larger structures.",
+   "example": "Metal–organic cages.",
+   "channel": ""
+  },
+  {
+   "name": "Molecular machines",
+   "summary": "Molecules that move in controlled ways.",
+   "example": "Rotaxanes, catenanes and light-driven motors.",
+   "channel": ""
+  },
+  {
+   "name": "Supramolecular polymers",
+   "summary": "Chains held together by reversible bonds.",
+   "example": "Self-healing materials.",
+   "channel": ""
+  },
+  {
+   "name": "Crystal engineering",
+   "summary": "Designing crystals through intermolecular interactions.",
+   "example": "Pharmaceutical co-crystals.",
+   "channel": "Structural Chemistry"
+  },
+  {
+   "name": "Metal-directed assembly",
+   "summary": "Metal ions as corners and junctions.",
+   "example": "Molecular squares and cages.",
+   "channel": "Inorganic Chemistry"
+  },
+  {
+   "name": "DNA nanotechnology",
+   "summary": "Using base pairing to build structures.",
+   "example": "DNA origami.",
+   "channel": "Nanochemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1894,
+   "title": "Lock and key",
+   "text": "Emil Fischer describes enzyme–substrate fit.",
+   "why": "The founding idea of molecular recognition."
+  },
+  {
+   "year": 1967,
+   "title": "Crown ethers",
+   "text": "Charles Pedersen discovers ring ethers that bind metal ions.",
+   "why": "The first designed hosts."
+  },
+  {
+   "year": 1969,
+   "title": "Cryptands",
+   "text": "Jean-Marie Lehn develops three-dimensional cage hosts called cryptands.",
+   "why": "Stronger, more selective binding."
+  },
+  {
+   "year": 1978,
+   "title": "A name for the field",
+   "text": "Lehn introduces the term 'supramolecular chemistry'.",
+   "why": "Chemistry of the intermolecular bond."
+  },
+  {
+   "year": 1983,
+   "title": "Interlocked rings",
+   "text": "Jean-Pierre Sauvage uses a copper template to make catenanes efficiently.",
+   "why": "Mechanically interlocked molecules became accessible."
+  },
+  {
+   "year": 1987,
+   "title": "Nobel Prize",
+   "text": "Awarded to Donald Cram, Jean-Marie Lehn and Charles Pedersen.",
+   "why": "Host–guest chemistry recognized."
+  },
+  {
+   "year": 1991,
+   "title": "A molecular shuttle",
+   "text": "Fraser Stoddart's group reports a ring that shuttles along an axle.",
+   "why": "A step toward molecular machines."
+  },
+  {
+   "year": 1999,
+   "title": "A light-driven motor",
+   "text": "Ben Feringa's group builds a molecular motor that rotates in one direction under light.",
+   "why": "Controlled, unidirectional molecular motion."
+  },
+  {
+   "year": 2016,
+   "title": "Molecular machines",
+   "text": "Nobel Prize to Sauvage, Stoddart and Feringa.",
+   "why": "The world's smallest machines."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "su-001",
+   "q": "Which of these are non-covalent interactions?",
+   "options": [
+    "Hydrogen bonds, π-stacking and van der Waals forces",
+    "Covalent bonds within each molecule",
+    "Nuclear forces between the atoms",
+    "Ionic lattices only"
+   ],
+   "answer": 0,
+   "explain": "Individually weak, together powerful."
+  },
+  {
+   "id": "su-002",
+   "q": "In a host–guest complex…",
+   "options": [
+    "A larger host binds a smaller guest",
+    "Two identical molecules react",
+    "A guest dissolves a host",
+    "Atoms share electrons covalently"
+   ],
+   "answer": 0,
+   "explain": "Like a molecule-sized glove."
+  },
+  {
+   "id": "su-003",
+   "q": "Crown ethers bind…",
+   "options": [
+    "Metal cations of matching size",
+    "Anions of any size",
+    "Gases only",
+    "Proteins only"
+   ],
+   "answer": 0,
+   "explain": "18-crown-6 fits potassium ions well."
+  },
+  {
+   "id": "su-004",
+   "q": "A rotaxane is…",
+   "options": [
+    "A ring threaded onto an axle with bulky stoppers",
+    "Two rings linked together like a chain",
+    "A molecule that spins like a top",
+    "A long polymer chain with side groups"
+   ],
+   "answer": 0,
+   "explain": "The ring cannot slip off."
+  },
+  {
+   "id": "su-005",
+   "q": "A catenane is…",
+   "options": [
+    "Two or more interlocked rings",
+    "A ring on an axle",
+    "A chain of atoms",
+    "A crystal"
+   ],
+   "answer": 0,
+   "explain": "From the Latin 'catena', chain."
+  },
+  {
+   "id": "su-006",
+   "q": "Who coined the term 'supramolecular chemistry'?",
+   "options": [
+    "Jean-Marie Lehn",
+    "Charles Pedersen",
+    "Donald Cram",
+    "Ben Feringa"
+   ],
+   "answer": 0,
+   "explain": "In 1978."
+  },
+  {
+   "id": "su-007",
+   "q": "Feringa's molecular motor is driven by…",
+   "options": [
+    "Light",
+    "Only heat",
+    "Electricity",
+    "Magnets"
+   ],
+   "answer": 0,
+   "explain": "Each light pulse plus thermal step turns it further in one direction."
+  },
+  {
+   "id": "su-008",
+   "q": "Self-assembly means…",
+   "options": [
+    "Components spontaneously organize into ordered structures",
+    "Chemists assemble each piece by hand",
+    "Molecules break apart",
+    "Crystals melt"
+   ],
+   "answer": 0,
+   "explain": "Information is built into the components."
+  },
+  {
+   "id": "su-009",
+   "q": "Cyclodextrins are…",
+   "options": [
+    "Ring-shaped sugars that host hydrophobic guests",
+    "Metal cages that trap small ions",
+    "Proteins that bind sugars",
+    "Crown ethers made from glucose"
+   ],
+   "answer": 0,
+   "explain": "Used in some fabric odour removers."
+  },
+  {
+   "id": "su-010",
+   "q": "Why are reversible bonds useful in self-assembly?",
+   "options": [
+    "Structures can correct mistakes as they form, and materials can self-heal",
+    "They are stronger than covalent bonds",
+    "They never break",
+    "They are always coloured"
+   ],
+   "answer": 0,
+   "explain": "Wrong connections break and re-form correctly."
+  },
+  {
+   "id": "su-011",
+   "q": "The 2016 Nobel Prize in Chemistry recognized…",
+   "options": [
+    "Molecular machines",
+    "Crown ethers",
+    "DNA origami",
+    "Graphene"
+   ],
+   "answer": 0,
+   "explain": "Sauvage, Stoddart and Feringa."
+  },
+  {
+   "id": "su-012",
+   "q": "The two strands of the DNA double helix are held together by…",
+   "options": [
+    "Hydrogen bonds and base stacking",
+    "Covalent bonds between the strands",
+    "Metal ions",
+    "Magnetic forces"
+   ],
+   "answer": 0,
+   "explain": "Which is why they can be separated and copied."
+  }
+ ],
+ "related": [
+  "Nanochemistry",
+  "Structural Chemistry",
+  "Molecular Systems",
+  "Bioorganic Chemistry",
+  "Chemistry of Materials"
+ ]
+}

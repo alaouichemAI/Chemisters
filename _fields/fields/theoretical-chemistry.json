@@ -1,0 +1,305 @@
+{
+ "slug": "theoretical-chemistry",
+ "channel": "Theoretical Chemistry",
+ "number": 4,
+ "symbol": "Tr",
+ "category": "Core chemistry",
+ "name": "Theoretical Chemistry",
+ "tagline": "Quantum models, molecular orbital theory, and first-principles calculations.",
+ "seo_title": "Theoretical Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Theoretical Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in quantum chemistry, density functional theory, bonding theory and reaction dynamics.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#7d98f2",
+  "accent2": "#b289f0",
+  "tile": "#15213d",
+  "motif": "rings"
+ },
+ "definition": {
+  "lead": "Theoretical chemistry uses mathematics and physics to explain chemical behaviour, and often to predict it before any experiment is run.",
+  "body": "Its central tool is quantum mechanics: describe the electrons correctly and you obtain bond lengths, energies, colours and reaction barriers. It builds the theories that computational chemistry turns into software.",
+  "facts": [
+   {
+    "value": "1926",
+    "label": "Schrödinger publishes his wave equation"
+   },
+   {
+    "value": "1929",
+    "label": "Dirac: the laws of chemistry are known; the equations are just too hard to solve exactly"
+   },
+   {
+    "value": "1998",
+    "label": "Nobel Prize to Kohn and Pople for density functional theory and quantum chemistry methods"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Quantum chemistry",
+   "summary": "Solving the Schrödinger equation for molecules.",
+   "example": "Predicting bond energies and molecular geometries.",
+   "channel": "Computational Chemistry"
+  },
+  {
+   "name": "Molecular orbital theory",
+   "summary": "Electrons spread over the whole molecule in orbitals.",
+   "example": "Explains benzene's stability and oxygen's magnetism.",
+   "channel": ""
+  },
+  {
+   "name": "Valence bond theory",
+   "summary": "Bonds as overlapping atomic orbitals, with resonance.",
+   "example": "Pauling's hybridization explains carbon's tetrahedral shape.",
+   "channel": ""
+  },
+  {
+   "name": "Density functional theory",
+   "summary": "Computing the energy from the electron density instead of the wavefunction.",
+   "example": "The workhorse method in materials and catalysis research.",
+   "channel": ""
+  },
+  {
+   "name": "Statistical mechanics",
+   "summary": "From molecular energy levels to temperature, pressure and entropy.",
+   "example": "Partition functions predict equilibrium constants.",
+   "channel": "Entropy in Chemistry"
+  },
+  {
+   "name": "Reaction dynamics",
+   "summary": "How atoms move across potential energy surfaces during a reaction.",
+   "example": "Crossed molecular beam experiments test these predictions.",
+   "channel": ""
+  },
+  {
+   "name": "Symmetry & group theory",
+   "summary": "Symmetry decides which orbitals mix and which transitions are allowed.",
+   "example": "Selection rules in spectroscopy.",
+   "channel": ""
+  },
+  {
+   "name": "Molecular dynamics",
+   "summary": "Newton's laws applied to every atom over time.",
+   "example": "Simulating how proteins move and fold.",
+   "channel": "Computational Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1916,
+   "title": "The electron-pair bond",
+   "text": "Gilbert N. Lewis proposes that a covalent bond is a shared pair of electrons.",
+   "why": "The picture behind every Lewis structure."
+  },
+  {
+   "year": 1926,
+   "title": "The Schrödinger equation",
+   "text": "Erwin Schrödinger describes electrons as waves.",
+   "why": "Made it possible to calculate chemistry from first principles."
+  },
+  {
+   "year": 1927,
+   "title": "The first quantum bond",
+   "text": "Walter Heitler and Fritz London treat the hydrogen molecule with quantum mechanics.",
+   "why": "The first explanation of why a covalent bond forms."
+  },
+  {
+   "year": 1929,
+   "title": "Dirac's challenge",
+   "text": "Paul Dirac writes that the laws of chemistry are known, but the equations are too complicated to solve exactly.",
+   "why": "Set the agenda: find clever approximations."
+  },
+  {
+   "year": 1931,
+   "title": "Hückel's theory",
+   "text": "Erich Hückel develops a simple orbital model for conjugated and aromatic molecules.",
+   "why": "Gave the 4n + 2 rule for aromaticity."
+  },
+  {
+   "year": 1939,
+   "title": "The Nature of the Chemical Bond",
+   "text": "Linus Pauling publishes his book on bonding, hybridization and electronegativity.",
+   "why": "One of the most influential chemistry books ever written."
+  },
+  {
+   "year": 1951,
+   "title": "The Roothaan equations",
+   "text": "Clemens Roothaan, and independently George Hall, recast molecular orbital theory as matrix equations.",
+   "why": "Turned quantum chemistry into something computers could do."
+  },
+  {
+   "year": 1964,
+   "title": "Density functional theory",
+   "text": "Pierre Hohenberg and Walter Kohn show that the electron density determines all ground-state properties.",
+   "why": "Now the most widely used electronic-structure method."
+  },
+  {
+   "year": 1981,
+   "title": "Frontier orbitals",
+   "text": "Nobel Prize to Kenichi Fukui and Roald Hoffmann for theories of chemical reactions.",
+   "why": "Showed that a few key orbitals steer most reactions."
+  },
+  {
+   "year": 2013,
+   "title": "Multiscale models",
+   "text": "Nobel Prize to Karplus, Levitt and Warshel for models of complex chemical systems.",
+   "why": "Combined quantum and classical physics to simulate enzymes."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "tr-001",
+   "q": "Solving the Schrödinger equation for a molecule gives…",
+   "options": [
+    "The allowed energies and wavefunctions of its electrons",
+    "Its melting point directly",
+    "Only its colour",
+    "Its boiling point and density"
+   ],
+   "answer": 0,
+   "explain": "From energies and wavefunctions, nearly every other property can be derived."
+  },
+  {
+   "id": "tr-002",
+   "q": "The Born–Oppenheimer approximation assumes that…",
+   "options": [
+    "Nuclei move much more slowly than electrons",
+    "Electrons do not repel each other",
+    "Atoms have no charge",
+    "Light travels instantly"
+   ],
+   "answer": 0,
+   "explain": "Nuclei are thousands of times heavier, so electrons can be solved for with the nuclei held fixed."
+  },
+  {
+   "id": "tr-003",
+   "q": "Density functional theory computes the energy from…",
+   "options": [
+    "The electron density",
+    "The nuclear spin",
+    "The molar mass",
+    "The boiling point"
+   ],
+   "answer": 0,
+   "explain": "The density depends on 3 coordinates, while a wavefunction depends on 3 per electron."
+  },
+  {
+   "id": "tr-004",
+   "q": "Which hybridization does the carbon in methane have?",
+   "options": [
+    "sp³",
+    "sp²",
+    "sp",
+    "dsp³"
+   ],
+   "answer": 0,
+   "explain": "Four equivalent sp³ orbitals point to the corners of a tetrahedron."
+  },
+  {
+   "id": "tr-005",
+   "q": "In molecular orbital theory, bond order equals…",
+   "options": [
+    "½ × (bonding electrons − antibonding electrons)",
+    "The number of atoms",
+    "The number of lone pairs",
+    "The number of valence electrons"
+   ],
+   "answer": 0,
+   "explain": "For H₂: ½ × (2 − 0) = 1, a single bond."
+  },
+  {
+   "id": "tr-006",
+   "q": "Why do the HOMO and LUMO matter so much?",
+   "options": [
+    "Most reactions involve the highest occupied and lowest unoccupied orbitals",
+    "They are the only orbitals with electrons",
+    "They contain the nucleus",
+    "They set the molar mass"
+   ],
+   "answer": 0,
+   "explain": "Fukui's frontier orbital idea: reactivity is mostly decided at the edge of the electron distribution."
+  },
+  {
+   "id": "tr-007",
+   "q": "Who wrote 'The Nature of the Chemical Bond'?",
+   "options": [
+    "Linus Pauling",
+    "Niels Bohr",
+    "Erwin Schrödinger",
+    "Gilbert Lewis"
+   ],
+   "answer": 0,
+   "explain": "Published in 1939, it introduced generations of chemists to hybridization and electronegativity."
+  },
+  {
+   "id": "tr-008",
+   "q": "According to the Pauli exclusion principle, one orbital can hold at most…",
+   "options": [
+    "2 electrons with opposite spins",
+    "8 electrons",
+    "1 electron",
+    "6 electrons"
+   ],
+   "answer": 0,
+   "explain": "No two electrons may share all four quantum numbers."
+  },
+  {
+   "id": "tr-009",
+   "q": "The variational principle says a trial wavefunction's energy is…",
+   "options": [
+    "Never lower than the true ground-state energy",
+    "Always exactly right",
+    "Always lower than the true energy",
+    "Unrelated to the true energy"
+   ],
+   "answer": 0,
+   "explain": "So lowering the energy of a trial function always moves it toward the truth."
+  },
+  {
+   "id": "tr-010",
+   "q": "The 1998 Nobel Prize to Kohn and Pople recognized…",
+   "options": [
+    "Density functional theory and computational quantum chemistry",
+    "The discovery of fullerenes",
+    "NMR spectroscopy of proteins",
+    "New methods of polymer synthesis"
+   ],
+   "answer": 0,
+   "explain": "Kohn developed DFT; Pople built methods and software used by chemists everywhere."
+  },
+  {
+   "id": "tr-011",
+   "q": "A potential energy surface shows…",
+   "options": [
+    "Energy as a function of atomic positions",
+    "Temperature over time",
+    "Concentration versus pH",
+    "Mass versus charge"
+   ],
+   "answer": 0,
+   "explain": "Reactants and products are valleys; the transition state is the mountain pass between them."
+  },
+  {
+   "id": "tr-012",
+   "q": "Which molecule did Heitler and London treat in the first quantum theory of a bond (1927)?",
+   "options": [
+    "H₂",
+    "O₂",
+    "Benzene",
+    "Water"
+   ],
+   "answer": 0,
+   "explain": "The simplest molecule with a shared electron pair."
+  }
+ ],
+ "related": [
+  "Computational Chemistry",
+  "Physical Chemistry",
+  "Chemoinformatics",
+  "Chemistry AI & ML Applications",
+  "Structural Chemistry"
+ ]
+}

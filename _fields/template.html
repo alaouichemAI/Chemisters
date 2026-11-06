@@ -50,8 +50,8 @@
 <main>
 <section id="field"><div class="wrap def">
   <div>
-    <div class="eyebrow">What it is</div>
-    <h2>The field in one minute</h2>
+    <div class="eyebrow">{{L_FIELD_EYEBROW}}</div>
+    <h2>{{L_FIELD}}</h2>
     <p class="lead">{{DEF_LEAD}}</p>
     <p class="body">{{DEF_BODY}}</p>
   </div>
@@ -61,7 +61,7 @@
 <section id="top-post"><div class="wrap">
   <div class="eyebrow">Top post of the week</div>
   <h2>What {{NAME}} followers loved this week</h2>
-  <p class="sub">The best-performing post on the page, picked every week.</p>
+  <p class="sub">The post our followers engaged with most this week. Updated every week.</p>
   <div class="tp" id="tp" style="margin-top:22px"></div>
 </div></section>
 
@@ -69,7 +69,7 @@
   <div class="eyebrow">Latest papers</div>
   <h2>New in {{NAME}}</h2>
   <p class="sub">Recent papers from the field, updated daily.</p>
-  <ol class="papers" id="papers-list"></ol>
+  <div class="papers" id="papers-list"></div>
 </div></section>
 
 <section id="quiz"><div class="wrap">
@@ -80,15 +80,15 @@
 </div></section>
 
 <section id="branches"><div class="wrap">
-  <div class="eyebrow">Branches</div>
-  <h2>The map of {{NAME}}</h2>
-  <p class="sub">Each branch is a world of its own. Several have their own Chemisters page — follow the ones you care about.</p>
+  <div class="eyebrow">{{L_MAP_EYEBROW}}</div>
+  <h2>{{L_MAP}}</h2>
+  <p class="sub">{{L_MAP_SUB}}</p>
   <div class="grid">{{BRANCHES}}</div>
 </div></section>
 
 <section id="history"><div class="wrap">
-  <div class="eyebrow">History</div>
-  <h2>How {{NAME}} got here</h2>
+  <div class="eyebrow">{{L_HIST_EYEBROW}}</div>
+  <h2>{{L_HIST}}</h2>
   <p class="sub">Tap a year. Use ← → on your keyboard.</p>
   <div class="tl">
     <div class="tl-track" role="tablist" id="tl-track"></div>
@@ -106,7 +106,7 @@
   <div class="rel">{{PICK_CARDS}}</div>
 </div></section>
 
-<section><div class="wrap"><div class="cta">
+<section{{CTA_HIDDEN}}><div class="wrap"><div class="cta">
   <h2>Don't miss the next one</h2>
   <p>{{GETS_TEXT}} in {{NAME}}, straight in your feed.</p>
   <div class="follow">{{FOLLOW}}</div>
@@ -117,7 +117,7 @@
   <a href="/">Chemisters</a> · <a href="{{PUBLISH_URL}}">Publish your research</a> · <a href="/legal/privacy%20policy">Privacy</a> · <a href="/legal/terms%20of%20use">Terms</a>
 </div></footer>
 
-<div class="sticky" id="sticky" role="complementary" aria-label="Follow">
+<div class="sticky{{STICKY_CLS}}" id="sticky" role="complementary" aria-label="Follow">
   <span class="t">Follow {{NAME}}</span>{{FOLLOW_SMALL}}<button class="x" type="button" aria-label="Close" id="sticky-x">×</button>
 </div>
 <div class="toast" id="toast">Link copied</div>

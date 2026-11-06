@@ -1,0 +1,299 @@
+{
+ "slug": "foods-chemistry",
+ "channel": "Foods Chemistry",
+ "number": 26,
+ "symbol": "Fd",
+ "category": "Applied & industrial",
+ "name": "Foods Chemistry",
+ "tagline": "Food composition, additives, flavor chemistry, and nutritional analysis.",
+ "seo_title": "Foods Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Foods Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in food composition, flavour, preservation, nutrition and food safety.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#f2ea7d",
+  "accent2": "#b6f089",
+  "tile": "#1b2513",
+  "motif": "drops"
+ },
+ "definition": {
+  "lead": "Food chemistry studies what food is made of and the chemical changes it goes through during cooking, processing and storage.",
+  "body": "Why bread crust browns, why cut apples turn brown, how mayonnaise stays together and how preservatives keep food safe: it all comes down to chemistry. The field also measures nutrients, contaminants and allergens.",
+  "facts": [
+   {
+    "value": "1912",
+    "label": "Louis-Camille Maillard describes the browning reaction"
+   },
+   {
+    "value": "5",
+    "label": "basic tastes: sweet, sour, salty, bitter and umami"
+   },
+   {
+    "value": "1908",
+    "label": "Kikunae Ikeda identifies glutamate as the source of umami"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Browning reactions",
+   "summary": "Maillard reaction and caramelization.",
+   "example": "Bread crust, roasted coffee, seared steak.",
+   "channel": ""
+  },
+  {
+   "name": "Emulsions & colloids",
+   "summary": "Mixing what doesn't mix.",
+   "example": "Egg-yolk lecithin holds mayonnaise together.",
+   "channel": "Surface Chemistry"
+  },
+  {
+   "name": "Lipids",
+   "summary": "Fats, oils and their reactions.",
+   "example": "Rancidity is the oxidation of unsaturated fats.",
+   "channel": ""
+  },
+  {
+   "name": "Carbohydrates",
+   "summary": "Sugars, starch and fibre.",
+   "example": "Starch gelatinizes when it is cooked in water.",
+   "channel": ""
+  },
+  {
+   "name": "Proteins & enzymes",
+   "summary": "Structure, texture and enzymatic change.",
+   "example": "Rennet enzymes curdle milk for cheese.",
+   "channel": "Biological Chemistry"
+  },
+  {
+   "name": "Flavour & aroma",
+   "summary": "The molecules we taste and smell.",
+   "example": "Vanillin, the main flavour of vanilla.",
+   "channel": ""
+  },
+  {
+   "name": "Preservation",
+   "summary": "Keeping food safe and good for longer.",
+   "example": "Controlling pH, water activity and oxidation.",
+   "channel": ""
+  },
+  {
+   "name": "Food safety & analysis",
+   "summary": "Detecting contaminants, allergens and fraud.",
+   "example": "Testing honey and olive oil for adulteration.",
+   "channel": "Analytical Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1810,
+   "title": "Canning",
+   "text": "Nicolas Appert publishes his method for preserving food in sealed, heated containers.",
+   "why": "Food could be stored for months."
+  },
+  {
+   "year": 1820,
+   "title": "Food adulteration exposed",
+   "text": "Frederick Accum publishes a treatise on food adulteration.",
+   "why": "Chemistry began protecting consumers."
+  },
+  {
+   "year": 1862,
+   "title": "Pasteurization",
+   "text": "Louis Pasteur shows that gentle heating prevents spoilage.",
+   "why": "Safer milk, wine and juice."
+  },
+  {
+   "year": 1869,
+   "title": "Margarine",
+   "text": "Hippolyte Mège-Mouriès invents margarine.",
+   "why": "An early processed food designed by a chemist."
+  },
+  {
+   "year": 1902,
+   "title": "Hydrogenated fats",
+   "text": "Wilhelm Normann patents the hydrogenation of liquid oils.",
+   "why": "Solid fats from oils, but later concerns about trans fats."
+  },
+  {
+   "year": 1908,
+   "title": "Umami",
+   "text": "Kikunae Ikeda identifies glutamate as the taste of kombu broth.",
+   "why": "A fifth basic taste."
+  },
+  {
+   "year": 1912,
+   "title": "The Maillard reaction",
+   "text": "Louis-Camille Maillard describes the reaction between amino acids and sugars.",
+   "why": "The chemistry of browning and roasted flavour."
+  },
+  {
+   "year": 1953,
+   "title": "Mapping browning",
+   "text": "John Hodge publishes a scheme for the Maillard reaction pathways.",
+   "why": "Still the reference map for food browning."
+  },
+  {
+   "year": 2006,
+   "title": "Trans fat labelling",
+   "text": "The United States requires trans fat content on nutrition labels.",
+   "why": "Led manufacturers to reformulate many foods."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "fd-001",
+   "q": "The Maillard reaction occurs between…",
+   "options": [
+    "Amino acids and reducing sugars",
+    "Fats and water",
+    "Salt and acid",
+    "Proteins and fats"
+   ],
+   "answer": 0,
+   "explain": "It produces the brown colours and roasted flavours of cooked food."
+  },
+  {
+   "id": "fd-002",
+   "q": "Caramelization involves heating…",
+   "options": [
+    "Sugars on their own",
+    "Proteins",
+    "Fats",
+    "Salt"
+   ],
+   "answer": 0,
+   "explain": "No amino acids are needed, unlike the Maillard reaction."
+  },
+  {
+   "id": "fd-003",
+   "q": "Why do cut apples turn brown?",
+   "options": [
+    "Enzymes oxidize phenolic compounds",
+    "Bacteria grow",
+    "Sugar crystallizes",
+    "Iron rusts"
+   ],
+   "answer": 0,
+   "explain": "Polyphenol oxidases react with oxygen once cells are broken."
+  },
+  {
+   "id": "fd-004",
+   "q": "Why does lemon juice slow apple browning?",
+   "options": [
+    "Its acid slows the enzymes, and its vitamin C is an antioxidant",
+    "It adds a colour that hides the browning",
+    "It adds sugar that coats the surface",
+    "It heats the apple and kills the cells"
+   ],
+   "answer": 0,
+   "explain": "Lower pH and an antioxidant both help."
+  },
+  {
+   "id": "fd-005",
+   "q": "What keeps mayonnaise from separating?",
+   "options": [
+    "Lecithin from egg yolk acts as an emulsifier",
+    "Salt",
+    "Vinegar dissolving the oil",
+    "Cold"
+   ],
+   "answer": 0,
+   "explain": "Emulsifiers sit between oil droplets and water."
+  },
+  {
+   "id": "fd-006",
+   "q": "The umami taste comes mainly from…",
+   "options": [
+    "Glutamate",
+    "Sucrose",
+    "Sodium",
+    "Quinine"
+   ],
+   "answer": 0,
+   "explain": "Found in tomatoes, parmesan, soy sauce and kombu."
+  },
+  {
+   "id": "fd-007",
+   "q": "Rancidity of fats is mainly caused by…",
+   "options": [
+    "Oxidation of unsaturated fats",
+    "Dehydration",
+    "Caramelization",
+    "Protein denaturation"
+   ],
+   "answer": 0,
+   "explain": "Antioxidants and cool, dark storage slow it down."
+  },
+  {
+   "id": "fd-008",
+   "q": "Pasteurization…",
+   "options": [
+    "Heats food to kill pathogens while preserving most of its quality",
+    "Freezes food to stop bacteria growing",
+    "Adds salt to draw water out of microbes",
+    "Irradiates food with gamma rays"
+   ],
+   "answer": 0,
+   "explain": "Milk is commonly heated to 72 °C for 15 seconds."
+  },
+  {
+   "id": "fd-009",
+   "q": "Starch gelatinization happens when…",
+   "options": [
+    "Starch granules absorb water and swell on heating",
+    "Starch freezes and forms ice crystals",
+    "Starch ferments into alcohol",
+    "Starch dries out and becomes brittle"
+   ],
+   "answer": 0,
+   "explain": "This is why rice and sauces thicken when cooked."
+  },
+  {
+   "id": "fd-010",
+   "q": "Partial hydrogenation of oils can create…",
+   "options": [
+    "Trans fats",
+    "Omega-3 fats",
+    "Proteins",
+    "Vitamins"
+   ],
+   "answer": 0,
+   "explain": "Many countries now restrict artificial trans fats."
+  },
+  {
+   "id": "fd-011",
+   "q": "Water activity measures…",
+   "options": [
+    "The water available to microbes and reactions",
+    "The total amount of water in a food",
+    "The pH of the water in a food",
+    "The hardness of the water used in cooking"
+   ],
+   "answer": 0,
+   "explain": "Honey contains water but has low water activity, so it resists spoilage."
+  },
+  {
+   "id": "fd-012",
+   "q": "Vanillin is the main flavour compound of…",
+   "options": [
+    "Vanilla",
+    "Chocolate",
+    "Coffee",
+    "Mint"
+   ],
+   "answer": 0,
+   "explain": "Most vanillin used today is made synthetically."
+  }
+ ],
+ "related": [
+  "Applied Chemistry",
+  "Biological Chemistry",
+  "Analytical Chemistry",
+  "Green Chemistry",
+  "Quality Control"
+ ]
+}

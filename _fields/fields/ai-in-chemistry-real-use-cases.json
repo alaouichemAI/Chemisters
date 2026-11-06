@@ -1,0 +1,296 @@
+{
+ "slug": "ai-in-chemistry-real-use-cases",
+ "channel": "AI in Chemistry — Real Use Cases",
+ "number": 39,
+ "symbol": "Uc",
+ "category": "Computational & AI",
+ "name": "AI in Chemistry — Real Use Cases",
+ "tagline": "Industry case studies where AI accelerates real chemical discovery.",
+ "seo_title": "AI in Chemistry — Real Use Cases — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters AI in Chemistry — Real Use Cases on LinkedIn and Facebook: news and case studies where AI delivered real molecules, materials and decisions in chemistry.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#d37df2",
+  "accent2": "#f089ca",
+  "tile": "#1e1936",
+  "motif": "triangles"
+ },
+ "definition": {
+  "lead": "This page tracks AI in chemistry where it has actually delivered: real molecules, real materials and real decisions, not just promises.",
+  "body": "Each use case is judged by evidence: was the prediction tested in the lab, did it beat existing methods, and did it change what chemists do? From antibiotic discovery to protein design and materials screening, the record is growing fast, along with lessons from failures.",
+  "facts": [
+   {
+    "value": "2020",
+    "label": "halicin, an antibiotic candidate found with deep learning"
+   },
+   {
+    "value": "200 million+",
+    "label": "protein structure predictions in the AlphaFold database"
+   },
+   {
+    "value": "Prospective",
+    "label": "the gold standard: predict first, then test in the lab"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Drug discovery",
+   "summary": "AI that finds or designs drug candidates.",
+   "example": "Antibiotic candidates found by deep learning screens.",
+   "channel": "Drug Discovery"
+  },
+  {
+   "name": "Protein structure & design",
+   "summary": "Predicting and designing protein shapes.",
+   "example": "AlphaFold and de novo designed proteins.",
+   "channel": "Biological Chemistry"
+  },
+  {
+   "name": "Materials discovery",
+   "summary": "Predicting new stable materials.",
+   "example": "Large-scale screening of crystal structures.",
+   "channel": "Chemistry of Materials"
+  },
+  {
+   "name": "Synthesis planning",
+   "summary": "AI-suggested routes used by chemists.",
+   "example": "Retrosynthesis tools used in industry.",
+   "channel": "Retrosynthesis"
+  },
+  {
+   "name": "Self-driving labs",
+   "summary": "AI choosing and running experiments.",
+   "example": "Autonomous optimization of catalysts.",
+   "channel": "Autonomous Chemistry"
+  },
+  {
+   "name": "Reaction optimization",
+   "summary": "Finding the best conditions with fewer experiments.",
+   "example": "Bayesian optimization beating expert chemists in tests.",
+   "channel": ""
+  },
+  {
+   "name": "Analytical chemistry",
+   "summary": "Faster interpretation of spectra and images.",
+   "example": "Automated structure elucidation.",
+   "channel": "Analytical Chemistry"
+  },
+  {
+   "name": "Lessons from failures",
+   "summary": "Where AI promises fell short, and why.",
+   "example": "Models that failed on chemistry unlike their training data.",
+   "channel": ""
+  }
+ ],
+ "timeline": [
+  {
+   "year": 2012,
+   "title": "A first win",
+   "text": "Deep learning wins Merck's molecular activity challenge.",
+   "why": "Signalled deep learning's potential in chemistry."
+  },
+  {
+   "year": 2019,
+   "title": "Molecules in weeks",
+   "text": "Insilico Medicine reports kinase inhibitors designed with generative AI, made and tested in weeks.",
+   "why": "A fast design-to-test demonstration."
+  },
+  {
+   "year": 2020,
+   "title": "Halicin",
+   "text": "A deep learning screen at MIT identifies halicin as an antibacterial candidate.",
+   "why": "AI found a structurally unusual antibiotic."
+  },
+  {
+   "year": 2021,
+   "title": "AlphaFold structures released",
+   "text": "Predicted structures for the human proteome and more become freely available.",
+   "why": "Structural biology changed almost overnight."
+  },
+  {
+   "year": 2022,
+   "title": "200 million structures",
+   "text": "The AlphaFold database expands to over 200 million predictions.",
+   "why": "Nearly every catalogued protein covered."
+  },
+  {
+   "year": 2023,
+   "title": "Millions of predicted crystals",
+   "text": "DeepMind's GNoME reports 2.2 million new predicted crystal structures; how many are truly new is debated.",
+   "why": "AI scaled materials screening, and raised questions about validation."
+  },
+  {
+   "year": 2024,
+   "title": "Nobel Prize",
+   "text": "Baker, Hassabis and Jumper share the Chemistry prize for protein design and structure prediction.",
+   "why": "AI tools recognized at the highest level."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "uc-001",
+   "q": "What is the strongest evidence for an AI chemistry claim?",
+   "options": [
+    "Prospective lab validation of new predictions",
+    "High accuracy on the training data",
+    "A press release",
+    "A large model size"
+   ],
+   "answer": 0,
+   "explain": "Predict first, then test what nobody had tested before."
+  },
+  {
+   "id": "uc-002",
+   "q": "How was halicin found?",
+   "options": [
+    "A deep learning model screened molecules for antibacterial activity",
+    "A random screen of soil bacteria found it by luck",
+    "It was designed atom by atom by a quantum chemistry program",
+    "Chemists modified an existing antibiotic step by step"
+   ],
+   "answer": 0,
+   "explain": "Then it was tested against real bacteria."
+  },
+  {
+   "id": "uc-003",
+   "q": "A retrospective benchmark differs from a prospective study because…",
+   "options": [
+    "It tests on already-known data, while a prospective study predicts and then tests new cases",
+    "It always gives more reliable results than a prospective study",
+    "It requires new lab experiments for every prediction",
+    "It is run in the lab before any model is trained"
+   ],
+   "answer": 0,
+   "explain": "Retrospective scores can be inflated by hidden overlaps."
+  },
+  {
+   "id": "uc-004",
+   "q": "Why do AI models often fail on genuinely new chemistry?",
+   "options": [
+    "The training data lacks similar examples (out of distribution)",
+    "Their hardware is too slow for complex molecules",
+    "Chemistry has no consistent rules for a model to learn",
+    "Larger models always memorize every possible molecule"
+   ],
+   "answer": 0,
+   "explain": "Models interpolate well and extrapolate poorly."
+  },
+  {
+   "id": "uc-005",
+   "q": "In reaction optimization, Bayesian optimization…",
+   "options": [
+    "Finds good conditions in fewer experiments",
+    "Needs thousands of runs",
+    "Works without any data",
+    "Only works for polymers"
+   ],
+   "answer": 0,
+   "explain": "It models uncertainty to choose informative experiments."
+  },
+  {
+   "id": "uc-006",
+   "q": "What did GNoME (2023) report?",
+   "options": [
+    "Millions of predicted new inorganic crystal structures",
+    "A new broad-spectrum antibiotic for resistant bacteria",
+    "The structures of every protein in the human body",
+    "A battery cathode that doubled energy density"
+   ],
+   "answer": 0,
+   "explain": "Experts have since debated how many are novel and useful."
+  },
+  {
+   "id": "uc-007",
+   "q": "What did Insilico Medicine's 2019 study show?",
+   "options": [
+    "Generative AI designed kinase inhibitors that were made and tested within weeks",
+    "AI could replace clinical trials for new kinase drugs",
+    "A deep learning model rediscovered penicillin from text",
+    "Robots alone completed a full drug approval process"
+   ],
+   "answer": 0,
+   "explain": "A proof of speed, not yet of a medicine."
+  },
+  {
+   "id": "uc-008",
+   "q": "Publication bias affects AI because…",
+   "options": [
+    "Negative results are rarely published, so data is skewed toward successes",
+    "Journals refuse to publish any paper that uses machine learning",
+    "Published data is too accurate for models to learn from",
+    "Successful experiments are usually hidden in patents only"
+   ],
+   "answer": 0,
+   "explain": "Models never learn what fails."
+  },
+  {
+   "id": "uc-009",
+   "q": "'Human-in-the-loop' means…",
+   "options": [
+    "Experts review and steer AI suggestions",
+    "A human inside the robot",
+    "Humans are removed",
+    "Only humans make decisions"
+   ],
+   "answer": 0,
+   "explain": "Combines model speed with expert judgement."
+  },
+  {
+   "id": "uc-010",
+   "q": "A fair test of a new AI method compares it against…",
+   "options": [
+    "Strong non-AI methods and simple baseline models",
+    "Only previous versions of the same AI model",
+    "Results reported in the AI method's own press release",
+    "Random guessing, since that is the lowest bar"
+   ],
+   "answer": 0,
+   "explain": "Many claims shrink against good baselines."
+  },
+  {
+   "id": "uc-011",
+   "q": "How many predicted structures does the AlphaFold database hold?",
+   "options": [
+    "Over 200 million",
+    "About 1,000",
+    "About 100,000",
+    "Exactly 20,000"
+   ],
+   "answer": 0,
+   "explain": "Expanded in 2022."
+  },
+  {
+   "id": "uc-012",
+   "q": "What does data leakage do to reported performance?",
+   "options": [
+    "Inflates it",
+    "Lowers it",
+    "Has no effect",
+    "Makes it random"
+   ],
+   "answer": 0,
+   "explain": "Test information sneaks into training."
+  }
+ ],
+ "related": [
+  "Chemistry AI & ML Applications",
+  "The Artificial Intelligence",
+  "Drug Discovery",
+  "Autonomous Chemistry",
+  "Chemistry of Materials"
+ ],
+ "labels": {
+  "field_eyebrow": "What this page covers",
+  "field": "AI in chemistry, in one minute",
+  "map_eyebrow": "Use cases",
+  "map": "Where AI is delivering",
+  "map_sub": "Each area has real, lab-tested results. Several have their own Chemisters page — follow the ones you care about.",
+  "hist_eyebrow": "Milestones",
+  "hist": "Milestones so far"
+ }
+}

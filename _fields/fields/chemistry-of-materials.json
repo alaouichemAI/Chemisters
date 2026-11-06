@@ -1,0 +1,305 @@
+{
+ "slug": "chemistry-of-materials",
+ "channel": "Chemistry of Materials",
+ "number": 42,
+ "symbol": "Mr",
+ "category": "Materials & nano",
+ "name": "Chemistry of Materials",
+ "tagline": "Solid-state chemistry, ceramics, composites, and functional material design.",
+ "seo_title": "Chemistry of Materials — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Chemistry of Materials on LinkedIn and Facebook: paper summaries, news and innovations in solid-state materials, semiconductors, porous frameworks, ceramics and energy materials.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#7df2db",
+  "accent2": "#89c4f0",
+  "tile": "#0e2a29",
+  "motif": "lattice"
+ },
+ "definition": {
+  "lead": "Materials chemistry designs and makes substances with useful properties: strong, light, conductive, magnetic, transparent, porous or responsive.",
+  "body": "It connects atomic structure to performance, from battery electrodes and semiconductors to ceramics, glasses, alloys and porous frameworks. New materials often decide which technologies become possible.",
+  "facts": [
+   {
+    "value": "1999",
+    "label": "Omar Yaghi's group reports MOF-5, a landmark metal–organic framework"
+   },
+   {
+    "value": "7,000 m²",
+    "label": "surface area per gram reached by some record metal–organic frameworks"
+   },
+   {
+    "value": "2025",
+    "label": "Nobel Prize for metal–organic frameworks"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Solid-state materials",
+   "summary": "Crystalline inorganic solids and their properties.",
+   "example": "Perovskites for solar cells.",
+   "channel": "Inorganic Chemistry"
+  },
+  {
+   "name": "Semiconductors",
+   "summary": "Materials whose conductivity can be tuned.",
+   "example": "Doped silicon in every chip.",
+   "channel": ""
+  },
+  {
+   "name": "Porous materials",
+   "summary": "MOFs, zeolites and covalent organic frameworks.",
+   "example": "Capturing CO₂ or harvesting water from air.",
+   "channel": ""
+  },
+  {
+   "name": "Energy materials",
+   "summary": "Electrodes, electrolytes and catalysts for energy.",
+   "example": "Battery cathodes.",
+   "channel": "Energy Chemistry"
+  },
+  {
+   "name": "Ceramics & glasses",
+   "summary": "Hard, heat-resistant and transparent materials.",
+   "example": "Chemically strengthened phone glass.",
+   "channel": ""
+  },
+  {
+   "name": "Polymers & composites",
+   "summary": "Combining materials for the best of both.",
+   "example": "Carbon-fibre composites in aircraft.",
+   "channel": "Polymers Chemistry"
+  },
+  {
+   "name": "Magnetic & electronic materials",
+   "summary": "Materials for motors, memory and sensors.",
+   "example": "Neodymium–iron–boron magnets.",
+   "channel": ""
+  },
+  {
+   "name": "Computational materials design",
+   "summary": "Predicting materials before making them.",
+   "example": "Open databases of computed properties.",
+   "channel": "Computational Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1856,
+   "title": "Cheap steel",
+   "text": "Henry Bessemer patents a process to make steel in bulk.",
+   "why": "Steel became the backbone of industry."
+  },
+  {
+   "year": 1947,
+   "title": "The transistor",
+   "text": "John Bardeen, Walter Brattain and William Shockley demonstrate the transistor at Bell Labs.",
+   "why": "The start of the semiconductor age."
+  },
+  {
+   "year": 1958,
+   "title": "The integrated circuit",
+   "text": "Jack Kilby demonstrates the first integrated circuit.",
+   "why": "Many devices on one piece of semiconductor."
+  },
+  {
+   "year": 1970,
+   "title": "Low-loss optical fibre",
+   "text": "Corning researchers make glass fibre clear enough for long-distance communication.",
+   "why": "The basis of the internet's backbone."
+  },
+  {
+   "year": 1986,
+   "title": "High-temperature superconductors",
+   "text": "Bednorz and Müller find superconductivity in a copper oxide ceramic.",
+   "why": "Opened a new family of superconductors."
+  },
+  {
+   "year": 1989,
+   "title": "Framework design",
+   "text": "Bernard Hoskins and Richard Robson describe designed coordination frameworks.",
+   "why": "A blueprint for building crystals from molecular parts."
+  },
+  {
+   "year": 1999,
+   "title": "MOF-5",
+   "text": "Omar Yaghi's group reports a highly porous, stable metal–organic framework.",
+   "why": "MOFs became a major materials class."
+  },
+  {
+   "year": 2004,
+   "title": "Graphene",
+   "text": "Geim and Novoselov isolate graphene.",
+   "why": "Two-dimensional materials took off."
+  },
+  {
+   "year": 2011,
+   "title": "The Materials Genome Initiative",
+   "text": "The United States launches a programme to speed up materials discovery.",
+   "why": "Computation, data and experiment combined."
+  },
+  {
+   "year": 2025,
+   "title": "Nobel Prize for MOFs",
+   "text": "Awarded to Susumu Kitagawa, Richard Robson and Omar Yaghi.",
+   "why": "Recognized metal–organic frameworks."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "mr-001",
+   "q": "Doping a semiconductor means…",
+   "options": [
+    "Adding small amounts of other elements to control its conductivity",
+    "Coating it with a thin layer of metal",
+    "Heating it until it becomes amorphous",
+    "Polishing it to remove surface defects"
+   ],
+   "answer": 0,
+   "explain": "Phosphorus adds electrons to silicon; boron adds holes."
+  },
+  {
+   "id": "mr-002",
+   "q": "Metal–organic frameworks are…",
+   "options": [
+    "Crystalline networks of metal nodes linked by organic molecules",
+    "Alloys of two or more metals",
+    "Glasses made from metal oxides",
+    "Polymers with metal atoms in the backbone"
+   ],
+   "answer": 0,
+   "explain": "Like molecular scaffolding with huge empty space inside."
+  },
+  {
+   "id": "mr-003",
+   "q": "Why does the huge internal surface of MOFs matter?",
+   "options": [
+    "It gives room to store or capture gases",
+    "It makes them heavier",
+    "It changes their colour",
+    "It makes them conductive"
+   ],
+   "answer": 0,
+   "explain": "A gram can have the surface area of a football field."
+  },
+  {
+   "id": "mr-004",
+   "q": "Zeolites are…",
+   "options": [
+    "Porous aluminosilicates used as catalysts and molecular sieves",
+    "Pure metals with very regular crystals",
+    "Organic polymers with tiny pores",
+    "Liquids that absorb gases"
+   ],
+   "answer": 0,
+   "explain": "They crack crude oil and soften water."
+  },
+  {
+   "id": "mr-005",
+   "q": "A band gap is…",
+   "options": [
+    "The energy gap electrons must cross to conduct",
+    "A crack running through a crystal",
+    "A space between two separate crystals",
+    "A gap in a polymer chain"
+   ],
+   "answer": 0,
+   "explain": "Metals have none; insulators have a large one."
+  },
+  {
+   "id": "mr-006",
+   "q": "Glass is…",
+   "options": [
+    "An amorphous solid without long-range order",
+    "A crystal with a very regular structure",
+    "A very slow liquid that flows over centuries",
+    "A metal that has been cooled very quickly"
+   ],
+   "answer": 0,
+   "explain": "The old idea that window glass flows over centuries is a myth."
+  },
+  {
+   "id": "mr-007",
+   "q": "A superconductor has…",
+   "options": [
+    "Zero electrical resistance below a critical temperature",
+    "Very high resistance at low temperatures",
+    "No electrons at all below a critical point",
+    "Magnetism only, with normal resistance"
+   ],
+   "answer": 0,
+   "explain": "It also expels magnetic fields."
+  },
+  {
+   "id": "mr-008",
+   "q": "Carbon-fibre composites are valued because they are…",
+   "options": [
+    "Very strong and very light",
+    "Heavy",
+    "Only conductive",
+    "Cheap and soft"
+   ],
+   "answer": 0,
+   "explain": "Used in aircraft, bikes and sports gear."
+  },
+  {
+   "id": "mr-009",
+   "q": "How is chemically strengthened phone glass made?",
+   "options": [
+    "Small sodium ions are swapped for larger potassium ions, compressing the surface",
+    "By heating it and cooling it very slowly",
+    "By adding a thin plastic coat on top",
+    "By freezing it to make the surface harder"
+   ],
+   "answer": 0,
+   "explain": "The compressed surface resists cracks."
+  },
+  {
+   "id": "mr-010",
+   "q": "When was the transistor invented?",
+   "options": [
+    "1947, at Bell Labs",
+    "1900",
+    "1970",
+    "1990"
+   ],
+   "answer": 0,
+   "explain": "Nobel Prize in Physics in 1956."
+  },
+  {
+   "id": "mr-011",
+   "q": "The 2025 Nobel Prize in Chemistry rewarded…",
+   "options": [
+    "Metal–organic frameworks",
+    "Lithium-ion batteries",
+    "Quantum dots",
+    "Graphene"
+   ],
+   "answer": 0,
+   "explain": "To Kitagawa, Robson and Yaghi."
+  },
+  {
+   "id": "mr-012",
+   "q": "An alloy is…",
+   "options": [
+    "A metal mixed with other elements",
+    "A pure metal with very large crystals",
+    "A ceramic made of metal oxides",
+    "A polymer filled with metal powder"
+   ],
+   "answer": 0,
+   "explain": "Steel is iron with carbon; bronze is copper with tin."
+  }
+ ],
+ "related": [
+  "Inorganic Chemistry",
+  "Nanochemistry",
+  "Energy Chemistry",
+  "Polymers Chemistry",
+  "Computational Chemistry"
+ ]
+}

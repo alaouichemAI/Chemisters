@@ -1,0 +1,305 @@
+{
+ "slug": "structural-chemistry",
+ "channel": "Structural Chemistry",
+ "number": 5,
+ "symbol": "St",
+ "category": "Core chemistry",
+ "name": "Structural Chemistry",
+ "tagline": "Crystal structures, bonding analysis, and molecular geometry.",
+ "seo_title": "Structural Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Structural Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in crystallography, cryo-EM, stereochemistry and molecular structure.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#7dcbf2",
+  "accent2": "#898cf0",
+  "tile": "#15213d",
+  "motif": "lattice"
+ },
+ "definition": {
+  "lead": "Structural chemistry determines how atoms are arranged in space, in molecules and in crystals, and links that arrangement to properties.",
+  "body": "Shape decides almost everything: how a drug fits its target, why diamond is hard and graphite slippery, how DNA stores information. X-ray crystallography, NMR and electron microscopy are its eyes.",
+  "facts": [
+   {
+    "value": "1912",
+    "label": "Max von Laue shows that crystals diffract X-rays"
+   },
+   {
+    "value": "1953",
+    "label": "the DNA double helix is built from X-ray diffraction data"
+   },
+   {
+    "value": "200,000+",
+    "label": "structures stored in the Protein Data Bank"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "X-ray crystallography",
+   "summary": "Diffraction patterns reveal where every atom sits in a crystal.",
+   "example": "Dorothy Hodgkin solved penicillin, vitamin B12 and insulin.",
+   "channel": ""
+  },
+  {
+   "name": "NMR structure determination",
+   "summary": "Structures of molecules in solution from nuclear spins.",
+   "example": "Proteins studied in conditions close to the cell.",
+   "channel": "Analytical Chemistry"
+  },
+  {
+   "name": "Cryo-electron microscopy",
+   "summary": "Imaging flash-frozen molecules with electrons.",
+   "example": "Large protein machines that refuse to crystallize.",
+   "channel": ""
+  },
+  {
+   "name": "Stereochemistry",
+   "summary": "The 3D arrangement of atoms and mirror-image molecules.",
+   "example": "One enantiomer of a drug can work while the other does not.",
+   "channel": "Organic Chemistry"
+  },
+  {
+   "name": "Crystal engineering",
+   "summary": "Designing solids from molecular building blocks.",
+   "example": "Co-crystals that make drugs dissolve better.",
+   "channel": "Supramolecular Chemistry"
+  },
+  {
+   "name": "Conformational analysis",
+   "summary": "The shapes molecules take by rotating around single bonds.",
+   "example": "Cyclohexane's chair shape.",
+   "channel": "Chemical Structure & Reactivity"
+  },
+  {
+   "name": "Coordination geometry",
+   "summary": "How ligands arrange themselves around a metal ion.",
+   "example": "Octahedral, tetrahedral and square-planar complexes.",
+   "channel": "Inorganic Chemistry"
+  },
+  {
+   "name": "Structural biology",
+   "summary": "The shapes of proteins and nucleic acids, and how shape gives function.",
+   "example": "AI now predicts protein structures from their sequence.",
+   "channel": "Biological Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1848,
+   "title": "Mirror-image crystals",
+   "text": "Louis Pasteur separates left- and right-handed crystals of a tartrate salt by hand.",
+   "why": "The discovery of molecular chirality."
+  },
+  {
+   "year": 1874,
+   "title": "Carbon is a tetrahedron",
+   "text": "Van 't Hoff and Le Bel independently propose that carbon's bonds point to the corners of a tetrahedron.",
+   "why": "The start of 3D thinking in chemistry."
+  },
+  {
+   "year": 1893,
+   "title": "Coordination theory",
+   "text": "Alfred Werner explains how ligands surround a central metal ion.",
+   "why": "Founded coordination chemistry; Nobel Prize in 1913."
+  },
+  {
+   "year": 1912,
+   "title": "Crystals diffract X-rays",
+   "text": "Max von Laue shows that a crystal acts as a diffraction grating for X-rays.",
+   "why": "Atoms could now be located experimentally."
+  },
+  {
+   "year": 1913,
+   "title": "Bragg's law",
+   "text": "William Henry and William Lawrence Bragg solve the first crystal structures, including table salt.",
+   "why": "The birth of X-ray crystallography."
+  },
+  {
+   "year": 1953,
+   "title": "The double helix",
+   "text": "Watson and Crick propose the structure of DNA, using X-ray data from Rosalind Franklin and Maurice Wilkins.",
+   "why": "Showed how genetic information is stored and copied."
+  },
+  {
+   "year": 1958,
+   "title": "The first protein structure",
+   "text": "John Kendrew solves the 3D structure of myoglobin.",
+   "why": "Proteins became objects with a visible shape."
+  },
+  {
+   "year": 1971,
+   "title": "The Protein Data Bank",
+   "text": "A public archive for 3D structures of biological molecules is created.",
+   "why": "Now one of the most used databases in science."
+  },
+  {
+   "year": 2017,
+   "title": "Cryo-EM",
+   "text": "Nobel Prize to Dubochet, Frank and Henderson for cryo-electron microscopy.",
+   "why": "Structures of molecules that cannot be crystallized."
+  },
+  {
+   "year": 2024,
+   "title": "AI predicts protein structures",
+   "text": "Nobel Prize to David Baker, Demis Hassabis and John Jumper for protein design and structure prediction.",
+   "why": "Structures that took years can now be predicted in minutes."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "st-001",
+   "q": "Bragg's law, nλ = 2d sin θ, links the X-ray wavelength to…",
+   "options": [
+    "The spacing between crystal planes",
+    "The mass of the atoms",
+    "The crystal's colour",
+    "The temperature"
+   ],
+   "answer": 0,
+   "explain": "Measuring the diffraction angles gives the distances d between layers of atoms."
+  },
+  {
+   "id": "st-002",
+   "q": "Why are X-rays used to determine crystal structures?",
+   "options": [
+    "Their wavelength is similar to the distances between atoms",
+    "They are visible, so the crystal can be photographed",
+    "They are cheap to produce in any laboratory",
+    "They melt crystals into a readable pattern"
+   ],
+   "answer": 0,
+   "explain": "Diffraction needs a wavelength comparable to the spacing, about 1 ångström."
+  },
+  {
+   "id": "st-003",
+   "q": "What did Pasteur separate in 1848?",
+   "options": [
+    "Mirror-image crystals of a tartrate salt",
+    "Isotopes of uranium by their mass",
+    "The two strands of DNA",
+    "The gases that make up air"
+   ],
+   "answer": 0,
+   "explain": "Their solutions rotated polarized light in opposite directions, revealing molecular handedness."
+  },
+  {
+   "id": "st-004",
+   "q": "A chiral molecule is one that…",
+   "options": [
+    "Cannot be superimposed on its mirror image",
+    "Is always coloured",
+    "Always contains a metal",
+    "Is perfectly symmetric"
+   ],
+   "answer": 0,
+   "explain": "Like left and right hands."
+  },
+  {
+   "id": "st-005",
+   "q": "What is the most stable conformation of cyclohexane?",
+   "options": [
+    "Chair",
+    "Boat",
+    "Flat",
+    "Twist-boat"
+   ],
+   "answer": 0,
+   "explain": "In the chair every C–C bond is staggered and angles stay near the tetrahedral value."
+  },
+  {
+   "id": "st-006",
+   "q": "What is the shape of SF₆?",
+   "options": [
+    "Octahedral",
+    "Tetrahedral",
+    "Linear",
+    "Trigonal planar"
+   ],
+   "answer": 0,
+   "explain": "Six fluorines point to the corners of an octahedron around sulfur."
+  },
+  {
+   "id": "st-007",
+   "q": "VSEPR theory predicts that a water molecule is…",
+   "options": [
+    "Bent",
+    "Linear",
+    "Tetrahedral",
+    "Trigonal planar"
+   ],
+   "answer": 0,
+   "explain": "Two lone pairs push the two O–H bonds together, to about 104.5°."
+  },
+  {
+   "id": "st-008",
+   "q": "In cryo-electron microscopy, molecules are imaged…",
+   "options": [
+    "Frozen in a thin layer of glass-like ice",
+    "Dissolved in boiling water",
+    "Only as large crystals",
+    "In the gas phase"
+   ],
+   "answer": 0,
+   "explain": "Vitreous ice preserves the molecules in a near-native state."
+  },
+  {
+   "id": "st-009",
+   "q": "Who solved the structures of penicillin, vitamin B12 and insulin?",
+   "options": [
+    "Dorothy Crowfoot Hodgkin",
+    "Rosalind Franklin",
+    "Marie Curie",
+    "Linus Pauling"
+   ],
+   "answer": 0,
+   "explain": "She received the Nobel Prize in Chemistry in 1964."
+  },
+  {
+   "id": "st-010",
+   "q": "What is the 'phase problem' in crystallography?",
+   "options": [
+    "Diffraction records intensities but loses the phases of the waves",
+    "Crystals melt when heated",
+    "Samples separate into layers",
+    "The phases of the moon disturb the data"
+   ],
+   "answer": 0,
+   "explain": "Both amplitude and phase are needed to rebuild the electron density."
+  },
+  {
+   "id": "st-011",
+   "q": "The 2024 Nobel Prize in Chemistry rewarded…",
+   "options": [
+    "Protein structure prediction and protein design",
+    "Lithium-ion batteries for portable electronics",
+    "Click chemistry and bioorthogonal reactions",
+    "Discovery and synthesis of quantum dots"
+   ],
+   "answer": 0,
+   "explain": "Batteries were 2019, click chemistry 2022 and quantum dots 2023."
+  },
+  {
+   "id": "st-012",
+   "q": "Alfred Werner's coordination theory explained…",
+   "options": [
+    "How ligands surround a central metal ion",
+    "How stars form elements by fusion",
+    "How polymers grow from monomers",
+    "How radioactive elements decay"
+   ],
+   "answer": 0,
+   "explain": "It accounted for the formulas and isomers of metal complexes."
+  }
+ ],
+ "related": [
+  "Analytical Chemistry",
+  "Biological Chemistry",
+  "Supramolecular Chemistry",
+  "Chemistry of Materials",
+  "Drug Discovery"
+ ]
+}

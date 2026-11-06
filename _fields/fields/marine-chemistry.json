@@ -1,0 +1,299 @@
+{
+ "slug": "marine-chemistry",
+ "channel": "Marine Chemistry",
+ "number": 32,
+ "symbol": "Ma",
+ "category": "Life & health",
+ "name": "Marine Chemistry",
+ "tagline": "Ocean chemistry, marine natural products, and aquatic geochemistry.",
+ "seo_title": "Marine Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Marine Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in seawater chemistry, ocean acidification, marine pollution and marine natural products.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#f27ddf",
+  "accent2": "#f0899e",
+  "tile": "#2b1420",
+  "motif": "wave"
+ },
+ "definition": {
+  "lead": "Marine chemistry studies the composition of seawater and the chemical processes of the oceans, from dissolved salts and gases to the molecules made by marine life.",
+  "body": "The ocean absorbs a large share of the CO₂ we emit, which is making it more acidic. Its organisms also produce unusual molecules, some of which have become medicines.",
+  "facts": [
+   {
+    "value": "About 35 g",
+    "label": "of dissolved salts in every kilogram of seawater"
+   },
+   {
+    "value": "About a quarter",
+    "label": "of human CO₂ emissions are absorbed by the ocean"
+   },
+   {
+    "value": "0.1",
+    "label": "pH units the ocean surface has dropped since pre-industrial times"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Seawater chemistry",
+   "summary": "Salts, nutrients and trace metals.",
+   "example": "The major ions keep nearly constant ratios.",
+   "channel": ""
+  },
+  {
+   "name": "Ocean carbon cycle",
+   "summary": "How CO₂ moves between air, water and sediments.",
+   "example": "The carbonate buffer system.",
+   "channel": "Environmental Chemistry"
+  },
+  {
+   "name": "Ocean acidification",
+   "summary": "Falling pH as the ocean takes up CO₂.",
+   "example": "Harder conditions for shell-building organisms.",
+   "channel": ""
+  },
+  {
+   "name": "Marine natural products",
+   "summary": "Molecules made by sponges, snails, algae and microbes.",
+   "example": "Painkillers from cone snail venom.",
+   "channel": "Bioorganic Chemistry"
+  },
+  {
+   "name": "Chemical oceanography",
+   "summary": "Using chemistry to trace ocean circulation.",
+   "example": "Radiocarbon dating of deep water.",
+   "channel": ""
+  },
+  {
+   "name": "Marine pollution",
+   "summary": "Oil, plastics, metals and nutrients in the sea.",
+   "example": "Microplastics in seawater and sediments.",
+   "channel": ""
+  },
+  {
+   "name": "Sediments & geochemistry",
+   "summary": "What the sea floor records about the past.",
+   "example": "Past climates read from sediment cores.",
+   "channel": ""
+  },
+  {
+   "name": "Hydrothermal vents",
+   "summary": "Hot, mineral-rich fluids on the sea floor.",
+   "example": "Ecosystems powered by chemistry instead of sunlight.",
+   "channel": ""
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1872,
+   "title": "HMS Challenger",
+   "text": "The first global oceanographic expedition sets sail (1872–1876).",
+   "why": "Founded modern oceanography."
+  },
+  {
+   "year": 1884,
+   "title": "Constant proportions",
+   "text": "William Dittmar analyses Challenger samples and finds the major ions in near-constant ratios.",
+   "why": "Salinity could be measured from a single ion."
+  },
+  {
+   "year": 1951,
+   "title": "Medicines from sponges",
+   "text": "Werner Bergmann reports unusual nucleosides from a Caribbean sponge.",
+   "why": "Inspired the cancer drug cytarabine and antivirals."
+  },
+  {
+   "year": 1957,
+   "title": "The ocean's limits",
+   "text": "Roger Revelle and Hans Suess show the ocean will not absorb all fossil CO₂ quickly.",
+   "why": "An early warning about rising atmospheric CO₂."
+  },
+  {
+   "year": 1977,
+   "title": "Hydrothermal vents",
+   "text": "Scientists discover vents and their ecosystems near the Galápagos.",
+   "why": "Life can run on chemical energy."
+  },
+  {
+   "year": 1997,
+   "title": "The garbage patch",
+   "text": "Charles Moore draws attention to plastic accumulating in the North Pacific.",
+   "why": "Ocean plastics became a global concern."
+  },
+  {
+   "year": 2003,
+   "title": "Ocean acidification",
+   "text": "Ken Caldeira and Michael Wickett coin the term 'ocean acidification'.",
+   "why": "Named a second major CO₂ problem."
+  },
+  {
+   "year": 2004,
+   "title": "A drug from a cone snail",
+   "text": "Ziconotide, based on cone snail venom, is approved for severe pain.",
+   "why": "A marine molecule becomes a medicine."
+  },
+  {
+   "year": 2007,
+   "title": "A drug from a sea squirt",
+   "text": "Trabectedin, first isolated from a sea squirt, is approved in Europe for soft-tissue sarcoma.",
+   "why": "Marine natural products reach cancer treatment."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "ma-001",
+   "q": "What is the average salinity of seawater?",
+   "options": [
+    "About 35 g per kilogram",
+    "About 3.5 g per kilogram",
+    "About 350 g per kilogram",
+    "About 0.35 g per kilogram"
+   ],
+   "answer": 0,
+   "explain": "Often written as 35 parts per thousand."
+  },
+  {
+   "id": "ma-002",
+   "q": "Which is the most abundant ion in seawater?",
+   "options": [
+    "Chloride",
+    "Sodium",
+    "Magnesium",
+    "Sulfate"
+   ],
+   "answer": 0,
+   "explain": "About 19 g/kg of chloride against about 11 g/kg of sodium."
+  },
+  {
+   "id": "ma-003",
+   "q": "Ocean acidification is caused by…",
+   "options": [
+    "CO₂ dissolving and forming carbonic acid",
+    "Mostly acid rain falling on the ocean",
+    "Underwater volcanoes releasing acid",
+    "Plastics breaking down in seawater"
+   ],
+   "answer": 0,
+   "explain": "CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻."
+  },
+  {
+   "id": "ma-004",
+   "q": "Why does acidification harm shell-building organisms?",
+   "options": [
+    "It lowers the carbonate available to build calcium carbonate shells",
+    "It heats the water above what shells can survive",
+    "It adds salt that dissolves the shells",
+    "It removes all oxygen from the water"
+   ],
+   "answer": 0,
+   "explain": "Extra H⁺ ions combine with carbonate ions."
+  },
+  {
+   "id": "ma-005",
+   "q": "Hydrothermal vent communities rely on…",
+   "options": [
+    "Chemosynthesis, using energy from chemicals such as hydrogen sulfide",
+    "Sunlight filtering down to the deep sea",
+    "Only plankton falling from the surface",
+    "Volcanic heat alone, with no chemistry involved"
+   ],
+   "answer": 0,
+   "explain": "Microbes oxidize sulfide and feed the whole ecosystem."
+  },
+  {
+   "id": "ma-006",
+   "q": "The cancer drug cytarabine was inspired by nucleosides found in…",
+   "options": [
+    "A Caribbean sponge",
+    "Seaweed",
+    "A whale",
+    "Coral"
+   ],
+   "answer": 0,
+   "explain": "Bergmann's discoveries in the early 1950s."
+  },
+  {
+   "id": "ma-007",
+   "q": "The painkiller ziconotide comes from…",
+   "options": [
+    "Cone snail venom",
+    "Jellyfish",
+    "Shark cartilage",
+    "Algae"
+   ],
+   "answer": 0,
+   "explain": "A peptide that blocks calcium channels in nerves."
+  },
+  {
+   "id": "ma-008",
+   "q": "Dittmar's principle of constant proportions means that…",
+   "options": [
+    "The ratios of the major ions are nearly the same everywhere",
+    "Salinity is the same everywhere",
+    "Seawater never changes",
+    "All seas have the same temperature"
+   ],
+   "answer": 0,
+   "explain": "Total salinity varies; the ratios barely do."
+  },
+  {
+   "id": "ma-009",
+   "q": "Microplastics are…",
+   "options": [
+    "Plastic particles smaller than 5 mm",
+    "Large floating debris",
+    "Plankton",
+    "Salt crystals"
+   ],
+   "answer": 0,
+   "explain": "They come from broken-down plastic, fibres and abrasion."
+  },
+  {
+   "id": "ma-010",
+   "q": "By about how much has ocean surface pH dropped since pre-industrial times?",
+   "options": [
+    "About 0.1 units",
+    "About 1 unit",
+    "About 3 units",
+    "About 0.001 units"
+   ],
+   "answer": 0,
+   "explain": "Because pH is logarithmic, 0.1 units is about a 26–30% rise in H⁺."
+  },
+  {
+   "id": "ma-011",
+   "q": "What was HMS Challenger (1872–1876)?",
+   "options": [
+    "The first global oceanographic expedition",
+    "A submarine used to explore the deep sea",
+    "A warship that sank in the Atlantic",
+    "An oil tanker that caused a major spill"
+   ],
+   "answer": 0,
+   "explain": "It sampled seawater, sediments and life across the oceans."
+  },
+  {
+   "id": "ma-012",
+   "q": "Why does the ocean absorb CO₂?",
+   "options": [
+    "CO₂ dissolves and reacts with water and carbonate",
+    "The ocean breathes it in like a living organism",
+    "Only because algae absorb it at the surface",
+    "Salt in the water attracts carbon atoms"
+   ],
+   "answer": 0,
+   "explain": "Chemistry and biology both move carbon into the sea."
+  }
+ ],
+ "related": [
+  "Environmental Chemistry",
+  "Bioorganic Chemistry",
+  "Analytical Chemistry",
+  "Biological Chemistry",
+  "Green Chemistry"
+ ]
+}

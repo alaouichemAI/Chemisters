@@ -1,0 +1,299 @@
+{
+ "slug": "analytical-chemistry",
+ "channel": "Analytical Chemistry",
+ "number": 3,
+ "symbol": "An",
+ "category": "Core chemistry",
+ "name": "Analytical Chemistry",
+ "tagline": "Precision instrumentation and advanced methods for molecular characterization.",
+ "seo_title": "Analytical Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Analytical Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in chromatography, mass spectrometry, spectroscopy and sensors.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#7dacf2",
+  "accent2": "#a189f0",
+  "tile": "#15213d",
+  "motif": "wave"
+ },
+ "definition": {
+  "lead": "Analytical chemistry answers two questions about any sample: what is in it, and how much.",
+  "body": "It provides the methods every other field depends on, from the glucose meter and the doping test to the spectrum that confirms a new drug's structure. A good method is judged by three words: accurate, precise and sensitive.",
+  "facts": [
+   {
+    "value": "2",
+    "label": "core questions: what is in a sample, and how much of it"
+   },
+   {
+    "value": "1906",
+    "label": "Mikhail Tsvet coins 'chromatography' after separating plant pigments"
+   },
+   {
+    "value": "1952",
+    "label": "gas chromatography is introduced by James and Martin"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Chromatography",
+   "summary": "Separating mixtures by how strongly each component sticks to a stationary phase.",
+   "example": "HPLC checks the purity of almost every medicine.",
+   "channel": ""
+  },
+  {
+   "name": "Mass spectrometry",
+   "summary": "Weighing molecules as ions to identify them.",
+   "example": "Doping tests and protein analysis rely on it.",
+   "channel": ""
+  },
+  {
+   "name": "UV–visible & IR spectroscopy",
+   "summary": "Identifying and measuring substances through the light they absorb.",
+   "example": "The Beer–Lambert law turns absorbance into concentration.",
+   "channel": ""
+  },
+  {
+   "name": "NMR spectroscopy",
+   "summary": "Nuclear spins in a magnetic field reveal how atoms are connected.",
+   "example": "The standard way to confirm a newly made molecule.",
+   "channel": "Structural Chemistry"
+  },
+  {
+   "name": "Electroanalysis",
+   "summary": "Measuring with electrodes: pH, ions, glucose.",
+   "example": "Blood glucose meters are electrochemical sensors.",
+   "channel": "Electrochemistry"
+  },
+  {
+   "name": "Classical analysis",
+   "summary": "Titration and weighing: measuring by reacting with a known amount.",
+   "example": "Acid–base titrations are still used in quality labs.",
+   "channel": ""
+  },
+  {
+   "name": "Quality control",
+   "summary": "Proving that products meet their specifications.",
+   "example": "Every medicine batch is tested before release.",
+   "channel": "Quality Control"
+  },
+  {
+   "name": "Forensic & environmental analysis",
+   "summary": "Finding traces in evidence and in the environment.",
+   "example": "Detecting pesticide residues in drinking water.",
+   "channel": "Forensic Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1852,
+   "title": "Beer's law",
+   "text": "August Beer relates how much light a solution absorbs to its concentration.",
+   "why": "The basis of every spectrophotometric measurement."
+  },
+  {
+   "year": 1860,
+   "title": "Spectroscopy finds new elements",
+   "text": "Robert Bunsen and Gustav Kirchhoff discover caesium from its spectral lines.",
+   "why": "Showed that light can identify elements."
+  },
+  {
+   "year": 1906,
+   "title": "Chromatography is named",
+   "text": "Mikhail Tsvet separates plant pigments into coloured bands and calls it chromatography.",
+   "why": "The ancestor of every separation method used today."
+  },
+  {
+   "year": 1909,
+   "title": "The pH scale",
+   "text": "Søren Sørensen introduces pH while studying proteins at the Carlsberg Laboratory in Copenhagen.",
+   "why": "A single number for acidity, used everywhere."
+  },
+  {
+   "year": 1913,
+   "title": "Early mass spectrometry",
+   "text": "J. J. Thomson separates two isotopes of neon by their mass.",
+   "why": "The first step toward weighing molecules."
+  },
+  {
+   "year": 1922,
+   "title": "Polarography",
+   "text": "Jaroslav Heyrovský invents polarography with a dropping mercury electrode.",
+   "why": "Launched modern electroanalysis; Nobel Prize in 1959."
+  },
+  {
+   "year": 1946,
+   "title": "NMR is observed",
+   "text": "Felix Bloch and Edward Purcell independently detect nuclear magnetic resonance in matter.",
+   "why": "Became chemistry's most powerful structure tool; Nobel Prize in 1952."
+  },
+  {
+   "year": 1952,
+   "title": "Gas chromatography",
+   "text": "Anthony James and Archer Martin introduce gas–liquid chromatography.",
+   "why": "Made the analysis of volatile mixtures fast and routine."
+  },
+  {
+   "year": 2002,
+   "title": "Big molecules fly",
+   "text": "Nobel Prize to John Fenn and Koichi Tanaka for soft ionization of biomolecules, shared with Kurt Wüthrich for protein NMR.",
+   "why": "Proteins can now be weighed intact by mass spectrometry."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "an-001",
+   "q": "A method gives 10.1, 10.2 and 10.1 for a true value of 12.0. It is…",
+   "options": [
+    "Precise but not accurate",
+    "Accurate but not precise",
+    "Both precise and accurate",
+    "Neither"
+   ],
+   "answer": 0,
+   "explain": "The results agree closely with each other (precise) but sit far from the true value (not accurate)."
+  },
+  {
+   "id": "an-002",
+   "q": "The Beer–Lambert law relates absorbance to…",
+   "options": [
+    "Concentration and path length",
+    "Temperature and pressure",
+    "Mass and charge",
+    "pH and volume"
+   ],
+   "answer": 0,
+   "explain": "A = εlc: absorbance grows with concentration and the distance light travels through the sample."
+  },
+  {
+   "id": "an-003",
+   "q": "In a mass spectrometer, ions are separated by their…",
+   "options": [
+    "Mass-to-charge ratio (m/z)",
+    "Colour",
+    "Boiling point",
+    "Solubility"
+   ],
+   "answer": 0,
+   "explain": "Electric and magnetic fields steer ions according to m/z."
+  },
+  {
+   "id": "an-004",
+   "q": "Who coined the word 'chromatography'?",
+   "options": [
+    "Mikhail Tsvet",
+    "Archer Martin",
+    "Robert Bunsen",
+    "Fritz Pregl"
+   ],
+   "answer": 0,
+   "explain": "In 1906 Tsvet separated plant pigments into coloured bands. 'Chroma' means colour."
+  },
+  {
+   "id": "an-005",
+   "q": "How many times more H⁺ is in a solution at pH 3 than at pH 5?",
+   "options": [
+    "100 times",
+    "2 times",
+    "20 times",
+    "1,000 times"
+   ],
+   "answer": 0,
+   "explain": "pH is logarithmic: each unit is a factor of 10, so two units is 10 × 10."
+  },
+  {
+   "id": "an-006",
+   "q": "In reversed-phase HPLC, which compound usually comes out first?",
+   "options": [
+    "The most polar one",
+    "The least polar one",
+    "The heaviest one",
+    "The coloured one"
+   ],
+   "answer": 0,
+   "explain": "The stationary phase is non-polar (C18), so polar compounds interact least and elute first."
+  },
+  {
+   "id": "an-007",
+   "q": "Which technique best shows which atoms are bonded to which in an organic molecule?",
+   "options": [
+    "NMR spectroscopy",
+    "pH measurement",
+    "Gravimetry",
+    "A flame test"
+   ],
+   "answer": 0,
+   "explain": "NMR reveals each atom's environment and its neighbours through couplings."
+  },
+  {
+   "id": "an-008",
+   "q": "In a flame test, sodium colours the flame…",
+   "options": [
+    "Yellow-orange",
+    "Green",
+    "Violet",
+    "Blue"
+   ],
+   "answer": 0,
+   "explain": "Excited sodium atoms emit strongly at about 589 nm, the yellow of old street lamps."
+  },
+  {
+   "id": "an-009",
+   "q": "Why add an internal standard to a sample?",
+   "options": [
+    "To correct for losses and instrument variation",
+    "To give the sample a colour the detector can see",
+    "To raise the sample's mass above the detection limit",
+    "To sterilize the sample before it enters the instrument"
+   ],
+   "answer": 0,
+   "explain": "Measuring the analyte relative to a known added compound cancels many sources of error."
+  },
+  {
+   "id": "an-010",
+   "q": "The limit of detection is…",
+   "options": [
+    "The smallest amount reliably distinguished from a blank",
+    "The largest measurable amount",
+    "The instrument's maximum temperature",
+    "The sample volume"
+   ],
+   "answer": 0,
+   "explain": "Below it, a signal cannot be told apart from noise."
+  },
+  {
+   "id": "an-011",
+   "q": "The 2002 Nobel Prize for soft ionization of biomolecules went to…",
+   "options": [
+    "John Fenn and Koichi Tanaka",
+    "Watson and Crick",
+    "Bloch and Purcell",
+    "Martin and Synge"
+   ],
+   "answer": 0,
+   "explain": "Their methods (electrospray and soft laser desorption) let intact proteins be weighed. Kurt Wüthrich shared the prize for protein NMR."
+  },
+  {
+   "id": "an-012",
+   "q": "Polarography, invented by Heyrovský, measures…",
+   "options": [
+    "Current while sweeping voltage at a mercury electrode",
+    "The colour of a flame",
+    "The mass of a precipitate",
+    "The rotation of polarized light"
+   ],
+   "answer": 0,
+   "explain": "Each reducible species gives a step in current at its own potential."
+  }
+ ],
+ "related": [
+  "Quality Control",
+  "Forensic Chemistry",
+  "Structural Chemistry",
+  "Environmental Chemistry",
+  "Medicinal Chemistry"
+ ]
+}

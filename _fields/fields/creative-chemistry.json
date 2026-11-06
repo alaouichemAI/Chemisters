@@ -1,0 +1,301 @@
+{
+ "slug": "creative-chemistry",
+ "channel": "Creative Chemistry",
+ "number": 51,
+ "symbol": "Cv",
+ "category": "Community",
+ "name": "Creative Chemistry",
+ "tagline": "Chemistry meets art, design, and unconventional thinking.",
+ "seo_title": "Creative Chemistry — chemistry meets art and design | Chemisters",
+ "seo_description": "Follow Chemisters Creative Chemistry on LinkedIn and Facebook: where chemistry meets art, design and creative thinking.",
+ "posts_about": [
+  "Chemistry & art",
+  "Design",
+  "New ideas"
+ ],
+ "theme": {
+  "accent": "#f2ee7d",
+  "accent2": "#b2f089",
+  "tile": "#2a2311",
+  "motif": "drops"
+ },
+ "definition": {
+  "lead": "Creative Chemistry explores where chemistry meets art, design and unconventional thinking: pigments, fireworks, perfume, photography, and the creativity behind discovery itself.",
+  "body": "Every colour on a painter's palette, every firework and every fragrance is applied chemistry. And designing a new molecule is itself a creative act, closer to architecture than to following a recipe.",
+  "facts": [
+   {
+    "value": "Prussian blue",
+    "label": "one of the first modern synthetic pigments, discovered in Berlin in the early 1700s"
+   },
+   {
+    "value": "1839",
+    "label": "Daguerre's photographic process is announced in Paris"
+   },
+   {
+    "value": "2009",
+    "label": "YInMn blue, a new pigment, is discovered by accident"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Pigments & colour",
+   "summary": "The chemistry behind every colour.",
+   "example": "Ultramarine, Prussian blue and YInMn blue.",
+   "channel": ""
+  },
+  {
+   "name": "Fireworks",
+   "summary": "Metal salts that colour flames.",
+   "example": "Strontium for red, barium for green, copper for blue.",
+   "channel": ""
+  },
+  {
+   "name": "Perfume & fragrance",
+   "summary": "Molecules that shape how things smell.",
+   "example": "Synthetic coumarin in early modern perfumery.",
+   "channel": ""
+  },
+  {
+   "name": "Photography",
+   "summary": "Light-sensitive chemistry.",
+   "example": "Silver halide film.",
+   "channel": ""
+  },
+  {
+   "name": "Art conservation",
+   "summary": "Analysing and protecting artworks.",
+   "example": "X-ray fluorescence reveals paintings hidden under paintings.",
+   "channel": "Analytical Chemistry"
+  },
+  {
+   "name": "Molecular gastronomy",
+   "summary": "Chemistry in the kitchen as a creative tool.",
+   "example": "Spherification with alginate and calcium.",
+   "channel": "Foods Chemistry"
+  },
+  {
+   "name": "Smart materials & design",
+   "summary": "Materials that change with heat, light or touch.",
+   "example": "Thermochromic and photochromic materials.",
+   "channel": "Chemistry of Materials"
+  },
+  {
+   "name": "Visual science",
+   "summary": "Making molecules and data beautiful and clear.",
+   "example": "Molecular art and scientific illustration.",
+   "channel": ""
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1826,
+   "title": "The first surviving photograph",
+   "text": "Nicéphore Niépce captures a view from his window on a coated plate.",
+   "why": "Chemistry learned to record light."
+  },
+  {
+   "year": 1839,
+   "title": "The daguerreotype",
+   "text": "Louis Daguerre's process is announced to the world.",
+   "why": "Photography became practical."
+  },
+  {
+   "year": 1856,
+   "title": "Mauve",
+   "text": "William Perkin's mauveine starts a craze for purple.",
+   "why": "Synthetic colour for everyone."
+  },
+  {
+   "year": 1882,
+   "title": "Synthetic scent",
+   "text": "Fougère Royale, one of the first perfumes built around a synthetic molecule (coumarin), is launched.",
+   "why": "Chemistry entered perfumery."
+  },
+  {
+   "year": 1921,
+   "title": "Aldehydes in perfume",
+   "text": "Chanel No. 5 makes bold use of synthetic aldehydes.",
+   "why": "Synthetic molecules became an artistic signature."
+  },
+  {
+   "year": 1988,
+   "title": "Molecular gastronomy",
+   "text": "Hervé This and Nicholas Kurti coin the term.",
+   "why": "Chemistry as a creative force in cooking."
+  },
+  {
+   "year": 2009,
+   "title": "YInMn blue",
+   "text": "Mas Subramanian's team at Oregon State discovers a new blue pigment while studying electronic materials.",
+   "why": "The first new inorganic blue in about two centuries."
+  },
+  {
+   "year": 2014,
+   "title": "Ultra-black",
+   "text": "Vantablack, made of carbon nanotubes, absorbs almost all visible light.",
+   "why": "A material that looks like a hole in space."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "cv-001",
+   "q": "Which element gives fireworks a red colour?",
+   "options": [
+    "Strontium",
+    "Sodium",
+    "Copper",
+    "Barium"
+   ],
+   "answer": 0,
+   "explain": "Sodium gives yellow, barium green, copper blue."
+  },
+  {
+   "id": "cv-002",
+   "q": "Green fireworks usually contain…",
+   "options": [
+    "Barium compounds",
+    "Strontium compounds",
+    "Sodium compounds",
+    "Iron compounds"
+   ],
+   "answer": 0,
+   "explain": "Barium emits green light when heated."
+  },
+  {
+   "id": "cv-003",
+   "q": "Blue fireworks usually contain…",
+   "options": [
+    "Copper compounds",
+    "Strontium compounds",
+    "Barium compounds",
+    "Lithium compounds"
+   ],
+   "answer": 0,
+   "explain": "Blue is the hardest firework colour to make bright."
+  },
+  {
+   "id": "cv-004",
+   "q": "Prussian blue is based on…",
+   "options": [
+    "Iron and cyanide groups (iron hexacyanoferrate)",
+    "Copper and carbonate groups",
+    "Cobalt and aluminium oxides",
+    "Crushed lapis lazuli"
+   ],
+   "answer": 0,
+   "explain": "Despite the cyanide groups, it is used as an antidote for some poisonings."
+  },
+  {
+   "id": "cv-005",
+   "q": "YInMn blue is named after…",
+   "options": [
+    "Yttrium, indium and manganese",
+    "A city in China",
+    "Its discoverer",
+    "A painter"
+   ],
+   "answer": 0,
+   "explain": "The elements in its crystal structure."
+  },
+  {
+   "id": "cv-006",
+   "q": "Traditional photographic film relies on…",
+   "options": [
+    "Light-sensitive silver halides",
+    "Iron oxides",
+    "Chlorophyll",
+    "Carbon nanotubes"
+   ],
+   "answer": 0,
+   "explain": "Light reduces silver ions to silver, forming the image."
+  },
+  {
+   "id": "cv-007",
+   "q": "Chanel No. 5 is famous for its use of…",
+   "options": [
+    "Synthetic aldehydes",
+    "Natural musk only",
+    "Vanilla only",
+    "Rose oil only"
+   ],
+   "answer": 0,
+   "explain": "They give a bright, sparkling top note."
+  },
+  {
+   "id": "cv-008",
+   "q": "Spherification in cooking uses…",
+   "options": [
+    "Sodium alginate and calcium ions to form a gel skin",
+    "Gelatin and heat to set the liquid",
+    "Liquid nitrogen to freeze the surface",
+    "Egg whites whipped into small spheres"
+   ],
+   "answer": 0,
+   "explain": "Calcium cross-links the alginate chains."
+  },
+  {
+   "id": "cv-009",
+   "q": "Who discovered mauveine?",
+   "options": [
+    "William Perkin",
+    "Louis Daguerre",
+    "Robert Boyle",
+    "Marie Curie"
+   ],
+   "answer": 0,
+   "explain": "At 18, in 1856."
+  },
+  {
+   "id": "cv-010",
+   "q": "Why is X-ray fluorescence useful in art conservation?",
+   "options": [
+    "It identifies elements in pigments without damaging the painting",
+    "It cleans dirt from the paint surface",
+    "It dates the canvas to the exact year",
+    "It changes faded colours back to the original"
+   ],
+   "answer": 0,
+   "explain": "It can even reveal hidden underpaintings."
+  },
+  {
+   "id": "cv-011",
+   "q": "What is Vantablack famous for?",
+   "options": [
+    "Absorbing almost all visible light",
+    "Glowing in the dark",
+    "Changing colour with heat",
+    "Being edible"
+   ],
+   "answer": 0,
+   "explain": "Light gets trapped between carbon nanotubes."
+  },
+  {
+   "id": "cv-012",
+   "q": "Natural ultramarine pigment was originally made from…",
+   "options": [
+    "Lapis lazuli",
+    "Indigo plants",
+    "Copper ore",
+    "Cobalt glass"
+   ],
+   "answer": 0,
+   "explain": "It was once more expensive than gold."
+  }
+ ],
+ "related": [
+  "Applied Chemistry",
+  "Foods Chemistry",
+  "Amazing Lab Experiments",
+  "Wisdom & Stories",
+  "Chemistry of Materials"
+ ],
+ "labels": {
+  "field_eyebrow": "What this page is",
+  "field": "Creative chemistry, in one minute",
+  "map_eyebrow": "Themes",
+  "map": "Where chemistry meets creativity",
+  "map_sub": "Art, colour, scent, flavour and design: each is chemistry at work.",
+  "hist": "A creative history"
+ }
+}

@@ -1,0 +1,305 @@
+{
+ "slug": "entropy-in-chemistry",
+ "channel": "Entropy in Chemistry",
+ "number": 8,
+ "symbol": "En",
+ "category": "Core chemistry",
+ "name": "Entropy in Chemistry",
+ "tagline": "Disorder, spontaneity, and the second law at the molecular scale.",
+ "seo_title": "Entropy in Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Entropy in Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in entropy, the second law, free energy and non-equilibrium chemistry.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#7d7df2",
+  "accent2": "#ca89f0",
+  "tile": "#15213d",
+  "motif": "dots"
+ },
+ "definition": {
+  "lead": "Entropy measures how many ways the energy and particles of a system can be arranged, and it decides the direction of every spontaneous change.",
+  "body": "Ice melts in a warm room, gases mix and perfume spreads because those outcomes can happen in vastly more ways than the alternatives. Combined with enthalpy in the Gibbs energy, entropy predicts which reactions run on their own and where equilibrium settles.",
+  "facts": [
+   {
+    "value": "S = k ln W",
+    "label": "Boltzmann's formula, engraved on his tombstone in Vienna"
+   },
+   {
+    "value": "1865",
+    "label": "Rudolf Clausius coins the word 'entropy'"
+   },
+   {
+    "value": "0 K",
+    "label": "where a perfect crystal reaches its lowest entropy (third law)"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "The second law",
+   "summary": "The entropy of the universe increases in every spontaneous process.",
+   "example": "Heat flows from hot to cold, never the reverse on its own.",
+   "channel": ""
+  },
+  {
+   "name": "Statistical entropy",
+   "summary": "Counting the microscopic arrangements behind a macroscopic state.",
+   "example": "S = k ln W.",
+   "channel": ""
+  },
+  {
+   "name": "Gibbs energy",
+   "summary": "Weighing enthalpy against entropy to predict direction.",
+   "example": "Why some endothermic reactions still run on their own.",
+   "channel": "Thermochemistry"
+  },
+  {
+   "name": "Mixing & solutions",
+   "summary": "Mixing increases the number of possible arrangements.",
+   "example": "Dissolving and osmosis are driven largely by entropy.",
+   "channel": "Solutions Chemistry"
+  },
+  {
+   "name": "Third law & absolute entropy",
+   "summary": "Entropy can be measured from absolute zero.",
+   "example": "Tables of standard molar entropies.",
+   "channel": ""
+  },
+  {
+   "name": "The hydrophobic effect",
+   "summary": "Water's entropy drives oil and water apart.",
+   "example": "Proteins fold with their oily parts inside.",
+   "channel": "Biological Chemistry"
+  },
+  {
+   "name": "Information entropy",
+   "summary": "Shannon's measure of information uses the same mathematics.",
+   "example": "Data compression and machine learning loss functions.",
+   "channel": ""
+  },
+  {
+   "name": "Far-from-equilibrium systems",
+   "summary": "Systems that create order while increasing total entropy.",
+   "example": "Prigogine's dissipative structures.",
+   "channel": "Chemical Systems"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1824,
+   "title": "Carnot's engine",
+   "text": "Sadi Carnot analyses the maximum efficiency of heat engines.",
+   "why": "The seed of the second law."
+  },
+  {
+   "year": 1850,
+   "title": "The second law",
+   "text": "Rudolf Clausius states that heat does not flow spontaneously from cold to hot.",
+   "why": "Gave a direction to natural processes."
+  },
+  {
+   "year": 1865,
+   "title": "Entropy is named",
+   "text": "Clausius introduces the word 'entropy', from the Greek for 'transformation'.",
+   "why": "A new quantity at the heart of thermodynamics."
+  },
+  {
+   "year": 1872,
+   "title": "The H-theorem",
+   "text": "Ludwig Boltzmann derives the approach to equilibrium from molecular collisions.",
+   "why": "Linked the second law to the motion of molecules."
+  },
+  {
+   "year": 1876,
+   "title": "Gibbs free energy",
+   "text": "Josiah Willard Gibbs begins publishing his theory of heterogeneous equilibrium.",
+   "why": "Made entropy usable for chemical reactions."
+  },
+  {
+   "year": 1877,
+   "title": "Counting microstates",
+   "text": "Boltzmann connects entropy to the number of molecular arrangements.",
+   "why": "The statistical meaning of entropy."
+  },
+  {
+   "year": 1906,
+   "title": "The third law",
+   "text": "Walther Nernst formulates his heat theorem.",
+   "why": "Allowed absolute entropies to be measured."
+  },
+  {
+   "year": 1931,
+   "title": "Onsager's relations",
+   "text": "Lars Onsager describes coupled flows near equilibrium.",
+   "why": "Founded irreversible thermodynamics; Nobel Prize in 1968."
+  },
+  {
+   "year": 1948,
+   "title": "Information entropy",
+   "text": "Claude Shannon defines the entropy of a message.",
+   "why": "The same mathematics now runs through computing and AI."
+  },
+  {
+   "year": 1977,
+   "title": "Order from disorder",
+   "text": "Nobel Prize to Ilya Prigogine for dissipative structures.",
+   "why": "Explained how patterns arise in systems far from equilibrium."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "en-001",
+   "q": "Which of these has the highest entropy?",
+   "options": [
+    "Water vapour",
+    "Liquid water",
+    "Ice at −10 °C",
+    "A perfect ice crystal at 0 K"
+   ],
+   "answer": 0,
+   "explain": "Gas molecules can be arranged in far more ways than molecules in a liquid or solid."
+  },
+  {
+   "id": "en-002",
+   "q": "When a gas expands into a vacuum, its entropy…",
+   "options": [
+    "Increases",
+    "Decreases",
+    "Stays at zero",
+    "Becomes negative"
+   ],
+   "answer": 0,
+   "explain": "More volume means more possible positions for each molecule."
+  },
+  {
+   "id": "en-003",
+   "q": "When can an endothermic process be spontaneous?",
+   "options": [
+    "When TΔS outweighs ΔH",
+    "Never",
+    "Only at absolute zero",
+    "Only with a catalyst"
+   ],
+   "answer": 0,
+   "explain": "Ice melting above 0 °C absorbs heat but gains enough entropy."
+  },
+  {
+   "id": "en-004",
+   "q": "In S = k ln W, W stands for…",
+   "options": [
+    "The number of microstates",
+    "Work",
+    "Watts",
+    "Weight"
+   ],
+   "answer": 0,
+   "explain": "Boltzmann's 'Wahrscheinlichkeit': the number of arrangements."
+  },
+  {
+   "id": "en-005",
+   "q": "Who coined the word 'entropy'?",
+   "options": [
+    "Rudolf Clausius",
+    "Ludwig Boltzmann",
+    "Sadi Carnot",
+    "Max Planck"
+   ],
+   "answer": 0,
+   "explain": "In 1865, deliberately close to 'energy'."
+  },
+  {
+   "id": "en-006",
+   "q": "According to the third law, a perfect crystal at 0 K has an entropy of…",
+   "options": [
+    "Zero",
+    "Infinity",
+    "A negative value",
+    "Its enthalpy"
+   ],
+   "answer": 0,
+   "explain": "Only one possible arrangement: ln 1 = 0."
+  },
+  {
+   "id": "en-007",
+   "q": "The hydrophobic effect is driven mostly by…",
+   "options": [
+    "The entropy of water molecules",
+    "Strong bonds between oil and water",
+    "Gravity",
+    "Magnetism"
+   ],
+   "answer": 0,
+   "explain": "Water around oily surfaces becomes ordered; grouping the oil together frees that water."
+  },
+  {
+   "id": "en-008",
+   "q": "A reaction with ΔH > 0 and ΔS < 0 is…",
+   "options": [
+    "Non-spontaneous at every temperature",
+    "Spontaneous at every temperature",
+    "Spontaneous only at high temperature",
+    "Spontaneous only at low temperature"
+   ],
+   "answer": 0,
+   "explain": "Both terms make ΔG positive."
+  },
+  {
+   "id": "en-009",
+   "q": "Can the entropy of a system decrease?",
+   "options": [
+    "Yes, if the entropy of the surroundings increases by more",
+    "Never, under any circumstances",
+    "Only in outer space, far from Earth",
+    "Only in liquids, never in solids"
+   ],
+   "answer": 0,
+   "explain": "A fridge or a living cell lowers its own entropy while increasing the universe's."
+  },
+  {
+   "id": "en-010",
+   "q": "At a melting point, ΔG = 0, so the melting temperature equals…",
+   "options": [
+    "ΔH/ΔS",
+    "ΔS/ΔH",
+    "ΔH × ΔS",
+    "ΔG/ΔS"
+   ],
+   "answer": 0,
+   "explain": "Setting ΔH − TΔS = 0 gives T = ΔH/ΔS."
+  },
+  {
+   "id": "en-011",
+   "q": "Two ideal gases mix with ΔH ≈ 0. Why do they mix?",
+   "options": [
+    "Entropy increases",
+    "Enthalpy decreases",
+    "They react",
+    "The pressure falls to zero"
+   ],
+   "answer": 0,
+   "explain": "Mixing alone multiplies the number of arrangements."
+  },
+  {
+   "id": "en-012",
+   "q": "Ilya Prigogine's 1977 Nobel Prize was for…",
+   "options": [
+    "Dissipative structures in non-equilibrium thermodynamics",
+    "Discovering entropy and naming it",
+    "Proving the third law of thermodynamics",
+    "Inventing the first efficient heat engine"
+   ],
+   "answer": 0,
+   "explain": "Ordered patterns can form when energy constantly flows through a system."
+  }
+ ],
+ "related": [
+  "Thermochemistry",
+  "Physical Chemistry",
+  "Chemical Systems",
+  "Solutions Chemistry",
+  "Molecular Systems"
+ ]
+}

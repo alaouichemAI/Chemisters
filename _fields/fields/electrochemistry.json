@@ -1,0 +1,305 @@
+{
+ "slug": "electrochemistry",
+ "channel": "Electrochemistry",
+ "number": 18,
+ "symbol": "Ec",
+ "category": "Synthesis & reactivity",
+ "name": "Electrochemistry",
+ "tagline": "Electron transfer, batteries, fuel cells, and electrodeposition.",
+ "seo_title": "Electrochemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Electrochemistry on LinkedIn and Facebook: paper summaries, news and innovations in batteries, fuel cells, electrolysis, corrosion and electrosynthesis.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#f2e67d",
+  "accent2": "#b9f089",
+  "tile": "#2e1c12",
+  "motif": "circuit"
+ },
+ "definition": {
+  "lead": "Electrochemistry studies reactions that move electrons through a circuit: reactions that make electricity, and electricity that drives reactions.",
+  "body": "Batteries, fuel cells, electrolysers, corrosion, sensors and electroplating all run on redox reactions at electrodes. It sits at the centre of the energy transition, from lithium-ion batteries to green hydrogen.",
+  "facts": [
+   {
+    "value": "1800",
+    "label": "Alessandro Volta builds the first battery, the voltaic pile"
+   },
+   {
+    "value": "96,485 C",
+    "label": "the Faraday constant: the charge of one mole of electrons"
+   },
+   {
+    "value": "2019",
+    "label": "Nobel Prize for the lithium-ion battery"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Batteries",
+   "summary": "Storing energy in chemical form.",
+   "example": "Lithium-ion cells in phones and cars.",
+   "channel": "Energy Chemistry"
+  },
+  {
+   "name": "Fuel cells",
+   "summary": "Turning fuel directly into electricity.",
+   "example": "Hydrogen fuel-cell vehicles.",
+   "channel": ""
+  },
+  {
+   "name": "Electrolysis",
+   "summary": "Using electricity to drive reactions.",
+   "example": "Aluminium smelting and green hydrogen.",
+   "channel": "Industrial Chemistry"
+  },
+  {
+   "name": "Corrosion",
+   "summary": "Unwanted electrochemistry that eats metals.",
+   "example": "Rusting, and galvanizing steel with zinc.",
+   "channel": ""
+  },
+  {
+   "name": "Sensors & electroanalysis",
+   "summary": "Measuring with electrodes.",
+   "example": "pH electrodes and glucose meters.",
+   "channel": "Analytical Chemistry"
+  },
+  {
+   "name": "Electrosynthesis",
+   "summary": "Using electrons as clean reagents to make molecules.",
+   "example": "Oxidations and reductions without chemical oxidants.",
+   "channel": "Synthetic Chemistry"
+  },
+  {
+   "name": "Electrocatalysis",
+   "summary": "Catalysts for electrode reactions.",
+   "example": "CO₂ reduction and water splitting.",
+   "channel": "Catalytic Chemistry"
+  },
+  {
+   "name": "Bioelectrochemistry",
+   "summary": "Electron transfer in living systems.",
+   "example": "Enzyme electrodes and nerve signals.",
+   "channel": "Biological Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1791,
+   "title": "Animal electricity",
+   "text": "Luigi Galvani reports frog legs twitching when touched with two metals.",
+   "why": "Started the debate that led to the battery."
+  },
+  {
+   "year": 1800,
+   "title": "The voltaic pile",
+   "text": "Alessandro Volta stacks zinc and copper discs separated by brine-soaked cloth.",
+   "why": "The first continuous source of electric current."
+  },
+  {
+   "year": 1807,
+   "title": "Sodium and potassium",
+   "text": "Humphry Davy isolates sodium and potassium by electrolysis.",
+   "why": "Electricity became a tool for discovering elements."
+  },
+  {
+   "year": 1834,
+   "title": "Faraday's laws",
+   "text": "Michael Faraday relates the amount of chemical change to the charge passed, and names the electrode, anode and cathode.",
+   "why": "The quantitative foundation of electrochemistry."
+  },
+  {
+   "year": 1839,
+   "title": "The first fuel cell",
+   "text": "William Grove combines hydrogen and oxygen to produce electricity.",
+   "why": "The ancestor of today's fuel cells."
+  },
+  {
+   "year": 1859,
+   "title": "The lead–acid battery",
+   "text": "Gaston Planté invents the first rechargeable battery.",
+   "why": "Still used to start most cars."
+  },
+  {
+   "year": 1886,
+   "title": "Cheap aluminium",
+   "text": "Charles Hall and Paul Héroult independently invent aluminium electrolysis.",
+   "why": "Turned a precious metal into a common one."
+  },
+  {
+   "year": 1889,
+   "title": "The Nernst equation",
+   "text": "Walther Nernst relates electrode potential to concentration.",
+   "why": "The central equation of electrochemistry."
+  },
+  {
+   "year": 1991,
+   "title": "Lithium-ion goes on sale",
+   "text": "Sony commercializes the lithium-ion battery.",
+   "why": "Made portable electronics possible."
+  },
+  {
+   "year": 2019,
+   "title": "Nobel Prize for lithium-ion",
+   "text": "Awarded to John Goodenough, Stanley Whittingham and Akira Yoshino.",
+   "why": "Recognized the battery behind the mobile and electric-car revolution."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "ec-001",
+   "q": "Oxidation is…",
+   "options": [
+    "Loss of electrons",
+    "Gain of electrons",
+    "Gain of protons",
+    "Loss of neutrons"
+   ],
+   "answer": 0,
+   "explain": "OIL RIG: Oxidation Is Loss, Reduction Is Gain."
+  },
+  {
+   "id": "ec-002",
+   "q": "In a galvanic cell, oxidation takes place at…",
+   "options": [
+    "The anode",
+    "The cathode",
+    "The salt bridge",
+    "The wire"
+   ],
+   "answer": 0,
+   "explain": "An Ox, Red Cat: anode oxidation, cathode reduction."
+  },
+  {
+   "id": "ec-003",
+   "q": "The Faraday constant is…",
+   "options": [
+    "The charge of one mole of electrons, about 96,485 C",
+    "The speed of light in a vacuum, about 3 × 10⁸ m/s",
+    "The gas constant, about 8.314 J/(mol·K)",
+    "Avogadro's number, about 6.022 × 10²³"
+   ],
+   "answer": 0,
+   "explain": "It converts moles of electrons into coulombs."
+  },
+  {
+   "id": "ec-004",
+   "q": "What does a salt bridge do?",
+   "options": [
+    "Keeps charges balanced by letting ions move between half-cells",
+    "Supplies the electrons that flow in the wire",
+    "Stores energy so the cell can be recharged",
+    "Measures the voltage between the electrodes"
+   ],
+   "answer": 0,
+   "explain": "Without it, charge builds up and the current stops."
+  },
+  {
+   "id": "ec-005",
+   "q": "The Nernst equation relates…",
+   "options": [
+    "Electrode potential to concentrations",
+    "Rate to temperature",
+    "Pressure to volume",
+    "Mass to energy"
+   ],
+   "answer": 0,
+   "explain": "E = E° − (RT/nF) ln Q."
+  },
+  {
+   "id": "ec-006",
+   "q": "Electrolysis of water produces…",
+   "options": [
+    "Hydrogen at the cathode and oxygen at the anode",
+    "Oxygen at both electrodes",
+    "Hydrogen at the anode",
+    "Salt"
+   ],
+   "answer": 0,
+   "explain": "Twice as much hydrogen as oxygen by volume."
+  },
+  {
+   "id": "ec-007",
+   "q": "Galvanizing protects steel by…",
+   "options": [
+    "Coating it with zinc, which corrodes first",
+    "Painting it with a waterproof varnish",
+    "Heating it until a hard oxide forms",
+    "Magnetizing it so oxygen is repelled"
+   ],
+   "answer": 0,
+   "explain": "Zinc is more easily oxidized, so it sacrifices itself."
+  },
+  {
+   "id": "ec-008",
+   "q": "Who isolated sodium and potassium by electrolysis in 1807?",
+   "options": [
+    "Humphry Davy",
+    "Michael Faraday",
+    "Alessandro Volta",
+    "Walther Nernst"
+   ],
+   "answer": 0,
+   "explain": "Faraday later worked as Davy's assistant."
+  },
+  {
+   "id": "ec-009",
+   "q": "From ΔG = −nFE, a positive cell potential E means the reaction is…",
+   "options": [
+    "Spontaneous",
+    "Non-spontaneous",
+    "At equilibrium",
+    "Impossible"
+   ],
+   "answer": 0,
+   "explain": "Positive E gives negative ΔG."
+  },
+  {
+   "id": "ec-010",
+   "q": "Which process makes almost all the world's aluminium?",
+   "options": [
+    "Hall–Héroult electrolysis",
+    "Haber–Bosch",
+    "The blast furnace",
+    "The Contact process"
+   ],
+   "answer": 0,
+   "explain": "Alumina dissolved in molten cryolite is electrolysed."
+  },
+  {
+   "id": "ec-011",
+   "q": "When a lithium-ion battery discharges, Li⁺ ions move…",
+   "options": [
+    "From the graphite anode to the cathode",
+    "From the cathode to the anode",
+    "Out of the battery",
+    "Nowhere"
+   ],
+   "answer": 0,
+   "explain": "Electrons take the outside path through your device."
+  },
+  {
+   "id": "ec-012",
+   "q": "The 2019 Nobel Prize in Chemistry was awarded for…",
+   "options": [
+    "The lithium-ion battery",
+    "The fuel cell",
+    "The voltaic pile",
+    "Electroplating"
+   ],
+   "answer": 0,
+   "explain": "To Goodenough, Whittingham and Yoshino."
+  }
+ ],
+ "related": [
+  "Energy Chemistry",
+  "Physical Chemistry",
+  "Catalytic Chemistry",
+  "Chemistry of Materials",
+  "Analytical Chemistry"
+ ]
+}

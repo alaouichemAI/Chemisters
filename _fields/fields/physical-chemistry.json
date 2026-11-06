@@ -1,0 +1,306 @@
+{
+ "slug": "physical-chemistry",
+ "channel": "Physical Chemistry",
+ "number": 2,
+ "symbol": "Ph",
+ "category": "Core chemistry",
+ "name": "Physical Chemistry",
+ "tagline": "Thermodynamics, kinetics, and the laws governing molecular behavior.",
+ "seo_title": "Physical Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Physical Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in thermodynamics, kinetics, quantum chemistry and spectroscopy.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#7dbcf2",
+  "accent2": "#9389f0",
+  "tile": "#15213d",
+  "motif": "orbit"
+ },
+ "definition": {
+  "lead": "Physical chemistry uses the laws of physics to explain why chemical change happens, how fast it goes and how much energy it involves.",
+  "body": "It answers three questions about any reaction: can it happen (thermodynamics), how fast will it go (kinetics), and why do molecules behave as they do (quantum mechanics). Batteries, spectra, industrial reaction rates and the colours of molecules are all understood through it.",
+  "facts": [
+   {
+    "value": "3",
+    "label": "big questions: can it react, how fast, and why"
+   },
+   {
+    "value": "1887",
+    "label": "the first journal of physical chemistry is founded by Ostwald and van 't Hoff"
+   },
+   {
+    "value": "1901",
+    "label": "the first Nobel Prize in Chemistry goes to a physical chemist, van 't Hoff"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Thermodynamics",
+   "summary": "Energy, heat and whether a process can happen on its own.",
+   "example": "Gibbs energy tells whether a reaction is spontaneous.",
+   "channel": "Thermochemistry"
+  },
+  {
+   "name": "Chemical kinetics",
+   "summary": "How fast reactions go and through which steps.",
+   "example": "The Arrhenius equation links reaction rate to temperature.",
+   "channel": "Chemical Kinetics"
+  },
+  {
+   "name": "Quantum chemistry",
+   "summary": "Electrons described by wavefunctions: bonding, orbitals and energies.",
+   "example": "Molecular orbital theory explains why liquid oxygen sticks to a magnet.",
+   "channel": "Theoretical Chemistry"
+  },
+  {
+   "name": "Spectroscopy",
+   "summary": "Reading molecules through the light they absorb or emit.",
+   "example": "Infrared spectra reveal functional groups; NMR maps how atoms connect.",
+   "channel": "Analytical Chemistry"
+  },
+  {
+   "name": "Electrochemistry",
+   "summary": "Chemistry that produces or is driven by electric current.",
+   "example": "Batteries, fuel cells and corrosion.",
+   "channel": "Electrochemistry"
+  },
+  {
+   "name": "Statistical mechanics",
+   "summary": "The bridge between single molecules and bulk properties.",
+   "example": "Boltzmann's S = k ln W links entropy to molecular arrangements.",
+   "channel": "Entropy in Chemistry"
+  },
+  {
+   "name": "Surface & colloid chemistry",
+   "summary": "What happens where two phases meet.",
+   "example": "Car exhaust catalysts work only at their surface.",
+   "channel": "Surface Chemistry"
+  },
+  {
+   "name": "Solutions & equilibria",
+   "summary": "How substances dissolve and where reactions settle.",
+   "example": "Le Chatelier's principle predicts how equilibria respond to change.",
+   "channel": "Solutions Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1662,
+   "title": "Boyle's law",
+   "text": "Robert Boyle shows that the pressure and volume of a gas are inversely related.",
+   "why": "One of the first quantitative laws in chemistry."
+  },
+  {
+   "year": 1834,
+   "title": "The ideal gas law",
+   "text": "Émile Clapeyron combines earlier gas laws into a single equation of state.",
+   "why": "PV = nRT is still the first model of any gas."
+  },
+  {
+   "year": 1876,
+   "title": "Gibbs and chemical thermodynamics",
+   "text": "Josiah Willard Gibbs begins publishing 'On the Equilibrium of Heterogeneous Substances'.",
+   "why": "Introduced the free energy that predicts whether reactions go."
+  },
+  {
+   "year": 1887,
+   "title": "A journal for a new discipline",
+   "text": "Wilhelm Ostwald and Jacobus van 't Hoff found the Zeitschrift für physikalische Chemie.",
+   "why": "Physical chemistry becomes a field of its own."
+  },
+  {
+   "year": 1889,
+   "title": "The Arrhenius equation",
+   "text": "Svante Arrhenius links reaction rate to temperature through an activation energy.",
+   "why": "Explains why heating speeds up almost every reaction."
+  },
+  {
+   "year": 1906,
+   "title": "Nernst's heat theorem",
+   "text": "Walther Nernst formulates the theorem that becomes the third law of thermodynamics.",
+   "why": "Made absolute entropies and equilibrium calculations possible."
+  },
+  {
+   "year": 1926,
+   "title": "The Schrödinger equation",
+   "text": "Erwin Schrödinger publishes the wave equation for electrons.",
+   "why": "The foundation of all quantum chemistry."
+  },
+  {
+   "year": 1935,
+   "title": "Transition state theory",
+   "text": "Henry Eyring, and independently Evans and Polanyi, describe rates through the activated complex.",
+   "why": "Connected reaction rates to molecular structure."
+  },
+  {
+   "year": 1967,
+   "title": "Watching fast reactions",
+   "text": "Nobel Prize to Eigen, Norrish and Porter for studying extremely fast chemical reactions.",
+   "why": "Opened the microsecond and nanosecond world of chemistry."
+  },
+  {
+   "year": 1999,
+   "title": "Femtochemistry",
+   "text": "Nobel Prize to Ahmed Zewail for observing reactions on the femtosecond timescale.",
+   "why": "Chemists could finally watch bonds break and form."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "ph-001",
+   "q": "A reaction has ΔG < 0. What does that tell you?",
+   "options": [
+    "It can proceed spontaneously",
+    "It will be fast",
+    "It gives off light",
+    "It needs a catalyst"
+   ],
+   "answer": 0,
+   "explain": "A negative ΔG means the reaction is thermodynamically favourable. It says nothing about speed: diamond turning into graphite is favourable but immeasurably slow."
+  },
+  {
+   "id": "ph-002",
+   "q": "Which equation links a rate constant to temperature?",
+   "options": [
+    "The Arrhenius equation",
+    "The Nernst equation",
+    "The Henderson–Hasselbalch equation",
+    "The Bragg equation"
+   ],
+   "answer": 0,
+   "explain": "k = A·e^(−Ea/RT): a higher temperature gives more molecules enough energy to cross the barrier."
+  },
+  {
+   "id": "ph-003",
+   "q": "What does a catalyst change?",
+   "options": [
+    "The activation energy of the pathway",
+    "The overall ΔG of the reaction",
+    "The equilibrium constant",
+    "The composition at equilibrium"
+   ],
+   "answer": 0,
+   "explain": "A catalyst opens a lower-energy route for both directions, so equilibrium is reached faster but its position is unchanged."
+  },
+  {
+   "id": "ph-004",
+   "q": "Which is the ideal gas law?",
+   "options": [
+    "PV = nRT",
+    "PV = nT/R",
+    "P = nRV",
+    "PT = nRV"
+   ],
+   "answer": 0,
+   "explain": "Pressure × volume = moles × gas constant × temperature."
+  },
+  {
+   "id": "ph-005",
+   "q": "Why does liquid oxygen stick to a magnet?",
+   "options": [
+    "O₂ has two unpaired electrons",
+    "O₂ contains a double bond",
+    "O₂ is a dense gas",
+    "O₂ is ionic"
+   ],
+   "answer": 0,
+   "explain": "Molecular orbital theory puts two unpaired electrons in O₂'s π* orbitals, making it paramagnetic. A simple Lewis structure cannot explain this."
+  },
+  {
+   "id": "ph-006",
+   "q": "A first-order reaction has a half-life of 10 min. What fraction is left after 30 min?",
+   "options": [
+    "1/8",
+    "1/3",
+    "1/6",
+    "None"
+   ],
+   "answer": 0,
+   "explain": "30 min is three half-lives: ½ × ½ × ½ = 1/8."
+  },
+  {
+   "id": "ph-007",
+   "q": "For N₂ + 3H₂ ⇌ 2NH₃, raising the pressure shifts the equilibrium…",
+   "options": [
+    "Toward ammonia",
+    "Toward nitrogen and hydrogen",
+    "Nowhere",
+    "It stops the reaction"
+   ],
+   "answer": 0,
+   "explain": "The right side has fewer gas molecules (2 versus 4), so the system relieves pressure by forming ammonia (Le Chatelier)."
+  },
+  {
+   "id": "ph-008",
+   "q": "Which law states that energy is conserved?",
+   "options": [
+    "The first law of thermodynamics",
+    "The second law",
+    "The third law",
+    "The zeroth law"
+   ],
+   "answer": 0,
+   "explain": "Energy can change form but is never created or destroyed."
+  },
+  {
+   "id": "ph-009",
+   "q": "In any spontaneous process, the entropy of the universe…",
+   "options": [
+    "Increases",
+    "Decreases",
+    "Stays exactly the same",
+    "Drops to zero"
+   ],
+   "answer": 0,
+   "explain": "That is the second law of thermodynamics."
+  },
+  {
+   "id": "ph-010",
+   "q": "In infrared spectroscopy, absorbed light changes a molecule's…",
+   "options": [
+    "Vibrations",
+    "Nuclear spin",
+    "Number of electrons",
+    "Mass"
+   ],
+   "answer": 0,
+   "explain": "IR photons match the energies of bond stretching and bending."
+  },
+  {
+   "id": "ph-011",
+   "q": "Who received the first Nobel Prize in Chemistry in 1901?",
+   "options": [
+    "Jacobus van 't Hoff",
+    "Marie Curie",
+    "Svante Arrhenius",
+    "Wilhelm Ostwald"
+   ],
+   "answer": 0,
+   "explain": "Van 't Hoff, for chemical dynamics and osmotic pressure. Arrhenius won in 1903, Ostwald in 1909, Curie in 1911."
+  },
+  {
+   "id": "ph-012",
+   "q": "What did femtochemistry make possible?",
+   "options": [
+    "Watching bonds break and form in real time",
+    "Splitting the atom",
+    "Making the first plastic",
+    "Measuring the speed of light"
+   ],
+   "answer": 0,
+   "explain": "Laser pulses lasting femtoseconds (10⁻¹⁵ s) are fast enough to freeze atoms mid-reaction."
+  }
+ ],
+ "related": [
+  "Theoretical Chemistry",
+  "Chemical Kinetics",
+  "Thermochemistry",
+  "Electrochemistry",
+  "Computational Chemistry",
+  "Analytical Chemistry"
+ ]
+}

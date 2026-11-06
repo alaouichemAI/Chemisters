@@ -1,0 +1,299 @@
+{
+ "slug": "chemoinformatics",
+ "channel": "Chemoinformatics",
+ "number": 35,
+ "symbol": "Ci",
+ "category": "Computational & AI",
+ "name": "Chemoinformatics",
+ "tagline": "AI-driven prediction, QSAR/QSPR modeling, and molecular data intelligence.",
+ "seo_title": "Chemoinformatics — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Chemoinformatics on LinkedIn and Facebook: paper summaries, news and innovations in molecular representations, QSAR/QSPR, chemical databases and virtual screening.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#917df2",
+  "accent2": "#dc89f0",
+  "tile": "#1e1936",
+  "motif": "grid"
+ },
+ "definition": {
+  "lead": "Chemoinformatics applies information science to chemistry: representing molecules as data, storing and searching them, and predicting their properties.",
+  "body": "It powers chemical databases, similarity searches, QSAR and QSPR models and virtual screening. Every time a model predicts solubility or toxicity from a structure, chemoinformatics is at work.",
+  "facts": [
+   {
+    "value": "1988",
+    "label": "David Weininger publishes the SMILES notation"
+   },
+   {
+    "value": "CCO",
+    "label": "ethanol written as a SMILES string"
+   },
+   {
+    "value": "100 million+",
+    "label": "compounds in PubChem"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Molecular representations",
+   "summary": "Writing molecules as strings, graphs or vectors.",
+   "example": "SMILES, InChI and molecular graphs.",
+   "channel": ""
+  },
+  {
+   "name": "Fingerprints & similarity",
+   "summary": "Encoding substructures as bits and comparing molecules.",
+   "example": "Tanimoto similarity searches.",
+   "channel": ""
+  },
+  {
+   "name": "QSAR & QSPR",
+   "summary": "Models linking structure to activity or properties.",
+   "example": "Predicting solubility from structure.",
+   "channel": "Chemistry AI & ML Applications"
+  },
+  {
+   "name": "Chemical databases",
+   "summary": "Storing and searching millions of compounds and measurements.",
+   "example": "PubChem and ChEMBL.",
+   "channel": ""
+  },
+  {
+   "name": "Virtual screening",
+   "summary": "Searching large libraries for likely actives.",
+   "example": "Similarity and docking-based screens.",
+   "channel": "Drug Discovery"
+  },
+  {
+   "name": "Chemical space",
+   "summary": "Mapping and designing large compound collections.",
+   "example": "Make-on-demand libraries with billions of molecules.",
+   "channel": ""
+  },
+  {
+   "name": "Reaction informatics",
+   "summary": "Storing, searching and predicting reactions.",
+   "example": "Reaction databases behind synthesis planning.",
+   "channel": "Retrosynthesis"
+  },
+  {
+   "name": "Model validation",
+   "summary": "Testing whether a model really generalizes.",
+   "example": "Scaffold splits test predictions on new chemical series.",
+   "channel": ""
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1964,
+   "title": "QSAR",
+   "text": "Corwin Hansch and Toshio Fujita relate biological activity to physical properties of substituents.",
+   "why": "Founded quantitative structure–activity modelling."
+  },
+  {
+   "year": 1965,
+   "title": "The Morgan algorithm",
+   "text": "Harry Morgan publishes a method to give molecules a unique description.",
+   "why": "Still behind the popular Morgan fingerprints."
+  },
+  {
+   "year": 1988,
+   "title": "SMILES",
+   "text": "David Weininger publishes a line notation for molecules.",
+   "why": "A compact way to write molecules that computers can read."
+  },
+  {
+   "year": 1998,
+   "title": "A name for the field",
+   "text": "Frank Brown coins the term 'chemoinformatics'.",
+   "why": "A discipline is named."
+  },
+  {
+   "year": 2004,
+   "title": "PubChem",
+   "text": "The US National Institutes of Health launch PubChem.",
+   "why": "A free database of chemical structures and bioassays."
+  },
+  {
+   "year": 2005,
+   "title": "InChI",
+   "text": "IUPAC releases the InChI identifier.",
+   "why": "A standard, non-proprietary identifier for chemical substances."
+  },
+  {
+   "year": 2009,
+   "title": "ChEMBL",
+   "text": "ChEMBL is launched as an open database of bioactive molecules.",
+   "why": "Millions of activity measurements for modelling."
+  },
+  {
+   "year": 2010,
+   "title": "Extended-connectivity fingerprints",
+   "text": "David Rogers and Mathew Hahn publish the ECFP method.",
+   "why": "One of the most widely used molecular fingerprints."
+  },
+  {
+   "year": 2018,
+   "title": "MoleculeNet",
+   "text": "A benchmark suite for molecular machine learning is published.",
+   "why": "Common datasets to compare models fairly."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "ci-001",
+   "q": "Which molecule does the SMILES string 'CCO' represent?",
+   "options": [
+    "Ethanol",
+    "Methanol",
+    "Propane",
+    "Acetone"
+   ],
+   "answer": 0,
+   "explain": "Two carbons and an oxygen in a chain: CH₃CH₂OH."
+  },
+  {
+   "id": "ci-002",
+   "q": "A molecular fingerprint is…",
+   "options": [
+    "A bit vector recording the presence of substructures",
+    "A picture of the molecule's 2D structure",
+    "An infrared spectrum of the compound",
+    "A photograph of the crystal"
+   ],
+   "answer": 0,
+   "explain": "Compare fingerprints to measure similarity."
+  },
+  {
+   "id": "ci-003",
+   "q": "The Tanimoto coefficient measures…",
+   "options": [
+    "Similarity between two fingerprints, from 0 to 1",
+    "Toxicity of a molecule on a 0–1 scale",
+    "Price of a compound relative to others",
+    "Boiling point predicted from structure"
+   ],
+   "answer": 0,
+   "explain": "Shared bits divided by total distinct bits."
+  },
+  {
+   "id": "ci-004",
+   "q": "QSAR stands for…",
+   "options": [
+    "Quantitative structure–activity relationship",
+    "Quantum spectroscopy and resonance",
+    "Quality standard for assay reporting",
+    "Quick screening and ranking"
+   ],
+   "answer": 0,
+   "explain": "QSPR does the same for physical properties."
+  },
+  {
+   "id": "ci-005",
+   "q": "What is the main advantage of InChI?",
+   "options": [
+    "It is a standard, unique identifier defined by IUPAC",
+    "It is the shortest notation",
+    "It is the easiest to read",
+    "It contains 3D coordinates"
+   ],
+   "answer": 0,
+   "explain": "The same molecule always gets the same InChI."
+  },
+  {
+   "id": "ci-006",
+   "q": "A model's applicability domain is…",
+   "options": [
+    "The region of chemical space where its predictions are reliable",
+    "The laboratory where it was built",
+    "The website where it is published",
+    "The time it took to train"
+   ],
+   "answer": 0,
+   "explain": "Far from the training data, predictions become guesses."
+  },
+  {
+   "id": "ci-007",
+   "q": "Why use a scaffold split instead of a random split?",
+   "options": [
+    "To test whether a model generalizes to new chemical series",
+    "It is faster",
+    "It gives a larger training set",
+    "It is random"
+   ],
+   "answer": 0,
+   "explain": "Random splits often put near-identical molecules in training and test sets."
+  },
+  {
+   "id": "ci-008",
+   "q": "An 'activity cliff' is…",
+   "options": [
+    "A small structural change that causes a large change in activity",
+    "A gradual change in activity across a series",
+    "A point where activity stops changing at all",
+    "A toxicity threshold set by regulators"
+   ],
+   "answer": 0,
+   "explain": "Cliffs are hard for similarity-based models."
+  },
+  {
+   "id": "ci-009",
+   "q": "Morgan (circular) fingerprints encode…",
+   "options": [
+    "The neighbourhood around each atom out to a given radius",
+    "The 3D shape of the molecule",
+    "The colour of the compound",
+    "The molecular mass only"
+   ],
+   "answer": 0,
+   "explain": "ECFP4 uses a diameter of four bonds."
+  },
+  {
+   "id": "ci-010",
+   "q": "ChEMBL mainly contains…",
+   "options": [
+    "Bioactivity data extracted from the literature",
+    "Crystal structures of small molecules",
+    "Only patents, without measurements",
+    "NMR and IR spectra"
+   ],
+   "answer": 0,
+   "explain": "Activities, targets and assays for millions of compounds."
+  },
+  {
+   "id": "ci-011",
+   "q": "Overfitting means a model…",
+   "options": [
+    "Memorizes the training data and fails on new data",
+    "Is too simple to capture any pattern",
+    "Is perfect and needs no validation",
+    "Has no parameters to adjust"
+   ],
+   "answer": 0,
+   "explain": "Honest validation reveals it."
+  },
+  {
+   "id": "ci-012",
+   "q": "Who introduced the SMILES notation?",
+   "options": [
+    "David Weininger",
+    "Corwin Hansch",
+    "Christopher Lipinski",
+    "Harry Morgan"
+   ],
+   "answer": 0,
+   "explain": "Published in 1988."
+  }
+ ],
+ "related": [
+  "Chemistry AI & ML Applications",
+  "Drug Discovery",
+  "Computational Chemistry",
+  "Chemical Data Science & Automation",
+  "Medicinal Chemistry"
+ ]
+}

@@ -39,6 +39,24 @@ def motif(kind, color):
         "grid": ("40 40", f"<path d='M40 0H0v40' stroke='{c}' {a}/>"),
         # chain / polymer
         "chain": ("80 40", f"<path d='M0 30l20-20 20 20 20-20 20 20' stroke='{c}' {a}/>"),
+        # dots / particles
+        "dots": ("36 36", f"<circle cx='18' cy='18' r='2' fill='{c}' fill-opacity='0.16'/>"),
+        # double helix
+        "helix": ("60 120", f"<path d='M10 0c40 30 40 30 0 60s-40 30 0 60M50 0c-40 30-40 30 0 60s40 30 0 60' stroke='{c}' {a}/>"),
+        # circuit traces
+        "circuit": ("80 80", f"<path d='M0 20h30l10 10v30h40M40 0v10M60 80V60h20' stroke='{c}' {a}/><circle cx='40' cy='60' r='3' fill='{c}' fill-opacity='0.14'/>"),
+        # concentric rings
+        "rings": ("90 90", f"<circle cx='45' cy='45' r='14' stroke='{c}' {a}/><circle cx='45' cy='45' r='30' stroke='{c}' {a}/>"),
+        # triangles
+        "triangles": ("70 60", f"<path d='M35 6l29 50H6z' stroke='{c}' {a}/>"),
+        # zigzag (alkane chain)
+        "zigzag": ("100 50", f"<path d='M0 35l17-20 17 20 17-20 17 20 17-20 15 20' stroke='{c}' {a}/>"),
+        # ball and stick
+        "bonds": ("90 90", f"<path d='M20 20l25 25 25-15M45 45v30' stroke='{c}' {a}/><circle cx='45' cy='45' r='5' fill='{c}' fill-opacity='0.12'/><circle cx='20' cy='20' r='3.5' fill='{c}' fill-opacity='0.12'/><circle cx='70' cy='30' r='3.5' fill='{c}' fill-opacity='0.12'/>"),
+        # drops
+        "drops": ("60 70", f"<path d='M30 12c10 14 14 22 14 30a14 14 0 0 1-28 0c0-8 4-16 14-30z' stroke='{c}' {a}/>"),
+        # spark / star
+        "spark": ("80 80", f"<path d='M40 22v36M22 40h36M28 28l24 24M52 28L28 52' stroke='{c}' {a}/>"),
     }
     size, body = shapes.get(kind, shapes["grid"])
     w, h = size.split()
@@ -87,11 +105,23 @@ def analytics():
     return f'<script data-goatcounter="https://{E(code)}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>'
 
 
+def labels(f):
+    """Section headings. A field JSON can override any of them in "labels" (useful for pages that are not a field)."""
+    n = E(f["name"])
+    d = {"L_FIELD_EYEBROW": "What it is", "L_FIELD": "The field in one minute",
+         "L_MAP_EYEBROW": "Branches", "L_MAP": f"The map of {n}",
+         "L_MAP_SUB": "Each branch is a world of its own. Several have their own Chemisters page — follow the ones you care about.",
+         "L_HIST_EYEBROW": "History", "L_HIST": f"How {n} got here"}
+    for k, v in (f.get("labels") or {}).items():
+        d["L_" + k.upper()] = E(v)
+    return d
+
+
 def built_pages():
     return {p.stem for p in (HERE / "fields").glob("*.json")}
 
 
-def og_image(f, out):
+def og_image(f, out, cta="Follow on LinkedIn & Facebook"):
     try:
         from PIL import Image, ImageDraw, ImageFont
     except ImportError:
@@ -106,17 +136,43 @@ def og_image(f, out):
     for r in range(420, 0, -6):  # soft glow
         k = (1 - r / 420) * 0.35
         d.ellipse([260 - r, 300 - r, 260 + r, 300 + r], fill=tuple(int(b + (a - b) * k * 0.6) for a, b in zip(A, (10, 15, 30))))
-    font = lambda s: ImageFont.load_default(size=s)
+    fdir = HERE / "fonts"
+    def font(s, bold=False):
+        f = fdir / ("InterDisplay-SemiBold.otf" if bold else "Inter-Medium.otf")
+        try:
+            return ImageFont.truetype(str(f), s)
+        except Exception:
+            return ImageFont.load_default(size=s)
     d.rounded_rectangle([90, 150, 420, 480], 36, fill=T, outline=A, width=3)
     d.text((118, 172), str(f["number"]), font=font(34), fill=A)
-    d.text((118, 270), f["symbol"], font=font(150), fill=tuple(min(255, a + 70) for a in A))
+    d.text((112, 268), f["symbol"], font=font(150, True), fill=tuple(min(255, a + 70) for a in A))
     d.text((480, 160), f["category"].upper(), font=font(28), fill=A)
-    name = f["name"]
-    size = 78 if len(name) < 20 else 60 if len(name) < 28 else 46
-    d.text((480, 205), name, font=font(size), fill=(240, 244, 252))
-    d.text((480, 205 + size + 30), " · ".join(f.get("posts_about", [])), font=font(30), fill=(170, 180, 205))
+    # title: one line if it fits at >= 58 px, otherwise two lines at <= 56 px
+    name, maxw = f["name"], 650
+    lines, size = [name], None
+    for sz in (78, 70, 64, 58):
+        if d.textlength(name, font=font(sz, True)) <= maxw:
+            size = sz
+            break
+    if size is None:
+        for sz in (56, 50, 44, 40):
+            words, lines, cur = name.split(), [], ""
+            for w in words:
+                t = (cur + " " + w).strip()
+                if d.textlength(t, font=font(sz, True)) <= maxw or not cur:
+                    cur = t
+                else:
+                    lines.append(cur); cur = w
+            lines.append(cur)
+            size = sz
+            if len(lines) <= 2 and all(d.textlength(l, font=font(sz, True)) <= maxw for l in lines):
+                break
+    y = 212 if len(lines) == 1 else 200
+    for l in lines:
+        d.text((480, y), l, font=font(size, True), fill=(240, 244, 252)); y += int(size * 1.15)
+    d.text((480, y + 16), " · ".join(f.get("posts_about", [])), font=font(26), fill=(170, 180, 205))
     d.rounded_rectangle([480, 400, 1100, 470], 16, fill=A)
-    d.text((510, 418), "Follow on LinkedIn & Facebook", font=font(32), fill=(10, 15, 30))
+    d.text((510, 419), cta, font=font(30, True), fill=(10, 15, 30))
     d.text((90, 545), "chemisters.com", font=font(30), fill=(150, 160, 190))
     out.parent.mkdir(parents=True, exist_ok=True)
     img.save(out, optimize=True)
@@ -134,7 +190,7 @@ def build(slug):
     th = f["theme"]
     motif_uri, motif_size = motif(th.get("motif", "grid"), th["accent"])
 
-    facts = "".join(f'<div class="fact"><b>{E(x["value"])}</b><span>{E(x["label"])}</span></div>' for x in f["definition"]["facts"])
+    facts = "".join(f'<div class="fact"><b{" class=long" if len(str(x["value"])) > 11 else ""}>{E(x["value"])}</b><span>{E(x["label"])}</span></div>' for x in f["definition"]["facts"])
     branches = []
     for b in f["branches"]:
         bc = CHANNELS.get(b.get("channel") or "", {})
@@ -158,7 +214,7 @@ def build(slug):
         for k, (_, c, dflt) in picks.items())
 
     og_rel = f"og/{slug}.png"
-    og_image(f, ROOT / og_rel)
+    og_image(f, ROOT / og_rel, "Follow on LinkedIn & Facebook" if (ch.get("linkedin") and ch.get("facebook")) else "Follow on LinkedIn" if ch.get("linkedin") else "Follow on Facebook" if ch.get("facebook") else "Explore on chemisters.com")
     jsonld = {
         "@context": "https://schema.org", "@type": "WebPage", "name": f"{f['name']} | Chemisters", "url": url,
         "description": f["seo_description"], "about": {"@type": "Thing", "name": f["name"]},
@@ -166,7 +222,7 @@ def build(slug):
         "publisher": {"@type": "Organization", "name": "Chemisters", "url": base + "/",
                       "sameAs": [u for u in (ch.get("linkedin"), ch.get("facebook")) if u]},
     }
-    data = {k: f[k] for k in ("slug", "name", "timeline", "branches", "quiz")}
+    data = {k: f[k] for k in ("slug", "name", "symbol", "number", "timeline", "branches", "quiz")}
     data.update(url=url, icons={"li": LI, "fb": FB}, followHtml=follow_html(ch, f["name"]))
     safe_json = lambda o: json.dumps(o, ensure_ascii=False).replace("</", "<\\/")
 
@@ -183,6 +239,8 @@ def build(slug):
         "FOLLOW": follow_html(ch, f["name"]), "FOLLOW_SMALL": follow_html(ch, f["name"], small=True),
         "PUBLISH_URL": E(SITE.get("publish_url", "/")),
         "DEF_LEAD": E(f["definition"]["lead"]), "DEF_BODY": E(f["definition"]["body"]), "FACTS": facts,
+        **labels(f), "STICKY_CLS": "" if (ch.get("linkedin") or ch.get("facebook")) else " none",
+        "CTA_HIDDEN": "" if (ch.get("linkedin") or ch.get("facebook")) else " hidden",
         "BRANCHES": "".join(branches), "PICK_CHIPS": pick_chips, "PICK_CARDS": pick_cards, "DATA": safe_json(data),
         "ASSET_V": ASSET_V, "ANALYTICS": analytics(),
     }

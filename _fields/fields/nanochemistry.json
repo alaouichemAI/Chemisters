@@ -1,0 +1,305 @@
+{
+ "slug": "nanochemistry",
+ "channel": "Nanochemistry",
+ "number": 41,
+ "symbol": "Nc",
+ "category": "Materials & nano",
+ "name": "Nanochemistry",
+ "tagline": "Design, synthesis, and application of nanoscale materials for medicine and energy.",
+ "seo_title": "Nanochemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Nanochemistry on LinkedIn and Facebook: paper summaries, news and innovations in nanoparticles, quantum dots, 2D materials and nanomedicine.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#7df2c7",
+  "accent2": "#89d5f0",
+  "tile": "#0e2a29",
+  "motif": "dots"
+ },
+ "definition": {
+  "lead": "Nanochemistry makes and studies materials between about 1 and 100 nanometres in size, where size itself changes colour, reactivity and strength.",
+  "body": "A gold nanoparticle can look red, a semiconductor crystal can glow a colour set by its size, and a sheet of carbon one atom thick is remarkably strong. Nanochemists build these structures and put them to work in medicine, electronics, catalysis and energy.",
+  "facts": [
+   {
+    "value": "1–100 nm",
+    "label": "the nanoscale: a nanometre is a billionth of a metre"
+   },
+   {
+    "value": "1959",
+    "label": "Richard Feynman's lecture 'There's Plenty of Room at the Bottom'"
+   },
+   {
+    "value": "2023",
+    "label": "Nobel Prize for the discovery and synthesis of quantum dots"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Nanoparticles",
+   "summary": "Particles of metals, oxides and semiconductors at the nanoscale.",
+   "example": "Gold nanoparticles in rapid diagnostic tests.",
+   "channel": ""
+  },
+  {
+   "name": "Quantum dots",
+   "summary": "Semiconductor nanocrystals whose colour depends on their size.",
+   "example": "Quantum-dot displays.",
+   "channel": ""
+  },
+  {
+   "name": "Carbon nanomaterials",
+   "summary": "Fullerenes, nanotubes and graphene.",
+   "example": "Carbon nanotubes in strong, light composites.",
+   "channel": ""
+  },
+  {
+   "name": "2D materials",
+   "summary": "Crystals just one or a few atoms thick.",
+   "example": "Graphene and molybdenum disulfide.",
+   "channel": ""
+  },
+  {
+   "name": "Nanomedicine",
+   "summary": "Nanoscale carriers for drugs and vaccines.",
+   "example": "Lipid nanoparticles that deliver mRNA vaccines.",
+   "channel": "Medicinal Chemistry"
+  },
+  {
+   "name": "Nanocatalysis",
+   "summary": "Catalysts with enormous surface area.",
+   "example": "Platinum nanoparticles in fuel cells.",
+   "channel": "Catalytic Chemistry"
+  },
+  {
+   "name": "Self-assembly",
+   "summary": "Letting building blocks organize themselves.",
+   "example": "DNA folded into designed nanoscale shapes.",
+   "channel": "Supramolecular Chemistry"
+  },
+  {
+   "name": "Nanosafety",
+   "summary": "How nanomaterials behave in the body and the environment.",
+   "example": "Testing the toxicity of nanoparticles.",
+   "channel": "Environmental Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1857,
+   "title": "Colloidal gold",
+   "text": "Michael Faraday prepares ruby-red gold colloids and studies how they scatter light.",
+   "why": "The first scientific study of nanoparticles."
+  },
+  {
+   "year": 1959,
+   "title": "Plenty of room at the bottom",
+   "text": "Richard Feynman imagines manipulating matter atom by atom.",
+   "why": "Often cited as the vision behind nanotechnology."
+  },
+  {
+   "year": 1981,
+   "title": "Seeing atoms",
+   "text": "Gerd Binnig and Heinrich Rohrer invent the scanning tunnelling microscope.",
+   "why": "Individual atoms became visible."
+  },
+  {
+   "year": 1985,
+   "title": "Fullerenes",
+   "text": "Harold Kroto, Robert Curl and Richard Smalley discover C₆₀.",
+   "why": "A new form of carbon; Nobel Prize in 1996."
+  },
+  {
+   "year": 1991,
+   "title": "Carbon nanotubes",
+   "text": "Sumio Iijima reports carbon nanotubes.",
+   "why": "Tiny tubes with exceptional strength and conductivity."
+  },
+  {
+   "year": 1993,
+   "title": "Quantum dots on demand",
+   "text": "Moungi Bawendi's group makes high-quality quantum dots of controlled size.",
+   "why": "Made quantum dots practical."
+  },
+  {
+   "year": 2004,
+   "title": "Graphene",
+   "text": "Andre Geim and Konstantin Novoselov isolate graphene with adhesive tape.",
+   "why": "Launched the field of 2D materials; Nobel Prize in Physics in 2010."
+  },
+  {
+   "year": 2006,
+   "title": "DNA origami",
+   "text": "Paul Rothemund folds DNA into designed shapes.",
+   "why": "Programmable self-assembly at the nanoscale."
+  },
+  {
+   "year": 2020,
+   "title": "Nanoparticle vaccines",
+   "text": "mRNA vaccines delivered by lipid nanoparticles are authorized.",
+   "why": "Nanomedicine reached billions of people."
+  },
+  {
+   "year": 2023,
+   "title": "Nobel Prize for quantum dots",
+   "text": "Awarded to Moungi Bawendi, Louis Brus and Alexei Ekimov.",
+   "why": "Recognized size-tuned nanocrystals."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "nc-001",
+   "q": "A nanometre is…",
+   "options": [
+    "One billionth of a metre",
+    "One millionth of a metre",
+    "One thousandth of a metre",
+    "One trillionth of a metre"
+   ],
+   "answer": 0,
+   "explain": "A human hair is roughly 80,000–100,000 nm wide."
+  },
+  {
+   "id": "nc-002",
+   "q": "Why do quantum dots of different sizes emit different colours?",
+   "options": [
+    "Confining electrons changes their energy levels: smaller dots emit bluer light",
+    "They are made of completely different elements",
+    "They have different coatings that tint the light",
+    "They are kept at different temperatures"
+   ],
+   "answer": 0,
+   "explain": "Same material, different size, different colour."
+  },
+  {
+   "id": "nc-003",
+   "q": "Why are nanoparticles such good catalysts?",
+   "options": [
+    "They have a very high surface area per gram",
+    "They are heavier than bulk metals",
+    "They are magnetic and attract reactants",
+    "They are coloured and absorb light"
+   ],
+   "answer": 0,
+   "explain": "More atoms sit at the surface, where catalysis happens."
+  },
+  {
+   "id": "nc-004",
+   "q": "What colour are small gold nanoparticles in water?",
+   "options": [
+    "Red",
+    "Gold",
+    "Green",
+    "Colourless"
+   ],
+   "answer": 0,
+   "explain": "Their electrons oscillate with light and absorb green light."
+  },
+  {
+   "id": "nc-005",
+   "q": "Graphene is…",
+   "options": [
+    "A single layer of carbon atoms in a honeycomb lattice",
+    "A rolled-up tube of carbon atoms",
+    "A hollow sphere of 60 carbon atoms",
+    "A form of diamond only a few atoms thick"
+   ],
+   "answer": 0,
+   "explain": "Stacked graphene layers make graphite."
+  },
+  {
+   "id": "nc-006",
+   "q": "What shape is buckminsterfullerene, C₆₀?",
+   "options": [
+    "Like a football (soccer ball)",
+    "Like a long, hollow tube",
+    "Like a flat honeycomb sheet",
+    "Like a cube with carbon corners"
+   ],
+   "answer": 0,
+   "explain": "Twelve pentagons and twenty hexagons."
+  },
+  {
+   "id": "nc-007",
+   "q": "The scanning tunnelling microscope lets scientists…",
+   "options": [
+    "Image individual atoms on surfaces",
+    "Weigh molecules",
+    "Measure temperature",
+    "Sequence DNA"
+   ],
+   "answer": 0,
+   "explain": "It measures a tiny current between a sharp tip and a surface."
+  },
+  {
+   "id": "nc-008",
+   "q": "What do lipid nanoparticles do in mRNA vaccines?",
+   "options": [
+    "Protect the mRNA and help it enter cells",
+    "Act as the antigen",
+    "Kill viruses directly",
+    "Add flavour"
+   ],
+   "answer": 0,
+   "explain": "Naked mRNA would be quickly destroyed."
+  },
+  {
+   "id": "nc-009",
+   "q": "DNA origami is…",
+   "options": [
+    "Folding DNA into designed nanoscale shapes",
+    "Paper folding with DNA diagrams",
+    "Cutting DNA",
+    "Sequencing DNA"
+   ],
+   "answer": 0,
+   "explain": "Short 'staple' strands fold a long strand into place."
+  },
+  {
+   "id": "nc-010",
+   "q": "Who first studied colloidal gold scientifically, in 1857?",
+   "options": [
+    "Michael Faraday",
+    "Richard Feynman",
+    "Marie Curie",
+    "Robert Boyle"
+   ],
+   "answer": 0,
+   "explain": "Some of his samples still exist."
+  },
+  {
+   "id": "nc-011",
+   "q": "The 2023 Nobel Prize in Chemistry rewarded…",
+   "options": [
+    "The discovery and synthesis of quantum dots",
+    "The isolation of graphene",
+    "The discovery of fullerenes",
+    "The discovery of carbon nanotubes"
+   ],
+   "answer": 0,
+   "explain": "Graphene was the 2010 Physics prize; fullerenes the 1996 Chemistry prize."
+  },
+  {
+   "id": "nc-012",
+   "q": "As a particle gets smaller, its surface-to-volume ratio…",
+   "options": [
+    "Increases",
+    "Decreases",
+    "Stays the same",
+    "Drops to zero"
+   ],
+   "answer": 0,
+   "explain": "Halving the size doubles the ratio."
+  }
+ ],
+ "related": [
+  "Chemistry of Materials",
+  "Supramolecular Chemistry",
+  "Surface Chemistry",
+  "Catalytic Chemistry",
+  "Medicinal Chemistry"
+ ]
+}

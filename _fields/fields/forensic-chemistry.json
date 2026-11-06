@@ -1,0 +1,293 @@
+{
+ "slug": "forensic-chemistry",
+ "channel": "Forensic Chemistry",
+ "number": 24,
+ "symbol": "Fo",
+ "category": "Applied & industrial",
+ "name": "Forensic Chemistry",
+ "tagline": "Crime-scene analysis, toxicology, and evidence-based chemical identification.",
+ "seo_title": "Forensic Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Forensic Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in forensic toxicology, drug analysis, trace evidence and fire debris analysis.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#98f27d",
+  "accent2": "#89f0b2",
+  "tile": "#1b2513",
+  "motif": "rings"
+ },
+ "definition": {
+  "lead": "Forensic chemistry applies analytical chemistry to legal questions: what is this substance, where did it come from, and will the result stand up in court?",
+  "body": "It identifies drugs, poisons, fibres, paints and inks, and links traces to their sources. Every result must be reproducible, documented and defensible under cross-examination.",
+  "facts": [
+   {
+    "value": "1813",
+    "label": "Mathieu Orfila's treatise on poisons founds forensic toxicology"
+   },
+   {
+    "value": "1836",
+    "label": "James Marsh publishes a sensitive test for arsenic"
+   },
+   {
+    "value": "Every contact leaves a trace",
+    "label": "Locard's exchange principle"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Drug analysis",
+   "summary": "Identifying seized substances.",
+   "example": "Confirmation by GC–MS.",
+   "channel": "Analytical Chemistry"
+  },
+  {
+   "name": "Toxicology",
+   "summary": "Finding drugs and poisons in the body.",
+   "example": "Blood alcohol measurement.",
+   "channel": ""
+  },
+  {
+   "name": "Trace evidence",
+   "summary": "Fibres, glass, paint and soil.",
+   "example": "Infrared microscopy of paint chips.",
+   "channel": ""
+  },
+  {
+   "name": "Fire debris analysis",
+   "summary": "Detecting ignitable liquids after a fire.",
+   "example": "GC–MS of petrol residues.",
+   "channel": ""
+  },
+  {
+   "name": "Questioned documents",
+   "summary": "Comparing inks and papers.",
+   "example": "Separating ink dyes by chromatography.",
+   "channel": ""
+  },
+  {
+   "name": "Biological evidence",
+   "summary": "DNA and body fluids.",
+   "example": "Short tandem repeat (STR) DNA profiles.",
+   "channel": "Biological Chemistry"
+  },
+  {
+   "name": "Quality & chain of custody",
+   "summary": "Making results trustworthy in court.",
+   "example": "Accredited laboratories and documented evidence handling.",
+   "channel": "Quality Control"
+  },
+  {
+   "name": "Environmental forensics",
+   "summary": "Tracing pollution back to its source.",
+   "example": "Fingerprinting an oil spill.",
+   "channel": "Environmental Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1813,
+   "title": "Toxicology is born",
+   "text": "Mathieu Orfila publishes his treatise on poisons.",
+   "why": "The first systematic approach to detecting poisons."
+  },
+  {
+   "year": 1836,
+   "title": "The Marsh test",
+   "text": "James Marsh publishes a sensitive test for arsenic.",
+   "why": "Arsenic, a common poison, became detectable."
+  },
+  {
+   "year": 1910,
+   "title": "The first police laboratory",
+   "text": "Edmond Locard opens a forensic laboratory in Lyon.",
+   "why": "Science entered criminal investigation."
+  },
+  {
+   "year": 1954,
+   "title": "The Breathalyzer",
+   "text": "Robert Borkenstein invents a practical breath-alcohol instrument.",
+   "why": "Roadside measurement of intoxication."
+  },
+  {
+   "year": 1956,
+   "title": "GC–MS",
+   "text": "Roland Gohlke and Fred McLafferty couple gas chromatography to mass spectrometry.",
+   "why": "Became the gold standard for identifying drugs and residues."
+  },
+  {
+   "year": 1984,
+   "title": "DNA fingerprinting",
+   "text": "Alec Jeffreys discovers DNA fingerprinting.",
+   "why": "Changed how crimes are solved."
+  },
+  {
+   "year": 1988,
+   "title": "First DNA conviction",
+   "text": "Colin Pitchfork is convicted in England using DNA evidence; DNA had also cleared an innocent suspect.",
+   "why": "DNA can both convict and exonerate."
+  },
+  {
+   "year": 2009,
+   "title": "A call for rigour",
+   "text": "The US National Academy of Sciences report 'Strengthening Forensic Science' is published.",
+   "why": "Pushed for validation and standards across forensic methods."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "fo-001",
+   "q": "Locard's exchange principle states that…",
+   "options": [
+    "Every contact leaves a trace",
+    "Criminals return to the scene",
+    "Fingerprints are unique",
+    "DNA never lies"
+   ],
+   "answer": 0,
+   "explain": "Edmond Locard, early 20th century."
+  },
+  {
+   "id": "fo-002",
+   "q": "The Marsh test detects…",
+   "options": [
+    "Arsenic",
+    "Lead",
+    "Cyanide",
+    "Alcohol"
+   ],
+   "answer": 0,
+   "explain": "Arsenic is converted to arsine gas, which deposits a metallic film when heated."
+  },
+  {
+   "id": "fo-003",
+   "q": "What is the standard technique to confirm a seized drug?",
+   "options": [
+    "GC–MS",
+    "A colour test alone",
+    "Smell",
+    "Taste"
+   ],
+   "answer": 0,
+   "explain": "Separation plus a mass spectrum gives a near-certain identification."
+  },
+  {
+   "id": "fo-004",
+   "q": "A presumptive test is…",
+   "options": [
+    "A quick screening test that must be confirmed",
+    "Final proof accepted by any court",
+    "A DNA test carried out at the scene",
+    "A court ruling on the evidence"
+   ],
+   "answer": 0,
+   "explain": "Colour tests can give false positives."
+  },
+  {
+   "id": "fo-005",
+   "q": "A breath-alcohol instrument estimates…",
+   "options": [
+    "Blood alcohol concentration",
+    "Blood sugar",
+    "The type of drug",
+    "DNA"
+   ],
+   "answer": 0,
+   "explain": "Alcohol in breath is proportional to alcohol in blood."
+  },
+  {
+   "id": "fo-006",
+   "q": "The chain of custody is…",
+   "options": [
+    "A documented record of who handled evidence, and when",
+    "A list of suspects linked to the evidence",
+    "The laboratory equipment used for tests",
+    "A court order allowing evidence to be seized"
+   ],
+   "answer": 0,
+   "explain": "A broken chain can make evidence inadmissible."
+  },
+  {
+   "id": "fo-007",
+   "q": "Ignitable liquids in fire debris are identified by…",
+   "options": [
+    "Gas chromatography",
+    "Microscopy alone",
+    "Weighing",
+    "A flame test"
+   ],
+   "answer": 0,
+   "explain": "Each fuel gives a characteristic pattern of peaks."
+  },
+  {
+   "id": "fo-008",
+   "q": "Who founded forensic toxicology?",
+   "options": [
+    "Mathieu Orfila",
+    "Sherlock Holmes",
+    "Edmond Locard",
+    "Alec Jeffreys"
+   ],
+   "answer": 0,
+   "explain": "His 1813 treatise systematized poison detection."
+  },
+  {
+   "id": "fo-009",
+   "q": "Who discovered DNA fingerprinting in 1984?",
+   "options": [
+    "Alec Jeffreys",
+    "James Watson",
+    "Francis Crick",
+    "Rosalind Franklin"
+   ],
+   "answer": 0,
+   "explain": "At the University of Leicester."
+  },
+  {
+   "id": "fo-010",
+   "q": "Why use infrared spectroscopy on paint chips?",
+   "options": [
+    "It reveals the binder and pigment chemistry, so samples can be compared",
+    "It dates the car to the exact year it was made",
+    "It shows only the colour of the paint",
+    "It weighs the chip to identify its source"
+   ],
+   "answer": 0,
+   "explain": "Car paints have characteristic layered chemistry."
+  },
+  {
+   "id": "fo-011",
+   "q": "What did the 2009 US National Academy of Sciences report criticize?",
+   "options": [
+    "The lack of scientific validation for several forensic methods",
+    "The reliability of DNA analysis",
+    "Breathalyzers, and nothing else",
+    "The uniforms worn by police officers"
+   ],
+   "answer": 0,
+   "explain": "It called for research, standards and independence."
+  },
+  {
+   "id": "fo-012",
+   "q": "Luminol glows on contact with traces of…",
+   "options": [
+    "Blood, because haem catalyses its oxidation",
+    "Water, because it reacts with any liquid",
+    "Alcohol, because it oxidizes easily",
+    "Fingerprints, because of skin oils"
+   ],
+   "answer": 0,
+   "explain": "It is a presumptive test; other substances can also trigger it."
+  }
+ ],
+ "related": [
+  "Analytical Chemistry",
+  "Quality Control",
+  "Biological Chemistry",
+  "Environmental Chemistry",
+  "Medicinal Chemistry"
+ ]
+}

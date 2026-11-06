@@ -1,0 +1,299 @@
+{
+ "slug": "green-chemistry",
+ "channel": "Green Chemistry",
+ "number": 16,
+ "symbol": "Gr",
+ "category": "Synthesis & reactivity",
+ "name": "Green Chemistry",
+ "tagline": "Sustainable synthesis and eco-friendly practices for a cleaner future.",
+ "seo_title": "Green Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Green Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in sustainable synthesis, safer solvents, renewable feedstocks and green metrics.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#f27d91",
+  "accent2": "#f0b989",
+  "tile": "#2e1c12",
+  "motif": "helix"
+ },
+ "definition": {
+  "lead": "Green chemistry designs products and processes that reduce or eliminate hazardous substances from the start, instead of cleaning up afterwards.",
+  "body": "Its 12 principles cover waste prevention, atom economy, safer solvents, energy efficiency, renewable feedstocks and catalysis. The core idea is simple: the best waste is the waste you never make.",
+  "facts": [
+   {
+    "value": "12",
+    "label": "principles of green chemistry, set out by Anastas and Warner in 1998"
+   },
+   {
+    "value": "E-factor",
+    "label": "kilograms of waste per kilogram of product, Sheldon's metric"
+   },
+   {
+    "value": "25–100+",
+    "label": "typical E-factor range quoted for pharmaceutical manufacturing"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Atom economy",
+   "summary": "Designing reactions so most atoms end up in the product.",
+   "example": "Addition reactions waste almost nothing.",
+   "channel": ""
+  },
+  {
+   "name": "Safer solvents",
+   "summary": "Replacing toxic solvents, or using none at all.",
+   "example": "Water, ethanol, supercritical CO₂.",
+   "channel": "Solutions Chemistry"
+  },
+  {
+   "name": "Catalysis",
+   "summary": "Catalytic reagents instead of stoichiometric ones.",
+   "example": "Catalytic oxidations that replace chromium reagents.",
+   "channel": "Catalytic Chemistry"
+  },
+  {
+   "name": "Renewable feedstocks",
+   "summary": "Making chemicals from biomass instead of oil.",
+   "example": "Plastics and solvents from plant sugars.",
+   "channel": "Sustainable Materials & Circular Chemistry"
+  },
+  {
+   "name": "Energy efficiency",
+   "summary": "Running reactions at room temperature and pressure where possible.",
+   "example": "Biocatalysis and flow reactors.",
+   "channel": ""
+  },
+  {
+   "name": "Design for degradation",
+   "summary": "Products that break down harmlessly after use.",
+   "example": "Biodegradable polymers.",
+   "channel": ""
+  },
+  {
+   "name": "Green metrics",
+   "summary": "Measuring how green a process really is.",
+   "example": "E-factor and process mass intensity.",
+   "channel": ""
+  },
+  {
+   "name": "Safer chemicals",
+   "summary": "Designing molecules that keep their function with less toxicity.",
+   "example": "Phosgene-free routes to polycarbonates.",
+   "channel": "Environmental Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1962,
+   "title": "Silent Spring",
+   "text": "Rachel Carson's book raises public alarm about pesticides.",
+   "why": "Helped start the modern environmental movement."
+  },
+  {
+   "year": 1990,
+   "title": "Pollution prevention",
+   "text": "The United States passes the Pollution Prevention Act.",
+   "why": "Shifted policy from cleanup to prevention."
+  },
+  {
+   "year": 1991,
+   "title": "Atom economy",
+   "text": "Barry Trost introduces the concept of atom economy.",
+   "why": "A new way to judge reactions beyond yield."
+  },
+  {
+   "year": 1992,
+   "title": "The E-factor",
+   "text": "Roger Sheldon proposes measuring waste per kilogram of product.",
+   "why": "Showed how much waste fine chemicals generate."
+  },
+  {
+   "year": 1995,
+   "title": "Green chemistry awards",
+   "text": "The US Presidential Green Chemistry Challenge Awards are created.",
+   "why": "Rewarded industry for cleaner processes."
+  },
+  {
+   "year": 1998,
+   "title": "The 12 principles",
+   "text": "Paul Anastas and John Warner publish 'Green Chemistry: Theory and Practice'.",
+   "why": "The framework the whole field now uses."
+  },
+  {
+   "year": 1999,
+   "title": "A dedicated journal",
+   "text": "The Royal Society of Chemistry launches the journal Green Chemistry.",
+   "why": "Green chemistry becomes an established research field."
+  },
+  {
+   "year": 2002,
+   "title": "A greener drug process",
+   "text": "Pfizer's redesigned sertraline process wins a Presidential Green Chemistry award.",
+   "why": "Showed green chemistry can also cut costs."
+  },
+  {
+   "year": 2005,
+   "title": "Metathesis",
+   "text": "The Nobel committee calls olefin metathesis a great step forward for green chemistry.",
+   "why": "Fewer steps, less waste, fewer hazardous reagents."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "gr-001",
+   "q": "Who wrote the 12 principles of green chemistry?",
+   "options": [
+    "Paul Anastas and John Warner",
+    "Barry Trost",
+    "Roger Sheldon",
+    "Rachel Carson"
+   ],
+   "answer": 0,
+   "explain": "Published in their 1998 book."
+  },
+  {
+   "id": "gr-002",
+   "q": "The E-factor is…",
+   "options": [
+    "Kilograms of waste per kilogram of product",
+    "Energy per mole",
+    "Efficiency as a percentage",
+    "The number of steps"
+   ],
+   "answer": 0,
+   "explain": "Lower is better; the ideal is zero."
+  },
+  {
+   "id": "gr-003",
+   "q": "Atom economy is…",
+   "options": [
+    "The share of reactant atoms that end up in the product",
+    "The yield of the reaction",
+    "The speed of the reaction",
+    "The cost of the reagents"
+   ],
+   "answer": 0,
+   "explain": "A reaction can have a 100% yield and still poor atom economy."
+  },
+  {
+   "id": "gr-004",
+   "q": "What is the first principle of green chemistry?",
+   "options": [
+    "Prevention: it is better to avoid waste than to clean it up",
+    "Always use water as the reaction solvent",
+    "Never heat a reaction above room temperature",
+    "Use only enzymes as catalysts"
+   ],
+   "answer": 0,
+   "explain": "Treating waste after it forms is the least efficient option."
+  },
+  {
+   "id": "gr-005",
+   "q": "Why prefer catalytic reagents over stoichiometric ones?",
+   "options": [
+    "They are used in small amounts and regenerated, so less waste",
+    "They are always cheaper than any reagent",
+    "They always make reactions faster",
+    "They add colour so reactions are easy to follow"
+   ],
+   "answer": 0,
+   "explain": "A stoichiometric reagent ends up as waste for every mole of product."
+  },
+  {
+   "id": "gr-006",
+   "q": "Why is supercritical CO₂ used to decaffeinate coffee?",
+   "options": [
+    "It is a non-toxic solvent removed simply by releasing pressure",
+    "It is acidic and breaks down caffeine",
+    "It is very hot and evaporates the caffeine",
+    "It is oxygen that oxidizes the caffeine"
+   ],
+   "answer": 0,
+   "explain": "It replaces chlorinated solvents and leaves no residue."
+  },
+  {
+   "id": "gr-007",
+   "q": "Which sector typically has the highest E-factor?",
+   "options": [
+    "Pharmaceuticals",
+    "Oil refining",
+    "Bulk chemicals",
+    "Fertilizers"
+   ],
+   "answer": 0,
+   "explain": "Many steps and purifications per kilogram of a complex molecule."
+  },
+  {
+   "id": "gr-008",
+   "q": "'Design for degradation' means…",
+   "options": [
+    "Products should break down into harmless substances after use",
+    "Products should last forever",
+    "Products should be crushed after use",
+    "Products should be burned for energy"
+   ],
+   "answer": 0,
+   "explain": "Persistent chemicals accumulate in the environment."
+  },
+  {
+   "id": "gr-009",
+   "q": "Which 1962 book helped trigger the environmental movement?",
+   "options": [
+    "Silent Spring",
+    "The Double Helix",
+    "On the Origin of Species",
+    "Cosmos"
+   ],
+   "answer": 0,
+   "explain": "By Rachel Carson, about the effects of pesticides."
+  },
+  {
+   "id": "gr-010",
+   "q": "Which is a renewable feedstock?",
+   "options": [
+    "Plant sugars and other biomass",
+    "Crude oil",
+    "Coal",
+    "Natural gas"
+   ],
+   "answer": 0,
+   "explain": "Fossil feedstocks took millions of years to form."
+  },
+  {
+   "id": "gr-011",
+   "q": "Which reaction type has the highest atom economy?",
+   "options": [
+    "Addition reactions such as the Diels–Alder",
+    "Substitution reactions",
+    "Elimination reactions",
+    "The Wittig reaction"
+   ],
+   "answer": 0,
+   "explain": "All reactant atoms end up in the product."
+  },
+  {
+   "id": "gr-012",
+   "q": "Which solvent is generally considered greener than dichloromethane?",
+   "options": [
+    "Ethanol",
+    "Benzene",
+    "Chloroform",
+    "Carbon tetrachloride"
+   ],
+   "answer": 0,
+   "explain": "Solvent selection guides rank ethanol among the preferred solvents."
+  }
+ ],
+ "related": [
+  "Sustainable Materials & Circular Chemistry",
+  "Catalytic Chemistry",
+  "Environmental Chemistry",
+  "Energy Chemistry",
+  "Synthetic Chemistry"
+ ]
+}

@@ -1,0 +1,299 @@
+{
+ "slug": "chemical-systems",
+ "channel": "Chemical Systems",
+ "number": 56,
+ "symbol": "Cy",
+ "category": "Community",
+ "name": "Chemical Systems",
+ "tagline": "Complex reaction networks, oscillators, and far-from-equilibrium chemistry.",
+ "seo_title": "Chemical Systems — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Chemical Systems on LinkedIn and Facebook: paper summaries, news and innovations in reaction networks, oscillating reactions, patterns and far-from-equilibrium chemistry.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#dff27d",
+  "accent2": "#9ef089",
+  "tile": "#2a2311",
+  "motif": "wave"
+ },
+ "definition": {
+  "lead": "Chemical Systems explores reactions that do not simply go from A to B: networks with feedback, oscillating clocks, travelling waves, patterns and chaos.",
+  "body": "Far from equilibrium, chemistry can keep time, form stripes and spots, and even compute. The same principles help explain heartbeats, circadian rhythms and the patterns on animal coats.",
+  "facts": [
+   {
+    "value": "1951",
+    "label": "Boris Belousov observes an oscillating reaction"
+   },
+   {
+    "value": "1952",
+    "label": "Alan Turing publishes 'The Chemical Basis of Morphogenesis'"
+   },
+   {
+    "value": "1977",
+    "label": "Nobel Prize to Ilya Prigogine for dissipative structures"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Oscillating reactions",
+   "summary": "Concentrations that rise and fall rhythmically.",
+   "example": "The Belousov–Zhabotinsky reaction.",
+   "channel": ""
+  },
+  {
+   "name": "Turing patterns",
+   "summary": "Spots and stripes from reaction plus diffusion.",
+   "example": "Models of animal coat patterns.",
+   "channel": ""
+  },
+  {
+   "name": "Chemical waves",
+   "summary": "Reaction fronts that travel through a medium.",
+   "example": "Spiral waves in a dish.",
+   "channel": ""
+  },
+  {
+   "name": "Feedback & bistability",
+   "summary": "Systems with two stable states, and switches between them.",
+   "example": "Chemical switches and memory.",
+   "channel": ""
+  },
+  {
+   "name": "Chemical chaos",
+   "summary": "Deterministic but unpredictable behaviour.",
+   "example": "Chaotic oscillations in stirred reactors.",
+   "channel": ""
+  },
+  {
+   "name": "Biological rhythms",
+   "summary": "Chemical clocks in living things.",
+   "example": "The circadian clock.",
+   "channel": "Biological Chemistry"
+  },
+  {
+   "name": "Reaction networks",
+   "summary": "Many coupled reactions analysed together.",
+   "example": "Combustion and atmospheric networks.",
+   "channel": "Chemical Kinetics"
+  },
+  {
+   "name": "Non-equilibrium thermodynamics",
+   "summary": "The physics of systems driven by energy flow.",
+   "example": "Prigogine's dissipative structures.",
+   "channel": "Entropy in Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1920,
+   "title": "Oscillations in theory",
+   "text": "Alfred Lotka shows a simple reaction scheme can oscillate indefinitely.",
+   "why": "Oscillations are allowed by kinetics."
+  },
+  {
+   "year": 1921,
+   "title": "An early oscillating reaction",
+   "text": "William Bray reports oscillations in the reaction of hydrogen peroxide and iodate.",
+   "why": "Largely dismissed at the time."
+  },
+  {
+   "year": 1951,
+   "title": "Belousov's reaction",
+   "text": "Boris Belousov observes a solution that oscillates in colour; his paper is rejected.",
+   "why": "Later developed by Anatol Zhabotinsky into the BZ reaction."
+  },
+  {
+   "year": 1952,
+   "title": "Turing's morphogenesis",
+   "text": "Alan Turing shows that reaction and diffusion can create patterns.",
+   "why": "A chemical theory of biological pattern."
+  },
+  {
+   "year": 1968,
+   "title": "The Brusselator",
+   "text": "Ilya Prigogine and René Lefever propose a model oscillating reaction.",
+   "why": "A simple model of chemical oscillations."
+  },
+  {
+   "year": 1972,
+   "title": "The BZ mechanism",
+   "text": "Richard Field, Endre Kőrös and Richard Noyes explain the Belousov–Zhabotinsky reaction.",
+   "why": "Oscillations became chemically understood."
+  },
+  {
+   "year": 1973,
+   "title": "Briggs–Rauscher",
+   "text": "A vivid colour-oscillating reaction is introduced for classrooms.",
+   "why": "Oscillations became a favourite demonstration."
+  },
+  {
+   "year": 1977,
+   "title": "Nobel Prize",
+   "text": "Ilya Prigogine is honoured for non-equilibrium thermodynamics.",
+   "why": "Order far from equilibrium recognized."
+  },
+  {
+   "year": 1990,
+   "title": "Turing patterns in a gel",
+   "text": "Patrick De Kepper's group observes stationary Turing patterns experimentally.",
+   "why": "Turing's prediction confirmed after 38 years."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "cy-001",
+   "q": "What does the Belousov–Zhabotinsky reaction do?",
+   "options": [
+    "Its colour oscillates periodically",
+    "It explodes after a short delay",
+    "It glows green in the dark",
+    "It freezes and melts in cycles"
+   ],
+   "answer": 0,
+   "explain": "It can also form spiral waves in a thin layer."
+  },
+  {
+   "id": "cy-002",
+   "q": "Turing patterns arise from…",
+   "options": [
+    "Reactions combined with diffusion at different rates",
+    "Gravity pulling heavier molecules into stripes",
+    "Magnetic fields aligning the reacting molecules",
+    "Random noise alone, with no chemistry involved"
+   ],
+   "answer": 0,
+   "explain": "A slow activator and a fast inhibitor."
+  },
+  {
+   "id": "cy-003",
+   "q": "What does a chemical oscillation need?",
+   "options": [
+    "Conditions far from equilibrium, and feedback",
+    "Conditions exactly at chemical equilibrium",
+    "Freezing temperatures to slow the reaction down",
+    "A single reaction with no feedback at all"
+   ],
+   "answer": 0,
+   "explain": "Near equilibrium, reactions simply settle down."
+  },
+  {
+   "id": "cy-004",
+   "q": "Why can't a closed system oscillate forever?",
+   "options": [
+    "It inevitably approaches equilibrium",
+    "It runs out of space",
+    "The colours fade",
+    "It explodes"
+   ],
+   "answer": 0,
+   "explain": "Sustained oscillations need a continuous supply of reactants."
+  },
+  {
+   "id": "cy-005",
+   "q": "Autocatalysis provides…",
+   "options": [
+    "Positive feedback",
+    "Negative feedback",
+    "No feedback",
+    "Equilibrium"
+   ],
+   "answer": 0,
+   "explain": "A product speeds up its own production."
+  },
+  {
+   "id": "cy-006",
+   "q": "Bistability means a system…",
+   "options": [
+    "Has two stable states under the same conditions",
+    "Has two products that form at the same rate",
+    "Is twice as stable as a normal system",
+    "Has no stable state and changes randomly"
+   ],
+   "answer": 0,
+   "explain": "Like a light switch."
+  },
+  {
+   "id": "cy-007",
+   "q": "What was Turing's 1952 paper about?",
+   "options": [
+    "The chemical basis of morphogenesis",
+    "How electronic computers can be built",
+    "Breaking wartime codes with machines",
+    "The foundations of quantum mechanics"
+   ],
+   "answer": 0,
+   "explain": "How patterns can form in developing organisms."
+  },
+  {
+   "id": "cy-008",
+   "q": "Why was Belousov's paper rejected?",
+   "options": [
+    "Reviewers thought an oscillating reaction was impossible",
+    "It contained no experimental data at all",
+    "It was far longer than the journal allowed",
+    "It was about biology rather than chemistry"
+   ],
+   "answer": 0,
+   "explain": "It seemed to violate the second law. It does not."
+  },
+  {
+   "id": "cy-009",
+   "q": "A circadian rhythm is…",
+   "options": [
+    "A roughly 24-hour biological clock driven by biochemical feedback",
+    "A heart rhythm controlled by electrical pulses",
+    "A breathing pattern that changes during sleep",
+    "A yearly cycle driven by changes in daylight"
+   ],
+   "answer": 0,
+   "explain": "Nobel Prize in Medicine in 2017."
+  },
+  {
+   "id": "cy-010",
+   "q": "Why use a continuous stirred-tank reactor to study oscillations?",
+   "options": [
+    "It supplies reactants continuously, keeping the system far from equilibrium",
+    "It is cheaper than any other type of reactor",
+    "It removes coloured products as soon as they form",
+    "It cools the reaction to stop it overheating"
+   ],
+   "answer": 0,
+   "explain": "Oscillations can then last indefinitely."
+  },
+  {
+   "id": "cy-011",
+   "q": "When were stationary Turing patterns first seen experimentally?",
+   "options": [
+    "1990",
+    "1952",
+    "1921",
+    "2010"
+   ],
+   "answer": 0,
+   "explain": "In the CIMA reaction in a gel."
+  },
+  {
+   "id": "cy-012",
+   "q": "Spiral waves in a BZ dish resemble…",
+   "options": [
+    "Waves of electrical activity in heart tissue during some arrhythmias",
+    "Ocean waves driven by wind over long distances",
+    "Sound waves travelling through a solid material",
+    "Radio waves emitted by the reacting molecules"
+   ],
+   "answer": 0,
+   "explain": "The same mathematics of excitable media."
+  }
+ ],
+ "related": [
+  "Chemical Kinetics",
+  "Entropy in Chemistry",
+  "Molecular Systems",
+  "Amazing Lab Experiments",
+  "Physical Chemistry"
+ ]
+}

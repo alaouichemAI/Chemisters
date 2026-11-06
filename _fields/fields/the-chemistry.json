@@ -1,0 +1,311 @@
+{
+ "slug": "the-chemistry",
+ "channel": "The Chemistry",
+ "number": 49,
+ "symbol": "Ch",
+ "category": "Community",
+ "name": "The Chemistry",
+ "tagline": "Foundational concepts and the beautiful complexity of chemical science.",
+ "seo_title": "The Chemistry — foundations, news and innovations | Chemisters",
+ "seo_description": "Follow Chemisters The Chemistry on LinkedIn and Facebook: the foundations of chemistry, field news and innovations.",
+ "posts_about": [
+  "Core concepts",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#f2cf7d",
+  "accent2": "#cef089",
+  "tile": "#2a2311",
+  "motif": "hexagon"
+ },
+ "definition": {
+  "lead": "Chemistry is the science of matter: what substances are made of, how their atoms are bonded, and how they change into other substances.",
+  "body": "Everything you can touch is chemistry, from the air you breathe to the screen you are reading. This page explores the foundations every chemist builds on: atoms, bonds, reactions, energy and the periodic table.",
+  "facts": [
+   {
+    "value": "118",
+    "label": "elements, combining into more than 200 million registered substances"
+   },
+   {
+    "value": "6.022 × 10²³",
+    "label": "Avogadro's number: the number of particles in one mole"
+   },
+   {
+    "value": "1789",
+    "label": "Lavoisier's 'Elementary Treatise of Chemistry', often seen as the start of modern chemistry"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Organic chemistry",
+   "summary": "The chemistry of carbon compounds.",
+   "example": "Medicines, plastics and the molecules of life.",
+   "channel": "Organic Chemistry"
+  },
+  {
+   "name": "Inorganic chemistry",
+   "summary": "The chemistry of all the other elements, especially metals.",
+   "example": "Catalysts, pigments and minerals.",
+   "channel": "Inorganic Chemistry"
+  },
+  {
+   "name": "Physical chemistry",
+   "summary": "The physics behind chemical change.",
+   "example": "Energy, rates and quantum behaviour.",
+   "channel": "Physical Chemistry"
+  },
+  {
+   "name": "Analytical chemistry",
+   "summary": "Finding out what is in a sample, and how much.",
+   "example": "Drug testing and quality control.",
+   "channel": "Analytical Chemistry"
+  },
+  {
+   "name": "Biochemistry",
+   "summary": "The chemistry of living things.",
+   "example": "Enzymes, DNA and metabolism.",
+   "channel": "Biological Chemistry"
+  },
+  {
+   "name": "Materials chemistry",
+   "summary": "Designing substances with useful properties.",
+   "example": "Batteries, semiconductors and porous frameworks.",
+   "channel": "Chemistry of Materials"
+  },
+  {
+   "name": "Computational chemistry",
+   "summary": "Chemistry calculated on computers.",
+   "example": "Predicting molecular structures and energies.",
+   "channel": "Computational Chemistry"
+  },
+  {
+   "name": "Environmental chemistry",
+   "summary": "Chemicals in air, water and soil.",
+   "example": "Ozone, pollution and climate.",
+   "channel": "Environmental Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1661,
+   "title": "The Sceptical Chymist",
+   "text": "Robert Boyle challenges ancient ideas about elements.",
+   "why": "Pushed chemistry toward experiment."
+  },
+  {
+   "year": 1789,
+   "title": "Modern chemistry",
+   "text": "Antoine Lavoisier publishes his 'Elementary Treatise of Chemistry'.",
+   "why": "Conservation of mass and a modern list of elements."
+  },
+  {
+   "year": 1808,
+   "title": "Atoms",
+   "text": "John Dalton publishes his atomic theory.",
+   "why": "Each element has its own kind of atom."
+  },
+  {
+   "year": 1811,
+   "title": "Molecules",
+   "text": "Amedeo Avogadro proposes that equal gas volumes contain equal numbers of molecules.",
+   "why": "The basis of the mole."
+  },
+  {
+   "year": 1869,
+   "title": "The periodic table",
+   "text": "Dmitri Mendeleev arranges the elements by their properties.",
+   "why": "Chemistry's master map."
+  },
+  {
+   "year": 1897,
+   "title": "The electron",
+   "text": "J. J. Thomson discovers the electron.",
+   "why": "Atoms have parts."
+  },
+  {
+   "year": 1911,
+   "title": "The nucleus",
+   "text": "Ernest Rutherford shows that atoms have a tiny, dense nucleus.",
+   "why": "The modern picture of the atom."
+  },
+  {
+   "year": 1916,
+   "title": "The chemical bond",
+   "text": "Gilbert N. Lewis describes the covalent bond as a shared electron pair.",
+   "why": "Explained how atoms hold together."
+  },
+  {
+   "year": 1926,
+   "title": "Quantum chemistry",
+   "text": "Erwin Schrödinger publishes his wave equation.",
+   "why": "Chemistry explained from first principles."
+  },
+  {
+   "year": 1939,
+   "title": "The Nature of the Chemical Bond",
+   "text": "Linus Pauling publishes his landmark book.",
+   "why": "Brought quantum ideas to every chemist."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "ch-001",
+   "q": "What does an atom's nucleus contain?",
+   "options": [
+    "Protons and neutrons",
+    "Electrons only",
+    "Protons and electrons",
+    "Neutrons and electrons"
+   ],
+   "answer": 0,
+   "explain": "Electrons occupy the space around the nucleus."
+  },
+  {
+   "id": "ch-002",
+   "q": "What defines which element an atom is?",
+   "options": [
+    "Its number of protons",
+    "Its number of neutrons",
+    "Its mass",
+    "Its number of electrons"
+   ],
+   "answer": 0,
+   "explain": "Carbon always has 6 protons."
+  },
+  {
+   "id": "ch-003",
+   "q": "How many particles are in one mole?",
+   "options": [
+    "About 6.022 × 10²³",
+    "100",
+    "1,000,000",
+    "About 3.14 × 10⁸"
+   ],
+   "answer": 0,
+   "explain": "Avogadro's number."
+  },
+  {
+   "id": "ch-004",
+   "q": "A covalent bond is…",
+   "options": [
+    "A shared pair of electrons",
+    "An attraction between ions",
+    "A bond between metals only",
+    "A magnetic attraction"
+   ],
+   "answer": 0,
+   "explain": "As in water or methane."
+  },
+  {
+   "id": "ch-005",
+   "q": "An ionic bond is…",
+   "options": [
+    "The attraction between positive and negative ions",
+    "A pair of electrons shared between two atoms",
+    "A hydrogen bond between two molecules",
+    "A nuclear force inside the atom"
+   ],
+   "answer": 0,
+   "explain": "As in table salt, Na⁺Cl⁻."
+  },
+  {
+   "id": "ch-006",
+   "q": "Who established the conservation of mass in chemical reactions?",
+   "options": [
+    "Antoine Lavoisier",
+    "John Dalton",
+    "Robert Boyle",
+    "Dmitri Mendeleev"
+   ],
+   "answer": 0,
+   "explain": "Matter is neither created nor destroyed in a reaction."
+  },
+  {
+   "id": "ch-007",
+   "q": "Who discovered the electron?",
+   "options": [
+    "J. J. Thomson",
+    "Ernest Rutherford",
+    "Niels Bohr",
+    "John Dalton"
+   ],
+   "answer": 0,
+   "explain": "In 1897, using cathode rays."
+  },
+  {
+   "id": "ch-008",
+   "q": "What did Rutherford's gold foil experiment reveal?",
+   "options": [
+    "A tiny, dense, positively charged nucleus",
+    "That atoms are solid spheres",
+    "The electron",
+    "The neutron"
+   ],
+   "answer": 0,
+   "explain": "A few alpha particles bounced straight back."
+  },
+  {
+   "id": "ch-009",
+   "q": "Elements in the same group of the periodic table…",
+   "options": [
+    "Have similar chemical properties",
+    "Have the same mass",
+    "Are always gases",
+    "Have the same number of protons"
+   ],
+   "answer": 0,
+   "explain": "Because they have similar outer electron arrangements."
+  },
+  {
+   "id": "ch-010",
+   "q": "A catalyst…",
+   "options": [
+    "Speeds up a reaction without being used up",
+    "Slows down a reaction",
+    "Is a product",
+    "Is always a metal"
+   ],
+   "answer": 0,
+   "explain": "Enzymes are biological catalysts."
+  },
+  {
+   "id": "ch-011",
+   "q": "A solution with pH 7 is…",
+   "options": [
+    "Neutral",
+    "Strongly acidic",
+    "Strongly basic",
+    "Radioactive"
+   ],
+   "answer": 0,
+   "explain": "Pure water at 25 °C."
+  },
+  {
+   "id": "ch-012",
+   "q": "Which is the most abundant element in Earth's crust?",
+   "options": [
+    "Oxygen",
+    "Silicon",
+    "Iron",
+    "Carbon"
+   ],
+   "answer": 0,
+   "explain": "Nearly half of the crust's mass, mostly in silicates."
+  }
+ ],
+ "related": [
+  "Organic Chemistry",
+  "Physical Chemistry",
+  "Analytical Chemistry",
+  "Modern Chemistry",
+  "Chemistry News"
+ ],
+ "labels": {
+  "field": "Chemistry in one minute",
+  "map": "The map of chemistry",
+  "hist": "How chemistry got here",
+  "map_sub": "The main fields of chemistry. Each has its own Chemisters page — follow the ones you care about."
+ }
+}

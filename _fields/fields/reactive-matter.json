@@ -1,0 +1,305 @@
+{
+ "slug": "reactive-matter",
+ "channel": "Reactive Matter",
+ "number": 15,
+ "symbol": "Rm",
+ "category": "Synthesis & reactivity",
+ "name": "Reactive Matter",
+ "tagline": "Reactive intermediates, radical chemistry, and high-energy transformations.",
+ "seo_title": "Reactive Matter — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Reactive Matter on LinkedIn and Facebook: paper summaries, news and innovations in radicals, carbocations, carbenes, strained molecules and reactive intermediates.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#f2897d",
+  "accent2": "#f0d589",
+  "tile": "#2e1c12",
+  "motif": "triangles"
+ },
+ "definition": {
+  "lead": "Reactive Matter covers the short-lived, high-energy species that chemistry runs on: radicals, carbocations, carbanions and carbenes.",
+  "body": "Most reactions pass through intermediates that live for microseconds or less. Learning to generate, observe and tame them has given chemists new ways to build bonds, from radical polymerization to photoredox and electrochemical synthesis.",
+  "facts": [
+   {
+    "value": "1",
+    "label": "unpaired electron is all it takes to make a radical"
+   },
+   {
+    "value": "1900",
+    "label": "Moses Gomberg discovers the first persistent organic radical, triphenylmethyl"
+   },
+   {
+    "value": "1994",
+    "label": "Nobel Prize to George Olah for carbocation chemistry"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Free radicals",
+   "summary": "Species with an unpaired electron.",
+   "example": "Radical halogenation of alkanes.",
+   "channel": ""
+  },
+  {
+   "name": "Carbocations",
+   "summary": "Positively charged carbon intermediates.",
+   "example": "Observed directly in superacid solutions.",
+   "channel": ""
+  },
+  {
+   "name": "Carbanions & organometallics",
+   "summary": "Negatively polarized carbon nucleophiles.",
+   "example": "Grignard and organolithium reagents.",
+   "channel": ""
+  },
+  {
+   "name": "Carbenes",
+   "summary": "Neutral carbon with only two bonds and two non-bonding electrons.",
+   "example": "Stable N-heterocyclic carbenes used as ligands.",
+   "channel": ""
+  },
+  {
+   "name": "Radical polymerization",
+   "summary": "Chains grown one radical addition at a time.",
+   "example": "Polystyrene and PVC.",
+   "channel": "Polymers Chemistry"
+  },
+  {
+   "name": "Strained molecules",
+   "summary": "Molecules whose bond angles store energy.",
+   "example": "Cubane, with carbons at the corners of a cube.",
+   "channel": ""
+  },
+  {
+   "name": "Photoredox & electrochemical radicals",
+   "summary": "Using light or electrodes to make radicals under mild conditions.",
+   "example": "Room-temperature C–C bond formation.",
+   "channel": "Photochemistry"
+  },
+  {
+   "name": "Atmospheric radicals",
+   "summary": "Radicals that clean and change the air.",
+   "example": "The hydroxyl radical oxidizes many pollutants.",
+   "channel": "Environmental Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1900,
+   "title": "The first persistent radical",
+   "text": "Moses Gomberg prepares triphenylmethyl, a carbon radical stable in solution.",
+   "why": "Proved carbon radicals can exist."
+  },
+  {
+   "year": 1929,
+   "title": "Short-lived radicals detected",
+   "text": "Friedrich Paneth and Wilhelm Hofeditz detect methyl radicals in the gas phase.",
+   "why": "Showed simple radicals form during reactions."
+  },
+  {
+   "year": 1933,
+   "title": "The peroxide effect",
+   "text": "Morris Kharasch and Frank Mayo explain anti-Markovnikov addition of HBr through radicals.",
+   "why": "Radical chains became a tool for synthesis."
+  },
+  {
+   "year": 1962,
+   "title": "Carbocations made visible",
+   "text": "George Olah observes stable carbocations by NMR in superacid solutions.",
+   "why": "Turned a hypothetical intermediate into something you can study."
+  },
+  {
+   "year": 1964,
+   "title": "Cubane",
+   "text": "Philip Eaton and Thomas Cole synthesize cubane.",
+   "why": "A molecule once thought too strained to exist."
+  },
+  {
+   "year": 1991,
+   "title": "A bottleable carbene",
+   "text": "Anthony Arduengo isolates a stable N-heterocyclic carbene.",
+   "why": "Carbenes became everyday ligands and catalysts."
+  },
+  {
+   "year": 1994,
+   "title": "Nobel Prize for carbocations",
+   "text": "George Olah receives the Nobel Prize in Chemistry.",
+   "why": "Recognized decades of superacid chemistry."
+  },
+  {
+   "year": 1995,
+   "title": "Controlled radical polymerization",
+   "text": "Atom transfer radical polymerization is reported by Krzysztof Matyjaszewski and Mitsuo Sawamoto.",
+   "why": "Precise polymers from radical chemistry."
+  },
+  {
+   "year": 2005,
+   "title": "Metal carbenes at work",
+   "text": "Nobel Prize to Chauvin, Grubbs and Schrock for olefin metathesis.",
+   "why": "Metal–carbene catalysts reshuffle double bonds."
+  },
+  {
+   "year": 2008,
+   "title": "The photoredox revival",
+   "text": "David MacMillan's group couples visible-light photoredox catalysis with organocatalysis.",
+   "why": "Radicals made gently with visible light became mainstream."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "rm-001",
+   "q": "A free radical has…",
+   "options": [
+    "An unpaired electron",
+    "Always a positive charge",
+    "No electrons",
+    "Always a full octet"
+   ],
+   "answer": 0,
+   "explain": "The unpaired electron makes radicals highly reactive."
+  },
+  {
+   "id": "rm-002",
+   "q": "Which radical did Gomberg prepare in 1900?",
+   "options": [
+    "Triphenylmethyl",
+    "Methyl",
+    "Hydroxyl",
+    "Chlorine"
+   ],
+   "answer": 0,
+   "explain": "Three bulky phenyl rings protect and stabilize the radical centre."
+  },
+  {
+   "id": "rm-003",
+   "q": "Why are tertiary carbocations more stable than primary ones?",
+   "options": [
+    "Alkyl groups donate electron density through hyperconjugation",
+    "They are larger, so the charge is diluted",
+    "They have more hydrogens to share the charge",
+    "They carry a negative charge as well"
+   ],
+   "answer": 0,
+   "explain": "Each neighbouring C–H or C–C bond helps share the positive charge."
+  },
+  {
+   "id": "rm-004",
+   "q": "A carbene is…",
+   "options": [
+    "A carbon with two bonds and two non-bonding electrons",
+    "A carbon with five bonds and no lone pair",
+    "A carbon in a triple bond to another carbon",
+    "A carbon that is always positively charged"
+   ],
+   "answer": 0,
+   "explain": "Neutral but electron-deficient, and usually very reactive."
+  },
+  {
+   "id": "rm-005",
+   "q": "Radical chlorination of methane is started by…",
+   "options": [
+    "Light or heat splitting Cl₂ into chlorine atoms",
+    "Water that splits into hydroxyl radicals",
+    "Acid that protonates the methane",
+    "A magnet that aligns the electrons"
+   ],
+   "answer": 0,
+   "explain": "Then a chain of propagation steps takes over."
+  },
+  {
+   "id": "rm-006",
+   "q": "George Olah's Nobel Prize was for…",
+   "options": [
+    "Carbocation chemistry",
+    "Radicals",
+    "Carbenes",
+    "Polymers"
+   ],
+   "answer": 0,
+   "explain": "Awarded in 1994."
+  },
+  {
+   "id": "rm-007",
+   "q": "A superacid is…",
+   "options": [
+    "An acid stronger than 100% sulfuric acid",
+    "A strong base used to remove protons",
+    "A neutral salt that conducts electricity",
+    "A weak acid used in food"
+   ],
+   "answer": 0,
+   "explain": "Strong enough to protonate even hydrocarbons."
+  },
+  {
+   "id": "rm-008",
+   "q": "The carbon of a Grignard reagent behaves as…",
+   "options": [
+    "A carbanion-like nucleophile",
+    "A carbocation",
+    "A radical",
+    "An electrophile"
+   ],
+   "answer": 0,
+   "explain": "The C–Mg bond is polarized toward carbon."
+  },
+  {
+   "id": "rm-009",
+   "q": "With peroxides, HBr adds to alkenes 'anti-Markovnikov' through…",
+   "options": [
+    "A radical chain",
+    "A carbocation",
+    "A carbene",
+    "A concerted mechanism"
+   ],
+   "answer": 0,
+   "explain": "The bromine atom adds first to give the more stable carbon radical."
+  },
+  {
+   "id": "rm-010",
+   "q": "Grubbs metathesis catalysts are…",
+   "options": [
+    "Metal carbenes",
+    "Radicals",
+    "Carbocations",
+    "Enzymes"
+   ],
+   "answer": 0,
+   "explain": "A ruthenium=carbon double bond swaps partners with alkenes."
+  },
+  {
+   "id": "rm-011",
+   "q": "Why is cubane remarkable?",
+   "options": [
+    "Its carbons sit at the corners of a cube, with strained 90° angles",
+    "It is a gas that liquefies at room temperature",
+    "It is aromatic, like benzene",
+    "It is an ionic salt of carbon"
+   ],
+   "answer": 0,
+   "explain": "Carbon normally prefers angles near 109.5°."
+  },
+  {
+   "id": "rm-012",
+   "q": "The hydroxyl radical in the atmosphere…",
+   "options": [
+    "Oxidizes many pollutants, earning it the name 'detergent of the atmosphere'",
+    "Causes rain by forming water droplets",
+    "Is mainly a greenhouse gas that traps heat",
+    "Lasts for years and builds up over time"
+   ],
+   "answer": 0,
+   "explain": "It lives for less than a second but removes methane, CO and many other gases."
+  }
+ ],
+ "related": [
+  "Chemical Structure & Reactivity",
+  "Photochemistry",
+  "Polymers Chemistry",
+  "Organic Chemistry",
+  "Chemical Kinetics"
+ ]
+}

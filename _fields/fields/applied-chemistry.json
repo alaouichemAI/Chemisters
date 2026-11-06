@@ -1,0 +1,293 @@
+{
+ "slug": "applied-chemistry",
+ "channel": "Applied Chemistry",
+ "number": 23,
+ "symbol": "Ap",
+ "category": "Applied & industrial",
+ "name": "Applied Chemistry",
+ "tagline": "Real-world applications of chemistry in agriculture, industry, and daily life.",
+ "seo_title": "Applied Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Applied Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in agricultural chemistry, water treatment, coatings, detergents and everyday products.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#eaf27d",
+  "accent2": "#a8f089",
+  "tile": "#1b2513",
+  "motif": "bonds"
+ },
+ "definition": {
+  "lead": "Applied chemistry puts chemical knowledge to work on practical problems: cleaner water, better crops, safer products and longer-lasting materials.",
+  "body": "It spans agriculture, cosmetics, paints, detergents, textiles, construction and countless everyday products. Where basic research asks 'why?', applied chemistry asks 'how do we make this work, at a price people can pay?'",
+  "facts": [
+   {
+    "value": "1824",
+    "label": "Joseph Aspdin patents Portland cement"
+   },
+   {
+    "value": "1840",
+    "label": "Justus von Liebig's book founds agricultural chemistry"
+   },
+   {
+    "value": "1919",
+    "label": "IUPAC, the International Union of Pure and Applied Chemistry, is founded"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Agricultural chemistry",
+   "summary": "Fertilizers, soil chemistry and crop protection.",
+   "example": "NPK fertilizers.",
+   "channel": ""
+  },
+  {
+   "name": "Water treatment",
+   "summary": "Making water safe to drink and to release.",
+   "example": "Chlorination and coagulation.",
+   "channel": "Environmental Chemistry"
+  },
+  {
+   "name": "Surfactants & detergents",
+   "summary": "Molecules that clean by bridging oil and water.",
+   "example": "Laundry detergents.",
+   "channel": "Surface Chemistry"
+  },
+  {
+   "name": "Coatings & paints",
+   "summary": "Thin films that protect and decorate.",
+   "example": "Anticorrosion coatings for steel.",
+   "channel": ""
+  },
+  {
+   "name": "Cosmetics & personal care",
+   "summary": "Formulating safe, stable products for skin and hair.",
+   "example": "UV filters in sunscreens.",
+   "channel": ""
+  },
+  {
+   "name": "Textile chemistry",
+   "summary": "Fibres, dyes and finishes.",
+   "example": "Reactive dyes that bond to cotton.",
+   "channel": ""
+  },
+  {
+   "name": "Construction chemistry",
+   "summary": "Cement, concrete and admixtures.",
+   "example": "How cement hardens by hydration.",
+   "channel": ""
+  },
+  {
+   "name": "Food applications",
+   "summary": "Preservatives, flavours and texturizers.",
+   "example": "Antioxidants that delay rancidity.",
+   "channel": "Foods Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1824,
+   "title": "Portland cement",
+   "text": "Joseph Aspdin patents Portland cement.",
+   "why": "The basis of modern concrete."
+  },
+  {
+   "year": 1839,
+   "title": "Vulcanized rubber",
+   "text": "Charles Goodyear heats rubber with sulfur.",
+   "why": "Made rubber stable enough for tyres and seals."
+  },
+  {
+   "year": 1840,
+   "title": "Agricultural chemistry",
+   "text": "Justus von Liebig publishes his book on chemistry applied to agriculture.",
+   "why": "Explained plant nutrition and inspired mineral fertilizers."
+  },
+  {
+   "year": 1856,
+   "title": "Mauveine",
+   "text": "William Perkin's synthetic dye launches an industry.",
+   "why": "Chemistry entered fashion and textiles."
+  },
+  {
+   "year": 1908,
+   "title": "Chlorinated drinking water",
+   "text": "Jersey City in the US starts continuous chlorination of its public water supply.",
+   "why": "Sharply reduced waterborne diseases such as typhoid."
+  },
+  {
+   "year": 1919,
+   "title": "IUPAC",
+   "text": "The International Union of Pure and Applied Chemistry is founded.",
+   "why": "Common names, symbols and standards for chemists worldwide."
+  },
+  {
+   "year": 1939,
+   "title": "DDT's insecticidal action",
+   "text": "Paul Müller discovers that DDT kills insects; it is later restricted for its environmental persistence.",
+   "why": "Nobel Prize in Medicine in 1948, and a lesson in unintended consequences."
+  },
+  {
+   "year": 1946,
+   "title": "Synthetic laundry detergent",
+   "text": "Procter & Gamble launches Tide, a synthetic detergent with phosphate builders.",
+   "why": "Detergents replaced soap for washing clothes."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "ap-001",
+   "q": "What does NPK on a fertilizer bag mean?",
+   "options": [
+    "Nitrogen, phosphorus, potassium",
+    "Neon, platinum, krypton",
+    "Nickel, lead, potassium",
+    "Nitrate, phosphate, calcium"
+   ],
+   "answer": 0,
+   "explain": "K comes from 'kalium', the Latin name for potassium."
+  },
+  {
+   "id": "ap-002",
+   "q": "Chlorinating drinking water…",
+   "options": [
+    "Kills disease-causing microbes",
+    "Adds minerals",
+    "Softens the water",
+    "Colours the water"
+   ],
+   "answer": 0,
+   "explain": "It also leaves a residual that protects water in the pipes."
+  },
+  {
+   "id": "ap-003",
+   "q": "A surfactant molecule has…",
+   "options": [
+    "A water-loving head and an oil-loving tail",
+    "Two acid groups that react with dirt",
+    "A metal centre that attracts grease",
+    "Only ions, with no carbon chain at all"
+   ],
+   "answer": 0,
+   "explain": "It sits at oil–water interfaces and lowers surface tension."
+  },
+  {
+   "id": "ap-004",
+   "q": "What does vulcanization do to rubber?",
+   "options": [
+    "Cross-links it with sulfur so it stays elastic",
+    "Melts it so it can be poured into moulds",
+    "Turns it into a hard, glassy solid",
+    "Removes sulfur so it no longer smells"
+   ],
+   "answer": 0,
+   "explain": "Natural rubber alone gets sticky when hot and brittle when cold."
+  },
+  {
+   "id": "ap-005",
+   "q": "Hard water contains…",
+   "options": [
+    "Calcium and magnesium ions",
+    "Only sodium",
+    "Iron oxide particles",
+    "Chlorine"
+   ],
+   "answer": 0,
+   "explain": "They form limescale and reduce soap lather."
+  },
+  {
+   "id": "ap-006",
+   "q": "Sunscreen UV filters work by…",
+   "options": [
+    "Absorbing or scattering UV light",
+    "Cooling the skin",
+    "Adding vitamins",
+    "Reflecting only heat"
+   ],
+   "answer": 0,
+   "explain": "Organic filters absorb; mineral filters also scatter."
+  },
+  {
+   "id": "ap-007",
+   "q": "Cement hardens by…",
+   "options": [
+    "Hydration reactions that form calcium silicate hydrates",
+    "Simply drying out as the water evaporates",
+    "Burning slowly in air like charcoal",
+    "Freezing water that locks the sand grains together"
+   ],
+   "answer": 0,
+   "explain": "Concrete kept wet cures better than concrete left to dry."
+  },
+  {
+   "id": "ap-008",
+   "q": "IUPAC stands for…",
+   "options": [
+    "International Union of Pure and Applied Chemistry",
+    "International Union of Practical and Analytical Chemistry",
+    "Institute of Universal Physics and Chemistry",
+    "International Unit of Physical Constants"
+   ],
+   "answer": 0,
+   "explain": "It sets naming rules and atomic weights."
+  },
+  {
+   "id": "ap-009",
+   "q": "Liebig's 1840 book founded…",
+   "options": [
+    "Agricultural chemistry",
+    "Polymer chemistry",
+    "Nuclear chemistry",
+    "Organic synthesis"
+   ],
+   "answer": 0,
+   "explain": "He showed plants need mineral nutrients such as nitrogen and phosphorus."
+  },
+  {
+   "id": "ap-010",
+   "q": "Why do some sunscreens contain zinc oxide or titanium dioxide?",
+   "options": [
+    "They are mineral UV filters",
+    "For colour",
+    "For smell",
+    "As preservatives"
+   ],
+   "answer": 0,
+   "explain": "Fine particles block both UVA and UVB."
+  },
+  {
+   "id": "ap-011",
+   "q": "In a paint, the binder is…",
+   "options": [
+    "The film-forming polymer that holds the pigment to the surface",
+    "The coloured powder that gives the paint its shade",
+    "The solvent that evaporates after the paint is applied",
+    "The dye dissolved in water that soaks into the wall"
+   ],
+   "answer": 0,
+   "explain": "Pigment gives colour; binder gives adhesion and durability."
+  },
+  {
+   "id": "ap-012",
+   "q": "Why is DDT restricted today, despite killing insects effectively?",
+   "options": [
+    "It persists in the environment and builds up in food chains",
+    "It became too expensive once oil prices rose",
+    "Insects stopped being affected by it within a year",
+    "Its strong smell made it unusable in homes and farms"
+   ],
+   "answer": 0,
+   "explain": "It thinned the eggshells of birds of prey, among other effects."
+  }
+ ],
+ "related": [
+  "Industrial Chemistry",
+  "Foods Chemistry",
+  "Environmental Chemistry",
+  "Surface Chemistry",
+  "Polymers Chemistry"
+ ]
+}

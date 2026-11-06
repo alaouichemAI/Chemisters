@@ -1,0 +1,308 @@
+{
+ "slug": "amazing-lab-experiments",
+ "channel": "Amazing Lab Experiments",
+ "number": 54,
+ "symbol": "Le",
+ "category": "Community",
+ "name": "Amazing Lab Experiments",
+ "tagline": "Spectacular demonstrations and experimental chemistry that inspires curiosity.",
+ "seo_title": "Amazing Lab Experiments — spectacular chemistry explained | Chemisters",
+ "seo_description": "Follow Chemisters Amazing Lab Experiments on LinkedIn and Facebook: spectacular chemistry experiments and the science behind them.",
+ "posts_about": [
+  "Experiments",
+  "Demonstrations",
+  "The chemistry behind them"
+ ],
+ "theme": {
+  "accent": "#f2cb7d",
+  "accent2": "#d1f089",
+  "tile": "#2a2311",
+  "motif": "spark"
+ },
+ "definition": {
+  "lead": "Amazing Lab Experiments celebrates the experiments that make chemistry visible: colour changes, glowing reactions, oscillating clocks and classic demonstrations, with the chemistry behind each one.",
+  "body": "Behind every spectacular demonstration is a principle worth understanding: redox, catalysis, equilibrium, chemiluminescence. Many of these experiments are hazardous and must only be performed by trained people with proper safety equipment.",
+  "facts": [
+   {
+    "value": "1886",
+    "label": "Hans Landolt describes the iodine clock reaction"
+   },
+   {
+    "value": "1928",
+    "label": "luminol's glow (chemiluminescence) is described"
+   },
+   {
+    "value": "Safety first",
+    "label": "these demonstrations need trained people and proper protection"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Colour changes",
+   "summary": "Reactions that switch colour suddenly or gradually.",
+   "example": "The iodine clock.",
+   "channel": ""
+  },
+  {
+   "name": "Chemiluminescence",
+   "summary": "Reactions that give off light instead of heat.",
+   "example": "Luminol and glow sticks.",
+   "channel": ""
+  },
+  {
+   "name": "Oscillating reactions",
+   "summary": "Colours that change back and forth on their own.",
+   "example": "The Briggs–Rauscher reaction.",
+   "channel": "Chemical Systems"
+  },
+  {
+   "name": "Catalysis demos",
+   "summary": "Watching a catalyst speed things up.",
+   "example": "'Elephant toothpaste' from hydrogen peroxide.",
+   "channel": ""
+  },
+  {
+   "name": "Electrochemistry demos",
+   "summary": "Making electricity from chemistry, and the reverse.",
+   "example": "Fruit batteries and water electrolysis.",
+   "channel": "Electrochemistry"
+  },
+  {
+   "name": "Crystal growth",
+   "summary": "Watching order appear from solution.",
+   "example": "Copper sulfate crystals.",
+   "channel": ""
+  },
+  {
+   "name": "Cold & phase changes",
+   "summary": "Matter at very low temperatures.",
+   "example": "Liquid nitrogen demonstrations.",
+   "channel": ""
+  },
+  {
+   "name": "Historic experiments",
+   "summary": "Experiments that changed science.",
+   "example": "Rutherford's gold foil experiment.",
+   "channel": "Failed Discoveries That Changed Science"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1774,
+   "title": "Oxygen",
+   "text": "Joseph Priestley heats mercury oxide and collects a gas in which candles burn brightly.",
+   "why": "A new element from a simple experiment."
+  },
+  {
+   "year": 1783,
+   "title": "What water is made of",
+   "text": "Antoine Lavoisier shows that water forms from hydrogen and oxygen.",
+   "why": "Water is a compound, not an element."
+  },
+  {
+   "year": 1800,
+   "title": "Splitting water with electricity",
+   "text": "William Nicholson and Anthony Carlisle electrolyse water.",
+   "why": "Weeks after learning of Volta's new battery."
+  },
+  {
+   "year": 1886,
+   "title": "The iodine clock",
+   "text": "Hans Landolt describes a reaction that turns blue-black suddenly after a delay.",
+   "why": "A classic demonstration of kinetics."
+  },
+  {
+   "year": 1909,
+   "title": "Gold foil",
+   "text": "Hans Geiger and Ernest Marsden fire alpha particles at gold foil; a few bounce back.",
+   "why": "Led Rutherford to the atomic nucleus."
+  },
+  {
+   "year": 1928,
+   "title": "Luminol",
+   "text": "H. O. Albrecht describes the bright chemiluminescence of luminol.",
+   "why": "Later used in forensic science."
+  },
+  {
+   "year": 1951,
+   "title": "An oscillating reaction",
+   "text": "Boris Belousov observes a solution that changes colour back and forth.",
+   "why": "At first, reviewers thought it impossible."
+  },
+  {
+   "year": 1953,
+   "title": "Life's building blocks in a flask",
+   "text": "The Miller–Urey experiment makes amino acids from simple gases.",
+   "why": "A famous origin-of-life experiment."
+  },
+  {
+   "year": 1973,
+   "title": "Briggs–Rauscher",
+   "text": "Two teachers create a striking colour-oscillating reaction for classroom use.",
+   "why": "Now a favourite demonstration worldwide."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "le-001",
+   "q": "Why does 'elephant toothpaste' foam so much?",
+   "options": [
+    "Hydrogen peroxide decomposes quickly into oxygen gas, sped up by a catalyst",
+    "Soap reacts with air to release large amounts of nitrogen",
+    "Water boils instantly when it touches the soap mixture",
+    "Vinegar and baking soda release carbon dioxide inside"
+   ],
+   "answer": 0,
+   "explain": "Iodide or yeast catalase is the usual catalyst; soap traps the oxygen."
+  },
+  {
+   "id": "le-002",
+   "q": "Why does the iodine clock turn blue-black suddenly?",
+   "options": [
+    "Iodine builds up and binds starch once the thiosulfate is used up",
+    "A beam of light suddenly reaches the starch in the beaker",
+    "The solution cools below a critical temperature at once",
+    "Starch only turns blue once it has been fully dissolved"
+   ],
+   "answer": 0,
+   "explain": "The delay depends on concentrations and temperature."
+  },
+  {
+   "id": "le-003",
+   "q": "Where does the light in a glow stick come from?",
+   "options": [
+    "A chemical reaction that excites a dye: chemiluminescence",
+    "A tiny battery inside powers a light-emitting dye",
+    "A small amount of radioactive material excites the dye",
+    "Heat from mixing makes the liquid glow like a filament"
+   ],
+   "answer": 0,
+   "explain": "Breaking the inner vial mixes the reactants."
+  },
+  {
+   "id": "le-004",
+   "q": "Why does luminol glow at crime scenes?",
+   "options": [
+    "Iron in blood catalyses its oxidation",
+    "It reacts with water",
+    "It reacts with light only",
+    "It is radioactive"
+   ],
+   "answer": 0,
+   "explain": "It is a presumptive test, not proof."
+  },
+  {
+   "id": "le-005",
+   "q": "The Briggs–Rauscher reaction…",
+   "options": [
+    "Oscillates between colourless, amber and dark blue",
+    "Explodes once two clear solutions are mixed together",
+    "Freezes instantly, then melts back again in cycles",
+    "Glows green in the dark for several hours"
+   ],
+   "answer": 0,
+   "explain": "Iodine chemistry with feedback loops."
+  },
+  {
+   "id": "le-006",
+   "q": "At what temperature does liquid nitrogen boil?",
+   "options": [
+    "About −196 °C",
+    "About 0 °C",
+    "About −78 °C",
+    "About −273 °C"
+   ],
+   "answer": 0,
+   "explain": "−78 °C is dry ice; −273 °C is absolute zero."
+  },
+  {
+   "id": "le-007",
+   "q": "Why does a balloon shrink in liquid nitrogen?",
+   "options": [
+    "The gas inside contracts as it cools (Charles's law)",
+    "The rubber melts",
+    "The air escapes",
+    "Nitrogen enters the balloon"
+   ],
+   "answer": 0,
+   "explain": "It re-inflates as it warms."
+  },
+  {
+   "id": "le-008",
+   "q": "Why does a lemon battery work?",
+   "options": [
+    "Two different metals in an acidic electrolyte form a redox cell",
+    "Lemons store electricity collected from sunlight",
+    "Vitamin C molecules carry an electric charge by themselves",
+    "The citric acid makes the metals magnetic"
+   ],
+   "answer": 0,
+   "explain": "The lemon is just the electrolyte."
+  },
+  {
+   "id": "le-009",
+   "q": "What did the gold foil experiment show?",
+   "options": [
+    "Atoms have a tiny, dense nucleus",
+    "Atoms are solid",
+    "Gold is radioactive",
+    "Electrons orbit in circles"
+   ],
+   "answer": 0,
+   "explain": "Rutherford compared it to a shell bouncing off tissue paper."
+  },
+  {
+   "id": "le-010",
+   "q": "Electrolysing water gives hydrogen and oxygen in a volume ratio of…",
+   "options": [
+    "2 : 1",
+    "1 : 1",
+    "1 : 2",
+    "3 : 1"
+   ],
+   "answer": 0,
+   "explain": "H₂O has two hydrogens per oxygen."
+  },
+  {
+   "id": "le-011",
+   "q": "The thermite reaction between iron oxide and aluminium is used to…",
+   "options": [
+    "Weld railway tracks",
+    "Make ice",
+    "Purify water",
+    "Make glass"
+   ],
+   "answer": 0,
+   "explain": "It produces molten iron. Only for trained professionals."
+  },
+  {
+   "id": "le-012",
+   "q": "Why must demonstrations like these be done by trained people?",
+   "options": [
+    "Heat, toxic gases, splashes and explosions pose real risks",
+    "They are secret",
+    "They need expensive cameras",
+    "They only work in labs by law"
+   ],
+   "answer": 0,
+   "explain": "Safety glasses, gloves and planning are the minimum."
+  }
+ ],
+ "related": [
+  "Chemical Systems",
+  "Electrochemistry",
+  "Failed Discoveries That Changed Science",
+  "Creative Chemistry",
+  "The Chemistry"
+ ],
+ "labels": {
+  "field_eyebrow": "What this page is",
+  "field": "Why experiments matter",
+  "map_eyebrow": "Experiment types",
+  "map": "The kinds of experiments we show",
+  "map_sub": "Each type shows a different principle of chemistry in action.",
+  "hist_eyebrow": "Classics",
+  "hist": "Experiments that made history"
+ }
+}

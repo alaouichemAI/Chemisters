@@ -1,0 +1,305 @@
+{
+ "slug": "thermochemistry",
+ "channel": "Thermochemistry",
+ "number": 7,
+ "symbol": "Td",
+ "category": "Core chemistry",
+ "name": "Thermochemistry",
+ "tagline": "Heat flow, enthalpy, and energy changes in chemical reactions.",
+ "seo_title": "Thermochemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Thermochemistry on LinkedIn and Facebook: paper summaries, news and innovations in calorimetry, enthalpy, fuels and the energetics of reactions.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#7ddbf2",
+  "accent2": "#899af0",
+  "tile": "#15213d",
+  "motif": "triangles"
+ },
+ "definition": {
+  "lead": "Thermochemistry measures the heat that flows in and out of chemical reactions and changes of state.",
+  "body": "Every fuel, every cold pack and every metabolic pathway is an energy balance. With enthalpies of formation and Hess's law, chemists can predict the heat of reactions they have never run.",
+  "facts": [
+   {
+    "value": "4.184 J",
+    "label": "in one thermochemical calorie"
+   },
+   {
+    "value": "1840",
+    "label": "Germain Hess states the law of constant heat summation"
+   },
+   {
+    "value": "−890 kJ",
+    "label": "released per mole of methane burned"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Calorimetry",
+   "summary": "Measuring heat flow with calorimeters.",
+   "example": "Bomb calorimeters give the energy values printed on food labels.",
+   "channel": ""
+  },
+  {
+   "name": "Enthalpies of formation",
+   "summary": "The heat of making a compound from its elements.",
+   "example": "Tables of them give the ΔH of almost any reaction.",
+   "channel": ""
+  },
+  {
+   "name": "Hess's law",
+   "summary": "The heat of a reaction does not depend on the route.",
+   "example": "Finding ΔH for C → CO from combustion data.",
+   "channel": ""
+  },
+  {
+   "name": "Fuels & combustion",
+   "summary": "Comparing how much energy different fuels release.",
+   "example": "Energy per kilogram of hydrogen, petrol and coal.",
+   "channel": "Energy Chemistry"
+  },
+  {
+   "name": "Phase changes",
+   "summary": "Latent heats of melting, boiling and sublimation.",
+   "example": "Sweating cools the body through evaporation.",
+   "channel": ""
+  },
+  {
+   "name": "Bond enthalpies",
+   "summary": "Estimating reaction heats from the bonds broken and formed.",
+   "example": "Why burning hydrocarbons releases so much energy.",
+   "channel": ""
+  },
+  {
+   "name": "Free energy & spontaneity",
+   "summary": "Combining heat and entropy to predict direction.",
+   "example": "ΔG = ΔH − TΔS.",
+   "channel": "Entropy in Chemistry"
+  },
+  {
+   "name": "Bioenergetics",
+   "summary": "How living cells capture and spend energy.",
+   "example": "ATP hydrolysis powers muscle contraction.",
+   "channel": "Biological Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1761,
+   "title": "Latent heat",
+   "text": "Joseph Black finds that melting ice absorbs heat without warming up.",
+   "why": "Separated the ideas of heat and temperature."
+  },
+  {
+   "year": 1783,
+   "title": "The ice calorimeter",
+   "text": "Antoine Lavoisier and Pierre-Simon Laplace measure heat by the amount of ice it melts.",
+   "why": "Showed that respiration is a slow combustion."
+  },
+  {
+   "year": 1840,
+   "title": "Hess's law",
+   "text": "Germain Hess shows that the total heat of a reaction is independent of the path.",
+   "why": "Made it possible to compute heats that cannot be measured directly."
+  },
+  {
+   "year": 1845,
+   "title": "The mechanical equivalent of heat",
+   "text": "James Joule measures how much work produces a given amount of heat.",
+   "why": "Heat is a form of energy."
+  },
+  {
+   "year": 1850,
+   "title": "The laws of thermodynamics",
+   "text": "Rudolf Clausius states the first and second laws in modern form.",
+   "why": "The framework of all energy calculations."
+  },
+  {
+   "year": 1876,
+   "title": "Free energy",
+   "text": "Josiah Willard Gibbs begins publishing his theory of chemical equilibrium.",
+   "why": "Combined heat and entropy in one quantity."
+  },
+  {
+   "year": 1906,
+   "title": "Nernst's heat theorem",
+   "text": "Walther Nernst formulates what becomes the third law.",
+   "why": "Allowed equilibria to be computed from heat data."
+  },
+  {
+   "year": 1923,
+   "title": "Thermodynamics for chemists",
+   "text": "G. N. Lewis and Merle Randall publish their textbook on free energy of chemical substances.",
+   "why": "Organized thermochemical data for practical use."
+  },
+  {
+   "year": 1949,
+   "title": "Close to absolute zero",
+   "text": "Nobel Prize to William Giauque for low-temperature chemical thermodynamics.",
+   "why": "Confirmed the third law experimentally."
+  },
+  {
+   "year": 1997,
+   "title": "The ATP machine",
+   "text": "Nobel Prize to Boyer and Walker for the mechanism of ATP synthase, shared with Jens Skou.",
+   "why": "Explained how cells store chemical energy."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "td-001",
+   "q": "For an exothermic reaction, ΔH is…",
+   "options": [
+    "Negative",
+    "Positive",
+    "Zero",
+    "Undefined"
+   ],
+   "answer": 0,
+   "explain": "The system loses heat to the surroundings."
+  },
+  {
+   "id": "td-002",
+   "q": "Hess's law states that…",
+   "options": [
+    "The total ΔH is the same whatever the route",
+    "Heat flows from cold to hot",
+    "Entropy always increases",
+    "Rates double every 10 °C"
+   ],
+   "answer": 0,
+   "explain": "Enthalpy is a state function: only the start and end points matter."
+  },
+  {
+   "id": "td-003",
+   "q": "The standard enthalpy of formation of O₂ gas is…",
+   "options": [
+    "Zero",
+    "−286 kJ/mol",
+    "+498 kJ/mol",
+    "1 kJ/mol"
+   ],
+   "answer": 0,
+   "explain": "By definition, elements in their standard state have ΔHf° = 0."
+  },
+  {
+   "id": "td-004",
+   "q": "Why does an ammonium nitrate cold pack feel cold?",
+   "options": [
+    "Dissolving it is endothermic",
+    "Dissolving it is exothermic",
+    "It is a nuclear reaction",
+    "It is a combustion"
+   ],
+   "answer": 0,
+   "explain": "The dissolution absorbs heat from its surroundings, including your hand."
+  },
+  {
+   "id": "td-005",
+   "q": "A bomb calorimeter measures heat at constant…",
+   "options": [
+    "Volume",
+    "Pressure",
+    "Temperature",
+    "Mass"
+   ],
+   "answer": 0,
+   "explain": "The sealed steel vessel keeps volume fixed, so it measures ΔU."
+  },
+  {
+   "id": "td-006",
+   "q": "Why is a steam burn at 100 °C worse than a burn from water at 100 °C?",
+   "options": [
+    "Steam releases its heat of vaporization as it condenses on the skin",
+    "Steam is always hotter than boiling water",
+    "Steam contains acid that attacks the skin",
+    "Steam is denser, so it presses heat into the skin"
+   ],
+   "answer": 0,
+   "explain": "Condensing water releases about 40 kJ per mole on top of the hot water itself."
+  },
+  {
+   "id": "td-007",
+   "q": "In q = mcΔT, c stands for…",
+   "options": [
+    "Specific heat capacity",
+    "Concentration",
+    "The speed of light",
+    "Charge"
+   ],
+   "answer": 0,
+   "explain": "The heat needed to warm 1 g of the substance by 1 °C."
+  },
+  {
+   "id": "td-008",
+   "q": "Estimating ΔH from bond enthalpies: ΔH ≈ …",
+   "options": [
+    "Bonds broken − bonds formed",
+    "Bonds formed − bonds broken",
+    "Bonds broken + bonds formed",
+    "Zero"
+   ],
+   "answer": 0,
+   "explain": "Breaking bonds costs energy; forming bonds releases it."
+  },
+  {
+   "id": "td-009",
+   "q": "A process is spontaneous when…",
+   "options": [
+    "ΔG = ΔH − TΔS is negative",
+    "ΔH is always positive",
+    "ΔS is always negative",
+    "T equals zero"
+   ],
+   "answer": 0,
+   "explain": "Gibbs energy weighs heat against entropy."
+  },
+  {
+   "id": "td-010",
+   "q": "Who stated the law of constant heat summation in 1840?",
+   "options": [
+    "Germain Hess",
+    "James Joule",
+    "Antoine Lavoisier",
+    "Josiah Willard Gibbs"
+   ],
+   "answer": 0,
+   "explain": "Hess was a Swiss-born chemist working in Saint Petersburg."
+  },
+  {
+   "id": "td-011",
+   "q": "Burning 1 mol of methane releases about 890 kJ. How much does burning 2 mol release?",
+   "options": [
+    "About 1,780 kJ",
+    "About 890 kJ",
+    "About 445 kJ",
+    "About 3,560 kJ"
+   ],
+   "answer": 0,
+   "explain": "Enthalpy is extensive: double the amount, double the heat."
+  },
+  {
+   "id": "td-012",
+   "q": "Water's unusually high heat capacity comes mainly from…",
+   "options": [
+    "Hydrogen bonds between its molecules",
+    "Its low molar mass alone",
+    "Its colour",
+    "Dissolved salts"
+   ],
+   "answer": 0,
+   "explain": "Much of the added energy goes into stretching and breaking hydrogen bonds."
+  }
+ ],
+ "related": [
+  "Physical Chemistry",
+  "Entropy in Chemistry",
+  "Energy Chemistry",
+  "Chemical Kinetics",
+  "Solutions Chemistry"
+ ]
+}

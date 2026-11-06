@@ -1,0 +1,299 @@
+{
+ "slug": "heterocyclic-chemistry",
+ "channel": "Heterocyclic Chemistry",
+ "number": 12,
+ "symbol": "Hc",
+ "category": "Synthesis & reactivity",
+ "name": "Heterocyclic Chemistry",
+ "tagline": "Synthesis, reactivity, and pharmaceutical applications of ring systems.",
+ "seo_title": "Heterocyclic Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Heterocyclic Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in heterocycle synthesis, drug scaffolds, natural products and functional materials.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#f2a87d",
+  "accent2": "#f0f089",
+  "tile": "#2e1c12",
+  "motif": "hexagon"
+ },
+ "definition": {
+  "lead": "Heterocyclic chemistry studies ring molecules that contain at least one atom other than carbon, most often nitrogen, oxygen or sulfur.",
+  "body": "These rings are everywhere in life and medicine: the bases of DNA, haem, chlorophyll, vitamins and most small-molecule drugs. Replacing one ring carbon with a nitrogen changes basicity, shape and the way a molecule binds its target.",
+  "facts": [
+   {
+    "value": "59%",
+    "label": "of FDA-approved small-molecule drugs contain a nitrogen heterocycle (2014 analysis)"
+   },
+   {
+    "value": "5",
+    "label": "nucleobases in DNA and RNA, all nitrogen heterocycles"
+   },
+   {
+    "value": "1834",
+    "label": "Runge finds pyrrole and quinoline in coal tar"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Five-membered rings",
+   "summary": "Pyrrole, furan, thiophene, imidazole and their relatives.",
+   "example": "Four pyrroles form the porphyrin ring of haem and chlorophyll.",
+   "channel": ""
+  },
+  {
+   "name": "Six-membered rings",
+   "summary": "Pyridine, pyrimidine and related rings.",
+   "example": "Cytosine, thymine and uracil are pyrimidines.",
+   "channel": ""
+  },
+  {
+   "name": "Fused ring systems",
+   "summary": "Two or more rings sharing a bond.",
+   "example": "Indole in serotonin; purine in caffeine and adenine.",
+   "channel": ""
+  },
+  {
+   "name": "Heterocycles in drugs",
+   "summary": "Rings that tune how a drug binds, dissolves and is metabolized.",
+   "example": "Penicillin's four-membered β-lactam ring.",
+   "channel": "Medicinal Chemistry"
+  },
+  {
+   "name": "Ring synthesis",
+   "summary": "Named reactions that build heterocycles.",
+   "example": "The Hantzsch pyridine and Fischer indole syntheses.",
+   "channel": "Synthetic Chemistry"
+  },
+  {
+   "name": "Aromaticity",
+   "summary": "How heteroatoms share or withhold their lone pairs.",
+   "example": "Pyrrole's lone pair is part of its aromatic sextet, so it is barely basic.",
+   "channel": ""
+  },
+  {
+   "name": "Alkaloids & natural products",
+   "summary": "Nitrogen-containing ring compounds made by living organisms.",
+   "example": "Morphine, quinine and nicotine.",
+   "channel": "Bioorganic Chemistry"
+  },
+  {
+   "name": "Heterocycles in materials",
+   "summary": "Rings in conductive polymers, dyes and light emitters.",
+   "example": "Polythiophenes in organic electronics.",
+   "channel": "Chemistry of Materials"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1834,
+   "title": "Rings from coal tar",
+   "text": "Friedlieb Ferdinand Runge finds pyrrole and quinoline in coal tar.",
+   "why": "Coal tar became the first source of heterocycles."
+  },
+  {
+   "year": 1849,
+   "title": "Pyridine",
+   "text": "Thomas Anderson isolates pyridine from oil obtained by heating bones.",
+   "why": "Today one of the most common rings in approved drugs."
+  },
+  {
+   "year": 1866,
+   "title": "Indole",
+   "text": "Adolf von Baeyer obtains indole while studying the dye indigo.",
+   "why": "The ring at the heart of tryptophan and serotonin."
+  },
+  {
+   "year": 1881,
+   "title": "The Hantzsch synthesis",
+   "text": "Arthur Hantzsch builds pyridine rings from simple carbonyl compounds and ammonia.",
+   "why": "Still used to make calcium-channel blocker drugs."
+  },
+  {
+   "year": 1883,
+   "title": "The Fischer indole synthesis",
+   "text": "Emil Fischer makes indoles from arylhydrazines and ketones.",
+   "why": "One of the most used ways to build indoles."
+  },
+  {
+   "year": 1884,
+   "title": "The Paal–Knorr synthesis",
+   "text": "Carl Paal and Ludwig Knorr make furans and pyrroles from 1,4-diketones.",
+   "why": "A simple, general route to five-membered rings."
+  },
+  {
+   "year": 1945,
+   "title": "Penicillin's ring",
+   "text": "Dorothy Hodgkin's X-ray work confirms penicillin's four-membered β-lactam ring.",
+   "why": "Explained how the antibiotic works and guided new ones."
+  },
+  {
+   "year": 1953,
+   "title": "Base pairing",
+   "text": "The DNA double helix pairs purines with pyrimidines.",
+   "why": "Heterocycles carry genetic information."
+  },
+  {
+   "year": 2002,
+   "title": "Triazoles by click",
+   "text": "Copper-catalysed azide–alkyne cycloaddition is reported by the Meldal and Sharpless groups.",
+   "why": "Made 1,2,3-triazoles one of the easiest rings to build."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "hc-001",
+   "q": "Which of these is a heterocycle?",
+   "options": [
+    "Pyridine",
+    "Benzene",
+    "Cyclohexane",
+    "Naphthalene"
+   ],
+   "answer": 0,
+   "explain": "Pyridine is benzene with one CH replaced by nitrogen."
+  },
+  {
+   "id": "hc-002",
+   "q": "Why is pyrrole a much weaker base than pyridine?",
+   "options": [
+    "Its nitrogen lone pair is part of the aromatic π system",
+    "It has no nitrogen atom at all",
+    "It is not aromatic, so it cannot be protonated",
+    "It already carries a positive charge"
+   ],
+   "answer": 0,
+   "explain": "Protonating pyrrole's nitrogen would destroy its aromaticity."
+  },
+  {
+   "id": "hc-003",
+   "q": "The bases of DNA are…",
+   "options": [
+    "Nitrogen heterocycles",
+    "Sugars",
+    "Amino acids",
+    "Metal complexes"
+   ],
+   "answer": 0,
+   "explain": "Adenine and guanine are purines; cytosine and thymine are pyrimidines."
+  },
+  {
+   "id": "hc-004",
+   "q": "Indole is found in…",
+   "options": [
+    "Tryptophan and serotonin",
+    "Glucose",
+    "Cholesterol",
+    "Ethanol"
+   ],
+   "answer": 0,
+   "explain": "The indole ring is a benzene fused to a pyrrole."
+  },
+  {
+   "id": "hc-005",
+   "q": "What ring system is at the core of caffeine?",
+   "options": [
+    "Purine",
+    "Pyridine",
+    "Furan",
+    "Thiophene"
+   ],
+   "answer": 0,
+   "explain": "Caffeine is a methylated purine, like a cousin of adenine and guanine."
+  },
+  {
+   "id": "hc-006",
+   "q": "What is penicillin's key reactive ring?",
+   "options": [
+    "A four-membered β-lactam",
+    "A six-membered pyridine",
+    "A benzene ring",
+    "A crown ether"
+   ],
+   "answer": 0,
+   "explain": "The strained ring acylates the bacterial enzyme that builds cell walls."
+  },
+  {
+   "id": "hc-007",
+   "q": "Furan contains which heteroatom?",
+   "options": [
+    "Oxygen",
+    "Nitrogen",
+    "Sulfur",
+    "Phosphorus"
+   ],
+   "answer": 0,
+   "explain": "Thiophene has sulfur; pyrrole has nitrogen."
+  },
+  {
+   "id": "hc-008",
+   "q": "Thiophene contains which heteroatom?",
+   "options": [
+    "Sulfur",
+    "Oxygen",
+    "Nitrogen",
+    "Selenium"
+   ],
+   "answer": 0,
+   "explain": "'Thio' signals sulfur."
+  },
+  {
+   "id": "hc-009",
+   "q": "The Fischer indole synthesis builds indoles from…",
+   "options": [
+    "Arylhydrazines and ketones or aldehydes",
+    "Benzene and ammonia over a catalyst",
+    "Pyridine and water under pressure",
+    "Sugars and amino acids"
+   ],
+   "answer": 0,
+   "explain": "An acid-promoted rearrangement then closes the ring."
+  },
+  {
+   "id": "hc-010",
+   "q": "Nicotine contains which ring?",
+   "options": [
+    "Pyridine, joined to a pyrrolidine",
+    "Furan joined to a benzene ring",
+    "Indole joined to a piperidine",
+    "Purine joined to a sugar"
+   ],
+   "answer": 0,
+   "explain": "Its name comes from the tobacco plant, Nicotiana."
+  },
+  {
+   "id": "hc-011",
+   "q": "Haem and chlorophyll are built around…",
+   "options": [
+    "A porphyrin: four pyrrole units in a large ring",
+    "A single benzene ring with metal substituents",
+    "A crown ether that wraps the metal ion",
+    "A strained four-membered β-lactam ring"
+   ],
+   "answer": 0,
+   "explain": "The central metal is iron in haem and magnesium in chlorophyll."
+  },
+  {
+   "id": "hc-012",
+   "q": "Roughly what share of FDA-approved small-molecule drugs contain a nitrogen heterocycle (2014 analysis)?",
+   "options": [
+    "About 60%",
+    "About 5%",
+    "About 20%",
+    "All of them"
+   ],
+   "answer": 0,
+   "explain": "A 2014 analysis found 59% of unique small-molecule drugs contain at least one."
+  }
+ ],
+ "related": [
+  "Medicinal Chemistry",
+  "Organic Chemistry",
+  "Synthetic Chemistry",
+  "Drug Discovery",
+  "Bioorganic Chemistry"
+ ]
+}

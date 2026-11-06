@@ -1,0 +1,305 @@
+{
+ "slug": "environmental-chemistry",
+ "channel": "Environmental Chemistry",
+ "number": 33,
+ "symbol": "Ev",
+ "category": "Life & health",
+ "name": "Environmental Chemistry",
+ "tagline": "Pollutant fate, atmospheric chemistry, and remediation strategies.",
+ "seo_title": "Environmental Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Environmental Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in air and water pollution, climate chemistry, PFAS and remediation.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#f2857d",
+  "accent2": "#f0d189",
+  "tile": "#2b1420",
+  "motif": "triangles"
+ },
+ "definition": {
+  "lead": "Environmental chemistry studies chemicals in air, water and soil: where they come from, how they move and change, and what they do to living things.",
+  "body": "It explains the ozone hole, acid rain, smog, climate forcing and the fate of pesticides, plastics and 'forever chemicals'. Its measurements underpin environmental law and the cleanup of polluted sites.",
+  "facts": [
+   {
+    "value": "1987",
+    "label": "the Montreal Protocol to protect the ozone layer is signed"
+   },
+   {
+    "value": "1995",
+    "label": "Nobel Prize for research on the ozone layer"
+   },
+   {
+    "value": "PFAS",
+    "label": "'forever chemicals', named for their extremely stable C–F bonds"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Atmospheric chemistry",
+   "summary": "Ozone, smog and aerosols.",
+   "example": "Photochemical smog in sunny cities.",
+   "channel": "Photochemistry"
+  },
+  {
+   "name": "Water chemistry",
+   "summary": "Nutrients, metals and contaminants in water.",
+   "example": "Excess nutrients causing algal blooms.",
+   "channel": "Marine Chemistry"
+  },
+  {
+   "name": "Soil chemistry",
+   "summary": "How soils bind, release and transform chemicals.",
+   "example": "Heavy metals held by clays and organic matter.",
+   "channel": ""
+  },
+  {
+   "name": "Persistent pollutants",
+   "summary": "Chemicals that do not break down.",
+   "example": "PFAS and PCBs.",
+   "channel": ""
+  },
+  {
+   "name": "Climate chemistry",
+   "summary": "Greenhouse gases and their chemistry.",
+   "example": "Methane traps more heat per molecule than CO₂.",
+   "channel": ""
+  },
+  {
+   "name": "Ecotoxicology",
+   "summary": "Effects of chemicals on living organisms.",
+   "example": "Mercury building up in large fish.",
+   "channel": ""
+  },
+  {
+   "name": "Remediation",
+   "summary": "Cleaning up contaminated sites.",
+   "example": "Microbes that break down spilled oil.",
+   "channel": "Green Chemistry"
+  },
+  {
+   "name": "Environmental analysis",
+   "summary": "Measuring pollutants at tiny concentrations.",
+   "example": "Nanograms per litre in drinking water.",
+   "channel": "Analytical Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1952,
+   "title": "The Great Smog",
+   "text": "A smog from coal burning kills thousands of people in London.",
+   "why": "Led to the UK's Clean Air Act."
+  },
+  {
+   "year": 1956,
+   "title": "Minamata disease",
+   "text": "Methylmercury poisoning from industrial waste is identified in Minamata, Japan.",
+   "why": "Showed how pollutants concentrate up food chains."
+  },
+  {
+   "year": 1962,
+   "title": "Silent Spring",
+   "text": "Rachel Carson documents the effects of pesticides.",
+   "why": "Helped launch the environmental movement."
+  },
+  {
+   "year": 1970,
+   "title": "The EPA",
+   "text": "The United States creates the Environmental Protection Agency.",
+   "why": "Environmental chemistry became the basis of regulation."
+  },
+  {
+   "year": 1974,
+   "title": "CFCs and ozone",
+   "text": "Mario Molina and Sherwood Rowland warn that CFCs can destroy stratospheric ozone.",
+   "why": "A molecular threat to the ozone layer."
+  },
+  {
+   "year": 1985,
+   "title": "The ozone hole",
+   "text": "Joe Farman, Brian Gardiner and Jonathan Shanklin report severe ozone loss over Antarctica.",
+   "why": "Turned the warning into hard evidence."
+  },
+  {
+   "year": 1987,
+   "title": "The Montreal Protocol",
+   "text": "Countries agree to phase out ozone-depleting substances.",
+   "why": "Widely seen as the most successful environmental treaty."
+  },
+  {
+   "year": 1995,
+   "title": "Nobel Prize for ozone",
+   "text": "Awarded to Paul Crutzen, Mario Molina and Sherwood Rowland.",
+   "why": "Atmospheric chemistry recognized at the highest level."
+  },
+  {
+   "year": 2001,
+   "title": "The Stockholm Convention",
+   "text": "A global treaty to eliminate or restrict persistent organic pollutants is adopted.",
+   "why": "Started with the 'dirty dozen' chemicals."
+  },
+  {
+   "year": 2009,
+   "title": "A PFAS listed",
+   "text": "PFOS is added to the Stockholm Convention.",
+   "why": "Forever chemicals came under global control."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "ev-001",
+   "q": "How do CFCs destroy ozone?",
+   "options": [
+    "UV light releases chlorine atoms that destroy ozone catalytically",
+    "They absorb heat and warm the ozone until it breaks",
+    "They are strong acids that dissolve ozone",
+    "They react with nitrogen to make ozone unstable"
+   ],
+   "answer": 0,
+   "explain": "One chlorine atom can destroy thousands of ozone molecules."
+  },
+  {
+   "id": "ev-002",
+   "q": "Acid rain is mainly caused by…",
+   "options": [
+    "Sulfur and nitrogen oxides",
+    "Carbon dioxide alone",
+    "CFCs from old refrigerators",
+    "Methane from farms"
+   ],
+   "answer": 0,
+   "explain": "They form sulfuric and nitric acids in the air."
+  },
+  {
+   "id": "ev-003",
+   "q": "Biomagnification means that a pollutant's concentration…",
+   "options": [
+    "Increases up the food chain",
+    "Decreases up the food chain",
+    "Stays the same",
+    "Disappears"
+   ],
+   "answer": 0,
+   "explain": "Predators eat many contaminated prey."
+  },
+  {
+   "id": "ev-004",
+   "q": "Why are PFAS so persistent?",
+   "options": [
+    "Their carbon–fluorine bonds are extremely strong",
+    "They are radioactive and decay very slowly",
+    "They are heavy and sink into deep sediments",
+    "They are volatile and escape into space"
+   ],
+   "answer": 0,
+   "explain": "Few natural processes can break them."
+  },
+  {
+   "id": "ev-005",
+   "q": "Photochemical smog needs…",
+   "options": [
+    "Sunlight, nitrogen oxides and volatile organic compounds",
+    "Heavy rain and low temperatures",
+    "Cold, still air without sunlight",
+    "A thin ozone layer above the city"
+   ],
+   "answer": 0,
+   "explain": "Ground-level ozone is its main product."
+  },
+  {
+   "id": "ev-006",
+   "q": "The Montreal Protocol phased out…",
+   "options": [
+    "Ozone-depleting substances such as CFCs",
+    "Carbon dioxide from fossil fuels",
+    "Single-use plastics",
+    "Lead in petrol and paint"
+   ],
+   "answer": 0,
+   "explain": "The ozone layer is now slowly recovering."
+  },
+  {
+   "id": "ev-007",
+   "q": "Minamata disease was caused by…",
+   "options": [
+    "Methylmercury in contaminated fish",
+    "Arsenic in well water",
+    "Lead from old water pipes",
+    "Cadmium in rice fields"
+   ],
+   "answer": 0,
+   "explain": "Industrial waste was discharged into Minamata Bay."
+  },
+  {
+   "id": "ev-008",
+   "q": "Eutrophication is caused by…",
+   "options": [
+    "Excess nutrients such as nitrogen and phosphorus",
+    "Salt washed off roads in winter",
+    "Heat released by power stations",
+    "Oil leaking from ships"
+   ],
+   "answer": 0,
+   "explain": "Algal blooms then use up the water's oxygen."
+  },
+  {
+   "id": "ev-009",
+   "q": "How does ozone differ at ground level and in the stratosphere?",
+   "options": [
+    "Harmful pollutant at ground level, protective in the stratosphere",
+    "Always good wherever it is found",
+    "Always harmful wherever it is found",
+    "There is no difference between the two"
+   ],
+   "answer": 0,
+   "explain": "Same molecule, different place, opposite effects."
+  },
+  {
+   "id": "ev-010",
+   "q": "Who reported the Antarctic ozone hole in 1985?",
+   "options": [
+    "Farman, Gardiner and Shanklin of the British Antarctic Survey",
+    "Mario Molina and Sherwood Rowland",
+    "Paul Crutzen",
+    "Rachel Carson"
+   ],
+   "answer": 0,
+   "explain": "Their ground-based measurements showed a dramatic springtime drop."
+  },
+  {
+   "id": "ev-011",
+   "q": "How does methane compare with CO₂ as a greenhouse gas?",
+   "options": [
+    "It traps more heat per molecule but stays in the air for a shorter time",
+    "It traps less heat per molecule than CO₂",
+    "The two gases have identical effects",
+    "It does not trap heat at all"
+   ],
+   "answer": 0,
+   "explain": "Methane lasts around a decade; CO₂ effects last centuries."
+  },
+  {
+   "id": "ev-012",
+   "q": "The Stockholm Convention (2001) targets…",
+   "options": [
+    "Persistent organic pollutants",
+    "Ozone-depleting CFCs",
+    "Carbon dioxide emissions",
+    "Plastic waste only"
+   ],
+   "answer": 0,
+   "explain": "Chemicals that persist, bioaccumulate and travel far."
+  }
+ ],
+ "related": [
+  "Green Chemistry",
+  "Marine Chemistry",
+  "Analytical Chemistry",
+  "Sustainable Materials & Circular Chemistry",
+  "Photochemistry"
+ ]
+}

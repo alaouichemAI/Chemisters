@@ -1,0 +1,301 @@
+{
+ "slug": "chemistry-professionals",
+ "channel": "Chemistry Professionals",
+ "number": 52,
+ "symbol": "Pf",
+ "category": "Community",
+ "name": "Chemistry Professionals",
+ "tagline": "Career insights, networking, and professional development for chemists.",
+ "seo_title": "Chemistry Professionals — careers and skills for chemists | Chemisters",
+ "seo_description": "Follow Chemisters Chemistry Professionals on LinkedIn and Facebook: career insights, opportunities and professional development for chemists.",
+ "posts_about": [
+  "Career insights",
+  "Opportunities",
+  "Field news"
+ ],
+ "theme": {
+  "accent": "#e6f27d",
+  "accent2": "#a5f089",
+  "tile": "#2a2311",
+  "motif": "lattice"
+ },
+ "definition": {
+  "lead": "Chemistry Professionals is about careers in chemistry: the roles chemists hold, the skills that matter and how to grow from student to expert.",
+  "body": "Chemists work in research labs, plants, regulatory agencies, start-ups, patent offices, data teams and classrooms. Knowing the paths, the skills employers look for and how the field is changing helps chemists make better career decisions.",
+  "facts": [
+   {
+    "value": "1841",
+    "label": "the Chemical Society of London, the first national chemical society, is founded"
+   },
+   {
+    "value": "1876",
+    "label": "the American Chemical Society is founded"
+   },
+   {
+    "value": "2011",
+    "label": "the International Year of Chemistry"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Research & development",
+   "summary": "Creating new products and processes.",
+   "example": "Industrial R&D labs.",
+   "channel": ""
+  },
+  {
+   "name": "Pharma & biotech",
+   "summary": "Discovering and developing medicines.",
+   "example": "Medicinal and process chemists.",
+   "channel": "Drug Discovery"
+  },
+  {
+   "name": "Manufacturing & process",
+   "summary": "Making products safely at scale.",
+   "example": "Process chemists and engineers.",
+   "channel": "Chemical Engineering"
+  },
+  {
+   "name": "Quality & regulatory",
+   "summary": "Making sure products meet standards and laws.",
+   "example": "QC analysts and regulatory affairs.",
+   "channel": "Quality Control"
+  },
+  {
+   "name": "Data & computation",
+   "summary": "Chemistry with code and data.",
+   "example": "Data scientists and modellers.",
+   "channel": "Chemical Data Science & Automation"
+  },
+  {
+   "name": "Academia & teaching",
+   "summary": "Research and education.",
+   "example": "University research groups and schools.",
+   "channel": ""
+  },
+  {
+   "name": "Patents & intellectual property",
+   "summary": "Protecting inventions.",
+   "example": "Patent attorneys and examiners with chemistry degrees.",
+   "channel": ""
+  },
+  {
+   "name": "Entrepreneurship",
+   "summary": "Turning chemistry into companies.",
+   "example": "Chemistry and materials start-ups.",
+   "channel": ""
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1841,
+   "title": "The Chemical Society of London",
+   "text": "The first national chemical society is founded.",
+   "why": "Chemistry became an organized profession."
+  },
+  {
+   "year": 1867,
+   "title": "The German Chemical Society",
+   "text": "The Deutsche Chemische Gesellschaft is founded in Berlin.",
+   "why": "Germany led chemistry for decades."
+  },
+  {
+   "year": 1876,
+   "title": "The American Chemical Society",
+   "text": "The ACS is founded in New York.",
+   "why": "Now one of the largest scientific societies in the world."
+  },
+  {
+   "year": 1888,
+   "title": "Chemical engineering as a degree",
+   "text": "MIT launches the first chemical engineering programme.",
+   "why": "A new professional path for chemists."
+  },
+  {
+   "year": 1901,
+   "title": "The first Nobel Prize in Chemistry",
+   "text": "Awarded to Jacobus van 't Hoff.",
+   "why": "Chemistry's highest recognition."
+  },
+  {
+   "year": 1919,
+   "title": "IUPAC",
+   "text": "The International Union of Pure and Applied Chemistry is founded.",
+   "why": "Global standards for the profession."
+  },
+  {
+   "year": 1980,
+   "title": "The Royal Society of Chemistry",
+   "text": "The Chemical Society merges with other bodies to form the RSC.",
+   "why": "A single home for UK chemists."
+  },
+  {
+   "year": 2011,
+   "title": "International Year of Chemistry",
+   "text": "The UN celebrates chemistry, a century after Marie Curie's Nobel Prize in Chemistry.",
+   "why": "Chemistry's contributions celebrated worldwide."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "pf-001",
+   "q": "Which was the first national chemical society?",
+   "options": [
+    "The Chemical Society of London (1841)",
+    "The American Chemical Society",
+    "The German Chemical Society",
+    "IUPAC"
+   ],
+   "answer": 0,
+   "explain": "It later became part of the Royal Society of Chemistry."
+  },
+  {
+   "id": "pf-002",
+   "q": "When was the American Chemical Society founded?",
+   "options": [
+    "1876",
+    "1841",
+    "1919",
+    "1950"
+   ],
+   "answer": 0,
+   "explain": "In New York."
+  },
+  {
+   "id": "pf-003",
+   "q": "How was the Royal Society of Chemistry formed in 1980?",
+   "options": [
+    "By merging the Chemical Society with other chemistry bodies",
+    "By royal decree, created from scratch",
+    "From a single university chemistry department",
+    "From a chemical company's research division"
+   ],
+   "answer": 0,
+   "explain": "Combining professional and learned societies."
+  },
+  {
+   "id": "pf-004",
+   "q": "Knowledge of GMP is most important for jobs in…",
+   "options": [
+    "Regulated manufacturing such as pharmaceuticals",
+    "Pure theoretical chemistry research",
+    "Science journalism and communication",
+    "Astronomy and space science"
+   ],
+   "answer": 0,
+   "explain": "Good Manufacturing Practice governs how medicines are made."
+  },
+  {
+   "id": "pf-005",
+   "q": "Which skill is increasingly requested in chemistry job ads?",
+   "options": [
+    "Data analysis and programming",
+    "Calligraphy",
+    "Glassblowing only",
+    "Shorthand"
+   ],
+   "answer": 0,
+   "explain": "Data and automation are spreading through every lab."
+  },
+  {
+   "id": "pf-006",
+   "q": "A chemistry patent attorney needs…",
+   "options": [
+    "A scientific background and a legal qualification",
+    "Only a law degree, with no science",
+    "Only a PhD, with no legal training",
+    "No specific training at all"
+   ],
+   "answer": 0,
+   "explain": "They translate inventions into legal protection."
+  },
+  {
+   "id": "pf-007",
+   "q": "What is IUPAC's main role?",
+   "options": [
+    "Setting chemical nomenclature and standards",
+    "Selling chemicals",
+    "Running laboratories",
+    "Awarding the Nobel Prize"
+   ],
+   "answer": 0,
+   "explain": "Including element names and atomic weights."
+  },
+  {
+   "id": "pf-008",
+   "q": "ORCID is…",
+   "options": [
+    "A persistent identifier for researchers",
+    "A chemical compound used in dyes",
+    "A journal for open-access chemistry",
+    "An instrument for measuring purity"
+   ],
+   "answer": 0,
+   "explain": "It links a researcher to their work unambiguously."
+  },
+  {
+   "id": "pf-009",
+   "q": "Peer review means…",
+   "options": [
+    "Experts evaluate research before it is published",
+    "Colleagues review your salary",
+    "Students grade teachers",
+    "Anyone can publish anything"
+   ],
+   "answer": 0,
+   "explain": "A key quality filter, though not a perfect one."
+  },
+  {
+   "id": "pf-010",
+   "q": "The h-index measures…",
+   "options": [
+    "A combination of publications and citations",
+    "Height of a researcher",
+    "Lab safety",
+    "Salary"
+   ],
+   "answer": 0,
+   "explain": "An h-index of 10 means 10 papers with at least 10 citations each."
+  },
+  {
+   "id": "pf-011",
+   "q": "Why was 2011 chosen as the International Year of Chemistry?",
+   "options": [
+    "It was the centenary of Marie Curie's Nobel Prize in Chemistry",
+    "It was the year the periodic table was invented",
+    "It was when the ACS was founded",
+    "No particular reason"
+   ],
+   "answer": 0,
+   "explain": "Her 1911 prize."
+  },
+  {
+   "id": "pf-012",
+   "q": "A safety data sheet (SDS) describes…",
+   "options": [
+    "A chemical's hazards and how to handle it safely",
+    "A laboratory's finances and budget",
+    "A researcher's CV and publications",
+    "A product's price and supplier"
+   ],
+   "answer": 0,
+   "explain": "Every workplace chemical must have one."
+  }
+ ],
+ "related": [
+  "Quality Control",
+  "Chemical Engineering",
+  "Chemistry News",
+  "Wisdom & Stories",
+  "Chemical Data Science & Automation"
+ ],
+ "labels": {
+  "field_eyebrow": "What this page is",
+  "field": "Chemistry careers, in one minute",
+  "map_eyebrow": "Career paths",
+  "map": "Where chemists work",
+  "map_sub": "Chemists work far beyond the lab bench. Several paths have their own Chemisters page.",
+  "hist": "How the profession took shape"
+ }
+}

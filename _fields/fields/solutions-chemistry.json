@@ -1,0 +1,299 @@
+{
+ "slug": "solutions-chemistry",
+ "channel": "Solutions Chemistry",
+ "number": 9,
+ "symbol": "So",
+ "category": "Core chemistry",
+ "name": "Solutions Chemistry",
+ "tagline": "Solubility, colligative properties, and solution-phase equilibria.",
+ "seo_title": "Solutions Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Solutions Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in solubility, solvents, electrolytes, osmosis and colloids.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#7deaf2",
+  "accent2": "#89a8f0",
+  "tile": "#15213d",
+  "motif": "drops"
+ },
+ "definition": {
+  "lead": "Solutions chemistry studies what happens when one substance dissolves in another: solubility, concentration and the new properties the mixture gains.",
+  "body": "Most chemistry, and all of biology, happens in solution. Why salt dissolves in water but not in oil, why seawater freezes below 0 °C and how cells keep their shape all come down to the interactions between solvent and solute.",
+  "facts": [
+   {
+    "value": "Like dissolves like",
+    "label": "the oldest rule of solubility, still useful today"
+   },
+   {
+    "value": "1.86 °C",
+    "label": "freezing-point drop per mole of particles in 1 kg of water"
+   },
+   {
+    "value": "1887",
+    "label": "Arrhenius proposes that salts split into ions in water"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Solubility",
+   "summary": "How much of a substance can dissolve, and what controls it.",
+   "example": "Solubility products (Ksp) predict precipitation.",
+   "channel": ""
+  },
+  {
+   "name": "Colligative properties",
+   "summary": "Properties that depend only on the number of dissolved particles.",
+   "example": "Road salt lowers the freezing point of water.",
+   "channel": ""
+  },
+  {
+   "name": "Electrolytes & ions",
+   "summary": "How charged particles behave in solution.",
+   "example": "Debye–Hückel theory of ionic solutions.",
+   "channel": ""
+  },
+  {
+   "name": "Acid–base equilibria",
+   "summary": "Proton transfer and pH in solution.",
+   "example": "Buffers keep blood pH near 7.4.",
+   "channel": ""
+  },
+  {
+   "name": "Solvents & solvation",
+   "summary": "How solvent molecules surround and stabilize solutes.",
+   "example": "Replacing toxic solvents with greener ones.",
+   "channel": "Green Chemistry"
+  },
+  {
+   "name": "Osmosis",
+   "summary": "Solvent flow through membranes toward higher concentration.",
+   "example": "Reverse osmosis turns seawater into drinking water.",
+   "channel": ""
+  },
+  {
+   "name": "Colloids & micelles",
+   "summary": "Particles and assemblies suspended in a liquid.",
+   "example": "Soap micelles trap grease.",
+   "channel": "Surface Chemistry"
+  },
+  {
+   "name": "Complexation",
+   "summary": "Metal ions binding ligands in solution.",
+   "example": "EDTA softens water by binding calcium.",
+   "channel": "Inorganic Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1803,
+   "title": "Henry's law",
+   "text": "William Henry finds that gas solubility is proportional to its pressure.",
+   "why": "Why soda fizzes when opened."
+  },
+  {
+   "year": 1877,
+   "title": "Osmotic pressure measured",
+   "text": "Wilhelm Pfeffer measures osmotic pressure with semipermeable membranes.",
+   "why": "Gave the data that van 't Hoff would explain."
+  },
+  {
+   "year": 1886,
+   "title": "Van 't Hoff's osmotic law",
+   "text": "Van 't Hoff shows that dilute solutions behave like gases: πV = nRT.",
+   "why": "Unified osmosis with the gas laws."
+  },
+  {
+   "year": 1887,
+   "title": "Ions in solution",
+   "text": "Svante Arrhenius proposes that salts dissociate into ions in water.",
+   "why": "Explained conductivity; Nobel Prize in 1903."
+  },
+  {
+   "year": 1888,
+   "title": "Ostwald's dilution law",
+   "text": "Wilhelm Ostwald links the dissociation of weak acids to dilution.",
+   "why": "Quantified weak electrolytes."
+  },
+  {
+   "year": 1909,
+   "title": "The pH scale",
+   "text": "Søren Sørensen introduces pH.",
+   "why": "Acidity of any solution in one number."
+  },
+  {
+   "year": 1923,
+   "title": "Debye–Hückel theory",
+   "text": "Peter Debye and Erich Hückel model how ions screen each other.",
+   "why": "Explained why real ionic solutions deviate from ideal behaviour."
+  },
+  {
+   "year": 1960,
+   "title": "Practical reverse osmosis",
+   "text": "Sidney Loeb and Srinivasa Sourirajan develop a high-flow membrane for desalination.",
+   "why": "Made large-scale desalination possible."
+  },
+  {
+   "year": 1967,
+   "title": "Crown ethers",
+   "text": "Charles Pedersen discovers crown ethers that wrap around metal ions.",
+   "why": "Salts could be dissolved in organic solvents; Nobel Prize in 1987."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "so-001",
+   "q": "Why does salt dissolve in water but not in hexane?",
+   "options": [
+    "Polar water stabilizes the ions",
+    "Hexane is too dense",
+    "Salt reacts with water to make new compounds",
+    "Hexane is acidic"
+   ],
+   "answer": 0,
+   "explain": "Water's partial charges surround each ion (hydration); hexane has no such charges."
+  },
+  {
+   "id": "so-002",
+   "q": "Which of these is a colligative property?",
+   "options": [
+    "Freezing-point depression",
+    "Colour",
+    "Taste",
+    "Viscosity"
+   ],
+   "answer": 0,
+   "explain": "It depends only on how many particles are dissolved, not what they are."
+  },
+  {
+   "id": "so-003",
+   "q": "1 mol of NaCl dissolved in 1 kg of water gives about how many moles of particles?",
+   "options": [
+    "2",
+    "1",
+    "3",
+    "0.5"
+   ],
+   "answer": 0,
+   "explain": "Each NaCl gives one Na⁺ and one Cl⁻."
+  },
+  {
+   "id": "so-004",
+   "q": "Henry's law: a gas's solubility is proportional to…",
+   "options": [
+    "Its partial pressure above the liquid",
+    "The temperature",
+    "The liquid's volume",
+    "Its molar mass"
+   ],
+   "answer": 0,
+   "explain": "That is why carbonated drinks are bottled under pressure."
+  },
+  {
+   "id": "so-005",
+   "q": "Why does a warm soda go flat faster?",
+   "options": [
+    "Gases are less soluble at higher temperature",
+    "Sugar evaporates faster when warm",
+    "CO₂ reacts with sugar at higher temperature",
+    "Pressure inside the bottle increases"
+   ],
+   "answer": 0,
+   "explain": "Warming drives dissolved CO₂ out of solution."
+  },
+  {
+   "id": "so-006",
+   "q": "In osmosis, water moves across a semipermeable membrane toward…",
+   "options": [
+    "The more concentrated solution",
+    "The less concentrated solution",
+    "The warmer side",
+    "A random side"
+   ],
+   "answer": 0,
+   "explain": "Water moves to dilute the side with more dissolved particles."
+  },
+  {
+   "id": "so-007",
+   "q": "A buffer is made of…",
+   "options": [
+    "A weak acid and its conjugate base",
+    "A strong acid and a strong base",
+    "Salt and water",
+    "Two strong acids"
+   ],
+   "answer": 0,
+   "explain": "The pair absorbs added acid or base with little change in pH."
+  },
+  {
+   "id": "so-008",
+   "q": "Molarity is…",
+   "options": [
+    "Moles of solute per litre of solution",
+    "Grams per litre",
+    "Moles per kilogram of solvent",
+    "Particles per mole"
+   ],
+   "answer": 0,
+   "explain": "Moles per kilogram of solvent is molality."
+  },
+  {
+   "id": "so-009",
+   "q": "Reverse osmosis desalination works by…",
+   "options": [
+    "Pushing water through a membrane against the osmotic pressure",
+    "Boiling the water and condensing the steam",
+    "Adding more salt so it settles out",
+    "Freezing the water to leave salt behind"
+   ],
+   "answer": 0,
+   "explain": "Pressure above the osmotic pressure forces water out and leaves salt behind."
+  },
+  {
+   "id": "so-010",
+   "q": "Soap removes grease by forming…",
+   "options": [
+    "Micelles",
+    "Crystals",
+    "Polymers",
+    "Gas bubbles"
+   ],
+   "answer": 0,
+   "explain": "Oily tails surround the grease; charged heads face the water."
+  },
+  {
+   "id": "so-011",
+   "q": "The Ksp of a salt is…",
+   "options": [
+    "The equilibrium constant for dissolving it",
+    "Its molar mass in grams per mole",
+    "The pH of its saturated solution",
+    "Its density in the solid state"
+   ],
+   "answer": 0,
+   "explain": "A small Ksp means a poorly soluble salt."
+  },
+  {
+   "id": "so-012",
+   "q": "Crown ethers (Pedersen, 1967) can…",
+   "options": [
+    "Wrap around metal cations and carry them into organic solvents",
+    "Dissolve gold in water at room temperature",
+    "Act as strong acids in organic solvents",
+    "Conduct electricity as solids"
+   ],
+   "answer": 0,
+   "explain": "Their ring of oxygen atoms fits cations of matching size."
+  }
+ ],
+ "related": [
+  "Physical Chemistry",
+  "Surface Chemistry",
+  "Entropy in Chemistry",
+  "Green Chemistry",
+  "Analytical Chemistry"
+ ]
+}

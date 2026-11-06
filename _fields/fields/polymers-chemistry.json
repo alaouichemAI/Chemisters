@@ -1,0 +1,305 @@
+{
+ "slug": "polymers-chemistry",
+ "channel": "Polymers Chemistry",
+ "number": 31,
+ "symbol": "Py",
+ "category": "Life & health",
+ "name": "Polymers Chemistry",
+ "tagline": "Polymer synthesis, characterization, and advanced functional materials.",
+ "seo_title": "Polymers Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Polymers Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in polymer synthesis, plastics recycling, soft materials and functional polymers.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#f27dcb",
+  "accent2": "#f0898c",
+  "tile": "#2b1420",
+  "motif": "chain"
+ },
+ "definition": {
+  "lead": "Polymer chemistry studies giant molecules made of repeating units: plastics, rubbers, fibres, gels and the biopolymers of life.",
+  "body": "Linking thousands of small units creates materials with properties no small molecule has: stretch, strength, toughness and flexibility. Polymer chemists control chain length, architecture and composition, and increasingly design polymers that can be recycled or degrade safely.",
+  "facts": [
+   {
+    "value": "1920",
+    "label": "Hermann Staudinger proposes that polymers are long covalent chains"
+   },
+   {
+    "value": "About 400 Mt",
+    "label": "of plastics produced worldwide each year"
+   },
+   {
+    "value": "1953",
+    "label": "Staudinger receives the Nobel Prize in Chemistry"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Polymer synthesis",
+   "summary": "Chain-growth and step-growth polymerization.",
+   "example": "Polyethylene versus polyesters.",
+   "channel": ""
+  },
+  {
+   "name": "Controlled polymerization",
+   "summary": "Making chains of precise length and structure.",
+   "example": "Living anionic polymerization, ATRP and RAFT.",
+   "channel": ""
+  },
+  {
+   "name": "Polymer physics",
+   "summary": "How chains move, entangle and crystallize.",
+   "example": "Why plastics soften above their glass transition.",
+   "channel": ""
+  },
+  {
+   "name": "Biopolymers",
+   "summary": "Proteins, cellulose, DNA and other natural polymers.",
+   "example": "Cellulose, the most abundant polymer on Earth.",
+   "channel": "Biological Chemistry"
+  },
+  {
+   "name": "Conducting polymers",
+   "summary": "Plastics that conduct electricity.",
+   "example": "Polyacetylene, recognized with the 2000 Nobel Prize.",
+   "channel": "Chemistry of Materials"
+  },
+  {
+   "name": "Recycling & degradability",
+   "summary": "Keeping polymers out of landfills and oceans.",
+   "example": "Chemical recycling back to monomers.",
+   "channel": "Sustainable Materials & Circular Chemistry"
+  },
+  {
+   "name": "Gels & soft materials",
+   "summary": "Networks swollen with liquid.",
+   "example": "Contact lenses and wound dressings.",
+   "channel": ""
+  },
+  {
+   "name": "Processing",
+   "summary": "Shaping polymers into products.",
+   "example": "Extrusion and injection moulding.",
+   "channel": "Industrial Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1839,
+   "title": "Vulcanized rubber",
+   "text": "Charles Goodyear cross-links rubber with sulfur.",
+   "why": "The first major modified polymer."
+  },
+  {
+   "year": 1907,
+   "title": "Bakelite",
+   "text": "Leo Baekeland makes the first fully synthetic plastic.",
+   "why": "The start of the plastics age."
+  },
+  {
+   "year": 1920,
+   "title": "Macromolecules",
+   "text": "Hermann Staudinger proposes that polymers are long chains of covalently bonded units.",
+   "why": "Many chemists rejected the idea at first."
+  },
+  {
+   "year": 1933,
+   "title": "Polyethylene",
+   "text": "Eric Fawcett and Reginald Gibson at ICI discover polyethylene by accident.",
+   "why": "Now the most produced plastic in the world."
+  },
+  {
+   "year": 1935,
+   "title": "Nylon",
+   "text": "Wallace Carothers's team at DuPont makes nylon.",
+   "why": "The first commercially successful fully synthetic fibre."
+  },
+  {
+   "year": 1953,
+   "title": "Staudinger's Nobel Prize",
+   "text": "Staudinger is awarded the Nobel Prize for his work on macromolecules.",
+   "why": "Polymer science fully accepted."
+  },
+  {
+   "year": 1956,
+   "title": "Living polymerization",
+   "text": "Michael Szwarc discovers living anionic polymerization.",
+   "why": "Chains that keep growing until stopped: precise control."
+  },
+  {
+   "year": 1965,
+   "title": "Kevlar",
+   "text": "Stephanie Kwolek discovers the liquid-crystal solutions that led to Kevlar.",
+   "why": "Fibres stronger than steel by weight."
+  },
+  {
+   "year": 1974,
+   "title": "Polymer physics",
+   "text": "Nobel Prize to Paul Flory for the physical chemistry of macromolecules.",
+   "why": "Theory for how chains behave."
+  },
+  {
+   "year": 2000,
+   "title": "Conducting polymers",
+   "text": "Nobel Prize to Heeger, MacDiarmid and Shirakawa.",
+   "why": "Plastics that conduct electricity."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "py-001",
+   "q": "A monomer is…",
+   "options": [
+    "The small building block that repeats in a polymer",
+    "The polymer chain once it is complete",
+    "The catalyst that starts polymerization",
+    "The solvent in which polymers dissolve"
+   ],
+   "answer": 0,
+   "explain": "Poly = many, mer = part."
+  },
+  {
+   "id": "py-002",
+   "q": "Polyethylene is made from…",
+   "options": [
+    "Ethylene",
+    "Styrene",
+    "Vinyl chloride",
+    "Propylene"
+   ],
+   "answer": 0,
+   "explain": "Thousands of CH₂=CH₂ units joined together."
+  },
+  {
+   "id": "py-003",
+   "q": "Thermoplastics differ from thermosets because…",
+   "options": [
+    "Thermoplastics soften on heating and can be remoulded; thermosets are cross-linked and cannot",
+    "Thermosets soften on heating and can be remoulded; thermoplastics cannot",
+    "They are the same materials with different names",
+    "Thermoplastics never soften, whatever the temperature"
+   ],
+   "answer": 0,
+   "explain": "That is why thermoplastics are easier to recycle."
+  },
+  {
+   "id": "py-004",
+   "q": "The glass transition temperature is where an amorphous polymer…",
+   "options": [
+    "Changes from glassy to rubbery",
+    "Melts its crystals",
+    "Boils",
+    "Decomposes"
+   ],
+   "answer": 0,
+   "explain": "A rubber band is above its glass transition at room temperature."
+  },
+  {
+   "id": "py-005",
+   "q": "Which are made by step-growth polymerization?",
+   "options": [
+    "Polyesters and nylons",
+    "Polyethylene",
+    "Polystyrene",
+    "PVC"
+   ],
+   "answer": 0,
+   "explain": "Monomers with two reactive groups join step by step, often releasing water."
+  },
+  {
+   "id": "py-006",
+   "q": "Who showed that polymers are long covalent chains?",
+   "options": [
+    "Hermann Staudinger",
+    "Wallace Carothers",
+    "Karl Ziegler",
+    "Paul Flory"
+   ],
+   "answer": 0,
+   "explain": "He proposed it in 1920 and won the Nobel Prize in 1953."
+  },
+  {
+   "id": "py-007",
+   "q": "Who invented Kevlar?",
+   "options": [
+    "Stephanie Kwolek",
+    "Wallace Carothers",
+    "Leo Baekeland",
+    "Charles Goodyear"
+   ],
+   "answer": 0,
+   "explain": "At DuPont, in 1965."
+  },
+  {
+   "id": "py-008",
+   "q": "Cross-linking generally makes a polymer…",
+   "options": [
+    "Stiffer and less soluble",
+    "Liquid",
+    "Conductive",
+    "Always transparent"
+   ],
+   "answer": 0,
+   "explain": "The chains can no longer slide past each other."
+  },
+  {
+   "id": "py-009",
+   "q": "PET is mainly used for…",
+   "options": [
+    "Drink bottles and polyester fibres",
+    "Tyres",
+    "Electrical wiring",
+    "Foams only"
+   ],
+   "answer": 0,
+   "explain": "Polyethylene terephthalate."
+  },
+  {
+   "id": "py-010",
+   "q": "Dispersity (Đ) measures…",
+   "options": [
+    "How spread out the chain lengths are",
+    "The colour of the polymer",
+    "The density of the polymer",
+    "The tensile strength of the polymer"
+   ],
+   "answer": 0,
+   "explain": "Đ = 1 means all chains have the same length."
+  },
+  {
+   "id": "py-011",
+   "q": "The 2000 Nobel Prize in Chemistry recognized…",
+   "options": [
+    "Conducting polymers",
+    "Kevlar",
+    "Nylon",
+    "Teflon"
+   ],
+   "answer": 0,
+   "explain": "Doped polyacetylene conducts like a metal."
+  },
+  {
+   "id": "py-012",
+   "q": "Which is a natural polymer?",
+   "options": [
+    "Cellulose",
+    "Polystyrene",
+    "PVC",
+    "Nylon"
+   ],
+   "answer": 0,
+   "explain": "Glucose units linked in long chains: the main component of plant cell walls."
+  }
+ ],
+ "related": [
+  "Chemistry of Materials",
+  "Sustainable Materials & Circular Chemistry",
+  "Industrial Chemistry",
+  "Reactive Matter",
+  "Supramolecular Chemistry"
+ ]
+}

@@ -1,0 +1,300 @@
+{
+ "slug": "energy-chemistry",
+ "channel": "Energy Chemistry",
+ "number": 25,
+ "symbol": "Eg",
+ "category": "Applied & industrial",
+ "name": "Energy Chemistry",
+ "tagline": "Hydrogen economy, solar fuels, and next-generation energy storage.",
+ "seo_title": "Energy Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Energy Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in batteries, hydrogen, solar materials, biofuels and carbon capture.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#89f27d",
+  "accent2": "#89f0c0",
+  "tile": "#1b2513",
+  "motif": "zigzag"
+ },
+ "definition": {
+  "lead": "Energy chemistry studies how energy is stored, converted and released in chemical form: fuels, batteries, hydrogen and solar materials.",
+  "body": "Moving from fossil fuels to low-carbon energy is, above all, a chemistry problem. Better battery electrodes, cheaper hydrogen catalysts, efficient solar absorbers and carbon capture all start in the chemistry lab.",
+  "facts": [
+   {
+    "value": "142 MJ/kg",
+    "label": "energy content of hydrogen (higher heating value), about three times that of petrol"
+   },
+   {
+    "value": "1954",
+    "label": "Bell Labs unveils the first practical silicon solar cell"
+   },
+   {
+    "value": "2019",
+    "label": "Nobel Prize for the lithium-ion battery"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Batteries",
+   "summary": "Storing electricity in chemical form.",
+   "example": "Lithium-ion, sodium-ion and solid-state batteries.",
+   "channel": "Electrochemistry"
+  },
+  {
+   "name": "Hydrogen",
+   "summary": "Producing, storing and using hydrogen.",
+   "example": "Electrolysis powered by renewable electricity.",
+   "channel": ""
+  },
+  {
+   "name": "Fuel cells",
+   "summary": "Turning fuels directly into electricity.",
+   "example": "Proton-exchange membrane fuel cells.",
+   "channel": ""
+  },
+  {
+   "name": "Solar materials",
+   "summary": "Absorbing sunlight and turning it into electricity or fuels.",
+   "example": "Silicon and perovskite solar cells.",
+   "channel": "Photochemistry"
+  },
+  {
+   "name": "Biofuels",
+   "summary": "Fuels from plants, waste and algae.",
+   "example": "Bioethanol and biodiesel.",
+   "channel": "Green Chemistry"
+  },
+  {
+   "name": "Carbon capture & use",
+   "summary": "Capturing CO₂ and turning it into products.",
+   "example": "Amine scrubbing of flue gas.",
+   "channel": ""
+  },
+  {
+   "name": "Thermal storage",
+   "summary": "Storing heat for later use.",
+   "example": "Molten salts in solar thermal plants.",
+   "channel": ""
+  },
+  {
+   "name": "Nuclear energy",
+   "summary": "Energy from the atomic nucleus.",
+   "example": "The uranium fuel cycle.",
+   "channel": "Nuclear Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1800,
+   "title": "The battery",
+   "text": "Alessandro Volta builds the voltaic pile.",
+   "why": "The first continuous electric current."
+  },
+  {
+   "year": 1839,
+   "title": "The photovoltaic effect",
+   "text": "Edmond Becquerel observes a current when light shines on an electrode.",
+   "why": "The physics behind every solar cell."
+  },
+  {
+   "year": 1859,
+   "title": "The oil age",
+   "text": "Edwin Drake drills a commercial oil well in Pennsylvania.",
+   "why": "Petroleum began to reshape energy and chemistry."
+  },
+  {
+   "year": 1942,
+   "title": "Nuclear chain reaction",
+   "text": "Chicago Pile-1 achieves the first self-sustaining nuclear chain reaction.",
+   "why": "The start of nuclear energy."
+  },
+  {
+   "year": 1954,
+   "title": "The silicon solar cell",
+   "text": "Bell Labs demonstrates a practical silicon solar cell.",
+   "why": "Solar electricity became real."
+  },
+  {
+   "year": 1980,
+   "title": "A better cathode",
+   "text": "John Goodenough's team identifies lithium cobalt oxide as a cathode.",
+   "why": "Gave lithium-ion batteries their high voltage."
+  },
+  {
+   "year": 1991,
+   "title": "Lithium-ion goes on sale",
+   "text": "Sony commercializes the lithium-ion battery.",
+   "why": "Portable electronics took off."
+  },
+  {
+   "year": 2009,
+   "title": "Perovskite solar cells",
+   "text": "Akihiro Kojima, Tsutomu Miyasaka and colleagues report perovskite solar cells.",
+   "why": "Efficiencies rose faster than for any earlier solar technology."
+  },
+  {
+   "year": 2019,
+   "title": "Nobel Prize for lithium-ion",
+   "text": "Goodenough, Whittingham and Yoshino are honoured.",
+   "why": "The battery behind phones and electric cars."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "eg-001",
+   "q": "Which fuel stores the most energy per kilogram?",
+   "options": [
+    "Hydrogen",
+    "Petrol",
+    "Coal",
+    "Wood"
+   ],
+   "answer": 0,
+   "explain": "About 142 MJ/kg, roughly three times petrol, but very little per litre as a gas."
+  },
+  {
+   "id": "eg-002",
+   "q": "Why is hydrogen hard to store?",
+   "options": [
+    "It has very low density, so it needs high pressure or extreme cold",
+    "It is highly toxic, so tanks must be sealed",
+    "It is very heavy, so tanks become too large",
+    "It is radioactive, so tanks need shielding"
+   ],
+   "answer": 0,
+   "explain": "Liquid hydrogen must be kept below −253 °C."
+  },
+  {
+   "id": "eg-003",
+   "q": "'Green hydrogen' is…",
+   "options": [
+    "Made by electrolysis using renewable electricity",
+    "Hydrogen coloured green for safety",
+    "Made from natural gas without capture",
+    "Made from coal in gasification plants"
+   ],
+   "answer": 0,
+   "explain": "Most hydrogen today comes from fossil fuels."
+  },
+  {
+   "id": "eg-004",
+   "q": "A battery's energy density measures…",
+   "options": [
+    "Energy stored per unit mass or volume",
+    "The voltage between its two electrodes",
+    "How fast it can be charged",
+    "Its price per kilowatt-hour"
+   ],
+   "answer": 0,
+   "explain": "Higher energy density means longer range for the same weight."
+  },
+  {
+   "id": "eg-005",
+   "q": "In a hydrogen fuel cell, hydrogen and oxygen produce…",
+   "options": [
+    "Electricity, water and heat",
+    "Carbon dioxide and heat",
+    "Methane and electricity",
+    "Ozone and water"
+   ],
+   "answer": 0,
+   "explain": "No combustion: the reaction runs electrochemically."
+  },
+  {
+   "id": "eg-006",
+   "q": "Perovskite solar cells are named after…",
+   "options": [
+    "A crystal structure type, after the mineral perovskite",
+    "Carbon nanotubes that absorb sunlight",
+    "Pure silicon grown in a special way",
+    "Gold nanoparticles that scatter light"
+   ],
+   "answer": 0,
+   "explain": "The mineral itself is calcium titanate, CaTiO₃."
+  },
+  {
+   "id": "eg-007",
+   "q": "Who discovered the photovoltaic effect in 1839?",
+   "options": [
+    "Edmond Becquerel",
+    "Albert Einstein",
+    "Thomas Edison",
+    "Alessandro Volta"
+   ],
+   "answer": 0,
+   "explain": "He was 19 at the time."
+  },
+  {
+   "id": "eg-008",
+   "q": "Biodiesel is made by…",
+   "options": [
+    "Transesterifying vegetable oils with methanol",
+    "Distilling crude oil at low temperature",
+    "Fermenting sugar with yeast",
+    "Electrolysis of plant oils"
+   ],
+   "answer": 0,
+   "explain": "The by-product is glycerol."
+  },
+  {
+   "id": "eg-009",
+   "q": "Why do amines capture CO₂?",
+   "options": [
+    "They react reversibly with it, and release it when heated",
+    "They burn CO₂ to produce energy",
+    "They absorb oxygen and leave CO₂ behind",
+    "They glow when CO₂ is present"
+   ],
+   "answer": 0,
+   "explain": "The amine is then reused."
+  },
+  {
+   "id": "eg-010",
+   "q": "Why are sodium-ion batteries attractive?",
+   "options": [
+    "Sodium is abundant and cheap",
+    "Sodium is lighter than lithium",
+    "They give a higher voltage",
+    "They need no electrolyte"
+   ],
+   "answer": 0,
+   "explain": "They trade some energy density for cost and supply security."
+  },
+  {
+   "id": "eg-011",
+   "q": "Where was the first self-sustaining nuclear chain reaction achieved, in 1942?",
+   "options": [
+    "Chicago Pile-1",
+    "Chernobyl",
+    "Hiroshima",
+    "Los Alamos"
+   ],
+   "answer": 0,
+   "explain": "Under the stands of a sports field at the University of Chicago."
+  },
+  {
+   "id": "eg-012",
+   "q": "What did Goodenough's team contribute in 1980?",
+   "options": [
+    "The lithium cobalt oxide cathode",
+    "The graphite anode",
+    "The first battery",
+    "The solar cell"
+   ],
+   "answer": 0,
+   "explain": "It doubled the voltage available from earlier lithium cells."
+  }
+ ],
+ "related": [
+  "Electrochemistry",
+  "Photochemistry",
+  "Catalytic Chemistry",
+  "Nuclear Chemistry",
+  "Green Chemistry",
+  "Chemistry of Materials"
+ ]
+}

@@ -1,0 +1,299 @@
+{
+ "slug": "chemistry-ai-and-ml-applications",
+ "channel": "Chemistry AI & ML Applications",
+ "number": 38,
+ "symbol": "Ml",
+ "category": "Computational & AI",
+ "name": "Chemistry AI & ML Applications",
+ "tagline": "Machine learning models applied to molecular property prediction and synthesis.",
+ "seo_title": "Chemistry AI & ML Applications — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Chemistry AI & ML Applications on LinkedIn and Facebook: paper summaries, news and innovations in machine learning for property prediction, molecular design, synthesis planning and simulation.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#c37df2",
+  "accent2": "#f089d8",
+  "tile": "#1e1936",
+  "motif": "circuit"
+ },
+ "definition": {
+  "lead": "This page covers how machine learning is applied across chemistry: predicting properties, planning syntheses, generating new molecules and speeding up simulations.",
+  "body": "Models learn patterns from data on molecules and reactions, then make predictions in milliseconds that would take hours of computation or weeks of lab work. The hard parts are good data, honest validation and knowing when a model is out of its depth.",
+  "facts": [
+   {
+    "value": "2012",
+    "label": "deep learning wins Merck's molecular activity challenge"
+   },
+   {
+    "value": "2017",
+    "label": "message-passing neural networks unify graph models for molecules"
+   },
+   {
+    "value": "2024",
+    "label": "the Nobel Prize in Chemistry includes AI protein structure prediction"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Property prediction",
+   "summary": "Predicting solubility, toxicity, activity and more from structure.",
+   "example": "ADMET models in drug discovery.",
+   "channel": "Chemoinformatics"
+  },
+  {
+   "name": "Generative design",
+   "summary": "Models that propose new molecules with desired properties.",
+   "example": "Variational autoencoders and diffusion models.",
+   "channel": "Drug Discovery"
+  },
+  {
+   "name": "Reaction prediction",
+   "summary": "Predicting products, yields and routes.",
+   "example": "AI retrosynthesis planners.",
+   "channel": "Retrosynthesis"
+  },
+  {
+   "name": "Machine-learned potentials",
+   "summary": "Neural networks that replace expensive quantum calculations.",
+   "example": "Fast, accurate molecular dynamics.",
+   "channel": "Computational Chemistry"
+  },
+  {
+   "name": "Graph neural networks",
+   "summary": "Learning directly on molecular graphs.",
+   "example": "Atoms as nodes, bonds as edges.",
+   "channel": ""
+  },
+  {
+   "name": "Experiment optimization",
+   "summary": "Choosing the most informative next experiment.",
+   "example": "Bayesian optimization in self-driving labs.",
+   "channel": "Autonomous Chemistry"
+  },
+  {
+   "name": "Spectra interpretation",
+   "summary": "Linking spectra and structures with ML.",
+   "example": "Predicting NMR spectra from structure.",
+   "channel": "Analytical Chemistry"
+  },
+  {
+   "name": "Language models for chemistry",
+   "summary": "Models trained on text and molecular strings.",
+   "example": "Reading the literature and answering chemistry questions.",
+   "channel": "The Artificial Intelligence"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1964,
+   "title": "QSAR",
+   "text": "Hansch and Fujita fit biological activity to molecular descriptors.",
+   "why": "The ancestor of molecular machine learning."
+  },
+  {
+   "year": 1986,
+   "title": "Backpropagation",
+   "text": "Rumelhart, Hinton and Williams popularize training neural networks by backpropagation.",
+   "why": "The algorithm behind deep learning."
+  },
+  {
+   "year": 1988,
+   "title": "SMILES",
+   "text": "David Weininger publishes a text notation for molecules.",
+   "why": "Later used to feed molecules to language models."
+  },
+  {
+   "year": 2012,
+   "title": "Deep learning enters chemistry",
+   "text": "A deep neural network team wins Merck's molecular activity challenge on Kaggle.",
+   "why": "Drew attention to deep learning for drug discovery."
+  },
+  {
+   "year": 2017,
+   "title": "Message passing",
+   "text": "Justin Gilmer and colleagues describe message-passing neural networks for molecules.",
+   "why": "A common framework for graph-based chemistry models."
+  },
+  {
+   "year": 2018,
+   "title": "Generating molecules",
+   "text": "Rafael Gómez-Bombarelli and colleagues design molecules in a continuous learned space.",
+   "why": "Opened generative molecular design."
+  },
+  {
+   "year": 2020,
+   "title": "An antibiotic found by deep learning",
+   "text": "A deep learning screen identifies halicin as an antibacterial candidate.",
+   "why": "AI found a structurally unusual antibiotic."
+  },
+  {
+   "year": 2021,
+   "title": "AlphaFold 2 published",
+   "text": "The method and a database of predicted protein structures are released.",
+   "why": "Structures became available for almost any protein."
+  },
+  {
+   "year": 2024,
+   "title": "Nobel Prizes for AI",
+   "text": "The Chemistry prize rewards protein structure prediction and design; the Physics prize, neural network foundations.",
+   "why": "AI recognized at the core of science."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "ml-001",
+   "q": "Why split data into training, validation and test sets?",
+   "options": [
+    "To estimate how the model performs on data it has never seen",
+    "To make training faster",
+    "To use less memory",
+    "Because the software requires it"
+   ],
+   "answer": 0,
+   "explain": "The test set must stay untouched until the end."
+  },
+  {
+   "id": "ml-002",
+   "q": "A graph neural network represents a molecule as…",
+   "options": [
+    "A graph with atoms as nodes and bonds as edges",
+    "An image of its 2D structure drawing",
+    "A sentence describing the molecule in words",
+    "A single number such as its molar mass"
+   ],
+   "answer": 0,
+   "explain": "Information passes along bonds between atoms."
+  },
+  {
+   "id": "ml-003",
+   "q": "A generative model in chemistry…",
+   "options": [
+    "Proposes new molecules, often optimized toward goals",
+    "Only sorts molecules into known classes",
+    "Only stores molecules in a database",
+    "Measures spectra of new compounds"
+   ],
+   "answer": 0,
+   "explain": "Its proposals still need to be made and tested."
+  },
+  {
+   "id": "ml-004",
+   "q": "Why are uncertainty estimates useful?",
+   "options": [
+    "They show when to trust a prediction and what to test next",
+    "They make models train much faster",
+    "They remove all errors from predictions",
+    "They replace the need for experimental data"
+   ],
+   "answer": 0,
+   "explain": "A confident wrong prediction is the most dangerous kind."
+  },
+  {
+   "id": "ml-005",
+   "q": "Halicin (2020) was…",
+   "options": [
+    "An antibiotic candidate found by a deep learning screen",
+    "A cancer drug designed by generative AI",
+    "A battery material predicted by a neural network",
+    "A green solvent found by text mining"
+   ],
+   "answer": 0,
+   "explain": "It was originally studied as a diabetes drug."
+  },
+  {
+   "id": "ml-006",
+   "q": "A typical sign of overfitting is…",
+   "options": [
+    "Very low training error but poor test error",
+    "Equal training and test error",
+    "High error everywhere",
+    "No error at all"
+   ],
+   "answer": 0,
+   "explain": "The model memorized instead of learning."
+  },
+  {
+   "id": "ml-007",
+   "q": "Featurization means…",
+   "options": [
+    "Turning molecules into numerical inputs for a model",
+    "Adding features to software",
+    "Drawing molecules",
+    "Naming molecules"
+   ],
+   "answer": 0,
+   "explain": "Fingerprints, descriptors and graphs are common choices."
+  },
+  {
+   "id": "ml-008",
+   "q": "Transfer learning…",
+   "options": [
+    "Reuses a model trained on a large dataset for a smaller, related task",
+    "Moves data from one computer to another",
+    "Copies a trained model without changes",
+    "Deletes old models to save memory"
+   ],
+   "answer": 0,
+   "explain": "Useful when lab data is scarce."
+  },
+  {
+   "id": "ml-009",
+   "q": "Machine-learned interatomic potentials are usually trained on…",
+   "options": [
+    "Quantum chemistry calculations",
+    "Only experiments",
+    "Pictures of molecules",
+    "Patent text"
+   ],
+   "answer": 0,
+   "explain": "They learn energies and forces from DFT or higher-level data."
+  },
+  {
+   "id": "ml-010",
+   "q": "'Garbage in, garbage out' means…",
+   "options": [
+    "A model can only be as good as its data",
+    "Models produce garbage",
+    "Data must be thrown away",
+    "Recycling matters"
+   ],
+   "answer": 0,
+   "explain": "Errors and biases in data carry into predictions."
+  },
+  {
+   "id": "ml-011",
+   "q": "AlphaFold predicts…",
+   "options": [
+    "A protein's 3D structure from its amino acid sequence",
+    "Reaction yields from the reagents used",
+    "Crystal colours from their chemical formula",
+    "Melting points of small organic molecules"
+   ],
+   "answer": 0,
+   "explain": "Recognized by the 2024 Nobel Prize."
+  },
+  {
+   "id": "ml-012",
+   "q": "Why can random splits mislead in chemistry?",
+   "options": [
+    "Near-identical molecules land in both training and test sets, inflating scores",
+    "They are not random enough to be statistically fair",
+    "They are too slow for data sets of real size",
+    "They throw away part of the data set"
+   ],
+   "answer": 0,
+   "explain": "Scaffold or time-based splits are more honest tests."
+  }
+ ],
+ "related": [
+  "Chemoinformatics",
+  "AI in Chemistry — Real Use Cases",
+  "The Artificial Intelligence",
+  "Computational Chemistry",
+  "Drug Discovery"
+ ]
+}

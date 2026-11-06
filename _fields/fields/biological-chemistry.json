@@ -1,0 +1,305 @@
+{
+ "slug": "biological-chemistry",
+ "channel": "Biological Chemistry",
+ "number": 28,
+ "symbol": "Bc",
+ "category": "Life & health",
+ "name": "Biological Chemistry",
+ "tagline": "Enzymatic catalysis, biomolecular interactions, and the chemistry of life.",
+ "seo_title": "Biological Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Biological Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in enzymes, proteins, nucleic acids, metabolism and chemical biology.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#f27dac",
+  "accent2": "#f0a189",
+  "tile": "#2b1420",
+  "motif": "helix"
+ },
+ "definition": {
+  "lead": "Biological chemistry, or biochemistry, explains life in molecular terms: how proteins, nucleic acids, lipids and sugars are built and how they react inside cells.",
+  "body": "Enzymes speed up reactions by factors of millions, DNA stores information, membranes control what enters a cell and metabolism turns food into usable energy. These molecules underlie modern medicine, biotechnology and drug discovery.",
+  "facts": [
+   {
+    "value": "20",
+    "label": "standard amino acids encoded by the genetic code"
+   },
+   {
+    "value": "1897",
+    "label": "Eduard Buchner shows fermentation works without living cells"
+   },
+   {
+    "value": "1953",
+    "label": "the DNA double helix is proposed"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Enzymology",
+   "summary": "How enzymes recognize substrates and speed up reactions.",
+   "example": "Lysozyme breaking down bacterial cell walls.",
+   "channel": ""
+  },
+  {
+   "name": "Protein structure & folding",
+   "summary": "How a chain of amino acids finds its 3D shape.",
+   "example": "AI predicting protein structures.",
+   "channel": "Structural Chemistry"
+  },
+  {
+   "name": "Nucleic acids",
+   "summary": "DNA and RNA: storage, copying and reading of information.",
+   "example": "mRNA vaccines.",
+   "channel": ""
+  },
+  {
+   "name": "Metabolism",
+   "summary": "The network of reactions that builds and breaks down molecules.",
+   "example": "Glycolysis and the citric acid cycle.",
+   "channel": ""
+  },
+  {
+   "name": "Membranes & lipids",
+   "summary": "The barriers and messengers of the cell.",
+   "example": "The lipid bilayer.",
+   "channel": ""
+  },
+  {
+   "name": "Signalling",
+   "summary": "How cells send and receive chemical messages.",
+   "example": "Hormones acting on G-protein-coupled receptors.",
+   "channel": ""
+  },
+  {
+   "name": "Chemical biology",
+   "summary": "Using chemical tools to probe living systems.",
+   "example": "Labelling molecules inside living cells.",
+   "channel": "Bioorganic Chemistry"
+  },
+  {
+   "name": "Bioenergetics",
+   "summary": "How cells capture and spend energy.",
+   "example": "ATP made by ATP synthase.",
+   "channel": "Thermochemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1833,
+   "title": "The first enzyme",
+   "text": "Anselme Payen and Jean-François Persoz isolate diastase from barley.",
+   "why": "The first enzyme to be described."
+  },
+  {
+   "year": 1897,
+   "title": "Cell-free fermentation",
+   "text": "Eduard Buchner ferments sugar with an extract of yeast, without living cells.",
+   "why": "Life's chemistry can be studied in a test tube."
+  },
+  {
+   "year": 1926,
+   "title": "Enzymes are proteins",
+   "text": "James Sumner crystallizes the enzyme urease.",
+   "why": "Settled the debate about what enzymes are made of."
+  },
+  {
+   "year": 1937,
+   "title": "The Krebs cycle",
+   "text": "Hans Krebs describes the citric acid cycle.",
+   "why": "The central hub of energy metabolism."
+  },
+  {
+   "year": 1953,
+   "title": "The double helix",
+   "text": "Watson and Crick propose DNA's structure, using data from Franklin and Wilkins.",
+   "why": "Explained how genetic information is copied."
+  },
+  {
+   "year": 1955,
+   "title": "Protein sequencing",
+   "text": "Frederick Sanger completes the amino acid sequence of insulin.",
+   "why": "Proteins have a defined sequence."
+  },
+  {
+   "year": 1961,
+   "title": "Cracking the code",
+   "text": "Marshall Nirenberg and Heinrich Matthaei decode the first codon.",
+   "why": "The start of reading the genetic code."
+  },
+  {
+   "year": 1983,
+   "title": "PCR",
+   "text": "Kary Mullis invents the polymerase chain reaction.",
+   "why": "Copying DNA millions of times in hours."
+  },
+  {
+   "year": 2012,
+   "title": "CRISPR-Cas9",
+   "text": "Emmanuelle Charpentier and Jennifer Doudna show Cas9 can be programmed to cut DNA.",
+   "why": "Genome editing became simple; Nobel Prize in 2020."
+  },
+  {
+   "year": 2023,
+   "title": "mRNA vaccines",
+   "text": "Nobel Prize in Medicine to Katalin Karikó and Drew Weissman for nucleoside modifications.",
+   "why": "Made mRNA vaccines possible."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "bc-001",
+   "q": "Enzymes speed up reactions by…",
+   "options": [
+    "Lowering the activation energy",
+    "Raising the temperature",
+    "Changing the equilibrium",
+    "Being consumed"
+   ],
+   "answer": 0,
+   "explain": "They stabilize the transition state."
+  },
+  {
+   "id": "bc-002",
+   "q": "Which bases pair in DNA?",
+   "options": [
+    "A with T, and G with C",
+    "A with G, and C with T",
+    "A with C, and G with T",
+    "Any base with any other"
+   ],
+   "answer": 0,
+   "explain": "Hydrogen bonds hold each pair together."
+  },
+  {
+   "id": "bc-003",
+   "q": "A protein's primary structure is…",
+   "options": [
+    "Its sequence of amino acids",
+    "Its 3D shape",
+    "Its helices",
+    "A complex of several chains"
+   ],
+   "answer": 0,
+   "explain": "Secondary, tertiary and quaternary levels build on it."
+  },
+  {
+   "id": "bc-004",
+   "q": "What does ATP stand for?",
+   "options": [
+    "Adenosine triphosphate",
+    "Amino triphosphate",
+    "Adenine tripeptide",
+    "Acetyl transfer protein"
+   ],
+   "answer": 0,
+   "explain": "The cell's main energy currency."
+  },
+  {
+   "id": "bc-005",
+   "q": "Which molecule carries the genetic message from DNA to the ribosome?",
+   "options": [
+    "mRNA",
+    "tRNA",
+    "ATP",
+    "A lipid"
+   ],
+   "answer": 0,
+   "explain": "tRNA brings the amino acids; mRNA carries the instructions."
+  },
+  {
+   "id": "bc-006",
+   "q": "Why do phospholipids form bilayers in water?",
+   "options": [
+    "They have water-loving heads and water-avoiding tails",
+    "They are charged throughout",
+    "They form covalent bonds with each other",
+    "Proteins glue them together"
+   ],
+   "answer": 0,
+   "explain": "The tails hide from water inside the bilayer."
+  },
+  {
+   "id": "bc-007",
+   "q": "What did Buchner show in 1897?",
+   "options": [
+    "Fermentation works with a cell-free yeast extract",
+    "The structure of DNA",
+    "Penicillin kills bacteria",
+    "How ATP is made"
+   ],
+   "answer": 0,
+   "explain": "Nobel Prize in Chemistry in 1907."
+  },
+  {
+   "id": "bc-008",
+   "q": "PCR is used to…",
+   "options": [
+    "Amplify DNA through repeated cycles of heating and copying",
+    "Sequence proteins one amino acid at a time",
+    "Cut DNA at specific sites with enzymes",
+    "Make proteins from mRNA outside the cell"
+   ],
+   "answer": 0,
+   "explain": "Each cycle roughly doubles the DNA."
+  },
+  {
+   "id": "bc-009",
+   "q": "CRISPR-Cas9 is…",
+   "options": [
+    "A programmable DNA-cutting enzyme system",
+    "A vaccine platform based on modified RNA",
+    "A protein fold found in all enzymes",
+    "A lipid that forms cell membranes"
+   ],
+   "answer": 0,
+   "explain": "A guide RNA tells Cas9 where to cut."
+  },
+  {
+   "id": "bc-010",
+   "q": "Denaturing a protein means…",
+   "options": [
+    "Losing its 3D structure",
+    "Breaking all peptide bonds",
+    "Adding amino acids",
+    "Crystallizing it"
+   ],
+   "answer": 0,
+   "explain": "Like an egg white turning solid when cooked."
+  },
+  {
+   "id": "bc-011",
+   "q": "What did Sumner's 1926 crystallization of urease show?",
+   "options": [
+    "Enzymes are proteins",
+    "Enzymes are RNA",
+    "Enzymes are lipids",
+    "Enzymes contain no nitrogen"
+   ],
+   "answer": 0,
+   "explain": "Nobel Prize in Chemistry in 1946."
+  },
+  {
+   "id": "bc-012",
+   "q": "Glycolysis breaks glucose down into…",
+   "options": [
+    "Pyruvate",
+    "Amino acids",
+    "Fatty acids",
+    "DNA"
+   ],
+   "answer": 0,
+   "explain": "It also produces a small amount of ATP and NADH."
+  }
+ ],
+ "related": [
+  "Bioorganic Chemistry",
+  "Medicinal Chemistry",
+  "Structural Chemistry",
+  "Drug Discovery",
+  "Foods Chemistry"
+ ]
+}

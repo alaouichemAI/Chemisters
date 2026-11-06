@@ -1,0 +1,305 @@
+{
+ "slug": "chemical-kinetics",
+ "channel": "Chemical Kinetics",
+ "number": 6,
+ "symbol": "Ki",
+ "category": "Core chemistry",
+ "name": "Chemical Kinetics",
+ "tagline": "Reaction rates, mechanisms, and transition-state theory.",
+ "seo_title": "Chemical Kinetics — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Chemical Kinetics on LinkedIn and Facebook: paper summaries, news and innovations in reaction rates, mechanisms, catalysis and ultrafast chemistry.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#7d8df2",
+  "accent2": "#bd89f0",
+  "tile": "#15213d",
+  "motif": "spark"
+ },
+ "definition": {
+  "lead": "Chemical kinetics measures how fast reactions go and uncovers the step-by-step path they follow.",
+  "body": "Thermodynamics says whether a reaction can happen; kinetics says whether it happens in a second or in a million years. Rate laws, activation energies and mechanisms let chemists speed up the reactions they want and slow down the ones they don't, from drug degradation to engine combustion.",
+  "facts": [
+   {
+    "value": "×2",
+    "label": "rule of thumb: many reaction rates roughly double for every 10 °C rise"
+   },
+   {
+    "value": "1889",
+    "label": "Arrhenius links reaction rate to temperature"
+   },
+   {
+    "value": "10⁻¹⁵ s",
+    "label": "a femtosecond: the timescale on which bonds break"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Rate laws",
+   "summary": "How the rate depends on the concentration of each reactant.",
+   "example": "rate = k[A][B] for a simple bimolecular step.",
+   "channel": ""
+  },
+  {
+   "name": "Reaction mechanisms",
+   "summary": "The elementary steps hidden behind an overall equation.",
+   "example": "SN1 versus SN2 substitution.",
+   "channel": "Chemical Structure & Reactivity"
+  },
+  {
+   "name": "Catalysis kinetics",
+   "summary": "How catalysts and enzymes change rates.",
+   "example": "Michaelis–Menten kinetics for enzymes.",
+   "channel": "Catalytic Chemistry"
+  },
+  {
+   "name": "Transition state theory",
+   "summary": "Rates from the energy and structure of the highest point on the path.",
+   "example": "The Eyring equation.",
+   "channel": ""
+  },
+  {
+   "name": "Ultrafast kinetics",
+   "summary": "Flash photolysis, stopped-flow and femtosecond lasers.",
+   "example": "Watching a bond break in real time.",
+   "channel": ""
+  },
+  {
+   "name": "Chain reactions",
+   "summary": "Radical steps that keep themselves going.",
+   "example": "Combustion and radical polymerization.",
+   "channel": "Reactive Matter"
+  },
+  {
+   "name": "Atmospheric kinetics",
+   "summary": "Rates of the reactions that shape the air we breathe.",
+   "example": "Ozone destruction by chlorine radicals.",
+   "channel": "Environmental Chemistry"
+  },
+  {
+   "name": "Oscillating reactions",
+   "summary": "Concentrations that rise and fall in regular rhythm.",
+   "example": "The Belousov–Zhabotinsky reaction.",
+   "channel": "Chemical Systems"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1850,
+   "title": "The first measured rate",
+   "text": "Ludwig Wilhelmy follows the conversion of sucrose over time.",
+   "why": "The first quantitative study of reaction speed."
+  },
+  {
+   "year": 1864,
+   "title": "The law of mass action",
+   "text": "Cato Guldberg and Peter Waage relate rates and equilibrium to concentrations.",
+   "why": "The ancestor of every rate law."
+  },
+  {
+   "year": 1884,
+   "title": "Études de dynamique chimique",
+   "text": "Van 't Hoff publishes his book on chemical dynamics and reaction order.",
+   "why": "Laid out kinetics as a quantitative science."
+  },
+  {
+   "year": 1889,
+   "title": "The Arrhenius equation",
+   "text": "Svante Arrhenius introduces the activation energy.",
+   "why": "Explained why temperature matters so much."
+  },
+  {
+   "year": 1913,
+   "title": "Enzyme kinetics",
+   "text": "Leonor Michaelis and Maud Menten publish their model of enzyme rates.",
+   "why": "Still the first model taught for every enzyme."
+  },
+  {
+   "year": 1935,
+   "title": "Transition state theory",
+   "text": "Henry Eyring, and independently Evans and Polanyi, describe the activated complex.",
+   "why": "Linked rates to molecular structure."
+  },
+  {
+   "year": 1956,
+   "title": "Chain reactions",
+   "text": "Nobel Prize to Nikolay Semenov and Cyril Hinshelwood for the mechanisms of chemical reactions.",
+   "why": "Explained explosions and combustion."
+  },
+  {
+   "year": 1967,
+   "title": "Fast reactions",
+   "text": "Nobel Prize to Eigen, Norrish and Porter for studying extremely fast reactions.",
+   "why": "Relaxation methods and flash photolysis."
+  },
+  {
+   "year": 1986,
+   "title": "Reaction dynamics",
+   "text": "Nobel Prize to Herschbach, Lee and Polanyi for the dynamics of elementary reactions.",
+   "why": "Single collisions between molecules, studied one by one."
+  },
+  {
+   "year": 1999,
+   "title": "Femtochemistry",
+   "text": "Nobel Prize to Ahmed Zewail.",
+   "why": "The transition state itself became observable."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "ki-001",
+   "q": "For a first-order reaction, the half-life…",
+   "options": [
+    "Does not depend on the starting concentration",
+    "Doubles each time",
+    "Depends on the concentration squared",
+    "Is zero"
+   ],
+   "answer": 0,
+   "explain": "t½ = ln 2 / k: always the same time to halve, whatever the amount."
+  },
+  {
+   "id": "ki-002",
+   "q": "What are the units of a first-order rate constant?",
+   "options": [
+    "s⁻¹",
+    "M·s⁻¹",
+    "M⁻¹·s⁻¹",
+    "M"
+   ],
+   "answer": 0,
+   "explain": "Rate (M/s) divided by concentration (M) leaves 1/s."
+  },
+  {
+   "id": "ki-003",
+   "q": "If rate = k[A]², doubling [A] makes the rate…",
+   "options": [
+    "4 times faster",
+    "2 times faster",
+    "8 times faster",
+    "Unchanged"
+   ],
+   "answer": 0,
+   "explain": "2² = 4."
+  },
+  {
+   "id": "ki-004",
+   "q": "The rate-determining step is…",
+   "options": [
+    "The slowest step of the mechanism",
+    "Always the first step",
+    "The fastest step",
+    "Always the last step"
+   ],
+   "answer": 0,
+   "explain": "Like the narrowest point of a funnel, it limits the overall rate."
+  },
+  {
+   "id": "ki-005",
+   "q": "Activation energy is…",
+   "options": [
+    "The barrier between reactants and the transition state",
+    "The energy a reaction releases",
+    "The bond energy of the product",
+    "The heat capacity"
+   ],
+   "answer": 0,
+   "explain": "Only molecules with at least this energy can react."
+  },
+  {
+   "id": "ki-006",
+   "q": "A catalyst speeds up a reaction by…",
+   "options": [
+    "Providing a lower-energy pathway",
+    "Raising the temperature",
+    "Shifting the equilibrium toward products",
+    "Increasing reactant concentration"
+   ],
+   "answer": 0,
+   "explain": "It lowers the barrier and is regenerated at the end."
+  },
+  {
+   "id": "ki-007",
+   "q": "In Michaelis–Menten kinetics, Km is…",
+   "options": [
+    "The substrate concentration at half the maximum rate",
+    "The maximum rate the enzyme can reach",
+    "The total enzyme concentration in the assay",
+    "The amount of product formed per minute"
+   ],
+   "answer": 0,
+   "explain": "A low Km means the enzyme works well even at low substrate levels."
+  },
+  {
+   "id": "ki-008",
+   "q": "Why does refrigeration slow food spoilage?",
+   "options": [
+    "Fewer molecules have enough energy to cross the activation barrier",
+    "Cold changes which products form",
+    "Cold raises the activation energy",
+    "Cold removes all oxygen"
+   ],
+   "answer": 0,
+   "explain": "Rates fall steeply as temperature drops (Arrhenius)."
+  },
+  {
+   "id": "ki-009",
+   "q": "Who first measured a reaction rate quantitatively, in 1850?",
+   "options": [
+    "Ludwig Wilhelmy",
+    "Svante Arrhenius",
+    "Henry Eyring",
+    "Ahmed Zewail"
+   ],
+   "answer": 0,
+   "explain": "He followed sucrose inversion using the rotation of polarized light."
+  },
+  {
+   "id": "ki-010",
+   "q": "What are the three stages of a chain reaction?",
+   "options": [
+    "Initiation, propagation, termination",
+    "Nucleation, growth, ripening",
+    "Oxidation, reduction, neutralization",
+    "Heating, mixing, cooling"
+   ],
+   "answer": 0,
+   "explain": "Radicals are created, keep regenerating each other, then are destroyed."
+  },
+  {
+   "id": "ki-011",
+   "q": "On an Arrhenius plot of ln k against 1/T, the slope equals…",
+   "options": [
+    "−Ea/R",
+    "The reaction enthalpy",
+    "The pre-exponential factor",
+    "The equilibrium constant"
+   ],
+   "answer": 0,
+   "explain": "A steeper slope means a higher activation energy."
+  },
+  {
+   "id": "ki-012",
+   "q": "How does a reaction intermediate differ from a transition state?",
+   "options": [
+    "An intermediate sits in an energy minimum and can sometimes be detected",
+    "An intermediate is higher in energy",
+    "An intermediate never exists",
+    "An intermediate is the final product"
+   ],
+   "answer": 0,
+   "explain": "A transition state is an energy maximum that lasts only about one molecular vibration."
+  }
+ ],
+ "related": [
+  "Physical Chemistry",
+  "Catalytic Chemistry",
+  "Thermochemistry",
+  "Reactive Matter",
+  "Chemical Systems"
+ ]
+}

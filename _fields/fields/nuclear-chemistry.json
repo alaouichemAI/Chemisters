@@ -1,0 +1,305 @@
+{
+ "slug": "nuclear-chemistry",
+ "channel": "Nuclear Chemistry",
+ "number": 45,
+ "symbol": "Nu",
+ "category": "Materials & nano",
+ "name": "Nuclear Chemistry",
+ "tagline": "Radioactivity, nuclear reactions, and radiopharmaceutical chemistry.",
+ "seo_title": "Nuclear Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Nuclear Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in radiochemistry, nuclear medicine, nuclear energy and heavy elements.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#7dd7f2",
+  "accent2": "#8997f0",
+  "tile": "#0e2a29",
+  "motif": "rings"
+ },
+ "definition": {
+  "lead": "Nuclear chemistry studies radioactivity, nuclear reactions and the chemistry of radioactive elements.",
+  "body": "It made possible nuclear power, radiocarbon dating, and medical imaging and therapy with radioisotopes. It also deals with the heaviest elements, nuclear waste and radioactivity in the environment.",
+  "facts": [
+   {
+    "value": "1896",
+    "label": "Henri Becquerel discovers radioactivity"
+   },
+   {
+    "value": "5,730 years",
+    "label": "the half-life of carbon-14"
+   },
+   {
+    "value": "1911",
+    "label": "Marie Curie receives the Nobel Prize in Chemistry"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Radioactive decay",
+   "summary": "Alpha, beta and gamma decay, and half-lives.",
+   "example": "Uranium decaying through a chain to lead.",
+   "channel": ""
+  },
+  {
+   "name": "Radiochemistry",
+   "summary": "Separating and handling radioactive substances.",
+   "example": "Producing medical isotopes.",
+   "channel": ""
+  },
+  {
+   "name": "Nuclear medicine",
+   "summary": "Radioisotopes for imaging and therapy.",
+   "example": "Technetium-99m scans and fluorine-18 PET imaging.",
+   "channel": "Medicinal Chemistry"
+  },
+  {
+   "name": "Radiometric dating",
+   "summary": "Using decay as a clock.",
+   "example": "Carbon-14 dating of organic remains.",
+   "channel": ""
+  },
+  {
+   "name": "Nuclear energy",
+   "summary": "Fission fuel and its cycle.",
+   "example": "Uranium fuel in power reactors.",
+   "channel": "Energy Chemistry"
+  },
+  {
+   "name": "Heavy elements",
+   "summary": "Making and studying the heaviest elements.",
+   "example": "Oganesson, element 118.",
+   "channel": "Inorganic Chemistry"
+  },
+  {
+   "name": "Nuclear waste",
+   "summary": "Keeping radioactive waste safe for the long term.",
+   "example": "Locking waste into glass.",
+   "channel": ""
+  },
+  {
+   "name": "Environmental radioactivity",
+   "summary": "Radioactivity in air, water and soil.",
+   "example": "Radon gas in homes.",
+   "channel": "Environmental Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1896,
+   "title": "Radioactivity",
+   "text": "Henri Becquerel finds that uranium salts expose photographic plates.",
+   "why": "Discovery of radioactivity."
+  },
+  {
+   "year": 1898,
+   "title": "Polonium and radium",
+   "text": "Marie and Pierre Curie discover two new radioactive elements.",
+   "why": "Radioactivity became a tool for finding elements."
+  },
+  {
+   "year": 1911,
+   "title": "Marie Curie's second Nobel Prize",
+   "text": "She receives the Chemistry prize for polonium and radium.",
+   "why": "The first person to win Nobel Prizes in two sciences."
+  },
+  {
+   "year": 1913,
+   "title": "Isotopes",
+   "text": "Frederick Soddy introduces the term 'isotope'.",
+   "why": "Same element, different masses."
+  },
+  {
+   "year": 1934,
+   "title": "Artificial radioactivity",
+   "text": "Irène and Frédéric Joliot-Curie make radioactive isotopes by bombarding elements.",
+   "why": "Radioisotopes could be made on demand."
+  },
+  {
+   "year": 1938,
+   "title": "Nuclear fission",
+   "text": "Otto Hahn and Fritz Strassmann detect barium from uranium; Lise Meitner and Otto Frisch explain it as fission.",
+   "why": "The basis of nuclear energy."
+  },
+  {
+   "year": 1940,
+   "title": "The first transuranium element",
+   "text": "Edwin McMillan and Philip Abelson make neptunium.",
+   "why": "Beyond uranium on the periodic table."
+  },
+  {
+   "year": 1949,
+   "title": "Radiocarbon dating",
+   "text": "Willard Libby develops radiocarbon dating.",
+   "why": "A clock for the last tens of thousands of years."
+  },
+  {
+   "year": 1976,
+   "title": "PET imaging with FDG",
+   "text": "A fluorine-18 labelled glucose is first used in humans.",
+   "why": "Became central to cancer imaging."
+  },
+  {
+   "year": 2016,
+   "title": "Element 118 named",
+   "text": "IUPAC names oganesson.",
+   "why": "The heaviest element named so far."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "nu-001",
+   "q": "An alpha particle is…",
+   "options": [
+    "A helium nucleus: 2 protons and 2 neutrons",
+    "An electron emitted from the nucleus",
+    "A photon of very high energy",
+    "A single free neutron"
+   ],
+   "answer": 0,
+   "explain": "Stopped by a sheet of paper."
+  },
+  {
+   "id": "nu-002",
+   "q": "In beta-minus decay…",
+   "options": [
+    "A neutron turns into a proton and emits an electron",
+    "A proton turns into a neutron",
+    "The nucleus emits a helium nucleus",
+    "Only light is emitted"
+   ],
+   "answer": 0,
+   "explain": "The atomic number rises by one."
+  },
+  {
+   "id": "nu-003",
+   "q": "A half-life is…",
+   "options": [
+    "The time for half of the nuclei to decay",
+    "Half the lifetime of a scientist",
+    "The time to reach full decay",
+    "Half the mass of an atom"
+   ],
+   "answer": 0,
+   "explain": "It does not depend on how much you start with."
+  },
+  {
+   "id": "nu-004",
+   "q": "What fraction of a radioisotope remains after three half-lives?",
+   "options": [
+    "1/8",
+    "1/3",
+    "1/6",
+    "None"
+   ],
+   "answer": 0,
+   "explain": "½ × ½ × ½."
+  },
+  {
+   "id": "nu-005",
+   "q": "Carbon-14 dating works for ages up to about…",
+   "options": [
+    "50,000 years",
+    "5 years",
+    "1 billion years",
+    "500 years"
+   ],
+   "answer": 0,
+   "explain": "After that, too little carbon-14 is left to measure."
+  },
+  {
+   "id": "nu-006",
+   "q": "Isotopes of an element have…",
+   "options": [
+    "The same number of protons but different numbers of neutrons",
+    "Different numbers of protons",
+    "Different numbers of electrons only",
+    "Different chemistry entirely"
+   ],
+   "answer": 0,
+   "explain": "Carbon-12 and carbon-14 behave almost identically in chemistry."
+  },
+  {
+   "id": "nu-007",
+   "q": "Who discovered radioactivity?",
+   "options": [
+    "Henri Becquerel",
+    "Marie Curie",
+    "Ernest Rutherford",
+    "Albert Einstein"
+   ],
+   "answer": 0,
+   "explain": "In 1896, with uranium salts."
+  },
+  {
+   "id": "nu-008",
+   "q": "Nuclear fission is…",
+   "options": [
+    "A heavy nucleus splitting into smaller ones, releasing energy",
+    "Two light nuclei joining to make a heavier one",
+    "An electron leaving an atom",
+    "A chemical reaction that breaks bonds"
+   ],
+   "answer": 0,
+   "explain": "Joining light nuclei is fusion."
+  },
+  {
+   "id": "nu-009",
+   "q": "Technetium-99m is mainly used for…",
+   "options": [
+    "Medical imaging",
+    "Dating rocks",
+    "Nuclear weapons",
+    "Power generation"
+   ],
+   "answer": 0,
+   "explain": "Its 6-hour half-life suits diagnostic scans."
+  },
+  {
+   "id": "nu-010",
+   "q": "Why is gamma radiation the most penetrating?",
+   "options": [
+    "It has no charge and no mass",
+    "It is the heaviest",
+    "It moves slowest",
+    "It is a particle of helium"
+   ],
+   "answer": 0,
+   "explain": "Thick lead or concrete is needed to stop it."
+  },
+  {
+   "id": "nu-011",
+   "q": "Marie Curie's 1911 Nobel Prize in Chemistry was for…",
+   "options": [
+    "Discovering polonium and radium",
+    "Discovering radioactivity",
+    "Inventing X-rays",
+    "Splitting the atom"
+   ],
+   "answer": 0,
+   "explain": "She shared the 1903 Physics prize for radioactivity."
+  },
+  {
+   "id": "nu-012",
+   "q": "Radon in homes comes from…",
+   "options": [
+    "The decay of uranium in rocks and soil",
+    "Gas cooking stoves",
+    "Old electrical wiring",
+    "Lead water pipes"
+   ],
+   "answer": 0,
+   "explain": "Ventilation reduces exposure."
+  }
+ ],
+ "related": [
+  "Energy Chemistry",
+  "Inorganic Chemistry",
+  "Medicinal Chemistry",
+  "Environmental Chemistry",
+  "Physical Chemistry"
+ ]
+}

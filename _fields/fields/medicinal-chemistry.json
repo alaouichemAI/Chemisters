@@ -1,0 +1,305 @@
+{
+ "slug": "medicinal-chemistry",
+ "channel": "Medicinal Chemistry",
+ "number": 27,
+ "symbol": "Me",
+ "category": "Life & health",
+ "name": "Medicinal Chemistry",
+ "tagline": "Drug discovery, pharmacokinetics, QSAR, and molecular docking insights.",
+ "seo_title": "Medicinal Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Medicinal Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in drug design, structure–activity relationships, ADME and new medicines.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#f27dbc",
+  "accent2": "#f09389",
+  "tile": "#2b1420",
+  "motif": "hexagon"
+ },
+ "definition": {
+  "lead": "Medicinal chemistry designs, makes and optimizes the molecules that become medicines.",
+  "body": "It sits between synthesis, biology and pharmacology. Medicinal chemists adjust a molecule's structure until it binds its target, reaches it in the body, lasts long enough and stays safe. Most small-molecule drugs on the market came out of this cycle.",
+  "facts": [
+   {
+    "value": "1910",
+    "label": "Salvarsan, Paul Ehrlich's 'magic bullet' against syphilis"
+   },
+   {
+    "value": "1997",
+    "label": "Christopher Lipinski publishes the 'rule of five' for oral drugs"
+   },
+   {
+    "value": "4",
+    "label": "letters of ADME: absorption, distribution, metabolism, excretion"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Structure–activity relationships",
+   "summary": "How changes in structure change biological activity.",
+   "example": "Swapping one group to boost potency tenfold.",
+   "channel": ""
+  },
+  {
+   "name": "ADME & pharmacokinetics",
+   "summary": "How the body absorbs, distributes, metabolizes and excretes a drug.",
+   "example": "Designing a molecule that survives the liver.",
+   "channel": ""
+  },
+  {
+   "name": "Target binding",
+   "summary": "Fitting a molecule into its protein target.",
+   "example": "Kinase inhibitors that occupy the ATP pocket.",
+   "channel": "Structural Chemistry"
+  },
+  {
+   "name": "Lead optimization",
+   "summary": "Balancing potency, selectivity, safety and solubility.",
+   "example": "Multi-parameter optimization.",
+   "channel": "Drug Discovery"
+  },
+  {
+   "name": "Prodrugs",
+   "summary": "Inactive molecules that the body converts into the active drug.",
+   "example": "Valaciclovir becomes aciclovir after absorption.",
+   "channel": ""
+  },
+  {
+   "name": "Bioisosteres",
+   "summary": "Swapping groups that look different but behave alike.",
+   "example": "A tetrazole in place of a carboxylic acid in losartan.",
+   "channel": ""
+  },
+  {
+   "name": "Computational design",
+   "summary": "Docking, modelling and AI to guide synthesis.",
+   "example": "Ranking ideas before making them.",
+   "channel": "Computational Chemistry"
+  },
+  {
+   "name": "Safety & toxicology",
+   "summary": "Spotting liabilities early.",
+   "example": "Screening for hERG channel binding, a heart-rhythm risk.",
+   "channel": ""
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1805,
+   "title": "Morphine",
+   "text": "Friedrich Sertürner reports the isolation of morphine from opium.",
+   "why": "The first active ingredient isolated from a medicinal plant."
+  },
+  {
+   "year": 1897,
+   "title": "Aspirin",
+   "text": "Chemists at Bayer prepare pure, stable acetylsalicylic acid.",
+   "why": "A synthetic modification of a natural remedy."
+  },
+  {
+   "year": 1910,
+   "title": "The magic bullet",
+   "text": "Paul Ehrlich's team introduces Salvarsan against syphilis.",
+   "why": "The first modern chemotherapy designed to hit a pathogen."
+  },
+  {
+   "year": 1928,
+   "title": "Penicillin",
+   "text": "Alexander Fleming notices mould killing bacteria.",
+   "why": "Opened the antibiotic era once it was mass-produced in the 1940s."
+  },
+  {
+   "year": 1935,
+   "title": "Sulfa drugs",
+   "text": "Gerhard Domagk shows that the dye Prontosil cures bacterial infections.",
+   "why": "The first broadly effective synthetic antibacterials."
+  },
+  {
+   "year": 1964,
+   "title": "The first beta-blocker",
+   "text": "Propranolol, developed by James Black's team, reaches patients.",
+   "why": "A drug designed from receptor theory."
+  },
+  {
+   "year": 1987,
+   "title": "Statins",
+   "text": "Lovastatin is approved in the United States.",
+   "why": "A new class of cholesterol-lowering drugs."
+  },
+  {
+   "year": 1997,
+   "title": "The rule of five",
+   "text": "Christopher Lipinski publishes simple limits linked to oral absorption.",
+   "why": "Shaped how drug candidates are designed."
+  },
+  {
+   "year": 2001,
+   "title": "Targeted cancer therapy",
+   "text": "Imatinib is approved for chronic myeloid leukaemia.",
+   "why": "Showed that a drug can target the exact molecular cause of a cancer."
+  },
+  {
+   "year": 2013,
+   "title": "Curing hepatitis C",
+   "text": "Sofosbuvir is approved in the United States.",
+   "why": "Part of oral treatments that cure most hepatitis C infections."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "me-001",
+   "q": "Lipinski's rule of five flags molecules likely to have problems with…",
+   "options": [
+    "Oral absorption",
+    "Toxicity",
+    "Price",
+    "Taste"
+   ],
+   "answer": 0,
+   "explain": "Limits on size, lipophilicity and hydrogen bonding."
+  },
+  {
+   "id": "me-002",
+   "q": "What does ADME stand for?",
+   "options": [
+    "Absorption, distribution, metabolism, excretion",
+    "Activity, dose, mechanism, efficacy",
+    "Assay, design, make, evaluate",
+    "Acid, drug, molecule, enzyme"
+   ],
+   "answer": 0,
+   "explain": "The journey of a drug through the body."
+  },
+  {
+   "id": "me-003",
+   "q": "A prodrug is…",
+   "options": [
+    "An inactive compound converted into the active drug in the body",
+    "An expensive drug sold only by prescription",
+    "A natural product used in traditional medicine",
+    "A generic version of a patented drug"
+   ],
+   "answer": 0,
+   "explain": "Often used to improve absorption."
+  },
+  {
+   "id": "me-004",
+   "q": "A bioisostere is…",
+   "options": [
+    "A group swapped for another with similar properties, to keep activity while improving others",
+    "An isotope used to label a drug for imaging",
+    "An identical copy of a molecule made by synthesis",
+    "A protein that binds the drug in the blood"
+   ],
+   "answer": 0,
+   "explain": "For example, replacing a hydrogen with fluorine."
+  },
+  {
+   "id": "me-005",
+   "q": "IC50 is…",
+   "options": [
+    "The concentration that gives 50% inhibition",
+    "The dose that kills half the animals",
+    "The half-life",
+    "Half the price"
+   ],
+   "answer": 0,
+   "explain": "A lower IC50 means a more potent compound."
+  },
+  {
+   "id": "me-006",
+   "q": "Why do medicinal chemists often add fluorine?",
+   "options": [
+    "It can block metabolism and tune pKa and lipophilicity",
+    "It gives the drug a colour for quality control",
+    "It gives the drug a pleasant smell",
+    "Only to add weight to the molecule"
+   ],
+   "answer": 0,
+   "explain": "About a fifth of drugs contain fluorine."
+  },
+  {
+   "id": "me-007",
+   "q": "Most drugs are metabolized mainly by…",
+   "options": [
+    "Cytochrome P450 enzymes in the liver",
+    "The kidneys alone",
+    "Stomach acid",
+    "The lungs, by exhalation"
+   ],
+   "answer": 0,
+   "explain": "These enzymes oxidize drugs so they can be excreted."
+  },
+  {
+   "id": "me-008",
+   "q": "Ehrlich's Salvarsan treated…",
+   "options": [
+    "Syphilis",
+    "Malaria",
+    "Influenza",
+    "Cancer"
+   ],
+   "answer": 0,
+   "explain": "It was found after testing hundreds of arsenic compounds."
+  },
+  {
+   "id": "me-009",
+   "q": "Imatinib targets…",
+   "options": [
+    "The BCR-ABL kinase in chronic myeloid leukaemia",
+    "Bacteria that cause hospital infections",
+    "Viruses that cause chronic hepatitis",
+    "Cholesterol production in the liver"
+   ],
+   "answer": 0,
+   "explain": "The abnormal kinase drives the cancer."
+  },
+  {
+   "id": "me-010",
+   "q": "Statins lower cholesterol by inhibiting…",
+   "options": [
+    "HMG-CoA reductase",
+    "ACE",
+    "COX",
+    "DNA gyrase"
+   ],
+   "answer": 0,
+   "explain": "A key enzyme in the liver's cholesterol production."
+  },
+  {
+   "id": "me-011",
+   "q": "Aspirin works by inhibiting…",
+   "options": [
+    "Cyclooxygenase (COX) enzymes",
+    "Cytochrome P450",
+    "HMG-CoA reductase",
+    "Insulin receptors"
+   ],
+   "answer": 0,
+   "explain": "It acetylates COX irreversibly, reducing prostaglandin production."
+  },
+  {
+   "id": "me-012",
+   "q": "Screening for hERG binding checks the risk of…",
+   "options": [
+    "Heart rhythm problems",
+    "Liver damage",
+    "Hair loss",
+    "Allergies"
+   ],
+   "answer": 0,
+   "explain": "Blocking this potassium channel can cause dangerous arrhythmias."
+  }
+ ],
+ "related": [
+  "Drug Discovery",
+  "Heterocyclic Chemistry",
+  "Biological Chemistry",
+  "Computational Chemistry",
+  "Chemoinformatics"
+ ]
+}

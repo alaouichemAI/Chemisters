@@ -1,0 +1,299 @@
+{
+ "slug": "quality-control",
+ "channel": "Quality Control",
+ "number": 22,
+ "symbol": "Qc",
+ "category": "Applied & industrial",
+ "name": "Quality Control",
+ "tagline": "Analytical QC, GMP compliance, and pharmaceutical quality assurance.",
+ "seo_title": "Quality Control — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Quality Control on LinkedIn and Facebook: paper summaries, news and innovations in pharmaceutical QC, analytical validation, GMP and data integrity.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#a8f27d",
+  "accent2": "#89f0a5",
+  "tile": "#1b2513",
+  "motif": "dots"
+ },
+ "definition": {
+  "lead": "Quality control checks that every batch of a product meets its specifications, so that what reaches the customer, or the patient, is exactly what the label says.",
+  "body": "In chemical and pharmaceutical plants it combines validated analytical methods, sampling plans, statistics and careful documentation. Its rules, Good Manufacturing Practice, exist because past failures harmed people.",
+  "facts": [
+   {
+    "value": "1924",
+    "label": "Walter Shewhart invents the control chart"
+   },
+   {
+    "value": "1938",
+    "label": "US Food, Drug, and Cosmetic Act, passed after the elixir sulfanilamide deaths"
+   },
+   {
+    "value": "±3σ",
+    "label": "typical control limits on a Shewhart chart"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Analytical testing",
+   "summary": "Identity, assay, purity and impurities of every batch.",
+   "example": "HPLC assay of the active ingredient.",
+   "channel": "Analytical Chemistry"
+  },
+  {
+   "name": "Method validation",
+   "summary": "Proving that a test method is fit for purpose.",
+   "example": "Accuracy, precision, specificity and linearity.",
+   "channel": ""
+  },
+  {
+   "name": "Statistical process control",
+   "summary": "Using statistics to spot drift before it causes failure.",
+   "example": "Shewhart control charts.",
+   "channel": ""
+  },
+  {
+   "name": "Good Manufacturing Practice",
+   "summary": "The rules for making medicines consistently.",
+   "example": "If it isn't documented, it didn't happen.",
+   "channel": ""
+  },
+  {
+   "name": "Stability testing",
+   "summary": "How a product changes over time.",
+   "example": "Setting shelf life and storage conditions.",
+   "channel": ""
+  },
+  {
+   "name": "Microbiological control",
+   "summary": "Keeping products free of harmful microbes.",
+   "example": "Sterility testing of injectable drugs.",
+   "channel": ""
+  },
+  {
+   "name": "Quality by design",
+   "summary": "Building quality in from development, not testing it in at the end.",
+   "example": "Defining a design space for a process.",
+   "channel": "Industrial Chemistry"
+  },
+  {
+   "name": "Data integrity",
+   "summary": "Making sure records are complete, original and trustworthy.",
+   "example": "The ALCOA principles.",
+   "channel": "Chemical Data Science & Automation"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1906,
+   "title": "Pure Food and Drug Act",
+   "text": "The United States passes its first federal food and drug law.",
+   "why": "Banned misbranded and adulterated products."
+  },
+  {
+   "year": 1924,
+   "title": "The control chart",
+   "text": "Walter Shewhart sketches the first control chart at Bell Labs.",
+   "why": "The birth of statistical quality control."
+  },
+  {
+   "year": 1938,
+   "title": "Proof of safety",
+   "text": "After more than 100 deaths from a toxic drug solvent, the US requires safety evidence before sale.",
+   "why": "Pre-market review of drugs began."
+  },
+  {
+   "year": 1962,
+   "title": "After thalidomide",
+   "text": "The Kefauver–Harris amendments require proof of effectiveness as well as safety.",
+   "why": "Modern drug regulation took shape."
+  },
+  {
+   "year": 1963,
+   "title": "GMP rules",
+   "text": "The US issues its first Good Manufacturing Practice regulations for drugs.",
+   "why": "Quality became a legal requirement in manufacturing."
+  },
+  {
+   "year": 1987,
+   "title": "ISO 9000",
+   "text": "The first ISO 9000 quality management standards are published.",
+   "why": "A shared language for quality across industries."
+  },
+  {
+   "year": 1990,
+   "title": "ICH",
+   "text": "Regulators and industry from Europe, Japan and the US create the ICH.",
+   "why": "Harmonized technical requirements for medicines."
+  },
+  {
+   "year": 2004,
+   "title": "Modernizing GMP",
+   "text": "The FDA promotes process analytical technology and risk-based GMP.",
+   "why": "Real-time monitoring instead of only end testing."
+  },
+  {
+   "year": 2005,
+   "title": "Quality by design",
+   "text": "ICH Q8 on pharmaceutical development is adopted.",
+   "why": "Process understanding became central to quality."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "qc-001",
+   "q": "What is the difference between QC and QA?",
+   "options": [
+    "QC tests products; QA designs the systems that ensure quality",
+    "They are the same",
+    "QA tests products; QC designs systems",
+    "Neither concerns quality"
+   ],
+   "answer": 0,
+   "explain": "QC finds problems; QA prevents them."
+  },
+  {
+   "id": "qc-002",
+   "q": "What is a control chart for?",
+   "options": [
+    "Spotting when a process drifts beyond its normal variation",
+    "Counting how many staff work each shift",
+    "Measuring the profit of each production batch",
+    "Colour-coding samples by product type"
+   ],
+   "answer": 0,
+   "explain": "Points outside the limits signal something has changed."
+  },
+  {
+   "id": "qc-003",
+   "q": "Typical control limits are set at…",
+   "options": [
+    "The mean ± 3 standard deviations",
+    "The mean ± 10%",
+    "The lowest and highest values ever seen",
+    "0 and 100"
+   ],
+   "answer": 0,
+   "explain": "A stable process rarely produces points beyond ±3σ by chance."
+  },
+  {
+   "id": "qc-004",
+   "q": "GMP stands for…",
+   "options": [
+    "Good Manufacturing Practice",
+    "General Measurement Procedure",
+    "Global Market Price",
+    "Good Mixing Protocol"
+   ],
+   "answer": 0,
+   "explain": "Rules covering people, premises, equipment, documents and processes."
+  },
+  {
+   "id": "qc-005",
+   "q": "A method's specificity means it…",
+   "options": [
+    "Measures the analyte without interference from other components",
+    "Is fast enough for routine testing",
+    "Is cheap enough for every batch",
+    "Measures everything in the sample at once"
+   ],
+   "answer": 0,
+   "explain": "Impurities and excipients must not distort the result."
+  },
+  {
+   "id": "qc-006",
+   "q": "Stability testing determines…",
+   "options": [
+    "Shelf life and storage conditions",
+    "The colour of the product",
+    "The price of each batch",
+    "The dose given to patients"
+   ],
+   "answer": 0,
+   "explain": "Samples are stored under defined temperature and humidity and tested over time."
+  },
+  {
+   "id": "qc-007",
+   "q": "An out-of-specification result requires…",
+   "options": [
+    "A documented investigation before any conclusion",
+    "Retesting until it passes",
+    "Quietly discarding it",
+    "Ignoring it"
+   ],
+   "answer": 0,
+   "explain": "'Testing into compliance' is a serious violation."
+  },
+  {
+   "id": "qc-008",
+   "q": "In data integrity, ALCOA stands for…",
+   "options": [
+    "Attributable, Legible, Contemporaneous, Original, Accurate",
+    "Always Label Chemicals Or Assays",
+    "Assay, Limit, Control, Output, Audit",
+    "Analyse, Log, Check, Order, Approve"
+   ],
+   "answer": 0,
+   "explain": "Records must show who did what, when, in the original form."
+  },
+  {
+   "id": "qc-009",
+   "q": "What did the 1962 Kefauver–Harris amendments add after thalidomide?",
+   "options": [
+    "Proof that a drug works, as well as that it is safe",
+    "A ban on all new drugs for ten years",
+    "The end of Good Manufacturing Practice rules",
+    "Nothing new; they repeated earlier rules"
+   ],
+   "answer": 0,
+   "explain": "Thalidomide caused severe birth defects in thousands of children."
+  },
+  {
+   "id": "qc-010",
+   "q": "Who invented the control chart?",
+   "options": [
+    "Walter Shewhart",
+    "W. Edwards Deming",
+    "Henry Ford",
+    "Frederick Taylor"
+   ],
+   "answer": 0,
+   "explain": "Deming later spread Shewhart's ideas worldwide."
+  },
+  {
+   "id": "qc-011",
+   "q": "A certificate of analysis is…",
+   "options": [
+    "A document reporting a batch's test results against its specifications",
+    "An invoice sent with each delivery to the customer",
+    "A patent covering the product's formula",
+    "Only the safety data sheet for the product"
+   ],
+   "answer": 0,
+   "explain": "It travels with the batch to the customer."
+  },
+  {
+   "id": "qc-012",
+   "q": "Quality by design means…",
+   "options": [
+    "Understanding how process parameters affect quality and building it in from development",
+    "Testing many more samples at the end of production",
+    "Designing nicer labels and packaging",
+    "Making products cheaper to manufacture"
+   ],
+   "answer": 0,
+   "explain": "Quality cannot be tested into a product; it must be designed in."
+  }
+ ],
+ "related": [
+  "Analytical Chemistry",
+  "Industrial Chemistry",
+  "Medicinal Chemistry",
+  "Chemical Engineering",
+  "Forensic Chemistry"
+ ]
+}

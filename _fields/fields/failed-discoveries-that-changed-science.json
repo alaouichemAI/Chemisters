@@ -1,0 +1,314 @@
+{
+ "slug": "failed-discoveries-that-changed-science",
+ "channel": "Failed Discoveries That Changed Science",
+ "number": 53,
+ "symbol": "Fa",
+ "category": "Community",
+ "name": "Failed Discoveries That Changed Science",
+ "tagline": "Serendipity, mistakes, and the surprising origin stories of breakthroughs.",
+ "seo_title": "Failed Discoveries That Changed Science | Chemisters",
+ "seo_description": "Follow Chemisters Failed Discoveries That Changed Science on LinkedIn and Facebook: stories of failed experiments, accidents and serendipity that led to breakthroughs.",
+ "posts_about": [
+  "Discovery stories",
+  "History",
+  "Lessons"
+ ],
+ "theme": {
+  "accent": "#f2a07d",
+  "accent2": "#f0ea89",
+  "tile": "#2a2311",
+  "motif": "zigzag"
+ },
+ "definition": {
+  "lead": "Some of chemistry's biggest breakthroughs came from failed experiments, contaminated samples and things nobody was looking for.",
+  "body": "A purple dye from a failed attempt at quinine, Teflon from a gas cylinder that seemed empty, penicillin from a contaminated plate. The common thread is not luck alone, but someone who noticed something odd and asked why.",
+  "facts": [
+   {
+    "value": "1856",
+    "label": "mauveine, from a failed quinine synthesis"
+   },
+   {
+    "value": "1928",
+    "label": "penicillin, from a contaminated culture plate"
+   },
+   {
+    "value": "1938",
+    "label": "Teflon, from a gas cylinder that seemed empty"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Contaminated experiments",
+   "summary": "When an unwanted guest becomes the discovery.",
+   "example": "Mould on Fleming's culture plate.",
+   "channel": ""
+  },
+  {
+   "name": "Missed targets",
+   "summary": "Aiming for one molecule and finding another.",
+   "example": "Perkin aimed for quinine and found mauve.",
+   "channel": ""
+  },
+  {
+   "name": "Unexpected products",
+   "summary": "Something strange left behind in the flask.",
+   "example": "A white solid inside an 'empty' cylinder: Teflon.",
+   "channel": ""
+  },
+  {
+   "name": "Wrong hypotheses",
+   "summary": "A drug tested for one use proves useful for another.",
+   "example": "Sildenafil was first studied for angina.",
+   "channel": ""
+  },
+  {
+   "name": "Lab accidents",
+   "summary": "Mistakes that revealed something new.",
+   "example": "Saccharin's sweetness noticed on unwashed hands.",
+   "channel": ""
+  },
+  {
+   "name": "Rejected ideas",
+   "summary": "Results dismissed before being accepted.",
+   "example": "Shechtman's 'impossible' quasicrystals.",
+   "channel": "Wisdom & Stories"
+  },
+  {
+   "name": "Patient observation",
+   "summary": "Following up on what others would ignore.",
+   "example": "Becquerel's photographic plates in a drawer.",
+   "channel": ""
+  },
+  {
+   "name": "Spectacular results",
+   "summary": "Discoveries you can see.",
+   "example": "Experiments that changed how we see chemistry.",
+   "channel": "Amazing Lab Experiments"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1839,
+   "title": "Vulcanized rubber",
+   "text": "According to the usual account, Charles Goodyear finds that rubber heated with sulfur stays elastic after an accident on a hot stove.",
+   "why": "Made tyres and seals possible."
+  },
+  {
+   "year": 1856,
+   "title": "Mauve instead of quinine",
+   "text": "William Perkin's failed attempt to make quinine gives the first synthetic dye.",
+   "why": "Launched the chemical industry."
+  },
+  {
+   "year": 1879,
+   "title": "Saccharin",
+   "text": "Constantin Fahlberg notices a sweet taste on his hands after a day in the lab.",
+   "why": "The first artificial sweetener."
+  },
+  {
+   "year": 1895,
+   "title": "X-rays",
+   "text": "Wilhelm Röntgen notices a screen glowing across his lab while working with a cathode-ray tube.",
+   "why": "Changed medicine and crystallography."
+  },
+  {
+   "year": 1896,
+   "title": "Radioactivity",
+   "text": "Henri Becquerel finds that uranium salts darkened plates stored in a drawer on cloudy days.",
+   "why": "He expected sunlight to be needed; it was not."
+  },
+  {
+   "year": 1928,
+   "title": "Penicillin",
+   "text": "Alexander Fleming returns from holiday to find mould killing bacteria on a culture plate.",
+   "why": "The start of the antibiotic era."
+  },
+  {
+   "year": 1938,
+   "title": "Teflon",
+   "text": "Roy Plunkett finds that a cylinder of tetrafluoroethylene gas has turned into a slippery white solid.",
+   "why": "Non-stick coatings and much more."
+  },
+  {
+   "year": 1965,
+   "title": "Aspartame",
+   "text": "James Schlatter notices a sweet taste while working on an ulcer drug.",
+   "why": "Became a widely used sweetener."
+  },
+  {
+   "year": 1968,
+   "title": "A glue that didn't stick",
+   "text": "Spencer Silver at 3M makes a weak adhesive that later becomes Post-it Notes.",
+   "why": "A 'failure' found its use years later."
+  },
+  {
+   "year": 1982,
+   "title": "Quasicrystals",
+   "text": "Dan Shechtman sees a diffraction pattern that was thought impossible.",
+   "why": "Rejected for years; Nobel Prize in 2011."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "fa-001",
+   "q": "How was penicillin discovered?",
+   "options": [
+    "Mould contaminated a bacterial culture plate",
+    "In a planned search of soil samples",
+    "By computer screening",
+    "From a plant extract"
+   ],
+   "answer": 0,
+   "explain": "Fleming noticed a clear zone around the mould."
+  },
+  {
+   "id": "fa-002",
+   "q": "What was Perkin trying to make when he found mauveine?",
+   "options": [
+    "Quinine",
+    "Aspirin",
+    "Indigo",
+    "Morphine"
+   ],
+   "answer": 0,
+   "explain": "Quinine was needed to treat malaria."
+  },
+  {
+   "id": "fa-003",
+   "q": "How was Teflon discovered?",
+   "options": [
+    "A cylinder of tetrafluoroethylene seemed empty but contained a white solid",
+    "By mixing two plastics to make a new one",
+    "In a fire at a chemical warehouse",
+    "By accident in a home kitchen"
+   ],
+   "answer": 0,
+   "explain": "The gas had polymerized inside the cylinder."
+  },
+  {
+   "id": "fa-004",
+   "q": "How was saccharin's sweetness discovered?",
+   "options": [
+    "Fahlberg noticed a sweet taste on his hands",
+    "By a taste-testing panel",
+    "From a fruit",
+    "By computer prediction"
+   ],
+   "answer": 0,
+   "explain": "Never taste lab chemicals: it is dangerous."
+  },
+  {
+   "id": "fa-005",
+   "q": "The weak glue behind Post-it Notes was first seen as…",
+   "options": [
+    "A failure",
+    "A great success",
+    "A medicine",
+    "A paint"
+   ],
+   "answer": 0,
+   "explain": "It took years to find a use."
+  },
+  {
+   "id": "fa-006",
+   "q": "What helped Becquerel discover radioactivity?",
+   "options": [
+    "Cloudy weather made him store uranium salts with photographic plates in a drawer",
+    "A lightning strike near his laboratory",
+    "A broken thermometer that spilled mercury",
+    "Acid spilled on his photographic plates"
+   ],
+   "answer": 0,
+   "explain": "The plates darkened without sunlight."
+  },
+  {
+   "id": "fa-007",
+   "q": "Sildenafil was first developed for…",
+   "options": [
+    "Angina",
+    "Headaches",
+    "Malaria",
+    "Asthma"
+   ],
+   "answer": 0,
+   "explain": "Its other effect was noticed in trials."
+  },
+  {
+   "id": "fa-008",
+   "q": "How was aspartame's sweetness found?",
+   "options": [
+    "A chemist noticed a sweet taste while working on an ulcer drug",
+    "By studying the sweetness of tropical fruits",
+    "By a robot screening thousands of compounds",
+    "By analysing the sugars in honey"
+   ],
+   "answer": 0,
+   "explain": "Again: tasting lab chemicals is dangerous."
+  },
+  {
+   "id": "fa-009",
+   "q": "How were Shechtman's quasicrystals first received?",
+   "options": [
+    "With ridicule, before a Nobel Prize in 2011",
+    "With immediate praise",
+    "They were ignored forever",
+    "They were patented at once"
+   ],
+   "answer": 0,
+   "explain": "He was even asked to leave his research group."
+  },
+  {
+   "id": "fa-010",
+   "q": "How did Röntgen notice X-rays?",
+   "options": [
+    "A screen glowed across the room while he worked with a cathode-ray tube",
+    "A photograph of his hand appeared by itself",
+    "His glasses broke",
+    "A crystal changed colour"
+   ],
+   "answer": 0,
+   "explain": "He then made the famous image of his wife's hand."
+  },
+  {
+   "id": "fa-011",
+   "q": "What do these discoveries have in common?",
+   "options": [
+    "Someone noticed something unexpected and investigated",
+    "Pure luck alone, with no knowledge needed",
+    "Large budgets for each research project",
+    "Computer predictions made in advance"
+   ],
+   "answer": 0,
+   "explain": "Pasteur: chance favours the prepared mind."
+  },
+  {
+   "id": "fa-012",
+   "q": "Complete Pasteur's phrase: chance favours…",
+   "options": [
+    "The prepared mind",
+    "The brave",
+    "The lucky",
+    "The rich"
+   ],
+   "answer": 0,
+   "explain": "Observation needs knowledge to recognize what matters."
+  }
+ ],
+ "related": [
+  "Wisdom & Stories",
+  "Amazing Lab Experiments",
+  "Modern Chemistry",
+  "The Chemistry",
+  "Creative Chemistry"
+ ],
+ "labels": {
+  "field_eyebrow": "What this page is",
+  "field": "Serendipity, in one minute",
+  "map_eyebrow": "Patterns",
+  "map": "How accidents become discoveries",
+  "map_sub": "The same patterns appear again and again behind 'lucky' breakthroughs.",
+  "hist_eyebrow": "Stories",
+  "hist": "Happy accidents through history"
+ }
+}

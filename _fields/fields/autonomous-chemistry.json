@@ -1,0 +1,287 @@
+{
+ "slug": "autonomous-chemistry",
+ "channel": "Autonomous Chemistry",
+ "number": 36,
+ "symbol": "Ao",
+ "category": "Computational & AI",
+ "name": "Autonomous Chemistry",
+ "tagline": "Robotics, machine learning, and self-driving labs shaping the future of synthesis.",
+ "seo_title": "Autonomous Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Autonomous Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in self-driving labs, lab robotics, closed-loop optimization and AI lab agents.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#a47df2",
+  "accent2": "#ed89f0",
+  "tile": "#1e1936",
+  "motif": "spark"
+ },
+ "definition": {
+  "lead": "Autonomous chemistry combines robotics, automation and AI so that experiments can be planned, run and analysed with little or no human intervention.",
+  "body": "In a self-driving lab, an algorithm chooses the next experiment, robots carry it out, instruments measure the result and the algorithm learns from it, around the clock. The goal is to discover molecules and materials many times faster than by hand.",
+  "facts": [
+   {
+    "value": "2009",
+    "label": "the robot scientist 'Adam' makes discoveries about yeast genes"
+   },
+   {
+    "value": "688",
+    "label": "experiments run in 8 days by a mobile robot chemist (2020)"
+   },
+   {
+    "value": "24/7",
+    "label": "robots can run experiments around the clock"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Lab robotics",
+   "summary": "Machines that weigh, dispense, mix and move samples.",
+   "example": "Liquid-handling robots.",
+   "channel": ""
+  },
+  {
+   "name": "Closed-loop optimization",
+   "summary": "Algorithms that choose the next experiment from the last results.",
+   "example": "Bayesian optimization of reaction conditions.",
+   "channel": "Chemistry AI & ML Applications"
+  },
+  {
+   "name": "Materials self-driving labs",
+   "summary": "Autonomous discovery of new materials.",
+   "example": "Robots that synthesize and characterize inorganic powders.",
+   "channel": "Chemistry of Materials"
+  },
+  {
+   "name": "Automated synthesis",
+   "summary": "Running multistep syntheses from code.",
+   "example": "Programmable synthesis platforms.",
+   "channel": "Synthetic Chemistry"
+  },
+  {
+   "name": "Automated flow chemistry",
+   "summary": "Continuous reactors controlled by software.",
+   "example": "Self-optimizing flow reactors.",
+   "channel": ""
+  },
+  {
+   "name": "High-throughput experimentation",
+   "summary": "Many small experiments in parallel.",
+   "example": "Screening reactions in 96-well plates.",
+   "channel": ""
+  },
+  {
+   "name": "AI lab agents",
+   "summary": "Language-model agents that plan and execute experiments.",
+   "example": "Agents that read manuals and control instruments.",
+   "channel": ""
+  },
+  {
+   "name": "Data & reproducibility",
+   "summary": "Machine-readable protocols and complete records.",
+   "example": "Every step logged automatically.",
+   "channel": "Chemical Data Science & Automation"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1966,
+   "title": "Automated peptide synthesis",
+   "text": "Bruce Merrifield and colleagues publish an instrument for automated peptide synthesis.",
+   "why": "One of the first automated chemistry machines."
+  },
+  {
+   "year": 1981,
+   "title": "Automated DNA synthesis",
+   "text": "Phosphoramidite chemistry from Marvin Caruthers's lab enables automated DNA synthesizers.",
+   "why": "Made custom DNA routine."
+  },
+  {
+   "year": 2009,
+   "title": "The robot scientist",
+   "text": "Ross King's team reports 'Adam', which formed and tested hypotheses about yeast genes.",
+   "why": "A machine that made discoveries on its own."
+  },
+  {
+   "year": 2018,
+   "title": "Searching for new reactivity",
+   "text": "Lee Cronin's group uses a robot guided by machine learning to explore reactions.",
+   "why": "Automation used for discovery, not just repetition."
+  },
+  {
+   "year": 2019,
+   "title": "The Chemputer",
+   "text": "Cronin's group runs syntheses from a chemical programming language on a modular robot.",
+   "why": "Synthesis as executable code."
+  },
+  {
+   "year": 2020,
+   "title": "A mobile robot chemist",
+   "text": "Andrew Cooper's team reports a robot that moves around a lab and runs 688 experiments in 8 days.",
+   "why": "Found better photocatalysts autonomously."
+  },
+  {
+   "year": 2023,
+   "title": "AI agents in the lab",
+   "text": "Coscientist, a language-model agent, plans and runs chemistry experiments with lab hardware.",
+   "why": "Large language models started operating lab equipment."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "ao-001",
+   "q": "A self-driving lab is…",
+   "options": [
+    "A loop where AI chooses experiments, robots run them and results update the AI",
+    "A factory where robots assemble self-driving cars",
+    "A lab whose instruments are operated remotely by people",
+    "A lab that runs without electricity to save energy"
+   ],
+   "answer": 0,
+   "explain": "Design, make, test, learn: automated."
+  },
+  {
+   "id": "ao-002",
+   "q": "Bayesian optimization chooses the next experiment by…",
+   "options": [
+    "Using a model of the results to balance exploring and exploiting",
+    "Picking randomly",
+    "Testing a full grid",
+    "Always repeating the best result"
+   ],
+   "answer": 0,
+   "explain": "It often finds good conditions in far fewer experiments."
+  },
+  {
+   "id": "ao-003",
+   "q": "High-throughput experimentation means…",
+   "options": [
+    "Running many small reactions in parallel",
+    "Running one huge reaction",
+    "Running reactions very fast",
+    "Running reactions only at night"
+   ],
+   "answer": 0,
+   "explain": "Plates of 96 or more reactions at once."
+  },
+  {
+   "id": "ao-004",
+   "q": "Why does automation help reproducibility?",
+   "options": [
+    "Robots repeat steps the same way and log every parameter",
+    "Robots never make mistakes, so no records are needed",
+    "Robots work faster, which makes every result the same",
+    "Robots are cheaper, so experiments can be skipped"
+   ],
+   "answer": 0,
+   "explain": "Hidden variables in manual work become recorded data."
+  },
+  {
+   "id": "ao-005",
+   "q": "What did the robot scientist 'Adam' (2009) do?",
+   "options": [
+    "Discovered functions of yeast genes",
+    "Synthesized a drug",
+    "Built a battery",
+    "Wrote a paper alone"
+   ],
+   "answer": 0,
+   "explain": "It generated hypotheses and tested them experimentally."
+  },
+  {
+   "id": "ao-006",
+   "q": "The 2020 mobile robot chemist…",
+   "options": [
+    "Moved around a standard lab and ran 688 experiments in 8 days",
+    "Drove itself between universities to collect samples",
+    "Replaced every chemist in a university department",
+    "Only analysed data that humans had already measured"
+   ],
+   "answer": 0,
+   "explain": "It searched for better photocatalysts for hydrogen production."
+  },
+  {
+   "id": "ao-007",
+   "q": "The Chemputer is…",
+   "options": [
+    "A programmable platform that runs syntheses written in a chemical language",
+    "A desktop computer designed for chemistry students",
+    "A spectrometer that identifies reaction products",
+    "A database of every published synthesis route"
+   ],
+   "answer": 0,
+   "explain": "From Lee Cronin's group."
+  },
+  {
+   "id": "ao-008",
+   "q": "What is often the biggest bottleneck for self-driving labs?",
+   "options": [
+    "Reliable automated handling of solids and purification, and data quality",
+    "Finding enough electricity to run robots all night",
+    "The cost of paper for printing experiment records",
+    "Keeping the lab at exactly room temperature"
+   ],
+   "answer": 0,
+   "explain": "Liquids are easy for robots; powders and workups are not."
+  },
+  {
+   "id": "ao-009",
+   "q": "In optimization, 'exploration versus exploitation' means…",
+   "options": [
+    "Trying uncertain regions versus refining the best known conditions",
+    "Field trips to collect samples versus lab work",
+    "Mining raw materials versus refining them",
+    "Reading the literature versus writing papers"
+   ],
+   "answer": 0,
+   "explain": "Good algorithms balance the two."
+  },
+  {
+   "id": "ao-010",
+   "q": "Language-model agents such as Coscientist…",
+   "options": [
+    "Plan and run experiments by using tools and documentation",
+    "Only write reports after humans finish the experiments",
+    "Replace all chemists and run labs without supervision",
+    "Work only offline, without access to any tools"
+   ],
+   "answer": 0,
+   "explain": "They call search, code and instrument interfaces."
+  },
+  {
+   "id": "ao-011",
+   "q": "Automated phosphoramidite chemistry made routine the synthesis of…",
+   "options": [
+    "DNA oligonucleotides",
+    "Proteins",
+    "Polymers",
+    "Metals"
+   ],
+   "answer": 0,
+   "explain": "Primers for PCR are made this way."
+  },
+  {
+   "id": "ao-012",
+   "q": "A 'closed loop' means…",
+   "options": [
+    "Results automatically decide the next experiment",
+    "The lab door stays closed",
+    "The reactor is sealed",
+    "No data is saved"
+   ],
+   "answer": 0,
+   "explain": "No human is needed between iterations."
+  }
+ ],
+ "related": [
+  "Chemical Data Science & Automation",
+  "Chemistry AI & ML Applications",
+  "Synthetic Chemistry",
+  "Chemistry of Materials",
+  "AI in Chemistry — Real Use Cases"
+ ]
+}

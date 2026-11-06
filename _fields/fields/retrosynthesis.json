@@ -1,0 +1,299 @@
+{
+ "slug": "retrosynthesis",
+ "channel": "Retrosynthesis",
+ "number": 13,
+ "symbol": "Rs",
+ "category": "Synthesis & reactivity",
+ "name": "Retrosynthesis",
+ "tagline": "Working backwards from target to starting materials — the logic of synthesis.",
+ "seo_title": "Retrosynthesis — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Retrosynthesis on LinkedIn and Facebook: paper summaries, news and innovations in synthesis planning, disconnection strategy and AI-driven retrosynthesis.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#f2b87d",
+  "accent2": "#e3f089",
+  "tile": "#2e1c12",
+  "motif": "chain"
+ },
+ "definition": {
+  "lead": "Retrosynthesis plans a synthesis backwards: start from the target molecule and cut it into simpler pieces until you reach materials you can buy.",
+  "body": "Formalized by E. J. Corey in the 1960s, it turned synthesis planning from intuition into logic. Today computer programs and AI models search huge numbers of possible disconnections and suggest routes in seconds.",
+  "facts": [
+   {
+    "value": "⇒",
+    "label": "the retrosynthetic arrow, meaning 'can be made from'"
+   },
+   {
+    "value": "1967",
+    "label": "Corey sets out the logic of retrosynthetic analysis"
+   },
+   {
+    "value": "1990",
+    "label": "Corey receives the Nobel Prize in Chemistry"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Disconnections",
+   "summary": "Breaking bonds on paper to simplify the target.",
+   "example": "Cutting the C–C bond next to a carbonyl group.",
+   "channel": ""
+  },
+  {
+   "name": "Synthons & equivalents",
+   "summary": "Idealized fragments, and the real reagents that play their part.",
+   "example": "A dithiane standing in for an 'acyl anion'.",
+   "channel": ""
+  },
+  {
+   "name": "Functional group interconversion",
+   "summary": "Changing one group into another on paper to enable a disconnection.",
+   "example": "Seeing an alcohol as a reduced ketone.",
+   "channel": ""
+  },
+  {
+   "name": "Strategic bonds",
+   "summary": "Choosing the cuts that simplify the most.",
+   "example": "Disconnecting rings and branch points first.",
+   "channel": ""
+  },
+  {
+   "name": "Computer-aided planning",
+   "summary": "Programs that encode reaction rules and search routes.",
+   "example": "From LHASA (1969) to today's commercial planners.",
+   "channel": "Chemistry AI & ML Applications"
+  },
+  {
+   "name": "AI retrosynthesis",
+   "summary": "Models trained on millions of published reactions.",
+   "example": "Transformers that 'translate' products into reactants.",
+   "channel": "Chemoinformatics"
+  },
+  {
+   "name": "Route scoring",
+   "summary": "Ranking routes by cost, safety, steps and waste.",
+   "example": "Green metrics in route selection.",
+   "channel": "Green Chemistry"
+  },
+  {
+   "name": "Lab validation",
+   "summary": "Testing the proposed route at the bench.",
+   "example": "Robots executing computer-planned routes.",
+   "channel": "Autonomous Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1917,
+   "title": "Thinking backwards",
+   "text": "Robert Robinson's tropinone synthesis reflects a backward analysis of the target.",
+   "why": "An early example of retrosynthetic logic."
+  },
+  {
+   "year": 1967,
+   "title": "Corey's logic",
+   "text": "E. J. Corey publishes general methods for planning the synthesis of complex molecules.",
+   "why": "Turned intuition into a teachable method."
+  },
+  {
+   "year": 1969,
+   "title": "LHASA",
+   "text": "Corey and Todd Wipke describe computer-assisted synthesis design.",
+   "why": "The first synthesis-planning program."
+  },
+  {
+   "year": 1982,
+   "title": "The disconnection approach",
+   "text": "Stuart Warren publishes a textbook built around disconnections.",
+   "why": "Brought retrosynthesis into teaching worldwide."
+  },
+  {
+   "year": 1989,
+   "title": "The Logic of Chemical Synthesis",
+   "text": "Corey and Xue-Min Cheng publish their book on synthesis strategy.",
+   "why": "A reference for generations of synthetic chemists."
+  },
+  {
+   "year": 1990,
+   "title": "Nobel Prize",
+   "text": "Corey is awarded the Nobel Prize for the theory and methodology of organic synthesis.",
+   "why": "Retrosynthesis recognized at the highest level."
+  },
+  {
+   "year": 2016,
+   "title": "Networks of reactions",
+   "text": "Bartosz Grzybowski's team reports progress with Chematica, an expert synthesis planner.",
+   "why": "Showed computers could plan non-trivial routes."
+  },
+  {
+   "year": 2018,
+   "title": "Deep learning plans syntheses",
+   "text": "Marwin Segler, Mike Preuss and Mark Waller combine neural networks with tree search.",
+   "why": "AI routes judged comparable to literature routes by chemists."
+  },
+  {
+   "year": 2019,
+   "title": "Reactions as translation",
+   "text": "The Molecular Transformer predicts reaction outcomes like a language model.",
+   "why": "Language-model methods entered synthesis planning."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "rs-001",
+   "q": "What does the retrosynthetic arrow ⇒ mean?",
+   "options": [
+    "'Can be made from'",
+    "'Reacts with'",
+    "'Is in equilibrium with'",
+    "'Is heated'"
+   ],
+   "answer": 0,
+   "explain": "It points from the target to its precursors."
+  },
+  {
+   "id": "rs-002",
+   "q": "A synthon is…",
+   "options": [
+    "An idealized fragment produced by a disconnection",
+    "A real reagent bought from a supplier",
+    "A solvent chosen for the reaction",
+    "A catalyst that speeds up the step"
+   ],
+   "answer": 0,
+   "explain": "It may not exist as such: a 'carbanion' synthon is supplied by a real reagent."
+  },
+  {
+   "id": "rs-003",
+   "q": "The real reagent that stands in for a synthon is called…",
+   "options": [
+    "A synthetic equivalent",
+    "A catalyst",
+    "A ligand",
+    "An isomer"
+   ],
+   "answer": 0,
+   "explain": "For example, a Grignard reagent for a carbanion synthon."
+  },
+  {
+   "id": "rs-004",
+   "q": "FGI stands for…",
+   "options": [
+    "Functional group interconversion",
+    "Final group isolation",
+    "Free gas injection",
+    "Fragment generation index"
+   ],
+   "answer": 0,
+   "explain": "Changing a group on paper so a good disconnection becomes possible."
+  },
+  {
+   "id": "rs-005",
+   "q": "Who formalized retrosynthesis and won the 1990 Nobel Prize?",
+   "options": [
+    "E. J. Corey",
+    "R. B. Woodward",
+    "K. B. Sharpless",
+    "Emil Fischer"
+   ],
+   "answer": 0,
+   "explain": "He also designed many reagents and named reactions."
+  },
+  {
+   "id": "rs-006",
+   "q": "Good disconnections usually…",
+   "options": [
+    "Correspond to reliable, known reactions",
+    "Break the strongest bonds",
+    "Remove all rings first",
+    "Avoid heteroatoms"
+   ],
+   "answer": 0,
+   "explain": "Every paper cut must be a reaction you can actually run forwards."
+  },
+  {
+   "id": "rs-007",
+   "q": "Disconnecting a C–C bond next to a carbonyl often points to…",
+   "options": [
+    "An enolate alkylation or aldol reaction",
+    "A Diels–Alder reaction",
+    "A nitration",
+    "A reduction"
+   ],
+   "answer": 0,
+   "explain": "The carbon next to a carbonyl can act as a nucleophile through its enolate."
+  },
+  {
+   "id": "rs-008",
+   "q": "A Diels–Alder retrosynthesis cuts which kind of ring?",
+   "options": [
+    "A cyclohexene",
+    "A benzene",
+    "A cyclopropane",
+    "A macrocycle"
+   ],
+   "answer": 0,
+   "explain": "Recognizing a cyclohexene suggests a diene plus a dienophile."
+  },
+  {
+   "id": "rs-009",
+   "q": "LHASA (1969) was…",
+   "options": [
+    "An early computer program for synthesis planning",
+    "A reaction named after its inventor",
+    "A catalyst used in total synthesis",
+    "A spectrometer for analysing products"
+   ],
+   "answer": 0,
+   "explain": "Developed by Corey and Wipke at Harvard."
+  },
+  {
+   "id": "rs-010",
+   "q": "Why plan backwards instead of forwards?",
+   "options": [
+    "The target is fixed, so working back narrows a huge space of options to logical cuts",
+    "Forward planning is not allowed in synthesis",
+    "Backward reactions are always faster",
+    "It saves solvent in the laboratory"
+   ],
+   "answer": 0,
+   "explain": "From any starting material, the forward possibilities explode."
+  },
+  {
+   "id": "rs-011",
+   "q": "The Molecular Transformer (2019) treats reaction prediction like…",
+   "options": [
+    "Translating reactant SMILES into product SMILES",
+    "Image recognition of drawn structures",
+    "Solving a crossword of atoms",
+    "Sorting molecules by their mass"
+   ],
+   "answer": 0,
+   "explain": "The same architecture as machine translation."
+  },
+  {
+   "id": "rs-012",
+   "q": "Why is a convergent route often preferred?",
+   "options": [
+    "Overall yield drops less than in one long linear sequence",
+    "It uses fewer molecules overall",
+    "It is always cheaper than a linear route",
+    "It needs no purification steps"
+   ],
+   "answer": 0,
+   "explain": "Fewer steps lie on the longest path to the target."
+  }
+ ],
+ "related": [
+  "Synthetic Chemistry",
+  "Organic Chemistry",
+  "Chemistry AI & ML Applications",
+  "Chemoinformatics",
+  "Autonomous Chemistry"
+ ]
+}

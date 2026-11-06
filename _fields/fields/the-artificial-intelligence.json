@@ -1,0 +1,311 @@
+{
+ "slug": "the-artificial-intelligence",
+ "channel": "The Artificial Intelligence",
+ "number": 40,
+ "symbol": "Ai",
+ "category": "Computational & AI",
+ "name": "The Artificial Intelligence",
+ "tagline": "General AI advances relevant to chemistry and scientific computing.",
+ "seo_title": "The Artificial Intelligence — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters The Artificial Intelligence on LinkedIn and Facebook: news and explainers on AI advances relevant to chemistry and science.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#7d91f2",
+  "accent2": "#b989f0",
+  "tile": "#1e1936",
+  "motif": "rings"
+ },
+ "definition": {
+  "lead": "Artificial intelligence is the science of building systems that learn from data, recognize patterns, make decisions and generate content.",
+  "body": "This page follows the AI advances that matter for chemistry and science: new models, tools and methods, explained for scientists. Breakthroughs from deep learning to large language models often reach chemistry labs within months.",
+  "facts": [
+   {
+    "value": "1956",
+    "label": "the Dartmouth workshop launches AI as a research field"
+   },
+   {
+    "value": "2017",
+    "label": "'Attention Is All You Need' introduces the transformer"
+   },
+   {
+    "value": "2024",
+    "label": "Nobel Prizes in both Physics and Chemistry reward AI-related work"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Machine learning",
+   "summary": "Systems that improve from data rather than explicit rules.",
+   "example": "Learning to classify from labelled examples.",
+   "channel": ""
+  },
+  {
+   "name": "Deep learning",
+   "summary": "Neural networks with many layers.",
+   "example": "Image and speech recognition.",
+   "channel": ""
+  },
+  {
+   "name": "Large language models",
+   "summary": "Transformer models trained on huge amounts of text.",
+   "example": "Chat assistants and coding tools.",
+   "channel": ""
+  },
+  {
+   "name": "Computer vision",
+   "summary": "Teaching machines to interpret images.",
+   "example": "Analysing microscopy images automatically.",
+   "channel": ""
+  },
+  {
+   "name": "Reinforcement learning",
+   "summary": "Learning by trial, error and reward.",
+   "example": "AlphaGo learning to play Go.",
+   "channel": ""
+  },
+  {
+   "name": "Generative AI",
+   "summary": "Models that create text, images, code or molecules.",
+   "example": "Diffusion models for images and proteins.",
+   "channel": ""
+  },
+  {
+   "name": "AI for science",
+   "summary": "AI as a tool for discovery.",
+   "example": "Protein structure prediction.",
+   "channel": "Chemistry AI & ML Applications"
+  },
+  {
+   "name": "Responsible AI",
+   "summary": "Reliability, bias, transparency and safety.",
+   "example": "Checking models for hidden biases.",
+   "channel": ""
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1950,
+   "title": "The Turing test",
+   "text": "Alan Turing asks whether machines can think, and proposes the imitation game.",
+   "why": "Framed the question for decades."
+  },
+  {
+   "year": 1956,
+   "title": "Dartmouth",
+   "text": "A summer workshop at Dartmouth College launches artificial intelligence as a field.",
+   "why": "The name and the research programme are born."
+  },
+  {
+   "year": 1958,
+   "title": "The perceptron",
+   "text": "Frank Rosenblatt builds an early learning machine inspired by neurons.",
+   "why": "The ancestor of neural networks."
+  },
+  {
+   "year": 1986,
+   "title": "Backpropagation",
+   "text": "Rumelhart, Hinton and Williams show how to train multi-layer networks.",
+   "why": "The learning algorithm of deep learning."
+  },
+  {
+   "year": 1997,
+   "title": "Deep Blue",
+   "text": "IBM's Deep Blue defeats world chess champion Garry Kasparov.",
+   "why": "A milestone for machine game-playing."
+  },
+  {
+   "year": 2012,
+   "title": "The deep learning breakthrough",
+   "text": "AlexNet wins the ImageNet image-recognition competition by a wide margin.",
+   "why": "Started the modern deep learning boom."
+  },
+  {
+   "year": 2016,
+   "title": "AlphaGo",
+   "text": "DeepMind's AlphaGo defeats Go champion Lee Sedol.",
+   "why": "Reinforcement learning mastered a game long thought too hard."
+  },
+  {
+   "year": 2017,
+   "title": "The transformer",
+   "text": "Google researchers introduce the transformer architecture.",
+   "why": "The basis of today's large language models."
+  },
+  {
+   "year": 2022,
+   "title": "ChatGPT",
+   "text": "OpenAI releases ChatGPT to the public.",
+   "why": "Brought large language models to hundreds of millions of people."
+  },
+  {
+   "year": 2024,
+   "title": "Nobel Prizes for AI",
+   "text": "Physics: Hopfield and Hinton for neural networks. Chemistry: Baker, Hassabis and Jumper for proteins.",
+   "why": "AI recognized in two Nobel categories in one year."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "ai-001",
+   "q": "Supervised learning means learning from…",
+   "options": [
+    "Labelled examples",
+    "No data at all",
+    "Rewards only",
+    "Random noise"
+   ],
+   "answer": 0,
+   "explain": "Each training example comes with the right answer."
+  },
+  {
+   "id": "ai-002",
+   "q": "Reinforcement learning learns by…",
+   "options": [
+    "Trial and error, guided by rewards",
+    "Reading labels",
+    "Copying humans exactly",
+    "Memorizing a dictionary"
+   ],
+   "answer": 0,
+   "explain": "AlphaGo improved by playing millions of games."
+  },
+  {
+   "id": "ai-003",
+   "q": "Neural networks are usually trained with…",
+   "options": [
+    "Backpropagation and gradient descent",
+    "Manual tuning of each weight",
+    "Random search only",
+    "Sorting algorithms"
+   ],
+   "answer": 0,
+   "explain": "Errors flow backwards to adjust the weights."
+  },
+  {
+   "id": "ai-004",
+   "q": "What is the key mechanism of a transformer?",
+   "options": [
+    "Attention",
+    "Only convolution",
+    "Only recurrence",
+    "Decision trees"
+   ],
+   "answer": 0,
+   "explain": "Each token weighs how much to attend to every other token."
+  },
+  {
+   "id": "ai-005",
+   "q": "Overfitting means a model…",
+   "options": [
+    "Memorizes its training data and fails on new data",
+    "Is too simple",
+    "Has perfect generalization",
+    "Runs too fast"
+   ],
+   "answer": 0,
+   "explain": "Regularization and more data help."
+  },
+  {
+   "id": "ai-006",
+   "q": "An LLM 'hallucination' is…",
+   "options": [
+    "A confident but false output",
+    "A visual effect",
+    "A hardware fault",
+    "A correct answer"
+   ],
+   "answer": 0,
+   "explain": "Always check important facts against sources."
+  },
+  {
+   "id": "ai-007",
+   "q": "When did Alan Turing propose his test of machine intelligence?",
+   "options": [
+    "1950",
+    "1936",
+    "1970",
+    "1997"
+   ],
+   "answer": 0,
+   "explain": "In the paper 'Computing Machinery and Intelligence'."
+  },
+  {
+   "id": "ai-008",
+   "q": "When did AlphaGo defeat Lee Sedol?",
+   "options": [
+    "2016",
+    "2006",
+    "2012",
+    "2020"
+   ],
+   "answer": 0,
+   "explain": "Winning four games out of five."
+  },
+  {
+   "id": "ai-009",
+   "q": "Why are GPUs important for AI?",
+   "options": [
+    "They perform many matrix calculations in parallel",
+    "They store more files",
+    "They cool the computer",
+    "They connect to the internet"
+   ],
+   "answer": 0,
+   "explain": "Neural networks are mostly matrix multiplications."
+  },
+  {
+   "id": "ai-010",
+   "q": "Which is an example of unsupervised learning?",
+   "options": [
+    "Clustering similar data points",
+    "Classifying labelled images",
+    "Learning from rewards",
+    "Copying a teacher"
+   ],
+   "answer": 0,
+   "explain": "No labels are given."
+  },
+  {
+   "id": "ai-011",
+   "q": "Generalization is…",
+   "options": [
+    "How well a model performs on data it has not seen",
+    "How large a model is",
+    "How fast a model trains",
+    "How general a model's name is"
+   ],
+   "answer": 0,
+   "explain": "The real goal of machine learning."
+  },
+  {
+   "id": "ai-012",
+   "q": "The 2024 Nobel Prize in Physics went to…",
+   "options": [
+    "John Hopfield and Geoffrey Hinton for neural network foundations",
+    "Demis Hassabis alone, for AlphaFold",
+    "Alan Turing, honoured posthumously",
+    "The AlphaGo team for reinforcement learning"
+   ],
+   "answer": 0,
+   "explain": "The Chemistry prize that year also involved AI."
+  }
+ ],
+ "related": [
+  "Chemistry AI & ML Applications",
+  "AI in Chemistry — Real Use Cases",
+  "Chemoinformatics",
+  "Autonomous Chemistry",
+  "Computational Chemistry"
+ ],
+ "labels": {
+  "field": "AI in one minute",
+  "map": "The map of AI",
+  "hist": "How AI got here",
+  "map_sub": "The main areas of AI. Several connect to Chemisters pages — follow the ones you care about."
+ }
+}

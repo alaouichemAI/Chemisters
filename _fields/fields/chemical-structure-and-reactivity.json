@@ -1,0 +1,305 @@
+{
+ "slug": "chemical-structure-and-reactivity",
+ "channel": "Chemical Structure & Reactivity",
+ "number": 10,
+ "symbol": "Rx",
+ "category": "Core chemistry",
+ "name": "Chemical Structure & Reactivity",
+ "tagline": "Electronic effects, steric factors, and structure-reactivity relationships.",
+ "seo_title": "Chemical Structure & Reactivity — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Chemical Structure & Reactivity on LinkedIn and Facebook: paper summaries, news and innovations in reaction mechanisms, electronic effects, physical organic chemistry and selectivity.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#8d7df2",
+  "accent2": "#d889f0",
+  "tile": "#15213d",
+  "motif": "bonds"
+ },
+ "definition": {
+  "lead": "This field connects a molecule's structure to the way it reacts: where the electrons sit decides where, how fast and how selectively bonds break and form.",
+  "body": "Electronic effects, steric bulk and orbital overlap explain why one carbon reacts and its neighbour doesn't. Mastering these patterns lets chemists predict products instead of memorizing them.",
+  "facts": [
+   {
+    "value": "2",
+    "label": "big drivers of reactivity: electronic effects and steric effects"
+   },
+   {
+    "value": "1923",
+    "label": "Brønsted, Lowry and Lewis redefine acids and bases"
+   },
+   {
+    "value": "1937",
+    "label": "Hammett puts a number on substituent effects"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Inductive & resonance effects",
+   "summary": "How neighbouring groups push or pull electrons.",
+   "example": "Why phenol is far more acidic than ethanol.",
+   "channel": ""
+  },
+  {
+   "name": "Steric effects",
+   "summary": "Bulky groups that block or force a reaction.",
+   "example": "A tert-butyl group shuts down SN2 substitution.",
+   "channel": ""
+  },
+  {
+   "name": "Acids & bases",
+   "summary": "pKa as a guide to where protons go.",
+   "example": "Predicting which proton a base removes.",
+   "channel": ""
+  },
+  {
+   "name": "Nucleophiles & electrophiles",
+   "summary": "Electron-rich species attack electron-poor ones.",
+   "example": "Attack at the carbon of a carbonyl group.",
+   "channel": ""
+  },
+  {
+   "name": "Reaction mechanisms",
+   "summary": "Curly arrows that track every electron pair.",
+   "example": "Substitution, addition and elimination.",
+   "channel": "Organic Chemistry"
+  },
+  {
+   "name": "Linear free-energy relationships",
+   "summary": "Turning substituent effects into numbers.",
+   "example": "Hammett plots and their σ and ρ values.",
+   "channel": ""
+  },
+  {
+   "name": "Orbital symmetry",
+   "summary": "Orbital phases that allow or forbid a reaction.",
+   "example": "The Woodward–Hoffmann rules for cycloadditions.",
+   "channel": ""
+  },
+  {
+   "name": "Reactive intermediates",
+   "summary": "Carbocations, carbanions, radicals and carbenes.",
+   "example": "Why tertiary carbocations form more easily.",
+   "channel": "Reactive Matter"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1916,
+   "title": "Shared electron pairs",
+   "text": "Gilbert N. Lewis describes the covalent bond as a shared pair of electrons.",
+   "why": "The language of every mechanism."
+  },
+  {
+   "year": 1922,
+   "title": "Curly arrows",
+   "text": "William Kermack and Robert Robinson draw electron movement with curved arrows.",
+   "why": "The notation every chemist now uses."
+  },
+  {
+   "year": 1923,
+   "title": "New acids and bases",
+   "text": "Brønsted and Lowry define acids as proton donors; Lewis as electron-pair acceptors.",
+   "why": "Unified a huge range of reactions."
+  },
+  {
+   "year": 1935,
+   "title": "SN1 and SN2",
+   "text": "Edward Hughes and Christopher Ingold classify substitution mechanisms.",
+   "why": "Kinetics revealed how bonds break and form."
+  },
+  {
+   "year": 1937,
+   "title": "The Hammett equation",
+   "text": "Louis Hammett relates substituents to rates and equilibria.",
+   "why": "Physical organic chemistry became quantitative."
+  },
+  {
+   "year": 1952,
+   "title": "Frontier orbitals",
+   "text": "Kenichi Fukui shows that the HOMO and LUMO control reactivity.",
+   "why": "A simple orbital picture for predicting reactions."
+  },
+  {
+   "year": 1955,
+   "title": "The Hammond postulate",
+   "text": "George Hammond links the structure of a transition state to its energy.",
+   "why": "A rule of thumb used in every mechanism discussion."
+  },
+  {
+   "year": 1963,
+   "title": "Hard and soft acids and bases",
+   "text": "Ralph Pearson introduces the HSAB principle.",
+   "why": "Predicts which partners prefer each other."
+  },
+  {
+   "year": 1965,
+   "title": "Orbital symmetry",
+   "text": "Robert Woodward and Roald Hoffmann publish their rules for pericyclic reactions.",
+   "why": "Explained reactions once thought to have no mechanism."
+  },
+  {
+   "year": 1981,
+   "title": "A Nobel for reactivity theory",
+   "text": "Nobel Prize to Kenichi Fukui and Roald Hoffmann.",
+   "why": "Theory became a working tool for synthetic chemists."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "rx-001",
+   "q": "Which is the most acidic?",
+   "options": [
+    "Phenol",
+    "Ethanol",
+    "Cyclohexanol",
+    "Methane"
+   ],
+   "answer": 0,
+   "explain": "The phenoxide anion spreads its charge into the aromatic ring by resonance."
+  },
+  {
+   "id": "rx-002",
+   "q": "An electron-withdrawing group on benzoic acid makes the acid…",
+   "options": [
+    "Stronger",
+    "Weaker",
+    "Unchanged",
+    "Non-acidic"
+   ],
+   "answer": 0,
+   "explain": "Pulling electron density stabilizes the carboxylate anion."
+  },
+  {
+   "id": "rx-003",
+   "q": "A nucleophile is…",
+   "options": [
+    "An electron-pair donor",
+    "An electron-pair acceptor",
+    "A proton",
+    "Always a radical"
+   ],
+   "answer": 0,
+   "explain": "It seeks a positive (electron-poor) centre."
+  },
+  {
+   "id": "rx-004",
+   "q": "Why does tert-butyl bromide not react by SN2?",
+   "options": [
+    "Three methyl groups block back-side attack",
+    "It is too acidic",
+    "It has no leaving group",
+    "It is aromatic"
+   ],
+   "answer": 0,
+   "explain": "It reacts by SN1 instead, through a stable tertiary carbocation."
+  },
+  {
+   "id": "rx-005",
+   "q": "In HSAB theory, soft acids prefer…",
+   "options": [
+    "Soft bases",
+    "Hard bases",
+    "Protons",
+    "Water"
+   ],
+   "answer": 0,
+   "explain": "Large, polarizable partners pair up, as do small, highly charged ones."
+  },
+  {
+   "id": "rx-006",
+   "q": "By the Hammond postulate, the transition state of a strongly exothermic step resembles…",
+   "options": [
+    "The reactants",
+    "The products",
+    "The intermediate",
+    "The solvent"
+   ],
+   "answer": 0,
+   "explain": "It comes early on the path, close in energy to the reactants."
+  },
+  {
+   "id": "rx-007",
+   "q": "A Lewis acid is…",
+   "options": [
+    "An electron-pair acceptor",
+    "A proton donor",
+    "A hydroxide donor",
+    "An electron donor"
+   ],
+   "answer": 0,
+   "explain": "BF₃ and AlCl₃ are classic examples."
+  },
+  {
+   "id": "rx-008",
+   "q": "What is the order of carbocation stability?",
+   "options": [
+    "Tertiary > secondary > primary",
+    "Primary > secondary > tertiary",
+    "All equal",
+    "Secondary is the most stable"
+   ],
+   "answer": 0,
+   "explain": "Alkyl groups donate electron density and stabilize the positive charge."
+  },
+  {
+   "id": "rx-009",
+   "q": "In a carbonyl group, which atom is attacked by nucleophiles?",
+   "options": [
+    "Carbon",
+    "Oxygen",
+    "Hydrogen",
+    "Neither"
+   ],
+   "answer": 0,
+   "explain": "Oxygen pulls electrons away, leaving the carbon partially positive."
+  },
+  {
+   "id": "rx-010",
+   "q": "A positive Hammett ρ value means the reaction is…",
+   "options": [
+    "Accelerated by electron-withdrawing substituents",
+    "Slowed by electron-withdrawing substituents",
+    "Unaffected by substituents",
+    "A radical reaction"
+   ],
+   "answer": 0,
+   "explain": "Negative charge builds up in the transition state, and withdrawing groups stabilize it."
+  },
+  {
+   "id": "rx-011",
+   "q": "Who classified substitution mechanisms as SN1 and SN2 in 1935?",
+   "options": [
+    "Hughes and Ingold",
+    "Woodward and Hoffmann",
+    "Diels and Alder",
+    "Lewis and Langmuir"
+   ],
+   "answer": 0,
+   "explain": "They used kinetics and stereochemistry to tell the two apart."
+  },
+  {
+   "id": "rx-012",
+   "q": "A curly arrow in a mechanism shows the movement of…",
+   "options": [
+    "An electron pair",
+    "An atom",
+    "Heat",
+    "Light"
+   ],
+   "answer": 0,
+   "explain": "A half-headed (fish-hook) arrow shows a single electron."
+  }
+ ],
+ "related": [
+  "Organic Chemistry",
+  "Reactive Matter",
+  "Chemical Kinetics",
+  "Synthetic Chemistry",
+  "Theoretical Chemistry"
+ ]
+}

@@ -1,0 +1,315 @@
+{
+ "slug": "chemistry-news",
+ "channel": "Chemistry News",
+ "number": 48,
+ "symbol": "Nw",
+ "category": "Community",
+ "name": "Chemistry News",
+ "tagline": "Breaking research, policy updates, and global chemistry headlines.",
+ "seo_title": "Chemistry News — breakthroughs, industry and policy | Chemisters",
+ "seo_description": "Follow Chemisters Chemistry News on LinkedIn and Facebook: the most important chemistry news: research breakthroughs, industry, policy and prizes.",
+ "posts_about": [
+  "Breaking news",
+  "Research highlights",
+  "Industry & policy"
+ ],
+ "theme": {
+  "accent": "#f2bf7d",
+  "accent2": "#dcf089",
+  "tile": "#2a2311",
+  "motif": "grid"
+ },
+ "definition": {
+  "lead": "Chemistry News brings the most important developments in chemistry: research breakthroughs, industry moves, policy changes and prizes, explained briefly.",
+  "body": "Hundreds of chemistry papers and announcements appear every day. This page filters them down to what matters and links to the original source, so you can follow the field in a few minutes a day.",
+  "facts": [
+   {
+    "value": "1665",
+    "label": "the first scientific journals appear in Paris and London"
+   },
+   {
+    "value": "1923",
+    "label": "Chemical & Engineering News begins publishing"
+   },
+   {
+    "value": "Daily",
+    "label": "new posts, always linked to the original source"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Research breakthroughs",
+   "summary": "New reactions, molecules and materials from leading journals.",
+   "example": "A new catalyst that works at room temperature.",
+   "channel": "Modern Chemistry"
+  },
+  {
+   "name": "Pharma & health",
+   "summary": "New drugs, approvals and clinical results.",
+   "example": "A first-in-class medicine approved.",
+   "channel": "Drug Discovery"
+  },
+  {
+   "name": "Energy & climate",
+   "summary": "Batteries, hydrogen, solar and carbon capture.",
+   "example": "A new battery chemistry reaches production.",
+   "channel": "Energy Chemistry"
+  },
+  {
+   "name": "Environment",
+   "summary": "Pollution, regulation and cleanup.",
+   "example": "New limits on PFAS in drinking water.",
+   "channel": "Environmental Chemistry"
+  },
+  {
+   "name": "Industry & business",
+   "summary": "Plants, investments and supply chains.",
+   "example": "A new chemical plant or a major acquisition.",
+   "channel": "Industrial Chemistry"
+  },
+  {
+   "name": "AI in chemistry",
+   "summary": "Where AI is changing how chemistry is done.",
+   "example": "An AI-discovered molecule enters trials.",
+   "channel": "AI in Chemistry — Real Use Cases"
+  },
+  {
+   "name": "Policy & regulation",
+   "summary": "Laws and rules that shape chemistry.",
+   "example": "Chemical safety regulations.",
+   "channel": ""
+  },
+  {
+   "name": "Prizes & people",
+   "summary": "Awards, appointments and careers.",
+   "example": "The Nobel Prize in Chemistry announcement.",
+   "channel": "Chemistry Professionals"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1665,
+   "title": "The first journals",
+   "text": "Journal des sçavans in Paris and Philosophical Transactions in London begin publishing.",
+   "why": "Science started sharing results in print."
+  },
+  {
+   "year": 1869,
+   "title": "The periodic table",
+   "text": "Mendeleev publishes his periodic table.",
+   "why": "The headline that organized chemistry."
+  },
+  {
+   "year": 1901,
+   "title": "The first Nobel Prize in Chemistry",
+   "text": "Jacobus van 't Hoff receives the first prize.",
+   "why": "Chemistry's highest honour begins."
+  },
+  {
+   "year": 1913,
+   "title": "Ammonia at industrial scale",
+   "text": "The first Haber–Bosch plant opens.",
+   "why": "Changed how the world is fed."
+  },
+  {
+   "year": 1928,
+   "title": "Penicillin",
+   "text": "Alexander Fleming notices a mould that kills bacteria.",
+   "why": "The start of the antibiotic era."
+  },
+  {
+   "year": 1953,
+   "title": "The double helix",
+   "text": "The structure of DNA is published.",
+   "why": "Chemistry and biology merged."
+  },
+  {
+   "year": 1987,
+   "title": "The Montreal Protocol",
+   "text": "Nations agree to phase out ozone-depleting chemicals.",
+   "why": "Chemistry news that changed global policy."
+  },
+  {
+   "year": 2004,
+   "title": "Graphene",
+   "text": "A single layer of carbon is isolated.",
+   "why": "Launched a wave of 2D-materials research."
+  },
+  {
+   "year": 2020,
+   "title": "mRNA vaccines",
+   "text": "The first mRNA vaccines are authorized.",
+   "why": "Chemistry and biology at record speed."
+  },
+  {
+   "year": 2024,
+   "title": "AI wins a Chemistry Nobel",
+   "text": "The prize rewards protein design and AI structure prediction.",
+   "why": "AI became front-page chemistry news."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "nw-001",
+   "q": "In which year was the first Nobel Prize in Chemistry awarded?",
+   "options": [
+    "1901",
+    "1895",
+    "1911",
+    "1921"
+   ],
+   "answer": 0,
+   "explain": "To Jacobus van 't Hoff."
+  },
+  {
+   "id": "nw-002",
+   "q": "Which international agreement protects the ozone layer?",
+   "options": [
+    "The Montreal Protocol",
+    "The Kyoto Protocol",
+    "The Paris Agreement",
+    "The Geneva Convention"
+   ],
+   "answer": 0,
+   "explain": "Signed in 1987."
+  },
+  {
+   "id": "nw-003",
+   "q": "The 2019 Nobel Prize in Chemistry rewarded…",
+   "options": [
+    "Lithium-ion batteries",
+    "CRISPR",
+    "Click chemistry",
+    "Quantum dots"
+   ],
+   "answer": 0,
+   "explain": "Goodenough, Whittingham and Yoshino."
+  },
+  {
+   "id": "nw-004",
+   "q": "The 2022 Nobel Prize in Chemistry rewarded…",
+   "options": [
+    "Click and bioorthogonal chemistry",
+    "Lithium-ion batteries",
+    "Organocatalysis",
+    "Cryo-EM"
+   ],
+   "answer": 0,
+   "explain": "Bertozzi, Meldal and Sharpless."
+  },
+  {
+   "id": "nw-005",
+   "q": "The 2023 Nobel Prize in Chemistry rewarded…",
+   "options": [
+    "Quantum dots",
+    "Graphene",
+    "MOFs",
+    "Protein design"
+   ],
+   "answer": 0,
+   "explain": "Bawendi, Brus and Ekimov."
+  },
+  {
+   "id": "nw-006",
+   "q": "The 2020 Nobel Prize in Chemistry rewarded…",
+   "options": [
+    "CRISPR-Cas9 genome editing",
+    "mRNA vaccines",
+    "Lithium-ion batteries",
+    "Directed evolution"
+   ],
+   "answer": 0,
+   "explain": "Emmanuelle Charpentier and Jennifer Doudna."
+  },
+  {
+   "id": "nw-007",
+   "q": "The 2021 Nobel Prize in Chemistry rewarded…",
+   "options": [
+    "Asymmetric organocatalysis",
+    "Click chemistry",
+    "Cryo-EM",
+    "Molecular machines"
+   ],
+   "answer": 0,
+   "explain": "Benjamin List and David MacMillan."
+  },
+  {
+   "id": "nw-008",
+   "q": "The 2024 Nobel Prize in Chemistry rewarded…",
+   "options": [
+    "Protein design and protein structure prediction",
+    "Metal–organic frameworks",
+    "Quantum dots",
+    "Lithium-ion batteries"
+   ],
+   "answer": 0,
+   "explain": "David Baker, Demis Hassabis and John Jumper."
+  },
+  {
+   "id": "nw-009",
+   "q": "The 2025 Nobel Prize in Chemistry rewarded…",
+   "options": [
+    "Metal–organic frameworks",
+    "Graphene",
+    "CRISPR",
+    "Click chemistry"
+   ],
+   "answer": 0,
+   "explain": "Kitagawa, Robson and Yaghi."
+  },
+  {
+   "id": "nw-010",
+   "q": "Which are the oldest scientific journals, both from 1665?",
+   "options": [
+    "Journal des sçavans and Philosophical Transactions",
+    "Nature and Science",
+    "JACS and Angewandte Chemie",
+    "The Lancet and the BMJ"
+   ],
+   "answer": 0,
+   "explain": "Nature began in 1869; Science in 1880."
+  },
+  {
+   "id": "nw-011",
+   "q": "The 2018 Nobel Prize in Chemistry rewarded…",
+   "options": [
+    "Directed evolution of enzymes and phage display",
+    "Cryo-electron microscopy",
+    "Molecular machines",
+    "Lithium-ion batteries"
+   ],
+   "answer": 0,
+   "explain": "Frances Arnold, George Smith and Gregory Winter."
+  },
+  {
+   "id": "nw-012",
+   "q": "Why always check the original source behind a headline?",
+   "options": [
+    "Headlines can oversimplify or overstate results",
+    "Sources are always wrong",
+    "Headlines are always wrong",
+    "It is required by law"
+   ],
+   "answer": 0,
+   "explain": "A lab result is not yet a product or a cure."
+  }
+ ],
+ "related": [
+  "Modern Chemistry",
+  "The Chemistry",
+  "AI in Chemistry — Real Use Cases",
+  "Energy Chemistry",
+  "Environmental Chemistry",
+  "Drug Discovery"
+ ],
+ "labels": {
+  "field_eyebrow": "What this page is",
+  "field": "Chemistry news, in one minute",
+  "map_eyebrow": "What we cover",
+  "map": "The beats we follow",
+  "map_sub": "Each beat connects to a specialist Chemisters page — follow the ones you care about.",
+  "hist_eyebrow": "History",
+  "hist": "Headlines that changed chemistry"
+ }
+}

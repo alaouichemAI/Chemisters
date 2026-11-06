@@ -18,6 +18,15 @@ data/live/<slug>.json    weekly top post, daily papers, extra quiz questions (n8
 og/<slug>.png            GENERATED share card shown when the link is posted on LinkedIn/Facebook
 ```
 
+## The 56 pages
+
+Every tile on the homepage now has a page: see `PAGE_LINKS.md` for the link of each tile (e.g. `/physical-chemistry/`).
+`fonts/` holds Inter (open-source, OFL licence) for the share-card images. `src/` holds the compact files used to write the 55 newer pages;
+you don't need them: the JSON files in `fields/` are the source of truth, edit those.
+
+Pages that are not a field (News, Wisdom & Stories, Failed Discoveries…) override the section headings with a `labels` block
+and the hero chips with `posts_about` in their JSON. Check that `posts_about` matches what each page really posts.
+
 ## Add a new field (e.g. Green Chemistry)
 
 1. Copy `fields/organic-chemistry.json` to `fields/green-chemistry.json` and change the content.
@@ -51,21 +60,29 @@ The page reads `/data/live/<slug>.json` on every visit. No rebuild needed: n8n e
       "date": "2026-11-09",
       "platform": "linkedin",
       "label": "Paper summary",
-      "title": "Short title of the post",
+      "title": "Short, catchy title of the post",
       "text": "First lines of the post…",
       "url": "https://www.linkedin.com/feed/update/urn:li:share:…",
-      "image": "https://… (optional)",
-      "embed_url": "https://www.linkedin.com/embed/feed/update/urn:li:share:… (optional: shows the real post with its reactions instead of the card)"
+      "image": "https://… (strongly recommended, see note below)",
+      "reactions": 238, "comments": 31, "reposts": 12, "impressions": 14800,
+      "embed_url": "(optional) https://www.linkedin.com/embed/feed/update/urn:li:share:… shows the real LinkedIn post instead of the card"
     }
   ],
   "papers": [
-    { "title": "Paper title", "url": "https://doi.org/…", "source": "J. Org. Chem.", "date": "2026-11-08" }
+    { "title": "Paper title", "url": "https://doi.org/…", "source": "J. Org. Chem.", "date": "2026-11-08",
+      "image": "(optional) the paper's graphical abstract or og:image", "summary": "(optional) one sentence" }
   ],
   "quiz": [
     { "id": "oc-w45-1", "q": "…", "options": ["…", "…", "…", "…"], "answer": 0, "explain": "…" }
   ]
 }
 ```
+
+Images: posts and papers look far better with a real image. Without one (or if the link breaks), the page draws a branded cover automatically, so nothing ever looks empty.
+- Do NOT use LinkedIn's own image links (media.licdn.com): they are signed and expire after some days.
+- Best: in n8n, save the post image into the repo (e.g. `data/live/img/organic-chemistry-2026-w45.jpg` with the GitHub node) and put `/data/live/img/…` in `image`.
+- For papers: use the article page's `og:image` (most journals provide a graphical abstract there).
+- `reactions`, `comments`, `reposts`, `impressions` are optional; when present they appear on the card (social proof makes people click).
 
 - `papers`: newest first, the page shows 6. Feed it from your Daily Research Digest workflow (replace the `papers` array daily). Empty → section hidden.
 - Newest post first; keep the last ~5 (the page shows #1 big and the next 4 as "Earlier top posts").
@@ -86,7 +103,12 @@ Progress (stored in the visitor's browser, shared across every Chemisters page)
 - 66 badges in 14 categories, 4 rarities (Common, Rare, Epic, Legendary), 4 secret ones. Pop-up when unlocked, mid-game.
 - 3 daily quests (same for everyone each day, +25 XP each, +50 for all three).
 - Stats panel, level ladder, answer review at the end, personal records for Blitz/Survival.
-- Sound effects are generated in the browser (no audio files); the 🔊 button mutes them and the choice is remembered.
+- Sound effects are generated in the browser (no audio files); the speaker button mutes them and the choice is remembered.
+- Fullscreen button (top right of the challenge). On iPhone, where real fullscreen is not allowed, it fills the screen instead.
+- Screen effects: green glow + ripple + confetti on correct answers, red flash + shake on wrong ones, flame border and banner on combos, red pulse in the last 5 seconds of Blitz and on the last heart in Survival, gold sweep on a flawless round, full level-up animation.
+- Speed ring (7 s) on multiple-choice rounds, keyboard answers A–D or 1–4, Enter to continue.
+- Results: animated XP bar, "next badge" progress, answer review, and a downloadable score card image (1200×630) to attach to a LinkedIn post.
+- Icons: Lucide (open source, ISC license), embedded in field.js. No emojis anywhere.
 
 Questions
 - Classic never repeats a written question until the whole bank has been seen. Blitz and Survival may reuse written questions (they need many fast ones), mixed with generated ones.

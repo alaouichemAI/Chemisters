@@ -1,0 +1,311 @@
+{
+ "slug": "modern-chemistry",
+ "channel": "Modern Chemistry",
+ "number": 50,
+ "symbol": "Mx",
+ "category": "Community",
+ "name": "Modern Chemistry",
+ "tagline": "Contemporary advances redefining how we think about matter and reactions.",
+ "seo_title": "Modern Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Modern Chemistry on LinkedIn and Facebook: paper summaries, news and innovations at the frontiers of modern chemistry.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#f2df7d",
+  "accent2": "#c0f089",
+  "tile": "#2a2311",
+  "motif": "spark"
+ },
+ "definition": {
+  "lead": "Modern Chemistry follows the advances of recent decades that are changing how chemists think and work: new reactions, new tools, new materials and new ways of discovering.",
+  "body": "Click chemistry, organocatalysis, photoredox catalysis, cryo-EM, AI structure prediction, metal–organic frameworks and self-driving labs were not in textbooks a generation ago. This page tracks the ideas reshaping chemistry right now.",
+  "facts": [
+   {
+    "value": "2001",
+    "label": "Barry Sharpless and colleagues introduce 'click chemistry'"
+   },
+   {
+    "value": "2016",
+    "label": "molecular machines win the Nobel Prize in Chemistry"
+   },
+   {
+    "value": "2025",
+    "label": "metal–organic frameworks win the Nobel Prize in Chemistry"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Click & bioorthogonal chemistry",
+   "summary": "Fast, reliable reactions that work almost anywhere, even in cells.",
+   "example": "Labelling biomolecules in living organisms.",
+   "channel": "Bioorganic Chemistry"
+  },
+  {
+   "name": "Photoredox & electrosynthesis",
+   "summary": "Light and electricity as clean reagents.",
+   "example": "Room-temperature bond formation.",
+   "channel": "Photochemistry"
+  },
+  {
+   "name": "C–H functionalization",
+   "summary": "Turning ordinary C–H bonds into new bonds directly.",
+   "example": "Shorter routes to drug molecules.",
+   "channel": "Synthetic Chemistry"
+  },
+  {
+   "name": "Porous frameworks",
+   "summary": "MOFs and COFs with huge internal surfaces.",
+   "example": "Capturing CO₂ and harvesting water from air.",
+   "channel": "Chemistry of Materials"
+  },
+  {
+   "name": "Molecular machines",
+   "summary": "Molecules that move on command.",
+   "example": "Light-driven molecular motors.",
+   "channel": "Supramolecular Chemistry"
+  },
+  {
+   "name": "New structure tools",
+   "summary": "Cryo-EM and AI structure prediction.",
+   "example": "Protein structures in days instead of years.",
+   "channel": "Structural Chemistry"
+  },
+  {
+   "name": "Self-driving labs",
+   "summary": "AI and robots running experiments.",
+   "example": "Autonomous materials discovery.",
+   "channel": "Autonomous Chemistry"
+  },
+  {
+   "name": "Circular chemistry",
+   "summary": "Designing materials for reuse and recycling.",
+   "example": "Plastics that depolymerize back to monomers.",
+   "channel": "Sustainable Materials & Circular Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1985,
+   "title": "Fullerenes",
+   "text": "C₆₀ is discovered.",
+   "why": "A new form of carbon opened nanochemistry."
+  },
+  {
+   "year": 1999,
+   "title": "MOF-5",
+   "text": "Omar Yaghi's group reports a landmark porous framework.",
+   "why": "Started the boom in designed porous materials."
+  },
+  {
+   "year": 2000,
+   "title": "Organocatalysis returns",
+   "text": "Benjamin List and David MacMillan independently report asymmetric organocatalysis.",
+   "why": "A third pillar of catalysis beside metals and enzymes."
+  },
+  {
+   "year": 2001,
+   "title": "Click chemistry",
+   "text": "Sharpless and colleagues define click chemistry.",
+   "why": "Changed how molecules are linked together."
+  },
+  {
+   "year": 2004,
+   "title": "Graphene",
+   "text": "Geim and Novoselov isolate graphene.",
+   "why": "Two-dimensional materials took off."
+  },
+  {
+   "year": 2008,
+   "title": "Photoredox in synthesis",
+   "text": "Visible-light photoredox catalysis enters mainstream organic synthesis.",
+   "why": "Light became an everyday reagent."
+  },
+  {
+   "year": 2012,
+   "title": "CRISPR",
+   "text": "Charpentier and Doudna show that Cas9 can be programmed to cut DNA.",
+   "why": "Chemistry and biology gained a precise editing tool."
+  },
+  {
+   "year": 2017,
+   "title": "Cryo-EM",
+   "text": "Nobel Prize for cryo-electron microscopy.",
+   "why": "Structures of molecules that cannot be crystallized."
+  },
+  {
+   "year": 2020,
+   "title": "AlphaFold 2",
+   "text": "AI predicts protein structures with near-experimental accuracy.",
+   "why": "Structural biology transformed."
+  },
+  {
+   "year": 2025,
+   "title": "MOFs win the Nobel Prize",
+   "text": "Kitagawa, Robson and Yaghi are honoured.",
+   "why": "Designed porous materials recognized."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "mx-001",
+   "q": "Click chemistry reactions are…",
+   "options": [
+    "Fast, reliable and high-yielding, with few by-products",
+    "Slow, selective and needing harsh conditions",
+    "Always radical reactions started by light",
+    "Only used to make industrial polymers"
+   ],
+   "answer": 0,
+   "explain": "Like snapping Lego bricks together."
+  },
+  {
+   "id": "mx-002",
+   "q": "Who revived asymmetric organocatalysis in 2000?",
+   "options": [
+    "Benjamin List and David MacMillan",
+    "Sharpless and Meldal",
+    "Grubbs and Schrock",
+    "Heck and Suzuki"
+   ],
+   "answer": 0,
+   "explain": "They shared the 2021 Nobel Prize."
+  },
+  {
+   "id": "mx-003",
+   "q": "C–H functionalization means…",
+   "options": [
+    "Directly converting C–H bonds into new bonds",
+    "Adding hydrogen to carbon",
+    "Removing all hydrogens",
+    "Burning hydrocarbons"
+   ],
+   "answer": 0,
+   "explain": "It can skip several steps of a synthesis."
+  },
+  {
+   "id": "mx-004",
+   "q": "Photoredox catalysis uses…",
+   "options": [
+    "Visible light to drive single-electron transfer",
+    "X-rays to break bonds directly",
+    "Heat only, with no light involved",
+    "Magnetic fields to align radicals"
+   ],
+   "answer": 0,
+   "explain": "Often with ruthenium, iridium or organic dyes."
+  },
+  {
+   "id": "mx-005",
+   "q": "Metal–organic frameworks are famous for…",
+   "options": [
+    "Enormous internal surface area",
+    "Being liquid",
+    "Conducting like copper",
+    "Being radioactive"
+   ],
+   "answer": 0,
+   "explain": "Thousands of square metres per gram."
+  },
+  {
+   "id": "mx-006",
+   "q": "When did cryo-EM win the Nobel Prize in Chemistry?",
+   "options": [
+    "2017",
+    "2007",
+    "2000",
+    "2023"
+   ],
+   "answer": 0,
+   "explain": "Dubochet, Frank and Henderson."
+  },
+  {
+   "id": "mx-007",
+   "q": "When did molecular machines win the Nobel Prize in Chemistry?",
+   "options": [
+    "2016",
+    "1996",
+    "2006",
+    "2021"
+   ],
+   "answer": 0,
+   "explain": "Sauvage, Stoddart and Feringa."
+  },
+  {
+   "id": "mx-008",
+   "q": "How was graphene first isolated?",
+   "options": [
+    "By peeling graphite with adhesive tape",
+    "By burning diamond",
+    "In a particle accelerator",
+    "By electrolysis of carbon dioxide"
+   ],
+   "answer": 0,
+   "explain": "The 'Scotch tape method'."
+  },
+  {
+   "id": "mx-009",
+   "q": "AlphaFold predicts…",
+   "options": [
+    "Protein 3D structures from sequences",
+    "Reaction yields from reagents",
+    "Crystal colours from formulas",
+    "Stock prices of pharma companies"
+   ],
+   "answer": 0,
+   "explain": "Recognized with the 2024 Nobel Prize."
+  },
+  {
+   "id": "mx-010",
+   "q": "A self-driving lab combines…",
+   "options": [
+    "AI that chooses experiments with robots that run them",
+    "Cars and laboratories in one building",
+    "Robots that follow fixed human-written scripts",
+    "Simulations that never touch real chemicals"
+   ],
+   "answer": 0,
+   "explain": "A closed loop of design, make, test and learn."
+  },
+  {
+   "id": "mx-011",
+   "q": "Bioorthogonal reactions…",
+   "options": [
+    "Work inside living systems without disturbing them",
+    "Need boiling acid to activate them",
+    "Only work in space or in a vacuum",
+    "Destroy cells so they can be studied"
+   ],
+   "answer": 0,
+   "explain": "Term coined by Carolyn Bertozzi."
+  },
+  {
+   "id": "mx-012",
+   "q": "Which of these is NOT a recent development?",
+   "options": [
+    "The periodic table",
+    "Click chemistry",
+    "Metal–organic frameworks",
+    "Cryo-EM"
+   ],
+   "answer": 0,
+   "explain": "Mendeleev published it in 1869."
+  }
+ ],
+ "related": [
+  "Chemistry News",
+  "The Chemistry",
+  "AI in Chemistry — Real Use Cases",
+  "Synthetic Chemistry",
+  "Chemistry of Materials"
+ ],
+ "labels": {
+  "map_eyebrow": "Frontiers",
+  "map": "What's reshaping chemistry",
+  "map_sub": "Ideas that were not in textbooks a generation ago. Several have their own Chemisters page — follow the ones you care about.",
+  "hist": "Recent turning points"
+ }
+}

@@ -1,0 +1,293 @@
+{
+ "slug": "molecular-systems",
+ "channel": "Molecular Systems",
+ "number": 55,
+ "symbol": "Ms",
+ "category": "Community",
+ "name": "Molecular Systems",
+ "tagline": "Systems chemistry, molecular machines, and emergent chemical behavior.",
+ "seo_title": "Molecular Systems — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Molecular Systems on LinkedIn and Facebook: paper summaries, news and innovations in systems chemistry, self-replication, molecular machines and emergent behaviour.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#f2e67d",
+  "accent2": "#b9f089",
+  "tile": "#2a2311",
+  "motif": "bonds"
+ },
+ "definition": {
+  "lead": "Molecular Systems studies collections of molecules that interact to produce behaviour no single molecule shows: self-replication, molecular machines, networks and emergent function.",
+  "body": "Life is the ultimate molecular system. Chemists now build simpler ones in the lab, from self-replicating molecules to motors and pumps, to understand how complex behaviour emerges and to create adaptive materials.",
+  "facts": [
+   {
+    "value": "1953",
+    "label": "the Miller–Urey experiment makes amino acids from simple gases"
+   },
+   {
+    "value": "1986",
+    "label": "Günter von Kiedrowski reports a self-replicating molecule"
+   },
+   {
+    "value": "2016",
+    "label": "Nobel Prize for molecular machines"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Systems chemistry",
+   "summary": "Networks of interacting molecules studied as a whole.",
+   "example": "Reaction networks that show life-like behaviour.",
+   "channel": ""
+  },
+  {
+   "name": "Self-replication",
+   "summary": "Molecules that make copies of themselves.",
+   "example": "Self-replicating peptides and nucleic acids.",
+   "channel": ""
+  },
+  {
+   "name": "Molecular machines",
+   "summary": "Molecules that move on command.",
+   "example": "Rotaxane shuttles and light-driven motors.",
+   "channel": "Supramolecular Chemistry"
+  },
+  {
+   "name": "Dynamic combinatorial chemistry",
+   "summary": "Libraries of molecules that reshuffle and adapt.",
+   "example": "A library that amplifies the best binder for a template.",
+   "channel": ""
+  },
+  {
+   "name": "Fuel-driven assembly",
+   "summary": "Structures that exist only while energy is supplied.",
+   "example": "Assemblies that fall apart when the fuel runs out.",
+   "channel": "Chemical Systems"
+  },
+  {
+   "name": "Origins of life",
+   "summary": "How chemistry became biology.",
+   "example": "The RNA world hypothesis.",
+   "channel": "Bioorganic Chemistry"
+  },
+  {
+   "name": "Molecular computing",
+   "summary": "Computation with molecules.",
+   "example": "DNA used to solve a routing problem.",
+   "channel": ""
+  },
+  {
+   "name": "Adaptive materials",
+   "summary": "Materials that respond and heal.",
+   "example": "Self-healing polymers.",
+   "channel": "Chemistry of Materials"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1953,
+   "title": "Building blocks from gases",
+   "text": "The Miller–Urey experiment produces amino acids.",
+   "why": "Chemistry could plausibly lead toward life."
+  },
+  {
+   "year": 1982,
+   "title": "Catalytic RNA",
+   "text": "Thomas Cech discovers that RNA can catalyse reactions.",
+   "why": "Supports the idea of an early RNA world."
+  },
+  {
+   "year": 1986,
+   "title": "A self-replicating molecule",
+   "text": "Günter von Kiedrowski reports a short nucleic acid that templates its own formation.",
+   "why": "Replication without enzymes."
+  },
+  {
+   "year": 1990,
+   "title": "Synthetic self-replicators",
+   "text": "Julius Rebek's group reports a self-replicating synthetic molecule.",
+   "why": "Replication beyond nucleic acids."
+  },
+  {
+   "year": 1994,
+   "title": "Computing with DNA",
+   "text": "Leonard Adleman uses DNA molecules to solve a small routing problem.",
+   "why": "Molecules can compute."
+  },
+  {
+   "year": 1999,
+   "title": "A molecular motor",
+   "text": "Ben Feringa's group builds a light-driven rotary motor.",
+   "why": "Directional motion at the molecular scale."
+  },
+  {
+   "year": 2010,
+   "title": "Replicators that emerge",
+   "text": "Sijbren Otto's group sees self-replicators emerge spontaneously from a dynamic library.",
+   "why": "Selection and replication from simple chemistry."
+  },
+  {
+   "year": 2016,
+   "title": "Molecular machines",
+   "text": "Nobel Prize to Sauvage, Stoddart and Feringa.",
+   "why": "Machines built from single molecules."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "ms-001",
+   "q": "An emergent property is…",
+   "options": [
+    "Behaviour arising from interactions, not present in single molecules",
+    "A property that belongs to a single atom",
+    "A sudden explosion in a reaction mixture",
+    "A measurement error in a large experiment"
+   ],
+   "answer": 0,
+   "explain": "Like a traffic jam: no single car causes it."
+  },
+  {
+   "id": "ms-002",
+   "q": "A self-replicating molecule…",
+   "options": [
+    "Catalyses the formation of copies of itself",
+    "Splits into two randomly",
+    "Needs a cell to copy it",
+    "Never changes"
+   ],
+   "answer": 0,
+   "explain": "Each copy can then make more copies."
+  },
+  {
+   "id": "ms-003",
+   "q": "The RNA world hypothesis proposes that early life…",
+   "options": [
+    "Used RNA both to store information and to catalyse reactions",
+    "Used only proteins, with no nucleic acids at all",
+    "Arrived on Earth fully formed from space",
+    "Used DNA only, with proteins appearing later"
+   ],
+   "answer": 0,
+   "explain": "Ribozymes show RNA can be a catalyst."
+  },
+  {
+   "id": "ms-004",
+   "q": "A dynamic combinatorial library is…",
+   "options": [
+    "A mixture of molecules exchanging parts reversibly, whose composition shifts in response to a template",
+    "A shelf of chemistry books in a university library",
+    "A fixed set of compounds stored in screening plates",
+    "A database of reactions extracted from the literature"
+   ],
+   "answer": 0,
+   "explain": "The best binders are amplified."
+  },
+  {
+   "id": "ms-005",
+   "q": "Out-of-equilibrium molecular systems need…",
+   "options": [
+    "A continuous supply of energy (fuel)",
+    "No energy at all",
+    "Freezing temperatures",
+    "A magnetic field"
+   ],
+   "answer": 0,
+   "explain": "Like living cells, they stop when the fuel runs out."
+  },
+  {
+   "id": "ms-006",
+   "q": "What did Leonard Adleman do in 1994?",
+   "options": [
+    "Used DNA to solve a computing problem",
+    "Built the first chemistry robot",
+    "Sequenced the first human genome",
+    "Made the first synthetic protein"
+   ],
+   "answer": 0,
+   "explain": "A small directed Hamiltonian path problem."
+  },
+  {
+   "id": "ms-007",
+   "q": "A molecular motor needs…",
+   "options": [
+    "An energy input and a mechanism that makes motion directional",
+    "Only random collisions with solvent molecules",
+    "A tiny battery attached to each molecule",
+    "No energy at all, since molecules always move"
+   ],
+   "answer": 0,
+   "explain": "Random motion alone cannot do useful work."
+  },
+  {
+   "id": "ms-008",
+   "q": "Autocatalysis means…",
+   "options": [
+    "A product catalyses its own formation",
+    "A catalyst destroys itself",
+    "No catalyst is needed",
+    "A car catalyst"
+   ],
+   "answer": 0,
+   "explain": "Positive feedback: the more you have, the faster you make more."
+  },
+  {
+   "id": "ms-009",
+   "q": "What did the Miller–Urey experiment produce?",
+   "options": [
+    "Amino acids from simple gases",
+    "Living cells",
+    "Complete DNA strands",
+    "Folded proteins"
+   ],
+   "answer": 0,
+   "explain": "Sparks in a mixture of gases and water."
+  },
+  {
+   "id": "ms-010",
+   "q": "Why study simple molecular systems?",
+   "options": [
+    "To understand how life-like behaviour can emerge from chemistry",
+    "To replace biology with simpler systems",
+    "Because they are easy and quick to publish",
+    "There is no particular reason to study them"
+   ],
+   "answer": 0,
+   "explain": "And to build adaptive materials."
+  },
+  {
+   "id": "ms-011",
+   "q": "Why do ribozymes support the RNA world idea?",
+   "options": [
+    "They show RNA can act as a catalyst",
+    "They are proteins that copy RNA",
+    "They contain DNA instead of RNA",
+    "They are minerals found in clay"
+   ],
+   "answer": 0,
+   "explain": "RNA could have done both jobs before proteins evolved."
+  },
+  {
+   "id": "ms-012",
+   "q": "Feringa's molecular motor is powered by…",
+   "options": [
+    "Light",
+    "Sound",
+    "Gravity",
+    "Static electricity"
+   ],
+   "answer": 0,
+   "explain": "Light-driven isomerization followed by thermal steps."
+  }
+ ],
+ "related": [
+  "Supramolecular Chemistry",
+  "Chemical Systems",
+  "Bioorganic Chemistry",
+  "Nanochemistry",
+  "Entropy in Chemistry"
+ ]
+}

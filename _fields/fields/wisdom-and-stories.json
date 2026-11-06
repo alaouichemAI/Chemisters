@@ -1,0 +1,302 @@
+{
+ "slug": "wisdom-and-stories",
+ "channel": "Wisdom & Stories",
+ "number": 47,
+ "symbol": "Ws",
+ "category": "Community",
+ "name": "Wisdom & Stories",
+ "tagline": "Reflections, experiences, and philosophical insights from chemists worldwide.",
+ "seo_title": "Wisdom & Stories — the human side of chemistry | Chemisters",
+ "seo_description": "Follow Chemisters Wisdom & Stories on LinkedIn and Facebook: stories, reflections and lessons from chemists past and present.",
+ "posts_about": [
+  "Stories",
+  "Reflections",
+  "Lessons from chemists"
+ ],
+ "theme": {
+  "accent": "#f2b07d",
+  "accent2": "#eaf089",
+  "tile": "#2a2311",
+  "motif": "dots"
+ },
+ "definition": {
+  "lead": "Wisdom & Stories shares the human side of chemistry: the doubt, persistence, luck and insight behind discoveries, told through chemists past and present.",
+  "body": "Papers report results; stories explain how people got there. Seeing how others handled failure, rivalry, mentorship and ethical choices helps every scientist do better work, and stay motivated while doing it.",
+  "facts": [
+   {
+    "value": "Chance favours the prepared mind",
+    "label": "Louis Pasteur, in an 1854 lecture"
+   },
+   {
+    "value": "2",
+    "label": "Nobel Prizes won by Marie Curie, in physics and in chemistry"
+   },
+   {
+    "value": "1869",
+    "label": "Mendeleev's periodic table grew out of writing a textbook for his students"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Persistence",
+   "summary": "Years of work behind a single result.",
+   "example": "Marie Curie processed tonnes of pitchblende residue to isolate radium.",
+   "channel": ""
+  },
+  {
+   "name": "Serendipity",
+   "summary": "Noticing the unexpected, and asking why.",
+   "example": "Perkin's failed quinine synthesis gave the first synthetic dye.",
+   "channel": "Failed Discoveries That Changed Science"
+  },
+  {
+   "name": "Mentorship",
+   "summary": "How great scientists are formed by other scientists.",
+   "example": "Michael Faraday began as Humphry Davy's assistant.",
+   "channel": ""
+  },
+  {
+   "name": "Ethics & responsibility",
+   "summary": "Science can help or harm; scientists choose.",
+   "example": "Fritz Haber's legacy: fertilizer for billions, and chemical weapons.",
+   "channel": ""
+  },
+  {
+   "name": "Collaboration & credit",
+   "summary": "Who did the work, and who gets remembered.",
+   "example": "Rosalind Franklin's essential role in the DNA structure.",
+   "channel": ""
+  },
+  {
+   "name": "Failure & resilience",
+   "summary": "Ideas that were rejected before they were celebrated.",
+   "example": "Dan Shechtman's quasicrystals were ridiculed, then won a Nobel Prize.",
+   "channel": ""
+  },
+  {
+   "name": "Curiosity",
+   "summary": "Science done for the joy of finding out.",
+   "example": "Agnes Pockels measured surface films in her kitchen.",
+   "channel": "Surface Chemistry"
+  },
+  {
+   "name": "Careers & choices",
+   "summary": "The paths chemists take, and why.",
+   "example": "From the lab bench to industry, policy and teaching.",
+   "channel": "Chemistry Professionals"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1813,
+   "title": "An apprentice joins Davy",
+   "text": "Michael Faraday, a bookbinder's apprentice with little schooling, becomes Humphry Davy's assistant.",
+   "why": "He became one of the greatest experimental scientists."
+  },
+  {
+   "year": 1854,
+   "title": "The prepared mind",
+   "text": "Louis Pasteur tells his audience in Lille that chance favours only the prepared mind.",
+   "why": "Still the best summary of how discoveries happen."
+  },
+  {
+   "year": 1856,
+   "title": "An 18-year-old's failure",
+   "text": "William Perkin fails to make quinine and finds mauveine instead.",
+   "why": "He built an industry from a failed experiment."
+  },
+  {
+   "year": 1891,
+   "title": "A kitchen laboratory",
+   "text": "Agnes Pockels, with no university access, publishes surface measurements in Nature with Lord Rayleigh's help.",
+   "why": "Talent can come from outside institutions."
+  },
+  {
+   "year": 1902,
+   "title": "Radium isolated",
+   "text": "Marie and Pierre Curie, working in a shed, isolate a radium compound.",
+   "why": "Years of hard physical work behind one result."
+  },
+  {
+   "year": 1918,
+   "title": "A divisive Nobel Prize",
+   "text": "Fritz Haber's prize for ammonia synthesis draws protest over his role in chemical warfare.",
+   "why": "Science and ethics cannot be separated."
+  },
+  {
+   "year": 1952,
+   "title": "Photo 51",
+   "text": "Rosalind Franklin's team records the X-ray image that reveals DNA's helical structure.",
+   "why": "Her contribution was long under-recognized."
+  },
+  {
+   "year": 1982,
+   "title": "An 'impossible' crystal",
+   "text": "Dan Shechtman observes a diffraction pattern that most experts said could not exist.",
+   "why": "He was mocked for years before the Nobel Prize in 2011."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "ws-001",
+   "q": "Who said that chance favours only the prepared mind?",
+   "options": [
+    "Louis Pasteur",
+    "Marie Curie",
+    "Albert Einstein",
+    "Isaac Newton"
+   ],
+   "answer": 0,
+   "explain": "In an 1854 lecture at the University of Lille."
+  },
+  {
+   "id": "ws-002",
+   "q": "How did Michael Faraday start his scientific career?",
+   "options": [
+    "As Humphry Davy's assistant",
+    "As a university professor",
+    "As a wealthy amateur",
+    "As a pharmacist"
+   ],
+   "answer": 0,
+   "explain": "He had trained as a bookbinder and attended Davy's public lectures."
+  },
+  {
+   "id": "ws-003",
+   "q": "Marie Curie won Nobel Prizes in…",
+   "options": [
+    "Physics and chemistry",
+    "Chemistry and medicine",
+    "Physics and peace",
+    "Chemistry only"
+   ],
+   "answer": 0,
+   "explain": "1903 in physics, 1911 in chemistry."
+  },
+  {
+   "id": "ws-004",
+   "q": "How were Dan Shechtman's quasicrystals first received?",
+   "options": [
+    "They were ridiculed, then won the 2011 Nobel Prize",
+    "They were immediately celebrated",
+    "They were never accepted",
+    "They were patented and forgotten"
+   ],
+   "answer": 0,
+   "explain": "Linus Pauling was among the most prominent critics."
+  },
+  {
+   "id": "ws-005",
+   "q": "Who recorded 'Photo 51', the X-ray image of DNA?",
+   "options": [
+    "Rosalind Franklin's team, with Raymond Gosling",
+    "James Watson and Francis Crick",
+    "Linus Pauling's group",
+    "Maurice Wilkins alone"
+   ],
+   "answer": 0,
+   "explain": "It was shown to Watson without her knowledge."
+  },
+  {
+   "id": "ws-006",
+   "q": "How old was William Perkin when he discovered mauveine?",
+   "options": [
+    "18",
+    "35",
+    "52",
+    "12"
+   ],
+   "answer": 0,
+   "explain": "He was working in a home laboratory during the Easter holiday."
+  },
+  {
+   "id": "ws-007",
+   "q": "Where did Agnes Pockels do her surface experiments?",
+   "options": [
+    "At home, without formal training",
+    "At Cambridge University",
+    "At a chemical company",
+    "At the Royal Institution"
+   ],
+   "answer": 0,
+   "explain": "Women could not attend German universities at the time."
+  },
+  {
+   "id": "ws-008",
+   "q": "Why is Fritz Haber's legacy debated?",
+   "options": [
+    "His ammonia synthesis feeds billions, but he also led chemical weapons work in World War I",
+    "He never won a Nobel Prize for his work",
+    "His results on ammonia were later shown to be faked",
+    "He discovered nothing that is still used today"
+   ],
+   "answer": 0,
+   "explain": "A lasting example of the ethical weight of science."
+  },
+  {
+   "id": "ws-009",
+   "q": "Mendeleev's periodic table grew out of…",
+   "options": [
+    "Writing a chemistry textbook",
+    "A failed experiment",
+    "A shipwreck",
+    "A government order"
+   ],
+   "answer": 0,
+   "explain": "He needed a logical way to present the elements."
+  },
+  {
+   "id": "ws-010",
+   "q": "Why share failures, not only successes?",
+   "options": [
+    "Others learn from them and avoid repeating them",
+    "To look humble",
+    "Because journals require it",
+    "There is no reason"
+   ],
+   "answer": 0,
+   "explain": "Science advances by correcting errors."
+  },
+  {
+   "id": "ws-011",
+   "q": "How did Marie Curie obtain radium?",
+   "options": [
+    "By processing tonnes of pitchblende residue largely by hand",
+    "By buying it",
+    "By finding pure radium in a mine",
+    "By making it in a reactor"
+   ],
+   "answer": 0,
+   "explain": "The work took years in a poorly equipped shed."
+  },
+  {
+   "id": "ws-012",
+   "q": "Who helped Agnes Pockels publish her work in Nature?",
+   "options": [
+    "Lord Rayleigh",
+    "Michael Faraday",
+    "Marie Curie",
+    "Robert Bunsen"
+   ],
+   "answer": 0,
+   "explain": "She wrote to him; he forwarded her letter to the journal."
+  }
+ ],
+ "related": [
+  "Failed Discoveries That Changed Science",
+  "Chemistry Professionals",
+  "Amazing Lab Experiments",
+  "The Chemistry",
+  "Creative Chemistry"
+ ],
+ "labels": {
+  "field_eyebrow": "What this page is",
+  "field": "Why stories matter in science",
+  "map_eyebrow": "Themes",
+  "map": "What these stories teach",
+  "map_sub": "The themes that come back again and again in the lives of chemists.",
+  "hist_eyebrow": "Stories",
+  "hist": "Moments that shaped chemists"
+ }
+}

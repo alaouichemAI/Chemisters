@@ -1,0 +1,305 @@
+{
+ "slug": "inorganic-chemistry",
+ "channel": "Inorganic Chemistry",
+ "number": 19,
+ "symbol": "Io",
+ "category": "Applied & industrial",
+ "name": "Inorganic Chemistry",
+ "tagline": "Catalysis, coordination compounds, and advanced materials.",
+ "seo_title": "Inorganic Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Inorganic Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in coordination chemistry, main-group and transition-metal chemistry, and solid-state materials.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#dbf27d",
+  "accent2": "#9af089",
+  "tile": "#1b2513",
+  "motif": "grid"
+ },
+ "definition": {
+  "lead": "Inorganic chemistry covers the chemistry of all the elements, with a special focus on metals, minerals and compounds not built around carbon chains.",
+  "body": "It explains catalysts, pigments, semiconductors, batteries, fertilizers and the metal ions that keep living cells running. From the periodic table to coordination complexes and solid-state materials, it is chemistry's widest map.",
+  "facts": [
+   {
+    "value": "118",
+    "label": "known elements in the periodic table"
+   },
+   {
+    "value": "1869",
+    "label": "Dmitri Mendeleev publishes his periodic table"
+   },
+   {
+    "value": "1913",
+    "label": "Nobel Prize to Alfred Werner for coordination chemistry"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Coordination chemistry",
+   "summary": "Metal ions surrounded by ligands that donate electron pairs.",
+   "example": "Cisplatin, a platinum complex used against cancer.",
+   "channel": ""
+  },
+  {
+   "name": "Main-group chemistry",
+   "summary": "The chemistry of the s- and p-block elements.",
+   "example": "Silicones, boranes and phosphorus compounds.",
+   "channel": ""
+  },
+  {
+   "name": "Transition-metal chemistry",
+   "summary": "d-block metals, their colours, magnetism and redox.",
+   "example": "Chromium ions give rubies their red colour.",
+   "channel": ""
+  },
+  {
+   "name": "Organometallic chemistry",
+   "summary": "Compounds with metal–carbon bonds.",
+   "example": "Ferrocene and many industrial catalysts.",
+   "channel": "Catalytic Chemistry"
+  },
+  {
+   "name": "Bioinorganic chemistry",
+   "summary": "Metal ions in living systems.",
+   "example": "Iron in haemoglobin, zinc and copper in enzymes.",
+   "channel": "Biological Chemistry"
+  },
+  {
+   "name": "Solid-state chemistry",
+   "summary": "Structures and properties of extended solids.",
+   "example": "Superconducting copper oxides.",
+   "channel": "Chemistry of Materials"
+  },
+  {
+   "name": "Lanthanides & actinides",
+   "summary": "The f-block elements.",
+   "example": "Neodymium magnets in motors and wind turbines.",
+   "channel": "Nuclear Chemistry"
+  },
+  {
+   "name": "Energy materials",
+   "summary": "Inorganic compounds that store and convert energy.",
+   "example": "Lithium cobalt oxide battery cathodes.",
+   "channel": "Energy Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1774,
+   "title": "Oxygen",
+   "text": "Joseph Priestley isolates oxygen; Carl Scheele had found it independently.",
+   "why": "Opened the way to Lavoisier's new chemistry."
+  },
+  {
+   "year": 1808,
+   "title": "Atomic theory",
+   "text": "John Dalton publishes 'A New System of Chemical Philosophy'.",
+   "why": "Elements made of atoms with characteristic weights."
+  },
+  {
+   "year": 1869,
+   "title": "The periodic table",
+   "text": "Dmitri Mendeleev arranges the elements and leaves gaps for undiscovered ones.",
+   "why": "His predicted elements were later found."
+  },
+  {
+   "year": 1886,
+   "title": "Fluorine isolated",
+   "text": "Henri Moissan isolates fluorine by electrolysis.",
+   "why": "Tamed the most reactive element; Nobel Prize in 1906."
+  },
+  {
+   "year": 1893,
+   "title": "Coordination theory",
+   "text": "Alfred Werner explains the structure of metal complexes.",
+   "why": "Founded modern coordination chemistry."
+  },
+  {
+   "year": 1951,
+   "title": "Ferrocene",
+   "text": "Ferrocene is discovered; its sandwich structure is worked out in 1952.",
+   "why": "Launched modern organometallic chemistry; Nobel Prize in 1973."
+  },
+  {
+   "year": 1962,
+   "title": "Noble gases react",
+   "text": "Neil Bartlett makes the first compound of xenon.",
+   "why": "Overturned the idea that noble gases are inert."
+  },
+  {
+   "year": 1965,
+   "title": "Cisplatin",
+   "text": "Barnett Rosenberg discovers that a platinum compound stops cells dividing.",
+   "why": "Became one of the most important cancer drugs."
+  },
+  {
+   "year": 1986,
+   "title": "High-temperature superconductors",
+   "text": "Georg Bednorz and Alex Müller discover superconductivity in a copper oxide ceramic.",
+   "why": "Nobel Prize in Physics in 1987."
+  },
+  {
+   "year": 2016,
+   "title": "Row 7 complete",
+   "text": "IUPAC names nihonium, moscovium, tennessine and oganesson.",
+   "why": "The seventh row of the periodic table is filled."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "io-001",
+   "q": "Who published the periodic table in 1869?",
+   "options": [
+    "Dmitri Mendeleev",
+    "John Dalton",
+    "Antoine Lavoisier",
+    "Niels Bohr"
+   ],
+   "answer": 0,
+   "explain": "He left gaps for gallium, scandium and germanium, which were found later."
+  },
+  {
+   "id": "io-002",
+   "q": "Why are many gemstones coloured?",
+   "options": [
+    "Transition-metal ions whose d-orbitals absorb visible light",
+    "Carbon impurities that absorb all light",
+    "Heat trapped in the crystal from its formation",
+    "Radioactivity that makes the crystal glow"
+   ],
+   "answer": 0,
+   "explain": "Chromium makes rubies red and emeralds green, depending on its surroundings."
+  },
+  {
+   "id": "io-003",
+   "q": "A ligand is…",
+   "options": [
+    "A molecule or ion that donates an electron pair to a metal",
+    "A metal atom at the centre of a complex",
+    "A proton that binds to a metal",
+    "Only a catalyst, never part of a complex"
+   ],
+   "answer": 0,
+   "explain": "Water, ammonia and chloride are common ligands."
+  },
+  {
+   "id": "io-004",
+   "q": "Cisplatin is…",
+   "options": [
+    "A platinum complex used against cancer",
+    "An antibiotic made by soil bacteria",
+    "A fertilizer rich in phosphorus",
+    "A white pigment used in paints"
+   ],
+   "answer": 0,
+   "explain": "It binds DNA and stops cancer cells dividing."
+  },
+  {
+   "id": "io-005",
+   "q": "The iron in haemoglobin binds…",
+   "options": [
+    "Oxygen",
+    "Nitrogen",
+    "Glucose",
+    "Sodium"
+   ],
+   "answer": 0,
+   "explain": "Each haemoglobin carries up to four O₂ molecules."
+  },
+  {
+   "id": "io-006",
+   "q": "What happened in 1962 to the idea that noble gases are inert?",
+   "options": [
+    "Neil Bartlett made a xenon compound",
+    "Helium caught fire",
+    "Argon formed water",
+    "Radon exploded"
+   ],
+   "answer": 0,
+   "explain": "Many xenon compounds are now known."
+  },
+  {
+   "id": "io-007",
+   "q": "What is the structure of ferrocene?",
+   "options": [
+    "An iron atom sandwiched between two five-membered carbon rings",
+    "A chain of iron atoms linked by carbon",
+    "A cube of iron atoms with carbon on the faces",
+    "Iron oxide with carbon trapped inside"
+   ],
+   "answer": 0,
+   "explain": "The 'sandwich' surprised chemists in 1952."
+  },
+  {
+   "id": "io-008",
+   "q": "What is the coordination number of the cobalt in [Co(NH₃)₆]³⁺?",
+   "options": [
+    "6",
+    "3",
+    "4",
+    "9"
+   ],
+   "answer": 0,
+   "explain": "Six ammonia ligands surround the cobalt octahedrally."
+  },
+  {
+   "id": "io-009",
+   "q": "Which element did Henri Moissan isolate in 1886?",
+   "options": [
+    "Fluorine",
+    "Chlorine",
+    "Sodium",
+    "Uranium"
+   ],
+   "answer": 0,
+   "explain": "Many chemists before him were injured trying."
+  },
+  {
+   "id": "io-010",
+   "q": "Lanthanides such as neodymium are used in…",
+   "options": [
+    "Strong permanent magnets",
+    "Table salt",
+    "Window glass only",
+    "Fertilizers"
+   ],
+   "answer": 0,
+   "explain": "Neodymium–iron–boron magnets power motors and wind turbines."
+  },
+  {
+   "id": "io-011",
+   "q": "Why are many transition-metal compounds coloured while zinc compounds are usually white?",
+   "options": [
+    "Zn²⁺ has a full d¹⁰ shell, so no d–d transitions",
+    "Zinc is too heavy to absorb visible light",
+    "Zinc compounds are gases at room temperature",
+    "Zinc is radioactive, which bleaches colour"
+   ],
+   "answer": 0,
+   "explain": "Colour needs electrons that can jump between d orbitals."
+  },
+  {
+   "id": "io-012",
+   "q": "How many elements are known today?",
+   "options": [
+    "118",
+    "92",
+    "103",
+    "150"
+   ],
+   "answer": 0,
+   "explain": "The heaviest, oganesson, was named in 2016."
+  }
+ ],
+ "related": [
+  "Chemistry of Materials",
+  "Catalytic Chemistry",
+  "Nuclear Chemistry",
+  "Biological Chemistry",
+  "Structural Chemistry"
+ ]
+}

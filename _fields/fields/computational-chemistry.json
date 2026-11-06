@@ -1,0 +1,305 @@
+{
+ "slug": "computational-chemistry",
+ "channel": "Computational Chemistry",
+ "number": 34,
+ "symbol": "Cp",
+ "category": "Computational & AI",
+ "name": "Computational Chemistry",
+ "tagline": "Simulating reality with quantum mechanics, molecular dynamics, and AI predictions.",
+ "seo_title": "Computational Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Computational Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in quantum chemistry, molecular dynamics, docking and machine-learned potentials.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#7d7df2",
+  "accent2": "#ca89f0",
+  "tile": "#1e1936",
+  "motif": "bonds"
+ },
+ "definition": {
+  "lead": "Computational chemistry uses computers to calculate the structures, energies and behaviour of molecules and materials.",
+  "body": "From quantum calculations on a single molecule to simulations of millions of atoms, it lets chemists test ideas before going to the lab, explain experiments and screen thousands of candidates for drugs, catalysts and materials.",
+  "facts": [
+   {
+    "value": "1970",
+    "label": "Gaussian 70, the first release of the Gaussian program"
+   },
+   {
+    "value": "1998",
+    "label": "Nobel Prize for density functional theory and computational quantum chemistry"
+   },
+   {
+    "value": "2013",
+    "label": "Nobel Prize for multiscale models of complex chemical systems"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Quantum chemistry",
+   "summary": "Solving for the electrons: Hartree–Fock, coupled cluster and more.",
+   "example": "Accurate reaction energies.",
+   "channel": "Theoretical Chemistry"
+  },
+  {
+   "name": "Density functional theory",
+   "summary": "Electronic structure at a cost that scales to real systems.",
+   "example": "Screening catalysts and battery materials.",
+   "channel": ""
+  },
+  {
+   "name": "Molecular dynamics",
+   "summary": "Following every atom through time.",
+   "example": "Watching a drug unbind from its protein.",
+   "channel": ""
+  },
+  {
+   "name": "QM/MM",
+   "summary": "Quantum mechanics for the reactive centre, classical physics for the rest.",
+   "example": "Enzyme mechanisms.",
+   "channel": ""
+  },
+  {
+   "name": "Docking & virtual screening",
+   "summary": "Predicting how ligands fit into protein pockets.",
+   "example": "Docking hundreds of millions of virtual molecules.",
+   "channel": "Drug Discovery"
+  },
+  {
+   "name": "Materials simulation",
+   "summary": "Computing properties of crystals, surfaces and interfaces.",
+   "example": "Large open databases of computed materials.",
+   "channel": "Chemistry of Materials"
+  },
+  {
+   "name": "Machine-learned potentials",
+   "summary": "Neural networks trained on quantum data.",
+   "example": "Near-quantum accuracy at a fraction of the cost.",
+   "channel": "Chemistry AI & ML Applications"
+  },
+  {
+   "name": "High-performance computing",
+   "summary": "Supercomputers and GPUs for chemistry.",
+   "example": "Simulations that run on thousands of processors.",
+   "channel": ""
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1951,
+   "title": "The Roothaan equations",
+   "text": "Molecular orbital theory is recast as matrix equations.",
+   "why": "Made quantum chemistry programmable."
+  },
+  {
+   "year": 1953,
+   "title": "Monte Carlo simulation",
+   "text": "Metropolis and colleagues introduce a random-sampling algorithm for many-particle systems.",
+   "why": "Still among the most used algorithms in science."
+  },
+  {
+   "year": 1957,
+   "title": "The first molecular dynamics",
+   "text": "Berni Alder and Thomas Wainwright simulate colliding hard spheres.",
+   "why": "Following particles step by step on a computer."
+  },
+  {
+   "year": 1964,
+   "title": "Simulating a real liquid",
+   "text": "Aneesur Rahman simulates liquid argon with realistic forces.",
+   "why": "Molecular dynamics met real chemistry."
+  },
+  {
+   "year": 1970,
+   "title": "Gaussian",
+   "text": "John Pople's group releases Gaussian 70.",
+   "why": "Quantum chemistry became accessible to non-specialists."
+  },
+  {
+   "year": 1976,
+   "title": "QM/MM",
+   "text": "Arieh Warshel and Michael Levitt combine quantum and classical models to study an enzyme reaction.",
+   "why": "Basis of the 2013 Nobel Prize."
+  },
+  {
+   "year": 1977,
+   "title": "Proteins in motion",
+   "text": "McCammon, Gelin and Karplus publish the first molecular dynamics of a protein.",
+   "why": "Proteins seen as flexible, moving machines."
+  },
+  {
+   "year": 1993,
+   "title": "B3LYP",
+   "text": "Axel Becke's hybrid functional appears, soon combined into the popular B3LYP.",
+   "why": "One of the most cited methods in chemistry."
+  },
+  {
+   "year": 2017,
+   "title": "Neural network potentials",
+   "text": "The ANI-1 potential is trained on millions of DFT calculations.",
+   "why": "Machine learning entered molecular simulation."
+  },
+  {
+   "year": 2020,
+   "title": "AlphaFold 2",
+   "text": "DeepMind's AlphaFold 2 reaches near-experimental accuracy at the CASP14 assessment.",
+   "why": "Protein structure prediction transformed."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "cp-001",
+   "q": "Molecular dynamics simulations…",
+   "options": [
+    "Solve Newton's equations of motion for atoms over time",
+    "Solve only the Schrödinger equation",
+    "Measure spectra",
+    "Grow crystals"
+   ],
+   "answer": 0,
+   "explain": "Forces come from a force field or from quantum calculations."
+  },
+  {
+   "id": "cp-002",
+   "q": "A force field is…",
+   "options": [
+    "A set of functions and parameters that give energy from atomic positions",
+    "A magnetic field applied to a sample",
+    "An electric field between two electrodes",
+    "The gravitational force between molecules"
+   ],
+   "answer": 0,
+   "explain": "Bonds as springs, plus angle, torsion and non-bonded terms."
+  },
+  {
+   "id": "cp-003",
+   "q": "Why is DFT so popular?",
+   "options": [
+    "It gives good accuracy at moderate computational cost",
+    "It gives exact results for every molecule",
+    "It needs no computer at all",
+    "It works only for metals and alloys"
+   ],
+   "answer": 0,
+   "explain": "The accuracy depends on the chosen functional."
+  },
+  {
+   "id": "cp-004",
+   "q": "A basis set is…",
+   "options": [
+    "The set of functions used to build molecular orbitals",
+    "A collection of experimental reference data",
+    "A buffer solution used in calibration",
+    "A crystal lattice used as a reference"
+   ],
+   "answer": 0,
+   "explain": "Bigger basis sets are more accurate and more expensive."
+  },
+  {
+   "id": "cp-005",
+   "q": "QM/MM treats…",
+   "options": [
+    "The reactive centre with quantum mechanics and the surroundings classically",
+    "Everything with quantum mechanics, at full cost",
+    "Everything with classical mechanics only",
+    "Only the magnetic properties of the system"
+   ],
+   "answer": 0,
+   "explain": "Accuracy where it matters, speed everywhere else."
+  },
+  {
+   "id": "cp-006",
+   "q": "Docking predicts…",
+   "options": [
+    "How a ligand fits and binds in a protein pocket",
+    "The melting point of a crystalline drug",
+    "The rate of a reaction in solution",
+    "The colour of a dye in different solvents"
+   ],
+   "answer": 0,
+   "explain": "Scoring functions rank the poses."
+  },
+  {
+   "id": "cp-007",
+   "q": "A typical molecular dynamics time step is about…",
+   "options": [
+    "1 femtosecond",
+    "1 second",
+    "1 millisecond",
+    "1 hour"
+   ],
+   "answer": 0,
+   "explain": "It must be shorter than the fastest bond vibrations."
+  },
+  {
+   "id": "cp-008",
+   "q": "Why can't the Schrödinger equation be solved exactly for most molecules?",
+   "options": [
+    "Electron–electron interactions make it too complex",
+    "There is not enough experimental data",
+    "The equation is known to be wrong for molecules",
+    "Atoms are too heavy for quantum mechanics"
+   ],
+   "answer": 0,
+   "explain": "Exact solutions exist only for one-electron systems such as H₂⁺."
+  },
+  {
+   "id": "cp-009",
+   "q": "Monte Carlo methods rely on…",
+   "options": [
+    "Random sampling",
+    "Deterministic trajectories only",
+    "Experiments",
+    "X-rays"
+   ],
+   "answer": 0,
+   "explain": "Named after the casino."
+  },
+  {
+   "id": "cp-010",
+   "q": "Periodic boundary conditions…",
+   "options": [
+    "Repeat a small simulation box infinitely to mimic a bulk material",
+    "Fix the atoms at the edges of the box in place",
+    "Remove all boundaries so atoms fly away freely",
+    "Heat the edges of the box to drive diffusion"
+   ],
+   "answer": 0,
+   "explain": "An atom leaving one side re-enters from the other."
+  },
+  {
+   "id": "cp-011",
+   "q": "Machine-learned potentials aim to…",
+   "options": [
+    "Reach quantum-level accuracy at much lower cost",
+    "Replace all experiments with simulations",
+    "Measure spectra directly from samples",
+    "Sequence proteins from their structures"
+   ],
+   "answer": 0,
+   "explain": "They are trained on quantum chemistry data."
+  },
+  {
+   "id": "cp-012",
+   "q": "The 2013 Nobel Prize in Chemistry went to…",
+   "options": [
+    "Karplus, Levitt and Warshel for multiscale models",
+    "Kohn and Pople for density functional theory",
+    "The AlphaFold team for protein structures",
+    "Ahmed Zewail for femtochemistry"
+   ],
+   "answer": 0,
+   "explain": "For combining quantum and classical physics in one model."
+  }
+ ],
+ "related": [
+  "Theoretical Chemistry",
+  "Chemoinformatics",
+  "Chemistry AI & ML Applications",
+  "Drug Discovery",
+  "Chemistry of Materials"
+ ]
+}

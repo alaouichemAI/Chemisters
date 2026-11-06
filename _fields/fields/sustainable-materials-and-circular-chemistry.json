@@ -1,0 +1,299 @@
+{
+ "slug": "sustainable-materials-and-circular-chemistry",
+ "channel": "Sustainable Materials & Circular Chemistry",
+ "number": 43,
+ "symbol": "Cc",
+ "category": "Materials & nano",
+ "name": "Sustainable Materials & Circular Chemistry",
+ "tagline": "Recyclable materials, bio-based polymers, and circular economy approaches.",
+ "seo_title": "Sustainable Materials & Circular Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Sustainable Materials & Circular Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in recycling, bio-based materials, circular design and resource recovery.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#7df2ee",
+  "accent2": "#89b2f0",
+  "tile": "#0e2a29",
+  "motif": "helix"
+ },
+ "definition": {
+  "lead": "Circular chemistry designs materials and processes so that resources stay in use: made from renewable or recycled feedstocks, and recovered at the end of their life instead of becoming waste.",
+  "body": "Today most plastics are used once and thrown away. Circular chemistry develops recyclable-by-design polymers, chemical recycling, bio-based feedstocks and ways to recover metals from electronics and batteries.",
+  "facts": [
+   {
+    "value": "About 9%",
+    "label": "of all plastic ever made had been recycled, by a 2017 estimate"
+   },
+   {
+    "value": "2016",
+    "label": "a bacterium that digests PET plastic is reported"
+   },
+   {
+    "value": "2019",
+    "label": "twelve principles of circular chemistry are proposed"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Mechanical recycling",
+   "summary": "Collecting, cleaning and remelting plastics.",
+   "example": "PET bottles turned into fibres.",
+   "channel": ""
+  },
+  {
+   "name": "Chemical recycling",
+   "summary": "Breaking polymers back down to monomers or feedstocks.",
+   "example": "Depolymerizing PET to remake bottles.",
+   "channel": ""
+  },
+  {
+   "name": "Bio-based polymers",
+   "summary": "Polymers made from plants instead of oil.",
+   "example": "Polylactic acid from corn starch.",
+   "channel": "Polymers Chemistry"
+  },
+  {
+   "name": "Biodegradable materials",
+   "summary": "Materials that microbes can break down.",
+   "example": "Polyhydroxyalkanoates (PHAs).",
+   "channel": ""
+  },
+  {
+   "name": "Enzymatic recycling",
+   "summary": "Enzymes that take plastics apart.",
+   "example": "Engineered PET-degrading enzymes.",
+   "channel": "Biological Chemistry"
+  },
+  {
+   "name": "Critical metal recovery",
+   "summary": "Recovering metals from used products.",
+   "example": "Recycling lithium and cobalt from batteries.",
+   "channel": "Energy Chemistry"
+  },
+  {
+   "name": "Life-cycle assessment",
+   "summary": "Measuring impacts from raw material to disposal.",
+   "example": "Comparing glass, plastic and aluminium packaging.",
+   "channel": ""
+  },
+  {
+   "name": "CO₂ as a feedstock",
+   "summary": "Turning waste CO₂ into products.",
+   "example": "CO₂-based polycarbonates.",
+   "channel": "Green Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1970,
+   "title": "The recycling symbol",
+   "text": "Gary Anderson designs the three-arrow recycling symbol.",
+   "why": "A global icon of reuse."
+  },
+  {
+   "year": 1987,
+   "title": "Sustainable development",
+   "text": "The Brundtland report 'Our Common Future' defines sustainable development.",
+   "why": "Meeting today's needs without compromising the future."
+  },
+  {
+   "year": 1988,
+   "title": "Resin codes",
+   "text": "Numbered codes are introduced to identify plastic types.",
+   "why": "Made sorting plastics easier."
+  },
+  {
+   "year": 2002,
+   "title": "Cradle to Cradle",
+   "text": "William McDonough and Michael Braungart publish their book on circular design.",
+   "why": "Products designed for endless material cycles."
+  },
+  {
+   "year": 2016,
+   "title": "A plastic-eating bacterium",
+   "text": "Japanese researchers report Ideonella sakaiensis, which digests PET.",
+   "why": "Inspired enzyme-based recycling."
+  },
+  {
+   "year": 2017,
+   "title": "Plastic's balance sheet",
+   "text": "Roland Geyer and colleagues estimate that only about 9% of all plastic ever made was recycled.",
+   "why": "Quantified the scale of the problem."
+  },
+  {
+   "year": 2019,
+   "title": "Circular chemistry",
+   "text": "Tom Keijer, Vincent Bakker and Chris Slootweg propose principles of circular chemistry.",
+   "why": "Extended green chemistry to full life cycles."
+  },
+  {
+   "year": 2020,
+   "title": "Enzymes recycle PET",
+   "text": "An engineered enzyme depolymerizes PET efficiently enough to remake bottles.",
+   "why": "Brought enzymatic recycling close to industry."
+  },
+  {
+   "year": 2022,
+   "title": "Toward a plastics treaty",
+   "text": "The UN Environment Assembly agrees to negotiate a global treaty on plastic pollution.",
+   "why": "Plastic pollution became a global policy issue."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "cc-001",
+   "q": "A circular economy aims to…",
+   "options": [
+    "Keep materials in use and design out waste",
+    "Burn everything for energy",
+    "Use only new materials",
+    "Make products last one use"
+   ],
+   "answer": 0,
+   "explain": "The opposite of 'take, make, dispose'."
+  },
+  {
+   "id": "cc-002",
+   "q": "How does chemical recycling differ from mechanical recycling?",
+   "options": [
+    "It breaks polymers into monomers or feedstocks instead of just remelting them",
+    "It uses no energy at all, unlike melting",
+    "It is just another name for mechanical recycling",
+    "It only works for metals, not plastics"
+   ],
+   "answer": 0,
+   "explain": "It can restore virgin-quality material."
+  },
+  {
+   "id": "cc-003",
+   "q": "Polylactic acid (PLA) is made from…",
+   "options": [
+    "Plant sugars such as corn starch",
+    "Crude oil",
+    "Coal",
+    "Natural gas"
+   ],
+   "answer": 0,
+   "explain": "Lactic acid from fermentation is polymerized."
+  },
+  {
+   "id": "cc-004",
+   "q": "'Biodegradable' means…",
+   "options": [
+    "Microorganisms can break it down under certain conditions",
+    "It dissolves completely in water",
+    "It is made from plants",
+    "It vanishes instantly in the environment"
+   ],
+   "answer": 0,
+   "explain": "Many 'biodegradable' plastics need industrial composting."
+  },
+  {
+   "id": "cc-005",
+   "q": "Why is mechanical recycling limited?",
+   "options": [
+    "Polymer chains degrade and contamination lowers quality each cycle",
+    "It works forever without any loss of quality",
+    "It is illegal in most countries",
+    "It needs no sorting before processing"
+   ],
+   "answer": 0,
+   "explain": "Often called 'downcycling'."
+  },
+  {
+   "id": "cc-006",
+   "q": "Ideonella sakaiensis is…",
+   "options": [
+    "A bacterium that can digest PET",
+    "A plastic",
+    "A recycling machine",
+    "A catalyst made of metal"
+   ],
+   "answer": 0,
+   "explain": "Found near a bottle recycling site in Japan."
+  },
+  {
+   "id": "cc-007",
+   "q": "Which plastic has resin identification code 1?",
+   "options": [
+    "PET",
+    "PVC",
+    "Polypropylene",
+    "Polystyrene"
+   ],
+   "answer": 0,
+   "explain": "The most recycled plastic, used for drink bottles."
+  },
+  {
+   "id": "cc-008",
+   "q": "LCA stands for…",
+   "options": [
+    "Life-cycle assessment",
+    "Low-carbon alternative",
+    "Linear chemical analysis",
+    "Laboratory compliance audit"
+   ],
+   "answer": 0,
+   "explain": "From raw material extraction to end of life."
+  },
+  {
+   "id": "cc-009",
+   "q": "Why is 'bio-based' not the same as 'biodegradable'?",
+   "options": [
+    "Bio-based describes origin; biodegradable describes end of life",
+    "They mean the same",
+    "Bio-based is always biodegradable",
+    "Biodegradable means made from plants"
+   ],
+   "answer": 0,
+   "explain": "Bio-based polyethylene, for example, is not biodegradable."
+  },
+  {
+   "id": "cc-010",
+   "q": "By a 2017 estimate, what share of all plastic ever made had been recycled?",
+   "options": [
+    "About 9%",
+    "About 50%",
+    "About 90%",
+    "About 1%"
+   ],
+   "answer": 0,
+   "explain": "Most went to landfills or the environment."
+  },
+  {
+   "id": "cc-011",
+   "q": "Why recover metals from batteries?",
+   "options": [
+    "Supplies are limited and mining has high environmental costs",
+    "Batteries contain large amounts of gold",
+    "It is required before a battery can be charged",
+    "Metals in batteries are useless otherwise"
+   ],
+   "answer": 0,
+   "explain": "Lithium, cobalt and nickel are critical resources."
+  },
+  {
+   "id": "cc-012",
+   "q": "'Cradle to cradle' design means…",
+   "options": [
+    "Materials re-enter new cycles at the end of a product's life",
+    "Products designed for babies and children",
+    "Making products that last forever",
+    "Burning products for energy after use"
+   ],
+   "answer": 0,
+   "explain": "Waste equals food for the next cycle."
+  }
+ ],
+ "related": [
+  "Green Chemistry",
+  "Polymers Chemistry",
+  "Environmental Chemistry",
+  "Energy Chemistry",
+  "Chemistry of Materials"
+ ]
+}

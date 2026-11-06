@@ -1,0 +1,305 @@
+{
+ "slug": "surface-chemistry",
+ "channel": "Surface Chemistry",
+ "number": 46,
+ "symbol": "Sf",
+ "category": "Materials & nano",
+ "name": "Surface Chemistry",
+ "tagline": "Adsorption, thin films, and interfacial phenomena at surfaces.",
+ "seo_title": "Surface Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Surface Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in adsorption, interfaces, thin films, wetting and surface analysis.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#7dc7f2",
+  "accent2": "#8989f0",
+  "tile": "#0e2a29",
+  "motif": "triangles"
+ },
+ "definition": {
+  "lead": "Surface chemistry studies what happens at the boundary between two phases: solid and gas, solid and liquid, liquid and gas.",
+  "body": "Catalysis, corrosion, adhesion, lubrication, cleaning, sensors and chip manufacturing all happen at surfaces. A few atomic layers often decide how a whole material behaves.",
+  "facts": [
+   {
+    "value": "72 mN/m",
+    "label": "surface tension of water at room temperature"
+   },
+   {
+    "value": "1932",
+    "label": "Irving Langmuir receives the Nobel Prize for surface chemistry"
+   },
+   {
+    "value": "2007",
+    "label": "Nobel Prize to Gerhard Ertl for chemical processes on solid surfaces"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Adsorption",
+   "summary": "Molecules sticking to surfaces.",
+   "example": "Activated carbon filters.",
+   "channel": ""
+  },
+  {
+   "name": "Heterogeneous catalysis",
+   "summary": "Reactions sped up at solid surfaces.",
+   "example": "Car exhaust catalysts.",
+   "channel": "Catalytic Chemistry"
+  },
+  {
+   "name": "Colloids & interfaces",
+   "summary": "Emulsions, foams and dispersions.",
+   "example": "Milk is an emulsion of fat in water.",
+   "channel": "Solutions Chemistry"
+  },
+  {
+   "name": "Surfactants",
+   "summary": "Molecules that gather at interfaces.",
+   "example": "Detergents lowering surface tension.",
+   "channel": ""
+  },
+  {
+   "name": "Thin films & coatings",
+   "summary": "Layers from a few atoms to micrometres thick.",
+   "example": "Atomic layer deposition in chipmaking.",
+   "channel": ""
+  },
+  {
+   "name": "Self-assembled monolayers",
+   "summary": "Single molecular layers that organize themselves.",
+   "example": "Thiol molecules on gold.",
+   "channel": ""
+  },
+  {
+   "name": "Surface analysis",
+   "summary": "Tools that see the outermost atoms.",
+   "example": "X-ray photoelectron spectroscopy and STM.",
+   "channel": ""
+  },
+  {
+   "name": "Wetting & adhesion",
+   "summary": "Why some surfaces repel water and others stick.",
+   "example": "The self-cleaning lotus leaf.",
+   "channel": ""
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1774,
+   "title": "Oil calms water",
+   "text": "Benjamin Franklin reports how a spoonful of oil spreads over a pond.",
+   "why": "An early clue to molecular-scale films."
+  },
+  {
+   "year": 1805,
+   "title": "Young's equation",
+   "text": "Thomas Young relates the contact angle of a droplet to surface tensions.",
+   "why": "The basis of wetting science."
+  },
+  {
+   "year": 1891,
+   "title": "Measuring surface films",
+   "text": "Agnes Pockels publishes surface tension measurements made with a trough she built at home.",
+   "why": "Her method inspired Langmuir's trough."
+  },
+  {
+   "year": 1917,
+   "title": "Monolayers",
+   "text": "Irving Langmuir shows that films on water can be one molecule thick.",
+   "why": "Molecules at surfaces can be counted and measured."
+  },
+  {
+   "year": 1918,
+   "title": "The Langmuir isotherm",
+   "text": "Langmuir models monolayer adsorption on surfaces.",
+   "why": "Still the starting model for adsorption."
+  },
+  {
+   "year": 1932,
+   "title": "Nobel Prize",
+   "text": "Irving Langmuir receives the Nobel Prize for discoveries in surface chemistry.",
+   "why": "Surface chemistry recognized."
+  },
+  {
+   "year": 1938,
+   "title": "BET theory",
+   "text": "Brunauer, Emmett and Teller model multilayer adsorption.",
+   "why": "The standard way to measure surface area."
+  },
+  {
+   "year": 1981,
+   "title": "Seeing surfaces atom by atom",
+   "text": "The scanning tunnelling microscope is invented.",
+   "why": "Surfaces could be imaged at atomic resolution."
+  },
+  {
+   "year": 1997,
+   "title": "The lotus effect",
+   "text": "Wilhelm Barthlott and Christoph Neinhuis explain the self-cleaning lotus leaf.",
+   "why": "Inspired water-repellent materials."
+  },
+  {
+   "year": 2007,
+   "title": "Surface reactions explained",
+   "text": "Gerhard Ertl receives the Nobel Prize for studies of chemical processes on solid surfaces.",
+   "why": "Clarified how industrial catalysts work."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "sf-001",
+   "q": "How does adsorption differ from absorption?",
+   "options": [
+    "Adsorption happens on a surface; absorption happens into the bulk",
+    "They are the same process with two names",
+    "Absorption happens only with gases",
+    "Adsorption needs a liquid to happen"
+   ],
+   "answer": 0,
+   "explain": "A sponge absorbs; activated carbon adsorbs."
+  },
+  {
+   "id": "sf-002",
+   "q": "The Langmuir isotherm assumes…",
+   "options": [
+    "A single layer of adsorption on identical sites",
+    "Unlimited layers of molecules stacking up",
+    "No adsorption at low pressure",
+    "Only liquids can adsorb on surfaces"
+   ],
+   "answer": 0,
+   "explain": "Coverage saturates when every site is filled."
+  },
+  {
+   "id": "sf-003",
+   "q": "The BET method is used to measure…",
+   "options": [
+    "The surface area of porous solids",
+    "The boiling points of liquids",
+    "The molar mass of polymers",
+    "The pH of surfaces"
+   ],
+   "answer": 0,
+   "explain": "From how much nitrogen gas adsorbs at low temperature."
+  },
+  {
+   "id": "sf-004",
+   "q": "Surfactants lower…",
+   "options": [
+    "Surface tension",
+    "Boiling point",
+    "Density",
+    "Molar mass"
+   ],
+   "answer": 0,
+   "explain": "They crowd at the surface and weaken water's cohesion there."
+  },
+  {
+   "id": "sf-005",
+   "q": "A water contact angle above 150° means a surface is…",
+   "options": [
+    "Superhydrophobic",
+    "Hydrophilic",
+    "Neutral",
+    "Wet"
+   ],
+   "answer": 0,
+   "explain": "Droplets bead up and roll off."
+  },
+  {
+   "id": "sf-006",
+   "q": "Physisorption differs from chemisorption because…",
+   "options": [
+    "Physisorption is weak van der Waals binding; chemisorption forms chemical bonds",
+    "They are the same process at different temperatures",
+    "Chemisorption is weaker than physisorption",
+    "Physisorption always forms covalent bonds"
+   ],
+   "answer": 0,
+   "explain": "Catalysis usually needs chemisorption."
+  },
+  {
+   "id": "sf-007",
+   "q": "Activated carbon removes impurities by…",
+   "options": [
+    "Adsorbing them on its huge internal surface",
+    "Dissolving them into the carbon",
+    "Burning them at low temperature",
+    "Reacting them with water inside the pores"
+   ],
+   "answer": 0,
+   "explain": "A gram can have over 1,000 m² of surface."
+  },
+  {
+   "id": "sf-008",
+   "q": "Why are surface atoms more reactive than bulk atoms?",
+   "options": [
+    "They have fewer neighbours and unsatisfied bonds",
+    "They are heavier",
+    "They are colder",
+    "They have more electrons"
+   ],
+   "answer": 0,
+   "explain": "That is why finely divided metals are good catalysts."
+  },
+  {
+   "id": "sf-009",
+   "q": "The lotus effect is…",
+   "options": [
+    "A waxy, micro- and nano-structured surface that makes water bead and roll off, cleaning the leaf",
+    "A sweet scent released by lotus flowers at night",
+    "A natural catalyst found in lotus leaves",
+    "A colour change when the leaf gets wet"
+   ],
+   "answer": 0,
+   "explain": "Copied in self-cleaning coatings."
+  },
+  {
+   "id": "sf-010",
+   "q": "X-ray photoelectron spectroscopy (XPS) reveals…",
+   "options": [
+    "The elements and chemical states at a surface",
+    "The bulk density of the material",
+    "The boiling point of the sample",
+    "The colour of the surface"
+   ],
+   "answer": 0,
+   "explain": "It probes only the top few nanometres."
+  },
+  {
+   "id": "sf-011",
+   "q": "Who measured surface films with a trough she built at home, publishing in 1891?",
+   "options": [
+    "Agnes Pockels",
+    "Marie Curie",
+    "Rosalind Franklin",
+    "Ada Lovelace"
+   ],
+   "answer": 0,
+   "explain": "Lord Rayleigh helped her publish in Nature."
+  },
+  {
+   "id": "sf-012",
+   "q": "Gerhard Ertl's 2007 Nobel Prize was for…",
+   "options": [
+    "Chemical processes on solid surfaces",
+    "Inventing the STM",
+    "Surfactants",
+    "Monolayers on water"
+   ],
+   "answer": 0,
+   "explain": "Including the steps of ammonia synthesis on iron."
+  }
+ ],
+ "related": [
+  "Catalytic Chemistry",
+  "Nanochemistry",
+  "Solutions Chemistry",
+  "Chemistry of Materials",
+  "Applied Chemistry"
+ ]
+}

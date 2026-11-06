@@ -1,0 +1,305 @@
+{
+ "slug": "industrial-chemistry",
+ "channel": "Industrial Chemistry",
+ "number": 20,
+ "symbol": "Id",
+ "category": "Applied & industrial",
+ "name": "Industrial Chemistry",
+ "tagline": "Scale-up, process chemistry, and manufacturing of chemical products.",
+ "seo_title": "Industrial Chemistry — paper summaries, news & innovations | Chemisters",
+ "seo_description": "Follow Chemisters Industrial Chemistry on LinkedIn and Facebook: paper summaries, news and innovations in chemical manufacturing, bulk chemicals, fertilizers, plastics and process decarbonization.",
+ "posts_about": [
+  "Paper summaries",
+  "Field news",
+  "Innovations"
+ ],
+ "theme": {
+  "accent": "#cbf27d",
+  "accent2": "#8cf089",
+  "tile": "#1b2513",
+  "motif": "lattice"
+ },
+ "definition": {
+  "lead": "Industrial chemistry turns chemical reactions into products at scale, safely and economically: fertilizers, fuels, plastics, metals and medicines.",
+  "body": "It is where laboratory discoveries meet reactors, supply chains, energy costs and regulation. A handful of large processes, making ammonia, sulfuric acid, ethylene and chlorine, underpin much of the material economy.",
+  "facts": [
+   {
+    "value": "1746",
+    "label": "John Roebuck's lead-chamber process starts industrial sulfuric acid"
+   },
+   {
+    "value": "1913",
+    "label": "the first Haber–Bosch ammonia plant opens at Oppau, Germany"
+   },
+   {
+    "value": "About half",
+    "label": "of the world's people are fed thanks to synthetic nitrogen fertilizer, by Vaclav Smil's estimate"
+   }
+  ]
+ },
+ "branches": [
+  {
+   "name": "Bulk chemicals",
+   "summary": "Made by the million tonnes: acids, bases, gases.",
+   "example": "Sulfuric acid by the Contact process.",
+   "channel": ""
+  },
+  {
+   "name": "Petrochemicals & refining",
+   "summary": "Turning oil and gas into fuels and building blocks.",
+   "example": "Steam cracking makes ethylene and propylene.",
+   "channel": ""
+  },
+  {
+   "name": "Fertilizers",
+   "summary": "Nitrogen, phosphorus and potassium for crops.",
+   "example": "Ammonia from the Haber–Bosch process.",
+   "channel": ""
+  },
+  {
+   "name": "Chlor-alkali",
+   "summary": "Electrolysis of brine.",
+   "example": "Chlorine for PVC and water treatment, caustic soda for soaps.",
+   "channel": "Electrochemistry"
+  },
+  {
+   "name": "Polymers & plastics",
+   "summary": "Making and processing plastics at scale.",
+   "example": "Polyethylene, the most produced plastic.",
+   "channel": "Polymers Chemistry"
+  },
+  {
+   "name": "Fine chemicals & pharma",
+   "summary": "Smaller volumes of complex, high-value molecules.",
+   "example": "Manufacturing active pharmaceutical ingredients.",
+   "channel": "Medicinal Chemistry"
+  },
+  {
+   "name": "Process safety",
+   "summary": "Preventing fires, explosions and toxic releases.",
+   "example": "Hazard studies before a plant is built.",
+   "channel": "Chemical Engineering"
+  },
+  {
+   "name": "Decarbonization",
+   "summary": "Cutting the carbon footprint of chemical production.",
+   "example": "Green hydrogen for ammonia and steel.",
+   "channel": "Energy Chemistry"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1746,
+   "title": "The lead-chamber process",
+   "text": "John Roebuck makes sulfuric acid in lead-lined chambers.",
+   "why": "Made sulfuric acid cheap enough for industry."
+  },
+  {
+   "year": 1791,
+   "title": "The Leblanc process",
+   "text": "Nicolas Leblanc patents a method to make soda ash from salt.",
+   "why": "Launched the heavy chemical industry."
+  },
+  {
+   "year": 1831,
+   "title": "The Contact process",
+   "text": "Peregrine Phillips patents oxidizing SO₂ over a platinum catalyst.",
+   "why": "Later became the standard route to sulfuric acid."
+  },
+  {
+   "year": 1856,
+   "title": "Synthetic dyes",
+   "text": "Perkin's mauveine starts the synthetic dye industry.",
+   "why": "Gave rise to companies like BASF, Bayer and Hoechst."
+  },
+  {
+   "year": 1865,
+   "title": "The Solvay process",
+   "text": "Ernest Solvay opens his first plant making soda ash from salt, limestone and ammonia.",
+   "why": "Replaced the polluting Leblanc process."
+  },
+  {
+   "year": 1907,
+   "title": "Bakelite",
+   "text": "Leo Baekeland makes the first fully synthetic plastic.",
+   "why": "Started the plastics age."
+  },
+  {
+   "year": 1913,
+   "title": "Industrial ammonia",
+   "text": "BASF opens the first Haber–Bosch plant at Oppau.",
+   "why": "Nitrogen fertilizer on an industrial scale."
+  },
+  {
+   "year": 1935,
+   "title": "Nylon",
+   "text": "Wallace Carothers's team at DuPont makes nylon.",
+   "why": "The first commercially successful fully synthetic fibre."
+  },
+  {
+   "year": 1984,
+   "title": "Bhopal",
+   "text": "A toxic gas leak at a pesticide plant in Bhopal, India, kills thousands of people.",
+   "why": "Transformed process safety and chemical regulation worldwide."
+  },
+  {
+   "year": 1985,
+   "title": "Responsible Care",
+   "text": "The chemical industry launches the Responsible Care initiative in Canada.",
+   "why": "A voluntary commitment to safety and environmental performance."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "id-001",
+   "q": "The Contact process makes…",
+   "options": [
+    "Sulfuric acid",
+    "Ammonia",
+    "Nitric acid",
+    "Sodium carbonate"
+   ],
+   "answer": 0,
+   "explain": "SO₂ is oxidized to SO₃ over a vanadium catalyst, then absorbed."
+  },
+  {
+   "id": "id-002",
+   "q": "The Haber–Bosch process combines…",
+   "options": [
+    "N₂ and H₂",
+    "CO and H₂",
+    "SO₂ and O₂",
+    "Salt and water"
+   ],
+   "answer": 0,
+   "explain": "N₂ + 3H₂ ⇌ 2NH₃ over an iron catalyst."
+  },
+  {
+   "id": "id-003",
+   "q": "The Ostwald process makes…",
+   "options": [
+    "Nitric acid from ammonia",
+    "Sulfuric acid",
+    "Soda ash",
+    "Steel"
+   ],
+   "answer": 0,
+   "explain": "Ammonia is oxidized over a platinum–rhodium gauze."
+  },
+  {
+   "id": "id-004",
+   "q": "The Solvay process makes…",
+   "options": [
+    "Sodium carbonate (soda ash)",
+    "Sodium chloride",
+    "Sulfuric acid",
+    "Ammonia"
+   ],
+   "answer": 0,
+   "explain": "Used for glass, detergents and more."
+  },
+  {
+   "id": "id-005",
+   "q": "Steam cracking mainly produces…",
+   "options": [
+    "Ethylene and propylene",
+    "Ammonia",
+    "Chlorine",
+    "Sulfur"
+   ],
+   "answer": 0,
+   "explain": "The building blocks of most plastics."
+  },
+  {
+   "id": "id-006",
+   "q": "Electrolysing brine (chlor-alkali) gives…",
+   "options": [
+    "Chlorine, sodium hydroxide and hydrogen",
+    "Sulfur and oxygen",
+    "Sodium metal and water",
+    "Nitrogen"
+   ],
+   "answer": 0,
+   "explain": "Three useful products from salt water."
+  },
+  {
+   "id": "id-007",
+   "q": "Why are bulk chemicals usually made in continuous processes?",
+   "options": [
+    "Steady, large-scale operation is cheaper and more consistent",
+    "Batch processes are not allowed for bulk chemicals",
+    "Continuous processes are always safer than batch",
+    "There is no particular reason; it is tradition"
+   ],
+   "answer": 0,
+   "explain": "Small-volume, high-value products are more often made in batches."
+  },
+  {
+   "id": "id-008",
+   "q": "Bakelite (1907) was…",
+   "options": [
+    "The first fully synthetic plastic",
+    "A synthetic nitrogen fertilizer",
+    "An explosive for mining",
+    "A synthetic purple dye"
+   ],
+   "answer": 0,
+   "explain": "A hard phenol–formaldehyde resin used in early telephones and radios."
+  },
+  {
+   "id": "id-009",
+   "q": "What happened at Bhopal in 1984?",
+   "options": [
+    "A toxic methyl isocyanate leak at a pesticide plant",
+    "An oil spill from a tanker in the harbour",
+    "An accident at a nuclear power station",
+    "The collapse of a dam upstream of the city"
+   ],
+   "answer": 0,
+   "explain": "One of the worst industrial disasters in history."
+  },
+  {
+   "id": "id-010",
+   "q": "Where does most hydrogen for ammonia come from today?",
+   "options": [
+    "Steam reforming of natural gas",
+    "Electrolysis of water",
+    "The air",
+    "Volcanoes"
+   ],
+   "answer": 0,
+   "explain": "Which is why ammonia production emits so much CO₂."
+  },
+  {
+   "id": "id-011",
+   "q": "Why does the Haber–Bosch process run at high pressure?",
+   "options": [
+    "The product side has fewer gas molecules",
+    "The catalyst melts otherwise",
+    "It lowers costs directly",
+    "To cool the reactor"
+   ],
+   "answer": 0,
+   "explain": "Le Chatelier: pressure favours the side with fewer moles of gas."
+  },
+  {
+   "id": "id-012",
+   "q": "Where was nylon invented?",
+   "options": [
+    "At DuPont, by Wallace Carothers's team",
+    "At BASF, by Carl Bosch's team",
+    "At Bayer, by Felix Hoffmann's team",
+    "At ICI, by Eric Fawcett's team"
+   ],
+   "answer": 0,
+   "explain": "It was first sold as toothbrush bristles and stockings."
+  }
+ ],
+ "related": [
+  "Chemical Engineering",
+  "Catalytic Chemistry",
+  "Polymers Chemistry",
+  "Energy Chemistry",
+  "Quality Control"
+ ]
+}

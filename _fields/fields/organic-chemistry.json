@@ -17,10 +17,10 @@
   },
   "definition": {
     "lead": "Organic chemistry is the chemistry of carbon compounds: how they are built, how they react, and how chemists make new ones.",
-    "body": "Carbon forms four strong bonds and bonds strongly to itself, so it can grow into chains, rings and 3D frameworks of almost any shape. That one property is why the same field covers fuels, plastics, dyes, DNA and nearly every medicine on a pharmacy shelf. The name is a fossil: it once meant 'compounds only living things can make', until chemists proved otherwise in 1828.",
+    "body": "Carbon forms four strong bonds and bonds strongly to itself, so it can grow into chains, rings and 3D frameworks of almost any shape. That one property is why the same field covers fuels, plastics, dyes, DNA and nearly every medicine on a pharmacy shelf. The name is a fossil: early chemists believed these compounds could only come from living organisms, an idea that faded as chemists learned to make them in the lab.",
     "facts": [
       { "value": "4", "label": "bonds per carbon — the root of chains, rings and branches" },
-      { "value": "1828", "label": "the year a 'living' molecule was first made from mineral chemicals" },
+      { "value": "6", "label": "carbons in a benzene ring, the motif at the heart of countless dyes, plastics and drugs" },
       { "value": "Most", "label": "of the hundreds of millions of known substances are carbon compounds" }
     ]
   },
@@ -40,7 +40,7 @@
   ],
   "timeline": [
     { "year": 1807, "title": "The word 'organic' is born", "text": "Berzelius names the chemistry of substances from living organisms 'organic'.", "why": "The name carried a belief — vitalism — that only life could make these molecules." },
-    { "year": 1828, "title": "Wöhler makes urea", "text": "Friedrich Wöhler heats ammonium cyanate, a mineral salt, and gets urea, a molecule from urine.", "why": "First crack in vitalism: a 'living' molecule from non-living chemicals." },
+    { "year": 1828, "title": "Wöhler makes urea", "text": "Friedrich Wöhler heats ammonium cyanate, an inorganic salt, and obtains urea, a compound known until then only from urine.", "why": "An organic compound made from inorganic starting materials: an early challenge to vitalism." },
     { "year": 1856, "title": "A failed quinine synthesis gives the first synthetic dye", "text": "18-year-old William Perkin tries to make quinine and gets a purple solid instead: mauveine.", "why": "Launched the synthetic dye industry, and with it industrial organic chemistry." },
     { "year": 1858, "title": "Carbon has four bonds", "text": "Kekulé and Couper independently propose that carbon is tetravalent and links to itself in chains.", "why": "The birth of structural formulas — the drawings every chemist still uses." },
     { "year": 1865, "title": "The benzene ring", "text": "Kekulé proposes that benzene is a ring of six carbons with alternating bonds.", "why": "Opened aromatic chemistry, the basis of dyes, drugs and much of the industry." },
@@ -56,7 +56,7 @@
   ],
   "quiz": [
     { "id": "oc-001", "q": "Why can carbon build far more different molecules than any other element?", "options": ["It forms four strong bonds and bonds strongly to itself", "It is the most abundant element on Earth", "It forms mostly ionic bonds", "It has the most electrons of the light elements"], "answer": 0, "explain": "Four bonds plus strong C–C bonds let carbon grow chains, rings and branches. Oxygen, not carbon, is the most abundant element in Earth's crust." },
-    { "id": "oc-002", "q": "In 1828 Wöhler made urea, a 'living' molecule, from which mineral salt?", "options": ["Ammonium cyanate", "Sodium chloride", "Calcium carbonate", "Potassium nitrate"], "answer": 0, "explain": "Heating ammonium cyanate rearranges it into urea, the same formula, different structure. It undermined the idea that only life can make organic molecules." },
+    { "id": "oc-002", "q": "In 1828 Wöhler made urea, until then known only from urine, by heating which inorganic salt?", "options": ["Ammonium cyanate", "Sodium chloride", "Calcium carbonate", "Potassium nitrate"], "answer": 0, "explain": "Heating ammonium cyanate rearranges it into urea: same formula (CH₄N₂O), different structure. It showed an organic compound could be made from inorganic starting materials." },
     { "id": "oc-003", "q": "An SN2 reaction happens at a stereocenter. What happens to its configuration?", "options": ["It is inverted", "It is retained", "It becomes a racemic mixture", "It is unaffected"], "answer": 0, "explain": "The nucleophile attacks from the back side, opposite the leaving group, and flips the carbon like an umbrella in the wind (Walden inversion)." },
     { "id": "oc-004", "q": "An SN1 substitution happens at a stereocenter. What do you mainly get?", "options": ["A near-racemic mixture", "Clean inversion", "Clean retention", "No product at all"], "answer": 0, "explain": "SN1 passes through a flat carbocation that can be attacked from either face, so both configurations form." },
     { "id": "oc-005", "q": "Which of these molecules is aromatic?", "options": ["Benzene", "Cyclohexane", "Cyclooctatetraene", "Cyclobutadiene"], "answer": 0, "explain": "Benzene is planar, cyclic, fully conjugated with 6 π electrons (4n+2). Cyclohexane has no π system, cyclooctatetraene folds into a tub, and cyclobutadiene (4 π electrons) is antiaromatic." },
