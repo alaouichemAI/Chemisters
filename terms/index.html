@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Terms of Use — Chemisters</title>
+<meta name="description" content="The terms for using chemisters.com, the Chemisters social media pages, and the Chemisters TikTok integration.">
+<link rel="canonical" href="https://chemisters.com/terms/">
+<meta property="og:title" content="Terms of Use — Chemisters">
+<meta property="og:url" content="https://chemisters.com/terms/">
+<meta property="og:image" content="https://chemisters.com/assets/og-chemisters.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#070b16">
+<link rel="icon" type="image/png" href="../images/Chemisters_logo.png">
+<link rel="apple-touch-icon" href="../images/Chemisters_logo.png">
+<link rel="preload" href="../assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face { font-family: "Unbounded"; src: url("../assets/fonts/unbounded.woff2") format("woff2"); font-weight: 200 900; font-display: swap; }
+@font-face { font-family: "Figtree"; src: url("../assets/fonts/figtree.woff2") format("woff2"); font-weight: 300 900; font-display: swap; }
+@font-face { font-family: "JetBrains Mono"; src: url("../assets/fonts/jetbrains-mono.woff2") format("woff2"); font-weight: 100 800; font-display: swap; }
+:root {
+  --night: #070b16; --night-2: #0c1324; --night-line: #1f2a45; --glow: #e9eefc; --mist: #93a0bf;
+  --paper: #f6f7fb; --white: #ffffff; --ink: #0d1324; --ink-2: #39435c; --muted: #667089; --line: #e1e5ef;
+  --accent: #3b6cf6; --accent-2: #2a55d4; --accent-soft: #e8eefe;
+  --core: #5b8def; --synthetic: #f2994a; --bio: #ef5d8b; --comp: #a78bfa; --community: #f5c451; --materials: #2dd4bf;
+  --display: "Unbounded", "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  --body: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 16.5px/1.7 var(--body); -webkit-font-smoothing: antialiased; }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+p { margin: 0; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; z-index: 210; background: linear-gradient(90deg, var(--core), var(--comp), var(--bio), var(--synthetic), var(--community)); }
+
+.nav { position: sticky; top: 0; z-index: 200; background: rgba(7, 11, 22, .9); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border-bottom: 1px solid var(--night-line); }
+.nav .wrap { display: flex; align-items: center; gap: 18px; height: 68px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; margin-right: auto; color: var(--glow); }
+.brand img { width: 34px; height: 34px; border-radius: 9px; object-fit: cover; }
+.brand span { font-family: var(--display); font-weight: 700; font-size: 17px; }
+.links { display: flex; align-items: center; gap: 2px; list-style: none; margin: 0; padding: 0; }
+.links a { text-decoration: none; color: var(--mist); font-weight: 600; font-size: 15px; padding: 8px 12px; border-radius: 9px; }
+.links a:hover { color: var(--glow); background: rgba(255,255,255,.06); }
+.links .cta { background: var(--accent); color: #fff; margin-left: 6px; }
+.links .cta:hover { background: var(--accent-2); color: #fff; }
+@media (max-width: 760px) { .links li:not(:last-child) { display: none; } .links .cta { font-size: 14px; padding: 8px 12px; } }
+
+.hero { background: radial-gradient(900px 400px at 80% 0%, #15204a 0%, transparent 60%), radial-gradient(700px 360px at 0% 100%, #1a1238 0%, transparent 60%), var(--night); color: var(--glow); padding: 64px 0 56px; position: relative; overflow: hidden; }
+.hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: linear-gradient(90deg, var(--core), var(--comp), var(--bio), var(--synthetic), var(--community)); opacity: .8; }
+.eyebrow { font-family: var(--mono); font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--mist); display: inline-flex; align-items: center; gap: 10px; }
+.eyebrow::before { content: ""; width: 22px; height: 2px; background: currentColor; opacity: .6; }
+.hero h1 { font-family: var(--display); font-weight: 800; font-size: clamp(34px, 5.6vw, 64px); letter-spacing: -.035em; line-height: 1; margin-top: 18px; }
+.hero .sub { color: #b9c3dd; font-size: clamp(16px, 1.5vw, 19px); max-width: 56ch; margin-top: 16px; }
+.updated { display: inline-flex; gap: 8px; margin-top: 22px; font-family: var(--mono); font-size: 12.5px; color: var(--mist); padding: 7px 12px; border: 1px solid var(--night-line); border-radius: 999px; }
+.updated b { color: var(--glow); font-weight: 500; }
+
+.layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 48px; padding-block: 48px 90px; }
+.toc { position: sticky; top: 92px; align-self: start; }
+.toc p { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+.toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; counter-reset: t; }
+.toc li { counter-increment: t; }
+.toc a { display: flex; gap: 10px; padding: 6px 10px; border-radius: 8px; color: var(--ink-2); text-decoration: none; font-size: 14.5px; line-height: 1.4; border-left: 2px solid transparent; }
+.toc a::before { content: counter(t, decimal-leading-zero); font-family: var(--mono); font-size: 11.5px; color: var(--muted); padding-top: 2px; }
+.toc a:hover { background: var(--white); color: var(--ink); }
+.toc a.active { background: var(--white); color: var(--accent); border-left-color: var(--accent); }
+
+.doc { background: var(--white); border: 1px solid var(--line); border-radius: 22px; padding: clamp(24px, 4vw, 52px); min-width: 0; }
+.section-block { padding-bottom: 32px; margin-bottom: 32px; border-bottom: 1px solid var(--line); }
+.section-block:last-of-type { border-bottom: 0; }
+.section-title { font-family: var(--display); font-weight: 700; font-size: clamp(19px, 2vw, 24px); letter-spacing: -.02em; line-height: 1.2; margin-bottom: 14px; display: flex; align-items: center; gap: 12px; }
+.section-title::before { content: ""; width: 10px; height: 10px; border-radius: 3px; flex: none; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+.subsection-title { font-size: 16.5px; font-weight: 700; margin: 18px 0 6px; }
+.section-text { color: var(--ink-2); }
+.section-text + .section-text { margin-top: 12px; }
+.section-text a, .bullet-list a, .note a { color: var(--accent); font-weight: 700; text-decoration: none; }
+.section-text a:hover, .bullet-list a:hover { text-decoration: underline; }
+.bullet-list { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 10px; }
+.bullet-list li { position: relative; padding-left: 26px; color: var(--ink-2); }
+.bullet-list li::before { content: ""; position: absolute; left: 4px; top: .62em; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.bullet-list strong, .section-text strong { color: var(--ink); }
+.table-wrap { overflow-x: auto; margin: 14px 0; border: 1px solid var(--line); border-radius: 14px; }
+.data-table { width: 100%; min-width: 540px; border-collapse: collapse; font-size: 15px; }
+.data-table th, .data-table td { text-align: left; vertical-align: top; padding: 12px 16px; border-bottom: 1px solid var(--line); color: var(--ink-2); }
+.data-table th { background: var(--paper); font-family: var(--mono); font-size: 11.5px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.data-table tr:last-child td { border-bottom: 0; }
+.data-table code { font-family: var(--mono); font-size: 13px; color: var(--accent-2); background: var(--accent-soft); padding: 2px 7px; border-radius: 6px; }
+.copy-btn { margin-left: 6px; padding: 3px 10px; font: 600 12.5px var(--body); border-radius: 7px; border: 1px solid var(--line); background: var(--paper); color: var(--ink-2); cursor: pointer; }
+.copy-btn:hover { border-color: var(--accent); color: var(--accent); }
+.highlight-box { margin-top: 8px; padding: 22px 24px; border-radius: 18px; background: var(--night); color: #cfd8f2; position: relative; overflow: hidden; }
+.highlight-box::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: linear-gradient(90deg, var(--core), var(--comp), var(--bio), var(--synthetic)); }
+.highlight-box strong { color: #fff; }
+.highlight-box a { color: #fff; font-weight: 700; }
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; gap: 24px; padding-top: 28px; }
+  .toc { position: static; background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+  .toc ol { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px) { .toc ol { grid-template-columns: 1fr; } }
+
+footer { background: var(--night); color: #aab5d1; padding: 56px 0 30px; }
+.foot { display: grid; grid-template-columns: 1.5fr repeat(3, minmax(0, 1fr)); gap: 32px; }
+.foot p { margin-top: 14px; max-width: 34ch; font-size: 15px; }
+.foot h4 { margin: 0 0 14px; font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--mist); }
+.foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
+.foot a { color: #cfd8f2; text-decoration: none; }
+.foot a:hover { color: #fff; }
+.foot a[aria-current] { color: #fff; }
+.foot-bottom { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--night-line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font-size: 14px; color: var(--mist); }
+@media (max-width: 800px) { .foot { grid-template-columns: 1fr 1fr; } .foot > div:first-child { grid-column: 1 / -1; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="../" aria-label="Chemisters home"><img src="../images/Chemisters_logo.png" alt=""><span>Chemisters</span></a>
+    <ul class="links">
+      <li><a href="../#table">The Table</a></li>
+      <li><a href="../#about">About</a></li>
+      <li><a href="../#contact">Contact</a></li>
+      <li><a class="cta" href="../publish/">Feature Your Research</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Legal</p>
+    <h1>Terms of Use</h1>
+    <p class="sub">Please read these terms carefully before using Chemisters.</p>
+    <p class="updated">Last updated <b>October 26, 2026</b></p>
+  </div>
+</header>
+
+<main class="wrap layout">
+  <aside class="toc" aria-label="On this page">
+    <p>On this page</p>
+    <ol>
+          <li><a href="#about-terms">About These Terms</a></li>
+          <li><a href="#service">What Chemisters Is</a></li>
+          <li><a href="#accuracy">Accuracy and Sources</a></li>
+          <li><a href="#ours">Our Content</a></li>
+          <li><a href="#others">Other People's Work</a></li>
+          <li><a href="#featured">Featured Research</a></li>
+          <li><a href="#corrections">Corrections and Removal</a></li>
+          <li><a href="#conduct">Acceptable Use</a></li>
+          <li><a href="#tiktok">TikTok Integration</a></li>
+          <li><a href="#platforms">Third-Party Platforms and Links</a></li>
+          <li><a href="#liability">Disclaimer and Liability</a></li>
+          <li><a href="#law">Governing Law</a></li>
+          <li><a href="#changes">Changes to These Terms</a></li>
+          <li><a href="#contact">Contact Information</a></li>
+    </ol>
+  </aside>
+  <article class="doc">
+
+                <div class="section-block" id="about-terms">
+                    <h2 class="section-title">About These Terms</h2>
+                    <p class="section-text">Chemisters is operated by Mohamed El Belghiti Alaoui, Rabat, Morocco ("Chemisters", "we"). By using chemisters.com or interacting with our pages, you agree to these Terms of Use. Our <a href="../privacy/">Privacy Policy</a> explains how we handle personal data.</p>
+                </div>
+                <div class="section-block" id="service">
+                    <h2 class="section-title">What Chemisters Is</h2>
+                    <p class="section-text">Chemisters publishes chemistry content on a network of social media pages, one per field, and on this website. This includes summaries of scientific articles, news, innovations, and posts in which researchers present their own published work.</p>
+                    <p class="section-text">All content is provided for information and education. It is not professional, medical, safety, or legal advice. Never use it as the only basis for laboratory work, clinical decisions, or investments.</p>
+                </div>
+                <div class="section-block" id="accuracy">
+                    <h2 class="section-title">Accuracy and Sources</h2>
+                    <p class="section-text">Many of our summaries and news posts are prepared with automated tools. Each one links to its original source, and the source is the reference: if a summary and the original article disagree, the article is right.</p>
+                    <p class="section-text">We work to keep our content accurate, but we cannot guarantee that it is complete, current, or free of errors. Check the original source before relying on any information.</p>
+                </div>
+                <div class="section-block" id="ours">
+                    <h2 class="section-title">Our Content</h2>
+                    <p class="section-text">The Chemisters name and logos, the design of this website, and the texts we write ourselves belong to Chemisters.</p>
+                    <h3 class="subsection-title">What you may do</h3>
+                    <ul class="bullet-list">
+                        <li>Share links to our posts and pages freely.</li>
+                        <li>Quote short excerpts, with a clear credit to Chemisters.</li>
+                    </ul>
+                    <h3 class="subsection-title">What you may not do</h3>
+                    <ul class="bullet-list">
+                        <li>Republish our posts as your own.</li>
+                        <li>Copy our pages or content in bulk, including with automated tools.</li>
+                        <li>Suggest that Chemisters endorses you or your organization without our permission.</li>
+                    </ul>
+                </div>
+                <div class="section-block" id="others">
+                    <h2 class="section-title">Other People's Work</h2>
+                    <p class="section-text">The articles, figures, and research we write about belong to their authors and publishers. We link to the original work and credit it, and we only reuse an image when its license allows it or its owner has given us permission.</p>
+                    <p class="section-text">If you own the rights to something we published and object to its use, contact us and we will review it promptly.</p>
+                </div>
+                <div class="section-block" id="featured">
+                    <h2 class="section-title">Featured Research</h2>
+                    <p class="section-text">Researchers can ask us to feature their published work by following the requirements on our <a href="../publish/">Feature Your Research</a> page. When you send us a submission:</p>
+                    <ul class="bullet-list">
+                        <li>You confirm that you are an author of the article, that your co-authors agree to it being featured and to being tagged, and that you have the right to share every image you send.</li>
+                        <li>You keep all rights to your text and images. You give Chemisters a free, non-exclusive permission to publish them on our pages and on this website, and to keep them online until you ask us to remove them.</li>
+                        <li>We publish your text exactly as you send it. We do not edit it.</li>
+                        <li>Featured posts express their authors' views, not those of Chemisters.</li>
+                        <li>We may decline a submission, for example when it does not meet the requirements or does not fit any of our pages.</li>
+                    </ul>
+                </div>
+                <div class="section-block" id="corrections">
+                    <h2 class="section-title">Corrections and Removal</h2>
+                    <p class="section-text">If you find an error in one of our posts, or want content about your work corrected or removed, email <strong>contact@chemisters.com <button type="button" class="copy-btn" data-copy="contact@chemisters.com">Copy</button></strong> with the link to the post and what should change. We review every request and act on valid ones as quickly as we can.</p>
+                </div>
+                <div class="section-block" id="conduct">
+                    <h2 class="section-title">Acceptable Use</h2>
+                    <p class="section-text">When you use our website or comment on and message our pages, you agree not to:</p>
+                    <ul class="bullet-list">
+                        <li>Break the law or infringe other people's rights</li>
+                        <li>Harass, threaten, or insult others</li>
+                        <li>Post spam, malware, or misleading links</li>
+                        <li>Impersonate another person or organization</li>
+                        <li>Try to disrupt the website or gain unauthorized access to it or to our accounts</li>
+                    </ul>
+                    <p class="section-text">We may remove comments and block accounts that break these rules on our pages.</p>
+                </div>
+                <div class="section-block" id="tiktok">
+                    <h2 class="section-title">TikTok Integration</h2>
+                    <p class="section-text">Chemisters operates a TikTok application that publishes videos produced by Chemisters to TikTok accounts owned by Chemisters. It is not a service offered to other users. Our use of TikTok follows TikTok's Terms of Service and Developer Terms, and the data it accesses is described in our <a href="../privacy/#tiktok">Privacy Policy</a>.</p>
+                </div>
+                <div class="section-block" id="platforms">
+                    <h2 class="section-title">Third-Party Platforms and Links</h2>
+                    <p class="section-text">Our pages live on third-party social media platforms, and our posts link to journals and other websites. When you use those services, their own terms and privacy policies apply. We are not responsible for their content, availability, or practices.</p>
+                </div>
+                <div class="section-block" id="liability">
+                    <h2 class="section-title">Disclaimer and Liability</h2>
+                    <p class="section-text">Chemisters is provided "as is" and free of charge, without warranties of any kind. To the extent permitted by law, we are not liable for any loss or damage arising from the use of our content, from errors in it, or from the website being unavailable.</p>
+                    <p class="section-text">Nothing in these terms limits any liability that cannot be limited under applicable law.</p>
+                </div>
+                <div class="section-block" id="law">
+                    <h2 class="section-title">Governing Law</h2>
+                    <p class="section-text">These Terms of Use are governed by the laws of the Kingdom of Morocco. Before going to court, we ask you to contact us so we can try to settle any disagreement amicably. Failing that, disputes fall under the jurisdiction of the competent courts of Rabat, unless a mandatory rule of law gives you the right to go to the courts where you live.</p>
+                </div>
+                <div class="section-block" id="changes">
+                    <h2 class="section-title">Changes to These Terms</h2>
+                    <p class="section-text">We may update these terms. When we do, we change the date at the top of this page, and the new version applies from that date.</p>
+                </div>
+                <div class="section-block" id="contact">
+                    <h2 class="section-title">Contact Information</h2>
+                    <p class="section-text">Questions about these terms: <strong>contact@chemisters.com <button type="button" class="copy-btn" data-copy="contact@chemisters.com">Copy</button></strong></p>
+                </div>
+
+                <div class="highlight-box">
+                    <p><strong>Important notice:</strong> by using Chemisters, you acknowledge that you have read and understood these Terms of Use. They protect both you and Chemisters, and keep our pages a safe and respectful place for everyone.</p>
+                </div>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="../"><img src="../images/Chemisters_logo.png" alt=""><span>Chemisters</span></a>
+        <p>The digital ecosystem of chemistry, where academic rigor meets modern communication. Chemistry evolves. Chemisters documents it.</p>
+      </div>
+      <div><h4>Explore</h4><ul><li><a href="../#table">The Table</a></li><li><a href="../#find">What You'll Find</a></li><li><a href="../publish/">Feature Your Research</a></li></ul></div>
+      <div><h4>Chemisters</h4><ul><li><a href="../#about">About</a></li><li><a href="../#contact">Contact</a></li><li><a href="mailto:contact@chemisters.com">Email</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="../privacy/">Privacy Policy</a></li><li><a href="../terms/">Terms of Use</a></li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>© <span id="year">2026</span> Chemisters. All rights reserved.</span><span>Rabat, Morocco</span></div>
+  </div>
+</footer>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.querySelectorAll(".foot a").forEach(a => { if (a.getAttribute("href") === "../terms/") a.setAttribute("aria-current", "page"); });
+  document.querySelectorAll("[data-copy]").forEach(b => b.addEventListener("click", async () => {
+    try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent = "Copied"; } catch (e) { b.textContent = b.dataset.copy; }
+    setTimeout(() => b.textContent = "Copy", 1800);
+  }));
+  const prog = document.getElementById("progress");
+  addEventListener("scroll", () => { const h = document.documentElement.scrollHeight - innerHeight; prog.style.width = (h > 0 ? scrollY / h * 100 : 0) + "%"; }, { passive: true });
+  const tocLinks = [...document.querySelectorAll(".toc a")];
+  const obs = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) tocLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + e.target.id));
+  }), { rootMargin: "-30% 0px -60% 0px" });
+  document.querySelectorAll(".section-block[id]").forEach(s => obs.observe(s));
+</script>
+</body>
+</html>

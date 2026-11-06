@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Feature Your Research — Chemisters</title>
+<meta name="description" content="Researchers: have your peer-reviewed work featured, in your own words, on the Chemisters page that matches your field. Requirements, a post checker, and how to submit.">
+<link rel="canonical" href="https://chemisters.com/publish/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Feature your research on Chemisters">
+<meta property="og:description" content="Your peer-reviewed work, in your own words, in front of the people who follow your field.">
+<meta property="og:url" content="https://chemisters.com/publish/">
+<meta property="og:image" content="https://chemisters.com/assets/og-chemisters.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#070b16">
+<link rel="icon" type="image/png" href="../images/Chemisters_logo.png">
+<link rel="apple-touch-icon" href="../images/Chemisters_logo.png">
+<link rel="preload" href="../assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face { font-family: "Unbounded"; src: url("../assets/fonts/unbounded.woff2") format("woff2"); font-weight: 200 900; font-display: swap; }
+@font-face { font-family: "Figtree"; src: url("../assets/fonts/figtree.woff2") format("woff2"); font-weight: 300 900; font-display: swap; }
+@font-face { font-family: "JetBrains Mono"; src: url("../assets/fonts/jetbrains-mono.woff2") format("woff2"); font-weight: 100 800; font-display: swap; }
+:root {
+  --night: #070b16; --night-2: #0c1324; --night-line: #1f2a45; --glow: #e9eefc; --mist: #93a0bf;
+  --paper: #f6f7fb; --white: #ffffff; --ink: #0d1324; --ink-2: #39435c; --muted: #667089; --line: #e1e5ef;
+  --accent: #3b6cf6; --accent-2: #2a55d4; --accent-soft: #e8eefe;
+  --core: #5b8def; --synthetic: #f2994a; --bio: #ef5d8b; --comp: #a78bfa; --community: #f5c451; --materials: #2dd4bf;
+  --display: "Unbounded", "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  --body: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 16.5px/1.7 var(--body); -webkit-font-smoothing: antialiased; }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+p { margin: 0; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; z-index: 210; background: linear-gradient(90deg, var(--core), var(--comp), var(--bio), var(--synthetic), var(--community)); }
+
+.nav { position: sticky; top: 0; z-index: 200; background: rgba(7, 11, 22, .9); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border-bottom: 1px solid var(--night-line); }
+.nav .wrap { display: flex; align-items: center; gap: 18px; height: 68px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; margin-right: auto; color: var(--glow); }
+.brand img { width: 34px; height: 34px; border-radius: 9px; object-fit: cover; }
+.brand span { font-family: var(--display); font-weight: 700; font-size: 17px; }
+.links { display: flex; align-items: center; gap: 2px; list-style: none; margin: 0; padding: 0; }
+.links a { text-decoration: none; color: var(--mist); font-weight: 600; font-size: 15px; padding: 8px 12px; border-radius: 9px; }
+.links a:hover { color: var(--glow); background: rgba(255,255,255,.06); }
+.links .cta { background: var(--accent); color: #fff; margin-left: 6px; }
+.links .cta:hover { background: var(--accent-2); color: #fff; }
+@media (max-width: 760px) { .links li:not(:last-child) { display: none; } .links .cta { font-size: 14px; padding: 8px 12px; } }
+
+.hero { background: radial-gradient(900px 400px at 80% 0%, #15204a 0%, transparent 60%), radial-gradient(700px 360px at 0% 100%, #1a1238 0%, transparent 60%), var(--night); color: var(--glow); padding: 64px 0 56px; position: relative; overflow: hidden; }
+.hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: linear-gradient(90deg, var(--core), var(--comp), var(--bio), var(--synthetic), var(--community)); opacity: .8; }
+.eyebrow { font-family: var(--mono); font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--mist); display: inline-flex; align-items: center; gap: 10px; }
+.eyebrow::before { content: ""; width: 22px; height: 2px; background: currentColor; opacity: .6; }
+.hero h1 { font-family: var(--display); font-weight: 800; font-size: clamp(34px, 5.6vw, 64px); letter-spacing: -.035em; line-height: 1; margin-top: 18px; }
+.hero .sub { color: #b9c3dd; font-size: clamp(16px, 1.5vw, 19px); max-width: 56ch; margin-top: 16px; }
+.updated { display: inline-flex; gap: 8px; margin-top: 22px; font-family: var(--mono); font-size: 12.5px; color: var(--mist); padding: 7px 12px; border: 1px solid var(--night-line); border-radius: 999px; }
+.updated b { color: var(--glow); font-weight: 500; }
+
+.layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 48px; padding-block: 48px 90px; }
+.toc { position: sticky; top: 92px; align-self: start; }
+.toc p { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+.toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; counter-reset: t; }
+.toc li { counter-increment: t; }
+.toc a { display: flex; gap: 10px; padding: 6px 10px; border-radius: 8px; color: var(--ink-2); text-decoration: none; font-size: 14.5px; line-height: 1.4; border-left: 2px solid transparent; }
+.toc a::before { content: counter(t, decimal-leading-zero); font-family: var(--mono); font-size: 11.5px; color: var(--muted); padding-top: 2px; }
+.toc a:hover { background: var(--white); color: var(--ink); }
+.toc a.active { background: var(--white); color: var(--accent); border-left-color: var(--accent); }
+
+.doc { background: var(--white); border: 1px solid var(--line); border-radius: 22px; padding: clamp(24px, 4vw, 52px); min-width: 0; }
+.section-block { padding-bottom: 32px; margin-bottom: 32px; border-bottom: 1px solid var(--line); }
+.section-block:last-of-type { border-bottom: 0; }
+.section-title { font-family: var(--display); font-weight: 700; font-size: clamp(19px, 2vw, 24px); letter-spacing: -.02em; line-height: 1.2; margin-bottom: 14px; display: flex; align-items: center; gap: 12px; }
+.section-title::before { content: ""; width: 10px; height: 10px; border-radius: 3px; flex: none; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+.subsection-title { font-size: 16.5px; font-weight: 700; margin: 18px 0 6px; }
+.section-text { color: var(--ink-2); }
+.section-text + .section-text { margin-top: 12px; }
+.section-text a, .bullet-list a, .note a { color: var(--accent); font-weight: 700; text-decoration: none; }
+.section-text a:hover, .bullet-list a:hover { text-decoration: underline; }
+.bullet-list { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 10px; }
+.bullet-list li { position: relative; padding-left: 26px; color: var(--ink-2); }
+.bullet-list li::before { content: ""; position: absolute; left: 4px; top: .62em; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.bullet-list strong, .section-text strong { color: var(--ink); }
+.table-wrap { overflow-x: auto; margin: 14px 0; border: 1px solid var(--line); border-radius: 14px; }
+.data-table { width: 100%; min-width: 540px; border-collapse: collapse; font-size: 15px; }
+.data-table th, .data-table td { text-align: left; vertical-align: top; padding: 12px 16px; border-bottom: 1px solid var(--line); color: var(--ink-2); }
+.data-table th { background: var(--paper); font-family: var(--mono); font-size: 11.5px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.data-table tr:last-child td { border-bottom: 0; }
+.data-table code { font-family: var(--mono); font-size: 13px; color: var(--accent-2); background: var(--accent-soft); padding: 2px 7px; border-radius: 6px; }
+.copy-btn { margin-left: 6px; padding: 3px 10px; font: 600 12.5px var(--body); border-radius: 7px; border: 1px solid var(--line); background: var(--paper); color: var(--ink-2); cursor: pointer; }
+.copy-btn:hover { border-color: var(--accent); color: var(--accent); }
+.highlight-box { margin-top: 8px; padding: 22px 24px; border-radius: 18px; background: var(--night); color: #cfd8f2; position: relative; overflow: hidden; }
+.highlight-box::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: linear-gradient(90deg, var(--core), var(--comp), var(--bio), var(--synthetic)); }
+.highlight-box strong { color: #fff; }
+.highlight-box a { color: #fff; font-weight: 700; }
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; gap: 24px; padding-top: 28px; }
+  .toc { position: static; background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+  .toc ol { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px) { .toc ol { grid-template-columns: 1fr; } }
+
+footer { background: var(--night); color: #aab5d1; padding: 56px 0 30px; }
+.foot { display: grid; grid-template-columns: 1.5fr repeat(3, minmax(0, 1fr)); gap: 32px; }
+.foot p { margin-top: 14px; max-width: 34ch; font-size: 15px; }
+.foot h4 { margin: 0 0 14px; font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--mist); }
+.foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
+.foot a { color: #cfd8f2; text-decoration: none; }
+.foot a:hover { color: #fff; }
+.foot a[aria-current] { color: #fff; }
+.foot-bottom { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--night-line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font-size: 14px; color: var(--mist); }
+@media (max-width: 800px) { .foot { grid-template-columns: 1fr 1fr; } .foot > div:first-child { grid-column: 1 / -1; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+.hero .sub { max-width: 60ch; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; text-decoration: none; cursor: pointer; font: 700 15.5px var(--body); padding: 13px 20px; border-radius: 12px; border: 1px solid transparent; transition: transform .18s ease, background .18s ease, box-shadow .18s ease, border-color .18s ease; }
+.btn:hover { transform: translateY(-2px); }
+.btn-glow { background: var(--glow); color: var(--night); box-shadow: 0 10px 40px -10px rgba(140, 170, 255, .55); }
+.btn-ghost-dark { color: var(--glow); border-color: #2c3a5f; background: rgba(255,255,255,.03); }
+.btn-ghost-dark:hover { border-color: #5a6c99; }
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-2); }
+.pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.pills span { font-family: var(--mono); font-size: 12.5px; color: #cfd8f2; padding: 7px 12px; border-radius: 999px; border: 1px solid var(--night-line); background: rgba(255,255,255,.03); }
+.pills b { color: #fff; font-weight: 500; }
+
+.promise { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 4px; }
+.promise div { padding: 18px; border-radius: 16px; background: var(--paper); border: 1px solid var(--line); }
+.promise b { display: block; margin-bottom: 4px; }
+.promise span { color: var(--ink-2); font-size: 15px; }
+@media (max-width: 640px) { .promise { grid-template-columns: 1fr; } }
+
+.tag { display: inline-block; font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; padding: 5px 11px; border-radius: 999px; }
+.tag.req { background: #fde9e1; color: #a8461c; }
+.tag.rec { background: var(--accent-soft); color: var(--accent-2); }
+.warn { margin-top: 12px; padding: 14px 18px; border-radius: 14px; background: #fff4ee; border: 1px solid #f6d3c1; color: #5c2a14; }
+.group { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 28px 0 12px; }
+.rules { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.rule { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 14px; padding: 18px; border-radius: 16px; border: 1px solid var(--line); background: var(--white); transition: border-color .2s, box-shadow .2s; }
+.rule:hover { border-color: #cdd6ef; box-shadow: 0 14px 30px -24px rgba(13, 19, 36, .5); }
+.rule .n { width: 36px; height: 38px; border-radius: 9px; display: grid; place-items: center; font-family: var(--display); font-weight: 700; font-size: 14px; }
+.rule.req .n { background: #fde9e1; color: #a8461c; }
+.rule.rec .n { background: var(--accent-soft); color: var(--accent-2); }
+.rule h3 { font-family: var(--body); font-weight: 700; font-size: 17px; line-height: 1.3; margin-bottom: 4px; }
+.rule p { color: var(--ink-2); }
+.rule p + p { margin-top: 6px; }
+.ex { margin-top: 10px; display: grid; gap: 6px; padding: 12px 14px; border-radius: 12px; background: var(--paper); border: 1px dashed var(--line); }
+.ex-row { display: grid; grid-template-columns: 60px minmax(0, 1fr); gap: 8px; font-size: 15px; }
+.ex-row b { font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; padding-top: 3px; }
+.ex-row b.good { color: #0f7a55; }
+.ex-row b.bad { color: #b4471f; }
+
+.steps { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 0; counter-reset: s; }
+.steps li { counter-increment: s; position: relative; display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 14px; padding-bottom: 18px; color: var(--ink-2); }
+.steps li::before { content: counter(s); width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--night); color: #fff; font-family: var(--display); font-weight: 700; font-size: 13px; position: relative; z-index: 1; }
+.steps li::after { content: ""; position: absolute; left: 16.5px; top: 34px; bottom: 0; width: 1px; background: var(--line); }
+.steps li:last-child::after { display: none; }
+.steps li span { padding-top: 5px; }
+.steps a { color: var(--accent); font-weight: 700; text-decoration: none; }
+
+.checker { display: grid; gap: 14px; }
+.checker textarea { width: 100%; min-height: 220px; resize: vertical; font: 15.5px/1.6 var(--body); color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; outline: none; }
+.checker textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+.meter { height: 10px; border-radius: 6px; background: var(--paper); border: 1px solid var(--line); position: relative; overflow: hidden; }
+.meter .zone { position: absolute; top: 0; bottom: 0; left: 40%; width: 20%; background: #d8f3e7; }
+.meter .fill { position: absolute; top: 0; bottom: 0; left: 0; width: 0; background: var(--accent); border-radius: 6px; transition: width .2s ease, background .2s ease; opacity: .85; }
+.meter-legend { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 11.5px; color: var(--muted); }
+.checks { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.checks li { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 8px; padding: 10px 12px; border-radius: 12px; background: var(--paper); font-size: 14.5px; color: var(--ink-2); }
+.checks li::before { content: "–"; width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; font-size: 12px; font-weight: 700; background: var(--line); color: var(--muted); }
+.checks li.ok::before { content: "✓"; background: #d8f3e7; color: #0f7a55; }
+.checks li.bad::before { content: "!"; background: #fde9e1; color: #a8461c; }
+.checks b { color: var(--ink); font-weight: 700; }
+.hook { padding: 14px 16px; border-radius: 14px; border: 1px solid var(--line); background: var(--white); font-size: 15px; color: var(--ink-2); white-space: pre-line; }
+.hook small { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.hook em { font-style: normal; color: var(--muted); }
+.private { font-size: 13.5px; color: var(--muted); }
+@media (max-width: 640px) { .checks { grid-template-columns: 1fr; } }
+
+.checklist { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 18px; }
+.checklist label { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; padding: 9px 4px; border-bottom: 1px solid var(--line); cursor: pointer; color: var(--ink-2); font-size: 15px; }
+.checklist input { width: 18px; height: 18px; margin: 2px 0 0; accent-color: var(--accent); }
+.checklist input:checked + span { color: var(--muted); text-decoration: line-through; }
+.cl-bar { margin-top: 16px; display: flex; align-items: center; gap: 12px; }
+.cl-bar .meter { flex: 1; }
+.cl-bar span { font-family: var(--mono); font-size: 13px; color: var(--muted); white-space: nowrap; }
+@media (max-width: 640px) { .checklist { grid-template-columns: 1fr; } }
+
+.cta-box { margin-top: 18px; padding: 24px; border-radius: 18px; background: var(--night); color: #cfd8f2; display: grid; gap: 14px; position: relative; overflow: hidden; }
+.cta-box::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: linear-gradient(90deg, var(--core), var(--comp), var(--bio), var(--synthetic)); }
+.cta-box .btn { justify-self: start; }
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="../" aria-label="Chemisters home"><img src="../images/Chemisters_logo.png" alt=""><span>Chemisters</span></a>
+    <ul class="links">
+      <li><a href="../#table">The Table</a></li>
+      <li><a href="../#about">About</a></li>
+      <li><a href="../#contact">Contact</a></li>
+      <li><a class="cta" href="#submit">How to Submit</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">For researchers</p>
+    <h1>Feature your research</h1>
+    <p class="sub">We feature researchers' published work across our chemistry pages, in their own words. Every featured post must meet the 20 requirements below. They exist for one reason: to give your work the widest possible reach.</p>
+    <div class="pills"><span><b>Your words</b>, never edited</span><span><b>You and your co-authors</b> tagged</span><span><b>Matched</b> to the right page</span></div>
+    <div class="hero-ctas">
+      <a class="btn btn-glow" href="#requirements">See the requirements</a>
+      <a class="btn btn-ghost-dark" href="#checker">Check your post</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap layout">
+  <aside class="toc" aria-label="On this page">
+    <p>On this page</p>
+    <ol>
+      <li><a href="#for-you">What we do for you</a></li>
+      <li><a href="#requirements">Requirements</a></li>
+      <li><a href="#recommended">Recommended</a></li>
+      <li><a href="#checker">Post checker</a></li>
+      <li><a href="#submit">How to submit</a></li>
+      <li><a href="#checklist">Checklist</a></li>
+      <li><a href="#good-to-know">Good to know</a></li>
+    </ol>
+  </aside>
+  <article class="doc">
+    <div class="section-block" id="for-you">
+      <h2 class="section-title">What we do for you</h2>
+      <div class="promise">
+        <div><b>Your own voice</b><span>We publish your post as you wrote it. We don't rewrite your text.</span></div>
+        <div><b>You and your co-authors tagged</b><span>So readers can find your profiles, and the post reaches each of your networks.</span></div>
+        <div><b>Your post in the first comment</b><span>Links in the body of a post reduce its reach, so the link to your own LinkedIn post goes in the first comment.</span></div>
+        <div><b>Exactly as you send it</b><span>We never edit, add or delete anything. If changes are needed, we send you feedback and you make them yourself (requirement 20).</span></div>
+      </div>
+    </div>
+
+    <div class="section-block" id="requirements">
+      <h2 class="section-title">Requirements</h2>
+      <span class="tag req">All 20 are mandatory</span>
+      <p class="warn">We can't publish a post that is missing any of these items. If something is missing, we'll ask you for it before publishing.</p>
+      <p class="group">The content</p><ol class="rules"><li class="rule req"><span class="n">1</span><div><h3>Published, peer-reviewed work</h3><p>The article must already be published in a peer-reviewed journal. Preprints, theses and work under review are not accepted.</p><p>Include all three: the full article title, the journal name, and the DOI link (https://doi.org/…).</p></div></li><li class="rule req"><span class="n">2</span><div><h3>A hook in the first two lines</h3><p>LinkedIn shows only about two lines (around 200 characters) before “…see more”. Those lines decide whether anyone keeps reading.</p><p>Open with the problem your work solves or your most striking result. Don't open with “I'm pleased to share…”.</p><div class="ex"><span class="ex-row"><b class="good">Good</b>“Steel coatings fail the moment they're scratched. What if the coating could repair the damage itself?”</span></div></div></li><li class="rule req"><span class="n">3</span><div><h3>Why it matters, in plain language</h3><p>One sentence explaining why the work matters, written so that a chemist outside your specialty, or a student, understands it.</p><p>Define every abbreviation the first time you use it, e.g. “metal–organic frameworks (MOFs)”.</p></div></li><li class="rule req"><span class="n">4</span><div><h3>3–5 key results, with numbers</h3><p>Present them as short bullet points. At least three of them must include a concrete number: a yield, an efficiency, a selectivity, a stability time, an energy, a comparison with a reference.</p></div></li><li class="rule req"><span class="n">5</span><div><h3>Results, not methods</h3><p>Each highlight must say what you found, not only which technique you used.</p><div class="ex"><span class="ex-row"><b class="bad">Avoid</b>“EIS was used to evaluate the coatings.”</span><span class="ex-row"><b class="good">Good</b>“The coating kept 96.9% protection efficiency after 7 days in salt water.”</span></div></div></li><li class="rule req"><span class="n">6</span><div><h3>The mechanism: how it works</h3><p>One or two sentences explaining how or why your result happens: the key interaction, step or design idea. Readers remember the “how” far better than the “what”.</p></div></li><li class="rule req"><span class="n">7</span><div><h3>Why it matters for the page's field</h3><p>A short paragraph (2–4 sentences) linking your work to the topic of the page where it will appear, e.g. catalysis, electrochemistry or medicinal chemistry.</p><p>If the link to that field is weak, we'll suggest a better-matching Chemisters page instead.</p></div></li><li class="rule req"><span class="n">8</span><div><h3>A short outlook</h3><p>At most two sentences on what comes next: future work, open questions or applications. Longer outlooks lose readers.</p></div></li><li class="rule req"><span class="n">9</span><div><h3>A closing question to the audience</h3><p>End with a specific question that invites comments. Comments are what spread a post further.</p><div class="ex"><span class="ex-row"><b class="bad">Avoid</b>“What do you think?”</span><span class="ex-row"><b class="good">Good</b>“Which matters more for the next generation of coatings: self-healing or thermal stability?”</span></div></div></li><li class="rule req"><span class="n">10</span><div><h3>Target length: about 1,200–1,800 characters</h3><p>This is the length that performs best. Use short paragraphs of 1–3 lines with a blank line between them, so the post reads well on a phone.</p></div></li><li class="rule req"><span class="n">11</span><div><h3>Hard limit: never more than 3,000 characters</h3><p>LinkedIn refuses any post longer than 3,000 characters. Everything counts: spaces, line breaks, emojis, bullet symbols, the article title, the DOI link, author names and hashtags.</p><p>Check the total before sending, for example with the post checker on this page. Posts over the limit are sent back to you to shorten.</p></div></li><li class="rule req"><span class="n">12</span><div><h3>Every point appears only once</h3><p>No repeated bullets, results or paragraphs. Each result is stated in one place, and the outlook appears in one section only. Repetition wastes characters and readers notice it.</p><div class="ex"><span class="ex-row"><b class="bad">Avoid</b>Two bullets both saying “97.6% efficiency after 24 h”</span><span class="ex-row"><b class="bad">Avoid</b>A “Future work” paragraph and a “What comes next?” section saying the same thing</span></div></div></li><li class="rule req"><span class="n">13</span><div><h3>Accurate to the article</h3><p>Every number, claim and name must match the published article exactly. As the author, you're responsible for the accuracy of the content. Don't announce results that aren't in the paper.</p></div></li></ol><p class="group">What to send with it</p><ol class="rules"><li class="rule req"><span class="n">14</span><div><h3>One image</h3><p>Your graphical abstract or a key figure from the article. Posts with an image reach a much wider audience.</p><p>Send it as a PNG or JPG file, at least 1,200 pixels wide, with text large enough to read on a phone. You must have the right to share it: your own figure, or an open-access figure credited to the article.</p></div></li><li class="rule req"><span class="n">15</span><div><h3>3–6 relevant hashtags</h3><p>Include the field of the page (e.g. #Catalysis) and your key material or method (e.g. #MOFs, #DFT). Avoid generic tags like #Research or #Science only, and don't exceed six.</p></div></li><li class="rule req"><span class="n">16</span><div><h3>Your name exactly as it appears on LinkedIn</h3><p>Plus the link to your LinkedIn profile, so we tag the right person.</p></div></li><li class="rule req"><span class="n">17</span><div><h3>Your co-authors' names</h3><p>Their full names and, if they're on LinkedIn, their profile links. We tag them too, so the post reaches each of their networks.</p></div></li><li class="rule req"><span class="n">18</span><div><h3>The link to your own LinkedIn post about the article</h3><p>We place it in the first comment under the featured post, so readers can find your original post and your profile. Copy the link directly from LinkedIn (“Copy link to post”) rather than retyping it.</p></div></li><li class="rule req"><span class="n">19</span><div><h3>Clean, final, plain text</h3><p>Proofread the text and remove leftover headings, empty bullet points, comments and notes from editing.</p><p>Send it as plain text in the message, not only as a Word file. Bold, italics and other Word formatting are lost on LinkedIn. Typing “@Name” as text doesn't tag anyone, because we add the tags ourselves when publishing.</p></div></li></ol><p class="group">Revisions</p><ol class="rules"><li class="rule req"><span class="n">20</span><div><h3>You apply all feedback yourself</h3><p>The Chemisters team never modifies your text: we don't edit, add, delete or shorten anything, not even a single word or a duplicated line. What you send is exactly what gets published.</p><p>When your post doesn't meet a requirement, we send you feedback. You revise the post yourself and send back the <strong>complete corrected version</strong>, not only the changed parts.</p><p>A post is published only once all feedback on the required items has been applied. Each new version is checked again against all 20 requirements.</p></div></li></ol>
+    </div>
+
+    <div class="section-block" id="recommended">
+      <h2 class="section-title">Recommended</h2>
+      <span class="tag rec">Optional extras that boost reach</span>
+      <div style="margin-top:14px"><ol class="rules"><li class="rule rec"><span class="n">1</span><div><h3>Be active in the first hour</h3><p>Like, comment on and reshare the post from your own profile soon after it's published, and reply to comments. Early engagement is what pushes a post to more feeds.</p></div></li><li class="rule rec"><span class="n">2</span><div><h3>Your institution and lab</h3><p>Tell us your university, institute or lab and their LinkedIn pages, so we can tag them and reach their followers.</p></div></li><li class="rule rec"><span class="n">3</span><div><h3>The human story</h3><p>One sentence on what surprised you or what motivated the work. Readers connect with people, not only with data.</p></div></li><li class="rule rec"><span class="n">4</span><div><h3>Open access</h3><p>If the article is free to read, say so (“open access”). Readers click far more on articles they can read without a subscription.</p></div></li><li class="rule rec"><span class="n">5</span><div><h3>A second visual</h3><p>A second figure, or a short video of 15–60 seconds explaining your work, makes the post stand out even more.</p></div></li><li class="rule rec"><span class="n">6</span><div><h3>Contact details</h3><p>Your email, if you'd like readers or potential collaborators to contact you directly.</p></div></li><li class="rule rec"><span class="n">7</span><div><h3>Image description</h3><p>One sentence describing your image (alt text), so readers using screen readers can follow it too.</p></div></li><li class="rule rec"><span class="n">8</span><div><h3>Other suitable pages</h3><p>If your work spans several fields, tell us which other Chemisters pages it could fit, with one line on why for each.</p></div></li></ol></div>
+    </div>
+
+    <div class="section-block" id="checker">
+      <h2 class="section-title">Post checker</h2>
+      <p class="section-text">Paste your post to check its length, its hook and its hashtags before you send it. Everything happens in your browser: nothing is saved or sent.</p>
+      <div class="checker" style="margin-top:14px">
+        <textarea id="post" placeholder="Paste your post here…" aria-label="Your post text"></textarea>
+        <div>
+          <div class="meter" aria-hidden="true"><span class="zone"></span><span class="fill" id="fill"></span></div>
+          <div class="meter-legend"><span>0</span><span>1,200–1,800 ideal</span><span>3,000 max</span></div>
+        </div>
+        <ul class="checks" id="checks"></ul>
+        <div class="hook" id="hook"><small>What readers see before “…see more”</small><em>Your first lines will appear here.</em></div>
+        <p class="private">The count is an estimate: LinkedIn may count some emojis and symbols differently, so keep a margin under 3,000.</p>
+      </div>
+    </div>
+
+    <div class="section-block" id="submit">
+      <h2 class="section-title">How to submit</h2>
+      <ol class="steps">
+        <li><span>Choose the Chemisters page that best matches your field. <a href="../#table">See all our pages</a>.</span></li>
+        <li><span>Send that page a LinkedIn message with your post text, your image, the link to your own LinkedIn post about the article, and your co-authors' names.</span></li>
+        <li><span>We check the 20 requirements and send you feedback if anything is missing or needs to change.</span></li>
+        <li><span>You apply the feedback and send back the complete corrected version.</span></li>
+        <li><span>Once every requirement is met, we publish your post exactly as you sent it.</span></li>
+      </ol>
+      <div class="cta-box">
+        <p>Not sure which page fits your work? Open the table of all our pages and pick the closest field. If two fit, tell us in your message.</p>
+        <a class="btn btn-glow" href="../#table">Find your page</a>
+      </div>
+    </div>
+
+    <div class="section-block" id="checklist">
+      <h2 class="section-title">Checklist before you send</h2>
+      <p class="section-text">Tick each item as you check your post. Nothing is saved or sent: this is only for you.</p>
+      <ul class="checklist" id="cl"><li><label><input type="checkbox"><span>Published, peer-reviewed: title, journal, DOI</span></label></li><li><label><input type="checkbox"><span>Hook in the first two lines</span></label></li><li><label><input type="checkbox"><span>Why it matters, abbreviations defined</span></label></li><li><label><input type="checkbox"><span>3–5 results, at least 3 with numbers</span></label></li><li><label><input type="checkbox"><span>Results, not methods</span></label></li><li><label><input type="checkbox"><span>Mechanism in 1–2 sentences</span></label></li><li><label><input type="checkbox"><span>Link to the page's field</span></label></li><li><label><input type="checkbox"><span>Outlook of 2 sentences max</span></label></li><li><label><input type="checkbox"><span>Specific closing question</span></label></li><li><label><input type="checkbox"><span>About 1,200–1,800 characters</span></label></li><li><label><input type="checkbox"><span>Never more than 3,000 characters in total</span></label></li><li><label><input type="checkbox"><span>No repeated points or paragraphs</span></label></li><li><label><input type="checkbox"><span>Every number matches the article</span></label></li><li><label><input type="checkbox"><span>One image, PNG/JPG, ≥1,200 px, yours to share</span></label></li><li><label><input type="checkbox"><span>3–6 relevant hashtags</span></label></li><li><label><input type="checkbox"><span>Your LinkedIn name and profile link</span></label></li><li><label><input type="checkbox"><span>Co-authors' names and profiles</span></label></li><li><label><input type="checkbox"><span>Link to your own LinkedIn post</span></label></li><li><label><input type="checkbox"><span>Proofread plain text, no leftovers</span></label></li><li><label><input type="checkbox"><span>All our feedback applied, full version resent</span></label></li></ul>
+      <div class="cl-bar"><div class="meter"><span class="fill" id="clFill"></span></div><span id="clCount">0 of 20</span></div>
+    </div>
+
+    <div class="section-block" id="good-to-know">
+      <h2 class="section-title">Good to know</h2>
+      <ul class="bullet-list">
+        <li>By sending a submission, you confirm that you are an author of the article and that your co-authors agree to be named and tagged.</li>
+        <li>You keep all rights to your text and images. You can ask us to remove the post at any time.</li>
+        <li>Featured posts express their authors' views, not those of Chemisters.</li>
+        <li>We may decline a submission that doesn't fit any of our pages.</li>
+      </ul>
+      <p class="section-text" style="margin-top:14px">The full rules are in our <a href="../terms/#featured">Terms of Use</a>, and how we handle your data is in our <a href="../privacy/#submissions">Privacy Policy</a>.</p>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="../"><img src="../images/Chemisters_logo.png" alt=""><span>Chemisters</span></a>
+        <p>The digital ecosystem of chemistry, where academic rigor meets modern communication. Chemistry evolves. Chemisters documents it.</p>
+      </div>
+      <div><h4>Explore</h4><ul><li><a href="../#table">The Table</a></li><li><a href="../#find">What You'll Find</a></li><li><a href="./" aria-current="page">Feature Your Research</a></li></ul></div>
+      <div><h4>Chemisters</h4><ul><li><a href="../#about">About</a></li><li><a href="../#contact">Contact</a></li><li><a href="mailto:contact@chemisters.com">Email</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="../privacy/">Privacy Policy</a></li><li><a href="../terms/">Terms of Use</a></li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>© <span id="year">2026</span> Chemisters. All rights reserved.</span><span>Rabat, Morocco</span></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+const prog = document.getElementById("progress");
+addEventListener("scroll", () => { const h = document.documentElement.scrollHeight - innerHeight; prog.style.width = (h > 0 ? scrollY / h * 100 : 0) + "%"; }, { passive: true });
+const tocLinks = [...document.querySelectorAll(".toc a")];
+const obs = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) tocLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + e.target.id));
+}), { rootMargin: "-30% 0px -60% 0px" });
+document.querySelectorAll(".section-block[id]").forEach(s => obs.observe(s));
+
+/* checklist progress */
+const boxes = [...document.querySelectorAll("#cl input")];
+function clUpdate() {
+  const n = boxes.filter(b => b.checked).length;
+  document.getElementById("clCount").textContent = n + " of " + boxes.length;
+  const f = document.getElementById("clFill");
+  f.style.width = (n / boxes.length * 100) + "%";
+  f.style.background = n === boxes.length ? "#16a36a" : "";
+}
+boxes.forEach(b => b.addEventListener("change", clUpdate));
+
+/* post checker: runs only in the browser */
+const post = document.getElementById("post"), checks = document.getElementById("checks"), hook = document.getElementById("hook"), fill = document.getElementById("fill");
+const fmt = n => n.toLocaleString("en-US");
+const escH = t => t.replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+function check() {
+  const text = post.value;
+  const chars = [...text].length;
+  const tags = (text.match(/(^|\s)#[\p{L}\p{N}_]+/gu) || []).length;
+  const doi = /(https?:\/\/(dx\.)?doi\.org\/10\.|\b10\.\d{4,9}\/\S+)/i.test(text);
+  const opener = /^\s*(i'?m|i am|we are|we're)\s+(pleased|happy|excited|thrilled|proud|delighted)/i.test(text);
+  const mentions = (text.match(/(^|\s)@\w/g) || []).length;
+  const lines = text.split(/\n+/).map(l => l.trim().toLowerCase()).filter(l => l.length > 25);
+  const dupes = lines.length - new Set(lines).size;
+  const items = [];
+  const st = (ok, html) => items.push(`<li class="${ok === null ? "" : ok ? "ok" : "bad"}"><span>${html}</span></li>`);
+  if (!text.trim()) {
+    st(null, "Length: <b>0</b> characters"); st(null, "Hashtags"); st(null, "DOI link"); st(null, "Opening line"); st(null, "Repeated lines"); st(null, "@mentions");
+  } else {
+    st(chars <= 3000 && chars >= 1200 && chars <= 1800 ? true : chars > 3000 ? false : null,
+      `Length: <b>${fmt(chars)}</b> characters ${chars > 3000 ? "· over the 3,000 limit" : chars > 1800 ? "· longer than the ideal" : chars < 1200 ? "· shorter than the ideal" : "· ideal"}`);
+    st(tags >= 3 && tags <= 6, `Hashtags: <b>${tags}</b> ${tags < 3 ? "· add at least 3" : tags > 6 ? "· keep 6 at most" : "· good"}`);
+    st(doi, doi ? "DOI link found" : "No DOI link found (https://doi.org/…)");
+    st(!opener, opener ? "Opens with “I'm pleased…”: lead with the problem or result instead" : "Opening line doesn't start with “I'm pleased…”");
+    st(dupes === 0, dupes ? `<b>${dupes}</b> repeated line${dupes > 1 ? "s" : ""}` : "No repeated lines");
+    st(mentions === 0, mentions ? `<b>${mentions}</b> @mention${mentions > 1 ? "s" : ""}: typed @Names don't tag anyone, send the names separately` : "No typed @mentions");
+  }
+  checks.innerHTML = items.join("");
+  const pct = Math.min(100, chars / 3000 * 100);
+  fill.style.width = pct + "%";
+  fill.style.background = chars > 3000 ? "#d9481f" : chars >= 1200 && chars <= 1800 ? "#16a36a" : "";
+  const preview = [...text].slice(0, 200).join("");
+  hook.innerHTML = '<small>What readers see before “…see more”</small>' + (text.trim() ? escH(preview) + (chars > 200 ? '<em> …see more</em>' : "") : "<em>Your first lines will appear here.</em>");
+}
+post.addEventListener("input", check);
+check();
+</script>
+
+</body>
+</html>

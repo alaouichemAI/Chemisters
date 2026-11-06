@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Element not found — Chemisters</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#070b16">
+<link rel="icon" type="image/png" href="/images/Chemisters_logo.png">
+<style>
+@font-face { font-family: "Unbounded"; src: url("/assets/fonts/unbounded.woff2") format("woff2"); font-weight: 200 900; font-display: swap; }
+@font-face { font-family: "Figtree"; src: url("/assets/fonts/figtree.woff2") format("woff2"); font-weight: 300 900; font-display: swap; }
+@font-face { font-family: "JetBrains Mono"; src: url("/assets/fonts/jetbrains-mono.woff2") format("woff2"); font-weight: 100 800; font-display: swap; }
+:root {
+  --night: #070b16; --night-2: #0c1324; --night-line: #1f2a45; --glow: #e9eefc; --mist: #93a0bf;
+  --paper: #f6f7fb; --white: #ffffff; --ink: #0d1324; --ink-2: #39435c; --muted: #667089; --line: #e1e5ef;
+  --accent: #3b6cf6; --accent-2: #2a55d4; --accent-soft: #e8eefe;
+  --core: #5b8def; --synthetic: #f2994a; --bio: #ef5d8b; --comp: #a78bfa; --community: #f5c451; --materials: #2dd4bf;
+  --display: "Unbounded", "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  --body: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 16.5px/1.7 var(--body); -webkit-font-smoothing: antialiased; }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+p { margin: 0; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; z-index: 210; background: linear-gradient(90deg, var(--core), var(--comp), var(--bio), var(--synthetic), var(--community)); }
+
+.nav { position: sticky; top: 0; z-index: 200; background: rgba(7, 11, 22, .9); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border-bottom: 1px solid var(--night-line); }
+.nav .wrap { display: flex; align-items: center; gap: 18px; height: 68px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; margin-right: auto; color: var(--glow); }
+.brand img { width: 34px; height: 34px; border-radius: 9px; object-fit: cover; }
+.brand span { font-family: var(--display); font-weight: 700; font-size: 17px; }
+.links { display: flex; align-items: center; gap: 2px; list-style: none; margin: 0; padding: 0; }
+.links a { text-decoration: none; color: var(--mist); font-weight: 600; font-size: 15px; padding: 8px 12px; border-radius: 9px; }
+.links a:hover { color: var(--glow); background: rgba(255,255,255,.06); }
+.links .cta { background: var(--accent); color: #fff; margin-left: 6px; }
+.links .cta:hover { background: var(--accent-2); color: #fff; }
+@media (max-width: 760px) { .links li:not(:last-child) { display: none; } .links .cta { font-size: 14px; padding: 8px 12px; } }
+
+.hero { background: radial-gradient(900px 400px at 80% 0%, #15204a 0%, transparent 60%), radial-gradient(700px 360px at 0% 100%, #1a1238 0%, transparent 60%), var(--night); color: var(--glow); padding: 64px 0 56px; position: relative; overflow: hidden; }
+.hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: linear-gradient(90deg, var(--core), var(--comp), var(--bio), var(--synthetic), var(--community)); opacity: .8; }
+.eyebrow { font-family: var(--mono); font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--mist); display: inline-flex; align-items: center; gap: 10px; }
+.eyebrow::before { content: ""; width: 22px; height: 2px; background: currentColor; opacity: .6; }
+.hero h1 { font-family: var(--display); font-weight: 800; font-size: clamp(34px, 5.6vw, 64px); letter-spacing: -.035em; line-height: 1; margin-top: 18px; }
+.hero .sub { color: #b9c3dd; font-size: clamp(16px, 1.5vw, 19px); max-width: 56ch; margin-top: 16px; }
+.updated { display: inline-flex; gap: 8px; margin-top: 22px; font-family: var(--mono); font-size: 12.5px; color: var(--mist); padding: 7px 12px; border: 1px solid var(--night-line); border-radius: 999px; }
+.updated b { color: var(--glow); font-weight: 500; }
+
+.layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 48px; padding-block: 48px 90px; }
+.toc { position: sticky; top: 92px; align-self: start; }
+.toc p { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+.toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; counter-reset: t; }
+.toc li { counter-increment: t; }
+.toc a { display: flex; gap: 10px; padding: 6px 10px; border-radius: 8px; color: var(--ink-2); text-decoration: none; font-size: 14.5px; line-height: 1.4; border-left: 2px solid transparent; }
+.toc a::before { content: counter(t, decimal-leading-zero); font-family: var(--mono); font-size: 11.5px; color: var(--muted); padding-top: 2px; }
+.toc a:hover { background: var(--white); color: var(--ink); }
+.toc a.active { background: var(--white); color: var(--accent); border-left-color: var(--accent); }
+
+.doc { background: var(--white); border: 1px solid var(--line); border-radius: 22px; padding: clamp(24px, 4vw, 52px); min-width: 0; }
+.section-block { padding-bottom: 32px; margin-bottom: 32px; border-bottom: 1px solid var(--line); }
+.section-block:last-of-type { border-bottom: 0; }
+.section-title { font-family: var(--display); font-weight: 700; font-size: clamp(19px, 2vw, 24px); letter-spacing: -.02em; line-height: 1.2; margin-bottom: 14px; display: flex; align-items: center; gap: 12px; }
+.section-title::before { content: ""; width: 10px; height: 10px; border-radius: 3px; flex: none; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+.subsection-title { font-size: 16.5px; font-weight: 700; margin: 18px 0 6px; }
+.section-text { color: var(--ink-2); }
+.section-text + .section-text { margin-top: 12px; }
+.section-text a, .bullet-list a, .note a { color: var(--accent); font-weight: 700; text-decoration: none; }
+.section-text a:hover, .bullet-list a:hover { text-decoration: underline; }
+.bullet-list { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 10px; }
+.bullet-list li { position: relative; padding-left: 26px; color: var(--ink-2); }
+.bullet-list li::before { content: ""; position: absolute; left: 4px; top: .62em; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.bullet-list strong, .section-text strong { color: var(--ink); }
+.table-wrap { overflow-x: auto; margin: 14px 0; border: 1px solid var(--line); border-radius: 14px; }
+.data-table { width: 100%; min-width: 540px; border-collapse: collapse; font-size: 15px; }
+.data-table th, .data-table td { text-align: left; vertical-align: top; padding: 12px 16px; border-bottom: 1px solid var(--line); color: var(--ink-2); }
+.data-table th { background: var(--paper); font-family: var(--mono); font-size: 11.5px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.data-table tr:last-child td { border-bottom: 0; }
+.data-table code { font-family: var(--mono); font-size: 13px; color: var(--accent-2); background: var(--accent-soft); padding: 2px 7px; border-radius: 6px; }
+.copy-btn { margin-left: 6px; padding: 3px 10px; font: 600 12.5px var(--body); border-radius: 7px; border: 1px solid var(--line); background: var(--paper); color: var(--ink-2); cursor: pointer; }
+.copy-btn:hover { border-color: var(--accent); color: var(--accent); }
+.highlight-box { margin-top: 8px; padding: 22px 24px; border-radius: 18px; background: var(--night); color: #cfd8f2; position: relative; overflow: hidden; }
+.highlight-box::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: linear-gradient(90deg, var(--core), var(--comp), var(--bio), var(--synthetic)); }
+.highlight-box strong { color: #fff; }
+.highlight-box a { color: #fff; font-weight: 700; }
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; gap: 24px; padding-top: 28px; }
+  .toc { position: static; background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+  .toc ol { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px) { .toc ol { grid-template-columns: 1fr; } }
+
+footer { background: var(--night); color: #aab5d1; padding: 56px 0 30px; }
+.foot { display: grid; grid-template-columns: 1.5fr repeat(3, minmax(0, 1fr)); gap: 32px; }
+.foot p { margin-top: 14px; max-width: 34ch; font-size: 15px; }
+.foot h4 { margin: 0 0 14px; font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--mist); }
+.foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
+.foot a { color: #cfd8f2; text-decoration: none; }
+.foot a:hover { color: #fff; }
+.foot a[aria-current] { color: #fff; }
+.foot-bottom { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--night-line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font-size: 14px; color: var(--mist); }
+@media (max-width: 800px) { .foot { grid-template-columns: 1fr 1fr; } .foot > div:first-child { grid-column: 1 / -1; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body { background: var(--night); color: var(--glow); }
+.nf { min-height: calc(100vh - 68px); display: grid; place-items: center; text-align: center; padding: 48px 20px; background: radial-gradient(700px 400px at 70% 10%, #15204a 0%, transparent 60%), radial-gradient(600px 360px at 10% 90%, #1a1238 0%, transparent 60%), var(--night); }
+.tile404 { width: 150px; aspect-ratio: 1 / 1.06; margin: 0 auto 28px; border-radius: 16px; padding: 12px 14px; display: flex; flex-direction: column; justify-content: space-between; text-align: left;
+  border: 1px dashed #4a5a85; background: linear-gradient(160deg, #131c33, #0c1324); animation: wobble 4s ease-in-out infinite; }
+.tile404 small { font-family: var(--mono); font-size: 13px; color: var(--mist); }
+.tile404 b { font-family: var(--display); font-weight: 800; font-size: 54px; line-height: 1; color: #c9d3f0; }
+.tile404 span { font-size: 12px; color: var(--mist); }
+@keyframes wobble { 50% { transform: translateY(-8px) rotate(-2deg); } }
+.nf h1 { font-family: var(--display); font-weight: 800; font-size: clamp(30px, 5vw, 48px); letter-spacing: -.03em; line-height: 1.05; max-width: 18ch; margin: 0 auto; }
+.nf p { color: #b9c3dd; max-width: 46ch; margin: 14px auto 28px; }
+.row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.btn { display: inline-flex; align-items: center; gap: 9px; text-decoration: none; font: 700 15.5px var(--body); padding: 13px 20px; border-radius: 12px; border: 1px solid transparent; transition: transform .18s; }
+.btn:hover { transform: translateY(-2px); }
+.btn-glow { background: var(--glow); color: var(--night); }
+.btn-ghost { color: var(--glow); border-color: #2c3a5f; }
+@media (prefers-reduced-motion: reduce) { .tile404 { animation: none; } }
+</style>
+</head>
+<body>
+<nav class="nav" aria-label="Main"><div class="wrap">
+  <a class="brand" href="/" aria-label="Chemisters home"><img src="/images/Chemisters_logo.png" alt=""><span>Chemisters</span></a>
+</div></nav>
+<main class="nf">
+  <div>
+    <div class="tile404" aria-hidden="true"><small>404</small><b>?</b><span>Not yet discovered</span></div>
+    <h1>This element hasn't been discovered yet.</h1>
+    <p>The page you are looking for doesn't exist or has moved. Every Chemisters page is in the table on the home page.</p>
+    <div class="row"><a class="btn btn-glow" href="/#table">Open the table</a><a class="btn btn-ghost" href="/">Home</a></div>
+  </div>
+</main>
+</body>
+</html>
