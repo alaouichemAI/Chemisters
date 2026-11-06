@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Chemical Kinetics · Chemisters</title>
+<meta name="description" content="Reaction rates, mechanisms, and transition-state theory. Follow the Chemical Kinetics page on Chemisters.">
+<link rel="canonical" href="https://chemisters.com/chemical-kinetics/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Chemisters">
+<meta property="og:title" content="Chemical Kinetics · Chemisters">
+<meta property="og:description" content="Reaction rates, mechanisms, and transition-state theory. Follow the Chemical Kinetics page on Chemisters.">
+<meta property="og:url" content="https://chemisters.com/chemical-kinetics/">
+<meta property="og:image" content="https://chemisters.com/assets/og/chemical-kinetics.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Chemical Kinetics: Core Chemistry, a Chemisters page">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://chemisters.com/assets/og/chemical-kinetics.png">
+<meta name="theme-color" content="#070b16">
+<link rel="icon" type="image/png" href="/images/Chemisters_logo.png">
+<link rel="preload" href="/assets/fonts/unbounded.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<!-- ANALYTICS: same Umami tag as on the homepage, if you use it.
+<script defer src="https://YOUR-UMAMI-DOMAIN/script.js" data-website-id="YOUR-WEBSITE-ID"></script>
+-->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Chemical Kinetics · Chemisters", "url": "https://chemisters.com/chemical-kinetics/", "description": "Reaction rates, mechanisms, and transition-state theory.", "about": "Chemical Kinetics", "isPartOf": {"@type": "WebSite", "name": "Chemisters", "url": "https://chemisters.com/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Chemisters", "item": "https://chemisters.com/"}, {"@type": "ListItem", "position": 2, "name": "Chemical Kinetics", "item": "https://chemisters.com/chemical-kinetics/"}]}}</script>
+<style>
+@font-face { font-family: "Unbounded"; src: url("/assets/fonts/unbounded.woff2") format("woff2"); font-weight: 200 900; font-display: swap; }
+@font-face { font-family: "Figtree"; src: url("/assets/fonts/figtree.woff2") format("woff2"); font-weight: 300 900; font-display: swap; }
+@font-face { font-family: "JetBrains Mono"; src: url("/assets/fonts/jetbrains-mono.woff2") format("woff2"); font-weight: 100 800; font-display: swap; }
+:root {
+  --night: #070b16; --night-2: #0c1324; --night-3: #131c33; --night-line: #1f2a45; --glow: #e9eefc; --mist: #93a0bf;
+  --paper: #f6f7fb; --white: #fff; --ink: #0d1324; --ink-2: #39435c; --muted: #667089; --line: #e1e5ef; --accent: #3b6cf6; --accent-2: #2a55d4; --live: #4ade80;
+  --core: #5b8def; --synthetic: #f2994a; --applied: #9bc53d; --bio: #ef5d8b; --comp: #a78bfa; --materials: #2dd4bf; --community: #f5c451;
+  --fc: var(--core);
+  --display: "Unbounded", "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  --body: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 80px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 16.5px/1.65 var(--body); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+a { color: inherit; } h1, h2, h3 { margin: 0; text-wrap: balance; } p { margin: 0; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+[hidden] { display: none !important; }
+
+.nav { position: absolute; top: 0; left: 0; right: 0; z-index: 10; }
+.nav .wrap { display: flex; align-items: center; gap: 14px; height: 70px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--glow); margin-right: auto; }
+.brand img { width: 32px; height: 32px; border-radius: 9px; object-fit: cover; }
+.brand span { font-family: var(--display); font-weight: 700; font-size: 16px; }
+.nav a.l { color: var(--mist); text-decoration: none; font-weight: 600; font-size: 15px; padding: 8px 10px; border-radius: 9px; }
+.nav a.l:hover { color: var(--glow); background: rgba(255,255,255,.06); }
+@media (max-width: 640px) { .nav a.l.opt { display: none; } }
+
+/* hero */
+.hero { position: relative; overflow: hidden; color: var(--glow); padding: 108px 0 64px;
+  background: radial-gradient(800px 420px at 12% 20%, color-mix(in srgb, var(--fc) 28%, transparent), transparent 70%), linear-gradient(180deg, var(--night), var(--night-2)); }
+.hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5;
+  background-image: linear-gradient(rgba(147,160,191,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(147,160,191,.06) 1px, transparent 1px); background-size: 44px 44px; }
+.hero .wrap { position: relative; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 40px; align-items: center; }
+.crumbs { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--mist); }
+.crumbs a { color: var(--mist); text-decoration: none; } .crumbs a:hover { color: var(--glow); }
+.big { width: clamp(150px, 20vw, 220px); aspect-ratio: 1 / 1.06; border-radius: 20px; padding: 16px 18px; display: flex; flex-direction: column; justify-content: space-between;
+  border: 1px solid color-mix(in srgb, var(--fc) 60%, transparent); background: linear-gradient(160deg, color-mix(in srgb, var(--fc) 32%, var(--night-2)), color-mix(in srgb, var(--fc) 8%, var(--night-2)));
+  box-shadow: 0 0 80px -20px var(--fc); }
+.big .z { font-family: var(--mono); font-size: 15px; color: color-mix(in srgb, var(--fc) 70%, #fff); }
+.big .sym { font-family: var(--display); font-weight: 800; font-size: clamp(56px, 7vw, 84px); line-height: 1; letter-spacing: -.03em; color: color-mix(in srgb, var(--fc) 50%, #fff); }
+.big .sym img { width: 70%; aspect-ratio: 1; object-fit: contain; border-radius: 12px; }
+.big .nm { font-size: 13px; color: #d5dcf0; line-height: 1.25; }
+.area { font-family: var(--mono); font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--fc); margin-top: 14px; }
+.hero h1 { font-family: var(--display); font-weight: 800; font-size: clamp(30px, 4.6vw, 54px); letter-spacing: -.03em; line-height: 1.04; margin-top: 8px; }
+.hero .desc { color: #c3cce4; font-size: clamp(16.5px, 1.5vw, 19px); max-width: 56ch; margin-top: 14px; }
+.follow { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.follow a, .fk-btns a { display: inline-flex; align-items: center; gap: 9px; padding: 13px 20px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 15.5px; color: #fff; background: var(--pc, #334); transition: transform .15s, filter .15s; }
+.follow a:hover { transform: translateY(-2px); filter: brightness(1.12); }
+.follow svg { width: 18px; height: 18px; fill: currentColor; }
+.got { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; font-size: 14px; color: var(--live); font-weight: 600; }
+.soon { margin-top: 18px; color: #c3cce4; font-size: 15px; }
+.hero-links { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 16px; font-size: 14px; }
+.hero-links a, .hero-links button { color: #cfd8f2; font-weight: 600; text-decoration: none; border: 0; border-bottom: 1px solid #39456a; background: none; padding: 0; cursor: pointer; font: inherit; font-weight: 600; }
+.hero-links a:hover, .hero-links button:hover { color: #fff; border-color: #fff; }
+@media (max-width: 720px) { .hero { padding-top: 92px; } .hero .wrap { grid-template-columns: 1fr; gap: 18px; } .big { width: 104px; padding: 10px 12px; border-radius: 16px; } .big .sym { font-size: 42px; } .big .nm { display: none; } .crumbs { display: none; } .area { margin-top: 0; } .follow a { flex: 1 1 200px; justify-content: center; white-space: nowrap; padding: 13px 14px; font-size: 15px; } }
+
+.quizban { background: linear-gradient(90deg, color-mix(in srgb, var(--fc) 22%, #fff), #fff); border-bottom: 1px solid var(--line); }
+.quizban .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 20px; padding-top: 14px; padding-bottom: 14px; }
+.quizban p { font-weight: 600; }
+.quizban a { color: var(--accent); font-weight: 700; text-decoration: none; }
+
+/* sections */
+.sec { padding: 72px 0; }
+.sec h2 { font-family: var(--display); font-weight: 800; font-size: clamp(24px, 3vw, 34px); letter-spacing: -.025em; line-height: 1.1; }
+.label { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+.about { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 48px; align-items: start; }
+.about p.lede { font-size: 18.5px; color: var(--ink-2); margin-top: 16px; max-width: 58ch; }
+.about .guide { display: inline-block; margin-top: 18px; color: var(--accent); font-weight: 700; text-decoration: none; }
+.branches { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 22px; }
+.branches h3 { font-size: 15px; font-weight: 700; color: var(--muted); margin-bottom: 12px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips span { padding: 7px 12px; border-radius: 999px; font-size: 14.5px; font-weight: 600; color: var(--ink-2); background: color-mix(in srgb, var(--fc) 12%, #fff); border: 1px solid color-mix(in srgb, var(--fc) 30%, #fff); }
+@media (max-width: 820px) { .about { grid-template-columns: 1fr; gap: 26px; } }
+
+.posts { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin-top: 22px; }
+.post { display: grid; gap: 10px; padding: 20px; border-radius: 16px; background: var(--white); border: 1px solid var(--line); text-decoration: none; color: inherit; transition: transform .25s, box-shadow .25s; }
+.post:hover { transform: translateY(-3px); box-shadow: 0 20px 40px -28px rgba(13,19,36,.5); }
+.post small { font-family: var(--mono); font-size: 12px; color: var(--muted); display: flex; gap: 8px; align-items: center; }
+.post small::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--live); }
+.post p { font-weight: 600; font-size: 16px; line-height: 1.45; }
+.post span { color: var(--accent); font-weight: 700; font-size: 14px; }
+
+/* keep exploring (dark) */
+.explore { background: var(--night); color: var(--glow); }
+.explore .label { color: #9db7ff; }
+.explore .sub { color: #aab5d1; margin-top: 8px; max-width: 60ch; }
+.rel { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 24px; }
+.rc { --fc: var(--core); position: relative; display: flex; flex-direction: column; gap: 12px; padding: 20px; border-radius: 16px; border: 1px solid var(--night-line); background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.01)); overflow: hidden; }
+.rc::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: var(--fc); }
+.rc-top { display: flex; gap: 12px; align-items: center; }
+.mini { --fc: var(--core); width: 48px; height: 50px; border-radius: 10px; flex: none; display: flex; flex-direction: column; justify-content: space-between; padding: 5px 7px; text-decoration: none; border: 1px solid color-mix(in srgb, var(--fc) 45%, transparent); background: color-mix(in srgb, var(--fc) 18%, var(--night-2)); position: relative; }
+.mini i { font: 400 9px/1 var(--mono); font-style: normal; color: color-mix(in srgb, var(--fc) 70%, #fff); }
+.mini b { font: 700 18px/1 var(--display); color: color-mix(in srgb, var(--fc) 55%, #fff); }
+.mini img { width: 100%; height: 100%; object-fit: cover; border-radius: 6px; }
+.mini.got::after { content: "✓"; position: absolute; right: 5px; bottom: 3px; font: 700 10px var(--body); color: var(--live); }
+.rc h3 a { color: #fff; text-decoration: none; font-size: 17px; font-weight: 700; line-height: 1.25; }
+.rc h3 a:hover { text-decoration: underline; }
+.rc p { color: #aab5d1; font-size: 14.5px; flex: 1; }
+.rc .fk-btns { display: flex; flex-wrap: wrap; gap: 6px; }
+.rc .fk-btns a { padding: 7px 11px; font-size: 13px; border-radius: 9px; gap: 6px; }
+.rc .fk-btns svg { width: 14px; height: 14px; fill: currentColor; }
+.rc .gotl { font-size: 13px; color: var(--live); font-weight: 600; }
+@media (max-width: 860px) { .rel { grid-template-columns: 1fr; } }
+.row-title { margin-top: 44px; font-size: 15px; font-weight: 700; color: #cfd8f2; }
+.tiles { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.tiles .mini { width: 64px; height: 68px; padding: 6px 8px; transition: transform .2s, box-shadow .2s; }
+.tiles .mini b { font-size: 20px; }
+.tiles .mini:hover { transform: translateY(-3px); box-shadow: 0 0 0 1px var(--fc), 0 10px 24px -8px var(--fc); }
+.tiles .mini.next { border-style: dashed; background: rgba(255,255,255,.02); --fc: #93a0bf; }
+.pn { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 44px; }
+.pn a { display: flex; align-items: center; gap: 12px; padding: 16px; border-radius: 14px; border: 1px solid var(--night-line); text-decoration: none; color: var(--glow); }
+.pn a:hover { border-color: #5a6c99; }
+.pn a.nx { justify-content: flex-end; text-align: right; }
+.pn small { display: block; color: var(--mist); font-family: var(--mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; }
+.pn b { font-size: 15px; }
+.back { display: inline-flex; margin-top: 30px; color: #cfd8f2; font-weight: 700; text-decoration: none; border-bottom: 1px solid #39456a; }
+.back:hover { color: #fff; border-color: #fff; }
+@media (max-width: 560px) { .pn { grid-template-columns: 1fr; } }
+
+footer { background: var(--night); border-top: 1px solid var(--night-line); color: var(--mist); padding: 30px 0 calc(96px + env(safe-area-inset-bottom, 0px)); font-size: 14px; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 10px 22px; justify-content: space-between; }
+footer nav { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+footer a { color: #cfd8f2; text-decoration: none; } footer a:hover { color: #fff; }
+
+/* sticky follow bar */
+.stick { position: fixed; left: 50%; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 140%); z-index: 50; display: flex; align-items: center; gap: 12px; padding: 8px 8px 8px 10px; border-radius: 16px; background: rgba(12,19,36,.94); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid #2a3758; box-shadow: 0 16px 40px rgba(0,0,0,.4); color: var(--glow); transition: transform .35s cubic-bezier(.2,.8,.2,1); max-width: calc(100vw - 24px); }
+.stick.show { transform: translate(-50%, 0); }
+.stick .mini { width: 38px; height: 40px; padding: 3px 5px; --fc: var(--core); }
+.stick .mini b { font-size: 14px; }
+.stick .nm { font-weight: 700; font-size: 14.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 30vw; }
+.stick .follow { margin: 0; gap: 6px; flex-wrap: nowrap; }
+.stick .follow a { padding: 9px 13px; font-size: 14px; flex: none; }
+@media (max-width: 560px) { .stick .nm { display: none; } .stick .follow a .t { display: none; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/images/Chemisters_logo.png" alt=""><span>Chemisters</span></a>
+    <a class="l" href="/#table">The table</a>
+    <a class="l opt" href="/#quiz">Which element are you?</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="big" aria-hidden="true"><span class="z">6</span><span class="sym">Ki</span><span class="nm">Chemical Kinetics</span></div>
+    <div>
+      <p class="crumbs"><a href="/">Chemisters</a> / <a href="/#table">The table</a></p>
+      <p class="area" id="areaLine">Core Chemistry</p>
+      <h1>Chemical Kinetics</h1>
+      <p class="desc">Reaction rates, mechanisms, and transition-state theory.</p>
+      <div class="follow"><a href="https://www.linkedin.com/company/112274897" target="_blank" rel="noopener" style="--pc:#0a66c2" data-follow-slug="chemical-kinetics" data-follow-platform="linkedin" data-umami-event="follow" data-umami-event-page="chemical-kinetics" data-umami-event-platform="linkedin" aria-label="Follow Chemical Kinetics on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Follow on LinkedIn</a></div>
+      <p class="got" id="got" hidden>✓ In your table</p>
+      <div class="hero-links"><a href="/publish/">Feature your research here →</a><button type="button" id="copyLink">Copy link to this page</button></div>
+    </div>
+  </div>
+</header>
+
+<div class="quizban" id="quizban" hidden><div class="wrap"><p>Someone got Chemical Kinetics as their element.</p><a href="/#quiz">Which element are you? Take the quiz →</a></div></div>
+
+<main>
+  <section class="sec">
+    <div class="wrap about">
+      <div>
+        <p class="label">About the field</p>
+        <h2>What Chemical Kinetics covers</h2>
+        <p class="lede">Chemical kinetics measures how fast reactions go and what controls their speed. Rate laws reveal mechanisms, the hidden sequence of steps between reactants and products.</p>
+        
+      </div>
+      <div class="branches">
+        <h3>Branches you'll see on this page</h3>
+        <div class="chips"><span>Rate laws</span><span>Reaction mechanisms</span><span>Transition state theory</span><span>Catalytic kinetics</span><span>Fast reactions</span><span>Kinetic modelling</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="latest" hidden style="padding-top: 0">
+    <div class="wrap">
+      <p class="label">Latest from this page</p>
+      <h2>Recently posted</h2>
+      <div class="posts" id="posts"></div>
+    </div>
+  </section>
+
+  <section class="sec explore">
+    <div class="wrap">
+      <p class="label">Keep exploring</p>
+      <h2>Fields close to Chemical Kinetics</h2>
+      <p class="sub">If you follow Chemical Kinetics, these pages cover the work right next to it.</p>
+      <div class="rel"><article class="rc" style="--fc: var(--core)"><div class="rc-top"><a class="mini" href="/thermochemistry/" style="--fc: var(--core)" data-got="thermochemistry" title="Thermochemistry" aria-label="Thermochemistry"><i>7</i><b>Td</b></a><h3><a href="/thermochemistry/">Thermochemistry</a></h3></div><p>Heat flow, enthalpy, and energy changes in chemical reactions.</p><span class="gotl" data-got-line="thermochemistry" hidden>✓ In your table</span><div class="fk-btns"><a href="https://www.linkedin.com/company/115805044" target="_blank" rel="noopener" style="--pc:#0a66c2" data-follow-slug="thermochemistry" data-follow-platform="linkedin" data-umami-event="follow" data-umami-event-page="thermochemistry" data-umami-event-platform="linkedin" aria-label="Follow Thermochemistry on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></div></article><article class="rc" style="--fc: var(--core)"><div class="rc-top"><a class="mini" href="/physical-chemistry/" style="--fc: var(--core)" data-got="physical-chemistry" title="Physical Chemistry" aria-label="Physical Chemistry"><i>2</i><b>Ph</b></a><h3><a href="/physical-chemistry/">Physical Chemistry</a></h3></div><p>Thermodynamics, kinetics, and the laws governing molecular behavior.</p><span class="gotl" data-got-line="physical-chemistry" hidden>✓ In your table</span><div class="fk-btns"><a href="https://www.linkedin.com/company/109269958" target="_blank" rel="noopener" style="--pc:#0a66c2" data-follow-slug="physical-chemistry" data-follow-platform="linkedin" data-umami-event="follow" data-umami-event-page="physical-chemistry" data-umami-event-platform="linkedin" aria-label="Follow Physical Chemistry on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></div></article><article class="rc" style="--fc: var(--core)"><div class="rc-top"><a class="mini" href="/theoretical-chemistry/" style="--fc: var(--core)" data-got="theoretical-chemistry" title="Theoretical Chemistry" aria-label="Theoretical Chemistry"><i>4</i><b>Tr</b></a><h3><a href="/theoretical-chemistry/">Theoretical Chemistry</a></h3></div><p>Quantum models, molecular orbital theory, and first-principles calculations.</p><span class="gotl" data-got-line="theoretical-chemistry" hidden>✓ In your table</span><div class="fk-btns"><a href="https://www.linkedin.com/company/110427156" target="_blank" rel="noopener" style="--pc:#0a66c2" data-follow-slug="theoretical-chemistry" data-follow-platform="linkedin" data-umami-event="follow" data-umami-event-page="theoretical-chemistry" data-umami-event-platform="linkedin" aria-label="Follow Theoretical Chemistry on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a><a href="https://www.facebook.com/968362916359292" target="_blank" rel="noopener" style="--pc:#1877f2" data-follow-slug="theoretical-chemistry" data-follow-platform="facebook" data-umami-event="follow" data-umami-event-page="theoretical-chemistry" data-umami-event-platform="facebook" aria-label="Follow Theoretical Chemistry on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a></div></article></div>
+      <p class="row-title">Everything in Core Chemistry</p>
+      <div class="tiles"><a class="mini" href="/organic-chemistry/" style="--fc: var(--core)" data-got="organic-chemistry" title="Organic Chemistry" aria-label="Organic Chemistry"><i>1</i><b>Or</b></a><a class="mini" href="/physical-chemistry/" style="--fc: var(--core)" data-got="physical-chemistry" title="Physical Chemistry" aria-label="Physical Chemistry"><i>2</i><b>Ph</b></a><a class="mini" href="/analytical-chemistry/" style="--fc: var(--core)" data-got="analytical-chemistry" title="Analytical Chemistry" aria-label="Analytical Chemistry"><i>3</i><b>An</b></a><a class="mini" href="/theoretical-chemistry/" style="--fc: var(--core)" data-got="theoretical-chemistry" title="Theoretical Chemistry" aria-label="Theoretical Chemistry"><i>4</i><b>Tr</b></a><a class="mini" href="/structural-chemistry/" style="--fc: var(--core)" data-got="structural-chemistry" title="Structural Chemistry" aria-label="Structural Chemistry"><i>5</i><b>St</b></a><a class="mini" href="/thermochemistry/" style="--fc: var(--core)" data-got="thermochemistry" title="Thermochemistry" aria-label="Thermochemistry"><i>7</i><b>Td</b></a><a class="mini" href="/entropy-in-chemistry/" style="--fc: var(--core)" data-got="entropy-in-chemistry" title="Entropy in Chemistry" aria-label="Entropy in Chemistry"><i>8</i><b>En</b></a><a class="mini" href="/solutions-chemistry/" style="--fc: var(--core)" data-got="solutions-chemistry" title="Solutions Chemistry" aria-label="Solutions Chemistry"><i>9</i><b>So</b></a><a class="mini" href="/chemical-structure-and-reactivity/" style="--fc: var(--core)" data-got="chemical-structure-and-reactivity" title="Chemical Structure &amp; Reactivity" aria-label="Chemical Structure &amp; Reactivity"><i>10</i><b>Rx</b></a><a class="mini next" href="mailto:contact@chemisters.com?subject=A%20field%20for%20Chemisters" title="Suggest a field"><i>+</i><b>?</b></a></div>
+      <div class="pn"><a class="pv" href="/structural-chemistry/"><span class="mini" style="--fc: var(--core)" data-got="structural-chemistry" aria-hidden="true"><i>5</i><b>St</b></span><span><small>Previous</small><b>Structural Chemistry</b></span></a><a class="nx" href="/thermochemistry/"><span><small>Next</small><b>Thermochemistry</b></span><span class="mini" style="--fc: var(--core)" data-got="thermochemistry" aria-hidden="true"><i>7</i><b>Td</b></span></a></div>
+      <a class="back" href="/#table">See the full table →</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Chemisters · Rabat, Morocco</span>
+    <nav><a href="/#table">The table</a><a href="/#quiz">Which element are you?</a><a href="/publish/">Feature your research</a><a href="/badge/">Researcher badges</a><a href="/privacy/">Privacy</a></nav>
+  </div>
+</footer>
+
+<div class="stick" id="stick" aria-hidden="true">
+  <span class="mini"><i>6</i><b>Ki</b></span><span class="nm">Chemical Kinetics</span><div class="follow"><a href="https://www.linkedin.com/company/112274897" target="_blank" rel="noopener" style="--pc:#0a66c2" data-follow-slug="chemical-kinetics" data-follow-platform="linkedin" data-umami-event="follow" data-umami-event-page="chemical-kinetics" data-umami-event-platform="linkedin" aria-label="Follow Chemical Kinetics on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><span><span class="t">Follow on </span>LinkedIn</span></a></div>
+</div>
+
+<script src="/assets/follow-kit.js"></script>
+<script>
+const DATA = {"me": "chemical-kinetics", "pages": [{"sym": "Or", "name": "Organic Chemistry", "slug": "organic-chemistry", "area": "core", "z": 1, "links": {"linkedin": "https://www.linkedin.com/company/108558306", "facebook": "https://www.facebook.com/847087921818585"}}, {"sym": "Ph", "name": "Physical Chemistry", "slug": "physical-chemistry", "area": "core", "z": 2, "links": {"linkedin": "https://www.linkedin.com/company/109269958"}}, {"sym": "An", "name": "Analytical Chemistry", "slug": "analytical-chemistry", "area": "core", "z": 3, "links": {"linkedin": "https://www.linkedin.com/company/109481959", "facebook": "https://www.facebook.com/1032617926590646"}}, {"sym": "Tr", "name": "Theoretical Chemistry", "slug": "theoretical-chemistry", "area": "core", "z": 4, "links": {"linkedin": "https://www.linkedin.com/company/110427156", "facebook": "https://www.facebook.com/968362916359292"}}, {"sym": "St", "name": "Structural Chemistry", "slug": "structural-chemistry", "area": "core", "z": 5, "links": {"linkedin": "https://www.linkedin.com/company/110622026"}}, {"sym": "Ki", "name": "Chemical Kinetics", "slug": "chemical-kinetics", "area": "core", "z": 6, "links": {"linkedin": "https://www.linkedin.com/company/112274897"}}, {"sym": "Td", "name": "Thermochemistry", "slug": "thermochemistry", "area": "core", "z": 7, "links": {"linkedin": "https://www.linkedin.com/company/115805044"}}, {"sym": "En", "name": "Entropy in Chemistry", "slug": "entropy-in-chemistry", "area": "core", "z": 8, "links": {"linkedin": "https://www.linkedin.com/company/111120361"}}, {"sym": "So", "name": "Solutions Chemistry", "slug": "solutions-chemistry", "area": "core", "z": 9, "links": {"linkedin": "https://www.linkedin.com/company/111106404"}}, {"sym": "Rx", "name": "Chemical Structure & Reactivity", "slug": "chemical-structure-and-reactivity", "area": "core", "z": 10, "links": {"linkedin": "https://www.linkedin.com/company/110412248"}}, {"sym": "Sy", "name": "Synthetic Chemistry", "slug": "synthetic-chemistry", "area": "synthetic", "z": 11, "links": {"linkedin": "https://www.linkedin.com/company/109476977"}}, {"sym": "Hc", "name": "Heterocyclic Chemistry", "slug": "heterocyclic-chemistry", "area": "synthetic", "z": 12, "links": {"linkedin": "https://www.linkedin.com/company/108563324", "facebook": "https://www.facebook.com/917266874809667"}}, {"sym": "Rs", "name": "Retrosynthesis", "slug": "retrosynthesis", "area": "synthetic", "z": 13, "links": {"linkedin": "https://www.linkedin.com/company/112835037", "facebook": "https://www.facebook.com/1427914273728805"}}, {"sym": "Ct", "name": "Catalytic Chemistry", "slug": "catalytic-chemistry", "area": "synthetic", "z": 14, "links": {"linkedin": "https://www.linkedin.com/company/114363982", "facebook": "https://www.facebook.com/1203169896209143"}}, {"sym": "Rm", "name": "Reactive Matter", "slug": "reactive-matter", "area": "synthetic", "z": 15, "links": {"linkedin": "https://www.linkedin.com/company/110790261", "facebook": "https://www.facebook.com/1384954001364847"}}, {"sym": "Gr", "name": "Green Chemistry", "slug": "green-chemistry", "area": "synthetic", "z": 16, "links": {"linkedin": "https://www.linkedin.com/company/108366170", "facebook": "https://www.facebook.com/837662889425184"}}, {"sym": "Pc", "name": "Photochemistry", "slug": "photochemistry", "area": "synthetic", "z": 17, "links": {"linkedin": "https://www.linkedin.com/company/110115014", "facebook": "https://www.facebook.com/959604823904811"}}, {"sym": "Ec", "name": "Electrochemistry", "slug": "electrochemistry", "area": "synthetic", "z": 18, "links": {"linkedin": "https://www.linkedin.com/company/110123965", "facebook": "https://www.facebook.com/911079622093911"}}, {"sym": "Io", "name": "Inorganic Chemistry", "slug": "inorganic-chemistry", "area": "applied", "z": 19, "links": {"linkedin": "https://www.linkedin.com/company/the-inorganic-chemistry/", "facebook": "https://www.facebook.com/1210415018812961"}}, {"sym": "Id", "name": "Industrial Chemistry", "slug": "industrial-chemistry", "area": "applied", "z": 20, "links": {"linkedin": "https://www.linkedin.com/company/109820777", "facebook": "https://www.facebook.com/1003153776205999"}}, {"sym": "Cg", "name": "Chemical Engineering", "slug": "chemical-engineering", "area": "applied", "z": 21, "links": {"linkedin": "https://www.linkedin.com/company/112032374"}}, {"sym": "Qc", "name": "Quality Control", "slug": "quality-control", "area": "applied", "z": 22, "links": {"linkedin": "https://www.linkedin.com/company/111365924"}}, {"sym": "Ap", "name": "Applied Chemistry", "slug": "applied-chemistry", "area": "applied", "z": 23, "links": {"linkedin": "https://www.linkedin.com/company/110636050", "facebook": "https://www.facebook.com/1097311140142292"}}, {"sym": "Fo", "name": "Forensic Chemistry", "slug": "forensic-chemistry", "area": "applied", "z": 24, "links": {"linkedin": "https://www.linkedin.com/company/110792221", "facebook": "https://www.facebook.com/986575247867982"}}, {"sym": "Eg", "name": "Energy Chemistry", "slug": "energy-chemistry", "area": "applied", "z": 25, "links": {"linkedin": "https://www.linkedin.com/company/110115013", "facebook": "https://www.facebook.com/890064814201409"}}, {"sym": "Fd", "name": "Food Chemistry", "slug": "food-chemistry", "area": "applied", "z": 26, "links": {"linkedin": "https://www.linkedin.com/company/110145025", "facebook": "https://www.facebook.com/987048457822150"}}, {"sym": "Me", "name": "Medicinal Chemistry", "slug": "medicinal-chemistry", "area": "bio", "z": 27, "links": {"linkedin": "https://www.linkedin.com/company/108555306", "facebook": "https://www.facebook.com/895784856941090"}}, {"sym": "Bc", "name": "Biological Chemistry", "slug": "biological-chemistry", "area": "bio", "z": 28, "links": {"linkedin": "https://www.linkedin.com/company/108361425", "facebook": "https://www.facebook.com/784689181403533"}}, {"sym": "Dd", "name": "Drug Discovery", "slug": "drug-discovery", "area": "bio", "z": 29, "links": {"linkedin": "https://www.linkedin.com/company/109813829", "facebook": "https://www.facebook.com/1106215462575381"}}, {"sym": "Bo", "name": "Bioorganic Chemistry", "slug": "bioorganic-chemistry", "area": "bio", "z": 30, "links": {"linkedin": "https://www.linkedin.com/company/110637045"}}, {"sym": "Py", "name": "Polymer Chemistry", "slug": "polymer-chemistry", "area": "bio", "z": 31, "links": {"linkedin": "https://www.linkedin.com/company/110117974", "facebook": "https://www.facebook.com/1031491246703738"}}, {"sym": "Ma", "name": "Marine Chemistry", "slug": "marine-chemistry", "area": "bio", "z": 32, "links": {"linkedin": "https://www.linkedin.com/company/115803232"}}, {"sym": "Ev", "name": "Environmental Chemistry", "slug": "environmental-chemistry", "area": "bio", "z": 33, "links": {"linkedin": "https://www.linkedin.com/company/114304070", "facebook": "https://www.facebook.com/1149279181601720"}}, {"sym": "Cp", "name": "Computational Chemistry", "slug": "computational-chemistry", "area": "comp", "z": 34, "links": {"linkedin": "https://www.linkedin.com/company/109477964", "facebook": "https://www.facebook.com/946132968585941"}}, {"sym": "Ci", "name": "Chemoinformatics", "slug": "chemoinformatics", "area": "comp", "z": 35, "links": {"linkedin": "https://www.linkedin.com/company/108361429", "facebook": "https://www.facebook.com/1245185278668713"}}, {"sym": "Ao", "name": "Autonomous Chemistry", "slug": "autonomous-chemistry", "area": "comp", "z": 36, "links": {"linkedin": "https://www.linkedin.com/company/108362446", "facebook": "https://www.facebook.com/781222948411962"}}, {"sym": "Dt", "name": "Chemical Data Science & Automation", "slug": "chemical-data-science-and-automation", "area": "comp", "z": 37, "links": {"linkedin": "https://www.linkedin.com/company/110200145", "facebook": "https://www.facebook.com/1057009130839227"}}, {"sym": "Ml", "name": "Chemistry AI & ML Applications", "slug": "chemistry-ai-and-ml-applications", "area": "comp", "z": 38, "links": {"linkedin": "https://www.linkedin.com/company/110198146"}}, {"sym": "Uc", "name": "AI in Chemistry: Real Use Cases", "slug": "ai-in-chemistry-real-use-cases", "area": "comp", "z": 39, "links": {"linkedin": "https://www.linkedin.com/company/110860911"}}, {"sym": "Ai", "name": "The Artificial Intelligence", "slug": "the-artificial-intelligence", "area": "comp", "z": 40, "links": {"linkedin": "https://www.linkedin.com/company/109297225", "facebook": "https://www.facebook.com/889252394280465"}}, {"sym": "Nc", "name": "Nanochemistry", "slug": "nanochemistry", "area": "materials", "z": 41, "links": {"linkedin": "https://www.linkedin.com/company/108557323", "facebook": "https://www.facebook.com/1014767208377887"}}, {"sym": "Mr", "name": "Chemistry of Materials", "slug": "chemistry-of-materials", "area": "materials", "z": 42, "links": {"linkedin": "https://www.linkedin.com/company/109543039", "facebook": "https://www.facebook.com/1053660431173915"}}, {"sym": "Cc", "name": "Sustainable Materials & Circular Chemistry", "slug": "sustainable-materials-and-circular-chemistry", "area": "materials", "z": 43, "links": {"linkedin": "https://www.linkedin.com/company/110198148", "facebook": "https://www.facebook.com/1101581653041345"}}, {"sym": "Su", "name": "Supramolecular Chemistry", "slug": "supramolecular-chemistry", "area": "materials", "z": 44, "links": {"linkedin": "https://www.linkedin.com/company/109541035"}}, {"sym": "Nu", "name": "Nuclear Chemistry", "slug": "nuclear-chemistry", "area": "materials", "z": 45, "links": {"linkedin": "https://www.linkedin.com/company/110154940", "facebook": "https://www.facebook.com/1335668622963546"}}, {"sym": "Sf", "name": "Surface Chemistry", "slug": "surface-chemistry", "area": "materials", "z": 46, "links": {"linkedin": "https://www.linkedin.com/company/110632021", "facebook": "https://www.facebook.com/1159541500578349"}}, {"sym": "Ws", "name": "Wisdom & Stories", "slug": "wisdom-and-stories", "area": "community", "z": 47, "links": {}}, {"sym": "Nw", "name": "Chemistry News", "slug": "chemistry-news", "area": "community", "z": 48, "links": {"linkedin": "https://www.linkedin.com/company/109816820", "facebook": "https://www.facebook.com/1028835963635926"}}, {"sym": "Ch", "name": "The Chemistry", "slug": "the-chemistry", "area": "community", "z": 49, "links": {"linkedin": "https://www.linkedin.com/company/112177278", "facebook": "https://www.facebook.com/1127335147130283"}}, {"sym": "Mx", "name": "Modern Chemistry", "slug": "modern-chemistry", "area": "community", "z": 50, "links": {"linkedin": "https://www.linkedin.com/company/110426188"}}, {"sym": "Cv", "name": "Creative Chemistry", "slug": "creative-chemistry", "area": "community", "z": 51, "links": {"linkedin": "https://www.linkedin.com/company/111350458", "facebook": "https://www.facebook.com/1148383671696764"}}, {"sym": "Pf", "name": "Chemistry Professionals", "slug": "chemistry-professionals", "area": "community", "z": 52, "links": {"linkedin": "https://www.linkedin.com/company/110421179"}}, {"sym": "Fa", "name": "Failed Discoveries That Changed Science", "slug": "failed-discoveries-that-changed-science", "area": "community", "z": 53, "links": {"linkedin": "https://www.linkedin.com/company/110857180", "facebook": "https://www.facebook.com/1307797865748659"}}, {"sym": "Le", "name": "Amazing Lab Experiments", "slug": "amazing-lab-experiments", "area": "community", "z": 54, "links": {"linkedin": "https://www.linkedin.com/company/110148997"}}, {"sym": "Ms", "name": "Molecular Systems", "slug": "molecular-systems", "area": "community", "z": 55, "links": {"linkedin": "https://www.linkedin.com/company/110780320", "facebook": "https://www.facebook.com/1270400636160265"}}, {"sym": "Cy", "name": "Chemical Systems", "slug": "chemical-systems", "area": "community", "z": 56, "links": {"linkedin": "https://www.linkedin.com/company/110794212"}}], "picker": {"work": [{"label": "Drug discovery & pharma", "syms": ["Me", "Dd", "Hc", "Ci", "Bo", "Bc", "Qc"]}, {"label": "Organic synthesis", "syms": ["Or", "Sy", "Hc", "Rs", "Gr", "Ct", "Rm"]}, {"label": "Catalysis", "syms": ["Ct", "Gr", "Io", "Pc", "Sf"]}, {"label": "Batteries & energy", "syms": ["Ec", "Eg", "Mr", "Pc", "Sf"]}, {"label": "Materials & nano", "syms": ["Nc", "Mr", "Su", "Sf", "Py", "Cc"]}, {"label": "Polymers & plastics", "syms": ["Py", "Cc", "Mr"]}, {"label": "Environment & sustainability", "syms": ["Ev", "Gr", "Cc", "Ma"]}, {"label": "Analytical & instruments", "syms": ["An", "Qc", "Fo", "St"]}, {"label": "AI, data & automation", "syms": ["Ml", "Ci", "Dt", "Ao", "Uc", "Ai", "Cp"]}, {"label": "Theory & simulation", "syms": ["Tr", "Cp", "Ph", "Ki", "Td"]}, {"label": "Physical chemistry", "syms": ["Ph", "Ki", "Td", "En", "So", "Rx"]}, {"label": "Biochemistry", "syms": ["Bc", "Bo", "Me"]}, {"label": "Inorganic & nuclear", "syms": ["Io", "Nu", "St"]}, {"label": "Industry & process", "syms": ["Id", "Cg", "Qc", "Ap"]}, {"label": "Food chemistry", "syms": ["Fd", "An", "Qc"]}, {"label": "Forensics & toxicology", "syms": ["Fo", "An"]}], "feed": [{"label": "Breaking news", "syms": ["Nw", "Mx"]}, {"label": "Careers & jobs", "syms": ["Pf"]}, {"label": "Stories & history", "syms": ["Ws", "Fa"]}, {"label": "Spectacular experiments", "syms": ["Le", "Cv"]}, {"label": "Big-picture chemistry", "syms": ["Ch", "Ms", "Cy"]}, {"label": "Just research papers", "syms": []}]}, "platforms": {"linkedin": {"name": "LinkedIn", "color": "#0a66c2", "svg": "<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z\"/><\/svg>"}, "facebook": {"name": "Facebook", "color": "#1877f2", "svg": "<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z\"/><\/svg>"}}};
+const ME = DATA.pages.find(p => p.slug === DATA.me);
+const $ = s => document.querySelector(s);
+const esc = t => String(t ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const fmtN = n => n >= 1000 ? (n / 1000).toFixed(n >= 100000 ? 0 : 1).replace(/\.0$/, "") + "k" : String(n);
+function ago(t) {
+  const s = Math.max(0, (Date.now() - new Date(t).getTime()) / 1000);
+  if (s < 3600) return Math.max(1, Math.round(s / 60)) + " min ago";
+  if (s < 86400) return Math.round(s / 3600) + "h ago";
+  const d = Math.round(s / 86400);
+  return d === 1 ? "yesterday" : d < 30 ? d + " days ago" : new Date(t).toLocaleDateString("en", { month: "short", day: "numeric" });
+}
+
+/* collection + "fields close to" card after a follow */
+if (window.FollowKit) {
+  FollowKit.init({ pages: DATA.pages, picker: DATA.picker, platforms: DATA.platforms });
+  const paint = () => {
+    $("#got").hidden = !FollowKit.has(ME.slug);
+    document.querySelectorAll("[data-got]").forEach(el => el.classList.toggle("got", FollowKit.has(el.dataset.got)));
+    document.querySelectorAll("[data-got-line]").forEach(el => { el.hidden = !FollowKit.has(el.dataset.gotLine); });
+  };
+  FollowKit.onChange(paint); paint();
+}
+
+/* sticky follow bar once the hero buttons scroll away */
+(() => {
+  const hero = document.querySelector(".hero .follow"), stick = $("#stick");
+  if (!hero || !stick.querySelector("a")) return;
+  new IntersectionObserver(es => { const v = es[0].isIntersecting || es[0].boundingClientRect.top > 0; stick.classList.toggle("show", !v); stick.setAttribute("aria-hidden", String(v)); }).observe(hero);
+})();
+
+/* quiz visitors */
+if (new URLSearchParams(location.search).has("quiz")) $("#quizban").hidden = false;
+
+/* copy link */
+$("#copyLink").addEventListener("click", async e => {
+  const url = location.origin + location.pathname;
+  try { await navigator.clipboard.writeText(url); e.target.textContent = "Link copied"; } catch (err) { e.target.textContent = url; }
+  setTimeout(() => e.target.textContent = "Copy link to this page", 2000);
+});
+
+/* live data from n8n (optional) */
+const getJSON = u => fetch(u, { cache: "no-cache" }).then(r => r.ok ? r.json() : null).catch(() => null);
+getJSON("/data/latest.json").then(d => {
+  const posts = (d && Array.isArray(d.posts) ? d.posts : []).filter(x => x.slug === ME.slug && x.url && x.time).sort((a, b) => new Date(b.time) - new Date(a.time)).slice(0, 6);
+  if (!posts.length) return;
+  const names = { linkedin: "LinkedIn", facebook: "Facebook" };
+  $("#posts").innerHTML = posts.map(x => `<a class="post" href="${esc(x.url)}" target="_blank" rel="noopener" data-umami-event="element_post_click" data-umami-event-page="${esc(ME.slug)}"><small>${ago(x.time)}</small><p>${esc(x.title || "New post")}</p><span>Read on ${esc(names[x.platform] || x.platform)} →</span></a>`).join("");
+  $("#latest").hidden = false;
+});
+getJSON("/data/stats.json").then(d => {
+  const f = d && d.followers && d.followers[ME.slug]; if (!f) return;
+  const n = typeof f === "number" ? f : Object.values(f).reduce((a, b) => a + (Number(b) || 0), 0);
+  if (n) $("#areaLine").textContent += ` · ${fmtN(n)} followers`;
+});
+</script>
+</body>
+</html>
