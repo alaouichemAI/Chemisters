@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="56" viewBox="0 0 260 56" role="img" aria-label="Featured on Chemisters: Heterocyclic Chemistry">
+  <title>Featured on Chemisters: Heterocyclic Chemistry</title>
+  <rect width="260" height="56" rx="12" fill="#0c1324"/>
+  <rect x=".5" y=".5" width="259" height="55" rx="11.5" fill="none" stroke="#f2994a" stroke-opacity=".55"/>
+  <rect x="8" y="8" width="40" height="40" rx="8" fill="#f2994a" fill-opacity=".22" stroke="#f2994a" stroke-opacity=".8"/>
+  <text x="13" y="20" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="8" fill="#f2994a">12</text>
+  <text x="13" y="41" font-family="Arial Black,Arial,Helvetica,sans-serif" font-weight="900" font-size="17" fill="#ffffff">Hc</text>
+  <text x="60" y="23" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="9.5" letter-spacing="1.2" fill="#93a0bf">FEATURED ON CHEMISTERS</text>
+  <text x="60" y="41" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-weight="700" font-size="14" fill="#e9eefc">Heterocyclic Chemistry</text>
+</svg>
