@@ -1,0 +1,1100 @@
+[
+ {
+  "z": 1,
+  "sym": "Or",
+  "name": "Organic Chemistry",
+  "slug": "organic-chemistry",
+  "area": "core",
+  "color": "#5b8def",
+  "url": "https://chemisters.com/organic-chemistry/",
+  "linkedin_org_id": "108558306",
+  "facebook_page_id": "847087921818585",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/108558306",
+   "facebook": "https://www.facebook.com/847087921818585"
+  },
+  "related": [
+   "synthetic-chemistry",
+   "heterocyclic-chemistry",
+   "retrosynthesis"
+  ]
+ },
+ {
+  "z": 2,
+  "sym": "Ph",
+  "name": "Physical Chemistry",
+  "slug": "physical-chemistry",
+  "area": "core",
+  "color": "#5b8def",
+  "url": "https://chemisters.com/physical-chemistry/",
+  "linkedin_org_id": "109269958",
+  "facebook_page_id": null,
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/109269958"
+  },
+  "related": [
+   "chemical-kinetics",
+   "thermochemistry",
+   "theoretical-chemistry"
+  ]
+ },
+ {
+  "z": 3,
+  "sym": "An",
+  "name": "Analytical Chemistry",
+  "slug": "analytical-chemistry",
+  "area": "core",
+  "color": "#5b8def",
+  "url": "https://chemisters.com/analytical-chemistry/",
+  "linkedin_org_id": "109481959",
+  "facebook_page_id": "1032617926590646",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/109481959",
+   "facebook": "https://www.facebook.com/1032617926590646"
+  },
+  "related": [
+   "quality-control",
+   "forensic-chemistry",
+   "structural-chemistry"
+  ]
+ },
+ {
+  "z": 4,
+  "sym": "Tr",
+  "name": "Theoretical Chemistry",
+  "slug": "theoretical-chemistry",
+  "area": "core",
+  "color": "#5b8def",
+  "url": "https://chemisters.com/theoretical-chemistry/",
+  "linkedin_org_id": "110427156",
+  "facebook_page_id": "968362916359292",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/110427156",
+   "facebook": "https://www.facebook.com/968362916359292"
+  },
+  "related": [
+   "physical-chemistry",
+   "chemical-kinetics",
+   "thermochemistry"
+  ]
+ },
+ {
+  "z": 5,
+  "sym": "St",
+  "name": "Structural Chemistry",
+  "slug": "structural-chemistry",
+  "area": "core",
+  "color": "#5b8def",
+  "url": "https://chemisters.com/structural-chemistry/",
+  "linkedin_org_id": "110622026",
+  "facebook_page_id": null,
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/110622026"
+  },
+  "related": [
+   "analytical-chemistry",
+   "inorganic-chemistry",
+   "quality-control"
+  ]
+ },
+ {
+  "z": 6,
+  "sym": "Ki",
+  "name": "Chemical Kinetics",
+  "slug": "chemical-kinetics",
+  "area": "core",
+  "color": "#5b8def",
+  "url": "https://chemisters.com/chemical-kinetics/",
+  "linkedin_org_id": "112274897",
+  "facebook_page_id": null,
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/112274897"
+  },
+  "related": [
+   "thermochemistry",
+   "physical-chemistry",
+   "theoretical-chemistry"
+  ]
+ },
+ {
+  "z": 7,
+  "sym": "Td",
+  "name": "Thermochemistry",
+  "slug": "thermochemistry",
+  "area": "core",
+  "color": "#5b8def",
+  "url": "https://chemisters.com/thermochemistry/",
+  "linkedin_org_id": "115805044",
+  "facebook_page_id": null,
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/115805044"
+  },
+  "related": [
+   "chemical-kinetics",
+   "physical-chemistry",
+   "entropy-in-chemistry"
+  ]
+ },
+ {
+  "z": 8,
+  "sym": "En",
+  "name": "Entropy in Chemistry",
+  "slug": "entropy-in-chemistry",
+  "area": "core",
+  "color": "#5b8def",
+  "url": "https://chemisters.com/entropy-in-chemistry/",
+  "linkedin_org_id": "111120361",
+  "facebook_page_id": null,
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/111120361"
+  },
+  "related": [
+   "thermochemistry",
+   "solutions-chemistry",
+   "chemical-kinetics"
+  ]
+ },
+ {
+  "z": 9,
+  "sym": "So",
+  "name": "Solutions Chemistry",
+  "slug": "solutions-chemistry",
+  "area": "core",
+  "color": "#5b8def",
+  "url": "https://chemisters.com/solutions-chemistry/",
+  "linkedin_org_id": "111106404",
+  "facebook_page_id": null,
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/111106404"
+  },
+  "related": [
+   "entropy-in-chemistry",
+   "chemical-structure-and-reactivity",
+   "thermochemistry"
+  ]
+ },
+ {
+  "z": 10,
+  "sym": "Rx",
+  "name": "Chemical Structure & Reactivity",
+  "slug": "chemical-structure-and-reactivity",
+  "area": "core",
+  "color": "#5b8def",
+  "url": "https://chemisters.com/chemical-structure-and-reactivity/",
+  "linkedin_org_id": "110412248",
+  "facebook_page_id": null,
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/110412248"
+  },
+  "related": [
+   "solutions-chemistry",
+   "entropy-in-chemistry",
+   "thermochemistry"
+  ]
+ },
+ {
+  "z": 11,
+  "sym": "Sy",
+  "name": "Synthetic Chemistry",
+  "slug": "synthetic-chemistry",
+  "area": "synthetic",
+  "color": "#f2994a",
+  "url": "https://chemisters.com/synthetic-chemistry/",
+  "linkedin_org_id": "109476977",
+  "facebook_page_id": null,
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/109476977"
+  },
+  "related": [
+   "heterocyclic-chemistry",
+   "retrosynthesis",
+   "catalytic-chemistry"
+  ]
+ },
+ {
+  "z": 12,
+  "sym": "Hc",
+  "name": "Heterocyclic Chemistry",
+  "slug": "heterocyclic-chemistry",
+  "area": "synthetic",
+  "color": "#f2994a",
+  "url": "https://chemisters.com/heterocyclic-chemistry/",
+  "linkedin_org_id": "108563324",
+  "facebook_page_id": "917266874809667",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/108563324",
+   "facebook": "https://www.facebook.com/917266874809667"
+  },
+  "related": [
+   "synthetic-chemistry",
+   "retrosynthesis",
+   "catalytic-chemistry"
+  ]
+ },
+ {
+  "z": 13,
+  "sym": "Rs",
+  "name": "Retrosynthesis",
+  "slug": "retrosynthesis",
+  "area": "synthetic",
+  "color": "#f2994a",
+  "url": "https://chemisters.com/retrosynthesis/",
+  "linkedin_org_id": "112835037",
+  "facebook_page_id": "1427914273728805",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/112835037",
+   "facebook": "https://www.facebook.com/1427914273728805"
+  },
+  "related": [
+   "heterocyclic-chemistry",
+   "catalytic-chemistry",
+   "synthetic-chemistry"
+  ]
+ },
+ {
+  "z": 14,
+  "sym": "Ct",
+  "name": "Catalytic Chemistry",
+  "slug": "catalytic-chemistry",
+  "area": "synthetic",
+  "color": "#f2994a",
+  "url": "https://chemisters.com/catalytic-chemistry/",
+  "linkedin_org_id": "114363982",
+  "facebook_page_id": "1203169896209143",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/114363982",
+   "facebook": "https://www.facebook.com/1203169896209143"
+  },
+  "related": [
+   "green-chemistry",
+   "retrosynthesis",
+   "reactive-matter"
+  ]
+ },
+ {
+  "z": 15,
+  "sym": "Rm",
+  "name": "Reactive Matter",
+  "slug": "reactive-matter",
+  "area": "synthetic",
+  "color": "#f2994a",
+  "url": "https://chemisters.com/reactive-matter/",
+  "linkedin_org_id": "110790261",
+  "facebook_page_id": "1384954001364847",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/110790261",
+   "facebook": "https://www.facebook.com/1384954001364847"
+  },
+  "related": [
+   "catalytic-chemistry",
+   "green-chemistry",
+   "retrosynthesis"
+  ]
+ },
+ {
+  "z": 16,
+  "sym": "Gr",
+  "name": "Green Chemistry",
+  "slug": "green-chemistry",
+  "area": "synthetic",
+  "color": "#f2994a",
+  "url": "https://chemisters.com/green-chemistry/",
+  "linkedin_org_id": "108366170",
+  "facebook_page_id": "837662889425184",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/108366170",
+   "facebook": "https://www.facebook.com/837662889425184"
+  },
+  "related": [
+   "catalytic-chemistry",
+   "reactive-matter",
+   "photochemistry"
+  ]
+ },
+ {
+  "z": 17,
+  "sym": "Pc",
+  "name": "Photochemistry",
+  "slug": "photochemistry",
+  "area": "synthetic",
+  "color": "#f2994a",
+  "url": "https://chemisters.com/photochemistry/",
+  "linkedin_org_id": "110115014",
+  "facebook_page_id": "959604823904811",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/110115014",
+   "facebook": "https://www.facebook.com/959604823904811"
+  },
+  "related": [
+   "surface-chemistry",
+   "green-chemistry",
+   "electrochemistry"
+  ]
+ },
+ {
+  "z": 18,
+  "sym": "Ec",
+  "name": "Electrochemistry",
+  "slug": "electrochemistry",
+  "area": "synthetic",
+  "color": "#f2994a",
+  "url": "https://chemisters.com/electrochemistry/",
+  "linkedin_org_id": "110123965",
+  "facebook_page_id": "911079622093911",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/110123965",
+   "facebook": "https://www.facebook.com/911079622093911"
+  },
+  "related": [
+   "photochemistry",
+   "energy-chemistry",
+   "chemistry-of-materials"
+  ]
+ },
+ {
+  "z": 19,
+  "sym": "Io",
+  "name": "Inorganic Chemistry",
+  "slug": "inorganic-chemistry",
+  "area": "applied",
+  "color": "#9bc53d",
+  "url": "https://chemisters.com/inorganic-chemistry/",
+  "linkedin_org_id": null,
+  "facebook_page_id": "1210415018812961",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/the-inorganic-chemistry/",
+   "facebook": "https://www.facebook.com/1210415018812961"
+  },
+  "related": [
+   "photochemistry",
+   "green-chemistry",
+   "catalytic-chemistry"
+  ]
+ },
+ {
+  "z": 20,
+  "sym": "Id",
+  "name": "Industrial Chemistry",
+  "slug": "industrial-chemistry",
+  "area": "applied",
+  "color": "#9bc53d",
+  "url": "https://chemisters.com/industrial-chemistry/",
+  "linkedin_org_id": "109820777",
+  "facebook_page_id": "1003153776205999",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/109820777",
+   "facebook": "https://www.facebook.com/1003153776205999"
+  },
+  "related": [
+   "chemical-engineering",
+   "quality-control",
+   "applied-chemistry"
+  ]
+ },
+ {
+  "z": 21,
+  "sym": "Cg",
+  "name": "Chemical Engineering",
+  "slug": "chemical-engineering",
+  "area": "applied",
+  "color": "#9bc53d",
+  "url": "https://chemisters.com/chemical-engineering/",
+  "linkedin_org_id": "112032374",
+  "facebook_page_id": null,
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/112032374"
+  },
+  "related": [
+   "industrial-chemistry",
+   "quality-control",
+   "applied-chemistry"
+  ]
+ },
+ {
+  "z": 22,
+  "sym": "Qc",
+  "name": "Quality Control",
+  "slug": "quality-control",
+  "area": "applied",
+  "color": "#9bc53d",
+  "url": "https://chemisters.com/quality-control/",
+  "linkedin_org_id": "111365924",
+  "facebook_page_id": null,
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/111365924"
+  },
+  "related": [
+   "analytical-chemistry",
+   "chemical-engineering",
+   "applied-chemistry"
+  ]
+ },
+ {
+  "z": 23,
+  "sym": "Ap",
+  "name": "Applied Chemistry",
+  "slug": "applied-chemistry",
+  "area": "applied",
+  "color": "#9bc53d",
+  "url": "https://chemisters.com/applied-chemistry/",
+  "linkedin_org_id": "110636050",
+  "facebook_page_id": "1097311140142292",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/110636050",
+   "facebook": "https://www.facebook.com/1097311140142292"
+  },
+  "related": [
+   "quality-control",
+   "chemical-engineering",
+   "industrial-chemistry"
+  ]
+ },
+ {
+  "z": 24,
+  "sym": "Fo",
+  "name": "Forensic Chemistry",
+  "slug": "forensic-chemistry",
+  "area": "applied",
+  "color": "#9bc53d",
+  "url": "https://chemisters.com/forensic-chemistry/",
+  "linkedin_org_id": "110792221",
+  "facebook_page_id": "986575247867982",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/110792221",
+   "facebook": "https://www.facebook.com/986575247867982"
+  },
+  "related": [
+   "analytical-chemistry",
+   "quality-control",
+   "structural-chemistry"
+  ]
+ },
+ {
+  "z": 25,
+  "sym": "Eg",
+  "name": "Energy Chemistry",
+  "slug": "energy-chemistry",
+  "area": "applied",
+  "color": "#9bc53d",
+  "url": "https://chemisters.com/energy-chemistry/",
+  "linkedin_org_id": "110115013",
+  "facebook_page_id": "890064814201409",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/110115013",
+   "facebook": "https://www.facebook.com/890064814201409"
+  },
+  "related": [
+   "electrochemistry",
+   "photochemistry",
+   "chemistry-of-materials"
+  ]
+ },
+ {
+  "z": 26,
+  "sym": "Fd",
+  "name": "Food Chemistry",
+  "slug": "food-chemistry",
+  "area": "applied",
+  "color": "#9bc53d",
+  "url": "https://chemisters.com/food-chemistry/",
+  "linkedin_org_id": "110145025",
+  "facebook_page_id": "987048457822150",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/110145025",
+   "facebook": "https://www.facebook.com/987048457822150"
+  },
+  "related": [
+   "quality-control",
+   "analytical-chemistry",
+   "energy-chemistry"
+  ]
+ },
+ {
+  "z": 27,
+  "sym": "Me",
+  "name": "Medicinal Chemistry",
+  "slug": "medicinal-chemistry",
+  "area": "bio",
+  "color": "#ef5d8b",
+  "url": "https://chemisters.com/medicinal-chemistry/",
+  "linkedin_org_id": "108555306",
+  "facebook_page_id": "895784856941090",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/108555306",
+   "facebook": "https://www.facebook.com/895784856941090"
+  },
+  "related": [
+   "biological-chemistry",
+   "bioorganic-chemistry",
+   "drug-discovery"
+  ]
+ },
+ {
+  "z": 28,
+  "sym": "Bc",
+  "name": "Biological Chemistry",
+  "slug": "biological-chemistry",
+  "area": "bio",
+  "color": "#ef5d8b",
+  "url": "https://chemisters.com/biological-chemistry/",
+  "linkedin_org_id": "108361425",
+  "facebook_page_id": "784689181403533",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/108361425",
+   "facebook": "https://www.facebook.com/784689181403533"
+  },
+  "related": [
+   "medicinal-chemistry",
+   "bioorganic-chemistry",
+   "drug-discovery"
+  ]
+ },
+ {
+  "z": 29,
+  "sym": "Dd",
+  "name": "Drug Discovery",
+  "slug": "drug-discovery",
+  "area": "bio",
+  "color": "#ef5d8b",
+  "url": "https://chemisters.com/drug-discovery/",
+  "linkedin_org_id": "109813829",
+  "facebook_page_id": "1106215462575381",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/109813829",
+   "facebook": "https://www.facebook.com/1106215462575381"
+  },
+  "related": [
+   "biological-chemistry",
+   "bioorganic-chemistry",
+   "medicinal-chemistry"
+  ]
+ },
+ {
+  "z": 30,
+  "sym": "Bo",
+  "name": "Bioorganic Chemistry",
+  "slug": "bioorganic-chemistry",
+  "area": "bio",
+  "color": "#ef5d8b",
+  "url": "https://chemisters.com/bioorganic-chemistry/",
+  "linkedin_org_id": "110637045",
+  "facebook_page_id": null,
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/110637045"
+  },
+  "related": [
+   "biological-chemistry",
+   "medicinal-chemistry",
+   "drug-discovery"
+  ]
+ },
+ {
+  "z": 31,
+  "sym": "Py",
+  "name": "Polymer Chemistry",
+  "slug": "polymer-chemistry",
+  "area": "bio",
+  "color": "#ef5d8b",
+  "url": "https://chemisters.com/polymer-chemistry/",
+  "linkedin_org_id": "110117974",
+  "facebook_page_id": "1031491246703738",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/110117974",
+   "facebook": "https://www.facebook.com/1031491246703738"
+  },
+  "related": [
+   "chemistry-of-materials",
+   "sustainable-materials-and-circular-chemistry",
+   "nanochemistry"
+  ]
+ },
+ {
+  "z": 32,
+  "sym": "Ma",
+  "name": "Marine Chemistry",
+  "slug": "marine-chemistry",
+  "area": "bio",
+  "color": "#ef5d8b",
+  "url": "https://chemisters.com/marine-chemistry/",
+  "linkedin_org_id": "115803232",
+  "facebook_page_id": null,
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/115803232"
+  },
+  "related": [
+   "environmental-chemistry",
+   "sustainable-materials-and-circular-chemistry",
+   "green-chemistry"
+  ]
+ },
+ {
+  "z": 33,
+  "sym": "Ev",
+  "name": "Environmental Chemistry",
+  "slug": "environmental-chemistry",
+  "area": "bio",
+  "color": "#ef5d8b",
+  "url": "https://chemisters.com/environmental-chemistry/",
+  "linkedin_org_id": "114304070",
+  "facebook_page_id": "1149279181601720",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/114304070",
+   "facebook": "https://www.facebook.com/1149279181601720"
+  },
+  "related": [
+   "marine-chemistry",
+   "sustainable-materials-and-circular-chemistry",
+   "green-chemistry"
+  ]
+ },
+ {
+  "z": 34,
+  "sym": "Cp",
+  "name": "Computational Chemistry",
+  "slug": "computational-chemistry",
+  "area": "comp",
+  "color": "#a78bfa",
+  "url": "https://chemisters.com/computational-chemistry/",
+  "linkedin_org_id": "109477964",
+  "facebook_page_id": "946132968585941",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/109477964",
+   "facebook": "https://www.facebook.com/946132968585941"
+  },
+  "related": [
+   "chemoinformatics",
+   "autonomous-chemistry",
+   "chemical-data-science-and-automation"
+  ]
+ },
+ {
+  "z": 35,
+  "sym": "Ci",
+  "name": "Chemoinformatics",
+  "slug": "chemoinformatics",
+  "area": "comp",
+  "color": "#a78bfa",
+  "url": "https://chemisters.com/chemoinformatics/",
+  "linkedin_org_id": "108361429",
+  "facebook_page_id": "1245185278668713",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/108361429",
+   "facebook": "https://www.facebook.com/1245185278668713"
+  },
+  "related": [
+   "computational-chemistry",
+   "autonomous-chemistry",
+   "chemical-data-science-and-automation"
+  ]
+ },
+ {
+  "z": 36,
+  "sym": "Ao",
+  "name": "Autonomous Chemistry",
+  "slug": "autonomous-chemistry",
+  "area": "comp",
+  "color": "#a78bfa",
+  "url": "https://chemisters.com/autonomous-chemistry/",
+  "linkedin_org_id": "108362446",
+  "facebook_page_id": "781222948411962",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/108362446",
+   "facebook": "https://www.facebook.com/781222948411962"
+  },
+  "related": [
+   "chemoinformatics",
+   "chemical-data-science-and-automation",
+   "computational-chemistry"
+  ]
+ },
+ {
+  "z": 37,
+  "sym": "Dt",
+  "name": "Chemical Data Science & Automation",
+  "slug": "chemical-data-science-and-automation",
+  "area": "comp",
+  "color": "#a78bfa",
+  "url": "https://chemisters.com/chemical-data-science-and-automation/",
+  "linkedin_org_id": "110200145",
+  "facebook_page_id": "1057009130839227",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/110200145",
+   "facebook": "https://www.facebook.com/1057009130839227"
+  },
+  "related": [
+   "autonomous-chemistry",
+   "chemistry-ai-and-ml-applications",
+   "chemoinformatics"
+  ]
+ },
+ {
+  "z": 38,
+  "sym": "Ml",
+  "name": "Chemistry AI & ML Applications",
+  "slug": "chemistry-ai-and-ml-applications",
+  "area": "comp",
+  "color": "#a78bfa",
+  "url": "https://chemisters.com/chemistry-ai-and-ml-applications/",
+  "linkedin_org_id": "110198146",
+  "facebook_page_id": null,
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/110198146"
+  },
+  "related": [
+   "chemical-data-science-and-automation",
+   "ai-in-chemistry-real-use-cases",
+   "autonomous-chemistry"
+  ]
+ },
+ {
+  "z": 39,
+  "sym": "Uc",
+  "name": "AI in Chemistry: Real Use Cases",
+  "slug": "ai-in-chemistry-real-use-cases",
+  "area": "comp",
+  "color": "#a78bfa",
+  "url": "https://chemisters.com/ai-in-chemistry-real-use-cases/",
+  "linkedin_org_id": "110860911",
+  "facebook_page_id": null,
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/110860911"
+  },
+  "related": [
+   "chemistry-ai-and-ml-applications",
+   "the-artificial-intelligence",
+   "chemical-data-science-and-automation"
+  ]
+ },
+ {
+  "z": 40,
+  "sym": "Ai",
+  "name": "The Artificial Intelligence",
+  "slug": "the-artificial-intelligence",
+  "area": "comp",
+  "color": "#a78bfa",
+  "url": "https://chemisters.com/the-artificial-intelligence/",
+  "linkedin_org_id": "109297225",
+  "facebook_page_id": "889252394280465",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/109297225",
+   "facebook": "https://www.facebook.com/889252394280465"
+  },
+  "related": [
+   "ai-in-chemistry-real-use-cases",
+   "chemistry-ai-and-ml-applications",
+   "chemical-data-science-and-automation"
+  ]
+ },
+ {
+  "z": 41,
+  "sym": "Nc",
+  "name": "Nanochemistry",
+  "slug": "nanochemistry",
+  "area": "materials",
+  "color": "#2dd4bf",
+  "url": "https://chemisters.com/nanochemistry/",
+  "linkedin_org_id": "108557323",
+  "facebook_page_id": "1014767208377887",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/108557323",
+   "facebook": "https://www.facebook.com/1014767208377887"
+  },
+  "related": [
+   "chemistry-of-materials",
+   "sustainable-materials-and-circular-chemistry",
+   "supramolecular-chemistry"
+  ]
+ },
+ {
+  "z": 42,
+  "sym": "Mr",
+  "name": "Chemistry of Materials",
+  "slug": "chemistry-of-materials",
+  "area": "materials",
+  "color": "#2dd4bf",
+  "url": "https://chemisters.com/chemistry-of-materials/",
+  "linkedin_org_id": "109543039",
+  "facebook_page_id": "1053660431173915",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/109543039",
+   "facebook": "https://www.facebook.com/1053660431173915"
+  },
+  "related": [
+   "sustainable-materials-and-circular-chemistry",
+   "surface-chemistry",
+   "polymer-chemistry"
+  ]
+ },
+ {
+  "z": 43,
+  "sym": "Cc",
+  "name": "Sustainable Materials & Circular Chemistry",
+  "slug": "sustainable-materials-and-circular-chemistry",
+  "area": "materials",
+  "color": "#2dd4bf",
+  "url": "https://chemisters.com/sustainable-materials-and-circular-chemistry/",
+  "linkedin_org_id": "110198148",
+  "facebook_page_id": "1101581653041345",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/110198148",
+   "facebook": "https://www.facebook.com/1101581653041345"
+  },
+  "related": [
+   "chemistry-of-materials",
+   "polymer-chemistry",
+   "supramolecular-chemistry"
+  ]
+ },
+ {
+  "z": 44,
+  "sym": "Su",
+  "name": "Supramolecular Chemistry",
+  "slug": "supramolecular-chemistry",
+  "area": "materials",
+  "color": "#2dd4bf",
+  "url": "https://chemisters.com/supramolecular-chemistry/",
+  "linkedin_org_id": "109541035",
+  "facebook_page_id": null,
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/109541035"
+  },
+  "related": [
+   "sustainable-materials-and-circular-chemistry",
+   "chemistry-of-materials",
+   "surface-chemistry"
+  ]
+ },
+ {
+  "z": 45,
+  "sym": "Nu",
+  "name": "Nuclear Chemistry",
+  "slug": "nuclear-chemistry",
+  "area": "materials",
+  "color": "#2dd4bf",
+  "url": "https://chemisters.com/nuclear-chemistry/",
+  "linkedin_org_id": "110154940",
+  "facebook_page_id": "1335668622963546",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/110154940",
+   "facebook": "https://www.facebook.com/1335668622963546"
+  },
+  "related": [
+   "inorganic-chemistry",
+   "structural-chemistry",
+   "supramolecular-chemistry"
+  ]
+ },
+ {
+  "z": 46,
+  "sym": "Sf",
+  "name": "Surface Chemistry",
+  "slug": "surface-chemistry",
+  "area": "materials",
+  "color": "#2dd4bf",
+  "url": "https://chemisters.com/surface-chemistry/",
+  "linkedin_org_id": "110632021",
+  "facebook_page_id": "1159541500578349",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/110632021",
+   "facebook": "https://www.facebook.com/1159541500578349"
+  },
+  "related": [
+   "chemistry-of-materials",
+   "photochemistry",
+   "supramolecular-chemistry"
+  ]
+ },
+ {
+  "z": 47,
+  "sym": "Ws",
+  "name": "Wisdom & Stories",
+  "slug": "wisdom-and-stories",
+  "area": "community",
+  "color": "#f5c451",
+  "url": "https://chemisters.com/wisdom-and-stories/",
+  "linkedin_org_id": null,
+  "facebook_page_id": null,
+  "links": {},
+  "related": [
+   "failed-discoveries-that-changed-science",
+   "chemistry-news",
+   "the-chemistry"
+  ]
+ },
+ {
+  "z": 48,
+  "sym": "Nw",
+  "name": "Chemistry News",
+  "slug": "chemistry-news",
+  "area": "community",
+  "color": "#f5c451",
+  "url": "https://chemisters.com/chemistry-news/",
+  "linkedin_org_id": "109816820",
+  "facebook_page_id": "1028835963635926",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/109816820",
+   "facebook": "https://www.facebook.com/1028835963635926"
+  },
+  "related": [
+   "modern-chemistry",
+   "the-chemistry",
+   "creative-chemistry"
+  ]
+ },
+ {
+  "z": 49,
+  "sym": "Ch",
+  "name": "The Chemistry",
+  "slug": "the-chemistry",
+  "area": "community",
+  "color": "#f5c451",
+  "url": "https://chemisters.com/the-chemistry/",
+  "linkedin_org_id": "112177278",
+  "facebook_page_id": "1127335147130283",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/112177278",
+   "facebook": "https://www.facebook.com/1127335147130283"
+  },
+  "related": [
+   "molecular-systems",
+   "chemical-systems",
+   "chemistry-news"
+  ]
+ },
+ {
+  "z": 50,
+  "sym": "Mx",
+  "name": "Modern Chemistry",
+  "slug": "modern-chemistry",
+  "area": "community",
+  "color": "#f5c451",
+  "url": "https://chemisters.com/modern-chemistry/",
+  "linkedin_org_id": "110426188",
+  "facebook_page_id": null,
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/110426188"
+  },
+  "related": [
+   "chemistry-news",
+   "the-chemistry",
+   "creative-chemistry"
+  ]
+ },
+ {
+  "z": 51,
+  "sym": "Cv",
+  "name": "Creative Chemistry",
+  "slug": "creative-chemistry",
+  "area": "community",
+  "color": "#f5c451",
+  "url": "https://chemisters.com/creative-chemistry/",
+  "linkedin_org_id": "111350458",
+  "facebook_page_id": "1148383671696764",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/111350458",
+   "facebook": "https://www.facebook.com/1148383671696764"
+  },
+  "related": [
+   "amazing-lab-experiments",
+   "modern-chemistry",
+   "chemistry-professionals"
+  ]
+ },
+ {
+  "z": 52,
+  "sym": "Pf",
+  "name": "Chemistry Professionals",
+  "slug": "chemistry-professionals",
+  "area": "community",
+  "color": "#f5c451",
+  "url": "https://chemisters.com/chemistry-professionals/",
+  "linkedin_org_id": "110421179",
+  "facebook_page_id": null,
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/110421179"
+  },
+  "related": [
+   "creative-chemistry",
+   "failed-discoveries-that-changed-science",
+   "modern-chemistry"
+  ]
+ },
+ {
+  "z": 53,
+  "sym": "Fa",
+  "name": "Failed Discoveries That Changed Science",
+  "slug": "failed-discoveries-that-changed-science",
+  "area": "community",
+  "color": "#f5c451",
+  "url": "https://chemisters.com/failed-discoveries-that-changed-science/",
+  "linkedin_org_id": "110857180",
+  "facebook_page_id": "1307797865748659",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/110857180",
+   "facebook": "https://www.facebook.com/1307797865748659"
+  },
+  "related": [
+   "chemistry-professionals",
+   "amazing-lab-experiments",
+   "creative-chemistry"
+  ]
+ },
+ {
+  "z": 54,
+  "sym": "Le",
+  "name": "Amazing Lab Experiments",
+  "slug": "amazing-lab-experiments",
+  "area": "community",
+  "color": "#f5c451",
+  "url": "https://chemisters.com/amazing-lab-experiments/",
+  "linkedin_org_id": "110148997",
+  "facebook_page_id": null,
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/110148997"
+  },
+  "related": [
+   "creative-chemistry",
+   "failed-discoveries-that-changed-science",
+   "molecular-systems"
+  ]
+ },
+ {
+  "z": 55,
+  "sym": "Ms",
+  "name": "Molecular Systems",
+  "slug": "molecular-systems",
+  "area": "community",
+  "color": "#f5c451",
+  "url": "https://chemisters.com/molecular-systems/",
+  "linkedin_org_id": "110780320",
+  "facebook_page_id": "1270400636160265",
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/110780320",
+   "facebook": "https://www.facebook.com/1270400636160265"
+  },
+  "related": [
+   "chemical-systems",
+   "the-chemistry",
+   "amazing-lab-experiments"
+  ]
+ },
+ {
+  "z": 56,
+  "sym": "Cy",
+  "name": "Chemical Systems",
+  "slug": "chemical-systems",
+  "area": "community",
+  "color": "#f5c451",
+  "url": "https://chemisters.com/chemical-systems/",
+  "linkedin_org_id": "110794212",
+  "facebook_page_id": null,
+  "links": {
+   "linkedin": "https://www.linkedin.com/company/110794212"
+  },
+  "related": [
+   "molecular-systems",
+   "the-chemistry",
+   "amazing-lab-experiments"
+  ]
+ }
+]
