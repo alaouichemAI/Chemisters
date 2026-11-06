@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Chemisters — The Periodic Table of Chemistry Pages</title>
+<meta name="description" content="Chemisters is a network of chemistry pages, one per field: new papers with a link to the source, news, innovations, and researchers presenting their own work. Find your field and follow it.">
+<link rel="canonical" href="https://chemisters.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Chemisters">
+<meta property="og:title" content="Chemisters — The Periodic Table of Chemistry Pages">
+<meta property="og:description" content="A network of chemistry pages, one per field. Find your element and follow it.">
+<meta property="og:url" content="https://chemisters.com/">
+<meta property="og:image" content="https://chemisters.com/assets/og-chemisters.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Chemisters: a periodic table of chemistry pages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://chemisters.com/assets/og-chemisters.jpg">
+<meta name="theme-color" content="#070b16">
+<link rel="icon" type="image/png" href="images/Chemisters_logo.png">
+<link rel="apple-touch-icon" href="images/Chemisters_logo.png">
+<link rel="preload" href="assets/fonts/unbounded.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<!-- ANALYTICS (optional, privacy-friendly): self-host Umami next to n8n, then uncomment and fill in.
+     Follow buttons, tiles, the picker and the paper finder already send named events.
+<script defer src="https://YOUR-UMAMI-DOMAIN/script.js" data-website-id="YOUR-WEBSITE-ID"></script>
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Chemisters",
+  "url": "https://chemisters.com/",
+  "logo": "https://chemisters.com/images/Chemisters_logo.png",
+  "foundingDate": "2025",
+  "email": "contact@chemisters.com",
+  "founder": {
+    "@type": "Person",
+    "name": "Mohamed El Belghiti Alaoui",
+    "jobTitle": "PhD student, artificial intelligence for Alzheimer's disease",
+    "url": "https://www.linkedin.com/in/mohamed-el-belghiti-alaoui-568600326/"
+  }
+}
+</script>
+<style>
+@font-face { font-family: "Unbounded"; src: url("assets/fonts/unbounded.woff2") format("woff2"); font-weight: 200 900; font-display: swap; }
+@font-face { font-family: "Figtree"; src: url("assets/fonts/figtree.woff2") format("woff2"); font-weight: 300 900; font-display: swap; }
+@font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/jetbrains-mono.woff2") format("woff2"); font-weight: 100 800; font-display: swap; }
+/* Concept: "the lab at night". The periodic table of Chemisters pages is the first thing you see,
+   glowing on a dark bench, opening onto paper-white reading sections.
+   Display: Unbounded. Body: Figtree. Data: JetBrains Mono. */
+:root {
+  --night: #070b16;
+  --night-2: #0c1324;
+  --night-3: #131c33;
+  --night-line: #1f2a45;
+  --glow: #e9eefc;
+  --mist: #93a0bf;
+
+  --paper: #f6f7fb;
+  --white: #ffffff;
+  --ink: #0d1324;
+  --ink-2: #39435c;
+  --muted: #667089;
+  --line: #e1e5ef;
+  --accent: #3b6cf6;
+  --accent-2: #2a55d4;
+  --accent-soft: #e8eefe;
+  --live: #4ade80;
+
+  /* areas */
+  --core: #5b8def;
+  --synthetic: #f2994a;
+  --applied: #9bc53d;
+  --bio: #ef5d8b;
+  --comp: #a78bfa;
+  --materials: #2dd4bf;
+  --community: #f5c451;
+
+  --display: "Unbounded", "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  --body: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --maxw: 1240px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 16.5px/1.65 var(--body); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+p { margin: 0; }
+button, input, textarea { font: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.skip { position: absolute; left: -9999px; }
+.skip:focus { left: 16px; top: 12px; z-index: 300; background: #fff; color: var(--ink); padding: 8px 12px; border-radius: 8px; }
+[hidden] { display: none !important; }
+
+/* ---------- progress + nav ---------- */
+.progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; z-index: 210; background: linear-gradient(90deg, var(--core), var(--comp), var(--bio), var(--synthetic), var(--community)); }
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; transition: background .3s ease, border-color .3s ease; border-bottom: 1px solid transparent; }
+.nav .wrap { display: flex; align-items: center; gap: 18px; height: 70px; }
+.nav.solid { background: rgba(7, 11, 22, .86); -webkit-backdrop-filter: blur(14px) saturate(1.3); backdrop-filter: blur(14px) saturate(1.3); border-bottom-color: var(--night-line); }
+.nav.light { background: rgba(255, 255, 255, .9); border-bottom-color: var(--line); }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; margin-right: auto; color: var(--glow); }
+.nav.light .brand { color: var(--ink); }
+.brand img { width: 34px; height: 34px; border-radius: 9px; object-fit: cover; }
+.brand span { font-family: var(--display); font-weight: 700; font-size: 17px; letter-spacing: -.01em; }
+.links { display: flex; align-items: center; gap: 2px; list-style: none; margin: 0; padding: 0; }
+.links a { text-decoration: none; color: var(--mist); font-weight: 600; font-size: 15px; padding: 8px 12px; border-radius: 9px; transition: color .2s, background .2s; }
+.links a:hover { color: var(--glow); background: rgba(255,255,255,.06); }
+.nav.light .links a { color: var(--ink-2); }
+.nav.light .links a:hover { color: var(--ink); background: var(--accent-soft); }
+.links .cta { background: var(--accent); color: #fff !important; margin-left: 6px; }
+.links .cta:hover { background: var(--accent-2) !important; }
+.burger { display: none; width: 44px; height: 44px; border-radius: 11px; border: 1px solid var(--night-line); background: transparent; color: var(--glow); cursor: pointer; place-items: center; }
+.nav.light .burger { border-color: var(--line); color: var(--ink); }
+.burger span, .burger span::before, .burger span::after { display: block; width: 18px; height: 2px; background: currentColor; border-radius: 2px; position: relative; transition: transform .25s; }
+.burger span::before, .burger span::after { content: ""; position: absolute; left: 0; }
+.burger span::before { top: -6px; } .burger span::after { top: 6px; }
+.burger[aria-expanded="true"] span { background: transparent; }
+.burger[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
+.burger[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+@media (max-width: 900px) {
+  .burger { display: grid; }
+  .links { position: absolute; top: 70px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 4px; padding: 12px max(20px, env(safe-area-inset-right, 0px)) 18px max(20px, env(safe-area-inset-left, 0px)); background: var(--night-2); border-bottom: 1px solid var(--night-line); display: none; }
+  .links.open { display: flex; }
+  .links a { padding: 13px 14px; font-size: 16px; color: var(--glow) !important; }
+  .links .cta { margin: 6px 0 0; text-align: center; }
+}
+
+/* ---------- the lab: hero + table in one ---------- */
+.lab { position: relative; color: var(--glow); padding: 96px 0 64px; overflow: hidden;
+  background:
+    radial-gradient(1100px 520px at 80% -10%, #15204a 0%, transparent 62%),
+    radial-gradient(800px 480px at 0% 100%, #170f33 0%, transparent 60%),
+    linear-gradient(180deg, var(--night) 0%, var(--night-2) 100%); }
+/* faint bench grid, static */
+.lab::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5;
+  background-image: linear-gradient(rgba(147,160,191,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(147,160,191,.06) 1px, transparent 1px);
+  background-size: 44px 44px; -webkit-mask-image: radial-gradient(ellipse at 50% 30%, #000 30%, transparent 75%); mask-image: radial-gradient(ellipse at 50% 30%, #000 30%, transparent 75%); }
+.lab .wrap { position: relative; }
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px 48px; align-items: end; margin-bottom: 24px; }
+.kicker { font-family: var(--mono); font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--mist); display: flex; align-items: center; gap: 10px; }
+.kicker .sw { display: inline-flex; gap: 3px; }
+.kicker .sw i { width: 8px; height: 8px; border-radius: 2px; background: var(--fc); box-shadow: 0 0 8px var(--fc); }
+.intro h1 { font-family: var(--display); font-weight: 800; font-size: clamp(32px, 4.2vw, 56px); line-height: 1; letter-spacing: -.035em; margin-top: 12px; }
+.intro h1 span { color: var(--mist); }
+.intro .sub { font-size: clamp(16px, 1.35vw, 18px); color: #b9c3dd; max-width: 70ch; margin-top: 12px; }
+.intro-ctas { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; text-decoration: none; cursor: pointer; font-weight: 700; font-size: 15.5px; padding: 13px 20px; border-radius: 12px; border: 1px solid transparent; transition: transform .18s ease, background .18s ease, box-shadow .18s ease, border-color .18s ease; }
+.btn:hover { transform: translateY(-2px); }
+.btn svg { width: 18px; height: 18px; flex: none; }
+.btn-glow { background: var(--glow); color: var(--night); box-shadow: 0 10px 40px -12px rgba(140, 170, 255, .55); }
+.btn-glow:hover { box-shadow: 0 16px 50px -12px rgba(140, 170, 255, .75); }
+.btn-ghost-dark { color: var(--glow); border-color: #2c3a5f; background: rgba(255,255,255,.03); }
+.btn-ghost-dark:hover { border-color: #5a6c99; background: rgba(255,255,255,.07); }
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-2); box-shadow: 0 12px 30px -12px rgba(59,108,246,.7); }
+.stats { display: grid; grid-template-columns: repeat(2, auto); gap: 14px 36px; justify-content: end; }
+.stat b { display: block; font-family: var(--display); font-weight: 700; font-size: clamp(24px, 2.6vw, 32px); letter-spacing: -.02em; font-variant-numeric: tabular-nums; line-height: 1.15; }
+.stat span { font-family: var(--mono); font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--mist); }
+.stat.live b { display: flex; align-items: center; gap: 10px; font-size: clamp(18px, 1.8vw, 22px); }
+.stat.live b::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--live); box-shadow: 0 0 0 0 rgba(74,222,128,.6); animation: beat 2s ease-out infinite; flex: none; }
+@keyframes beat { 0% { box-shadow: 0 0 0 0 rgba(74,222,128,.55); } 70%, 100% { box-shadow: 0 0 0 10px rgba(74,222,128,0); } }
+@media (max-width: 900px) { .intro { grid-template-columns: 1fr; } .stats { justify-content: start; grid-template-columns: repeat(4, auto); gap: 10px 26px; } }
+@media (max-width: 560px) {
+  .lab { padding-top: 88px; }
+  .intro .sub { font-size: 15.5px; line-height: 1.55; }
+  .intro-ctas .btn { padding: 11px 15px; font-size: 14.5px; }
+  .intro-ctas .cta-2, .sub-more { display: none; }
+  .stats { gap: 8px 20px; }
+  .stat b { font-size: 21px; }
+  .stat.live b { font-size: 16px; gap: 7px; }
+  .stat span { font-size: 10px; letter-spacing: .06em; }
+}
+
+/* controls */
+.controls { display: grid; gap: 12px; margin-bottom: 18px; }
+.row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.fam-tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.fam-tab { display: inline-flex; align-items: center; gap: 8px; padding: 7px 13px; border-radius: 999px; border: 1px solid var(--night-line); background: rgba(255,255,255,.025); color: #c8d1ea; font-weight: 600; font-size: 14px; cursor: pointer; transition: all .22s ease; white-space: nowrap; }
+.fam-tab i { width: 10px; height: 10px; border-radius: 3px; background: var(--fc, var(--glow)); box-shadow: 0 0 10px var(--fc, transparent); }
+.fam-tab:hover { border-color: color-mix(in srgb, var(--fc, #8aa0d8) 60%, transparent); color: #fff; }
+.fam-tab[aria-pressed="true"] { background: color-mix(in srgb, var(--fc, #e9eefc) 18%, transparent); border-color: var(--fc, var(--glow)); color: #fff; }
+.fam-tab .n { font-family: var(--mono); font-size: 11.5px; color: var(--mist); }
+.search { position: relative; flex: 1 1 240px; max-width: 340px; }
+.search input { width: 100%; font: 500 15px var(--body); color: var(--glow); background: rgba(255,255,255,.04); border: 1px solid var(--night-line); border-radius: 12px; padding: 10px 14px 10px 40px; outline: none; transition: border-color .2s, box-shadow .2s; }
+.search input::placeholder { color: #6f7b99; }
+.search input:focus { border-color: #5a6c99; box-shadow: 0 0 0 4px rgba(91,141,239,.15); }
+.search svg { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); width: 17px; height: 17px; stroke: #7c89aa; fill: none; stroke-width: 2.3; }
+.tools { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-left: auto; }
+.seg { display: inline-flex; padding: 3px; border-radius: 12px; border: 1px solid var(--night-line); background: rgba(255,255,255,.03); }
+.seg button { border: 0; background: transparent; color: #aab5d1; font-weight: 600; font-size: 14px; padding: 7px 12px; border-radius: 9px; cursor: pointer; display: inline-flex; gap: 6px; align-items: center; }
+.seg button svg { width: 16px; height: 16px; }
+.seg button[aria-pressed="true"] { background: rgba(255,255,255,.1); color: #fff; }
+.chip-btn { border: 1px solid var(--night-line); background: rgba(255,255,255,.03); color: #c8d1ea; font-weight: 600; font-size: 14px; padding: 8px 14px; border-radius: 12px; cursor: pointer; display: inline-flex; gap: 8px; align-items: center; transition: all .2s; }
+.chip-btn:hover { border-color: #5a6c99; color: #fff; }
+.chip-btn[aria-pressed="true"] { border-color: var(--community); color: #fff; background: rgba(245,196,81,.12); }
+.chip-btn svg { width: 16px; height: 16px; }
+.status { font-family: var(--mono); font-size: 12.5px; color: var(--mist); min-height: 1.4em; display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: center; flex: 1 1 200px; }
+.status b { color: var(--glow); font-weight: 500; }
+.status button { border: 0; background: none; color: #cfd8f2; font: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; padding: 0; }
+@media (max-width: 700px) {
+  .fam-tabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-left: -20px; margin-right: -20px; padding: 2px 20px 4px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 20px, #000 calc(100% - 28px), transparent); mask-image: linear-gradient(90deg, transparent, #000 20px, #000 calc(100% - 28px), transparent); }
+  .fam-tabs::-webkit-scrollbar { display: none; }
+  .search { max-width: none; flex-basis: 100%; }
+  .tools { margin-left: 0; width: 100%; justify-content: flex-start; flex-wrap: wrap; }
+  #surprise .lbl, [data-open-quiz] .lbl { display: none; }
+  .tools [data-open-quiz] .lbl-s { display: inline; }
+  #surprise { padding: 8px 11px; }
+  .status { order: 3; flex-basis: 100%; }
+}
+
+/* periodic table */
+.ptable-wrap { position: relative; }
+.ptable { display: grid; grid-template-columns: repeat(18, minmax(0, 1fr)); gap: 6px; position: relative; }
+.tile {
+  --fc: var(--core);
+  position: relative; aspect-ratio: 1 / 1.06; min-width: 0; text-align: left; cursor: pointer;
+  border-radius: 9px; border: 1px solid color-mix(in srgb, var(--fc) 42%, transparent);
+  background: linear-gradient(160deg, color-mix(in srgb, var(--fc) 22%, var(--night-2)) 0%, color-mix(in srgb, var(--fc) 8%, var(--night-2)) 100%);
+  color: var(--glow);
+  display: flex; flex-direction: column; justify-content: space-between; padding: 6% 9% 8%;
+  transition: opacity .45s ease, filter .45s ease, transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .25s ease, border-color .25s ease, background .5s ease;
+  transition-delay: var(--d, 0ms);
+}
+.tile .z { font-family: var(--mono); font-size: clamp(8px, .72vw, 11px); color: color-mix(in srgb, var(--fc) 70%, #fff); opacity: .85; line-height: 1; }
+.tile .sym { font-family: var(--display); font-weight: 700; font-size: clamp(13px, 1.55vw, 22px); line-height: 1; letter-spacing: -.02em; color: color-mix(in srgb, var(--fc) 55%, #fff); }
+.tile .sym img { width: 60%; aspect-ratio: 1; object-fit: contain; border-radius: 4px; }
+.tile .nm { display: none; }
+.tile .dots { display: flex; gap: 3px; height: 5px; align-items: center; }
+.tile .dots i { width: 5px; height: 5px; border-radius: 50%; background: var(--fc); opacity: .9; }
+.tile .fol { display: none; font-family: var(--mono); font-size: clamp(8px, .7vw, 10.5px); line-height: 1; color: #fff; }
+.tile.fresh::after { content: ""; position: absolute; top: 7%; right: 9%; width: 7px; height: 7px; border-radius: 50%; background: var(--live); box-shadow: 0 0 8px var(--live); animation: beat 2.4s ease-out infinite; }
+.tile:hover, .tile.peek { transform: translateY(-3px) scale(1.06); z-index: 3; border-color: var(--fc); box-shadow: 0 0 0 1px var(--fc), 0 10px 30px -6px color-mix(in srgb, var(--fc) 70%, transparent); transition-delay: 0ms; }
+.tile.pinned { border-color: var(--fc); box-shadow: 0 0 0 2px var(--fc), 0 0 34px -4px var(--fc); z-index: 4; }
+.tile.off { opacity: .1; filter: grayscale(1) blur(.4px); transform: scale(.8); }
+.tile.off:hover { opacity: .3; transform: scale(.86); box-shadow: none; }
+.tile.hit { animation: hit .6s ease both; animation-delay: var(--d, 0ms); }
+@keyframes hit { 0% { box-shadow: 0 0 0 0 var(--fc); } 40% { box-shadow: 0 0 0 4px color-mix(in srgb, var(--fc) 55%, transparent), 0 0 30px var(--fc); } 100% { box-shadow: 0 0 0 0 transparent; } }
+.tile.pulse { animation: pulse 1.2s ease 2; }
+@keyframes pulse { 50% { transform: scale(1.18); box-shadow: 0 0 0 3px var(--fc), 0 0 50px var(--fc); } }
+/* collected tiles */
+.tile.got { border-color: var(--fc); background: linear-gradient(160deg, color-mix(in srgb, var(--fc) 38%, var(--night-2)) 0%, color-mix(in srgb, var(--fc) 16%, var(--night-2)) 100%); }
+.tile.got::before { content: "✓"; position: absolute; right: 9%; bottom: 6%; font: 700 clamp(9px, .8vw, 12px)/1 var(--body); color: #fff; }
+.ptable.heat .tile.got::before { content: none; }
+.gotp { color: var(--live) !important; font-size: 14px !important; font-weight: 600; }
+.got-line { color: var(--live); }
+.pick.is-got h3::after { content: " ✓"; color: var(--live); }
+.pick h3 a { color: #fff; text-decoration: none; } .pick h3 a:hover { text-decoration: underline; }
+.gotw { color: var(--live) !important; }
+#surprise .lbl-s, [data-open-quiz] .lbl-s { display: none; }
+/* quiz */
+.qbar { height: 4px; border-radius: 4px; background: var(--night-3); overflow: hidden; margin-top: -6px; }
+.qbar i { display: block; height: 100%; background: linear-gradient(90deg, var(--core), var(--comp), var(--bio)); transition: width .3s ease; }
+.qopts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.qopt { text-align: left; border: 1px solid var(--night-line); background: rgba(255,255,255,.03); color: #e3e9fa; font-weight: 600; font-size: 15.5px; padding: 16px; border-radius: 14px; cursor: pointer; transition: all .18s; }
+.qopt:hover { border-color: var(--glow); background: rgba(233,238,252,.08); transform: translateY(-2px); }
+.qres { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 22px; align-items: center; }
+.qres .big { width: 140px; }
+.qres .fam { font-family: var(--mono); font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; }
+.qres h2 { margin-top: 4px; }
+.pk .qres .lead { margin-top: 10px; }
+.qalso { font-size: 15px; font-weight: 700; color: #cfd8f2; margin-bottom: -6px; }
+@media (max-width: 560px) { .qopts { grid-template-columns: 1fr; } .qres { grid-template-columns: 1fr; } .qres .big { width: 112px; } }
+/* the "next field" tile */
+.tile.ghost { --fc: #93a0bf; border: 1px dashed rgba(147,160,191,.55); background: rgba(255,255,255,.02); }
+.tile.ghost .sym { color: var(--mist); font-weight: 500; }
+.tile.ghost:hover, .tile.ghost.pinned { border-style: solid; border-color: var(--glow); box-shadow: 0 0 0 1px var(--glow), 0 10px 30px -8px rgba(233,238,252,.4); }
+.ptable.heat .tile.ghost { background: rgba(255,255,255,.02); }
+.big.ghost-big { --fc: #93a0bf; border-style: dashed; background: rgba(255,255,255,.03); box-shadow: none; }
+.big.ghost-big .sym { color: var(--mist); font-weight: 500; }
+.fam-core { --fc: var(--core); } .fam-synthetic { --fc: var(--synthetic); } .fam-applied { --fc: var(--applied); }
+.fam-bio { --fc: var(--bio); } .fam-comp { --fc: var(--comp); } .fam-materials { --fc: var(--materials); } .fam-community { --fc: var(--community); }
+
+/* heat view: colour strength follows the page's followers */
+.ptable.heat .tile { background: color-mix(in srgb, var(--fc) var(--hp, 6%), var(--night-2)); border-color: color-mix(in srgb, var(--fc) calc(var(--hp, 6%) + 20%), transparent); }
+.ptable.heat .tile .dots { display: none; }
+.ptable.heat .tile .fol { display: block; }
+.ptable.heat .tile .sym { color: #fff; }
+.heat-key { display: flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 12px; color: var(--mist); }
+.heat-key i { width: 120px; height: 8px; border-radius: 4px; background: linear-gradient(90deg, var(--night-3), var(--glow)); }
+
+.sweep { position: absolute; top: -10px; bottom: -10px; left: 0; width: 140px; pointer-events: none; z-index: 5; opacity: 0;
+  background: linear-gradient(90deg, transparent, rgba(160, 190, 255, .16) 45%, rgba(220, 230, 255, .4) 50%, rgba(160, 190, 255, .16) 55%, transparent); filter: blur(1px); }
+.sweep.run { animation: sweep .9s cubic-bezier(.4,0,.2,1); }
+@keyframes sweep { 0% { opacity: 0; transform: translateX(-140px); } 12% { opacity: 1; } 88% { opacity: 1; } 100% { opacity: 0; transform: translateX(var(--sw, 1200px)); } }
+
+/* element panel in the table's gap */
+/* contain: size keeps the panel from stretching the table's rows; the content is sized to fit the gap */
+.panel { grid-row: 1 / 4; grid-column: 3 / 13; align-self: stretch; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 20px; align-items: center; padding: 2px 12px 2px 4px; min-height: 0; contain: size; }
+.panel .info { gap: 6px; }
+.panel .info > p:not(.fam):not(.live):not(.fcount):not(.hint) { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.panel .big { width: clamp(110px, 10.5vw, 150px); }
+@media (max-width: 1279px) { .panel .live { display: none; } .panel .info > p:not(.fam):not(.hint) { -webkit-line-clamp: 1; } .panel .info h3 { font-size: 18px; } .panel .info p:not(.fam) { font-size: 14px; } }
+.big { --fc: var(--glow); width: clamp(120px, 12vw, 160px); aspect-ratio: 1 / 1.06; border-radius: 14px; padding: 12px 14px; display: flex; flex-direction: column; justify-content: space-between;
+  border: 1px solid color-mix(in srgb, var(--fc) 55%, transparent);
+  background: linear-gradient(160deg, color-mix(in srgb, var(--fc) 30%, var(--night-2)), color-mix(in srgb, var(--fc) 8%, var(--night-2)));
+  box-shadow: 0 0 60px -20px var(--fc); transition: all .35s ease; }
+.big .z { font-family: var(--mono); font-size: 13px; color: color-mix(in srgb, var(--fc) 70%, #fff); }
+.big .sym { font-family: var(--display); font-weight: 800; font-size: clamp(38px, 4.2vw, 58px); line-height: 1; letter-spacing: -.03em; color: color-mix(in srgb, var(--fc) 50%, #fff); }
+.big .sym img { width: 64%; aspect-ratio: 1; object-fit: contain; border-radius: 10px; }
+.big .nm { font-size: 12px; line-height: 1.25; color: #d5dcf0; }
+.info { min-width: 0; display: grid; gap: 8px; align-content: center; }
+.info .fam { font-family: var(--mono); font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--fc, var(--mist)); }
+.info h3 { font-family: var(--display); font-weight: 700; font-size: clamp(18px, 1.9vw, 25px); letter-spacing: -.02em; line-height: 1.1; }
+.info p { color: #b3bdd8; font-size: 15px; line-height: 1.5; max-width: 54ch; }
+.info .live { display: flex; gap: 8px; align-items: baseline; font-size: 14px; color: #cfd8f2; }
+.info .live::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--live); flex: none; transform: translateY(-1px); }
+.info .live a { color: #fff; text-decoration: none; border-bottom: 1px solid #39456a; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+.info .live a:hover { border-color: #fff; }
+.info .live time { color: var(--mist); font-family: var(--mono); font-size: 12px; white-space: nowrap; }
+.info .fcount { font-family: var(--mono); font-size: 12.5px; color: var(--mist); }
+.info .fcount b { color: var(--glow); font-weight: 500; }
+.follow { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 2px; }
+.follow a { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 14px; color: #fff; background: var(--pc, #334); transition: transform .15s, filter .15s; }
+.follow a:hover { transform: translateY(-2px); filter: brightness(1.12); }
+.follow a svg { width: 16px; height: 16px; fill: currentColor; }
+.more { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; }
+.more a { color: #cfd8f2; text-decoration: none; font-weight: 600; border-bottom: 1px solid #39456a; }
+.more a:hover { color: #fff; border-color: #fff; }
+.hint { color: var(--mist); font-size: 14px; }
+.hint kbd { font-family: var(--mono); font-size: 11px; padding: 2px 6px; border: 1px solid var(--night-line); border-radius: 5px; color: #c8d1ea; }
+.linkcopy { border: 0; background: none; padding: 0; cursor: pointer; color: #cfd8f2; font-weight: 600; font-size: 14px; border-bottom: 1px dashed #39456a; }
+.linkcopy:hover { color: #fff; border-color: #fff; }
+.legend-mini { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 2px; }
+.legend-mini span { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: #aab5d1; }
+.legend-mini i { width: 8px; height: 8px; border-radius: 2px; background: var(--fc); }
+.unpin { justify-self: start; margin-top: 2px; border: 0; background: none; color: var(--mist); font-size: 13px; cursor: pointer; padding: 0; text-decoration: underline; text-underline-offset: 3px; }
+.panel-cta { justify-self: start; margin-top: 4px; }
+.ptable.boot .tile { opacity: 0; transform: translateY(-16px) scale(.9); transition-delay: 0ms; }
+.ptable.boot .panel { opacity: 0; }
+.panel { transition: opacity .6s ease .5s; }
+.noscript { background: var(--night-2); border: 1px solid var(--night-line); border-radius: 16px; padding: 20px; color: #cfd8f2; }
+
+/* phones and tablets: the real table stays, you swipe across it */
+.swipe-hint { display: none; }
+@media (max-width: 999px) {
+  .ptable-wrap { overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; margin-left: -20px; margin-right: -20px; padding: 6px 20px 14px; scroll-padding: 0 20px; }
+  .ptable { width: 1100px; gap: 6px; }
+  .tile { padding: 6px 7px; border-radius: 8px; }
+  .tile .z { font-size: 9.5px; }
+  .tile .sym { font-size: 20px; }
+  .tile .fol { font-size: 9.5px; }
+  .tile:hover { transform: none; box-shadow: none; }
+  .panel { display: none; }
+  .swipe-hint { display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--mist); margin: 0 0 6px; }
+  .swipe-hint svg { width: 16px; height: 16px; animation: nudge 1.6s ease-in-out infinite; }
+  @keyframes nudge { 50% { transform: translateX(5px); } }
+  .sweep { display: none; }
+}
+
+/* cards view */
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+.card { --fc: var(--core); position: relative; display: flex; flex-direction: column; gap: 12px; padding: 20px; border-radius: 16px; border: 1px solid var(--night-line); background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.01)); transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease; overflow: hidden; }
+.card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: var(--fc); opacity: .8; }
+.card:hover { transform: translateY(-4px); border-color: color-mix(in srgb, var(--fc) 60%, transparent); box-shadow: 0 18px 40px -20px color-mix(in srgb, var(--fc) 70%, transparent); }
+.card-top { display: flex; gap: 14px; align-items: center; }
+.mini { width: 50px; height: 52px; border-radius: 10px; flex: none; display: flex; flex-direction: column; justify-content: space-between; padding: 5px 7px; border: 1px solid color-mix(in srgb, var(--fc) 45%, transparent); background: color-mix(in srgb, var(--fc) 18%, var(--night-2)); }
+.mini .z { font-family: var(--mono); font-size: 9px; color: color-mix(in srgb, var(--fc) 70%, #fff); line-height: 1; }
+.mini .sym { font-family: var(--display); font-weight: 700; font-size: 18px; line-height: 1; color: color-mix(in srgb, var(--fc) 55%, #fff); }
+.mini img { width: 100%; height: 100%; object-fit: cover; border-radius: 6px; }
+.card h3 { font-family: var(--body); font-weight: 700; font-size: 17px; line-height: 1.25; color: #fff; }
+.card .famname { font-family: var(--mono); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--fc); }
+.card p { color: #aab5d1; font-size: 14.5px; line-height: 1.55; flex: 1; }
+.card .live-line { font-size: 13px; color: #cfd8f2; display: flex; gap: 7px; align-items: center; }
+.card .live-line::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--live); flex: none; }
+.card-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding-top: 12px; border-top: 1px solid var(--night-line); }
+.socials { display: flex; gap: 6px; }
+.socials a { width: 34px; height: 34px; border-radius: 9px; display: grid; place-items: center; color: #dfe6fa; background: rgba(255,255,255,.06); transition: all .2s; }
+.socials a:hover { background: var(--pc); color: #fff; transform: translateY(-2px); }
+.socials svg { width: 16px; height: 16px; fill: currentColor; }
+.card .explore { font-size: 13.5px; font-weight: 700; color: #cfd8f2; text-decoration: none; }
+.card .explore:hover { color: #fff; }
+.card.off { display: none; }
+.card.enter { animation: cardIn .45s ease both; animation-delay: var(--d, 0ms); }
+@keyframes cardIn { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
+.card-next { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 14px; align-items: center; padding: 20px; border-radius: 16px; border: 1px dashed rgba(147,160,191,.5); color: var(--glow); }
+.card-next .plus { width: 50px; height: 52px; border-radius: 10px; border: 1px dashed rgba(147,160,191,.6); display: grid; place-items: center; font-family: var(--display); font-size: 22px; color: var(--mist); }
+.card-next h3 { font-size: 16.5px; font-weight: 700; }
+.card-next p { color: #aab5d1; font-size: 14.5px; }
+.card-next a { color: #fff; font-weight: 700; text-decoration: none; }
+.empty { padding: 40px 0; text-align: center; color: var(--mist); grid-column: 1 / -1; }
+
+/* live strip */
+.stream { margin-top: 34px; }
+.stream-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.stream-head h2 { font-family: var(--mono); font-weight: 500; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--mist); display: flex; align-items: center; gap: 10px; }
+.stream-head h2::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--live); animation: beat 2s ease-out infinite; }
+.stream-row { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(250px, 1fr); gap: 12px; overflow-x: auto; scrollbar-width: none; padding-bottom: 4px; scroll-snap-type: x mandatory; }
+.stream-row::-webkit-scrollbar { display: none; }
+.sitem { --fc: var(--core); scroll-snap-align: start; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; align-items: start; padding: 14px; border-radius: 14px; text-decoration: none; color: var(--glow); border: 1px solid var(--night-line); background: rgba(255,255,255,.03); transition: border-color .2s, transform .2s; }
+.sitem:hover { border-color: color-mix(in srgb, var(--fc) 60%, transparent); transform: translateY(-2px); }
+.sitem .mini { width: 40px; height: 42px; padding: 4px 6px; }
+.sitem .mini .sym { font-size: 15px; }
+.sitem small { display: flex; justify-content: space-between; gap: 8px; font-family: var(--mono); font-size: 11px; color: var(--mist); letter-spacing: .03em; }
+.sitem small b { color: color-mix(in srgb, var(--fc) 60%, #fff); font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sitem p { font-size: 14px; line-height: 1.4; color: #dbe2f6; margin-top: 4px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* dialogs: sheet (phones) and picker */
+dialog.sheet { border: 0; padding: 0; margin: auto auto 0; width: 100%; max-width: 560px; background: var(--night-2); color: var(--glow); border-radius: 22px 22px 0 0; box-shadow: 0 -20px 60px rgba(0,0,0,.5); }
+dialog::backdrop { background: rgba(3,6,14,.62); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+dialog.sheet[open] { animation: up .3s cubic-bezier(.2,.8,.2,1); }
+@keyframes up { from { transform: translateY(40px); opacity: 0; } to { transform: none; opacity: 1; } }
+.sheet-body { padding: 22px max(20px, env(safe-area-inset-right, 0px)) calc(24px + env(safe-area-inset-bottom, 0px)) max(20px, env(safe-area-inset-left, 0px)); display: grid; grid-template-columns: auto minmax(0,1fr); gap: 16px; }
+.sheet-body .big { width: 104px; }
+.sheet-body .big .sym { font-size: 34px; }
+.sheet-body .full { grid-column: 1 / -1; display: grid; gap: 12px; }
+.sheet-body .follow a { flex: 1 1 160px; justify-content: center; padding: 13px; white-space: nowrap; }
+.sheet-body .big .nm { display: none; }
+.sheet-body .info { align-content: center; }
+.grab { width: 40px; height: 4px; border-radius: 4px; background: #3a4566; margin: 10px auto 0; }
+.x-close { position: absolute; right: 14px; top: 14px; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--night-line); background: transparent; color: var(--glow); cursor: pointer; font-size: 18px; line-height: 1; }
+
+dialog.picker { border: 1px solid var(--night-line); padding: 0; width: min(680px, calc(100% - 24px)); max-height: calc(100dvh - 40px); background: var(--night-2); color: var(--glow); border-radius: 22px; box-shadow: 0 30px 80px rgba(0,0,0,.6); }
+dialog.picker[open] { animation: up .3s cubic-bezier(.2,.8,.2,1); }
+.pk { padding: 28px clamp(18px, 4vw, 34px) 26px; display: grid; gap: 18px; }
+.pk-step { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--mist); }
+.pk h2 { font-family: var(--display); font-weight: 700; font-size: clamp(22px, 3vw, 28px); letter-spacing: -.02em; line-height: 1.15; }
+.pk .lead { color: #aab5d1; font-size: 15px; margin-top: -8px; }
+.opts { display: flex; flex-wrap: wrap; gap: 8px; }
+.opt { border: 1px solid var(--night-line); background: rgba(255,255,255,.03); color: #dbe2f6; font-weight: 600; font-size: 14.5px; padding: 10px 14px; border-radius: 12px; cursor: pointer; transition: all .18s; }
+.opt:hover { border-color: #5a6c99; }
+.opt[aria-pressed="true"] { border-color: var(--glow); background: rgba(233,238,252,.12); color: #fff; }
+.pk-foot { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; position: sticky; bottom: 0; margin: 0 -4px -10px; padding: 14px 4px 10px; background: linear-gradient(transparent, var(--night-2) 30%); }
+.pk-foot .btn[disabled] { opacity: .45; pointer-events: none; }
+.pk-back { border: 0; background: none; color: var(--mist); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; padding: 0; }
+.picks { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 10px; }
+.pick { --fc: var(--core); display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; align-items: start; padding: 12px; border-radius: 14px; border: 1px solid color-mix(in srgb, var(--fc) 35%, var(--night-line)); background: color-mix(in srgb, var(--fc) 7%, transparent); }
+.pick h3 { font-size: 15.5px; font-weight: 700; line-height: 1.3; }
+.pick .why { font-size: 12.5px; color: var(--mist); line-height: 1.4; margin-top: 2px; }
+.pick .follow { margin-top: 8px; gap: 6px; }
+.pick .follow a { padding: 6px 10px; font-size: 12.5px; border-radius: 8px; }
+.pick .follow a svg { width: 14px; height: 14px; }
+.pick .hint { font-size: 12.5px; margin-top: 6px; }
+
+/* toast (type a symbol to jump) */
+.toast { position: fixed; left: 50%; bottom: calc(26px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 20px); z-index: 250; background: var(--night-3); color: var(--glow); border: 1px solid var(--night-line); padding: 10px 16px; border-radius: 12px; font-size: 14px; opacity: 0; pointer-events: none; transition: all .25s ease; box-shadow: 0 16px 40px rgba(0,0,0,.4); }
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+.toast b { font-family: var(--display); }
+
+/* ---------- light sections ---------- */
+.section { padding: 92px 0; }
+.sec-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px 40px; margin-bottom: 34px; }
+.label { font-family: var(--mono); font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+.sec-head h2 { font-family: var(--display); font-weight: 800; font-size: clamp(28px, 3.8vw, 44px); letter-spacing: -.03em; line-height: 1.04; margin-top: 10px; }
+.sec-head p { color: var(--muted); max-width: 48ch; }
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.8,.2,1); }
+.reveal.in { opacity: 1; transform: none; }
+.no-js .reveal { opacity: 1; transform: none; }
+
+/* top posts */
+.posts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.post { --fc: var(--core); display: flex; flex-direction: column; gap: 16px; padding: 24px; border-radius: 18px; background: var(--white); border: 1px solid var(--line); text-decoration: none; color: inherit; position: relative; overflow: hidden; transition: transform .3s, box-shadow .3s, border-color .3s; }
+.post::after { content: ""; position: absolute; right: -40px; top: -40px; width: 140px; height: 140px; border-radius: 50%; background: radial-gradient(circle, color-mix(in srgb, var(--fc) 30%, transparent), transparent 70%); }
+.post:hover { transform: translateY(-5px); border-color: color-mix(in srgb, var(--fc) 50%, var(--line)); box-shadow: 0 24px 50px -28px color-mix(in srgb, var(--fc) 80%, transparent); }
+.post-head { display: flex; gap: 12px; align-items: center; position: relative; z-index: 1; }
+.post-head .pm { width: 44px; height: 46px; border-radius: 10px; display: grid; place-items: center; font-family: var(--display); font-weight: 700; font-size: 16px; color: #fff; background: var(--fc); overflow: hidden; }
+.post-head .pm img { width: 100%; height: 100%; object-fit: cover; }
+.post-head b { display: block; line-height: 1.25; }
+.post-head span { color: var(--muted); font-size: 13.5px; }
+.post-text { color: var(--ink-2); white-space: pre-line; display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; position: relative; z-index: 1; }
+.post-foot { margin-top: auto; display: flex; justify-content: space-between; align-items: center; gap: 10px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 14px; }
+.post-foot .metric { font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+.post-foot .go { color: var(--accent); font-weight: 700; }
+@media (max-width: 900px) { .posts { grid-template-columns: 1fr; } }
+
+/* what you'll find */
+.finds { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.find { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 26px; display: grid; gap: 12px; align-content: start; transition: transform .3s, box-shadow .3s; }
+.find:hover { transform: translateY(-4px); box-shadow: 0 22px 44px -30px rgba(13,19,36,.5); }
+.find .ic { width: 46px; height: 46px; border-radius: 13px; display: grid; place-items: center; background: color-mix(in srgb, var(--fc) 16%, #fff); color: color-mix(in srgb, var(--fc) 80%, #000); }
+.find .ic svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.find h3 { font-family: var(--body); font-weight: 700; font-size: 19px; }
+.find p { color: var(--muted); font-size: 15px; }
+.trust { margin-top: 18px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 16px; align-items: start; padding: 22px 24px; border-radius: 18px; background: var(--accent-soft); color: #1b2a5c; }
+.trust svg { width: 24px; height: 24px; stroke: var(--accent); fill: none; stroke-width: 2; }
+@media (max-width: 1000px) { .finds { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .finds { grid-template-columns: 1fr; } }
+
+/* researchers band (static, no spinning blob) */
+.band { position: relative; overflow: hidden; border-radius: 28px; padding: clamp(28px, 5vw, 60px); color: #fff; background: var(--night); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: start; isolation: isolate; }
+.band::before { content: ""; position: absolute; inset: 0; z-index: -1;
+  background: radial-gradient(600px 300px at 0% 0%, rgba(239,93,139,.22), transparent 70%), radial-gradient(600px 340px at 100% 100%, rgba(91,141,239,.25), transparent 70%); }
+.band::after { content: ""; position: absolute; inset: 0; z-index: -1; opacity: .45;
+  background-image: linear-gradient(rgba(147,160,191,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(147,160,191,.08) 1px, transparent 1px); background-size: 36px 36px; }
+.band .label { color: #f7a8c2; }
+.band h2 { font-family: var(--display); font-weight: 800; font-size: clamp(26px, 3.6vw, 44px); letter-spacing: -.03em; line-height: 1.04; margin-top: 12px; }
+.band > div > p { color: #cdd5ee; margin-top: 16px; max-width: 48ch; }
+.band ul { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 10px; }
+.band li { display: grid; grid-template-columns: 24px minmax(0,1fr); gap: 10px; color: #dbe2f6; font-size: 15px; }
+.band li svg { width: 20px; height: 20px; stroke: #4ade80; fill: none; stroke-width: 2.4; margin-top: 2px; }
+.band li b { color: #fff; }
+.band .btn { margin-top: 26px; }
+.matcher { border-radius: 20px; padding: 22px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); display: grid; gap: 12px; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.matcher h3 { font-size: 18px; font-weight: 700; }
+.matcher label { color: #cdd5ee; font-size: 14.5px; }
+.matcher textarea { width: 100%; min-height: 112px; resize: vertical; border-radius: 12px; border: 1px solid rgba(255,255,255,.18); background: rgba(7,11,22,.55); color: #fff; padding: 12px 14px; font-size: 15px; line-height: 1.5; outline: none; }
+.matcher textarea:focus { border-color: #8aa0d8; box-shadow: 0 0 0 4px rgba(91,141,239,.18); }
+.matcher textarea::placeholder { color: #7c89aa; }
+.matcher .btn { margin: 0; justify-self: start; }
+.mres { display: grid; gap: 8px; }
+.mres .m { --fc: var(--core); display: grid; grid-template-columns: auto minmax(0,1fr) auto; gap: 12px; align-items: center; padding: 10px 12px; border-radius: 12px; background: rgba(7,11,22,.5); border: 1px solid color-mix(in srgb, var(--fc) 40%, transparent); }
+.mres .mini { width: 40px; height: 42px; padding: 4px 6px; }
+.mres .mini .sym { font-size: 15px; }
+.mres b { display: block; font-size: 15px; }
+.mres small { color: #aab5d1; font-size: 12.5px; display: block; }
+.mres a { color: #fff; font-weight: 700; font-size: 13.5px; text-decoration: none; white-space: nowrap; }
+.mres a:hover { text-decoration: underline; }
+.mres .none { color: #cdd5ee; font-size: 14.5px; }
+@media (max-width: 900px) { .band { grid-template-columns: 1fr; } }
+
+/* about */
+.about { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 56px; align-items: start; }
+.about h2 { font-family: var(--display); font-weight: 800; font-size: clamp(28px, 3.8vw, 44px); letter-spacing: -.03em; line-height: 1.04; margin-top: 10px; }
+.about-lede { color: var(--ink-2); font-size: 18px; margin-top: 18px; }
+.about-lede + .about-lede { margin-top: 12px; }
+.founder { background: var(--white); border: 1px solid var(--line); border-radius: 22px; padding: 28px; display: grid; gap: 16px; position: relative; overflow: hidden; }
+.founder::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 4px; background: linear-gradient(90deg, var(--core), var(--comp), var(--bio)); }
+.founder-top { display: flex; gap: 16px; align-items: center; }
+.monogram { width: 60px; height: 64px; border-radius: 14px; background: var(--night); color: #fff; display: flex; flex-direction: column; justify-content: space-between; padding: 6px 9px; flex: none; }
+.monogram small { font-family: var(--mono); font-size: 9.5px; color: var(--mist); }
+.monogram b { font-family: var(--display); font-size: 22px; line-height: 1; }
+.founder h3 { font-size: 20px; font-weight: 700; }
+.founder .role { color: var(--accent); font-weight: 700; font-size: 14.5px; }
+.founder p { color: var(--ink-2); }
+.founder a.link { color: var(--accent); font-weight: 700; text-decoration: none; }
+.founder a.link:hover { text-decoration: underline; }
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 28px; }
+.fact { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 18px; }
+.fact b { display: block; font-family: var(--display); font-weight: 700; font-size: 26px; letter-spacing: -.02em; color: var(--accent); font-variant-numeric: tabular-nums; }
+.fact span { color: var(--muted); font-size: 14px; }
+@media (max-width: 900px) { .about { grid-template-columns: 1fr; gap: 32px; } }
+@media (max-width: 520px) { .facts { grid-template-columns: 1fr 1fr; } .facts .fact:last-child { grid-column: 1 / -1; } }
+
+/* contact */
+.contact { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.c-card { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 26px; display: grid; gap: 10px; align-content: start; transition: border-color .25s, transform .25s; }
+.c-card:hover { border-color: #c5d2f6; transform: translateY(-3px); }
+.c-card h3 { font-size: 18px; font-weight: 700; }
+.c-card p { color: var(--muted); font-size: 15px; }
+.addr { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 4px; }
+.addr a { font-weight: 700; color: var(--accent); text-decoration: none; word-break: break-all; }
+.copy { border: 1px solid var(--line); background: var(--paper); color: var(--ink-2); font-size: 13px; font-weight: 600; padding: 5px 10px; border-radius: 8px; cursor: pointer; }
+.copy:hover { border-color: var(--accent); color: var(--accent); }
+.main-follow { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.main-follow a { display: inline-flex; align-items: center; gap: 8px; padding: 9px 13px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 14px; color: #fff; background: var(--pc); }
+.main-follow a:hover { filter: brightness(1.1); }
+.main-follow svg { width: 16px; height: 16px; fill: currentColor; }
+@media (max-width: 900px) { .contact { grid-template-columns: 1fr; } }
+
+/* footer */
+footer { background: var(--night); color: #aab5d1; padding: 64px 0 34px; }
+.foot { display: grid; grid-template-columns: 1.5fr repeat(3, minmax(0, 1fr)); gap: 36px; }
+.foot .brand { color: var(--glow); margin: 0; }
+.foot p { margin-top: 14px; max-width: 34ch; font-size: 15px; }
+.foot h4 { margin: 0 0 14px; font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--mist); }
+.foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
+.foot a { color: #cfd8f2; text-decoration: none; }
+.foot a:hover { color: #fff; }
+.foot-bottom { margin-top: 44px; padding-top: 22px; border-top: 1px solid var(--night-line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font-size: 14px; color: var(--mist); }
+.foot-bottom kbd { font-family: var(--mono); font-size: 11px; padding: 1px 6px; border: 1px solid var(--night-line); border-radius: 5px; }
+@media (max-width: 800px) { .foot { grid-template-columns: 1fr 1fr; } .foot > div:first-child { grid-column: 1 / -1; } }
+
+/* back to top */
+.to-top { position: fixed; right: max(20px, env(safe-area-inset-right, 0px)); bottom: calc(20px + env(safe-area-inset-bottom, 0px)); z-index: 150; width: 50px; height: 50px; border-radius: 15px; border: 0; cursor: pointer; background: var(--accent); color: #fff; display: grid; place-items: center; box-shadow: 0 12px 30px -10px rgba(59,108,246,.7); opacity: 0; transform: translateY(16px); pointer-events: none; transition: all .3s ease; }
+.to-top.show { opacity: 1; transform: none; pointer-events: auto; }
+.to-top:hover { background: var(--accent-2); transform: translateY(-3px); }
+.to-top svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2.4; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; transition-delay: 0ms !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body class="no-js">
+<a class="skip" href="#table">Skip to the table</a>
+<div class="progress" id="progress"></div>
+
+<nav class="nav" id="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Chemisters home"><img src="images/Chemisters_logo.png" alt=""><span>Chemisters</span></a>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="links" aria-label="Menu"><span></span></button>
+    <ul class="links" id="links">
+      <li><a href="#table">The Table</a></li>
+      <li data-top-link hidden><a href="#top-posts">Top Posts</a></li>
+      <li><a href="#find">What You'll Find</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="cta" href="publish/">Feature Your Research</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="lab" id="top">
+  <div class="wrap">
+    <div class="intro">
+      <div>
+        <p class="kicker"><span class="sw" id="swatches" aria-hidden="true"></span>Chemisters</p>
+        <h1>Chemistry, <span>field by field.</span></h1>
+        <p class="sub">A network of chemistry pages, one per field: new papers with a link to the source, news, innovations, and researchers presenting their own work.<span class="sub-more"> Every element below is a page, and the table keeps growing. Find yours and follow it.</span></p>
+        <div class="intro-ctas">
+          <button class="btn btn-glow" type="button" data-open-picker>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4M8 11h6M11 8v6"/></svg>
+            Find my pages</button>
+          <a class="btn btn-ghost-dark cta-2" href="publish/">Feature your research</a>
+        </div>
+      </div>
+      <div class="stats" id="stats">
+        <div class="stat"><b data-count="pages">0</b><span>Pages</span></div>
+        <div class="stat"><b data-count="channels">0</b><span>Channels</span></div>
+        <div class="stat" id="stat-followers" hidden><b data-count="followers">0</b><span>Followers</span></div>
+        <div class="stat live" id="stat-live" hidden><b id="live-ago">now</b><span>Last post</span></div>
+      </div>
+    </div>
+
+    <div class="controls" id="table">
+      <div class="fam-tabs" id="famTabs" role="group" aria-label="Filter by area"></div>
+      <div class="row">
+        <label class="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+          <input id="q" type="search" placeholder="Search a topic, e.g. batteries" autocomplete="off" aria-label="Search pages">
+        </label>
+        <div class="status" id="status" aria-live="polite"></div>
+        <div class="tools">
+          <button class="chip-btn" type="button" id="surprise" aria-label="Surprise me" title="Surprise me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8.5" cy="8.5" r="1.3" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.3" fill="currentColor"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/></svg>
+            <span class="lbl">Surprise me</span></button>
+          <button class="chip-btn" type="button" data-open-quiz>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17h.01"/></svg>
+            <span class="lbl">Which element are you?</span><span class="lbl-s">Quiz</span></button>
+          <button class="chip-btn" type="button" id="heatBtn" aria-pressed="false" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+            Followers</button>
+          <div class="seg" role="group" aria-label="View">
+            <button type="button" id="v-table" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Table</button>
+            <button type="button" id="v-cards" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/></svg>List</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="swipe-hint" id="swipeHint">Tap to follow · swipe for more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+    <noscript><div class="noscript">The interactive table needs JavaScript. You can still reach every page from our social media profiles, or write to contact@chemisters.com.</div></noscript>
+    <div class="ptable-wrap" id="tableView">
+      <div class="ptable" id="ptable"></div>
+      <div class="sweep" id="sweep" aria-hidden="true"></div>
+    </div>
+    <div class="cards" id="cardsView" hidden></div>
+
+    <div class="stream" id="stream" hidden>
+      <div class="stream-head"><h2>Live from the network</h2></div>
+      <div class="stream-row" id="streamRow"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section" id="top-posts" hidden>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><p class="label">Most read</p><h2>Top posts</h2></div>
+        <p>A rotating selection of the posts our readers engaged with most.</p>
+      </div>
+      <div class="posts" id="posts"></div>
+    </div>
+  </section>
+
+  <section class="section" id="find">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><h2>New research, every day, in your field</h2></div>
+        <p>Each page brings its field's latest work to your feed, with a link to the original source under every summary. New pages and new kinds of posts are added as the network grows.</p>
+      </div>
+      <div class="finds">
+        <div class="find reveal" style="--fc: var(--core)"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg></div><h3>Article summaries</h3><p>New papers explained in plain language, linked to the original article.</p></div>
+        <div class="find reveal" style="--fc: var(--synthetic)"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v8a2 2 0 0 1-2 2M8 9h5M8 13h5"/></svg></div><h3>Field news</h3><p>What changed in each discipline, from journals and science news.</p></div>
+        <div class="find reveal" style="--fc: var(--materials)"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"/></svg></div><h3>Innovations</h3><p>New methods, instruments and tools, explained for the people who will use them.</p></div>
+        <div class="find reveal" style="--fc: var(--bio)"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M3 20c.6-3.4 3-5.5 6-5.5s5.4 2.1 6 5.5M16 4.5a3.5 3.5 0 0 1 0 7M18 14.8c1.7.8 2.8 2.6 3 5.2"/></svg></div><h3>Researchers' own work</h3><p>Authors present their peer-reviewed work in their own words, on the page that matches their field.</p></div>
+      </div>
+      <div class="trust reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+        <p><strong>Every post links to its source.</strong> Each summary and news post comes with a link to the original article, so you can check it yourself. Spotted an error? Write to contact@chemisters.com and we will correct it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="feature" style="padding-top: 0">
+    <div class="wrap">
+      <div class="band reveal">
+        <div>
+          <p class="label">For researchers</p>
+          <h2>Published something? Put it in front of your field.</h2>
+          <p>Send us your peer-reviewed article, presented in your own words. We publish it on the Chemisters page that matches your field and tag you and your co-authors.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg><span><b>Your text, never edited.</b> What you send is exactly what we publish.</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg><span><b>You and your co-authors tagged.</b> The post reaches each of your networks too.</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg><span><b>A badge for your lab site.</b> Featured work gets a "Featured on Chemisters" badge linking to its page.</span></li>
+          </ul>
+          <a class="btn btn-glow" href="publish/">See the requirements</a>
+        </div>
+        <form class="matcher" id="matcher" autocomplete="off">
+          <h3>Where should my paper go?</h3>
+          <label for="abstract">Paste your title or abstract. We'll suggest the page whose readers work on it.</label>
+          <textarea id="abstract" placeholder="e.g. Green synthesis of ZnO nanoparticles using olive leaf extract and their photocatalytic degradation of methylene blue"></textarea>
+          <button class="btn btn-primary" type="submit">Find the right page</button>
+          <div class="mres" id="mres" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about" style="padding-top: 30px">
+    <div class="wrap about">
+      <div class="reveal">
+        <p class="label">About</p>
+        <h2>The digital ecosystem of chemistry</h2>
+        <p class="about-lede">Founded in 2025, Chemisters connects the chemistry community through reliable information, emerging technologies, and researchers telling their own stories.</p>
+        <p class="about-lede">More than a science blog, it is a network for the researchers, students, and builders of chemistry's future, and a direct way for authors to reach the people working in their field.</p>
+        <p class="about-lede">It keeps growing: new pages open as new fields take shape, and existing pages gain new kinds of posts.</p>
+        <div class="facts">
+          <div class="fact"><b data-count="pages">0</b><span>Pages</span></div>
+          <div class="fact"><b>2025</b><span>Founded</span></div>
+          <div class="fact"><b>Rabat</b><span>Morocco</span></div>
+        </div>
+      </div>
+      <div class="founder reveal">
+        <div class="founder-top">
+          <div class="monogram" aria-hidden="true"><small>Fd</small><b>MA</b></div>
+          <div><h3>Mohamed El Belghiti Alaoui</h3><p class="role">Founder · PhD student, AI for Alzheimer's disease</p></div>
+        </div>
+        <p>Chemisters was founded and is run by Mohamed El Belghiti Alaoui, a PhD student working on artificial intelligence for Alzheimer's disease.</p>
+        <p>Trained as a pharmacochemist, he builds machine-learning tools for drug discovery: AI agents that predict reaction outcomes and optimise synthesis conditions, and a computational pipeline covering property prediction, molecule generation, toxicity and retrosynthesis. He has published open-access work on how scaffold and random data splits change the evaluation of molecular machine-learning models.</p>
+        <a class="link" href="https://www.linkedin.com/in/mohamed-el-belghiti-alaoui-568600326/" target="_blank" rel="noopener">Connect on LinkedIn →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact" style="padding-top: 30px">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><p class="label">Contact</p><h2>Get in touch</h2></div>
+        <p>For collaboration, partnership proposals, media inquiries, or corrections.</p>
+      </div>
+      <div class="contact">
+        <div class="c-card reveal">
+          <h3>General &amp; partnerships</h3>
+          <p>Collaborations, partnerships and media.</p>
+          <div class="addr"><a href="mailto:contact@chemisters.com">contact@chemisters.com</a><button class="copy" type="button" data-copy="contact@chemisters.com">Copy</button></div>
+        </div>
+        <div class="c-card reveal" id="followCard">
+          <h3>Follow Chemisters</h3>
+          <p>The main accounts share the best of every page in one feed.</p>
+          <div class="main-follow" id="mainFollow"></div>
+        </div>
+        <div class="c-card reveal">
+          <h3>Corrections</h3>
+          <p>Found an error in one of our posts? Send us the link and what is wrong.</p>
+          <div class="addr"><a href="mailto:contact@chemisters.com">contact@chemisters.com</a><button class="copy" type="button" data-copy="contact@chemisters.com">Copy</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="#top"><img src="images/Chemisters_logo.png" alt=""><span>Chemisters</span></a>
+        <p>The digital ecosystem of chemistry, where academic rigor meets modern communication. Chemistry evolves. Chemisters documents it.</p>
+      </div>
+      <div><h4>Explore</h4><ul><li><a href="#table">The Table</a></li><li><a href="#find">What You'll Find</a></li><li><a href="publish/">Feature Your Research</a></li><li><a href="#quiz">Which element are you?</a></li><li><a href="badge/">Researcher badges</a></li></ul></div>
+      <div><h4>Chemisters</h4><ul id="footConnect"><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li><li><a href="mailto:contact@chemisters.com">Email</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="privacy/">Privacy Policy</a></li><li><a href="terms/">Terms of Use</a></li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>© <span id="year">2026</span> Chemisters. All rights reserved.</span><span>Tip: type an element's symbol, like <kbd>E</kbd><kbd>c</kbd>, to jump to it.</span><span>Rabat, Morocco</span></div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+<div class="toast" id="toast" role="status"></div>
+
+<dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
+  <div class="grab" aria-hidden="true"></div>
+  <button class="x-close" type="button" data-close aria-label="Close">×</button>
+  <div class="sheet-body" id="sheetBody"></div>
+</dialog>
+
+<dialog class="picker" id="picker" aria-labelledby="pk-title">
+  <button class="x-close" type="button" data-close aria-label="Close">×</button>
+  <div class="pk" id="pk"></div>
+</dialog>
+
+<script src="assets/follow-kit.js"></script>
+<script>
+document.body.classList.remove("no-js");
+
+/* =====================================================================
+   PLATFORMS — every social platform Chemisters uses.
+   To add one (Reddit, Discord, YouTube...): add an entry with its name,
+   brand colour and icon, then add its links to the pages below and to
+   SITE_LINKS. Icons, buttons and counts update by themselves.
+   ===================================================================== */
+const PLATFORMS = {
+  linkedin: { name: "LinkedIn", color: "#0a66c2", svg: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>' },
+  facebook: { name: "Facebook", color: "#1877f2", svg: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>' }
+};
+const GENERIC_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></svg>';
+
+/* >>> FILL IN: your main Chemisters accounts. The "Follow Chemisters" card and footer links appear by themselves. */
+const SITE_LINKS = {
+  linkedin: "",
+  facebook: ""
+};
+
+/* =====================================================================
+   AREAS — the colour groups of the table (the filters).
+   ===================================================================== */
+const AREAS = [
+  { id: "core",      label: "Core Chemistry" },
+  { id: "synthetic", label: "Synthetic & Reactive" },
+  { id: "applied",   label: "Applied & Industrial" },
+  { id: "bio",       label: "Bio & Life Sciences" },
+  { id: "comp",      label: "Computational & AI" },
+  { id: "materials", label: "Materials & Nano" },
+  { id: "community", label: "Discovery & Community" }
+];
+
+/* =====================================================================
+   PAGES — one line per page. Add a line to add a page; the table grows
+   in the shape of the real periodic table.
+   sym:   two-letter symbol on the tile. Must be unique and must NOT be a
+          real element symbol (chemists read "Na" as sodium). The page
+          warns in the console if you break either rule.
+   area:  one of the AREAS ids
+   page:  path of the field page on this site ("" if none yet)
+   links: one entry per platform, e.g. { linkedin: "...", facebook: "...", reddit: "..." }
+   logo:  optional path to the page's logo (replaces the symbol)
+   tags:  optional extra words for the table search
+   kw:    keywords for the "Where should my paper go?" finder and the picker
+   ===================================================================== */
+const PAGES = [
+  // Core Chemistry
+  { sym: "Or", name: "Organic Chemistry", area: "core", page: "pages/organic chemistry.html", desc: "Synthetic routes, green chemistry, retrosynthesis, and molecular modeling.", links: { linkedin: "https://www.linkedin.com/company/108558306", facebook: "https://www.facebook.com/847087921818585" }, kw: "organic synthesis, total synthesis, stereoselective, asymmetric synthesis, carbonyl, alkene, cross-coupling, coupling reaction, organocatalysis, protecting group, c-h activation, organic reaction" },
+  { sym: "Ph", name: "Physical Chemistry", area: "core", page: "pages/physical chemistry.html", desc: "Thermodynamics, kinetics, and the laws governing molecular behavior.", links: { linkedin: "https://www.linkedin.com/company/109269958" }, kw: "physical chemistry, thermodynamics, kinetics, spectroscopy, photophysics, diffusion, adsorption isotherm, phase diagram, quantum" },
+  { sym: "An", name: "Analytical Chemistry", area: "core", page: "pages/analytical chemistry.html", desc: "Precision instrumentation and advanced methods for molecular characterization.", links: { linkedin: "https://www.linkedin.com/company/109481959", facebook: "https://www.facebook.com/1032617926590646" }, tags: "spectroscopy chromatography NMR mass spectrometry", kw: "analytical, hplc, uplc, lc-ms, gc-ms, mass spectrometry, nmr, chromatography, sensor, biosensor, detection, quantification, determination, electrophoresis, uv-vis, ftir, raman, icp, method validation" },
+  { sym: "Tr", name: "Theoretical Chemistry", area: "core", page: "", desc: "Quantum models, molecular orbital theory, and first-principles calculations.", links: { linkedin: "https://www.linkedin.com/company/110427156", facebook: "https://www.facebook.com/968362916359292" }, kw: "dft, density functional theory, ab initio, quantum chemistry, coupled cluster, molecular orbital, homo, lumo, hartree-fock, electronic structure, td-dft, first-principles" },
+  { sym: "St", name: "Structural Chemistry", area: "core", page: "", desc: "Crystal structures, bonding analysis, and molecular geometry.", links: { linkedin: "https://www.linkedin.com/company/110622026" }, tags: "crystallography X-ray", kw: "crystal structure, x-ray, crystallography, diffraction, single crystal, hirshfeld, polymorph, bonding analysis, molecular geometry, xrd" },
+  { sym: "Ki", name: "Chemical Kinetics", area: "core", page: "", desc: "Reaction rates, mechanisms, and transition-state theory.", links: { linkedin: "https://www.linkedin.com/company/112274897" }, kw: "kinetics, kinetic, rate constant, reaction mechanism, activation energy, arrhenius, transition state, kinetic model, pseudo-first-order, pseudo-second-order" },
+  { sym: "Td", name: "Thermochemistry", area: "core", page: "", desc: "Heat flow, enthalpy, and energy changes in chemical reactions.", links: { linkedin: "https://www.linkedin.com/company/115805044" }, kw: "enthalpy, calorimetry, thermochemistry, heat of reaction, bond dissociation energy, formation enthalpy, dsc, thermal analysis" },
+  { sym: "En", name: "Entropy in Chemistry", area: "core", page: "", desc: "Disorder, spontaneity, and the second law at the molecular scale.", links: { linkedin: "https://www.linkedin.com/company/111120361" }, kw: "entropy, second law, gibbs free energy, spontaneity, statistical mechanics, thermodynamic parameters" },
+  { sym: "So", name: "Solutions Chemistry", area: "core", page: "", desc: "Solubility, colligative properties, and solution-phase equilibria.", links: { linkedin: "https://www.linkedin.com/company/111106404" }, kw: "solubility, solvation, solution, colligative, ionic strength, activity coefficient, solvent effect, aqueous solution, equilibrium" },
+  { sym: "Rx", name: "Chemical Structure & Reactivity", area: "core", page: "", desc: "Electronic effects, steric factors, and structure-reactivity relationships.", links: { linkedin: "https://www.linkedin.com/company/110412248" }, kw: "reactivity, substituent effect, hammett, steric, electronic effect, structure-reactivity, reactivity descriptors, fukui" },
+  // Synthetic & Reactive
+  { sym: "Sy", name: "Synthetic Chemistry", area: "synthetic", page: "pages/synthetic chemistry.html", desc: "Engineering molecules with purpose through multistep synthesis and automation.", links: { linkedin: "https://www.linkedin.com/company/109476977" }, kw: "synthesized, synthetic route, multistep, one-pot, flow chemistry, automated synthesis, novel derivatives, scale-up synthesis" },
+  { sym: "Hc", name: "Heterocyclic Chemistry", area: "synthetic", page: "pages/heterocyclic chemistry.html", desc: "Synthesis, reactivity, and pharmaceutical applications of ring systems.", links: { linkedin: "https://www.linkedin.com/company/108563324", facebook: "https://www.facebook.com/917266874809667" }, kw: "heterocycle, heterocyclic, heterocycles, pyridine, indole, triazole, imidazole, quinoline, quinazoline, benzimidazole, pyrazole, thiazole, oxadiazole, pyrimidine, benzodiazepine, coumarin, isoxazole" },
+  { sym: "Rs", name: "Retrosynthesis", area: "synthetic", page: "", desc: "Working backwards from target to starting materials: the logic of synthesis.", links: { linkedin: "https://www.linkedin.com/company/112835037", facebook: "https://www.facebook.com/1427914273728805" }, kw: "retrosynthesis, retrosynthetic, disconnection, synthesis planning, route prediction, route design" },
+  { sym: "Ct", name: "Catalytic Chemistry", area: "synthetic", page: "", desc: "Accelerating reactions through homogeneous, heterogeneous, and biocatalysis.", links: { linkedin: "https://www.linkedin.com/company/114363982", facebook: "https://www.facebook.com/1203169896209143" }, tags: "catalysis catalyst enzymes", kw: "catalyst, catalysts, catalysis, catalytic, palladium, biocatalysis, heterogeneous catalysis, homogeneous catalysis, turnover frequency, zeolite, single-atom catalyst, hydrogenation, oxidation catalyst" },
+  { sym: "Rm", name: "Reactive Matter", area: "synthetic", page: "", desc: "Reactive intermediates, radical chemistry, and high-energy transformations.", links: { linkedin: "https://www.linkedin.com/company/110790261", facebook: "https://www.facebook.com/1384954001364847" }, kw: "radical, radicals, reactive intermediate, carbene, nitrene, energetic material, high-energy, plasma, free radical" },
+  { sym: "Gr", name: "Green Chemistry", area: "synthetic", page: "pages/green chemistry.html", desc: "Sustainable synthesis and eco-friendly practices for a cleaner future.", links: { linkedin: "https://www.linkedin.com/company/108366170", facebook: "https://www.facebook.com/837662889425184" }, tags: "sustainability solvents", kw: "green chemistry, green synthesis, eco-friendly, sustainable, solvent-free, ionic liquid, deep eutectic solvent, biomass, atom economy, microwave-assisted, ultrasound-assisted, mechanochemistry, plant extract" },
+  { sym: "Pc", name: "Photochemistry", area: "synthetic", page: "", desc: "Light-driven reactions, photocatalysis, and solar energy conversion.", links: { linkedin: "https://www.linkedin.com/company/110115014", facebook: "https://www.facebook.com/959604823904811" }, kw: "photochemistry, photocatalysis, photocatalytic, photocatalyst, light-driven, photoredox, excited state, visible light, uv irradiation, photodegradation, methylene blue, dye degradation" },
+  { sym: "Ec", name: "Electrochemistry", area: "synthetic", page: "", desc: "Electron transfer, batteries, fuel cells, and electrodeposition.", links: { linkedin: "https://www.linkedin.com/company/110123965", facebook: "https://www.facebook.com/911079622093911" }, tags: "battery corrosion electrodes", kw: "electrochemistry, electrochemical, electrode, battery, batteries, lithium-ion, corrosion, corrosion inhibitor, voltammetry, cyclic voltammetry, impedance, eis, electrocatalysis, fuel cell, supercapacitor, electrolyte, electrodeposition" },
+  // Applied & Industrial
+  { sym: "Io", name: "Inorganic Chemistry", area: "applied", page: "pages/inorganic chemistry.html", desc: "Catalysis, coordination compounds, and advanced materials.", links: { linkedin: "https://www.linkedin.com/company/the-inorganic-chemistry/", facebook: "https://www.facebook.com/1210415018812961" }, kw: "inorganic, coordination, coordination complex, metal complex, metal complexes, ligand, organometallic, transition metal, lanthanide, schiff base complex, mof, metal-organic framework" },
+  { sym: "Id", name: "Industrial Chemistry", area: "applied", page: "", desc: "Scale-up, process chemistry, and manufacturing of chemical products.", links: { linkedin: "https://www.linkedin.com/company/109820777", facebook: "https://www.facebook.com/1003153776205999" }, tags: "factory production plant", kw: "industrial, industry, process chemistry, plant, production, manufacturing, scale-up, refinery, phosphate, cement, fertilizer production" },
+  { sym: "Cg", name: "Chemical Engineering", area: "applied", page: "", desc: "Reactor design, process optimization, and chemical plant operations.", links: { linkedin: "https://www.linkedin.com/company/112032374" }, tags: "manufacturing process", kw: "chemical engineering, reactor, reactor design, process design, process optimization, separation, distillation, mass transfer, heat transfer, aspen, response surface methodology, techno-economic" },
+  { sym: "Qc", name: "Quality Control", area: "applied", page: "", desc: "Analytical QC, GMP compliance, and pharmaceutical quality assurance.", links: { linkedin: "https://www.linkedin.com/company/111365924" }, tags: "manufacturing GMP", kw: "quality control, gmp, validation, impurity, impurities, pharmacopoeia, stability study, assay, dissolution test, quality assurance" },
+  { sym: "Ap", name: "Applied Chemistry", area: "applied", page: "", desc: "Real-world applications of chemistry in agriculture, industry, and daily life.", links: { linkedin: "https://www.linkedin.com/company/110636050", facebook: "https://www.facebook.com/1097311140142292" }, kw: "applied, agriculture, fertilizer, pesticide, cosmetics, coatings, water treatment, detergent, textile" },
+  { sym: "Fo", name: "Forensic Chemistry", area: "applied", page: "", desc: "Crime-scene analysis, toxicology, and evidence-based chemical identification.", links: { linkedin: "https://www.linkedin.com/company/110792221", facebook: "https://www.facebook.com/986575247867982" }, kw: "forensic, forensics, toxicology, drugs of abuse, evidence, postmortem, poisoning, gunshot residue" },
+  { sym: "Eg", name: "Energy Chemistry", area: "applied", page: "", desc: "Hydrogen economy, solar fuels, and next-generation energy storage.", links: { linkedin: "https://www.linkedin.com/company/110115013", facebook: "https://www.facebook.com/890064814201409" }, tags: "batteries hydrogen", kw: "hydrogen, hydrogen production, water splitting, energy storage, fuel, solar cell, perovskite solar, biofuel, biodiesel, carbon capture, co2 reduction, renewable energy" },
+  { sym: "Fd", name: "Food Chemistry", area: "applied", page: "", desc: "Food composition, additives, flavor chemistry, and nutritional analysis.", links: { linkedin: "https://www.linkedin.com/company/110145025", facebook: "https://www.facebook.com/987048457822150" }, kw: "food, flavor, flavour, nutrition, nutritional, antioxidant, polyphenol, polyphenols, essential oil, olive oil, honey, dairy, beverage, food additive, shelf life" },
+  // Bio & Life Sciences
+  { sym: "Me", name: "Medicinal Chemistry", area: "bio", page: "pages/medicinal chemistry.html", desc: "Drug discovery, pharmacokinetics, QSAR, and molecular docking insights.", links: { linkedin: "https://www.linkedin.com/company/108555306", facebook: "https://www.facebook.com/895784856941090" }, tags: "drugs pharma", kw: "medicinal chemistry, drug design, sar, structure-activity, qsar, inhibitor, inhibitors, molecular docking, docking, lead optimization, pharmacophore, anticancer, antibacterial, antimicrobial, antiviral, anti-inflammatory, antidiabetic, admet, bioactive" },
+  { sym: "Bc", name: "Biological Chemistry", area: "bio", page: "pages/biological chemistry.html", desc: "Enzymatic catalysis, biomolecular interactions, and the chemistry of life.", links: { linkedin: "https://www.linkedin.com/company/108361425", facebook: "https://www.facebook.com/784689181403533" }, tags: "biochemistry proteins", kw: "biochemistry, biochemical, enzyme, enzymes, protein, proteins, dna, rna, metabolism, biomolecule, receptor, peptide, cell, in vitro, in vivo" },
+  { sym: "Dd", name: "Drug Discovery", area: "bio", page: "", desc: "Hit-to-lead optimization, ADMET profiling, and clinical candidate design.", links: { linkedin: "https://www.linkedin.com/company/109813829", facebook: "https://www.facebook.com/1106215462575381" }, tags: "pharma medicines", kw: "drug discovery, virtual screening, hit, hit-to-lead, lead compound, admet, clinical candidate, drug target, high-throughput screening, pharmacokinetics, drug-likeness, molecular dynamics" },
+  { sym: "Bo", name: "Bioorganic Chemistry", area: "bio", page: "", desc: "Natural products, biosynthesis, and organic chemistry of biological systems.", links: { linkedin: "https://www.linkedin.com/company/110637045" }, kw: "natural product, natural products, biosynthesis, plant extract, secondary metabolite, alkaloid, alkaloids, terpene, flavonoid, flavonoids, phytochemical, phytochemicals, medicinal plant" },
+  { sym: "Py", name: "Polymer Chemistry", area: "bio", page: "", desc: "Polymer synthesis, characterization, and advanced functional materials.", links: { linkedin: "https://www.linkedin.com/company/110117974", facebook: "https://www.facebook.com/1031491246703738" }, tags: "plastics", kw: "polymer, polymers, polymerization, copolymer, plastic, plastics, hydrogel, resin, elastomer, monomer, chitosan, cellulose, biopolymer" },
+  { sym: "Ma", name: "Marine Chemistry", area: "bio", page: "", desc: "Ocean chemistry, marine natural products, and aquatic geochemistry.", links: { linkedin: "https://www.linkedin.com/company/115803232" }, kw: "marine, ocean, seawater, algae, seaweed, coral, sediment, aquatic, coastal" },
+  { sym: "Ev", name: "Environmental Chemistry", area: "bio", page: "", desc: "Pollutant fate, atmospheric chemistry, and remediation strategies.", links: { linkedin: "https://www.linkedin.com/company/114304070", facebook: "https://www.facebook.com/1149279181601720" }, tags: "pollution climate water", kw: "environmental, environment, pollution, pollutant, pollutants, wastewater, heavy metal, heavy metals, microplastic, microplastics, adsorption, remediation, atmosphere, atmospheric, pesticide residue, dye removal, water quality" },
+  // Computational & AI
+  { sym: "Cp", name: "Computational Chemistry", area: "comp", page: "pages/computationel chemistry.html", desc: "Simulating reality with quantum mechanics, molecular dynamics, and AI predictions.", links: { linkedin: "https://www.linkedin.com/company/109477964", facebook: "https://www.facebook.com/946132968585941" }, tags: "DFT simulation", kw: "computational, in silico, molecular dynamics, md simulation, simulation, dft, molecular modeling, molecular modelling, force field, monte carlo" },
+  { sym: "Ci", name: "Chemoinformatics", area: "comp", page: "pages/chemioinformatics.html", desc: "AI-driven prediction, QSAR/QSPR modeling, and molecular data intelligence.", links: { linkedin: "https://www.linkedin.com/company/108361429", facebook: "https://www.facebook.com/1245185278668713" }, tags: "cheminformatics machine learning", kw: "cheminformatics, chemoinformatics, qsar, qspr, molecular descriptors, descriptors, fingerprint, fingerprints, smiles, virtual screening, chemical database, scaffold split" },
+  { sym: "Ao", name: "Autonomous Chemistry", area: "comp", page: "pages/autonomous chemistry.html", desc: "Robotics, machine learning, and self-driving labs shaping the future of synthesis.", links: { linkedin: "https://www.linkedin.com/company/108362446", facebook: "https://www.facebook.com/781222948411962" }, tags: "robots automation", kw: "self-driving lab, autonomous, robot, robotic, robotics, closed-loop, high-throughput experimentation, bayesian optimization, lab automation" },
+  { sym: "Dt", name: "Chemical Data Science & Automation", area: "comp", page: "", desc: "Data pipelines, lab automation, and informatics-driven experiment design.", links: { linkedin: "https://www.linkedin.com/company/110200145", facebook: "https://www.facebook.com/1057009130839227" }, kw: "data science, dataset, data pipeline, automation, lims, informatics, data-driven, design of experiments, chemometrics" },
+  { sym: "Ml", name: "Chemistry AI & ML Applications", area: "comp", page: "", desc: "Machine learning models applied to molecular property prediction and synthesis.", links: { linkedin: "https://www.linkedin.com/company/110198146" }, kw: "machine learning, deep learning, neural network, neural networks, graph neural network, random forest, xgboost, property prediction, generative model, prediction model" },
+  { sym: "Uc", name: "AI in Chemistry: Real Use Cases", area: "comp", page: "", desc: "Industry case studies where AI accelerates real chemical discovery.", links: { linkedin: "https://www.linkedin.com/company/110860911" }, kw: "case study, deployment, ai application, real-world, industrial ai" },
+  { sym: "Ai", name: "The Artificial Intelligence", area: "comp", page: "", desc: "General AI advances relevant to chemistry and scientific computing.", links: { linkedin: "https://www.linkedin.com/company/109297225", facebook: "https://www.facebook.com/889252394280465" }, kw: "artificial intelligence, large language model, llm, llms, ai, transformer, agents, ai agent" },
+  // Materials & Nano
+  { sym: "Nc", name: "Nanochemistry", area: "materials", page: "pages/nano chemistry.html", desc: "Design, synthesis, and application of nanoscale materials for medicine and energy.", links: { linkedin: "https://www.linkedin.com/company/108557323", facebook: "https://www.facebook.com/1014767208377887" }, tags: "nanoparticles", kw: "nanoparticle, nanoparticles, nanomaterial, nanomaterials, nano, nanostructure, quantum dot, quantum dots, nanocomposite, graphene, carbon nanotube, zno, tio2, silver nanoparticles, gold nanoparticles" },
+  { sym: "Mr", name: "Chemistry of Materials", area: "materials", page: "", desc: "Solid-state chemistry, ceramics, composites, and functional material design.", links: { linkedin: "https://www.linkedin.com/company/109543039", facebook: "https://www.facebook.com/1053660431173915" }, kw: "materials, material, solid-state, ceramic, ceramics, composite, composites, thin film, alloy, perovskite, semiconductor, glass, functional materials, sol-gel" },
+  { sym: "Cc", name: "Sustainable Materials & Circular Chemistry", area: "materials", page: "", desc: "Recyclable materials, bio-based polymers, and circular economy approaches.", links: { linkedin: "https://www.linkedin.com/company/110198148", facebook: "https://www.facebook.com/1101581653041345" }, tags: "recycling", kw: "recycling, recycled, circular economy, circular, bio-based, biodegradable, upcycling, life cycle assessment, waste valorization, agricultural waste, olive pomace" },
+  { sym: "Su", name: "Supramolecular Chemistry", area: "materials", page: "", desc: "Self-assembly, host-guest chemistry, and non-covalent interaction design.", links: { linkedin: "https://www.linkedin.com/company/109541035" }, kw: "supramolecular, self-assembly, host-guest, cyclodextrin, macrocycle, calixarene, non-covalent, hydrogen bonding, molecular recognition" },
+  { sym: "Nu", name: "Nuclear Chemistry", area: "materials", page: "", desc: "Radioactivity, nuclear reactions, and radiopharmaceutical chemistry.", links: { linkedin: "https://www.linkedin.com/company/110154940", facebook: "https://www.facebook.com/1335668622963546" }, kw: "nuclear, radioactive, radioactivity, radiochemistry, isotope, isotopes, radiopharmaceutical, uranium, radiolabeling, radionuclide" },
+  { sym: "Sf", name: "Surface Chemistry", area: "materials", page: "", desc: "Adsorption, thin films, and interfacial phenomena at surfaces.", links: { linkedin: "https://www.linkedin.com/company/110632021", facebook: "https://www.facebook.com/1159541500578349" }, kw: "surface, surfaces, adsorption, interface, interfacial, thin film, coating, wettability, xps, langmuir, freundlich, surfactant" },
+  // Discovery & Community
+  { sym: "Ws", name: "Wisdom & Stories", area: "community", page: "pages/wisdom and stories.html", desc: "Reflections, experiences, and philosophical insights from chemists worldwide.", links: {}, kw: "history, reflection, career story" },
+  { sym: "Nw", name: "Chemistry News", area: "community", page: "", desc: "Breaking research, policy updates, and global chemistry headlines.", links: { linkedin: "https://www.linkedin.com/company/109816820", facebook: "https://www.facebook.com/1028835963635926" }, kw: "" },
+  { sym: "Ch", name: "The Chemistry", area: "community", page: "", desc: "Foundational concepts and the beautiful complexity of chemical science.", links: { linkedin: "https://www.linkedin.com/company/112177278", facebook: "https://www.facebook.com/1127335147130283" }, kw: "chemistry education, teaching, education" },
+  { sym: "Mx", name: "Modern Chemistry", area: "community", page: "", desc: "Contemporary advances redefining how we think about matter and reactions.", links: { linkedin: "https://www.linkedin.com/company/110426188" }, kw: "" },
+  { sym: "Cv", name: "Creative Chemistry", area: "community", page: "", desc: "Chemistry meets art, design, and unconventional thinking.", links: { linkedin: "https://www.linkedin.com/company/111350458", facebook: "https://www.facebook.com/1148383671696764" }, kw: "chemistry and art, scientific illustration, data visualization" },
+  { sym: "Pf", name: "Chemistry Professionals", area: "community", page: "", desc: "Career insights, networking, and professional development for chemists.", links: { linkedin: "https://www.linkedin.com/company/110421179" }, tags: "jobs careers", kw: "career, careers, jobs" },
+  { sym: "Fa", name: "Failed Discoveries That Changed Science", area: "community", page: "", desc: "Serendipity, mistakes, and the surprising origin stories of breakthroughs.", links: { linkedin: "https://www.linkedin.com/company/110857180", facebook: "https://www.facebook.com/1307797865748659" }, tags: "history", kw: "serendipity, history of chemistry" },
+  { sym: "Le", name: "Amazing Lab Experiments", area: "community", page: "", desc: "Spectacular demonstrations and experimental chemistry that inspires curiosity.", links: { linkedin: "https://www.linkedin.com/company/110148997" }, kw: "demonstration, experiment" },
+  { sym: "Ms", name: "Molecular Systems", area: "community", page: "", desc: "Systems chemistry, molecular machines, and emergent chemical behavior.", links: { linkedin: "https://www.linkedin.com/company/110780320", facebook: "https://www.facebook.com/1270400636160265" }, kw: "molecular machine, molecular machines, systems chemistry, molecular motor, emergent" },
+  { sym: "Cy", name: "Chemical Systems", area: "community", page: "", desc: "Complex reaction networks, oscillators, and far-from-equilibrium chemistry.", links: { linkedin: "https://www.linkedin.com/company/110794212" }, kw: "reaction network, oscillating reaction, belousov, far-from-equilibrium, complex systems" }
+];
+
+/* =====================================================================
+   PICKER — "Find my pages". Each answer points to page symbols,
+   most relevant first. Add answers or symbols freely.
+   ===================================================================== */
+const PICKER = {
+  work: [
+    { label: "Drug discovery & pharma", syms: ["Me", "Dd", "Hc", "Ci", "Bo", "Bc", "Qc"] },
+    { label: "Organic synthesis", syms: ["Or", "Sy", "Hc", "Rs", "Gr", "Ct", "Rm"] },
+    { label: "Catalysis", syms: ["Ct", "Gr", "Io", "Pc", "Sf"] },
+    { label: "Batteries & energy", syms: ["Ec", "Eg", "Mr", "Pc", "Sf"] },
+    { label: "Materials & nano", syms: ["Nc", "Mr", "Su", "Sf", "Py", "Cc"] },
+    { label: "Polymers & plastics", syms: ["Py", "Cc", "Mr"] },
+    { label: "Environment & sustainability", syms: ["Ev", "Gr", "Cc", "Ma"] },
+    { label: "Analytical & instruments", syms: ["An", "Qc", "Fo", "St"] },
+    { label: "AI, data & automation", syms: ["Ml", "Ci", "Dt", "Ao", "Uc", "Ai", "Cp"] },
+    { label: "Theory & simulation", syms: ["Tr", "Cp", "Ph", "Ki", "Td"] },
+    { label: "Physical chemistry", syms: ["Ph", "Ki", "Td", "En", "So", "Rx"] },
+    { label: "Biochemistry", syms: ["Bc", "Bo", "Me"] },
+    { label: "Inorganic & nuclear", syms: ["Io", "Nu", "St"] },
+    { label: "Industry & process", syms: ["Id", "Cg", "Qc", "Ap"] },
+    { label: "Food chemistry", syms: ["Fd", "An", "Qc"] },
+    { label: "Forensics & toxicology", syms: ["Fo", "An"] }
+  ],
+  feed: [
+    { label: "Breaking news", syms: ["Nw", "Mx"] },
+    { label: "Careers & jobs", syms: ["Pf"] },
+    { label: "Stories & history", syms: ["Ws", "Fa"] },
+    { label: "Spectacular experiments", syms: ["Le", "Cv"] },
+    { label: "Big-picture chemistry", syms: ["Ch", "Ms", "Cy"] },
+    { label: "Just research papers", syms: [] }
+  ]
+};
+
+/* ---------------- helpers ---------------- */
+const $ = s => document.querySelector(s);
+const esc = t => String(t ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const areaOf = id => AREAS.find(a => a.id === id) || { label: "" };
+const linksOf = p => Object.entries(p.links || {}).filter(([, u]) => u);
+const pf = key => PLATFORMS[key] || { name: key.charAt(0).toUpperCase() + key.slice(1), color: "#4b5563" };
+const symHTML = p => p.logo ? `<img src="${encodeURI(p.logo)}" alt="">` : esc(p.sym);
+const wide = window.matchMedia("(min-width: 1000px)");
+const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+const track = (name, data) => { try { window.umami && window.umami.track(name, data); } catch (e) {} };
+const fmtN = n => n >= 10000 ? (n / 1000).toFixed(n >= 100000 ? 0 : 1).replace(/\.0$/, "") + "k" : n >= 1000 ? (n / 1000).toFixed(1).replace(/\.0$/, "") + "k" : String(n);
+function ago(t) {
+  const s = Math.max(0, (Date.now() - new Date(t).getTime()) / 1000);
+  if (s < 60) return "just now";
+  if (s < 3600) return Math.round(s / 60) + " min ago";
+  if (s < 86400) return Math.round(s / 3600) + "h ago";
+  const d = Math.round(s / 86400);
+  return d === 1 ? "yesterday" : d < 30 ? d + " days ago" : new Date(t).toLocaleDateString("en", { month: "short", day: "numeric" });
+}
+
+/* each page has a clean, shareable address: chemisters.com/electrochemistry/ (built by tools/build_site.py) */
+const slugify = t => t.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+PAGES.forEach(p => { p.slug = p.slug || slugify(p.name); });
+const SITE = "https://chemisters.com";
+const pageLink = p => `${SITE}/${p.slug}/`;
+
+/* guard: symbols must be unique and must not be real elements */
+(() => {
+  const EL = "H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr Rb Sr Y Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I Xe Cs Ba La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu Hf Ta W Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn Fr Ra Ac Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr Rf Db Sg Bh Hs Mt Ds Rg Cn Nh Fl Mc Lv Ts Og".split(" ");
+  const seen = new Set();
+  PAGES.forEach(p => {
+    if (EL.includes(p.sym)) console.warn(`Chemisters: "${p.sym}" (${p.name}) is a real element symbol. Pick another.`);
+    if (seen.has(p.sym)) console.warn(`Chemisters: symbol "${p.sym}" is used twice.`);
+    seen.add(p.sym);
+  });
+})();
+
+/* order pages by area so each colour forms a run, then number them like atoms */
+const ORDERED = AREAS.flatMap(a => PAGES.filter(p => p.area === a.id));
+ORDERED.forEach((p, i) => { p.z = i + 1; });
+const bySym = s => ORDERED.find(p => p.sym.toLowerCase() === String(s).toLowerCase());
+
+/* collection + "fields close to" suggestions after a follow (assets/follow-kit.js; the page works without it) */
+const KIT = window.FollowKit ? FollowKit.init({ pages: ORDERED, picker: PICKER, platforms: PLATFORMS, href: s => s + "/" }) : null;
+const byZ = z => ORDERED.find(p => p.z === z);
+
+/* position of element z in the real periodic table (row, column) */
+function cell(z) {
+  const periods = [[1, 2], [3, 10], [11, 18], [19, 36], [37, 54], [55, 86], [87, 118]];
+  for (let r = 0; r < periods.length; r++) {
+    const [a, b] = periods[r];
+    if (z < a || z > b) continue;
+    const i = z - a, row = r + 1;
+    if (row === 1) return [1, z === 1 ? 1 : 18];
+    if (row <= 3) return [row, i < 2 ? i + 1 : 13 + (i - 2)];
+    if (row <= 5) return [row, i + 1];
+    if (i < 2) return [row, i + 1];
+    if (i < 16) return [row + 3, 4 + (i - 2)];   // lanthanide / actinide rows
+    return [row, 3 + (i - 16)];
+  }
+  return [11 + Math.floor((z - 119) / 18), 1 + ((z - 119) % 18)];
+}
+
+/* ---------------- live data (written by n8n, see tools/n8n-live-data.md) ---------------- */
+const LIVE = { last: {}, posts: [], followers: {}, totalFollowers: 0 };
+
+/* ---------------- counts ---------------- */
+const COUNTS = { pages: PAGES.length, channels: PAGES.reduce((n, p) => n + linksOf(p).length, 0), followers: 0 };
+$("#swatches").innerHTML = AREAS.map(a => `<i style="--fc: var(--${a.id})"></i>`).join("");
+
+/* ---------------- filter tabs ---------------- */
+const tabs = $("#famTabs");
+tabs.innerHTML = `<button type="button" class="fam-tab" data-area="all" aria-pressed="true">All <span class="n">${PAGES.length}</span></button>` +
+  AREAS.map(a => `<button type="button" class="fam-tab fam-${a.id}" data-area="${a.id}" aria-pressed="false"><i></i>${esc(a.label)} <span class="n">${PAGES.filter(p => p.area === a.id).length}</span></button>`).join("");
+
+/* ---------------- building blocks ---------------- */
+function followHTML(p, compact) {
+  const l = linksOf(p);
+  if (!l.length) return `<p class="hint">This page is being set up. Follow the main Chemisters accounts in the meantime.</p>`;
+  return `<div class="follow">${l.map(([k, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener" style="--pc:${pf(k).color}" data-follow-slug="${esc(p.slug)}" data-follow-platform="${esc(k)}" data-umami-event="follow" data-umami-event-page="${esc(p.slug)}" data-umami-event-platform="${esc(k)}" aria-label="Follow ${esc(p.name)} on ${esc(pf(k).name)}">${pf(k).svg || GENERIC_ICON}${compact ? "" : "Follow on "}${esc(pf(k).name)}</a>`).join("")}</div>`;
+}
+function moreHTML(p) {
+  return `<div class="more"><a href="${p.slug}/">Open the ${esc(p.name)} page →</a><a href="publish/">Feature your research here →</a><button type="button" class="linkcopy" data-link="${esc(pageLink(p))}">Copy link to this page</button></div>`;
+}
+function liveHTML(p) {
+  const l = LIVE.last[p.slug];
+  const f = LIVE.followers[p.slug];
+  let h = "";
+  if (l) h += `<p class="live"><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.title || "Latest post")}</a><time datetime="${esc(l.time)}">${ago(l.time)}</time></p>`;
+  return h;
+}
+const folLabel = p => LIVE.followers[p.slug] ? ` · ${fmtN(LIVE.followers[p.slug])} followers` : "";
+function bigHTML(p) {
+  return `<div class="big" style="--fc: var(--${p.area})"><span class="z">${p.z}</span><span class="sym">${symHTML(p)}</span><span class="nm">${esc(p.name)}</span></div>`;
+}
+function miniHTML(p) {
+  return `<div class="mini" style="--fc: var(--${p.area})">${p.logo ? `<img src="${encodeURI(p.logo)}" alt="">` : `<span class="z">${p.z}</span><span class="sym">${esc(p.sym)}</span>`}</div>`;
+}
+function defaultPanel() {
+  return `<div class="big" aria-hidden="true"><span class="z">${PAGES.length}</span><span class="sym"><img src="images/Chemisters_logo.png" alt=""></span><span class="nm">Chemisters</span></div>
+    <div class="info"><p class="fam">How to read the table</p>
+      <h3>Every element is a page.</h3>
+      <p>Hover an element to preview it, click to follow it. Every page you follow lights up its tile: collect your whole field.</p>
+      <div class="row"><button class="chip-btn panel-cta" type="button" data-open-picker>Find my pages →</button><button class="chip-btn panel-cta" type="button" data-open-quiz>Which element are you? →</button></div>
+    </div>`;
+}
+function pagePanel(p, pinned) {
+  return `${bigHTML(p)}<div class="info" style="--fc: var(--${p.area})"><p class="fam">${esc(areaOf(p.area).label + folLabel(p))}</p>
+    <h3>${esc(p.name)}</h3><p>${esc(p.desc)}</p>${liveHTML(p)}${followHTML(p)}<div class="more"><a href="${p.slug}/">Open the ${esc(p.name)} page →</a>${gotHTML(p)}</div></div>`;
+}
+const gotHTML = p => KIT && KIT.has(p.slug) ? `<span class="gotp">✓ In your table</span>` : "";
+
+/* ---------------- table ---------------- */
+const table = $("#ptable");
+table.innerHTML = ORDERED.map(p => {
+  const [r, c] = cell(p.z);
+  const dots = linksOf(p).map(() => "<i></i>").join("");
+  return `<button type="button" class="tile fam-${p.area}" data-z="${p.z}" style="grid-row:${r};grid-column:${c};--col:${c}" aria-label="${esc(p.name)}">
+      <span class="z">${p.z}</span><span class="sym">${symHTML(p)}</span><span class="dots" aria-hidden="true">${dots}</span><span class="fol"></span></button>`;
+}).join("") + (() => {
+  /* the "next field" tile: where the 57–71 box sits on a real periodic table */
+  const n = ORDERED.length + 1, [r, c] = n <= 71 ? [6, 3] : cell(n);
+  return `<button type="button" class="tile ghost" id="ghost" style="grid-row:${r};grid-column:${c};--col:${c}" aria-label="More fields are coming">
+      <span class="z">${n}+</span><span class="sym">+</span><span class="dots" aria-hidden="true"></span></button>`;
+})() + `<div class="panel" id="panel" aria-live="polite">${defaultPanel()}</div>`;
+const panel = $("#panel");
+const tiles = [...table.querySelectorAll(".tile:not(.ghost)")];
+const ghost = $("#ghost");
+function paintGot() {
+  if (!KIT) return;
+  tiles.forEach(t => t.classList.toggle("got", KIT.has(byZ(Number(t.dataset.z)).slug)));
+  tabs.querySelectorAll(".fam-tab").forEach(b => {
+    const a = b.dataset.area, total = a === "all" ? PAGES.length : PAGES.filter(p => p.area === a).length;
+    const got = KIT.count(a === "all" ? null : p => p.area === a);
+    b.querySelector(".n").textContent = got ? `${got}/${total}` : total;
+  });
+}
+const SUGGEST = "mailto:contact@chemisters.com?subject=" + encodeURIComponent("A field for Chemisters");
+function ghostBody() {
+  return `<p class="fam">The table keeps growing</p>
+    <h3>The next element is on its way.</h3>
+    <p>We keep opening pages for new fields, and adding new kinds of posts to the pages you already follow.</p>
+    <div class="more"><a href="${SUGGEST}">Is your field missing? Tell us →</a></div>`;
+}
+const ghostBig = `<div class="big ghost-big" aria-hidden="true"><span class="z">${ORDERED.length + 1}+</span><span class="sym">+</span><span class="nm">Next field</span></div>`;
+ghost.addEventListener("click", e => {
+  e.stopPropagation();
+  if (wide.matches) {
+    pinnedZ = null; tiles.forEach(t => t.classList.remove("pinned"));
+    ghost.classList.add("pinned");
+    panel.innerHTML = `${ghostBig}<div class="info">${ghostBody()}</div>`;
+  } else {
+    $("#sheetBody").innerHTML = `${ghostBig}<div class="info" style="align-content:center"><p class="fam">The table keeps growing</p><h3 id="sheet-title">The next element is on its way.</h3></div>
+      <div class="full info"><p>We keep opening pages for new fields, and adding new kinds of posts to the pages you already follow.</p><div class="more"><a href="${SUGGEST}">Is your field missing? Tell us →</a></div></div>`;
+    openDialog(sheet);
+  }
+  track("next_field_open");
+});
+ghost.addEventListener("pointerenter", () => { if (wide.matches && !pinnedZ && !ghost.classList.contains("pinned")) panel.innerHTML = `${ghostBig}<div class="info">${ghostBody()}</div>`; });
+const tileOf = p => tiles.find(t => Number(t.dataset.z) === p.z);
+
+let pinnedZ = null;
+function showPanel(p, pinned) { panel.innerHTML = p ? pagePanel(p, pinned) : defaultPanel(); }
+function pin(z) {
+  pinnedZ = z;
+  ghost.classList.remove("pinned");
+  tiles.forEach(t => t.classList.toggle("pinned", Number(t.dataset.z) === z));
+  showPanel(z ? byZ(z) : null, !!z);
+  if (z) track("tile_open", { page: byZ(z).slug });
+}
+table.addEventListener("pointerover", e => {
+  if (!wide.matches || pinnedZ || ghost.classList.contains("pinned") || e.pointerType === "touch") return;
+  const t = e.target.closest(".tile"); if (!t || t.classList.contains("off")) return;
+  showPanel(byZ(Number(t.dataset.z)), false);
+});
+table.addEventListener("pointerleave", () => { if (wide.matches && !pinnedZ && !ghost.classList.contains("pinned")) showPanel(null); });
+table.addEventListener("click", e => {
+  if (e.target.closest("[data-unpin]")) { pin(null); return; }
+  const t = e.target.closest(".tile"); if (!t) return;
+  const z = Number(t.dataset.z);
+  if (wide.matches) pin(pinnedZ === z ? null : z); else openSheet(byZ(z));
+});
+document.addEventListener("keydown", e => { if (e.key === "Escape" && (pinnedZ || ghost.classList.contains("pinned")) && !document.querySelector("dialog[open]")) pin(null); });
+wide.addEventListener("change", () => { pin(null); });
+
+/* keyboard: focusing a tile previews it; arrow keys move through the visible tiles */
+table.addEventListener("focusin", e => {
+  const t = e.target.closest(".tile:not(.ghost)");
+  if (t && wide.matches && !pinnedZ) showPanel(byZ(Number(t.dataset.z)), false);
+});
+table.addEventListener("keydown", e => {
+  const t = e.target.closest(".tile");
+  if (!t || !["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "Home", "End"].includes(e.key)) return;
+  const vis = tiles.filter(x => !x.classList.contains("off"));
+  if (!vis.length) return;
+  let next = null;
+  const i = vis.indexOf(t);
+  if (e.key === "ArrowRight") next = vis[Math.min(vis.length - 1, i + 1)];
+  else if (e.key === "ArrowLeft") next = vis[Math.max(0, i - 1)];
+  else if (e.key === "Home") next = vis[0];
+  else if (e.key === "End") next = vis[vis.length - 1];
+  else {
+    const r0 = t.getBoundingClientRect(), down = e.key === "ArrowDown";
+    let best = null, bestScore = Infinity;
+    vis.forEach(x => {
+      if (x === t) return;
+      const r = x.getBoundingClientRect(), dy = r.top - r0.top;
+      if (down ? dy <= 4 : dy >= -4) return;
+      const score = Math.abs(dy) * 4 + Math.abs(r.left - r0.left);
+      if (score < bestScore) { bestScore = score; best = x; }
+    });
+    next = best;
+  }
+  if (next) { e.preventDefault(); next.focus(); }
+});
+
+/* copy a page's own link (to paste in that page's description, for example) */
+document.addEventListener("click", async e => {
+  const b = e.target.closest(".linkcopy"); if (!b) return;
+  const url = b.dataset.link;
+  try { await navigator.clipboard.writeText(url); b.textContent = "Link copied"; }
+  catch (err) { b.textContent = url; }
+  setTimeout(() => { b.textContent = "Copy link to this page"; }, 2000);
+});
+
+/* ---------------- dialogs ---------------- */
+function openDialog(d) { if (d.showModal) d.showModal(); else d.setAttribute("open", ""); }
+function closeDialog(d) { if (d.close) d.close(); else d.removeAttribute("open"); }
+document.querySelectorAll("dialog").forEach(d => {
+  d.addEventListener("click", e => { if (e.target === d || e.target.closest("[data-close]")) closeDialog(d); });
+});
+const sheet = $("#sheet");
+function openSheet(p) {
+  $("#sheetBody").innerHTML = `${bigHTML(p)}<div class="info" style="--fc: var(--${p.area})"><p class="fam">${esc(areaOf(p.area).label + folLabel(p))}</p><h3 id="sheet-title">${esc(p.name)}</h3></div>
+    <div class="full info"><p>${esc(p.desc)}</p>${liveHTML(p)}${followHTML(p)}${gotHTML(p) ? `<p>${gotHTML(p)}</p>` : ""}${moreHTML(p)}</div>`;
+  openDialog(sheet);
+  track("tile_open", { page: p.slug });
+}
+
+/* ---------------- cards (list view) ---------------- */
+const cardsView = $("#cardsView");
+function renderCards() {
+  cardsView.innerHTML = ORDERED.map(p => {
+    const l = LIVE.last[p.slug];
+    return `<article class="card fam-${p.area}" data-z="${p.z}" style="--fc: var(--${p.area})">
+    <div class="card-top">${miniHTML(p)}<div><p class="famname">${esc(areaOf(p.area).label)}</p><h3>${esc(p.name)}</h3></div></div>
+    <p>${esc(p.desc)}</p>${l ? `<span class="live-line">Posted ${ago(l.time)}</span>` : ""}
+    <div class="card-foot"><div class="socials">${linksOf(p).map(([k, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener" style="--pc:${pf(k).color}" aria-label="${esc(p.name)} on ${esc(pf(k).name)}" title="Follow on ${esc(pf(k).name)}" data-follow-slug="${esc(p.slug)}" data-follow-platform="${esc(k)}" data-umami-event="follow" data-umami-event-page="${esc(p.slug)}" data-umami-event-platform="${esc(k)}">${pf(k).svg || GENERIC_ICON}</a>`).join("")}</div>
+      <a class="explore" href="${p.slug}/">Open page →</a></div>
+  </article>`;
+  }).join("") + `<article class="card-next" id="cardNext"><span class="plus" aria-hidden="true">+</span><div><h3>The next element is on its way.</h3><p>We keep opening pages for new fields. Is yours missing? <a href="mailto:contact@chemisters.com?subject=${encodeURIComponent("A field for Chemisters")}">Tell us →</a></p></div></article><p class="empty" id="cardsEmpty" hidden>No page matches your search.</p>`;
+}
+renderCards();
+const cardsAll = () => [...cardsView.querySelectorAll(".card")];
+
+/* ---------------- filtering ---------------- */
+let area = "all", query = "", view = "table", picked = null;
+const norm = s => String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+function matches(p) {
+  if (picked) return picked.has(p.sym);
+  if (area !== "all" && p.area !== area) return false;
+  if (!query) return true;
+  const hay = norm([p.name, p.desc, p.sym, p.tags || "", p.kw || "", areaOf(p.area).label].join(" "));
+  return norm(query).split(/\s+/).every(w => hay.includes(w));
+}
+function sweep() {
+  if (reduce.matches || view !== "table" || !wide.matches) return;
+  const s = $("#sweep");
+  s.style.setProperty("--sw", (table.offsetWidth + 140) + "px");
+  s.classList.remove("run"); void s.offsetWidth; s.classList.add("run");
+}
+function apply(animate) {
+  const hits = ORDERED.filter(matches).map(p => p.z);
+  const set = new Set(hits);
+  tiles.forEach(t => {
+    const on = set.has(Number(t.dataset.z));
+    const col = Number(t.style.getPropertyValue("--col")) || 1;
+    t.style.setProperty("--d", animate && wide.matches ? (col * 28) + "ms" : "0ms");
+    t.classList.toggle("off", !on);
+    t.tabIndex = on ? 0 : -1;
+    if (animate && on && (area !== "all" || query || picked) && wide.matches) { t.classList.remove("hit"); void t.offsetWidth; t.classList.add("hit"); }
+    if (!on && pinnedZ === Number(t.dataset.z)) pin(null);
+  });
+  const filtering = area !== "all" || !!query || !!picked;
+  ghost.classList.toggle("off", filtering);
+  ghost.tabIndex = filtering ? -1 : 0;
+  $("#cardNext").hidden = filtering;
+  if (filtering && ghost.classList.contains("pinned")) pin(null);
+  let i = 0;
+  cardsAll().forEach(c => {
+    const on = set.has(Number(c.dataset.z));
+    c.classList.toggle("off", !on);
+    if (on && animate) { c.classList.remove("enter"); void c.offsetWidth; c.style.setProperty("--d", Math.min(i++ * 30, 400) + "ms"); c.classList.add("enter"); }
+  });
+  $("#cardsEmpty").hidden = hits.length > 0;
+  const st = $("#status");
+  if (picked) st.innerHTML = `<span><b>${hits.length}</b> pages picked for you</span><button type="button" data-clear-pick>Show all pages</button>`;
+  else {
+    const label = area === "all" ? "all areas" : areaOf(area).label;
+    const got = KIT ? KIT.count(area === "all" ? null : p => p.area === area) : 0;
+    const areaN = PAGES.filter(p => p.area === area).length;
+    st.innerHTML = hits.length ? `<span><b>${hits.length}</b> of ${PAGES.length} pages · ${esc(query ? `“${query}” in ${label}` : label)}</span>`
+      + (got && !query ? `<span class="got-line">✓ ${got} of ${area === "all" ? PAGES.length : areaN} in your table</span>` : "")
+      + (area !== "all" && !query ? `<button type="button" data-follow-area="${area}">Follow all ${areaN} ${esc(label)} pages</button>` : "")
+      + (heat ? `<span class="heat-key">fewer <i></i> more followers</span>` : "")
+      : `<span>No page matches “${esc(query)}”.</span><button type="button" data-open-picker>Try “Find my pages”</button>`;
+  }
+  if (animate) sweep();
+}
+function clearPick() { picked = null; apply(true); }
+document.addEventListener("click", e => { if (e.target.closest("[data-clear-pick]")) clearPick(); });
+tabs.addEventListener("click", e => {
+  const b = e.target.closest(".fam-tab"); if (!b) return;
+  area = b.dataset.area; picked = null;
+  tabs.querySelectorAll(".fam-tab").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+  apply(true);
+});
+let qTimer;
+$("#q").addEventListener("input", e => {
+  query = e.target.value.trim(); picked = null;
+  clearTimeout(qTimer);
+  qTimer = setTimeout(() => apply(true), 160);
+});
+$("#q").addEventListener("keydown", e => {
+  if (e.key !== "Enter") return;
+  const first = ORDERED.find(matches); if (!first) return;
+  if (view === "table") { if (wide.matches) pin(first.z); else openSheet(first); }
+});
+
+/* view toggle */
+function setView(v) {
+  view = v;
+  $("#v-table").setAttribute("aria-pressed", String(v === "table"));
+  $("#v-cards").setAttribute("aria-pressed", String(v === "cards"));
+  $("#tableView").hidden = v !== "table";
+  $("#swipeHint").hidden = v !== "table";
+  cardsView.hidden = v !== "cards";
+  apply(true);
+}
+$("#v-table").addEventListener("click", () => setView("table"));
+$("#v-cards").addEventListener("click", () => setView("cards"));
+
+/* heat view */
+let heat = false;
+$("#heatBtn").addEventListener("click", () => {
+  heat = !heat;
+  $("#heatBtn").setAttribute("aria-pressed", String(heat));
+  table.classList.toggle("heat", heat);
+  if (heat && view !== "table") setView("table"); else apply(false);
+  track("heat_view", { on: heat });
+});
+
+/* bring a page into view and open it */
+function reveal(p, smooth) {
+  if (area !== "all" || query || picked) {
+    area = "all"; query = ""; picked = null; $("#q").value = "";
+    tabs.querySelectorAll(".fam-tab").forEach(x => x.setAttribute("aria-pressed", String(x.dataset.area === "all")));
+    apply(false);
+  }
+  if (view !== "table") setView("table");
+  const t = tileOf(p);
+  const r = table.getBoundingClientRect();
+  if (r.top < 60 || r.bottom > innerHeight) $("#table").scrollIntoView({ behavior: smooth && !reduce.matches ? "smooth" : "auto" });
+  if (!wide.matches) { const w = $("#tableView"); w.scrollTo({ left: t.offsetLeft - w.clientWidth / 2 + t.offsetWidth / 2, behavior: smooth ? "smooth" : "auto" }); }
+  setTimeout(() => {
+    t.classList.remove("pulse"); void t.offsetWidth; t.classList.add("pulse");
+    if (wide.matches) pin(p.z); else openSheet(p);
+  }, smooth ? 450 : 200);
+}
+
+/* surprise me */
+$("#surprise").addEventListener("click", () => {
+  const pool = ORDERED.filter(matches); if (!pool.length) return;
+  const p = pool[Math.floor(Math.random() * pool.length)];
+  if (view === "cards") {
+    const c = cardsAll().find(x => Number(x.dataset.z) === p.z);
+    c.scrollIntoView({ behavior: reduce.matches ? "auto" : "smooth", block: "center" });
+    c.classList.remove("enter"); void c.offsetWidth; c.classList.add("enter");
+    return;
+  }
+  const t = tileOf(p);
+  t.classList.remove("pulse"); void t.offsetWidth; t.classList.add("pulse");
+  if (wide.matches) pin(p.z); else { const w = $("#tableView"); w.scrollTo({ left: t.offsetLeft - w.clientWidth / 2, behavior: "smooth" }); setTimeout(() => openSheet(p), 450); }
+});
+
+paintGot();
+apply(false);
+if (KIT) KIT.onChange(() => {
+  paintGot(); apply(false);
+  if (pinnedZ && wide.matches) showPanel(byZ(pinnedZ), true);
+  pk.querySelectorAll("[data-pick]").forEach(el => el.classList.toggle("is-got", KIT.has(el.dataset.pick)));
+});
+
+/* open a page from the address: chemisters.com/#electrochemistry (the clean /electrochemistry/ links redirect here) */
+function openFromHash(smooth) {
+  const slug = decodeURIComponent(location.hash.slice(1)).toLowerCase();
+  if (!slug) return false;
+  if (slug === "quiz") { openQuiz(); return true; }
+  const p = ORDERED.find(x => x.slug === slug) || bySym(slug);
+  if (!p) return false;
+  reveal(p, smooth);
+  return true;
+}
+addEventListener("hashchange", () => openFromHash(true));
+
+/* type an element's symbol anywhere to jump to it (e.g. E then c) */
+(() => {
+  const toast = $("#toast");
+  let buf = "", timer, toastTimer;
+  const show = html => { toast.innerHTML = html; toast.classList.add("show"); clearTimeout(toastTimer); toastTimer = setTimeout(() => toast.classList.remove("show"), 1600); };
+  document.addEventListener("keydown", e => {
+    if (e.ctrlKey || e.metaKey || e.altKey || e.key.length !== 1 || !/[a-z]/i.test(e.key)) return;
+    if (e.target.closest("input, textarea, select, [contenteditable]") || document.querySelector("dialog[open]")) return;
+    buf = (buf + e.key).slice(-2);
+    clearTimeout(timer); timer = setTimeout(() => { buf = ""; }, 900);
+    if (buf.length < 2) { show(`<b>${esc(buf.toUpperCase())}</b>…`); return; }
+    const p = bySym(buf);
+    if (p) { show(`<b>${esc(p.sym)}</b> → ${esc(p.name)}`); reveal(p, true); track("symbol_jump", { page: p.slug }); }
+    else show(`No element <b>${esc(buf.charAt(0).toUpperCase() + buf.charAt(1))}</b>`);
+    buf = "";
+  });
+})();
+
+/* the table assembles itself, element by element, on first paint */
+if (!reduce.matches && !location.hash) {
+  table.classList.add("boot");
+  tiles.forEach(t => t.style.setProperty("--d", (Number(t.dataset.z) * 14) + "ms"));
+  requestAnimationFrame(() => requestAnimationFrame(() => table.classList.remove("boot")));
+  setTimeout(() => tiles.forEach(t => t.style.setProperty("--d", "0ms")), 1700);
+}
+
+const picker = $("#picker"), pk = $("#pk");   /* one dialog shared by the picker, the quiz and "follow the whole area" */
+
+/* ---------------- "Which element are you?" quiz ----------------
+   Each answer gives a point to the symbols listed. Edit questions freely. */
+const QUIZ = [
+  { q: "Your ideal day in the lab?", a: [
+    ["Running a twelve-step synthesis", ["Or", "Sy", "Hc", "Rs"]],
+    ["Coaxing a catalyst to work faster", ["Ct", "Gr", "Io"]],
+    ["Watching a battery charge and discharge", ["Ec", "Eg", "Mr"]],
+    ["Writing code that predicts molecules", ["Ml", "Ci", "Cp", "Ao"]],
+    ["Testing a new drug candidate", ["Me", "Dd", "Bc"]],
+    ["Measuring what nobody else can see", ["An", "St", "Qc", "Fo"]] ] },
+  { q: "Pick a superpower.", a: [
+    ["Seeing every atom", ["St", "Nc", "Sf", "Su"]],
+    ["Predicting the future", ["Ml", "Cp", "Tr", "Ki"]],
+    ["Healing anything", ["Me", "Dd", "Bo", "Bc"]],
+    ["Turning waste into treasure", ["Cc", "Gr", "Ev", "Py"]],
+    ["Making light do the work", ["Pc", "Eg"]],
+    ["Building anything at scale", ["Id", "Cg", "Ap"]] ] },
+  { q: "What do you read first in a paper?", a: [
+    ["The mechanism", ["Rx", "Ki", "Or", "Rm"]],
+    ["The figures and spectra", ["An", "St", "Ph"]],
+    ["The yields and conditions", ["Sy", "Ct", "Hc"]],
+    ["The code and the dataset", ["Dt", "Ci", "Ml"]],
+    ["The biological results", ["Bc", "Me", "Dd"]],
+    ["The applications at the end", ["Ap", "Id", "Eg", "Mr"]] ] },
+  { q: "Your favourite kind of molecule?", a: [
+    ["Rings with nitrogen in them", ["Hc", "Me"]],
+    ["Giant chains", ["Py", "Su", "Mr"]],
+    ["Tiny particles with huge surfaces", ["Nc", "Sf", "Ct"]],
+    ["Anything that glows", ["Pc", "Nu", "Le"]],
+    ["Anything a plant or the sea makes", ["Bo", "Fd", "Ma"]],
+    ["Ions in solution", ["So", "Ec", "En"]] ] },
+  { q: "What would you put on your lab door?", a: [
+    ["Small explosions in progress", ["Rm", "Le", "Cv"]],
+    ["Safety first, data second", ["Qc", "Fo", "An"]],
+    ["The robots are in charge", ["Ao", "Ai", "Uc"]],
+    ["Do not disturb: calculating", ["Tr", "En", "Td", "Ph"]],
+    ["Saving the planet, one solvent at a time", ["Gr", "Ev", "Cc"]],
+    ["Ask me about my failed experiments", ["Fa", "Ws", "Pf"]] ] }
+];
+let qStep = 0, qAns = [];
+function openQuiz() { qStep = 0; qAns = []; quizStep(); openDialog(picker); track("quiz_open"); }
+function quizStep() {
+  const Q = QUIZ[qStep];
+  pk.innerHTML = `<p class="pk-step">Which element are you? · ${qStep + 1} of ${QUIZ.length}</p>
+    <div class="qbar"><i style="width:${(qStep / QUIZ.length) * 100}%"></i></div>
+    <h2 id="pk-title">${esc(Q.q)}</h2>
+    <div class="qopts">${Q.a.map((a, i) => `<button type="button" class="qopt" data-qi="${i}">${esc(a[0])}</button>`).join("")}</div>
+    <div class="pk-foot">${qStep ? `<button type="button" class="pk-back" data-qback>Back</button>` : "<span></span>"}<span></span></div>`;
+}
+function quizResult() {
+  const score = {};
+  qAns.forEach((ai, qi) => QUIZ[qi].a[ai][1].forEach((s, k) => { score[s] = (score[s] || 0) + 1 - k * .05; }));
+  const ranked = ORDERED.filter(p => score[p.sym] && linksOf(p).length).sort((a, b) => score[b.sym] - score[a.sym] || a.z - b.z);
+  const [me, ...more] = ranked.length ? ranked : ORDERED.filter(p => linksOf(p).length);
+  const also = more.slice(0, 2);
+  const shareUrl = `${SITE}/${me.slug}/?quiz=1`;
+  pk.innerHTML = `<p class="pk-step">Your element</p>
+    <div class="qres">${bigHTML(me)}<div><p class="fam" style="color: var(--${me.area})">${esc(areaOf(me.area).label)}</p><h2 id="pk-title">You're ${esc(me.sym)}: ${esc(me.name)}</h2><p class="lead">${esc(me.desc)}</p>${followHTML(me)}</div></div>
+    <h3 class="qalso">Your next closest elements</h3>
+    <div class="picks">${also.map(p => `<div class="pick" data-pick="${p.slug}" style="--fc: var(--${p.area})">${miniHTML(p)}<div><h3><a href="${p.slug}/">${esc(p.name)}</a></h3>${followHTML(p, true)}</div></div>`).join("")}</div>
+    <div class="pk-foot"><button type="button" class="pk-back" data-qagain>Take it again</button><button type="button" class="btn btn-glow" data-qshare="${esc(shareUrl)}" data-qname="${esc(me.sym + ", " + me.name)}">Share my element</button></div>`;
+  track("quiz_done", { page: me.slug });
+}
+document.addEventListener("click", e => { if (e.target.closest("[data-open-quiz]")) openQuiz(); });
+pk.addEventListener("click", async e => {
+  const o = e.target.closest(".qopt");
+  if (o) { qAns[qStep] = Number(o.dataset.qi); qStep++; qStep < QUIZ.length ? quizStep() : quizResult(); return; }
+  if (e.target.closest("[data-qback]")) { qStep--; quizStep(); return; }
+  if (e.target.closest("[data-qagain]")) { qStep = 0; qAns = []; quizStep(); return; }
+  const sh = e.target.closest("[data-qshare]");
+  if (sh) {
+    const url = sh.dataset.qshare, text = `I'm ${sh.dataset.qname} on the Chemisters periodic table. Which element are you?`;
+    try {
+      if (navigator.share) await navigator.share({ title: "Which element are you?", text, url });
+      else { await navigator.clipboard.writeText(`${text} ${url}`); sh.textContent = "Copied, paste it anywhere"; }
+    } catch (err) {}
+    track("quiz_share");
+  }
+});
+
+/* ---------------- follow every page of an area ---------------- */
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-follow-area]"); if (!b) return;
+  const a = b.dataset.followArea, list = ORDERED.filter(p => p.area === a);
+  pk.innerHTML = `<p class="pk-step">${esc(areaOf(a).label)}</p><h2 id="pk-title">Follow the whole area</h2>
+    <p class="lead">${list.length} pages. Each follow opens in a new tab, and this list stays here.</p>
+    <div class="picks">${list.map(p => `<div class="pick" data-pick="${p.slug}" style="--fc: var(--${p.area})">${miniHTML(p)}<div><h3><a href="${p.slug}/">${esc(p.name)}</a></h3>${KIT && KIT.has(p.slug) ? `<p class="why gotw">✓ In your table</p>` : ""}${followHTML(p, true)}</div></div>`).join("")}</div>`;
+  openDialog(picker);
+  track("follow_area_open", { area: a });
+});
+
+/* ---------------- "Find my pages" picker ---------------- */
+const choice = { work: new Set(), feed: new Set() };
+function pkStep1() {
+  pk.innerHTML = `<p class="pk-step">Step 1 of 2</p><h2 id="pk-title">What do you work on, or want to?</h2>
+    <p class="lead">Pick as many as you like.</p>
+    <div class="opts">${PICKER.work.map((o, i) => `<button type="button" class="opt" data-k="work" data-i="${i}" aria-pressed="${choice.work.has(i)}">${esc(o.label)}</button>`).join("")}</div>
+    <div class="pk-foot"><span></span><button type="button" class="btn btn-glow" data-next ${choice.work.size ? "" : "disabled"}>Next</button></div>`;
+}
+function pkStep2() {
+  pk.innerHTML = `<p class="pk-step">Step 2 of 2</p><h2 id="pk-title">What else do you want in your feed?</h2>
+    <p class="lead">Optional.</p>
+    <div class="opts">${PICKER.feed.map((o, i) => `<button type="button" class="opt" data-k="feed" data-i="${i}" aria-pressed="${choice.feed.has(i)}">${esc(o.label)}</button>`).join("")}</div>
+    <div class="pk-foot"><button type="button" class="pk-back" data-back>Back</button><button type="button" class="btn btn-glow" data-done>Show my pages</button></div>`;
+}
+function pkResults() {
+  const score = new Map(), why = new Map();
+  const add = (sym, w, label) => { score.set(sym, (score.get(sym) || 0) + w); if (!why.has(sym)) why.set(sym, []); why.get(sym).push(label); };
+  choice.work.forEach(i => PICKER.work[i].syms.forEach((s, k) => add(s, 1 - k * .12, PICKER.work[i].label)));
+  const feedSyms = [];
+  choice.feed.forEach(i => PICKER.feed[i].syms.forEach(s => { feedSyms.push(s); add(s, .6, PICKER.feed[i].label); }));
+  let ranked = [...score.entries()].sort((a, b) => b[1] - a[1]).map(([s]) => s);
+  const core = ranked.filter(s => !feedSyms.includes(s)).slice(0, 6);
+  const extra = feedSyms.filter(s => !core.includes(s)).slice(0, 2);
+  const list = [...core, ...extra].map(bySym).filter(Boolean);
+  picked = new Set(list.map(p => p.sym));
+  pk.innerHTML = `<p class="pk-step">Your pages</p><h2 id="pk-title">Follow these ${list.length} to cover your field.</h2>
+    <div class="picks">${list.map(p => `<div class="pick" data-pick="${p.slug}" style="--fc: var(--${p.area})">${miniHTML(p)}<div><h3><a href="${p.slug}/">${esc(p.name)}</a></h3><p class="why">For: ${esc([...new Set(why.get(p.sym))].join(", "))}</p>${followHTML(p, true)}</div></div>`).join("")}</div>
+    <div class="pk-foot"><button type="button" class="pk-back" data-restart>Start over</button><button type="button" class="btn btn-glow" data-show>Highlight them on the table</button></div>`;
+  track("picker_done", { pages: list.map(p => p.slug).join(",") });
+}
+document.addEventListener("click", e => {
+  if (e.target.closest("[data-open-picker]")) { pkStep1(); openDialog(picker); track("picker_open"); }
+});
+pk.addEventListener("click", e => {
+  const o = e.target.closest(".opt");
+  if (o) {
+    const set = choice[o.dataset.k], i = Number(o.dataset.i);
+    set.has(i) ? set.delete(i) : set.add(i);
+    o.setAttribute("aria-pressed", String(set.has(i)));
+    const nx = pk.querySelector("[data-next]"); if (nx) nx.disabled = !choice.work.size;
+    return;
+  }
+  if (e.target.closest("[data-next]")) pkStep2();
+  else if (e.target.closest("[data-back]")) pkStep1();
+  else if (e.target.closest("[data-done]")) pkResults();
+  else if (e.target.closest("[data-restart]")) { choice.work.clear(); choice.feed.clear(); picked = null; pkStep1(); }
+  else if (e.target.closest("[data-show]")) {
+    closeDialog(picker);
+    area = "all"; query = ""; $("#q").value = "";
+    tabs.querySelectorAll(".fam-tab").forEach(x => x.setAttribute("aria-pressed", String(x.dataset.area === "all")));
+    if (view !== "table") setView("table");
+    apply(true);
+    $("#table").scrollIntoView({ behavior: reduce.matches ? "auto" : "smooth" });
+  }
+});
+picker.addEventListener("close", () => { if (picked && !table.querySelector(".tile.hit")) apply(true); });
+
+/* ---------------- "Where should my paper go?" ---------------- */
+(() => {
+  const KW = ORDERED.map(p => ({ p, terms: (p.kw || "").split(",").map(s => norm(s.trim())).filter(Boolean) }));
+  const reEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  KW.forEach(k => { k.re = k.terms.map(t => ({ t, re: new RegExp(`(?:^|[^a-z0-9])${reEsc(t)}(?:$|[^a-z0-9])`) })); });
+  $("#matcher").addEventListener("submit", e => {
+    e.preventDefault();
+    const text = norm($("#abstract").value).replace(/\s+/g, " ");
+    const out = $("#mres");
+    if (text.length < 12) { out.innerHTML = `<p class="none">Paste a title or a few lines of your abstract first.</p>`; return; }
+    const res = KW.map(k => {
+      const hit = k.re.filter(x => x.re.test(text)).map(x => x.t);
+      const s = hit.reduce((n, t) => n + 1 + (t.split(/[\s-]/).length - 1) * .6, 0);
+      return { p: k.p, s, hit };
+    }).filter(r => r.s > 0).sort((a, b) => b.s - a.s).slice(0, 3);
+    if (!res.length) { out.innerHTML = `<p class="none">No clear match. Write to contact@chemisters.com with your paper and we'll pick the page for you.</p>`; return; }
+    out.innerHTML = res.map((r, i) => `<div class="m" style="--fc: var(--${r.p.area})">${miniHTML(r.p)}<div><b>${i === 0 ? "Best fit: " : ""}${esc(r.p.name)}</b><small>Matched: ${esc(r.hit.slice(0, 4).join(", "))}</small></div><a href="publish/?page=${encodeURIComponent(r.p.slug)}">Submit here →</a></div>`).join("");
+    track("paper_match", { best: res[0].p.slug });
+  });
+})();
+
+/* ---------------- stats ---------------- */
+function countUp(el, to) {
+  if (reduce.matches) { el.textContent = fmtN(to); return; }
+  const t0 = performance.now(), dur = 1400;
+  const step = now => { const k = Math.min(1, (now - t0) / dur); el.textContent = fmtN(Math.round(to * (1 - Math.pow(1 - k, 3)))); if (k < 1) requestAnimationFrame(step); };
+  requestAnimationFrame(step);
+}
+const counted = new WeakSet();
+const countObs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting && !counted.has(e.target)) { counted.add(e.target); countUp(e.target, COUNTS[e.target.dataset.count] || 0); } }), { threshold: .4 });
+function initCounts() { document.querySelectorAll("[data-count]").forEach(el => { if (counted.has(el)) { el.textContent = fmtN(COUNTS[el.dataset.count] || 0); return; } el.textContent = "0"; countObs.observe(el); }); }
+initCounts();
+
+/* ---------------- main accounts ---------------- */
+(() => {
+  const mf = $("#mainFollow"), fc = $("#footConnect");
+  Object.entries(SITE_LINKS).filter(([, u]) => u).forEach(([k, u]) => {
+    mf.insertAdjacentHTML("beforeend", `<a href="${esc(u)}" target="_blank" rel="noopener" style="--pc:${pf(k).color}" data-umami-event="follow" data-umami-event-page="chemisters" data-umami-event-platform="${esc(k)}">${pf(k).svg || GENERIC_ICON}${esc(pf(k).name)}</a>`);
+    fc.insertAdjacentHTML("beforeend", `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(pf(k).name)}</a></li>`);
+  });
+  if (!mf.children.length) $("#followCard").remove();
+})();
+
+/* ---------------- live data: latest posts + followers ----------------
+   data/latest.json: { "updated": ISO, "posts": [{ "slug", "platform", "url", "title", "time" }] }
+   data/stats.json:  { "updated": ISO, "followers": { "<slug>": { "linkedin": 1234, "facebook": 567 } } }
+   Both are optional: if a file is missing, its features stay hidden. */
+const getJSON = u => fetch(u, { cache: "no-cache" }).then(r => r.ok ? r.json() : null).catch(() => null);
+getJSON("data/latest.json").then(d => {
+  if (!d || !Array.isArray(d.posts) || !d.posts.length) return;
+  const known = new Set(PAGES.map(p => p.slug));
+  const posts = d.posts.filter(x => x && known.has(x.slug) && x.time && x.url).sort((a, b) => new Date(b.time) - new Date(a.time));
+  if (!posts.length) return;
+  LIVE.posts = posts;
+  posts.forEach(x => { if (!LIVE.last[x.slug]) LIVE.last[x.slug] = x; });
+  const day = 864e5;
+  ORDERED.forEach(p => { const l = LIVE.last[p.slug]; tileOf(p).classList.toggle("fresh", !!l && Date.now() - new Date(l.time) < day); });
+  $("#live-ago").textContent = ago(posts[0].time);
+  $("#stat-live").hidden = false;
+  const bySlug = s => PAGES.find(p => p.slug === s);
+  $("#streamRow").innerHTML = posts.slice(0, 10).map(x => {
+    const p = bySlug(x.slug);
+    return `<a class="sitem" href="${esc(x.url)}" target="_blank" rel="noopener" style="--fc: var(--${p.area})" data-umami-event="stream_click" data-umami-event-page="${esc(p.slug)}">${miniHTML(p)}<div><small><b>${esc(p.name)}</b><span>${ago(x.time)}</span></small><p>${esc(x.title || "New post")}</p></div></a>`;
+  }).join("");
+  $("#stream").hidden = false;
+  renderCards(); apply(false);
+  if (pinnedZ) showPanel(byZ(pinnedZ), true);
+});
+getJSON("data/stats.json").then(d => {
+  if (!d || !d.followers) return;
+  let total = 0, max = 0;
+  PAGES.forEach(p => {
+    const f = d.followers[p.slug]; if (!f) return;
+    const n = typeof f === "number" ? f : Object.values(f).reduce((a, b) => a + (Number(b) || 0), 0);
+    LIVE.followers[p.slug] = n; total += n; max = Math.max(max, n);
+  });
+  if (!total) return;
+  COUNTS.followers = total;
+  $("#stat-followers").hidden = false;
+  initCounts();
+  const lmax = Math.log10(max + 1);
+  ORDERED.forEach(p => {
+    const n = LIVE.followers[p.slug] || 0, t = tileOf(p);
+    t.style.setProperty("--hp", Math.round(6 + 64 * (Math.log10(n + 1) / lmax)) + "%");
+    t.querySelector(".fol").textContent = n ? fmtN(n) : "–";
+  });
+  $("#heatBtn").hidden = false;
+});
+
+/* ---------------- top posts ----------------
+   data/top-posts.json: [{ "page": "Electrochemistry", "platform": "linkedin", "url": "...",
+     "text": "first lines...", "metric": "18,200 impressions", "date": "Oct 2026" }]  */
+getJSON("data/top-posts.json").then(list => {
+  if (!Array.isArray(list) || !list.length) return;
+  const picks = list.slice().sort(() => Math.random() - .5).slice(0, 3);
+  $("#posts").innerHTML = picks.map(post => {
+    const p = PAGES.find(x => x.name === post.page || x.slug === post.page);
+    const mark = p ? symHTML(p) : `<img src="images/Chemisters_logo.png" alt="">`;
+    return `<a class="post reveal in" href="${esc(post.url)}" target="_blank" rel="noopener" style="--fc: var(--${p ? p.area : "core"})">
+      <div class="post-head"><div class="pm">${mark}</div><div><b>${esc(p ? p.name : post.page || "Chemisters")}</b><span>${esc(post.date)}</span></div></div>
+      <p class="post-text">${esc(post.text)}</p>
+      <div class="post-foot"><span class="metric">${esc(post.metric)}</span><span class="go">Read on ${esc(pf(post.platform || "linkedin").name)} →</span></div></a>`;
+  }).join("");
+  $("#top-posts").hidden = false;
+  document.querySelectorAll("[data-top-link]").forEach(el => el.hidden = false);
+});
+
+/* ---------------- page chrome ---------------- */
+const nav = $("#nav"), lab = $("#top"), toTop = $("#toTop"), prog = $("#progress");
+function onScroll() {
+  const y = window.scrollY, h = document.documentElement.scrollHeight - innerHeight;
+  prog.style.width = (h > 0 ? (y / h) * 100 : 0) + "%";
+  const darkEnd = lab.offsetTop + lab.offsetHeight - 70;
+  nav.classList.toggle("solid", y > 30);
+  nav.classList.toggle("light", y > darkEnd);
+  toTop.classList.toggle("show", y > 700);
+}
+addEventListener("scroll", onScroll, { passive: true }); onScroll();
+toTop.addEventListener("click", () => scrollTo({ top: 0, behavior: reduce.matches ? "auto" : "smooth" }));
+const burger = $("#burger"), links = $("#links");
+burger.addEventListener("click", () => { const o = links.classList.toggle("open"); burger.setAttribute("aria-expanded", String(o)); });
+links.addEventListener("click", e => { if (e.target.closest("a")) { links.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); } });
+$("#year").textContent = new Date().getFullYear();
+document.querySelectorAll("[data-copy]").forEach(b => b.addEventListener("click", async () => {
+  try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent = "Copied"; } catch (e) { b.textContent = b.dataset.copy; }
+  setTimeout(() => b.textContent = "Copy", 1800);
+}));
+const revObs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); revObs.unobserve(e.target); } }), { threshold: .12, rootMargin: "0px 0px -40px 0px" });
+document.querySelectorAll(".reveal").forEach(el => revObs.observe(el));
+
+if (location.hash) openFromHash(false);
+</script>
+</body>
+</html>
