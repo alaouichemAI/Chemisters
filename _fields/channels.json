@@ -1,0 +1,450 @@
+[
+ {
+  "name": "Organic Chemistry",
+  "slug": "organic-chemistry",
+  "cat": "core",
+  "desc": "Synthetic routes, green chemistry, retrosynthesis, and molecular modeling.",
+  "linkedin": "https://www.linkedin.com/company/108558306",
+  "facebook": "https://www.facebook.com/profile.php?id=61582133436018"
+ },
+ {
+  "name": "Physical Chemistry",
+  "slug": "physical-chemistry",
+  "cat": "core",
+  "desc": "Thermodynamics, kinetics, and the laws governing molecular behavior.",
+  "linkedin": "https://www.linkedin.com/company/109269958",
+  "facebook": ""
+ },
+ {
+  "name": "Analytical Chemistry",
+  "slug": "analytical-chemistry",
+  "cat": "core",
+  "desc": "Precision instrumentation and advanced methods for molecular characterization.",
+  "linkedin": "https://www.linkedin.com/company/109481959",
+  "facebook": "https://www.facebook.com/profile.php?id=61587102149066"
+ },
+ {
+  "name": "Theoretical Chemistry",
+  "slug": "theoretical-chemistry",
+  "cat": "core",
+  "desc": "Quantum models, molecular orbital theory, and first-principles calculations.",
+  "linkedin": "https://www.linkedin.com/company/110427156",
+  "facebook": "https://www.facebook.com/profile.php?id=61586826023508"
+ },
+ {
+  "name": "Structural Chemistry",
+  "slug": "structural-chemistry",
+  "cat": "core",
+  "desc": "Crystal structures, bonding analysis, and molecular geometry.",
+  "linkedin": "https://www.linkedin.com/company/110622026",
+  "facebook": ""
+ },
+ {
+  "name": "Chemical Kinetics",
+  "slug": "chemical-kinetics",
+  "cat": "core",
+  "desc": "Reaction rates, mechanisms, and transition-state theory.",
+  "linkedin": "https://www.linkedin.com/company/112274897",
+  "facebook": ""
+ },
+ {
+  "name": "Thermochemistry",
+  "slug": "thermochemistry",
+  "cat": "core",
+  "desc": "Heat flow, enthalpy, and energy changes in chemical reactions.",
+  "linkedin": "https://www.linkedin.com/company/115805044",
+  "facebook": ""
+ },
+ {
+  "name": "Entropy in Chemistry",
+  "slug": "entropy-in-chemistry",
+  "cat": "core",
+  "desc": "Disorder, spontaneity, and the second law at the molecular scale.",
+  "linkedin": "https://www.linkedin.com/company/111120361",
+  "facebook": ""
+ },
+ {
+  "name": "Solutions Chemistry",
+  "slug": "solutions-chemistry",
+  "cat": "core",
+  "desc": "Solubility, colligative properties, and solution-phase equilibria.",
+  "linkedin": "https://www.linkedin.com/company/111106404",
+  "facebook": ""
+ },
+ {
+  "name": "Chemical Structure & Reactivity",
+  "slug": "chemical-structure-and-reactivity",
+  "cat": "core",
+  "desc": "Electronic effects, steric factors, and structure-reactivity relationships.",
+  "linkedin": "https://www.linkedin.com/company/110412248",
+  "facebook": ""
+ },
+ {
+  "name": "Synthetic Chemistry",
+  "slug": "synthetic-chemistry",
+  "cat": "synthetic",
+  "desc": "Engineering molecules with purpose through multistep synthesis and automation.",
+  "linkedin": "https://www.linkedin.com/company/109476977",
+  "facebook": ""
+ },
+ {
+  "name": "Heterocyclic Chemistry",
+  "slug": "heterocyclic-chemistry",
+  "cat": "synthetic",
+  "desc": "Synthesis, reactivity, and pharmaceutical applications of ring systems.",
+  "linkedin": "https://www.linkedin.com/company/108563324",
+  "facebook": "https://www.facebook.com/profile.php?id=61586872701044"
+ },
+ {
+  "name": "Retrosynthesis",
+  "slug": "retrosynthesis",
+  "cat": "synthetic",
+  "desc": "Working backwards from target to starting materials — the logic of synthesis.",
+  "linkedin": "https://www.linkedin.com/company/112835037",
+  "facebook": ""
+ },
+ {
+  "name": "Catalytic Chemistry",
+  "slug": "catalytic-chemistry",
+  "cat": "synthetic",
+  "desc": "Accelerating reactions through homogeneous, heterogeneous, and biocatalysis.",
+  "linkedin": "https://www.linkedin.com/company/114363982",
+  "facebook": ""
+ },
+ {
+  "name": "Reactive Matter",
+  "slug": "reactive-matter",
+  "cat": "synthetic",
+  "desc": "Reactive intermediates, radical chemistry, and high-energy transformations.",
+  "linkedin": "https://www.linkedin.com/company/110790261",
+  "facebook": ""
+ },
+ {
+  "name": "Green Chemistry",
+  "slug": "green-chemistry",
+  "cat": "synthetic",
+  "desc": "Sustainable synthesis and eco-friendly practices for a cleaner future.",
+  "linkedin": "https://www.linkedin.com/company/108366170",
+  "facebook": "https://www.facebook.com/profile.php?id=61581332263051"
+ },
+ {
+  "name": "Photochemistry",
+  "slug": "photochemistry",
+  "cat": "synthetic",
+  "desc": "Light-driven reactions, photocatalysis, and solar energy conversion.",
+  "linkedin": "https://www.linkedin.com/company/110115014",
+  "facebook": "https://www.facebook.com/profile.php?id=61587346981725"
+ },
+ {
+  "name": "Electrochemistry",
+  "slug": "electrochemistry",
+  "cat": "synthetic",
+  "desc": "Electron transfer, batteries, fuel cells, and electrodeposition.",
+  "linkedin": "https://www.linkedin.com/company/110123965",
+  "facebook": "https://www.facebook.com/profile.php?id=61586981242396"
+ },
+ {
+  "name": "Inorganic Chemistry",
+  "slug": "inorganic-chemistry",
+  "cat": "applied",
+  "desc": "Catalysis, coordination compounds, and advanced materials.",
+  "linkedin": "",
+  "facebook": ""
+ },
+ {
+  "name": "Industrial Chemistry",
+  "slug": "industrial-chemistry",
+  "cat": "applied",
+  "desc": "Scale-up, process chemistry, and manufacturing of chemical products.",
+  "linkedin": "https://www.linkedin.com/company/109820777",
+  "facebook": "https://www.facebook.com/profile.php?id=61587130199073"
+ },
+ {
+  "name": "Chemical Engineering",
+  "slug": "chemical-engineering",
+  "cat": "applied",
+  "desc": "Reactor design, process optimization, and chemical plant operations.",
+  "linkedin": "https://www.linkedin.com/company/112032374",
+  "facebook": ""
+ },
+ {
+  "name": "Quality Control",
+  "slug": "quality-control",
+  "cat": "applied",
+  "desc": "Analytical QC, GMP compliance, and pharmaceutical quality assurance.",
+  "linkedin": "https://www.linkedin.com/company/111365924",
+  "facebook": ""
+ },
+ {
+  "name": "Applied Chemistry",
+  "slug": "applied-chemistry",
+  "cat": "applied",
+  "desc": "Real-world applications of chemistry in agriculture, industry, and daily life.",
+  "linkedin": "https://www.linkedin.com/company/110636050",
+  "facebook": ""
+ },
+ {
+  "name": "Forensic Chemistry",
+  "slug": "forensic-chemistry",
+  "cat": "applied",
+  "desc": "Crime-scene analysis, toxicology, and evidence-based chemical identification.",
+  "linkedin": "https://www.linkedin.com/company/110792221",
+  "facebook": "https://www.facebook.com/profile.php?id=61587102729599"
+ },
+ {
+  "name": "Energy Chemistry",
+  "slug": "energy-chemistry",
+  "cat": "applied",
+  "desc": "Hydrogen economy, solar fuels, and next-generation energy storage.",
+  "linkedin": "https://www.linkedin.com/company/110115013",
+  "facebook": "https://www.facebook.com/profile.php?id=61587110056685"
+ },
+ {
+  "name": "Foods Chemistry",
+  "slug": "foods-chemistry",
+  "cat": "applied",
+  "desc": "Food composition, additives, flavor chemistry, and nutritional analysis.",
+  "linkedin": "https://www.linkedin.com/company/110145025",
+  "facebook": "https://www.facebook.com/profile.php?id=61587463530927"
+ },
+ {
+  "name": "Medicinal Chemistry",
+  "slug": "medicinal-chemistry",
+  "cat": "bio",
+  "desc": "Drug discovery, pharmacokinetics, QSAR, and molecular docking insights.",
+  "linkedin": "https://www.linkedin.com/company/108555306",
+  "facebook": "https://www.facebook.com/profile.php?id=61582617960030"
+ },
+ {
+  "name": "Biological Chemistry",
+  "slug": "biological-chemistry",
+  "cat": "bio",
+  "desc": "Enzymatic catalysis, biomolecular interactions, and the chemistry of life.",
+  "linkedin": "https://www.linkedin.com/company/108361425",
+  "facebook": "https://www.facebook.com/profile.php?id=61582775334916"
+ },
+ {
+  "name": "Drug Discovery",
+  "slug": "drug-discovery",
+  "cat": "bio",
+  "desc": "Hit-to-lead optimization, ADMET profiling, and clinical candidate design.",
+  "linkedin": "https://www.linkedin.com/company/109813829",
+  "facebook": ""
+ },
+ {
+  "name": "Bioorganic Chemistry",
+  "slug": "bioorganic-chemistry",
+  "cat": "bio",
+  "desc": "Natural products, biosynthesis, and organic chemistry of biological systems.",
+  "linkedin": "https://www.linkedin.com/company/110637045",
+  "facebook": ""
+ },
+ {
+  "name": "Polymers Chemistry",
+  "slug": "polymers-chemistry",
+  "cat": "bio",
+  "desc": "Polymer synthesis, characterization, and advanced functional materials.",
+  "linkedin": "https://www.linkedin.com/company/110117974",
+  "facebook": "https://www.facebook.com/profile.php?id=61587281052731"
+ },
+ {
+  "name": "Marine Chemistry",
+  "slug": "marine-chemistry",
+  "cat": "bio",
+  "desc": "Ocean chemistry, marine natural products, and aquatic geochemistry.",
+  "linkedin": "https://www.linkedin.com/company/115803232",
+  "facebook": ""
+ },
+ {
+  "name": "Environmental Chemistry",
+  "slug": "environmental-chemistry",
+  "cat": "bio",
+  "desc": "Pollutant fate, atmospheric chemistry, and remediation strategies.",
+  "linkedin": "https://www.linkedin.com/company/114304070",
+  "facebook": ""
+ },
+ {
+  "name": "Computational Chemistry",
+  "slug": "computational-chemistry",
+  "cat": "comp",
+  "desc": "Simulating reality with quantum mechanics, molecular dynamics, and AI predictions.",
+  "linkedin": "https://www.linkedin.com/company/109477964",
+  "facebook": "https://www.facebook.com/profile.php?id=61587069599199"
+ },
+ {
+  "name": "Chemoinformatics",
+  "slug": "chemoinformatics",
+  "cat": "comp",
+  "desc": "AI-driven prediction, QSAR/QSPR modeling, and molecular data intelligence.",
+  "linkedin": "https://www.linkedin.com/company/108361429",
+  "facebook": ""
+ },
+ {
+  "name": "Autonomous Chemistry",
+  "slug": "autonomous-chemistry",
+  "cat": "comp",
+  "desc": "Robotics, machine learning, and self-driving labs shaping the future of synthesis.",
+  "linkedin": "https://www.linkedin.com/company/108362446",
+  "facebook": "https://www.facebook.com/profile.php?id=61581617184283"
+ },
+ {
+  "name": "Chemical Data Science & Automation",
+  "slug": "chemical-data-science-and-automation",
+  "cat": "comp",
+  "desc": "Data pipelines, lab automation, and informatics-driven experiment design.",
+  "linkedin": "https://www.linkedin.com/company/110200145",
+  "facebook": "https://www.facebook.com/profile.php?id=61590204503457"
+ },
+ {
+  "name": "Chemistry AI & ML Applications",
+  "slug": "chemistry-ai-and-ml-applications",
+  "cat": "comp",
+  "desc": "Machine learning models applied to molecular property prediction and synthesis.",
+  "linkedin": "https://www.linkedin.com/company/110198146",
+  "facebook": ""
+ },
+ {
+  "name": "AI in Chemistry — Real Use Cases",
+  "slug": "ai-in-chemistry-real-use-cases",
+  "cat": "comp",
+  "desc": "Industry case studies where AI accelerates real chemical discovery.",
+  "linkedin": "https://www.linkedin.com/company/110860911",
+  "facebook": ""
+ },
+ {
+  "name": "The Artificial Intelligence",
+  "slug": "the-artificial-intelligence",
+  "cat": "comp",
+  "desc": "General AI advances relevant to chemistry and scientific computing.",
+  "linkedin": "https://www.linkedin.com/company/109297225",
+  "facebook": "https://www.facebook.com/profile.php?id=61587104319535"
+ },
+ {
+  "name": "Nanochemistry",
+  "slug": "nanochemistry",
+  "cat": "materials",
+  "desc": "Design, synthesis, and application of nanoscale materials for medicine and energy.",
+  "linkedin": "https://www.linkedin.com/company/108557323",
+  "facebook": "https://www.facebook.com/profile.php?id=61586948525190"
+ },
+ {
+  "name": "Chemistry of Materials",
+  "slug": "chemistry-of-materials",
+  "cat": "materials",
+  "desc": "Solid-state chemistry, ceramics, composites, and functional material design.",
+  "linkedin": "https://www.linkedin.com/company/109543039",
+  "facebook": "https://www.facebook.com/profile.php?id=61589541525866"
+ },
+ {
+  "name": "Sustainable Materials & Circular Chemistry",
+  "slug": "sustainable-materials-and-circular-chemistry",
+  "cat": "materials",
+  "desc": "Recyclable materials, bio-based polymers, and circular economy approaches.",
+  "linkedin": "https://www.linkedin.com/company/110198148",
+  "facebook": "https://www.facebook.com/profile.php?id=61589779618811"
+ },
+ {
+  "name": "Supramolecular Chemistry",
+  "slug": "supramolecular-chemistry",
+  "cat": "materials",
+  "desc": "Self-assembly, host-guest chemistry, and non-covalent interaction design.",
+  "linkedin": "https://www.linkedin.com/company/109541035",
+  "facebook": ""
+ },
+ {
+  "name": "Nuclear Chemistry",
+  "slug": "nuclear-chemistry",
+  "cat": "materials",
+  "desc": "Radioactivity, nuclear reactions, and radiopharmaceutical chemistry.",
+  "linkedin": "https://www.linkedin.com/company/110154940",
+  "facebook": ""
+ },
+ {
+  "name": "Surface Chemistry",
+  "slug": "surface-chemistry",
+  "cat": "materials",
+  "desc": "Adsorption, thin films, and interfacial phenomena at surfaces.",
+  "linkedin": "https://www.linkedin.com/company/110632021",
+  "facebook": ""
+ },
+ {
+  "name": "Wisdom & Stories",
+  "slug": "wisdom-and-stories",
+  "cat": "community",
+  "desc": "Reflections, experiences, and philosophical insights from chemists worldwide.",
+  "linkedin": "",
+  "facebook": ""
+ },
+ {
+  "name": "Chemistry News",
+  "slug": "chemistry-news",
+  "cat": "community",
+  "desc": "Breaking research, policy updates, and global chemistry headlines.",
+  "linkedin": "https://www.linkedin.com/company/109816820",
+  "facebook": "https://www.facebook.com/profile.php?id=61586947119714"
+ },
+ {
+  "name": "The Chemistry",
+  "slug": "the-chemistry",
+  "cat": "community",
+  "desc": "Foundational concepts and the beautiful complexity of chemical science.",
+  "linkedin": "https://www.linkedin.com/company/112177278",
+  "facebook": ""
+ },
+ {
+  "name": "Modern Chemistry",
+  "slug": "modern-chemistry",
+  "cat": "community",
+  "desc": "Contemporary advances redefining how we think about matter and reactions.",
+  "linkedin": "https://www.linkedin.com/company/110426188",
+  "facebook": ""
+ },
+ {
+  "name": "Creative Chemistry",
+  "slug": "creative-chemistry",
+  "cat": "community",
+  "desc": "Chemistry meets art, design, and unconventional thinking.",
+  "linkedin": "https://www.linkedin.com/company/111350458",
+  "facebook": ""
+ },
+ {
+  "name": "Chemistry Professionals",
+  "slug": "chemistry-professionals",
+  "cat": "community",
+  "desc": "Career insights, networking, and professional development for chemists.",
+  "linkedin": "https://www.linkedin.com/company/110421179",
+  "facebook": ""
+ },
+ {
+  "name": "Failed Discoveries That Changed Science",
+  "slug": "failed-discoveries-that-changed-science",
+  "cat": "community",
+  "desc": "Serendipity, mistakes, and the surprising origin stories of breakthroughs.",
+  "linkedin": "https://www.linkedin.com/company/110857180",
+  "facebook": ""
+ },
+ {
+  "name": "Amazing Lab Experiments",
+  "slug": "amazing-lab-experiments",
+  "cat": "community",
+  "desc": "Spectacular demonstrations and experimental chemistry that inspires curiosity.",
+  "linkedin": "https://www.linkedin.com/company/110148997",
+  "facebook": ""
+ },
+ {
+  "name": "Molecular Systems",
+  "slug": "molecular-systems",
+  "cat": "community",
+  "desc": "Systems chemistry, molecular machines, and emergent chemical behavior.",
+  "linkedin": "https://www.linkedin.com/company/110780320",
+  "facebook": ""
+ },
+ {
+  "name": "Chemical Systems",
+  "slug": "chemical-systems",
+  "cat": "community",
+  "desc": "Complex reaction networks, oscillators, and far-from-equilibrium chemistry.",
+  "linkedin": "https://www.linkedin.com/company/110794212",
+  "facebook": ""
+ }
+]
