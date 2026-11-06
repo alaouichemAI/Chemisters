@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Researcher badges · Chemisters</title>
+<meta name="description" content="Was your work featured on a Chemisters page? Add the badge to your lab site, profile or email signature.">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/png" href="../images/Chemisters_logo.png">
+<style>
+:root{--night:#070b16;--night-2:#0c1324;--line:#1f2a45;--glow:#e9eefc;--mist:#93a0bf;--accent:#3b6cf6}
+*{box-sizing:border-box}body{margin:0;background:var(--night);color:var(--glow);font:16px/1.6 -apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:56px 20px 80px}
+a{color:#9db7ff}h1{font-size:clamp(28px,5vw,42px);line-height:1.1;margin:10px 0 12px;letter-spacing:-.02em}
+.top{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--glow);font-weight:800}
+.top img{width:32px;height:32px;border-radius:8px}
+p.lead{color:#b9c3dd;max-width:62ch;margin:0 0 26px}
+input{width:100%;font:inherit;color:var(--glow);background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;padding:12px 14px;outline:none;margin-bottom:18px}
+input:focus{border-color:#5a6c99}
+.b{display:grid;gap:12px;padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--night-2);margin-bottom:12px}
+.b img{max-width:100%;height:auto}
+.b code{display:block;font:12.5px/1.5 ui-monospace,Menlo,Consolas,monospace;color:#cfd8f2;background:#070b16;border:1px solid var(--line);border-radius:10px;padding:10px 12px;white-space:pre-wrap;word-break:break-all}
+.row{display:flex;flex-wrap:wrap;gap:8px}
+button,.dl{font-family:inherit;font-size:14px;font-weight:600;line-height:1;border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--glow);padding:9px 13px;border-radius:10px;cursor:pointer;text-decoration:none}
+button:hover,.dl:hover{border-color:#5a6c99}
+.note{color:var(--mist);font-size:14px;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="top" href="../"><img src="../images/Chemisters_logo.png" alt="">Chemisters</a>
+  <h1>Featured on Chemisters</h1>
+  <p class="lead">If your work was featured on one of our pages, add this badge to your lab website, personal page or email signature. It links to the page where your work was published.</p>
+  <input id="q" type="search" placeholder="Find your page, e.g. Electrochemistry" aria-label="Find your page">
+  <div id="list"></div>
+  <p class="note">Questions about your badge? Write to <a href="mailto:contact@chemisters.com">contact@chemisters.com</a>.</p>
+</div>
+<script>
+const ITEMS = [{"slug": "organic-chemistry", "name": "Organic Chemistry"}, {"slug": "physical-chemistry", "name": "Physical Chemistry"}, {"slug": "analytical-chemistry", "name": "Analytical Chemistry"}, {"slug": "theoretical-chemistry", "name": "Theoretical Chemistry"}, {"slug": "structural-chemistry", "name": "Structural Chemistry"}, {"slug": "chemical-kinetics", "name": "Chemical Kinetics"}, {"slug": "thermochemistry", "name": "Thermochemistry"}, {"slug": "entropy-in-chemistry", "name": "Entropy in Chemistry"}, {"slug": "solutions-chemistry", "name": "Solutions Chemistry"}, {"slug": "chemical-structure-and-reactivity", "name": "Chemical Structure & Reactivity"}, {"slug": "synthetic-chemistry", "name": "Synthetic Chemistry"}, {"slug": "heterocyclic-chemistry", "name": "Heterocyclic Chemistry"}, {"slug": "retrosynthesis", "name": "Retrosynthesis"}, {"slug": "catalytic-chemistry", "name": "Catalytic Chemistry"}, {"slug": "reactive-matter", "name": "Reactive Matter"}, {"slug": "green-chemistry", "name": "Green Chemistry"}, {"slug": "photochemistry", "name": "Photochemistry"}, {"slug": "electrochemistry", "name": "Electrochemistry"}, {"slug": "inorganic-chemistry", "name": "Inorganic Chemistry"}, {"slug": "industrial-chemistry", "name": "Industrial Chemistry"}, {"slug": "chemical-engineering", "name": "Chemical Engineering"}, {"slug": "quality-control", "name": "Quality Control"}, {"slug": "applied-chemistry", "name": "Applied Chemistry"}, {"slug": "forensic-chemistry", "name": "Forensic Chemistry"}, {"slug": "energy-chemistry", "name": "Energy Chemistry"}, {"slug": "food-chemistry", "name": "Food Chemistry"}, {"slug": "medicinal-chemistry", "name": "Medicinal Chemistry"}, {"slug": "biological-chemistry", "name": "Biological Chemistry"}, {"slug": "drug-discovery", "name": "Drug Discovery"}, {"slug": "bioorganic-chemistry", "name": "Bioorganic Chemistry"}, {"slug": "polymer-chemistry", "name": "Polymer Chemistry"}, {"slug": "marine-chemistry", "name": "Marine Chemistry"}, {"slug": "environmental-chemistry", "name": "Environmental Chemistry"}, {"slug": "computational-chemistry", "name": "Computational Chemistry"}, {"slug": "chemoinformatics", "name": "Chemoinformatics"}, {"slug": "autonomous-chemistry", "name": "Autonomous Chemistry"}, {"slug": "chemical-data-science-and-automation", "name": "Chemical Data Science & Automation"}, {"slug": "chemistry-ai-and-ml-applications", "name": "Chemistry AI & ML Applications"}, {"slug": "ai-in-chemistry-real-use-cases", "name": "AI in Chemistry: Real Use Cases"}, {"slug": "the-artificial-intelligence", "name": "The Artificial Intelligence"}, {"slug": "nanochemistry", "name": "Nanochemistry"}, {"slug": "chemistry-of-materials", "name": "Chemistry of Materials"}, {"slug": "sustainable-materials-and-circular-chemistry", "name": "Sustainable Materials & Circular Chemistry"}, {"slug": "supramolecular-chemistry", "name": "Supramolecular Chemistry"}, {"slug": "nuclear-chemistry", "name": "Nuclear Chemistry"}, {"slug": "surface-chemistry", "name": "Surface Chemistry"}, {"slug": "wisdom-and-stories", "name": "Wisdom & Stories"}, {"slug": "chemistry-news", "name": "Chemistry News"}, {"slug": "the-chemistry", "name": "The Chemistry"}, {"slug": "modern-chemistry", "name": "Modern Chemistry"}, {"slug": "creative-chemistry", "name": "Creative Chemistry"}, {"slug": "chemistry-professionals", "name": "Chemistry Professionals"}, {"slug": "failed-discoveries-that-changed-science", "name": "Failed Discoveries That Changed Science"}, {"slug": "amazing-lab-experiments", "name": "Amazing Lab Experiments"}, {"slug": "molecular-systems", "name": "Molecular Systems"}, {"slug": "chemical-systems", "name": "Chemical Systems"}];
+const esc = t => String(t).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const code = i => `<a href="https://chemisters.com/${i.slug}/"><img src="https://chemisters.com/badge/${i.slug}.svg" alt="Featured on Chemisters: ${esc(i.name)}" height="56"></a>`;
+function render(q) {
+  q = (q || "").toLowerCase();
+  document.getElementById("list").innerHTML = ITEMS.filter(i => !q || i.name.toLowerCase().includes(q)).map(i => `
+    <div class="b"><img src="${i.slug}.svg" alt="Featured on Chemisters: ${esc(i.name)}"><code>${esc(code(i))}</code>
+    <div class="row"><button type="button" data-copy="${esc(code(i))}">Copy HTML</button><a class="dl" href="${i.slug}.svg" download>Download SVG</a></div></div>`).join("");
+}
+document.getElementById("q").addEventListener("input", e => render(e.target.value));
+document.addEventListener("click", async e => {
+  const b = e.target.closest("[data-copy]"); if (!b) return;
+  try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent = "Copied"; } catch (err) { b.textContent = "Select the code above"; }
+  setTimeout(() => b.textContent = "Copy HTML", 1800);
+});
+const want = new URLSearchParams(location.search).get("page");
+if (want) { const i = ITEMS.find(x => x.slug === want); if (i) document.getElementById("q").value = i.name; }
+render(document.getElementById("q").value);
+</script>
+</body>
+</html>
