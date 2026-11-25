@@ -1,0 +1,419 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Best of Chemisters · 10 new Q1 papers · Wed, 25 Nov 2026</title><style>@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400..900&family=Figtree:wght@300..900&family=JetBrains+Mono:wght@100..800&display=block');
+:root{--a:#7aa2ff;--a2:#b49bff;--tile:#15213d;--bg:#070b16;--card:#111a30;--line:#1f2a45;--tx:#e9eefc;--mu:#93a0bf}
+*{box-sizing:border-box;margin:0;padding:0}
+@page{size:1080px 1350px;margin:0}
+body{background:#000;font-family:Figtree,'Segoe UI',sans-serif;color:var(--tx)}
+section{width:1080px;height:1350px;position:relative;overflow:hidden;page-break-after:always;padding:76px 84px 124px;display:flex;flex-direction:column;
+  background:radial-gradient(900px 620px at 0% 0%,color-mix(in srgb,var(--a) 24%,transparent),transparent 65%),
+  radial-gradient(760px 640px at 110% 105%,color-mix(in srgb,var(--a2) 18%,transparent),transparent 62%),url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='90' height='90'><path d='M20 20l25 25 25-15M45 45v30' stroke='%237aa2ff' stroke-opacity='0.10' fill='none' stroke-width='1.4'/></svg>") 0 0/90px 90px,var(--bg)}
+.eyebrow{font:600 21px 'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--a2)}
+footer{position:absolute;left:84px;right:84px;bottom:44px;display:flex;align-items:center;justify-content:space-between;font:500 21px 'JetBrains Mono',monospace;color:var(--mu)}
+footer .brand{display:flex;align-items:center;gap:12px;color:var(--tx)}footer img{width:38px;height:38px;border-radius:9px}footer .num{color:var(--a2)}
+.dot{display:inline-block;width:14px;height:14px;border-radius:50%;flex:none}
+.jt{font:500 18px 'JetBrains Mono';color:var(--mu);border:1px solid var(--line);border-radius:8px;padding:3px 10px;white-space:nowrap}
+.jt b{color:#0b1020;background:#ffd36e;border-radius:5px;padding:0 6px;margin-left:4px;font-weight:700}
+.tile{width:184px;height:184px;flex:none;border-radius:24px;padding:18px 20px;display:flex;flex-direction:column;
+  background:linear-gradient(160deg,color-mix(in srgb,var(--a) 42%,var(--tile)),var(--tile));border:2px solid color-mix(in srgb,var(--a) 65%,transparent);box-shadow:0 0 90px color-mix(in srgb,var(--a) 38%,transparent)}
+.tile .z{font:600 22px 'JetBrains Mono';color:var(--a2)}.tile .s{font:700 82px/1 Unbounded;margin-top:6px}.tile .n{font:600 17px/1.15 Figtree;margin-top:auto;color:#cdd6ee}
+/* cover */
+.cover .top{display:flex;gap:38px;align-items:center}
+.cover h1{font:800 50px/1.08 Unbounded;margin:12px 0 18px;letter-spacing:-.015em;
+  background:linear-gradient(90deg,#fff 40%,var(--a2));-webkit-background-clip:text;color:transparent}
+.stats{display:flex;gap:12px}.stats div{background:color-mix(in srgb,var(--a) 12%,#0c1324);border:1px solid color-mix(in srgb,var(--a) 35%,transparent);border-radius:14px;padding:8px 14px;display:flex;align-items:baseline;gap:8px}
+.stats b{font:800 32px Unbounded;color:var(--a2)}.stats span{font:600 17px/1.1 Figtree;color:#cdd6ee;max-width:120px}
+.index{margin-top:30px}
+.index .lbl{display:flex;justify-content:space-between;align-items:center;font:600 19px 'JetBrains Mono';letter-spacing:.1em;text-transform:uppercase;color:var(--mu);margin-bottom:10px}
+.q1{font:500 18px 'JetBrains Mono';letter-spacing:0;text-transform:none;color:var(--mu)}.q1 b{color:#0b1020;background:#ffd36e;border-radius:6px;padding:1px 8px;margin-right:4px}
+.index ol{list-style:none;border-top:1px solid var(--line)}
+.index li{display:flex;align-items:center;gap:16px;padding:9px 0;border-bottom:1px solid var(--line);font-size:25px;font-weight:500}
+.index .ix{font:600 20px 'JetBrains Mono';color:var(--mu);width:32px}.index .t{flex:1}
+.more{margin-top:12px;font:500 21px 'JetBrains Mono';color:var(--a2)}
+.legend{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:16px;font:500 19px Figtree;color:#cdd6ee}.legend span{display:flex;align-items:center;gap:8px}.legend b{color:#fff}
+.banner{position:absolute;left:84px;right:84px;bottom:108px;display:flex;align-items:center;justify-content:space-between;gap:20px;
+  background:color-mix(in srgb,var(--a) 18%,#0c1324);border:1px solid color-mix(in srgb,var(--a) 55%,transparent);border-radius:18px;padding:18px 24px;font-size:23px;line-height:1.35}
+.banner .url{font:600 21px 'JetBrains Mono';color:var(--a2);white-space:nowrap}
+.swipe{position:absolute;right:84px;bottom:50px;font:700 22px Unbounded;color:var(--a2)}
+.cover footer{display:none}
+/* glance */
+.sum{font:600 36px/1.32 Figtree;color:#fff;margin:22px 0 30px}
+.bar{display:flex;gap:4px;height:46px;border-radius:12px;overflow:hidden}.bar div{display:flex;align-items:center;justify-content:center;font:800 20px Unbounded;color:#0b1020}
+.glance .legend{margin:14px 0 30px}
+.cards{display:flex;flex-direction:column;gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--c);border-radius:18px;padding:20px 26px}
+.card .cl{font:700 19px 'JetBrains Mono';letter-spacing:.16em;text-transform:uppercase;color:var(--c);margin-bottom:6px}
+.card p{font-size:26px;line-height:1.4}.card .ref{font:500 18px 'JetBrains Mono';color:var(--mu);margin-top:8px}
+/* article */
+.prog{display:flex;gap:6px;margin-bottom:30px}.prog i{flex:1;height:7px;border-radius:4px}
+.art .meta{display:flex;align-items:center;gap:16px}
+.art .k{font:800 40px Unbounded;color:var(--b)}
+.chip{flex:none;white-space:nowrap;display:flex;align-items:center;gap:10px;font:600 18px 'JetBrains Mono';letter-spacing:.06em;text-transform:uppercase;color:#fff;border:1px solid color-mix(in srgb,var(--b) 60%,transparent);background:color-mix(in srgb,var(--b) 16%,transparent);border-radius:999px;padding:8px 18px}
+.jt.big{flex:none;margin-left:auto;font-size:19px;padding:6px 12px}
+.art h2{font:800 46px/1.13 Unbounded;margin:22px 0 26px;letter-spacing:-.015em}
+.scheme{background:#f7f8fc;border-radius:22px;padding:14px 18px 16px;margin-bottom:26px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.scheme .row{display:flex;align-items:center;gap:4px;width:max-content;margin:0 auto}
+.scheme .mol svg{display:block}
+.scheme .op{font:600 34px Figtree;color:#1b2440;padding:0 4px}
+.scheme .reagent{font:600 21px Figtree;color:#39435c;max-width:130px;text-align:center;line-height:1.2}
+.scheme .arrow{display:flex;flex-direction:column;align-items:center;padding:0 6px}
+.scheme .cond{font:600 18px Figtree;color:#39435c;text-align:center;max-width:190px;line-height:1.2;margin-bottom:4px}
+.change{display:flex;align-items:center;gap:10px;justify-content:center;font:700 21px Figtree;color:#1b2440;margin-top:2px}
+.change i{width:30px;height:12px;border-radius:6px;opacity:.75}
+.bigfact{background:linear-gradient(135deg,color-mix(in srgb,var(--c) 22%,#0f1830),#0f1830);border:1px solid color-mix(in srgb,var(--c) 45%,transparent);border-radius:22px;padding:30px 36px;margin-bottom:26px}
+.bigfact .v{font:800 120px/1 Unbounded;color:var(--c)}.bigfact .l{font:600 30px Figtree;color:#dbe2f5;margin-top:8px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:26px}
+.tiles div{min-height:250px;display:flex;align-items:flex-end;padding:22px;border-radius:20px;font:700 33px/1.18 Figtree;color:#fff;
+  background:linear-gradient(160deg,color-mix(in srgb,var(--c) 30%,#0f1830),#0f1830);border:1px solid color-mix(in srgb,var(--c) 45%,transparent)}
+.txt{display:flex;flex-direction:column;gap:18px}
+.bl{font:700 18px 'JetBrains Mono';letter-spacing:.16em;text-transform:uppercase;color:var(--b);margin-bottom:6px}
+.blk p{font-size:28px;line-height:1.4;color:#dbe2f5}
+.facts{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.facts span{font:600 22px Figtree;background:#16203a;border:1px solid var(--line);border-radius:12px;padding:9px 16px}
+.grow{flex:1}
+.src{border-top:1px solid var(--line);padding-top:16px}
+.jn{font:700 21px Figtree;color:#fff}.ti{font-size:19px;line-height:1.35;color:var(--mu);margin:5px 0;font-style:italic}.au{font:500 17px 'JetBrains Mono';color:var(--mu)}
+
+.art h2{margin-bottom:14px}
+.inst{display:flex;align-items:center;gap:12px;font:600 24px Figtree;color:#cdd6ee;margin-bottom:24px}.inst svg{color:var(--b);flex:none}.inst em{font-style:normal;color:var(--mu)}
+.free{flex:none;white-space:nowrap;font:700 16px 'JetBrains Mono';letter-spacing:.06em;text-transform:uppercase;color:#062b1d;background:#5be3a8;border-radius:999px;padding:7px 14px;margin-left:auto}
+.free + .jt.big{margin-left:0}
+.fr{font:700 15px 'JetBrains Mono';color:#062b1d;background:#5be3a8;border-radius:6px;padding:2px 8px}
+
+.dy{font:600 16px 'JetBrains Mono';color:var(--mu)}
+.wk{font:600 17px 'JetBrains Mono';color:var(--mu);white-space:nowrap}
+.pd{margin:0 0 26px}.pdl{font:700 17px 'JetBrains Mono';letter-spacing:.14em;text-transform:uppercase;color:var(--mu);margin-bottom:10px}
+.pdc{display:flex;gap:14px;align-items:flex-end;height:150px}.pdc div{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px}
+.pdc i{width:100%;border-radius:8px 8px 3px 3px;background:linear-gradient(180deg,var(--a2),var(--a))}.pdc b{font:800 20px Unbounded;color:#fff}.pdc span{font:600 17px 'JetBrains Mono';color:var(--mu)}
+
+.wkg .sum{font-size:29px;margin:16px 0 18px}.wkg .legend{margin:10px 0 20px}
+.wkg .cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}.wkg .card{padding:16px 18px}.wkg .card p{font-size:21px;line-height:1.36}.wkg .card .cl{font-size:16px}.wkg .card .ref{font-size:15px}
+.wkg .pdc{height:130px}
+
+.c2top{display:flex;gap:26px;align-items:stretch}.c2l{flex:1;min-width:0}
+.c2eye{display:flex;align-items:center;gap:16px}.mtile{width:76px;height:76px;flex:none;border-radius:16px;display:grid;place-items:center;font:800 36px Unbounded;background:linear-gradient(160deg,color-mix(in srgb,var(--a) 42%,var(--tile)),var(--tile));border:2px solid color-mix(in srgb,var(--a) 65%,transparent);box-shadow:0 0 50px color-mix(in srgb,var(--a) 35%,transparent)}
+.c2 .eyebrow{font-size:18px;line-height:1.45}
+.c2 h1{font-size:48px;margin:18px 0 12px}
+.trend{display:inline-flex;align-items:center;gap:10px;font:700 21px Figtree;color:#ffd36e;background:rgba(255,211,110,.10);border:1px solid rgba(255,211,110,.35);border-radius:12px;padding:7px 14px;margin-bottom:14px}
+.c2 .stats div{padding:7px 12px}.c2 .stats b{font-size:28px}.c2 .stats span{font-size:15px;max-width:100px}
+.hero{width:330px;flex:none;background:#f7f8fc;border-radius:22px;padding:14px 12px 12px;display:flex;flex-direction:column;align-items:center;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.hero .hl{align-self:flex-start;font:800 18px Unbounded;color:#0b1020;background:#ffd36e;border-radius:8px;padding:3px 10px}
+.hero .hm{flex:1;display:flex;align-items:center}.hero .hm svg{width:300px;height:auto}
+.hero .hc{font:700 18px/1.25 Figtree;color:#1b2440;text-align:center}
+.top3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+.t3{background:linear-gradient(160deg,color-mix(in srgb,var(--b) 22%,#0f1830),#0f1830);border:1px solid color-mix(in srgb,var(--b) 50%,transparent);border-radius:18px;padding:16px 18px;display:flex;flex-direction:column;gap:8px;min-height:180px}
+.t3n{font:800 30px Unbounded;color:var(--b);display:flex;justify-content:space-between;align-items:center}
+.t3t{font:700 23px/1.2 Figtree;color:#fff;flex:1}.t3j{display:flex;align-items:center;gap:8px;font:500 16px 'JetBrains Mono';color:var(--mu)}
+.cmp{margin-top:20px}.cmp .lbl{font-size:16px;margin-bottom:6px}.cmp li{font-size:20px;padding:4px 0;gap:12px}.cmp .ix{font-size:16px;width:26px}.cmp .jt{font-size:14px;padding:1px 8px}.cmp .dot{width:11px;height:11px}
+.c2 .legend{font-size:16px;margin-top:10px;gap:6px 18px}
+.for{font:600 21px Figtree;color:#cdd6ee;margin:-6px 0 18px}.for b{font:700 16px 'JetBrains Mono';letter-spacing:.14em;text-transform:uppercase;color:var(--b);margin-right:8px}
+.also{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:20px}.al{font:700 16px 'JetBrains Mono';letter-spacing:.14em;text-transform:uppercase;color:var(--mu)}
+.ap{display:inline-flex;align-items:center;gap:8px;font:600 19px Figtree;color:#dbe2f5;border:1px solid var(--line);border-radius:10px;padding:4px 12px 4px 4px;background:#111a30}
+.ap i{font:800 15px/30px Unbounded;font-style:normal;width:34px;height:30px;text-align:center;border-radius:7px;background:color-mix(in srgb,var(--a) 30%,#1a2440);color:#fff}
+
+.art h2{font-size:44px;margin:20px 0 12px}.art .inst{margin-bottom:16px}.art .scheme{margin-bottom:20px}.art .bigfact,.art .tiles{margin-bottom:20px}
+.art .txt{gap:12px}.art .facts{margin-top:16px}.art .also{margin-top:14px}.art .for{margin:-2px 0 12px}
+.ti{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+
+.term{display:flex;gap:12px;align-items:baseline;margin-top:14px;background:rgba(255,211,110,.07);border:1px dashed rgba(255,211,110,.4);border-radius:12px;padding:10px 14px;font-size:20px;line-height:1.35;color:#dbe2f5}
+.term b{flex:none;font:700 14px 'JetBrains Mono';letter-spacing:.12em;text-transform:uppercase;color:#ffd36e}.term em{font-style:normal;font-weight:700;color:#fff}
+.quiz h2{font:800 46px/1.15 Unbounded;margin:22px 0 34px;letter-spacing:-.015em}
+.qos{display:flex;flex-direction:column;gap:16px}
+.qo{display:flex;align-items:center;gap:22px;font:700 32px Figtree;background:var(--card);border:2px solid var(--line);border-radius:18px;padding:22px 26px}
+.qo span{width:58px;height:58px;flex:none;border-radius:14px;display:grid;place-items:center;font:800 28px Unbounded;background:color-mix(in srgb,var(--a) 30%,#1a2440)}
+.qo.ok{border-color:#2FC19A;background:rgba(47,193,154,.12)}.qo.ok span{background:#2FC19A;color:#062b1d}.qo.no{opacity:.45}
+.qhint{margin-top:auto;font:700 26px Unbounded;color:var(--a2);text-align:right}
+.qwhy{font-size:28px;line-height:1.45;color:#dbe2f5;margin-top:30px}
+.qprompt{margin-top:auto;font:700 28px/1.35 Figtree;color:#fff;background:color-mix(in srgb,var(--a) 18%,#0c1324);border:1px solid color-mix(in srgb,var(--a) 50%,transparent);border-radius:18px;padding:22px 26px}
+.save{display:flex;gap:16px;align-items:center;font-size:24px;line-height:1.4;color:#dbe2f5;margin:-8px 0 26px}.save svg{color:var(--a2);flex:none}.save .u{font-size:21px}
+.cta .steps{margin:28px 0}.cta .steps li{padding:18px 24px;font-size:26px}
+
+.teams h2{font:800 46px/1.1 Unbounded;margin:16px 0 22px}
+.tcs{display:flex;flex-direction:column;gap:14px}
+.tcn{font:800 22px Unbounded;color:var(--a2);margin-bottom:4px}.tcn span{font:600 18px 'JetBrains Mono';color:var(--mu);margin-left:6px}
+.tr{display:flex;align-items:center;gap:12px;font-size:21px;line-height:1.3;padding:4px 0;border-bottom:1px solid var(--line)}.tk{font:600 16px 'JetBrains Mono';color:var(--mu);width:24px}.ti2 b{color:#fff}.ti2{color:#cdd6ee}
+.tagme{margin-top:auto;font:600 26px/1.35 Figtree;color:#fff;background:color-mix(in srgb,var(--a) 18%,#0c1324);border:1px solid color-mix(in srgb,var(--a) 50%,transparent);border-radius:18px;padding:20px 24px}.tagme b{color:var(--a2)}
+
+.blk p strong{color:#fff;font-weight:700;background:linear-gradient(transparent 62%,color-mix(in srgb,var(--b) 38%,transparent) 62%)}
+.qref{font:700 22px 'JetBrains Mono';color:var(--a2);white-space:nowrap}
+.c2 h1{font-size:54px;line-height:1.04}
+
+.awards{margin-top:30px;display:flex;flex-direction:column;gap:14px}.awh{font:700 17px 'JetBrains Mono';letter-spacing:.14em;text-transform:uppercase;color:var(--mu)}
+.aw{display:flex;align-items:center;gap:18px;background:var(--card);border:1px solid var(--line);border-left:6px solid var(--c);border-radius:16px;padding:18px 22px}
+.awl{font:700 17px 'JetBrains Mono';letter-spacing:.12em;text-transform:uppercase;color:var(--c);width:190px;flex:none}.awt{font:700 25px/1.25 Figtree;color:#fff;flex:1}.aws{font:700 19px 'JetBrains Mono';color:var(--a2);white-space:nowrap}
+.awn{font:500 19px Figtree;color:var(--mu);font-style:italic}
+.awb{flex:none;white-space:nowrap;font:700 15px 'JetBrains Mono';letter-spacing:.08em;text-transform:uppercase;color:#0b1020;background:var(--c);border-radius:999px;padding:7px 14px}
+.qchip{font:700 16px 'JetBrains Mono';color:#0b1020;background:#ffd36e;border-radius:999px;padding:5px 12px;margin-right:14px;vertical-align:middle}
+.motif .mol{display:flex;flex-direction:column;align-items:center}.motif .mn{font:700 17px 'JetBrains Mono';color:#39435c;margin-top:-6px}
+/* cta */
+.cta h2{font:800 58px/1.08 Unbounded;margin:20px 0 24px;letter-spacing:-.015em}
+.cta .lead{font-size:30px;line-height:1.45;color:#dbe2f5}
+.steps{list-style:none;margin:36px 0;display:flex;flex-direction:column;gap:20px}
+.steps li{display:flex;gap:24px;align-items:flex-start;font-size:28px;line-height:1.38;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 26px}
+.steps li>span{flex:none;width:52px;height:52px;border-radius:14px;background:var(--a);color:#0b1020;font:800 28px/52px Unbounded;text-align:center}
+.u{font:600 24px 'JetBrains Mono';color:var(--a2);margin-top:6px}
+.cta .table{display:flex;gap:28px;align-items:center;font-size:27px;line-height:1.42;color:#dbe2f5;margin-top:auto}
+.minitable{flex:none;display:grid;grid-template-columns:repeat(4,52px);gap:6px}
+.minitable i{font:700 18px/52px Unbounded;font-style:normal;text-align:center;border-radius:9px;color:#cdd6ee;background:#141d36;border:1px solid var(--line)}
+.minitable i.on{background:var(--a);color:#0b1020;box-shadow:0 0 30px var(--a)}
+.art.nochips .facts{display:none}.tr.more2{color:var(--mu);font-style:italic}</style>
+<script>window.__RDKIT_WASM="https://cdn.jsdelivr.net/npm/@rdkit/rdkit@2026.9.2/dist/RDKit_minimal.wasm";</script><script src="https://cdn.jsdelivr.net/npm/@rdkit/rdkit@2026.9.2/dist/RDKit_minimal.js"></script></head><body><section class="cover c2">
+  <div class="c2top"><div class="c2l">
+    <div class="c2eye"><div class="mtile">Cs</div><div class="eyebrow">Chemisters Daily<br>Wed, 25 Nov 2026</div></div>
+    <h1>Electrolytes achieving &lt;6% SEI loss and 99.98% CE</h1>
+    
+    <div class="stats"><div><b>10</b><span>new papers</span></div><div><b>2</b><span>with no transition metal</span></div><div><b>2</b><span>free to read</span></div></div>
+  </div><div class="hero" data-w="today"><div class="hl">#1 today</div><div class="hm"></div><div class="hc"></div></div></div>
+  <div class="top3"><div class="t3" style="--b:#56B4E9"><div class="t3n">01</div><div class="t3t">Data-driven electrolyte design cuts SEI loss</div><div class="t3j"><i class="dot" style="background:#56B4E9"></i>J. Am. Chem. Soc.</div></div><div class="t3" style="--b:#E69F00"><div class="t3n">02</div><div class="t3t">B,N tetraquinane super-reductant</div><div class="t3j"><i class="dot" style="background:#E69F00"></i>J. Am. Chem. Soc.</div></div><div class="t3" style="--b:#56B4E9"><div class="t3n">03</div><div class="t3t">Dynamic Li/Na interphase stabilizes NCM811</div><div class="t3j"><i class="dot" style="background:#56B4E9"></i>J. Am. Chem. Soc.</div></div></div>
+  <div class="index cmp"><div class="lbl"><span>Everything else today · one slide each</span><span class="q1"><b>Q1</b> journals only · top 25% of their field</span></div>
+    <ol><li><i class="dot" style="background:#E69F00"></i><span class="ix">04</span><span class="t">BiCuMn nanoalloy boosts glycine electrosynthesis</span><span class="jt">Angew. Chem.</span></li><li><i class="dot" style="background:#56B4E9"></i><span class="ix">05</span><span class="t">Steric asymmetry boosts Na‑free pouch cells</span><span class="jt">Angew. Chem.</span></li><li><i class="dot" style="background:#56B4E9"></i><span class="ix">06</span><span class="t">Colloid‑engineered perovskites boost tandem…</span><span class="jt">J. Am. Chem. Soc.</span></li><li><i class="dot" style="background:#56B4E9"></i><span class="ix">07</span><span class="t">HEA nanowires boost low‑potential methanol</span><span class="fr">FREE</span><span class="jt">Angew. Chem.</span></li><li><i class="dot" style="background:#56B4E9"></i><span class="ix">08</span><span class="t">Hydrogen drives facet‑dependent Pd‑Ag change</span><span class="jt">Angew. Chem.</span></li><li><i class="dot" style="background:#56B4E9"></i><span class="ix">09</span><span class="t">Zwitterionic dipole at ETL/perovskite interface</span><span class="jt">ACS Energy Lett.</span></li><li><i class="dot" style="background:#56B4E9"></i><span class="ix">10</span><span class="t">Composite solid electrolyte for dendrite‑free Zn</span><span class="fr">FREE</span><span class="jt">Adv. Energy Mater.</span></li></ol><div class="legend"><span><i class="dot" style="background:#E69F00"></i>Organic Chemistry <b>2</b></span><span><i class="dot" style="background:#56B4E9"></i>Electrochemistry <b>8</b></span></div></div>
+  <div class="banner"><div><b>Published in an indexed journal?</b> We feature researchers' work on our pages, <b>free</b>.</div><div class="url">chemisters.com/publish →</div></div>
+  <div class="swipe"><span class="qchip">Quiz inside</span>Swipe →</div>
+<footer><div class="brand"><img src="https://chemisters.com/images/chemisters-logo-128.png"><span>chemisters.com</span></div>
+  <div class="pg">Cs · Best of Chemisters</div><div class="num">01 / 16</div></footer></section>
+<section class="glance"><div class="eyebrow">Today at a glance</div>
+  <p class="sum">Today's selection highlights electrochemical advances: Na‑ion electrolytes with 6% SEI loss and 99.98% Coulombic efficiency, a B‑N tetraquinane reaching –3.2 V reduction potential, and a Na‑based coating retaining 80% capacity after 511 cycles at 4.7 V.</p>
+  <div class="bar"><div style="flex:2;background:#E69F00"><span>2</span></div><div style="flex:8;background:#56B4E9"><span>8</span></div></div><div class="legend"><span><i class="dot" style="background:#E69F00"></i>Organic Chemistry <b>2</b></span><span><i class="dot" style="background:#56B4E9"></i>Electrochemistry <b>8</b></span></div>
+  
+  <div class="awards"><div class="awh">Today's awards</div><div class="aw" style="--c:#ff8a7a"><div class="awl">Breakthrough</div><div class="awt">Data-driven electrolyte design cuts SEI loss</div><div class="aws">slide 03 →</div></div><div class="aw" style="--c:#ffd36e"><div class="awl">New method</div><div class="awt">Colloid‑engineered perovskites boost tandem…</div><div class="aws">slide 08 →</div></div><div class="aw" style="--c:#6fe3ff"><div class="awl">Record</div><div class="awt">B,N tetraquinane super-reductant</div><div class="aws">slide 04 →</div></div><div class="aw" style="--c:#d9a8ff"><div class="awl">Mechanism</div><div class="awt">HEA nanowires boost low‑potential methanol</div><div class="aws">slide 09 →</div></div></div><footer><div class="brand"><img src="https://chemisters.com/images/chemisters-logo-128.png"><span>chemisters.com</span></div>
+  <div class="pg">Cs · Best of Chemisters</div><div class="num">02 / 16</div></footer></section>
+<section class="art nochips" style="--b:#56B4E9">
+  <div class="prog"><i style="background:#56B4E9"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i></div>
+  <div class="meta"><span class="k">01</span><span class="awb" style="--c:#ff8a7a">Breakthrough of the day</span><span class="chip"><i class="dot" style="background:#56B4E9"></i>Electrochemistry</span><span class="jt big">J. Am. Chem. Soc. <b>Q1</b></span></div>
+  <h2>High‑EState electrolytes cut SEI loss to 6% &amp; 99.98% CE</h2>
+  <div class="inst"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 2 2 7v2h20V7L12 2zm-7 9v7H3v2h18v-2h-2v-7h-2v7h-3v-7h-2v7H9v-7H7v7H5v-7z" fill="currentColor"/></svg><span>University of Cambridge · Nanjing University · China · UK</span></div>
+  <div class="tiles"><div style="--c:#56B4E9">SEI loss ↓ to 6%</div><div style="--c:#56B4E9">99.98% CE over 1000 cycles</div><div style="--c:#56B4E9">EState predicts SEI loss</div></div>
+  <div class="for"><b>For</b> Battery and electrolyte researchers</div><div class="txt"><div class="blk"><div class="bl">What they did</div><p>We measured SEI dissolution for many Na‑ion electrolytes, used a closed‑loop data‑driven workflow to link dissolution to &gt;200 physicochemical descriptors, and <strong>identified the solvent average EState index</strong> as the key predictor.</p></div>
+  <div class="blk"><div class="bl">Why it matters</div><p>SEI dissolution depletes Na inventory, causing rapid capacity loss; minimizing dissolution with high‑EState electrolytes <strong>reduces Na loss</strong> and enables near‑unity Coulombic efficiency, extending battery life.</p></div></div>
+  <div class="facts"><span>SEI loss ↓ to 6%</span><span>99.98% CE over 1000 cycles</span><span>EState predicts SEI loss</span></div>
+  <div class="term"><b>Term to know</b><span><em>Electrotopological state (EState) index:</em> A descriptor combining electronic and topological information of a molecule, reflecting its average electrotopological state.</span></div>
+  <div class="also"><span class="al">Also on</span><span class="ap"><i>Dt</i>Chemical Data Science &amp; Automation</span><span class="ap"><i>Ci</i>Chemoinformatics</span><span class="ap"><i>Ml</i>Chemistry AI &amp; ML Applications</span></div>
+  <div class="grow"></div>
+  <div class="src"><div class="jn">Journal of the American Chemical Society</div><div class="ti">Data-Driven Electrolyte Design by Electrotopological State Descriptors for Na-Ion Batteries with Minimal Solid-Electrolyte Interphase Dissolution</div>
+    <div class="au">Corresponding: Jingyang Wang, Jia Zhu, Yan Jin · 13 authors · doi.org/10.1021/jacs.6c12939</div></div>
+<footer><div class="brand"><img src="https://chemisters.com/images/chemisters-logo-128.png"><span>chemisters.com</span></div>
+  <div class="pg">Cs · Best of Chemisters</div><div class="num">03 / 16</div></footer></section>
+<section class="art nochips" style="--b:#E69F00">
+  <div class="prog"><i style="background:rgba(255,255,255,.13)"></i><i style="background:#E69F00"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i></div>
+  <div class="meta"><span class="k">02</span><span class="awb" style="--c:#6fe3ff">Record of the day</span><span class="chip"><i class="dot" style="background:#E69F00"></i>Organic Chemistry</span><span class="jt big">J. Am. Chem. Soc. <b>Q1</b></span></div>
+  <h2>B,N tetraquinane reduces at –3.2 V, cleaves bonds</h2>
+  <div class="inst"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 2 2 7v2h20V7L12 2zm-7 9v7H3v2h18v-2h-2v-7h-2v7h-3v-7h-2v7H9v-7H7v7H5v-7z" fill="currentColor"/></svg><span>City University of Hong Kong · The Chinese University of Hong Kong</span></div>
+  <div class="tiles"><div style="--c:#E69F00">C–Si bond cleavage</div><div style="--c:#E69F00">C–F reduction‑borylation</div><div style="--c:#E69F00">Phthalazine dearomatization</div></div>
+  <div class="for"><b>For</b> Synthetic chemists and redox specialists</div><div class="txt"><div class="blk"><div class="bl">What they did</div><p>Synthesized a bowl‑shaped B–N tetraquinane in one high‑yield step and measured a reduction potential of <strong>−3.2 V vs Fc/Fc+</strong>, a record for organic reductants.</p></div>
+  <div class="blk"><div class="bl">Why it matters</div><p>Topological strain in the 3‑D bowl creates a highly destabilized boron dianion, giving <strong>exceptionally negative reduction potential</strong> and enabling <strong>reductive activation of strong C–Si, C–C, and C–F bonds</strong>.</p></div></div>
+  <div class="facts"><span>C–Si bond cleavage</span><span>C–F reduction‑borylation</span><span>Phthalazine dearomatization</span></div>
+  <div class="term"><b>Term to know</b><span><em>tetraquinane:</em> A tetraquinane is a fused four‑ring system composed of quinane units, forming a highly strained bowl‑shaped scaffold.</span></div>
+  <div class="also"><span class="al">Also on</span><span class="ap"><i>Ec</i>Electrochemistry</span><span class="ap"><i>Rm</i>Reactive Matter</span><span class="ap"><i>Cp</i>Computational Chemistry</span></div>
+  <div class="grow"></div>
+  <div class="src"><div class="jn">Journal of the American Chemical Society</div><div class="ti">A Bowl-Shaped B,N-Tetraquinane Organic Super-Reductant</div>
+    <div class="au">Corresponding: Zhenpin Lu · 4 authors · doi.org/10.1021/jacs.6c18155</div></div>
+<footer><div class="brand"><img src="https://chemisters.com/images/chemisters-logo-128.png"><span>chemisters.com</span></div>
+  <div class="pg">Cs · Best of Chemisters</div><div class="num">04 / 16</div></footer></section>
+<section class="art nochips" style="--b:#56B4E9">
+  <div class="prog"><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:#56B4E9"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i></div>
+  <div class="meta"><span class="k">03</span><span class="chip"><i class="dot" style="background:#56B4E9"></i>Electrochemistry</span><span class="jt big">J. Am. Chem. Soc. <b>Q1</b></span></div>
+  <h2>80% capacity retained after 511 cycles at 4.7 V</h2>
+  <div class="inst"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 2 2 7v2h20V7L12 2zm-7 9v7H3v2h18v-2h-2v-7h-2v7h-3v-7h-2v7H9v-7H7v7H5v-7z" fill="currentColor"/></svg><span>Qingdao University · ShanghaiTech University <em>+2</em></span></div>
+  <div class="tiles"><div style="--c:#56B4E9">80% after 511 cycles</div><div style="--c:#56B4E9">L‑NZSP cuts reactions</div><div style="--c:#56B4E9">Na⁺ pillars stabilize</div></div>
+  <div class="for"><b>For</b> Battery researchers and electrochemists</div><div class="txt"><div class="blk"><div class="bl">What they did</div><p>A <strong>Na⁺-based solid electrolyte coating</strong> (Na₃Zr₂Si₂PO₁₂) on NCM811 undergoes <strong>Li⁺/Na⁺ exchange</strong>, forming a fast Li⁺‑conducting L‑NZSP interphase and inserting Na⁺ into the cathode lattice.</p></div>
+  <div class="blk"><div class="bl">Why it matters</div><p>The L‑NZSP layer <strong>suppresses high‑voltage parasitic reactions</strong>, while the incorporated Na⁺ <strong>pillars stabilize the oxygen lattice</strong>, reducing chemo‑mechanical degradation and enabling long‑life high‑energy operation.</p></div></div>
+  <div class="facts"><span>80% after 511 cycles</span><span>L‑NZSP cuts reactions</span><span>Na⁺ pillars stabilize</span></div>
+  <div class="term"><b>Term to know</b><span><em>cathode–electrolyte interphase (CEI):</em> A protective layer formed at the cathode surface that governs electrolyte decomposition and ion transport.</span></div>
+  <div class="also"><span class="al">Also on</span><span class="ap"><i>Mr</i>Chemistry of Materials</span><span class="ap"><i>Eg</i>Energy Chemistry</span><span class="ap"><i>Sf</i>Surface Chemistry</span></div>
+  <div class="grow"></div>
+  <div class="src"><div class="jn">Journal of the American Chemical Society</div><div class="ti">Dynamic Li+/Na+-Exchanging Interphase Stabilizes High-Voltage Ni-Rich Cathodes for 557 Wh kg–1 Lithium Batteries</div>
+    <div class="au">Corresponding: Xiangxin Guo · 7 authors · doi.org/10.1021/jacs.6c17386</div></div>
+<footer><div class="brand"><img src="https://chemisters.com/images/chemisters-logo-128.png"><span>chemisters.com</span></div>
+  <div class="pg">Cs · Best of Chemisters</div><div class="num">05 / 16</div></footer></section>
+<section class="art nochips" style="--b:#E69F00">
+  <div class="prog"><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:#E69F00"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i></div>
+  <div class="meta"><span class="k">04</span><span class="chip"><i class="dot" style="background:#E69F00"></i>Organic Chemistry</span><span class="jt big">Angew. Chem. <b>Q1</b></span></div>
+  <h2>78.9% FE glycine at 533 mA cm⁻², 1000 h operation</h2>
+  <div class="inst"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 2 2 7v2h20V7L12 2zm-7 9v7H3v2h18v-2h-2v-7h-2v7h-3v-7h-2v7H9v-7H7v7H5v-7z" fill="currentColor"/></svg><span>Chinese Academy of Sciences · Beijing National Laboratory for Molecular Sciences <em>+4</em> · China</span></div>
+  <div class="tiles"><div style="--c:#E69F00">78.9% FE glycine</div><div style="--c:#E69F00">533 mA cm⁻² density</div><div style="--c:#E69F00">1 mol glycine produced</div></div>
+  <div class="for"><b>For</b> Electrochemists and catalyst designers</div><div class="txt"><div class="blk"><div class="bl">What they did</div><p>A Bi‑based nanoalloy with atomically dispersed Cu and Mn (<strong>BiCuMn@C</strong>) was synthesized and applied to <strong>glycine electrosynthesis</strong>.</p></div>
+  <div class="blk"><div class="bl">Why it matters</div><p>Cu induces <strong>d‑p hybridization</strong> with Bi, improving nitrogen species adsorption, while Mn supplies <strong>spin‑polarized electrons</strong> to *NO, enabling its hydrogenation to *NHO and breaking the *NO/*NHO scaling relationship, thus raising activity and selectivity.</p></div></div>
+  <div class="facts"><span>78.9% FE glycine</span><span>533 mA cm⁻² density</span><span>1 mol glycine produced</span></div>
+  <div class="term"><b>Term to know</b><span><em>d‑p hybridization:</em> Interaction between d orbitals of Cu and p orbitals of Bi that alters electronic structure and adsorption properties.</span></div>
+  <div class="also"><span class="al">Also on</span><span class="ap"><i>Ct</i>Catalytic Chemistry</span><span class="ap"><i>Id</i>Industrial Chemistry</span><span class="ap"><i>Gr</i>Green Chemistry</span></div>
+  <div class="grow"></div>
+  <div class="src"><div class="jn">Angewandte Chemie International Edition</div><div class="ti">Spin and Charge Engineering of a BiCuMn Nanoalloy Catalyst for Industrial‐Scale Electrosynthesis of Glycine</div>
+    <div class="au">Corresponding: Baipeng Yin, Jianmin Gu, Chengcheng Liu · 10 authors · doi.org/10.1002/anie.3194380</div></div>
+<footer><div class="brand"><img src="https://chemisters.com/images/chemisters-logo-128.png"><span>chemisters.com</span></div>
+  <div class="pg">Cs · Best of Chemisters</div><div class="num">06 / 16</div></footer></section>
+<section class="art nochips" style="--b:#56B4E9">
+  <div class="prog"><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:#56B4E9"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i></div>
+  <div class="meta"><span class="k">05</span><span class="chip"><i class="dot" style="background:#56B4E9"></i>Electrochemistry</span><span class="jt big">Angew. Chem. <b>Q1</b></span></div>
+  <h2>85.9% capacity after 1600 cycles in Na‑free pouch</h2>
+  <div class="inst"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 2 2 7v2h20V7L12 2zm-7 9v7H3v2h18v-2h-2v-7h-2v7h-3v-7h-2v7H9v-7H7v7H5v-7z" fill="currentColor"/></svg><span>Xi'an Jiaotong University · Henan Academy of Sciences <em>+3</em> · China</span></div>
+  <div class="tiles"><div style="--c:#56B4E9">EEME optimal solvent</div><div style="--c:#56B4E9">85.9% after 1600 cycles</div><div style="--c:#56B4E9">–20 °C, 98.6% capacity</div></div>
+  <div class="for"><b>For</b> Battery researchers and electrochemists</div><div class="txt"><div class="blk"><div class="bl">What they did</div><p>The authors selected 1‑ethoxy‑2‑methoxyethane (EEME) because its <strong>sterically asymmetric ethyl terminus creates a hyperconjugation‑enabled polarization pathway</strong>, yielding moderate Na⁺ coordination and a persistent anion‑affinitive site that forms a NaF‑rich interphase for **highly reversible,…</p></div>
+  <div class="blk"><div class="bl">Why it matters</div><p>Steric‑induced hyperconjugation <strong>amplifies the positive electrostatic potential</strong> of EEME, creating an <strong>anion‑affinitive site that guides PF₆⁻ with Na⁺</strong>, enabling correlated ion transport and stable, high‑rate anode‑free Na batteries.</p></div></div>
+  <div class="facts"><span>EEME optimal solvent</span><span>85.9% after 1600 cycles</span><span>–20 °C, 98.6% capacity</span></div>
+  <div class="term"><b>Term to know</b><span><em>Hyperconjugation:</em> Delocalization of electrons from a σ‑bond into an adjacent empty or antibonding orbital, influencing molecular polarity and reactivity.</span></div>
+  <div class="also"><span class="al">Also on</span><span class="ap"><i>Tr</i>Theoretical Chemistry</span><span class="ap"><i>Ph</i>Physical Chemistry</span><span class="ap"><i>Mr</i>Chemistry of Materials</span></div>
+  <div class="grow"></div>
+  <div class="src"><div class="jn">Angewandte Chemie International Edition</div><div class="ti">Steric Asymmetry‐Induced Hyperconjugation Enables Stable Anode‐Free Sodium Pouch Cells</div>
+    <div class="au">Corresponding: Weijiang Xue · 10 authors · doi.org/10.1002/anie.8348441</div></div>
+<footer><div class="brand"><img src="https://chemisters.com/images/chemisters-logo-128.png"><span>chemisters.com</span></div>
+  <div class="pg">Cs · Best of Chemisters</div><div class="num">07 / 16</div></footer></section>
+<section class="art nochips" style="--b:#56B4E9">
+  <div class="prog"><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:#56B4E9"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i></div>
+  <div class="meta"><span class="k">06</span><span class="awb" style="--c:#ffd36e">Method of the day</span><span class="chip"><i class="dot" style="background:#56B4E9"></i>Electrochemistry</span><span class="jt big">J. Am. Chem. Soc. <b>Q1</b></span></div>
+  <h2>Colloid‑guided WBG films give 34% PCE in Si tandems</h2>
+  <div class="inst"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 2 2 7v2h20V7L12 2zm-7 9v7H3v2h18v-2h-2v-7h-2v7h-3v-7h-2v7H9v-7H7v7H5v-7z" fill="currentColor"/></svg><span>Nanchang University · CNPC Tubular Goods Research Institute (China) <em>+4</em> · China · Hong Kong SAR China</span></div>
+  <div class="tiles"><div style="--c:#56B4E9">Colloid nucleation control</div><div style="--c:#56B4E9">Homogeneous WBG films</div><div style="--c:#56B4E9">34.01% tandem PCE</div></div>
+  <div class="for"><b>For</b> Materials scientists and photovoltaic…</div><div class="txt"><div class="blk"><div class="bl">What they did</div><p>We identified the precursor suspension as the source of inhomogeneity and introduced long‑chain alkylphosphonic acids to engineer colloidal intermediates, <strong>directing rapid nucleation and slow crystallization</strong> for uniform WBG films.</p></div>
+  <div class="blk"><div class="bl">Why it matters</div><p>Homogeneous WBG perovskite layers <strong>lower trap density</strong>, enabling tandem devices with industrial Si to reach a certified 34.01% PCE and retain 93% after 1211 h and 88% after 1000 h.</p></div></div>
+  <div class="facts"><span>Colloid nucleation control</span><span>Homogeneous WBG films</span><span>34.01% tandem PCE</span></div>
+  <div class="term"><b>Term to know</b><span><em>alkylphosphonic acid:</em> Long‑chain organic acids bearing a phosphonic (–PO₃H₂) group, used to coordinate metal ions and modulate colloidal stability.</span></div>
+  <div class="also"><span class="al">Also on</span><span class="ap"><i>Eg</i>Energy Chemistry</span><span class="ap"><i>Mr</i>Chemistry of Materials</span><span class="ap"><i>Pc</i>Photochemistry</span></div>
+  <div class="grow"></div>
+  <div class="src"><div class="jn">Journal of the American Chemical Society</div><div class="ti">Colloidally Prepared Homogeneous Wide-Bandgap Perovskites for Efficient Tandem Solar Cells with Industrial Silicon</div>
+    <div class="au">Corresponding: Yiwang Chen · 20 authors · doi.org/10.1021/jacs.6c10873</div></div>
+<footer><div class="brand"><img src="https://chemisters.com/images/chemisters-logo-128.png"><span>chemisters.com</span></div>
+  <div class="pg">Cs · Best of Chemisters</div><div class="num">08 / 16</div></footer></section>
+<section class="art nochips" style="--b:#56B4E9">
+  <div class="prog"><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:#56B4E9"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i></div>
+  <div class="meta"><span class="k">07</span><span class="awb" style="--c:#d9a8ff">Mechanism of the day</span><span class="chip"><i class="dot" style="background:#56B4E9"></i>Electrochemistry</span><span class="free">Free to read</span><span class="jt big">Angew. Chem. <b>Q1</b></span></div>
+  <h2>Methanol oxidation 3.76 A mg Pt⁻¹, 8.36× Pt/C</h2>
+  <div class="inst"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 2 2 7v2h20V7L12 2zm-7 9v7H3v2h18v-2h-2v-7h-2v7h-3v-7h-2v7H9v-7H7v7H5v-7z" fill="currentColor"/></svg><span>Shanghai University · University of Technology Sydney <em>+1</em> · China · Australia</span></div>
+  <div class="tiles"><div style="--c:#56B4E9">3.76 A mg Pt⁻¹ activity</div><div style="--c:#56B4E9">8.36× Pt/C performance</div><div style="--c:#56B4E9">200 h stable operation</div></div>
+  <div class="for"><b>For</b> Electrochemists and fuel‑cell researchers</div><div class="txt"><div class="blk"><div class="bl">What they did</div><p>We synthesized anisotropic PtFeCoIrRhCu high‑entropy alloy nanowires that create a <strong>local electric field</strong> through strain‑induced lattice distortion and charge redistribution, enabling a <strong>directional capture‑migration‑dissociation</strong> relay of interfacial water for low‑potential hydroxyl generation.</p></div>
+  <div class="blk"><div class="bl">Why it matters</div><p>The hydroxyl species <strong>accelerate CO oxidative removal</strong>, opening a non‑CO pathway and delivering 3.76 A mg Pt⁻¹ activity with a <strong>163.06 mW cm⁻²</strong> peak power density in a direct methanol fuel cell.</p></div></div>
+  <div class="facts"><span>3.76 A mg Pt⁻¹ activity</span><span>8.36× Pt/C performance</span><span>200 h stable operation</span></div>
+  <div class="term"><b>Term to know</b><span><em>High‑entropy alloy:</em> A solid solution of five or more principal elements in near‑equal proportions, giving high configurational entropy and unique properties.</span></div>
+  <div class="also"><span class="al">Also on</span><span class="ap"><i>Ct</i>Catalytic Chemistry</span><span class="ap"><i>Mr</i>Chemistry of Materials</span><span class="ap"><i>Eg</i>Energy Chemistry</span></div>
+  <div class="grow"></div>
+  <div class="src"><div class="jn">Angewandte Chemie International Edition</div><div class="ti">Electric‐Field‐Manipulated Reaction Pathway Engineering in Lupinus micranthus ‐Like High‐Entropy Alloy Nanowires for Direct Alcohol Fuel Cells</div>
+    <div class="au">Corresponding: Zhonghong Xia, Xiaobo Zheng, Hongbin Zhao · 11 authors · doi.org/10.1002/anie.2902799</div></div>
+<footer><div class="brand"><img src="https://chemisters.com/images/chemisters-logo-128.png"><span>chemisters.com</span></div>
+  <div class="pg">Cs · Best of Chemisters</div><div class="num">09 / 16</div></footer></section>
+<section class="art nochips" style="--b:#56B4E9">
+  <div class="prog"><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:#56B4E9"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i></div>
+  <div class="meta"><span class="k">08</span><span class="chip"><i class="dot" style="background:#56B4E9"></i>Electrochemistry</span><span class="jt big">Angew. Chem. <b>Q1</b></span></div>
+  <h2>H speeds Pd dispersion on Pd‑Ag(100), slows it on (111)</h2>
+  <div class="inst"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 2 2 7v2h20V7L12 2zm-7 9v7H3v2h18v-2h-2v-7h-2v7h-3v-7h-2v7H9v-7H7v7H5v-7z" fill="currentColor"/></svg><span>Fudan University · Collaborative Innovation Center of Chemistry for Energy Materials <em>+1</em> · China</span></div>
+  <div class="tiles"><div style="--c:#56B4E9">Pd spreads faster on (100)</div><div style="--c:#56B4E9">Suppressed recon on (111)</div><div style="--c:#56B4E9">Pd₃ pattern aids catalysis</div></div>
+  <div class="for"><b>For</b> Catalysis and surface scientists</div><div class="txt"><div class="blk"><div class="bl">What they did</div><p>Large‑scale MD simulations <strong>resolved H‑driven surface reconstruction kinetics</strong> on Pd‑covered Ag, revealing Pd‑Ag exchange at domain edges and Ag encapsulation of Pd, with facet‑dependent rates.</p></div>
+  <div class="blk"><div class="bl">Why it matters</div><p>The facet‑dependent HIR <strong>creates Pd₃ triangular sites</strong> that enhance selective acetylene hydrogenation, demonstrating that hydrogen‑induced reconstruction governs active‑site structure and catalytic selectivity.</p></div></div>
+  <div class="facts"><span>Pd spreads faster on (100)</span><span>Suppressed recon on (111)</span><span>Pd₃ pattern aids catalysis</span></div>
+  <div class="term"><b>Term to know</b><span><em>Hydrogen‑induced surface…:</em> Rearrangement of a catalyst surface caused by adsorbed hydrogen atoms, altering atomic positions and exposing new active sites.</span></div>
+  <div class="also"><span class="al">Also on</span><span class="ap"><i>Ct</i>Catalytic Chemistry</span><span class="ap"><i>Sf</i>Surface Chemistry</span><span class="ap"><i>Ki</i>Chemical Kinetics</span></div>
+  <div class="grow"></div>
+  <div class="src"><div class="jn">Angewandte Chemie International Edition</div><div class="ti">Quenching or Accelerating Large‐Scale Surface Reconstruction by the Lightest Element: Facet‐Dependent Hydrogen‐Induced Reconstruction (HIR)</div>
+    <div class="au">Corresponding: Cheng Shang, Zhi‐Pan Liu · 3 authors · doi.org/10.1002/anie.2375323</div></div>
+<footer><div class="brand"><img src="https://chemisters.com/images/chemisters-logo-128.png"><span>chemisters.com</span></div>
+  <div class="pg">Cs · Best of Chemisters</div><div class="num">10 / 16</div></footer></section>
+<section class="art nochips" style="--b:#56B4E9">
+  <div class="prog"><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:#56B4E9"></i><i style="background:rgba(255,255,255,.13)"></i></div>
+  <div class="meta"><span class="k">09</span><span class="chip"><i class="dot" style="background:#56B4E9"></i>Electrochemistry</span><span class="jt big">ACS Energy Lett. <b>Q1</b></span></div>
+  <h2>Dipolar interface gives 26.86% efficiency in rigid PSCs</h2>
+  <div class="inst"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 2 2 7v2h20V7L12 2zm-7 9v7H3v2h18v-2h-2v-7h-2v7h-3v-7h-2v7H9v-7H7v7H5v-7z" fill="currentColor"/></svg><span>Henan Normal University · King Abdullah University of Science and Technology <em>+2</em> · China · Saudi Arabia</span></div>
+  <div class="tiles"><div style="--c:#56B4E9">Dipolar heterointerface</div><div style="--c:#56B4E9">26.86% efficiency rigid</div><div style="--c:#56B4E9">93.2% retained after 1300h</div></div>
+  <div class="for"><b>For</b> Perovskite solar cell researchers</div><div class="txt"><div class="blk"><div class="bl">What they did</div><p>A zwitterionic molecule, Pyps, was placed at the SnO₂ ETL/perovskite interface to form a <strong>dipolar heterointerface</strong> that <strong>reinforces bonding and passivates defects</strong>, while its intrinsic dipole aligns energy levels for better charge extraction.</p></div>
+  <div class="blk"><div class="bl">Why it matters</div><p>The dipolar interface <strong>enhances interfacial adhesion and conductivity</strong>, leading to <strong>high efficiencies and long‑term operational stability</strong>, crucial for both rigid and flexible perovskite solar cells.</p></div></div>
+  <div class="facts"><span>Dipolar heterointerface</span><span>26.86% efficiency rigid</span><span>93.2% retained after 1300h</span></div>
+  <div class="term"><b>Term to know</b><span><em>Zwitterionic:</em> Molecule bearing both positive and negative charges in the same species, but overall neutral.</span></div>
+  <div class="also"><span class="al">Also on</span><span class="ap"><i>Eg</i>Energy Chemistry</span><span class="ap"><i>Pc</i>Photochemistry</span><span class="ap"><i>Mr</i>Chemistry of Materials</span></div>
+  <div class="grow"></div>
+  <div class="src"><div class="jn">ACS Energy Letters</div><div class="ti">Dipolar Heterointerface Enabled by Molecular Zwitterionicity for Rigid and Flexible Perovskite Solar Cells</div>
+    <div class="au">Corresponding: Jianxing Xia, Osman M. Bakr, Xiaodan Tang · 14 authors · doi.org/10.1021/acsenergylett.6c02537</div></div>
+<footer><div class="brand"><img src="https://chemisters.com/images/chemisters-logo-128.png"><span>chemisters.com</span></div>
+  <div class="pg">Cs · Best of Chemisters</div><div class="num">11 / 16</div></footer></section>
+<section class="art" style="--b:#56B4E9">
+  <div class="prog"><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:rgba(255,255,255,.13)"></i><i style="background:#56B4E9"></i></div>
+  <div class="meta"><span class="k">10</span><span class="chip"><i class="dot" style="background:#56B4E9"></i>Electrochemistry</span><span class="free">Free to read</span><span class="jt big">Adv. Energy Mater. <b>Q1</b></span></div>
+  <h2>Zn//Zn cell 2000 h; Zn//Cu CE 99.75% for 1000 cycles</h2>
+  <div class="inst"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 2 2 7v2h20V7L12 2zm-7 9v7H3v2h18v-2h-2v-7h-2v7h-3v-7h-2v7H9v-7H7v7H5v-7z" fill="currentColor"/></svg><span>City University of Hong Kong · Jiangxi Agricultural University <em>+4</em> · Hong Kong SAR China · China</span></div>
+  <div class="bigfact" style="--c:#56B4E9"><div class="v">2000 h</div><div class="l">stable cycling time</div></div>
+  <div class="for"><b>For</b> Battery researchers and polymer…</div><div class="txt"><div class="blk"><div class="bl">What they did</div><p>A composite solid‑state electrolyte was built by embedding EMIMTFSI ionic liquid and BN nanosheets into a PVDF‑HFP polymer matrix, <strong>suppressing polymer crystallization</strong> and <strong>anchoring TFSI− via Lewis acid‑base interactions</strong>.</p></div>
+  <div class="blk"><div class="bl">Why it matters</div><p>The plasticizer yields <strong>enhanced ionic conductivity</strong> and better contact, and BN‑TFSI anchoring controls Zn2+‑TFSI− coordination, enabling <strong>uniform Zn deposition</strong> and high Zn2+ transference, preventing dendrites.</p></div></div>
+  <div class="facts"><span>5.23 mS cm⁻¹ @30 °C</span><span>0.56 Zn²⁺ transference</span><span>2000 h stable cycling</span></div>
+  <div class="term"><b>Term to know</b><span><em>Lewis acid‑base interaction:</em> A non‑covalent interaction where a Lewis acid accepts an electron pair from a Lewis base, here binding TFSI− to BN.</span></div>
+  <div class="also"><span class="al">Also on</span><span class="ap"><i>Mr</i>Chemistry of Materials</span><span class="ap"><i>Py</i>Polymer Chemistry</span><span class="ap"><i>Eg</i>Energy Chemistry</span></div>
+  <div class="grow"></div>
+  <div class="src"><div class="jn">Advanced Energy Materials</div><div class="ti">Synergistic Interface Lubrication and Anion Anchoring in a Composite Solid‐State Electrolyte for Dendrite‐Free and Wide‐Temperature Zinc Metal Batteries</div>
+    <div class="au">Corresponding: Zanxiang Nie, Walid A. Daoud · 10 authors · doi.org/10.1002/aenm.71865</div></div>
+<footer><div class="brand"><img src="https://chemisters.com/images/chemisters-logo-128.png"><span>chemisters.com</span></div>
+  <div class="pg">Cs · Best of Chemisters</div><div class="num">12 / 16</div></footer></section>
+<section class="teams"><div class="eyebrow">The people behind today's papers</div>
+  <h2>37 institutions · 7 countries</h2><div class="tcs"><div class="tc"><div class="tcn">China <span>3</span></div><div class="tr"><i class="dot" style="background:#E69F00"></i><span class="tk">04</span><span class="ti2"><b>Chinese Academy of Sciences</b> · Baipeng Yin, Jianmin Gu, Chengcheng Liu</span></div><div class="tr"><i class="dot" style="background:#56B4E9"></i><span class="tk">05</span><span class="ti2"><b>Xi'an Jiaotong University</b> · Weijiang Xue</span></div><div class="tr"><i class="dot" style="background:#56B4E9"></i><span class="tk">08</span><span class="ti2"><b>Fudan University</b> · Cheng Shang, Zhi‐Pan Liu</span></div></div><div class="tc"><div class="tcn">Other <span>2</span></div><div class="tr"><i class="dot" style="background:#E69F00"></i><span class="tk">02</span><span class="ti2"><b>City University of Hong Kong</b> · Zhenpin Lu</span></div><div class="tr"><i class="dot" style="background:#56B4E9"></i><span class="tk">03</span><span class="ti2"><b>Qingdao University</b> · Xiangxin Guo</span></div></div><div class="tc"><div class="tcn">China · UK <span>1</span></div><div class="tr"><i class="dot" style="background:#56B4E9"></i><span class="tk">01</span><span class="ti2"><b>University of Cambridge</b> · Jingyang Wang, Jia Zhu, Yan Jin</span></div></div><div class="tc"><div class="tcn">China · Hong Kong SAR China <span>1</span></div><div class="tr"><i class="dot" style="background:#56B4E9"></i><span class="tk">06</span><span class="ti2"><b>Nanchang University</b> · Yiwang Chen</span></div></div><div class="tc"><div class="tcn">China · Australia <span>1</span></div><div class="tr"><i class="dot" style="background:#56B4E9"></i><span class="tk">07</span><span class="ti2"><b>Shanghai University</b> · Zhonghong Xia, Xiaobo Zheng, Hongbin Zhao</span></div></div><div class="tc"><div class="tcn">China · Saudi Arabia <span>1</span></div><div class="tr"><i class="dot" style="background:#56B4E9"></i><span class="tk">09</span><span class="ti2"><b>Henan Normal University</b> · Jianxing Xia, Osman M. Bakr, Xiaodan Tang</span></div></div><div class="tc"><div class="tcn">Hong Kong SAR China · China <span>1</span></div><div class="tr"><i class="dot" style="background:#56B4E9"></i><span class="tk">10</span><span class="ti2"><b>City University of Hong Kong</b> · Zanxiang Nie, Walid A. Daoud</span></div></div></div>
+  <div class="tagme">Know one of these teams? <b>Tag them in the comments</b> so they see their work featured.</div><footer><div class="brand"><img src="https://chemisters.com/images/chemisters-logo-128.png"><span>chemisters.com</span></div>
+  <div class="pg">Cs · Best of Chemisters</div><div class="num">13 / 16</div></footer></section>
+<section class="quiz"><div class="eyebrow">Your turn · quick check</div><h2>What reduction potential does the B,N tetraquinane exhibit?</h2><div class="qos"><div class="qo"><span>A</span>-3.2 V vs Fc/Fc+</div><div class="qo"><span>B</span>-2.5 V vs Fc/Fc+</div><div class="qo"><span>C</span>-1.0 V vs Fc/Fc+</div></div>
+    <div class="qhint">Comment your letter, then swipe for the answer →</div><footer><div class="brand"><img src="https://chemisters.com/images/chemisters-logo-128.png"><span>chemisters.com</span></div>
+  <div class="pg">Cs · Best of Chemisters</div><div class="num">14 / 16</div></footer></section>
+<section class="quiz ans"><div class="eyebrow">The answer</div><h2>A · -3.2 V vs Fc/Fc+</h2><div class="qos"><div class="qo ok"><span>A</span>-3.2 V vs Fc/Fc+</div><div class="qo no"><span>B</span>-2.5 V vs Fc/Fc+</div><div class="qo no"><span>C</span>-1.0 V vs Fc/Fc+</div></div>
+    <p class="qwhy">The paper reports a measured reduction potential of –3.2 V versus Fc/Fc+. <span class="qref">Paper 02 is on slide 04 →</span></p><div class="qprompt">Got it right? Say so in the comments, and tag a team you know from these papers.</div><footer><div class="brand"><img src="https://chemisters.com/images/chemisters-logo-128.png"><span>chemisters.com</span></div>
+  <div class="pg">Cs · Best of Chemisters</div><div class="num">15 / 16</div></footer></section>
+<section class="cta">
+  <div class="eyebrow">Feature your research</div>
+  <h2>Your published work deserves this audience.</h2>
+  <p class="lead">Chemisters features researchers' articles from <b>peer-reviewed, indexed journals</b> across its chemistry pages. In your own words, and <b>free of charge</b>.</p>
+  <ol class="steps">
+    <li><span>1</span><div><b>Read the guidelines</b> and prepare your post with the built-in checker.<div class="u">chemisters.com/publish</div></div></li>
+    <li><span>2</span><div><b>Send it to the page that fits your field</b> as a LinkedIn message, with everything the guidelines list.</div></li>
+    <li><span>3</span><div><b>We check it and publish it</b> exactly as you wrote it, with you and your co-authors tagged.</div></li>
+  </ol>
+  <div class="save"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M6 3h12v18l-6-4-6 4z" fill="none" stroke="currentColor" stroke-width="2"/></svg><div><b>Save this post.</b> All 10 papers, with clickable links: <span class="u">chemisters.com/best-of-chemisters/2026-11-25</span></div></div>
+  <div class="table"><div class="minitable"><i class="">Or</i><i class="">Ph</i><i class="">An</i><i class="">Tr</i><i class="">St</i><i class="">Ki</i><i class="">Td</i><i class="">En</i><i class="">So</i><i class="">Rx</i><i class="">Sy</i><i class="">Hc</i></div>
+    <div><b>Find your field.</b> Every field of chemistry has its own Chemisters page. Find the one that fits your work in the periodic table at <span class="u">chemisters.com</span></div></div>
+<footer><div class="brand"><img src="https://chemisters.com/images/chemisters-logo-128.png"><span>chemisters.com</span></div>
+  <div class="pg">Cs · Best of Chemisters</div><div class="num">16 / 16</div></footer></section><style>body.viewer{background:#070b16;padding:24px;display:flex;flex-direction:column;align-items:center;gap:26px}
+.sv{width:540px;height:675px;position:relative;flex:none}.sv section{transform:scale(.5);transform-origin:top left;position:absolute;left:0;top:0}
+.dl{margin-top:8px;font:700 14px 'JetBrains Mono',monospace;color:#0b1020;background:#b49bff;border:0;border-radius:8px;padding:8px 12px;cursor:pointer}
+.svw{display:flex;flex-direction:column;align-items:center}.svw:target .sv{outline:4px solid #ffd36e;outline-offset:6px}</style>
+<script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.js"></script>
+<script>(function(){const t=setInterval(()=>{if(document.body.dataset.ready!=='1')return;clearInterval(t);
+const secs=[...document.querySelectorAll('section')];secs.forEach((s,i)=>{const n=String(i+1).padStart(2,'0');const w=document.createElement('div');w.className='svw';w.id='s'+n;const sv=document.createElement('div');sv.className='sv';s.parentNode.insertBefore(w,s);sv.appendChild(s);w.appendChild(sv);
+const b=document.createElement('button');b.className='dl';b.textContent='Download slide '+n;b.onclick=()=>htmlToImage.toPng(s,{width:1080,height:1350,pixelRatio:1,style:{transform:'none',position:'static'}}).then(u=>{const a=document.createElement('a');a.href=u;a.download='chemisters-slide-'+n+'.png';a.click();});w.appendChild(b);});
+document.body.classList.add('viewer');if(location.hash){const el=document.querySelector(location.hash);if(el)el.scrollIntoView();}},200);})();</script><script>
+(function(){
+function withLabels(smi, labels){ if(!labels||!labels.length) return smi; const t=smi.match(/\[[^\]]+\]|Cl|Br|[BCNOPSFI]|[bcnosp]|\*/g)||[]; let k=0; return smi+' |$'+t.map(x=>x==='*'?(labels[k++]||'R'):'').join(';')+'$|'; }
+function hex(h){ return [1,3,5].map(i=>parseInt(h.slice(i,i+2),16)/255); }
+function draw(R, m, hlSmarts, color){
+  const mol=R.get_mol(withLabels(m.smi, m.labels)); if(!mol||!mol.is_valid()) throw new Error('bad SMILES '+m.smi);
+  const L=mol.get_molblock().split('\n'), na=+L[3].slice(0,3); let x0=1e9,x1=-1e9,y0=1e9,y1=-1e9;
+  for(let i=0;i<na;i++){const x=+L[4+i].slice(0,10),y=+L[4+i].slice(10,20);x0=Math.min(x0,x);x1=Math.max(x1,x);y0=Math.min(y0,y);y1=Math.max(y1,y);}
+  const BL=36/1.5, o={width:Math.round((x1-x0)*BL+110),height:Math.max(200,Math.round((y1-y0)*BL+90)),bondLineWidth:2.4,fixedBondLength:36,clearBackground:false,padding:0.14,minFontSize:19,maxFontSize:27,addStereoAnnotation:false};
+  if(hlSmarts){ const q=R.get_qmol(hlSmarts); if(q){ const mt=JSON.parse(mol.get_substruct_match(q)||'{}'); if(mt.atoms&&mt.atoms.length){ Object.assign(o,{atoms:mt.atoms,bonds:mt.bonds||[],highlightColour:[...hex(color),0.45],highlightBondWidthMultiplier:14,highlightRadius:0.38}); } q.delete(); } }
+  const svg=mol.get_svg_with_highlights(JSON.stringify(o)); mol.delete(); return svg;
+}
+function fallback(vis){ const t=vis.nextElementSibling; const sec=vis.closest('section'); if(t&&t.tagName==='TEMPLATE'){ vis.insertAdjacentHTML('afterend', t.innerHTML); t.remove(); } vis.remove(); if(sec) sec.classList.add('nochips'); }
+function fit(){
+  document.querySelectorAll('.scheme .row').forEach(r=>{ const sc=r.parentElement; const avail=sc.clientWidth-36; const w=r.offsetWidth; if(w>avail) r.style.zoom=(avail/w).toFixed(3); });
+  document.querySelectorAll('section.art').forEach(sec=>{
+    const h=sec.querySelector('h2'); let hs=44; while(h.getBoundingClientRect().height>44*1.13*2+4&&hs>36){hs-=2;h.style.fontSize=hs+'px';}
+    const foot=sec.querySelector('footer').getBoundingClientRect().top-14, src=sec.querySelector('.src'); let f=28,g=0; const t=sec.querySelector('.term');
+    while(src.getBoundingClientRect().bottom>foot&&f>21){f-=1;sec.querySelectorAll('.blk p').forEach(p=>p.style.fontSize=f+'px');}
+    while(src.getBoundingClientRect().bottom>foot&&g<4){g++;const sc=sec.querySelector('.scheme .row');if(sc){sc.style.zoom=((parseFloat(sc.style.zoom)||1)*0.9).toFixed(3)}else break;}
+    if(src.getBoundingClientRect().bottom>foot&&t) t.remove();
+    if(src.getBoundingClientRect().bottom>foot){ const al=sec.querySelector('.also'); if(al) al.remove(); }
+  });
+  const c=document.querySelector('section.cover .index.cmp'), b=document.querySelector('section.cover .banner');
+  if(c&&b){ let fs=20; while(c.getBoundingClientRect().bottom>b.getBoundingClientRect().top-8&&fs>15){fs--; c.querySelectorAll('li').forEach(li=>{li.style.fontSize=fs+'px';li.style.paddingTop=li.style.paddingBottom='2px';});} }
+}
+async function boot(){
+  const report={schemes:0,passed:0,failed:[]};
+  let R=null;
+  try{ R=await window.initRDKitModule({locateFile:()=>window.__RDKIT_WASM}); }catch(e){ report.rdkit='unavailable: '+e.message; }
+  document.querySelectorAll('.vis').forEach(vis=>{
+    const chk=JSON.parse(vis.dataset.check||'{}'); report.schemes++;
+    try{
+      if(!R) throw new Error('RDKit not loaded');
+      const prod=vis.querySelector('.prod .mol');
+      if(prod&&chk.keeps){ const pm=JSON.parse(prod.dataset.m); const p=R.get_mol(pm.smi); const q=R.get_qmol(chk.keeps); const ok=p&&q&&JSON.parse(p.get_substruct_match(q)||'{}').atoms; if(p)p.delete(); if(q)q.delete(); if(!ok) throw new Error('product lacks '+chk.keeps); }
+      else if(prod&&!chk.keeps) throw new Error('no conserved pattern');
+      vis.querySelectorAll('.mol').forEach(el=>{ const m=JSON.parse(el.dataset.m); const isProd=!!el.closest('.prod'); el.innerHTML=draw(R,m,isProd?chk.hl:'',chk.color)+(el.dataset.name?'<div class="mn">'+el.dataset.name+'</div>':''); });
+      report.passed++; vis.classList.add('ok');
+    }catch(e){ report.failed.push(e.message); fallback(vis); }
+  });
+  const hero=document.querySelector('.hero');
+  if(hero){ const first=document.querySelector('section.art .scheme.ok .prod .mol svg, section.art .scheme.motif.ok .mol svg');
+    if(first){ hero.querySelector('.hm').appendChild(first.cloneNode(true)); const sec=first.closest('section'); const h2=sec.querySelector('h2'); hero.querySelector('.hc').textContent=h2?h2.textContent:''; const k=sec.querySelector('.k'); if(k) hero.querySelector('.hl').textContent='#'+parseInt(k.textContent.replace(/[^0-9]/g,''),10)+' '+hero.dataset.w; }
+    else { hero.remove(); } }
+  try{ await document.fonts.ready; }catch(e){}
+  fit();
+  window.__report=report; document.body.dataset.ready='1';
+}
+window.addEventListener('load', boot);
+})();</script></body></html>
